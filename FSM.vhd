@@ -37,14 +37,67 @@ entity FSM is
            reset : in STD_LOGIC;
            done : in STD_LOGIC;
            start : out STD_LOGIC;
-           x : out STD_LOGIC_VECTOR (xdata-1 downto 0);
-           y : out STD_LOGIC_VECTOR (ydata-1 downto 0));
-           gqdfgq
+           x : out STD_LOGIC_VECTOR (XDATA-1 downto 0);
+           y : out STD_LOGIC_VECTOR (YDATA-1 downto 0));
 end FSM;
 
 architecture Behavioral of FSM is
-
+type type_etat is (init, xincrement,yincrement,calcul,finish);
+Signal etat_present, etat_futur : type_etat;
 begin
 
+process(clock,reset)
+begin
+    if reset='1' then
+        etat_present<=init;
+    elsif rising_edge(clock) then
+        etat_present<=etat_futur;
+    end if;
+end process;
 
+process(etat_present, done)
+begin
+    case etat_present is 
+        when init=> etat_futur<=calcul;
+        when calcul=> etat_present<=xincrement;
+        when xincrement=> if (done ='1' and endline='1') then  --TODO changer par endline=pixel...
+                            etat_futur<=yincrement;
+                          elsif done='1' then
+                            etat_futur<=calcul;
+                          else
+                            etat_futur<=xincrement;
+                          end if;
+        when yincrement => if(done='1' and ys=YMAX) then
+                                etat_futur<=finish;
+                            elsif done='1' then
+                                etat_futur<=calcul;
+                            else 
+                                etat_futur<=yincrement;
+                            end if;
+        when finish => etat_futur<=init;
+    end case;
+end process;
+
+process(etat_present)
+begin
+    case etat_present is
+        when init=> start<='0';
+                    x<=(others=>'0');
+                    y<=(others=>'0');
+        when calcul=> start<='1';
+                    x<=std_logic_vector(xs);
+                    y<=std_logic_vector(ys);
+        when xincrement=> start<='0';
+                          x<=std_logic_vector(xs);
+                          y<=std_logic_vector(ys);
+        when yincrement=> start<='0';
+                          x<=std_logic_vector(xs);
+                          y<=std_logic_vector(ys);
+        when finish=> start<='0';
+                          x<=std_logic_vector(xs);
+                          y<=std_logic_vector(ys);
+    end case;
+end process;
+
+                        
 end Behavioral;
