@@ -7,8 +7,7 @@ use WORK.CONSTANTS.ALL;
 use WORK.FUNCTIONS.ALL;
 
 entity Calc is
-    Port ( --clock : in STD_LOGIC;
-           y0 : in STD_LOGIC_VECTOR (XY_RANGE-1 downto 0);
+    Port ( y0 : in STD_LOGIC_VECTOR (XY_RANGE-1 downto 0);
            x0 : in STD_LOGIC_VECTOR (XY_RANGE-1 downto 0);
            yi : in STD_LOGIC_VECTOR (XY_RANGE-1 downto 0);
            xi : in STD_LOGIC_VECTOR (XY_RANGE-1 downto 0);
@@ -20,7 +19,7 @@ architecture Behavioral of Calc is
 
 signal temp : SIGNED (XY_RANGE-1 downto 0);
 
-begin 
+begin
 	temp <= SIGNED(mult(xi,yi,FIXED));
 	yi1 <= STD_LOGIC_VECTOR(temp(XY_RANGE-2 downto 0)&'0' + SIGNED(y0));
 	xi1 <= STD_LOGIC_VECTOR(SIGNED(mult(xi,xi,FIXED)) - SIGNED(mult(yi,yi,FIXED)) + SIGNED(x0));
