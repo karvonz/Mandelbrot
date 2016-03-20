@@ -8,9 +8,9 @@ package CONSTANTS is
    
 	-- Data size --
 	constant XY_RANGE : INTEGER := 32; --Number of bits for x and y data
-	constant ITER_RANGE : INTEGER := 10; --Number of bits for iteration number
 	constant ITER_MAX : INTEGER := 1023; --Max number of iteration
-	constant QUATRE : STD_LOGIC_VECTOR (XY_RANGE-1 downto 0) := std_logic_vector(to_unsigned(4,32) );
+	constant ITER_RANGE : INTEGER := 10;
+	constant QUATRE : SIGNED (XY_RANGE-1 downto 0) := to_signed(4,32) sll FIXED ;
 end CONSTANTS;
 
 
