@@ -3,7 +3,7 @@
 #include <math.h>
 
 #define FILENAME "config_mandelbrot.vhd"
-#define ENTETE "library IEEE;\nuse IEE.STD_LOGIC_1164.ALL;\nuse IEEE.NUMERIC_STD.ALL;\n\n\npackage CONFIG_MANDELBROT is \n"
+#define ENTETE "library IEEE;\nuse IEEE.STD_LOGIC_1164.ALL;\nuse IEEE.NUMERIC_STD.ALL;\n\n\npackage CONFIG_MANDELBROT is \n"
 #define QF 28
 
 
