@@ -4,7 +4,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 package CONSTANTS is
 	-- Fixed format --
-	constant FIXED : INTEGER := 24; --Number of bits for , part
+	constant FIXED : INTEGER := 28; --Number of bits for , part
    
 	-- Data size --
 	constant XY_RANGE : INTEGER := 32; --Number of bits for x and y data
