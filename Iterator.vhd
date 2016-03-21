@@ -31,7 +31,6 @@ signal xi1 : STD_LOGIC_VECTOR (XY_RANGE-1 downto 0);
 signal yi1 : STD_LOGIC_VECTOR (XY_RANGE-1 downto 0);
 signal xi : STD_LOGIC_VECTOR (XY_RANGE-1 downto 0);
 signal yi : STD_LOGIC_VECTOR (XY_RANGE-1 downto 0);
-signal mod2 : SIGNED (XY_RANGE-1 downto 0);
 signal cptiters : integer;
 signal donestate : STD_LOGIC;
 
@@ -43,7 +42,6 @@ begin
 	begin
 		if reset='1' then
 			donestate<='1';
-			mod2<=(others=>'0');
 			xi<=(others=>'0');
 			yi<=(others=>'0');
 			cptiters<=0;
@@ -51,12 +49,13 @@ begin
 		elsif rising_edge(clock) then
 			if ((go='1') and (donestate='1')) then --Start iteration
 				donestate<='0';
-				mod2<=(others=>'0');
 				cptiters<=0;
 				xi<=(others=>'0');
 				yi<=(others=>'0');
-			elsif((cptiters<ITER_MAX) and (mod2 < QUATRE)) then --Still <4
-				mod2 <= SIGNED(mult(xi1,xi1,FIXED)) + SIGNED(mult(yi1,yi1,FIXED));
+				
+			elsif((cptiters<ITER_MAX) 
+			and (SIGNED(mult(xi,xi,FIXED)) + SIGNED(mult(yi,yi,FIXED)) < QUATRE)) 
+			then --Still <4
 				xi<=xi1;  --Updating values
 				yi<=yi1;
 				cptiters <= cptiters + 1; 
