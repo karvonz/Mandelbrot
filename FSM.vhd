@@ -51,7 +51,7 @@ begin
     end if;
 end process;
 
-process(etat_present, done)
+process(etat_present, done, ycount, xcount)
 begin
     case etat_present is 
         when init=> etat_futur<=xincrement;
@@ -72,34 +72,50 @@ begin
     end case;
 end process;
 
-process(etat_present)
+process(clock, reset,ycount,xcount,done)
+begin
+if reset='1' then 
+	xcount<=0;
+	ycount<=0;
+elsif rising_edge(clock) then
+	if(done='1') then
+		if ycount = YRES-1 then
+			xcount <= 0;
+			ycount <= 0;
+		elsif xcount = XRES-1 then
+			xcount <= 0;
+			ycount <= ycount+1;
+		else
+			xcount<=xcount+1;
+		end if;
+	end if;
+end if;
+end process;
+
+process(etat_present,xs,ys,xcount,ycount)
 begin
     case etat_present is
         when init=> start<='0';
                     xs<=XSTART;
                     ys<=YSTART;
-                    x<=(others=>'0');
-                    y<=(others=>'0');
-                    xcount <= 0;
-                    ycount <= 0;
+						  x<=std_logic_vector(XSTART);
+						  y<=std_logic_vector(YSTART);
         when calcul=> start<='0';
-                      x<=std_logic_vector(xs);
+							 x<=std_logic_vector(xs);
                       y<=std_logic_vector(ys);
         when xincrement=> start<='1';
-                          xs<=xs+XINC;
-                          xcount<=xcount+1;
-                          x<=std_logic_vector(xs);
-                          y<=std_logic_vector(ys);
+							     x<=std_logic_vector(xs);
+								  y<=std_logic_vector(ys);
+								  xs<=xs+XINC;
         when yincrement=> start<='1';
                           xs<=XSTART;
                           ys<=ys+YINC;
-                          xcount <= 0;
-                          ycount<=ycount+1;
-                          x<=std_logic_vector(xs);
-                          y<=std_logic_vector(ys);
+								  x<=std_logic_vector(xs);
+								  y<=std_logic_vector(ys);
         when finish=> start<='0';
-                          x<=std_logic_vector(xs);
-                          y<=std_logic_vector(ys);
+							 x<=std_logic_vector(XSTOP);
+						    y<=std_logic_vector(YSTOP);
+
     end case;
 end process;
 
