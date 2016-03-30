@@ -51,9 +51,11 @@ component FSM
            reset : in STD_LOGIC;
            done : in STD_LOGIC;
            start : out STD_LOGIC;
-           x : out STD_LOGIC_VECTOR (XY_RANGE-1 downto 0);
-           y : out STD_LOGIC_VECTOR (XY_RANGE-1 downto 0));
+           xinc : out STD_LOGIC;
+           yinc : out STD_LOGIC);
 end component;
+
+
 
 component Iterator 
     Port ( go : in STD_LOGIC;
@@ -64,6 +66,16 @@ component Iterator
            iters : out STD_LOGIC_VECTOR (ITER_RANGE-1 downto 0);
            done : out STD_LOGIC);
 end component;
+
+component increment
+    Port ( clock : in  STD_LOGIC;
+           reset : in  STD_LOGIC;
+           xinc : in  STD_LOGIC;
+           yinc : in  STD_LOGIC;
+           x : out  STD_LOGIC_VECTOR (XY_RANGE-1 downto 0);
+           y : out  STD_LOGIC_VECTOR (XY_RANGE-1 downto 0));
+end component;
+
 
 component VGA_bitmap_640x480 
   generic(grayscale     : boolean := false);           -- should data be displayed in grayscale
@@ -80,7 +92,7 @@ component VGA_bitmap_640x480
        data_out     : out std_logic_vector(bit_per_pixel - 1 downto 0));
 end component;
 
-Signal doneS, startS : std_logic;
+Signal doneS, startS, xincS, yincS : std_logic;
 Signal xS, yS : std_logic_vector(XY_RANGE - 1 downto 0);
 Signal colorS : STD_LOGIC_VECTOR (bit_per_pixel-1 downto 0);
 Signal itersS : STD_LOGIC_VECTOR (ITER_RANGE-1 downto 0);
@@ -99,14 +111,21 @@ Port map (clock,
 				colorS,
 				doneS,
 				open); 
+Instincrment: increment
+Port map (clock,
+	  reset,
+	  xincS,
+	  yincS,
+	  xS,
+	  yS);
 				
 instFSM : FSM
 	Port map (clock,
 				 reset,
 				 doneS,
 				 startS,
-				 xS,
-				 yS);
+				 xincS,
+				 yincS);
 
 instIterator : Iterator
 	Port map ( startS,
