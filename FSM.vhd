@@ -30,8 +30,8 @@ entity FSM is
            reset : in STD_LOGIC;
            done : in STD_LOGIC;
            start : out STD_LOGIC;
-           x : out STD_LOGIC_VECTOR (XY_RANGE-1 downto 0);
-           y : out STD_LOGIC_VECTOR (XY_RANGE-1 downto 0));
+           xinc : out STD_LOGIC;
+           yinc : out STD_LOGIC);
 end FSM;
 
 architecture Behavioral of FSM is
@@ -39,7 +39,6 @@ type type_etat is (init, xincrement,yincrement,calcul,finish);
 Signal etat_present, etat_futur : type_etat;
 signal xcount : integer range 0 to XRES-1:=0;
 signal ycount : integer range 0 to YRES-1:=0;
-Signal xs, ys : signed(XY_RANGE-1 downto 0 );
 begin
 
 process(clock,reset)
@@ -68,7 +67,7 @@ begin
                        end if;
         when xincrement=> etat_futur<=calcul;
         when yincrement => etat_futur<=calcul;
-        when finish => etat_futur<=finish;  --TODO changer par init + changement du nbr d'itÃ©ration
+        when finish => etat_futur<=finish;  --TODO changer par init + changement du nbr d'itÃƒÂ©ration
     end case;
 end process;
 
@@ -96,25 +95,20 @@ process(etat_present,xs,ys,xcount,ycount)
 begin
     case etat_present is
         when init=> start<='0';
-                    xs<=XSTART;
-                    ys<=YSTART;
-						  x<=std_logic_vector(XSTART);
-						  y<=std_logic_vector(YSTART);
+						  xinc<='0';
+						  yinc<='0';
         when calcul=> start<='0';
-							 x<=std_logic_vector(xs);
-                      y<=std_logic_vector(ys);
-        when xincrement=> start<='1';
-							     x<=std_logic_vector(xs);
-								  y<=std_logic_vector(ys);
-								  xs<=xs+XINC;
-        when yincrement=> start<='1';
-                          xs<=XSTART;
-                          ys<=ys+YINC;
-								  x<=std_logic_vector(xs);
-								  y<=std_logic_vector(ys);
+						  xinc<='0';
+						  yinc<='0';
+        when xincrement=> start<='0';
+						  xinc<='1';
+						  yinc<='0';
+        when yincrement=> start<='0';
+						  xinc<='0';
+						  yinc<='1';
         when finish=> start<='0';
-							 x<=std_logic_vector(XSTOP);
-						    y<=std_logic_vector(YSTOP);
+						    xinc<='0';
+						    yinc<='0';
 
     end case;
 end process;
