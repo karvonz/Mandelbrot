@@ -34,7 +34,6 @@ entity VGA_bitmap_640x480 is
        VGA_green    : out std_logic_vector(3 downto 0);   -- green output
        VGA_blue     : out std_logic_vector(3 downto 0);   -- blue output
 
-       ADDR         : in  std_logic_vector(18 downto 0);
        data_in      : in  std_logic_vector(bit_per_pixel - 1 downto 0);
        data_write   : in  std_logic;
        data_out     : out std_logic_vector(bit_per_pixel - 1 downto 0));
@@ -46,6 +45,7 @@ architecture Behavioral of VGA_bitmap_640x480 is
 type GRAM is array (0 to 307199) of std_logic_vector(bit_per_pixel - 1 downto 0); 
 
 signal screen      : GRAM;                           -- the memory representation of the image
+signal ADDR        : unsigned(18 downto 0);
 
 signal h_counter   : integer range 0 to 3199:=0;     -- counter for H sync. (size depends of frequ because of division)
 signal v_counter   : integer range 0 to 520 :=0;     -- counter for V sync. (base on v_counter, so no frequ issue)
@@ -59,15 +59,31 @@ signal next_pixel : std_logic_vector(bit_per_pixel - 1 downto 0);  -- the data c
 
 begin
 
+ADDRmanagement : process(clk,reset, data_write)
+begin
+	if reset='1' then
+		ADDR<=(others=>'0');
+	elsif rising_edge(clk) then
+		if data_write = '1' then
+			if ADDR < 307199 then
+				ADDR<=ADDR+1;
+			else
+				ADDR<=(others=>'0');
+			end if;
+		end if;
+	end if;
+end process;
+
+
 
 -- This process performs data access (read and write) to the memory
 memory_management : process(clk)
 begin
    if clk'event and clk='1' then
       next_pixel <= screen(pix_read_addr);
-      data_out   <= screen(to_integer(unsigned(ADDR)));
+      data_out   <= screen(to_integer(ADDR));
       if data_write = '1' then
-         screen(to_integer(unsigned(ADDR))) <= data_in;
+         screen(to_integer(ADDR)) <= data_in;
       end if;
    end if;
 end process;
