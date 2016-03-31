@@ -8,8 +8,8 @@ constant XSTART : SIGNED(31 downto 0) :=x"E0000000";
 constant XSTOP : SIGNED(31 downto 0) :=x"10000000";
 constant YSTART : SIGNED(31 downto 0) :=x"F0000000";
 constant YSTOP : SIGNED(31 downto 0) :=x"10000000";
-constant XINC : SIGNED(31 downto 0) :=x"00133AE4";
-constant YINC : SIGNED(31 downto 0) :=x"00111A30";
+constant XPAS : SIGNED(31 downto 0) :=x"00133AE4";
+constant YPAS : SIGNED(31 downto 0) :=x"00111A30";
 constant XRES : integer :=640;
 constant YRES : integer :=480;
 
