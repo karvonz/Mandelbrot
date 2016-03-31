@@ -16,7 +16,8 @@ entity increment is
            reset : in  STD_LOGIC;
            start : in  STD_LOGIC;
            x : out  STD_LOGIC_VECTOR (XY_RANGE-1 downto 0);
-           y : out  STD_LOGIC_VECTOR (XY_RANGE-1 downto 0));
+           y : out  STD_LOGIC_VECTOR (XY_RANGE-1 downto 0);
+			  stop : out std_logic);
 end increment;
 
 architecture Behavioral of increment is
@@ -34,19 +35,24 @@ if reset='1' then
 	ycount<=0;
 	xs<=XSTART;
 	ys<=YSTART;
+	stop<='0';
 elsif rising_edge(clock) then
 	if(start='1') then
+	if xcount = XRES-1 then
 		if ycount = YRES-1 then
 			xcount <= 0;
 			ycount <= 0;
 			xs<=XSTART;
 			ys<=YSTART;
-		elsif xcount = XRES-1 then
+			stop<='1';
+		else
 			xcount <= 0;
 			ycount <= ycount+1;
 			ys<=ys+YPAS;
 			xs<=XSTART;
-		else
+		end if;
+	else
+			stop<='0';
 			xs<=xs+XPAS;
 			xcount<=xcount+1;
 		end if;

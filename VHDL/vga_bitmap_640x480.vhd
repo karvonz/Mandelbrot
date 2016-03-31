@@ -1,5 +1,5 @@
 -------------------------------------------------------------------------------
--- Bitmap VGA display
+-- Bitmap VGA display with 640x480 pixel resolution
 -------------------------------------------------------------------------------
 -- V 1.1.1 (2015/07/28)
 -- Yannick Bornat (yannick.bornat@enseirb-matmeca.fr)
@@ -24,8 +24,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.numeric_std.ALL;
 use work.CONSTANTS.all;
 
-
-entity VGA_bitmap_160x100 is
+entity VGA_bitmap_640x480 is
   generic(grayscale     : boolean := false);           -- should data be displayed in grayscale
   port(clk          : in  std_logic;
        reset        : in  std_logic;
@@ -34,19 +33,20 @@ entity VGA_bitmap_160x100 is
        VGA_red      : out std_logic_vector(3 downto 0);   -- red output
        VGA_green    : out std_logic_vector(3 downto 0);   -- green output
        VGA_blue     : out std_logic_vector(3 downto 0);   -- blue output
+       endcalcul : in std_logic;
 
-      -- ADDR         : in  std_logic_vector(13 downto 0);
        data_in      : in  std_logic_vector(bit_per_pixel - 1 downto 0);
        data_write   : in  std_logic;
        data_out     : out std_logic_vector(bit_per_pixel - 1 downto 0));
-end VGA_bitmap_160x100;
+end VGA_bitmap_640x480;
 
-architecture Behavioral of VGA_bitmap_160x100 is
+architecture Behavioral of VGA_bitmap_640x480 is
 
 -- Graphic RAM type. this object is the content of the displayed image
-type GRAM is array (0 to 16383) of std_logic_vector(bit_per_pixel - 1 downto 0); 
+type GRAM is array (0 to 307199) of std_logic_vector(bit_per_pixel - 1 downto 0); 
 
 signal screen      : GRAM;                           -- the memory representation of the image
+signal ADDR        : unsigned(18 downto 0);
 
 signal h_counter   : integer range 0 to 3199:=0;     -- counter for H sync. (size depends of frequ because of division)
 signal v_counter   : integer range 0 to 520 :=0;     -- counter for V sync. (base on v_counter, so no frequ issue)
@@ -54,27 +54,32 @@ signal v_counter   : integer range 0 to 520 :=0;     -- counter for V sync. (bas
 signal TOP_line    : boolean := false;               -- this signal is true when the current pixel column is visible on the screen
 signal TOP_display : boolean := false;               -- this signal is true when the current pixel line is visible on the screen
 
-signal pix_read_addr : integer range 0 to 15999:=0;  -- the address at which displayed data is read
+signal pix_read_addr : integer range 0 to 307199:=0;  -- the address at which displayed data is read
 
 signal next_pixel : std_logic_vector(bit_per_pixel - 1 downto 0);  -- the data coding the value of the pixel to be displayed
-signal ADDR         : unsigned(13 downto 0);
+
 begin
 
-
-ADDRmanagement : process(clk,reset, data_write)
+ADDRmanagement : process(clk,reset, data_write, endcalcul)
 begin
 	if reset='1' then
-		ADDR<=(others=>'0');
+		ADDR<=(others=>'0'); --to_unsigned(15999, 14);
 	elsif rising_edge(clk) then
-		if data_write = '1' then
-			if ADDR < 15999 then
-				ADDR<=ADDR+1;
-			else
-				ADDR<=(others=>'0');
+		if endcalcul='1' then
+			ADDR<=(others=>'0');
+		else
+			if data_write = '1' then
+				if ADDR < 307199 then
+					ADDR<=ADDR+1;
+				else
+					ADDR<=(others=>'0');
+				end if;
 			end if;
 		end if;
 	end if;
 end process;
+
+
 
 -- This process performs data access (read and write) to the memory
 memory_management : process(clk)
@@ -94,12 +99,8 @@ begin
    if clk'event and clk='1' then
       if reset = '1' or (not TOP_display) then
          pix_read_addr <= 0;
-      elsif TOP_line and (h_counter mod 16)=0 then
+      elsif TOP_line and (h_counter mod 4)=0 then
          pix_read_addr <= pix_read_addr + 1;
-      elsif (not TOP_line) and h_counter = 0 and ((v_counter mod 4)/= 3) then
-      -- each line is repeated 4 times, the first 3 times, we have to restart at the
-      -- beginning og the line instead of continue to the next line
-         pix_read_addr <= pix_read_addr - 160;
       end if;
    end if;
 end process;
@@ -116,8 +117,8 @@ begin
          case v_counter is
             when 0   => VGA_vs      <= '0'; -- start of Tpw   (  0 ->   0 +   1)
             when 2   => VGA_vs      <= '1'; -- start of Tbp   (  2 ->   2 +  28 =  30)
-            when 75  => TOP_display <= true; -- start of Tdisp ( 31 ->  31 + 479 = 510)  
-            when 475 => TOP_display <= false; -- start of Tfp   (511 -> 511 +   9 = 520)
+            when 31  => TOP_display <= true; -- start of Tdisp ( 31 ->  31 + 479 = 510)  
+            when 511 => TOP_display <= false; -- start of Tfp   (511 -> 511 +   9 = 520)
             when others   => null;
          end case;
 --            if v_counter =   0 then VGA_vs      <= '0'; -- start of Tpw   (  0 ->   0 +   1)
@@ -225,7 +226,7 @@ begin
                VGA_red   <= next_pixel(11 downto 8);
                VGA_green <= next_pixel( 7 downto 4);
                VGA_blue  <= next_pixel( 3 downto 0);
-				when others => null;
+				when others => NULL;
          end case;
       end if;
    end if;
