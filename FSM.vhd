@@ -29,16 +29,14 @@ entity FSM is
     Port ( clock : in STD_LOGIC;
            reset : in STD_LOGIC;
            done : in STD_LOGIC;
-           start : out STD_LOGIC;
-           xinc : out STD_LOGIC;
-           yinc : out STD_LOGIC);
+           start : out STD_LOGIC);
 end FSM;
 
 architecture Behavioral of FSM is
-type type_etat is (init, xincrement,yincrement,calcul,finish);
+type type_etat is (init, inc, calcul);
 Signal etat_present, etat_futur : type_etat;
-signal xcount : integer range 0 to XRES-1:=0;
-signal ycount : integer range 0 to YRES-1:=0;
+--signal xcount : integer range 0 to XRES-1:=0;
+--signal ycount : integer range 0 to YRES-1:=0;
 begin
 
 process(clock,reset)
@@ -50,65 +48,27 @@ begin
     end if;
 end process;
 
-process(etat_present, done, ycount, xcount)
+process(etat_present, done)
 begin
     case etat_present is 
-        when init=> etat_futur<=xincrement;
+        when init=> etat_futur<=inc;
         when calcul=> if done ='0' then
                         etat_futur<=calcul;
                       else
-                        if ycount = YRES-1 then
-                            etat_futur<=finish;
-                        elsif xcount = XRES-1 then
-                            etat_futur<=yincrement;
-                        else
-                            etat_futur<=xincrement;
-                        end if;
+                        etat_futur<=inc;
                        end if;
-        when xincrement=> etat_futur<=calcul;
-        when yincrement => etat_futur<=calcul;
-        when finish => etat_futur<=finish;  --TODO changer par init + changement du nbr d'itÃƒÂ©ration
+        when inc=> etat_futur<=calcul;
     end case;
 end process;
 
-process(clock, reset,ycount,xcount,done)
-begin
-if reset='1' then 
-	xcount<=0;
-	ycount<=0;
-elsif rising_edge(clock) then
-	if(done='1') then
-		if ycount = YRES-1 then
-			xcount <= 0;
-			ycount <= 0;
-		elsif xcount = XRES-1 then
-			xcount <= 0;
-			ycount <= ycount+1;
-		else
-			xcount<=xcount+1;
-		end if;
-	end if;
-end if;
-end process;
 
-process(etat_present,xs,ys,xcount,ycount)
+process(etat_present)
 begin
     case etat_present is
         when init=> start<='0';
-						  xinc<='0';
-						  yinc<='0';
         when calcul=> start<='0';
-						  xinc<='0';
-						  yinc<='0';
-        when xincrement=> start<='0';
-						  xinc<='1';
-						  yinc<='0';
-        when yincrement=> start<='0';
-						  xinc<='0';
-						  yinc<='1';
-        when finish=> start<='0';
-						    xinc<='0';
-						    yinc<='0';
+        when inc=> start<='1';
+
 
     end case;
 end process;

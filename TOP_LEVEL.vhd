@@ -50,9 +50,7 @@ component FSM
     Port ( clock : in STD_LOGIC;
            reset : in STD_LOGIC;
            done : in STD_LOGIC;
-           start : out STD_LOGIC;
-           xinc : out STD_LOGIC;
-           yinc : out STD_LOGIC);
+           start : out STD_LOGIC);
 end component;
 
 
@@ -70,14 +68,12 @@ end component;
 component increment
     Port ( clock : in  STD_LOGIC;
            reset : in  STD_LOGIC;
-           xinc : in  STD_LOGIC;
-           yinc : in  STD_LOGIC;
+           start : in  STD_LOGIC;
            x : out  STD_LOGIC_VECTOR (XY_RANGE-1 downto 0);
            y : out  STD_LOGIC_VECTOR (XY_RANGE-1 downto 0));
 end component;
 
-
-component VGA_bitmap_640x480 
+component VGA_bitmap_160x100
   generic(grayscale     : boolean := false);           -- should data be displayed in grayscale
   port(clk          : in  std_logic;
        reset        : in  std_logic;
@@ -87,10 +83,24 @@ component VGA_bitmap_640x480
        VGA_green    : out std_logic_vector(3 downto 0);   -- green output
        VGA_blue     : out std_logic_vector(3 downto 0);   -- blue output
 
+      -- ADDR         : in  std_logic_vector(13 downto 0);
        data_in      : in  std_logic_vector(bit_per_pixel - 1 downto 0);
        data_write   : in  std_logic;
        data_out     : out std_logic_vector(bit_per_pixel - 1 downto 0));
 end component;
+--component VGA_bitmap_640x480 
+--  generic(grayscale     : boolean := false);           -- should data be displayed in grayscale
+--  port(clk          : in  std_logic;
+--       reset        : in  std_logic;
+--       VGA_hs       : out std_logic;   -- horisontal vga syncr.
+--       VGA_vs       : out std_logic;   -- vertical vga syncr.
+--       VGA_red      : out std_logic_vector(3 downto 0);   -- red output
+--       VGA_green    : out std_logic_vector(3 downto 0);   -- green output
+--       VGA_blue     : out std_logic_vector(3 downto 0);   -- blue output
+--       data_in      : in  std_logic_vector(bit_per_pixel - 1 downto 0);
+--       data_write   : in  std_logic;
+--       data_out     : out std_logic_vector(bit_per_pixel - 1 downto 0));
+--end component;
 
 Signal doneS, startS, xincS, yincS : std_logic;
 Signal xS, yS : std_logic_vector(XY_RANGE - 1 downto 0);
@@ -100,7 +110,7 @@ begin
 InstColorgen : Colorgen
 port map (itersS,colorS);
 
-InstVGA: VGA_bitmap_640x480
+InstVGA: VGA_bitmap_160x100
 Port map (clock,
 				reset,
 				VGA_hs,
@@ -109,13 +119,13 @@ Port map (clock,
 				VGA_green,
 				VGA_blue,
 				colorS,
-				doneS,
+				startS,  --doneS si marche pas 
 				open); 
+				
 Instincrment: increment
 Port map (clock,
 	  reset,
-	  xincS,
-	  yincS,
+	  startS,
 	  xS,
 	  yS);
 				
@@ -123,9 +133,7 @@ instFSM : FSM
 	Port map (clock,
 				 reset,
 				 doneS,
-				 startS,
-				 xincS,
-				 yincS);
+				 startS);
 
 instIterator : Iterator
 	Port map ( startS,
@@ -137,4 +145,3 @@ instIterator : Iterator
 					doneS);
 
 end Behavioral;
-
