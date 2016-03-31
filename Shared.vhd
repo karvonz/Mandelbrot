@@ -2,6 +2,8 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
+-- Test
+
 package CONSTANTS is
 	-- Fixed format --
 	constant FIXED : INTEGER := 28; --Number of bits for , part
