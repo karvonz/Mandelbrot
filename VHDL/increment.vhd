@@ -50,6 +50,7 @@ elsif rising_edge(clock) then
 			ycount <= ycount+1;
 			ys<=ys+YPAS;
 			xs<=XSTART;
+			stop<='0';
 		end if;
 	else
 			stop<='0';

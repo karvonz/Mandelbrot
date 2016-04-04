@@ -32,6 +32,7 @@ use work.CONSTANTS.all;
 entity TOP_LEVEL is
     Port ( clock : in  STD_LOGIC;
            reset : in  STD_LOGIC;
+			  inib : in std_logic;
 			  VGA_hs       : out std_logic;   -- horisontal vga syncr.
 			  VGA_vs       : out std_logic;   -- vertical vga syncr.
 			  VGA_red      : out std_logic_vector(3 downto 0);   -- red output
@@ -41,8 +42,18 @@ entity TOP_LEVEL is
 end TOP_LEVEL;
 
 architecture Behavioral of TOP_LEVEL is
+component cpt_iter
+    Port ( clock : in  STD_LOGIC;
+           reset : in  STD_LOGIC;		
+			  inib : in std_logic;
+           endcalcul : in  STD_LOGIC;
+           iter : out  STD_LOGIC_VECTOR(ITER_RANGE-1 downto 0));
+end component;
+
 component Colorgen 
     Port ( iters : in STD_LOGIC_VECTOR (ITER_RANGE-1 downto 0);
+	 			  itermax : in STD_LOGIC_VECTOR (ITER_RANGE-1 downto 0);
+
            color : out STD_LOGIC_VECTOR (bit_per_pixel-1 downto 0));
 end component;
 
@@ -62,6 +73,7 @@ component Iterator
            reset : in STD_LOGIC;
            x0 : in STD_LOGIC_VECTOR (XY_RANGE-1 downto 0);
            y0 : in STD_LOGIC_VECTOR (XY_RANGE-1 downto 0);
+			  itermax : in std_logic_vector(ITER_RANGE-1 downto 0);
            iters : out STD_LOGIC_VECTOR (ITER_RANGE-1 downto 0);
            done : out STD_LOGIC);
 end component;
@@ -96,10 +108,10 @@ end component;
 Signal doneS, startS,stopS, xincS, yincS : std_logic;
 Signal xS, yS : std_logic_vector(XY_RANGE - 1 downto 0);
 Signal colorS : STD_LOGIC_VECTOR (bit_per_pixel-1 downto 0);
-Signal itersS : STD_LOGIC_VECTOR (ITER_RANGE-1 downto 0);
+Signal itersS, itermaxS : STD_LOGIC_VECTOR (ITER_RANGE-1 downto 0);
 begin
 InstColorgen : Colorgen
-port map (itersS,colorS);
+port map (itersS,itermaxS,colorS);
 
 InstVGA: VGA_bitmap_640x480
 Port map (clock,
@@ -135,7 +147,15 @@ instIterator : Iterator
 					reset,
 					xS,
 					yS,
+					itermaxS,
 					itersS,
 					doneS);
+					
+inst_cpt_iter: cpt_iter
+	port map ( clock,
+					reset,
+					inib,
+					stopS,
+					itermaxS);
 
 end Behavioral;

@@ -48,43 +48,20 @@ begin
     end if;
 end process;
 
---
---process(clock, reset, done)
---begin
---if reset='1' then 
---	xcount<=0;
---	ycount<=0;
---elsif rising_edge(clock) then
---	if(done='1') then
---		if ycount = YRES-1 then
---			xcount <= 0;
---			ycount <= 0;
---		elsif xcount = XRES-1 then
---			xcount <= 0;
---			ycount <= ycount+1;
---		else
---			xcount<=xcount+1;
---		end if;
---	end if;
---end if;
---end process;
-
 
 process(etat_present, done, stop)
 begin
     case etat_present is 
         when init=> etat_futur<=inc;
-        when calcul=> if done = '0'  then
-								 --if stop='1' then
-								--	etat_futur<=finish;
-								-- else
+        when calcul=> if stop='1' then		
+								etat_futur<=finish;
+							 elsif done = '0'  then
 									etat_futur<=calcul;
-								-- end if;
-                      else
+							 else
                         etat_futur<=inc;
-                       end if;
+                      end if;
         when inc=> etat_futur<=calcul;
-		  when finish=>etat_futur<=finish;
+		  when finish=>etat_futur<=init;
     end case;
 end process;
 

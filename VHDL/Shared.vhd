@@ -12,6 +12,7 @@ package CONSTANTS is
 	constant ITER_RANGE : INTEGER := 12;
 	constant QUATRE : SIGNED (XY_RANGE-1 downto 0) := to_signed(4,32) sll FIXED ;
 	constant bit_per_pixel : integer := 12;
+	constant COLOR_MAX : integer := 2047;
 end CONSTANTS;
 
 
