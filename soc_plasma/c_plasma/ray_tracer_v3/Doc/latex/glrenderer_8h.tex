@@ -1,0 +1,314 @@
+\hypertarget{glrenderer_8h}{}\section{Includes\+\_\+\+G\+L/glrenderer.h File Reference}
+\label{glrenderer_8h}\index{Includes\+\_\+\+G\+L/glrenderer.\+h@{Includes\+\_\+\+G\+L/glrenderer.\+h}}
+
+
+Open\+GL renderer.  
+
+
+{\ttfamily \#include \char`\"{}G\+L/glew.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+D\+L2/\+S\+D\+L\+\_\+opengl.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}raytypes.\+h\char`\"{}}\\*
+Include dependency graph for glrenderer.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{glrenderer_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{glrenderer_8h_aa420dfa2394ec1f353f4cde5d288e466}{G\+L\+Renderer\+Init} (int w, int h)
+\begin{DoxyCompactList}\small\item\em Init Open\+GL renderer. \end{DoxyCompactList}\item 
+void \hyperlink{glrenderer_8h_a791abd861c589ba6fc6408981293ff26}{G\+L\+Renderer\+Init2d} ()
+\begin{DoxyCompactList}\small\item\em Init Open\+GL renderer for 2d drawing. \end{DoxyCompactList}\item 
+void \hyperlink{glrenderer_8h_a7351deec81dbcc17908db0bf7ea1ab41}{G\+L\+Renderer\+Setup\+Texture} ()
+\begin{DoxyCompactList}\small\item\em Setup Open\+GL texture output. \end{DoxyCompactList}\item 
+void \hyperlink{glrenderer_8h_a24e53014a6139d276b18a8bb017ccf47}{G\+L\+Renderer\+Set\+Texture\+Image} ()
+\begin{DoxyCompactList}\small\item\em Set the texture as Open\+GL output. \end{DoxyCompactList}\item 
+\hyperlink{raytypes_8h_a0c0a490ab7fa397be6c764a935cc5ea4}{u32\+\_\+t} \hyperlink{glrenderer_8h_a1f7881e4ee36293b7901aae65888e2c0}{G\+L\+Renderer\+Get\+Texture\+Size} ()
+\begin{DoxyCompactList}\small\item\em Get the texture size. \end{DoxyCompactList}\item 
+void \hyperlink{glrenderer_8h_adf47c4b95572660f36ee8264b1d63580}{G\+L\+Renderer\+Draw\+Pixel} (int x, int y, \hyperlink{raytypes_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t} r, \hyperlink{raytypes_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t} g, \hyperlink{raytypes_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t} b)
+\begin{DoxyCompactList}\small\item\em Draw a pixel. \end{DoxyCompactList}\item 
+void \hyperlink{glrenderer_8h_a3a43011a027c2187d104f917d0e3a40a}{G\+L\+Renderer\+Draw\+Rect} (int x, int y, int w, int h, \hyperlink{raytypes_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t} r, \hyperlink{raytypes_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t} g, \hyperlink{raytypes_8h_ae081489b4906f65a3cb18e9fbe9f8d23}{u8\+\_\+t} b)
+\begin{DoxyCompactList}\small\item\em Draw a pixel. \end{DoxyCompactList}\item 
+void \hyperlink{glrenderer_8h_ae8d1fe8eb46550797404ab9c666d72ba}{G\+L\+Renderer\+Draw\+Image} ()
+\begin{DoxyCompactList}\small\item\em Draw rendered image. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Open\+GL renderer. 
+
+\begin{DoxyAuthor}{Author}
+J. Crenne \& C. Leroux 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+February 2016 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\index{glrenderer.\+h@{glrenderer.\+h}!G\+L\+Renderer\+Draw\+Image@{G\+L\+Renderer\+Draw\+Image}}
+\index{G\+L\+Renderer\+Draw\+Image@{G\+L\+Renderer\+Draw\+Image}!glrenderer.\+h@{glrenderer.\+h}}
+\subsubsection[{\texorpdfstring{G\+L\+Renderer\+Draw\+Image()}{GLRendererDrawImage()}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+L\+Renderer\+Draw\+Image (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{glrenderer_8h_ae8d1fe8eb46550797404ab9c666d72ba}{}\label{glrenderer_8h_ae8d1fe8eb46550797404ab9c666d72ba}
+
+
+Draw rendered image. 
+
+
+
+Definition at line 72 of file glrenderer.\+c.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{glrenderer_8h_ae8d1fe8eb46550797404ab9c666d72ba_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{glrenderer.\+h@{glrenderer.\+h}!G\+L\+Renderer\+Draw\+Pixel@{G\+L\+Renderer\+Draw\+Pixel}}
+\index{G\+L\+Renderer\+Draw\+Pixel@{G\+L\+Renderer\+Draw\+Pixel}!glrenderer.\+h@{glrenderer.\+h}}
+\subsubsection[{\texorpdfstring{G\+L\+Renderer\+Draw\+Pixel(int x, int y, u8\+\_\+t r, u8\+\_\+t g, u8\+\_\+t b)}{GLRendererDrawPixel(int x, int y, u8_t r, u8_t g, u8_t b)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+L\+Renderer\+Draw\+Pixel (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{{\bf u8\+\_\+t}}]{r, }
+\item[{{\bf u8\+\_\+t}}]{g, }
+\item[{{\bf u8\+\_\+t}}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{glrenderer_8h_adf47c4b95572660f36ee8264b1d63580}{}\label{glrenderer_8h_adf47c4b95572660f36ee8264b1d63580}
+
+
+Draw a pixel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x position \\
+\hline
+{\em y} & y position \\
+\hline
+{\em r} & red \\
+\hline
+{\em g} & green \\
+\hline
+{\em b} & blue \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 27 of file glrenderer.\+c.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{glrenderer_8h_adf47c4b95572660f36ee8264b1d63580_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{glrenderer.\+h@{glrenderer.\+h}!G\+L\+Renderer\+Draw\+Rect@{G\+L\+Renderer\+Draw\+Rect}}
+\index{G\+L\+Renderer\+Draw\+Rect@{G\+L\+Renderer\+Draw\+Rect}!glrenderer.\+h@{glrenderer.\+h}}
+\subsubsection[{\texorpdfstring{G\+L\+Renderer\+Draw\+Rect(int x, int y, int w, int h, u8\+\_\+t r, u8\+\_\+t g, u8\+\_\+t b)}{GLRendererDrawRect(int x, int y, int w, int h, u8_t r, u8_t g, u8_t b)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+L\+Renderer\+Draw\+Rect (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{w, }
+\item[{int}]{h, }
+\item[{{\bf u8\+\_\+t}}]{r, }
+\item[{{\bf u8\+\_\+t}}]{g, }
+\item[{{\bf u8\+\_\+t}}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{glrenderer_8h_a3a43011a027c2187d104f917d0e3a40a}{}\label{glrenderer_8h_a3a43011a027c2187d104f917d0e3a40a}
+
+
+Draw a pixel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x position \\
+\hline
+{\em y} & y position \\
+\hline
+{\em w} & w width \\
+\hline
+{\em h} & h width \\
+\hline
+{\em r} & red \\
+\hline
+{\em g} & green \\
+\hline
+{\em b} & blue \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 33 of file glrenderer.\+c.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{glrenderer_8h_a3a43011a027c2187d104f917d0e3a40a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{glrenderer_8h_a3a43011a027c2187d104f917d0e3a40a_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{glrenderer.\+h@{glrenderer.\+h}!G\+L\+Renderer\+Get\+Texture\+Size@{G\+L\+Renderer\+Get\+Texture\+Size}}
+\index{G\+L\+Renderer\+Get\+Texture\+Size@{G\+L\+Renderer\+Get\+Texture\+Size}!glrenderer.\+h@{glrenderer.\+h}}
+\subsubsection[{\texorpdfstring{G\+L\+Renderer\+Get\+Texture\+Size()}{GLRendererGetTextureSize()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32\+\_\+t} G\+L\+Renderer\+Get\+Texture\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{glrenderer_8h_a1f7881e4ee36293b7901aae65888e2c0}{}\label{glrenderer_8h_a1f7881e4ee36293b7901aae65888e2c0}
+
+
+Get the texture size. 
+
+\begin{DoxyReturn}{Returns}
+Texture size 
+\end{DoxyReturn}
+
+
+Definition at line 23 of file glrenderer.\+c.
+
+\index{glrenderer.\+h@{glrenderer.\+h}!G\+L\+Renderer\+Init@{G\+L\+Renderer\+Init}}
+\index{G\+L\+Renderer\+Init@{G\+L\+Renderer\+Init}!glrenderer.\+h@{glrenderer.\+h}}
+\subsubsection[{\texorpdfstring{G\+L\+Renderer\+Init(int w, int h)}{GLRendererInit(int w, int h)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+L\+Renderer\+Init (
+\begin{DoxyParamCaption}
+\item[{int}]{w, }
+\item[{int}]{h}
+\end{DoxyParamCaption}
+)}\hypertarget{glrenderer_8h_aa420dfa2394ec1f353f4cde5d288e466}{}\label{glrenderer_8h_aa420dfa2394ec1f353f4cde5d288e466}
+
+
+Init Open\+GL renderer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & renderer width \\
+\hline
+{\em h} & renderer height \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 18 of file glrenderer.\+c.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{glrenderer_8h_aa420dfa2394ec1f353f4cde5d288e466_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{glrenderer.\+h@{glrenderer.\+h}!G\+L\+Renderer\+Init2d@{G\+L\+Renderer\+Init2d}}
+\index{G\+L\+Renderer\+Init2d@{G\+L\+Renderer\+Init2d}!glrenderer.\+h@{glrenderer.\+h}}
+\subsubsection[{\texorpdfstring{G\+L\+Renderer\+Init2d()}{GLRendererInit2d()}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+L\+Renderer\+Init2d (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{glrenderer_8h_a791abd861c589ba6fc6408981293ff26}{}\label{glrenderer_8h_a791abd861c589ba6fc6408981293ff26}
+
+
+Init Open\+GL renderer for 2d drawing. 
+
+
+
+Definition at line 45 of file glrenderer.\+c.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{glrenderer_8h_a791abd861c589ba6fc6408981293ff26_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{glrenderer.\+h@{glrenderer.\+h}!G\+L\+Renderer\+Set\+Texture\+Image@{G\+L\+Renderer\+Set\+Texture\+Image}}
+\index{G\+L\+Renderer\+Set\+Texture\+Image@{G\+L\+Renderer\+Set\+Texture\+Image}!glrenderer.\+h@{glrenderer.\+h}}
+\subsubsection[{\texorpdfstring{G\+L\+Renderer\+Set\+Texture\+Image()}{GLRendererSetTextureImage()}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+L\+Renderer\+Set\+Texture\+Image (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{glrenderer_8h_a24e53014a6139d276b18a8bb017ccf47}{}\label{glrenderer_8h_a24e53014a6139d276b18a8bb017ccf47}
+
+
+Set the texture as Open\+GL output. 
+
+
+
+Definition at line 87 of file glrenderer.\+c.
+
+\index{glrenderer.\+h@{glrenderer.\+h}!G\+L\+Renderer\+Setup\+Texture@{G\+L\+Renderer\+Setup\+Texture}}
+\index{G\+L\+Renderer\+Setup\+Texture@{G\+L\+Renderer\+Setup\+Texture}!glrenderer.\+h@{glrenderer.\+h}}
+\subsubsection[{\texorpdfstring{G\+L\+Renderer\+Setup\+Texture()}{GLRendererSetupTexture()}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+L\+Renderer\+Setup\+Texture (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{glrenderer_8h_a7351deec81dbcc17908db0bf7ea1ab41}{}\label{glrenderer_8h_a7351deec81dbcc17908db0bf7ea1ab41}
+
+
+Setup Open\+GL texture output. 
+
+
+
+Definition at line 61 of file glrenderer.\+c.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{glrenderer_8h_a7351deec81dbcc17908db0bf7ea1ab41_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{glrenderer_8h_a7351deec81dbcc17908db0bf7ea1ab41_icgraph}
+\end{center}
+\end{figure}
+
+

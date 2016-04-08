@@ -1,0 +1,14 @@
+Release 14.7 par P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+flammarion::  Mon Mar 21 12:04:28 2016
+
+par -w -intstyle ise -ol std -mt 2 top_ml605_extphy_map.ncd
+top_ml605_extphy.ncd top_ml605_extphy.pcf 
+
+
+Constraints file: top_ml605_extphy.pcf.
+Loading device for application Rf_Device from file '7a100t.nph' in environment /opt/Xilinx/14.7/ISE_DS/ISE/.
+   "top_ml605_extphy" is an NCD, version 3.2, device xc7a100t, package csg324, speed -1
+INFO:Par:469 - Although the Overall Effort Level (-ol) for this implementation has been set to Standard, Placer will run
+   at effort level High. To override this, please set the Placer Effort Level (-pl) to Standard.

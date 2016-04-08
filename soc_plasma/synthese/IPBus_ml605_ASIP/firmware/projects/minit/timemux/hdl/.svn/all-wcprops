@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/projects/minit/timemux/hdl
+END
+detector_sim.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/projects/minit/timemux/hdl/detector_sim.vhd
+END
+timemux_top.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/projects/minit/timemux/hdl/timemux_top.vhd
+END
+timemux_tb.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/projects/minit/timemux/hdl/timemux_tb.vhd
+END

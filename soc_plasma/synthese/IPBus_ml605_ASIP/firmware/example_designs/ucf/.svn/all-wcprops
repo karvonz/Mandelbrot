@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/example_designs/ucf
+END
+ml605_extphy.ucf
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/example_designs/ucf/ml605_extphy.ucf
+END
+sp601.ucf
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/example_designs/ucf/sp601.ucf
+END
+ml605_sgmii.ucf
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/example_designs/ucf/ml605_sgmii.ucf
+END
+sp605_extphy.ucf
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/example_designs/ucf/sp605_extphy.ucf
+END
+virtex5_fxt_eval.ucf
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/example_designs/ucf/virtex5_fxt_eval.ucf
+END
+sp605_basex.ucf
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/example_designs/ucf/sp605_basex.ucf
+END

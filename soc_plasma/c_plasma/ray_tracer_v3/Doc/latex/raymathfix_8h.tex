@@ -1,0 +1,279 @@
+\hypertarget{raymathfix_8h}{}\section{Includes/raymathfix.h File Reference}
+\label{raymathfix_8h}\index{Includes/raymathfix.\+h@{Includes/raymathfix.\+h}}
+
+
+Raytracer fix math.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdbool.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}raymath.\+h\char`\"{}}\\*
+Include dependency graph for raymathfix.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{raymathfix_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{raymathfix_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{raymathfix_8h_a8edc3240c157eecf1131299de27dea7a}{F\+I\+X\+\_\+\+S\+H\+I\+FT}~12
+\begin{DoxyCompactList}\small\item\em Fixed point number of fractional bits. \end{DoxyCompactList}\item 
+\#define \hyperlink{raymathfix_8h_a2074879063dde33e28fb3ccffdd5e6e4}{F\+I\+X\+\_\+\+S\+C\+A\+LE}~( 1 $<$$<$ \hyperlink{raymathfix_8h_a8edc3240c157eecf1131299de27dea7a}{F\+I\+X\+\_\+\+S\+H\+I\+FT} )
+\item 
+\#define \hyperlink{raymathfix_8h_a88d27014adc2dc791584fcb71ff34641}{F\+I\+X\+\_\+\+M\+A\+SK}~( \hyperlink{raymathfix_8h_a2074879063dde33e28fb3ccffdd5e6e4}{F\+I\+X\+\_\+\+S\+C\+A\+LE} -\/ 1 )
+\item 
+\#define \hyperlink{raymathfix_8h_adc9777294ed3349f0ac3b77b58cf24e2}{F\+I\+X\+\_\+\+S\+C\+A\+L\+EF}~( (float)\hyperlink{raymathfix_8h_a2074879063dde33e28fb3ccffdd5e6e4}{F\+I\+X\+\_\+\+S\+C\+A\+LE} )
+\item 
+\#define \hyperlink{raymathfix_8h_afb3623ba637d3ac3a3cf737146aace15}{F\+I\+X\+\_\+\+S\+C\+A\+L\+E\+F\+\_\+\+I\+NV}~( 1.\+0f / F\+I\+X\+\_\+\+S\+C\+A\+L\+E\+F	)
+\item 
+\#define \hyperlink{raymathfix_8h_a4ceea0e31ae25efeaa7a4c76d85ed950}{F\+I\+X\+\_\+\+O\+NE}~\hyperlink{raymathfix_8h_a2074879063dde33e28fb3ccffdd5e6e4}{F\+I\+X\+\_\+\+S\+C\+A\+LE}
+\item 
+\#define \hyperlink{raymathfix_8h_ab5cadba2a8639b9ef54ab46b3155799c}{Math\+Float2\+Fix}(f)~(\hyperlink{raymath_8h_aa97c1f529dc5a11a78758184c84a39c9}{number})( f $\ast$ \hyperlink{raymathfix_8h_adc9777294ed3349f0ac3b77b58cf24e2}{F\+I\+X\+\_\+\+S\+C\+A\+L\+EF} )
+\begin{DoxyCompactList}\small\item\em Convert a floating point number to a fixed point number. \end{DoxyCompactList}\item 
+\#define \hyperlink{raymathfix_8h_a662a769f40ac43a3d5e1afeda0f0e9c9}{Math\+Fix\+Add}(fa,  fb)~(\hyperlink{raymath_8h_aa97c1f529dc5a11a78758184c84a39c9}{number})( fa + fb )
+\begin{DoxyCompactList}\small\item\em Add two fixed point number. \end{DoxyCompactList}\item 
+\#define \hyperlink{raymathfix_8h_a9efdd30e8c235b4e7d710adfa2b933dc}{Math\+Fix\+Sub}(fa,  fb)~(\hyperlink{raymath_8h_aa97c1f529dc5a11a78758184c84a39c9}{number})( fa -\/ fb )
+\begin{DoxyCompactList}\small\item\em Subtract two fixed point number. \end{DoxyCompactList}\item 
+\#define \hyperlink{raymathfix_8h_a8d93126fdac6ca6825b80576bed9a7c5}{Math\+Fix\+Mul}(fa,  fb)~(\hyperlink{raymath_8h_aa97c1f529dc5a11a78758184c84a39c9}{number})( ( fa $\ast$ fb ) $>$$>$ \hyperlink{raymathfix_8h_a8edc3240c157eecf1131299de27dea7a}{F\+I\+X\+\_\+\+S\+H\+I\+FT} )
+\begin{DoxyCompactList}\small\item\em Multiply two fixed point number. \end{DoxyCompactList}\item 
+\#define \hyperlink{raymathfix_8h_a00f0fef6f042f8aea5ce731a68a3316a}{Math\+Fix\+Div}(fa,  fb)~( ( (\hyperlink{raymath_8h_aa97c1f529dc5a11a78758184c84a39c9}{number})fa ) $<$$<$ \hyperlink{raymathfix_8h_a8edc3240c157eecf1131299de27dea7a}{F\+I\+X\+\_\+\+S\+H\+I\+FT} ) / ( ( fb == 0 ) ? 1 \+: fb )
+\begin{DoxyCompactList}\small\item\em Divide two fixed point number. \end{DoxyCompactList}\item 
+\#define \hyperlink{raymathfix_8h_afebd8dc45d13413b695ac0bef6593629}{Math\+Int2\+Fix}(d)~(\hyperlink{raytypes_8h_abab37cf41841dab8dc81b8da87acd6c5}{fixed})( d $<$$<$ \hyperlink{raymathfix_8h_a8edc3240c157eecf1131299de27dea7a}{F\+I\+X\+\_\+\+S\+H\+I\+FT} )
+\begin{DoxyCompactList}\small\item\em Convert a integer to a fixed point number. \end{DoxyCompactList}\item 
+\#define \hyperlink{raymathfix_8h_a942ebb7dde9c1d71c1e80fcb236dbc5b}{Math\+Fix2\+Uint}(fix)~(\hyperlink{raytypes_8h_a0c0a490ab7fa397be6c764a935cc5ea4}{u32\+\_\+t})( fix $>$$>$ \hyperlink{raymathfix_8h_a8edc3240c157eecf1131299de27dea7a}{F\+I\+X\+\_\+\+S\+H\+I\+FT} )
+\begin{DoxyCompactList}\small\item\em Convert a fixed point number to an unsigned integer. \end{DoxyCompactList}\item 
+\#define \hyperlink{raymathfix_8h_a9726ebedebc4c86b01ec631d1c241bfc}{Math\+Fix2\+U\+Frac}(fix)~(\hyperlink{raytypes_8h_a0c0a490ab7fa397be6c764a935cc5ea4}{u32\+\_\+t})( fix \& \hyperlink{raymathfix_8h_a88d27014adc2dc791584fcb71ff34641}{F\+I\+X\+\_\+\+M\+A\+SK} )
+\begin{DoxyCompactList}\small\item\em Convert a fixed point fractional part to an unsigned integer. \end{DoxyCompactList}\item 
+\#define \hyperlink{raymathfix_8h_a0e590211d6e7798c4db9f0551f432898}{Math\+Fix2\+Int}(fix)~(int)( fix / \hyperlink{raymathfix_8h_a2074879063dde33e28fb3ccffdd5e6e4}{F\+I\+X\+\_\+\+S\+C\+A\+LE} )
+\begin{DoxyCompactList}\small\item\em Convert a fixed point number part to a signed integer. \end{DoxyCompactList}\item 
+\#define \hyperlink{raymathfix_8h_a328874c73d54ce44afc7c60a7054941c}{Math\+Fix2\+Float}(fix)~(float)( fix / \hyperlink{raymathfix_8h_adc9777294ed3349f0ac3b77b58cf24e2}{F\+I\+X\+\_\+\+S\+C\+A\+L\+EF} )
+\begin{DoxyCompactList}\small\item\em Convert a fixed point number to a floating point number. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Raytracer fix math. 
+
+\begin{DoxyAuthor}{Author}
+J. Crenne \& C. Leroux 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+February 2016 
+\end{DoxyDate}
+
+
+\subsection{Macro Definition Documentation}
+\index{raymathfix.\+h@{raymathfix.\+h}!F\+I\+X\+\_\+\+M\+A\+SK@{F\+I\+X\+\_\+\+M\+A\+SK}}
+\index{F\+I\+X\+\_\+\+M\+A\+SK@{F\+I\+X\+\_\+\+M\+A\+SK}!raymathfix.\+h@{raymathfix.\+h}}
+\subsubsection[{\texorpdfstring{F\+I\+X\+\_\+\+M\+A\+SK}{FIX_MASK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+I\+X\+\_\+\+M\+A\+SK~( {\bf F\+I\+X\+\_\+\+S\+C\+A\+LE} -\/ 1 )}\hypertarget{raymathfix_8h_a88d27014adc2dc791584fcb71ff34641}{}\label{raymathfix_8h_a88d27014adc2dc791584fcb71ff34641}
+
+
+Definition at line 26 of file raymathfix.\+h.
+
+\index{raymathfix.\+h@{raymathfix.\+h}!F\+I\+X\+\_\+\+O\+NE@{F\+I\+X\+\_\+\+O\+NE}}
+\index{F\+I\+X\+\_\+\+O\+NE@{F\+I\+X\+\_\+\+O\+NE}!raymathfix.\+h@{raymathfix.\+h}}
+\subsubsection[{\texorpdfstring{F\+I\+X\+\_\+\+O\+NE}{FIX_ONE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+I\+X\+\_\+\+O\+NE~{\bf F\+I\+X\+\_\+\+S\+C\+A\+LE}}\hypertarget{raymathfix_8h_a4ceea0e31ae25efeaa7a4c76d85ed950}{}\label{raymathfix_8h_a4ceea0e31ae25efeaa7a4c76d85ed950}
+
+
+Definition at line 29 of file raymathfix.\+h.
+
+\index{raymathfix.\+h@{raymathfix.\+h}!F\+I\+X\+\_\+\+S\+C\+A\+LE@{F\+I\+X\+\_\+\+S\+C\+A\+LE}}
+\index{F\+I\+X\+\_\+\+S\+C\+A\+LE@{F\+I\+X\+\_\+\+S\+C\+A\+LE}!raymathfix.\+h@{raymathfix.\+h}}
+\subsubsection[{\texorpdfstring{F\+I\+X\+\_\+\+S\+C\+A\+LE}{FIX_SCALE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+I\+X\+\_\+\+S\+C\+A\+LE~( 1 $<$$<$ {\bf F\+I\+X\+\_\+\+S\+H\+I\+FT} )}\hypertarget{raymathfix_8h_a2074879063dde33e28fb3ccffdd5e6e4}{}\label{raymathfix_8h_a2074879063dde33e28fb3ccffdd5e6e4}
+
+
+Definition at line 25 of file raymathfix.\+h.
+
+\index{raymathfix.\+h@{raymathfix.\+h}!F\+I\+X\+\_\+\+S\+C\+A\+L\+EF@{F\+I\+X\+\_\+\+S\+C\+A\+L\+EF}}
+\index{F\+I\+X\+\_\+\+S\+C\+A\+L\+EF@{F\+I\+X\+\_\+\+S\+C\+A\+L\+EF}!raymathfix.\+h@{raymathfix.\+h}}
+\subsubsection[{\texorpdfstring{F\+I\+X\+\_\+\+S\+C\+A\+L\+EF}{FIX_SCALEF}}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+I\+X\+\_\+\+S\+C\+A\+L\+EF~( (float){\bf F\+I\+X\+\_\+\+S\+C\+A\+LE} )}\hypertarget{raymathfix_8h_adc9777294ed3349f0ac3b77b58cf24e2}{}\label{raymathfix_8h_adc9777294ed3349f0ac3b77b58cf24e2}
+
+
+Definition at line 27 of file raymathfix.\+h.
+
+\index{raymathfix.\+h@{raymathfix.\+h}!F\+I\+X\+\_\+\+S\+C\+A\+L\+E\+F\+\_\+\+I\+NV@{F\+I\+X\+\_\+\+S\+C\+A\+L\+E\+F\+\_\+\+I\+NV}}
+\index{F\+I\+X\+\_\+\+S\+C\+A\+L\+E\+F\+\_\+\+I\+NV@{F\+I\+X\+\_\+\+S\+C\+A\+L\+E\+F\+\_\+\+I\+NV}!raymathfix.\+h@{raymathfix.\+h}}
+\subsubsection[{\texorpdfstring{F\+I\+X\+\_\+\+S\+C\+A\+L\+E\+F\+\_\+\+I\+NV}{FIX_SCALEF_INV}}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+I\+X\+\_\+\+S\+C\+A\+L\+E\+F\+\_\+\+I\+NV~( 1.\+0f / F\+I\+X\+\_\+\+S\+C\+A\+L\+E\+F	)}\hypertarget{raymathfix_8h_afb3623ba637d3ac3a3cf737146aace15}{}\label{raymathfix_8h_afb3623ba637d3ac3a3cf737146aace15}
+
+
+Definition at line 28 of file raymathfix.\+h.
+
+\index{raymathfix.\+h@{raymathfix.\+h}!F\+I\+X\+\_\+\+S\+H\+I\+FT@{F\+I\+X\+\_\+\+S\+H\+I\+FT}}
+\index{F\+I\+X\+\_\+\+S\+H\+I\+FT@{F\+I\+X\+\_\+\+S\+H\+I\+FT}!raymathfix.\+h@{raymathfix.\+h}}
+\subsubsection[{\texorpdfstring{F\+I\+X\+\_\+\+S\+H\+I\+FT}{FIX_SHIFT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+I\+X\+\_\+\+S\+H\+I\+FT~12}\hypertarget{raymathfix_8h_a8edc3240c157eecf1131299de27dea7a}{}\label{raymathfix_8h_a8edc3240c157eecf1131299de27dea7a}
+
+
+Fixed point number of fractional bits. 
+
+
+
+Definition at line 23 of file raymathfix.\+h.
+
+\index{raymathfix.\+h@{raymathfix.\+h}!Math\+Fix2\+Float@{Math\+Fix2\+Float}}
+\index{Math\+Fix2\+Float@{Math\+Fix2\+Float}!raymathfix.\+h@{raymathfix.\+h}}
+\subsubsection[{\texorpdfstring{Math\+Fix2\+Float}{MathFix2Float}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Math\+Fix2\+Float(
+\begin{DoxyParamCaption}
+\item[{}]{fix}
+\end{DoxyParamCaption}
+)~(float)( fix / {\bf F\+I\+X\+\_\+\+S\+C\+A\+L\+EF} )}\hypertarget{raymathfix_8h_a328874c73d54ce44afc7c60a7054941c}{}\label{raymathfix_8h_a328874c73d54ce44afc7c60a7054941c}
+
+
+Convert a fixed point number to a floating point number. 
+
+
+
+Definition at line 89 of file raymathfix.\+h.
+
+\index{raymathfix.\+h@{raymathfix.\+h}!Math\+Fix2\+Int@{Math\+Fix2\+Int}}
+\index{Math\+Fix2\+Int@{Math\+Fix2\+Int}!raymathfix.\+h@{raymathfix.\+h}}
+\subsubsection[{\texorpdfstring{Math\+Fix2\+Int}{MathFix2Int}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Math\+Fix2\+Int(
+\begin{DoxyParamCaption}
+\item[{}]{fix}
+\end{DoxyParamCaption}
+)~(int)( fix / {\bf F\+I\+X\+\_\+\+S\+C\+A\+LE} )}\hypertarget{raymathfix_8h_a0e590211d6e7798c4db9f0551f432898}{}\label{raymathfix_8h_a0e590211d6e7798c4db9f0551f432898}
+
+
+Convert a fixed point number part to a signed integer. 
+
+
+
+Definition at line 83 of file raymathfix.\+h.
+
+\index{raymathfix.\+h@{raymathfix.\+h}!Math\+Fix2\+U\+Frac@{Math\+Fix2\+U\+Frac}}
+\index{Math\+Fix2\+U\+Frac@{Math\+Fix2\+U\+Frac}!raymathfix.\+h@{raymathfix.\+h}}
+\subsubsection[{\texorpdfstring{Math\+Fix2\+U\+Frac}{MathFix2UFrac}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Math\+Fix2\+U\+Frac(
+\begin{DoxyParamCaption}
+\item[{}]{fix}
+\end{DoxyParamCaption}
+)~({\bf u32\+\_\+t})( fix \& {\bf F\+I\+X\+\_\+\+M\+A\+SK} )}\hypertarget{raymathfix_8h_a9726ebedebc4c86b01ec631d1c241bfc}{}\label{raymathfix_8h_a9726ebedebc4c86b01ec631d1c241bfc}
+
+
+Convert a fixed point fractional part to an unsigned integer. 
+
+
+
+Definition at line 77 of file raymathfix.\+h.
+
+\index{raymathfix.\+h@{raymathfix.\+h}!Math\+Fix2\+Uint@{Math\+Fix2\+Uint}}
+\index{Math\+Fix2\+Uint@{Math\+Fix2\+Uint}!raymathfix.\+h@{raymathfix.\+h}}
+\subsubsection[{\texorpdfstring{Math\+Fix2\+Uint}{MathFix2Uint}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Math\+Fix2\+Uint(
+\begin{DoxyParamCaption}
+\item[{}]{fix}
+\end{DoxyParamCaption}
+)~({\bf u32\+\_\+t})( fix $>$$>$ {\bf F\+I\+X\+\_\+\+S\+H\+I\+FT} )}\hypertarget{raymathfix_8h_a942ebb7dde9c1d71c1e80fcb236dbc5b}{}\label{raymathfix_8h_a942ebb7dde9c1d71c1e80fcb236dbc5b}
+
+
+Convert a fixed point number to an unsigned integer. 
+
+
+
+Definition at line 71 of file raymathfix.\+h.
+
+\index{raymathfix.\+h@{raymathfix.\+h}!Math\+Fix\+Add@{Math\+Fix\+Add}}
+\index{Math\+Fix\+Add@{Math\+Fix\+Add}!raymathfix.\+h@{raymathfix.\+h}}
+\subsubsection[{\texorpdfstring{Math\+Fix\+Add}{MathFixAdd}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Math\+Fix\+Add(
+\begin{DoxyParamCaption}
+\item[{}]{fa, }
+\item[{}]{fb}
+\end{DoxyParamCaption}
+)~({\bf number})( fa + fb )}\hypertarget{raymathfix_8h_a662a769f40ac43a3d5e1afeda0f0e9c9}{}\label{raymathfix_8h_a662a769f40ac43a3d5e1afeda0f0e9c9}
+
+
+Add two fixed point number. 
+
+
+
+Definition at line 41 of file raymathfix.\+h.
+
+\index{raymathfix.\+h@{raymathfix.\+h}!Math\+Fix\+Div@{Math\+Fix\+Div}}
+\index{Math\+Fix\+Div@{Math\+Fix\+Div}!raymathfix.\+h@{raymathfix.\+h}}
+\subsubsection[{\texorpdfstring{Math\+Fix\+Div}{MathFixDiv}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Math\+Fix\+Div(
+\begin{DoxyParamCaption}
+\item[{}]{fa, }
+\item[{}]{fb}
+\end{DoxyParamCaption}
+)~( ( ({\bf number})fa ) $<$$<$ {\bf F\+I\+X\+\_\+\+S\+H\+I\+FT} ) / ( ( fb == 0 ) ? 1 \+: fb )}\hypertarget{raymathfix_8h_a00f0fef6f042f8aea5ce731a68a3316a}{}\label{raymathfix_8h_a00f0fef6f042f8aea5ce731a68a3316a}
+
+
+Divide two fixed point number. 
+
+
+
+Definition at line 59 of file raymathfix.\+h.
+
+\index{raymathfix.\+h@{raymathfix.\+h}!Math\+Fix\+Mul@{Math\+Fix\+Mul}}
+\index{Math\+Fix\+Mul@{Math\+Fix\+Mul}!raymathfix.\+h@{raymathfix.\+h}}
+\subsubsection[{\texorpdfstring{Math\+Fix\+Mul}{MathFixMul}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Math\+Fix\+Mul(
+\begin{DoxyParamCaption}
+\item[{}]{fa, }
+\item[{}]{fb}
+\end{DoxyParamCaption}
+)~({\bf number})( ( fa $\ast$ fb ) $>$$>$ {\bf F\+I\+X\+\_\+\+S\+H\+I\+FT} )}\hypertarget{raymathfix_8h_a8d93126fdac6ca6825b80576bed9a7c5}{}\label{raymathfix_8h_a8d93126fdac6ca6825b80576bed9a7c5}
+
+
+Multiply two fixed point number. 
+
+
+
+Definition at line 53 of file raymathfix.\+h.
+
+\index{raymathfix.\+h@{raymathfix.\+h}!Math\+Fix\+Sub@{Math\+Fix\+Sub}}
+\index{Math\+Fix\+Sub@{Math\+Fix\+Sub}!raymathfix.\+h@{raymathfix.\+h}}
+\subsubsection[{\texorpdfstring{Math\+Fix\+Sub}{MathFixSub}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Math\+Fix\+Sub(
+\begin{DoxyParamCaption}
+\item[{}]{fa, }
+\item[{}]{fb}
+\end{DoxyParamCaption}
+)~({\bf number})( fa -\/ fb )}\hypertarget{raymathfix_8h_a9efdd30e8c235b4e7d710adfa2b933dc}{}\label{raymathfix_8h_a9efdd30e8c235b4e7d710adfa2b933dc}
+
+
+Subtract two fixed point number. 
+
+
+
+Definition at line 47 of file raymathfix.\+h.
+
+\index{raymathfix.\+h@{raymathfix.\+h}!Math\+Float2\+Fix@{Math\+Float2\+Fix}}
+\index{Math\+Float2\+Fix@{Math\+Float2\+Fix}!raymathfix.\+h@{raymathfix.\+h}}
+\subsubsection[{\texorpdfstring{Math\+Float2\+Fix}{MathFloat2Fix}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Math\+Float2\+Fix(
+\begin{DoxyParamCaption}
+\item[{}]{f}
+\end{DoxyParamCaption}
+)~({\bf number})( f $\ast$ {\bf F\+I\+X\+\_\+\+S\+C\+A\+L\+EF} )}\hypertarget{raymathfix_8h_ab5cadba2a8639b9ef54ab46b3155799c}{}\label{raymathfix_8h_ab5cadba2a8639b9ef54ab46b3155799c}
+
+
+Convert a floating point number to a fixed point number. 
+
+
+
+Definition at line 35 of file raymathfix.\+h.
+
+\index{raymathfix.\+h@{raymathfix.\+h}!Math\+Int2\+Fix@{Math\+Int2\+Fix}}
+\index{Math\+Int2\+Fix@{Math\+Int2\+Fix}!raymathfix.\+h@{raymathfix.\+h}}
+\subsubsection[{\texorpdfstring{Math\+Int2\+Fix}{MathInt2Fix}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Math\+Int2\+Fix(
+\begin{DoxyParamCaption}
+\item[{}]{d}
+\end{DoxyParamCaption}
+)~({\bf fixed})( d $<$$<$ {\bf F\+I\+X\+\_\+\+S\+H\+I\+FT} )}\hypertarget{raymathfix_8h_afebd8dc45d13413b695ac0bef6593629}{}\label{raymathfix_8h_afebd8dc45d13413b695ac0bef6593629}
+
+
+Convert a integer to a fixed point number. 
+
+
+
+Definition at line 65 of file raymathfix.\+h.
+

@@ -1,0 +1,314 @@
+\hypertarget{rayrender_8c}{}\section{Sources/rayrender.c File Reference}
+\label{rayrender_8c}\index{Sources/rayrender.\+c@{Sources/rayrender.\+c}}
+
+
+Raytracer scene rendering.  
+
+
+{\ttfamily \#include \char`\"{}../\+Includes/rayrender.\+h\char`\"{}}\\*
+Include dependency graph for rayrender.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rayrender_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{rayrender_8c_afd5f3dfa0756d697a86e818cdbf49a56}{Render\+Reset} ()
+\begin{DoxyCompactList}\small\item\em Reset the render context. \end{DoxyCompactList}\item 
+void \hyperlink{rayrender_8c_acc66fa75cd6a184f46af374fc8004d2c}{Render\+Setup} (\hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} l, \hyperlink{raymath_8h_aa97c1f529dc5a11a78758184c84a39c9}{number} ambient, \hyperlink{raytypes_8h_a0c0a490ab7fa397be6c764a935cc5ea4}{u32\+\_\+t} maxr)
+\begin{DoxyCompactList}\small\item\em Setup the render context. \end{DoxyCompactList}\item 
+\hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} \hyperlink{rayrender_8c_a7bcd9f4840dfc55cacb2e1ead3855f89}{Render\+Filter\+Color} (\hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} rgb\+In, \hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} color)
+\item 
+\hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} \hyperlink{rayrender_8c_aca31119008a3d66567390bb1a3231a9f}{Render\+Get\+Color} (\hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} rgb\+In, int type, int index)
+\item 
+bool \hyperlink{rayrender_8c_aa411224771e850633c369beacd19965a}{Raytrace} (\hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} ray, \hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} origin, \hyperlink{rayintersect_8h_ad703c2567e842b299a9e6569790d090a}{rayintersect\+\_\+t} $\ast$info)
+\item 
+\hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} \hyperlink{rayrender_8c_a850af53283a7801d99dd1c9e5ff39c60}{Reflect} (\hyperlink{raytypes_8h_a0c0a490ab7fa397be6c764a935cc5ea4}{u32\+\_\+t} type, \hyperlink{raytypes_8h_a0c0a490ab7fa397be6c764a935cc5ea4}{u32\+\_\+t} index, \hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} ray, \hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} from\+Point)
+\item 
+\hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} \hyperlink{rayrender_8c_a5cbf8abb7997119c522463eb111b2a3e}{Render\+Compute\+Pixel\+Color} (\hyperlink{raytypes_8h_a0c0a490ab7fa397be6c764a935cc5ea4}{u32\+\_\+t} size, \hyperlink{raymath_8h_aa97c1f529dc5a11a78758184c84a39c9}{number} x, \hyperlink{raymath_8h_aa97c1f529dc5a11a78758184c84a39c9}{number} y)
+\begin{DoxyCompactList}\small\item\em Render the current scene. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Raytracer scene rendering. 
+
+\begin{DoxyAuthor}{Author}
+J. Crenne \& C. Leroux 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+February 2016 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\index{rayrender.\+c@{rayrender.\+c}!Raytrace@{Raytrace}}
+\index{Raytrace@{Raytrace}!rayrender.\+c@{rayrender.\+c}}
+\subsubsection[{\texorpdfstring{Raytrace(vec3\+\_\+t ray, vec3\+\_\+t origin, rayintersect\+\_\+t $\ast$info)}{Raytrace(vec3_t ray, vec3_t origin, rayintersect_t *info)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Raytrace (
+\begin{DoxyParamCaption}
+\item[{{\bf vec3\+\_\+t}}]{ray, }
+\item[{{\bf vec3\+\_\+t}}]{origin, }
+\item[{{\bf rayintersect\+\_\+t} $\ast$}]{info}
+\end{DoxyParamCaption}
+)}\hypertarget{rayrender_8c_aa411224771e850633c369beacd19965a}{}\label{rayrender_8c_aa411224771e850633c369beacd19965a}
+
+
+Definition at line 52 of file rayrender.\+c.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rayrender_8c_aa411224771e850633c369beacd19965a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rayrender_8c_aa411224771e850633c369beacd19965a_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{rayrender.\+c@{rayrender.\+c}!Reflect@{Reflect}}
+\index{Reflect@{Reflect}!rayrender.\+c@{rayrender.\+c}}
+\subsubsection[{\texorpdfstring{Reflect(u32\+\_\+t type, u32\+\_\+t index, vec3\+\_\+t ray, vec3\+\_\+t from\+Point)}{Reflect(u32_t type, u32_t index, vec3_t ray, vec3_t fromPoint)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3\+\_\+t} Reflect (
+\begin{DoxyParamCaption}
+\item[{{\bf u32\+\_\+t}}]{type, }
+\item[{{\bf u32\+\_\+t}}]{index, }
+\item[{{\bf vec3\+\_\+t}}]{ray, }
+\item[{{\bf vec3\+\_\+t}}]{from\+Point}
+\end{DoxyParamCaption}
+)}\hypertarget{rayrender_8c_a850af53283a7801d99dd1c9e5ff39c60}{}\label{rayrender_8c_a850af53283a7801d99dd1c9e5ff39c60}
+
+
+Definition at line 69 of file rayrender.\+c.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rayrender_8c_a850af53283a7801d99dd1c9e5ff39c60_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rayrender_8c_a850af53283a7801d99dd1c9e5ff39c60_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{rayrender.\+c@{rayrender.\+c}!Render\+Compute\+Pixel\+Color@{Render\+Compute\+Pixel\+Color}}
+\index{Render\+Compute\+Pixel\+Color@{Render\+Compute\+Pixel\+Color}!rayrender.\+c@{rayrender.\+c}}
+\subsubsection[{\texorpdfstring{Render\+Compute\+Pixel\+Color(u32\+\_\+t size, number x, number y)}{RenderComputePixelColor(u32_t size, number x, number y)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3\+\_\+t} Render\+Compute\+Pixel\+Color (
+\begin{DoxyParamCaption}
+\item[{{\bf u32\+\_\+t}}]{size, }
+\item[{{\bf number}}]{x, }
+\item[{{\bf number}}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{rayrender_8c_a5cbf8abb7997119c522463eb111b2a3e}{}\label{rayrender_8c_a5cbf8abb7997119c522463eb111b2a3e}
+
+
+Render the current scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & Size of output \char`\"{}pixel\char`\"{} \\
+\hline
+{\em x} & Pixel x position \\
+\hline
+{\em y} & Pixel y position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A 3D vector representing the computed pixel color 
+\end{DoxyReturn}
+
+
+Definition at line 76 of file rayrender.\+c.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rayrender_8c_a5cbf8abb7997119c522463eb111b2a3e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{rayrender_8c_a5cbf8abb7997119c522463eb111b2a3e_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{rayrender.\+c@{rayrender.\+c}!Render\+Filter\+Color@{Render\+Filter\+Color}}
+\index{Render\+Filter\+Color@{Render\+Filter\+Color}!rayrender.\+c@{rayrender.\+c}}
+\subsubsection[{\texorpdfstring{Render\+Filter\+Color(vec3\+\_\+t rgb\+In, vec3\+\_\+t color)}{RenderFilterColor(vec3_t rgbIn, vec3_t color)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3\+\_\+t} Render\+Filter\+Color (
+\begin{DoxyParamCaption}
+\item[{{\bf vec3\+\_\+t}}]{rgb\+In, }
+\item[{{\bf vec3\+\_\+t}}]{color}
+\end{DoxyParamCaption}
+)}\hypertarget{rayrender_8c_a7bcd9f4840dfc55cacb2e1ead3855f89}{}\label{rayrender_8c_a7bcd9f4840dfc55cacb2e1ead3855f89}
+
+
+Definition at line 39 of file rayrender.\+c.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{rayrender_8c_a7bcd9f4840dfc55cacb2e1ead3855f89_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rayrender_8c_a7bcd9f4840dfc55cacb2e1ead3855f89_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{rayrender.\+c@{rayrender.\+c}!Render\+Get\+Color@{Render\+Get\+Color}}
+\index{Render\+Get\+Color@{Render\+Get\+Color}!rayrender.\+c@{rayrender.\+c}}
+\subsubsection[{\texorpdfstring{Render\+Get\+Color(vec3\+\_\+t rgb\+In, int type, int index)}{RenderGetColor(vec3_t rgbIn, int type, int index)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3\+\_\+t} Render\+Get\+Color (
+\begin{DoxyParamCaption}
+\item[{{\bf vec3\+\_\+t}}]{rgb\+In, }
+\item[{int}]{type, }
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}\hypertarget{rayrender_8c_aca31119008a3d66567390bb1a3231a9f}{}\label{rayrender_8c_aca31119008a3d66567390bb1a3231a9f}
+
+
+Definition at line 48 of file rayrender.\+c.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rayrender_8c_aca31119008a3d66567390bb1a3231a9f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rayrender_8c_aca31119008a3d66567390bb1a3231a9f_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{rayrender.\+c@{rayrender.\+c}!Render\+Reset@{Render\+Reset}}
+\index{Render\+Reset@{Render\+Reset}!rayrender.\+c@{rayrender.\+c}}
+\subsubsection[{\texorpdfstring{Render\+Reset()}{RenderReset()}}]{\setlength{\rightskip}{0pt plus 5cm}void Render\+Reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{rayrender_8c_afd5f3dfa0756d697a86e818cdbf49a56}{}\label{rayrender_8c_afd5f3dfa0756d697a86e818cdbf49a56}
+
+
+Reset the render context. 
+
+
+
+Definition at line 23 of file rayrender.\+c.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{rayrender_8c_afd5f3dfa0756d697a86e818cdbf49a56_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{rayrender.\+c@{rayrender.\+c}!Render\+Setup@{Render\+Setup}}
+\index{Render\+Setup@{Render\+Setup}!rayrender.\+c@{rayrender.\+c}}
+\subsubsection[{\texorpdfstring{Render\+Setup(vec3\+\_\+t l, number ambient, u32\+\_\+t maxr)}{RenderSetup(vec3_t l, number ambient, u32_t maxr)}}]{\setlength{\rightskip}{0pt plus 5cm}void Render\+Setup (
+\begin{DoxyParamCaption}
+\item[{{\bf vec3\+\_\+t}}]{l, }
+\item[{{\bf number}}]{ambient, }
+\item[{{\bf u32\+\_\+t}}]{maxr}
+\end{DoxyParamCaption}
+)}\hypertarget{rayrender_8c_acc66fa75cd6a184f46af374fc8004d2c}{}\label{rayrender_8c_acc66fa75cd6a184f46af374fc8004d2c}
+
+
+Setup the render context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & Point light position \\
+\hline
+{\em ambient} & Ambient light multiplier factor \\
+\hline
+{\em maxr} & Maximum render resolution \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 31 of file rayrender.\+c.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{rayrender_8c_acc66fa75cd6a184f46af374fc8004d2c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{rayrender_8c_acc66fa75cd6a184f46af374fc8004d2c_icgraph}
+\end{center}
+\end{figure}
+
+

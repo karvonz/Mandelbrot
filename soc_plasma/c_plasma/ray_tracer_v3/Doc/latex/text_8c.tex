@@ -1,0 +1,167 @@
+\hypertarget{text_8c}{}\section{Sources\+\_\+\+G\+L/text.c File Reference}
+\label{text_8c}\index{Sources\+\_\+\+G\+L/text.\+c@{Sources\+\_\+\+G\+L/text.\+c}}
+
+
+Open\+GL text drawing.  
+
+
+{\ttfamily \#include \char`\"{}stb\+\_\+truetype.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdbool.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}S\+D\+L2/\+S\+D\+L.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+D\+L2/\+S\+D\+L\+\_\+opengl.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}text.\+h\char`\"{}}\\*
+Include dependency graph for text.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{text_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{text_8c_afaa2f2d0d9d6726cfae6da070e736347}{S\+T\+B\+\_\+\+T\+R\+U\+E\+T\+Y\+P\+E\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+ON}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{text_8c_a4366af149a529aa1eadd274f77775684}{Text\+Init} (char $\ast$font)
+\begin{DoxyCompactList}\small\item\em Init text resources. \end{DoxyCompactList}\item 
+void \hyperlink{text_8c_ac2975924071e907fd6c15d7c4310eb50}{Text\+Destroy} ()
+\begin{DoxyCompactList}\small\item\em Free text resources. \end{DoxyCompactList}\item 
+void \hyperlink{text_8c_a15d84d3b2e3537f3f8019630209449d9}{Text\+Draw} (float x, float y, const char $\ast$text, int align, unsigned int col)
+\begin{DoxyCompactList}\small\item\em Draw a text on screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Open\+GL text drawing. 
+
+\begin{DoxyAuthor}{Author}
+J. Crenne \& C. Leroux 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+February 2016 
+\end{DoxyDate}
+
+
+\subsection{Macro Definition Documentation}
+\index{text.\+c@{text.\+c}!S\+T\+B\+\_\+\+T\+R\+U\+E\+T\+Y\+P\+E\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+ON@{S\+T\+B\+\_\+\+T\+R\+U\+E\+T\+Y\+P\+E\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+ON}}
+\index{S\+T\+B\+\_\+\+T\+R\+U\+E\+T\+Y\+P\+E\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+ON@{S\+T\+B\+\_\+\+T\+R\+U\+E\+T\+Y\+P\+E\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+ON}!text.\+c@{text.\+c}}
+\subsubsection[{\texorpdfstring{S\+T\+B\+\_\+\+T\+R\+U\+E\+T\+Y\+P\+E\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+ON}{STB_TRUETYPE_IMPLEMENTATION}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+T\+B\+\_\+\+T\+R\+U\+E\+T\+Y\+P\+E\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+ON}\hypertarget{text_8c_afaa2f2d0d9d6726cfae6da070e736347}{}\label{text_8c_afaa2f2d0d9d6726cfae6da070e736347}
+
+
+Definition at line 9 of file text.\+c.
+
+
+
+\subsection{Function Documentation}
+\index{text.\+c@{text.\+c}!Text\+Destroy@{Text\+Destroy}}
+\index{Text\+Destroy@{Text\+Destroy}!text.\+c@{text.\+c}}
+\subsubsection[{\texorpdfstring{Text\+Destroy()}{TextDestroy()}}]{\setlength{\rightskip}{0pt plus 5cm}void Text\+Destroy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{text_8c_ac2975924071e907fd6c15d7c4310eb50}{}\label{text_8c_ac2975924071e907fd6c15d7c4310eb50}
+
+
+Free text resources. 
+
+
+
+Definition at line 61 of file text.\+c.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{text_8c_ac2975924071e907fd6c15d7c4310eb50_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{text.\+c@{text.\+c}!Text\+Draw@{Text\+Draw}}
+\index{Text\+Draw@{Text\+Draw}!text.\+c@{text.\+c}}
+\subsubsection[{\texorpdfstring{Text\+Draw(float x, float y, const char $\ast$text, int align, unsigned int col)}{TextDraw(float x, float y, const char *text, int align, unsigned int col)}}]{\setlength{\rightskip}{0pt plus 5cm}void Text\+Draw (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y, }
+\item[{const char $\ast$}]{text, }
+\item[{int}]{align, }
+\item[{unsigned int}]{col}
+\end{DoxyParamCaption}
+)}\hypertarget{text_8c_a15d84d3b2e3537f3f8019630209449d9}{}\label{text_8c_a15d84d3b2e3537f3f8019630209449d9}
+
+
+Draw a text on screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x position \\
+\hline
+{\em y} & y position \\
+\hline
+{\em text} & text to draw \\
+\hline
+{\em align} & text alignment \\
+\hline
+{\em col} & text color (packed rgba value) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean set to true if initialization was succesful, false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 122 of file text.\+c.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{text_8c_a15d84d3b2e3537f3f8019630209449d9_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{text.\+c@{text.\+c}!Text\+Init@{Text\+Init}}
+\index{Text\+Init@{Text\+Init}!text.\+c@{text.\+c}}
+\subsubsection[{\texorpdfstring{Text\+Init(char $\ast$font)}{TextInit(char *font)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Text\+Init (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{font}
+\end{DoxyParamCaption}
+)}\hypertarget{text_8c_a4366af149a529aa1eadd274f77775684}{}\label{text_8c_a4366af149a529aa1eadd274f77775684}
+
+
+Init text resources. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em font} & Path to a truetype font file (.ttf) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean set to true if initialization was succesful, false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 21 of file text.\+c.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{text_8c_a4366af149a529aa1eadd274f77775684_icgraph}
+\end{center}
+\end{figure}
+
+

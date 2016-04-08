@@ -1,0 +1,5 @@
+set -tmpdir "Z:/design/code_16200x6480/16k_GPU_device_6_8_6/synthese/ipbus_asip_ml507_working/xst/projnav.tmp"
+set -xsthdpdir "Z:/design/code_16200x6480/16k_GPU_device_6_8_6/synthese/ipbus_asip_ml507_working/xst"
+elaborate
+-ifn slaves.prj
+-ifmt mixed

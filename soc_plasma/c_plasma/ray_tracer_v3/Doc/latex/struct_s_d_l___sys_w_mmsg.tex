@@ -1,0 +1,52 @@
+\hypertarget{struct_s_d_l___sys_w_mmsg}{}\section{S\+D\+L\+\_\+\+Sys\+W\+Mmsg Struct Reference}
+\label{struct_s_d_l___sys_w_mmsg}\index{S\+D\+L\+\_\+\+Sys\+W\+Mmsg@{S\+D\+L\+\_\+\+Sys\+W\+Mmsg}}
+
+
+{\ttfamily \#include $<$S\+D\+L\+\_\+syswm.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_s_d_l__version}{S\+D\+L\+\_\+version} {\bfseries version}\hypertarget{struct_s_d_l___sys_w_mmsg_a4aaa8edb964920f77d969c6c08537476}{}\label{struct_s_d_l___sys_w_mmsg_a4aaa8edb964920f77d969c6c08537476}
+
+\item 
+\hyperlink{_s_d_l__syswm_8h_a064c26598287280fff2a00d6758ac4f7}{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+T\+Y\+PE} {\bfseries subsystem}\hypertarget{struct_s_d_l___sys_w_mmsg_a5d89c66a940596db3ebdc1664d634c38}{}\label{struct_s_d_l___sys_w_mmsg_a5d89c66a940596db3ebdc1664d634c38}
+
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>HWND \hyperlink{struct_s_d_l___sys_w_mmsg_aa72255e7356d612ad72bb45def01fcbb}{hwnd}\\
+\>\>UINT \hyperlink{struct_s_d_l___sys_w_mmsg_a43204af3a61671f6c669bf2539b7475f}{msg}\\
+\>\>WPARAM \hyperlink{struct_s_d_l___sys_w_mmsg_a2c28a497a9b541541d5b8713a639a31b}{wParam}\\
+\>\>LPARAM \hyperlink{struct_s_d_l___sys_w_mmsg_a6502a620e85496eb7a57b0097af61a83}{lParam}\\
+\>\} {\bfseries win}\\
+\>\hyperlink{_s_d_l__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} {\bfseries dummy}\\
+\} {\bfseries msg}\hypertarget{struct_s_d_l___sys_w_mmsg_a50c5fbae468a6cbcd691296f26adeb60}{}\label{struct_s_d_l___sys_w_mmsg_a50c5fbae468a6cbcd691296f26adeb60}
+\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The custom event structure. 
+
+\subsection{Field Documentation}
+\index{S\+D\+L\+\_\+\+Sys\+W\+Mmsg@{S\+D\+L\+\_\+\+Sys\+W\+Mmsg}!hwnd@{hwnd}}
+\index{hwnd@{hwnd}!S\+D\+L\+\_\+\+Sys\+W\+Mmsg@{S\+D\+L\+\_\+\+Sys\+W\+Mmsg}}
+\subsubsection[{\texorpdfstring{hwnd}{hwnd}}]{\setlength{\rightskip}{0pt plus 5cm}H\+W\+ND hwnd}\hypertarget{struct_s_d_l___sys_w_mmsg_aa72255e7356d612ad72bb45def01fcbb}{}\label{struct_s_d_l___sys_w_mmsg_aa72255e7356d612ad72bb45def01fcbb}
+The window for the message \index{S\+D\+L\+\_\+\+Sys\+W\+Mmsg@{S\+D\+L\+\_\+\+Sys\+W\+Mmsg}!l\+Param@{l\+Param}}
+\index{l\+Param@{l\+Param}!S\+D\+L\+\_\+\+Sys\+W\+Mmsg@{S\+D\+L\+\_\+\+Sys\+W\+Mmsg}}
+\subsubsection[{\texorpdfstring{l\+Param}{lParam}}]{\setlength{\rightskip}{0pt plus 5cm}L\+P\+A\+R\+AM l\+Param}\hypertarget{struct_s_d_l___sys_w_mmsg_a6502a620e85496eb7a57b0097af61a83}{}\label{struct_s_d_l___sys_w_mmsg_a6502a620e85496eb7a57b0097af61a83}
+L\+O\+NG message parameter \index{S\+D\+L\+\_\+\+Sys\+W\+Mmsg@{S\+D\+L\+\_\+\+Sys\+W\+Mmsg}!msg@{msg}}
+\index{msg@{msg}!S\+D\+L\+\_\+\+Sys\+W\+Mmsg@{S\+D\+L\+\_\+\+Sys\+W\+Mmsg}}
+\subsubsection[{\texorpdfstring{msg}{msg}}]{\setlength{\rightskip}{0pt plus 5cm}U\+I\+NT msg}\hypertarget{struct_s_d_l___sys_w_mmsg_a43204af3a61671f6c669bf2539b7475f}{}\label{struct_s_d_l___sys_w_mmsg_a43204af3a61671f6c669bf2539b7475f}
+The type of message \index{S\+D\+L\+\_\+\+Sys\+W\+Mmsg@{S\+D\+L\+\_\+\+Sys\+W\+Mmsg}!w\+Param@{w\+Param}}
+\index{w\+Param@{w\+Param}!S\+D\+L\+\_\+\+Sys\+W\+Mmsg@{S\+D\+L\+\_\+\+Sys\+W\+Mmsg}}
+\subsubsection[{\texorpdfstring{w\+Param}{wParam}}]{\setlength{\rightskip}{0pt plus 5cm}W\+P\+A\+R\+AM w\+Param}\hypertarget{struct_s_d_l___sys_w_mmsg_a2c28a497a9b541541d5b8713a639a31b}{}\label{struct_s_d_l___sys_w_mmsg_a2c28a497a9b541541d5b8713a639a31b}
+W\+O\+RD message parameter 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Contrib/\+Includes/\+S\+D\+L2/\hyperlink{_s_d_l__syswm_8h}{S\+D\+L\+\_\+syswm.\+h}\end{DoxyCompactItemize}

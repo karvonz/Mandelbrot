@@ -1,0 +1,7 @@
+<map id="RenderGetColor" name="RenderGetColor">
+<area shape="rect" id="node2" href="$rayrender_8c.html#a7bcd9f4840dfc55cacb2e1ead3855f89" title="RenderFilterColor" alt="" coords="168,5,291,32"/>
+<area shape="rect" id="node4" href="$rayobject_8h.html#a85b5e2864495dc8d6fb2089fd6ec183e" title="Get an object color. " alt="" coords="174,56,285,83"/>
+<area shape="rect" id="node3" href="$raymath_8h.html#a0c3b96d5e78c8899245e367835c0e1b4" title="Set a 3D vector. " alt="" coords="345,5,447,32"/>
+<area shape="rect" id="node5" href="$raysphere_8h.html#a5dd3152fdefb949ae232ee8d7d011cb6" title="Get the color of a sphere in the current scene. " alt="" coords="339,56,453,83"/>
+<area shape="rect" id="node6" href="$rayplane_8h.html#a24796f2ce83ad2b6c54b7e128d2bfb79" title="Get a plane color. " alt="" coords="343,107,449,133"/>
+</map>

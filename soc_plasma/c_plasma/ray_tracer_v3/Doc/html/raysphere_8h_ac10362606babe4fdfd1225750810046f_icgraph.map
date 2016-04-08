@@ -1,0 +1,6 @@
+<map id="SphereGetCount" name="SphereGetCount">
+<area shape="rect" id="node2" href="$rayobject_8c.html#a07163c81c5ae4159950c28fcaa835fc2" title="Get the number of objects given a type. " alt="" coords="172,5,343,32"/>
+<area shape="rect" id="node3" href="$rayrender_8c.html#aa411224771e850633c369beacd19965a" title="Raytrace" alt="" coords="391,5,465,32"/>
+<area shape="rect" id="node4" href="$rayrender_8c.html#a5cbf8abb7997119c522463eb111b2a3e" title="Render the current scene. " alt="" coords="513,5,688,32"/>
+<area shape="rect" id="node5" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="736,5,787,32"/>
+</map>

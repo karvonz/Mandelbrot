@@ -1,0 +1,10 @@
+<map id="MathVec3Scale" name="MathVec3Scale">
+<area shape="rect" id="node2" href="$raymath_8c.html#a075c2db2a273d9e2ab085f4cba6fbf9f" title="Normalize a 3D vector. " alt="" coords="168,81,307,108"/>
+<area shape="rect" id="node6" href="$rayrender_8c.html#a5cbf8abb7997119c522463eb111b2a3e" title="Render the current scene. " alt="" coords="835,107,1009,133"/>
+<area shape="rect" id="node8" href="$rayrender_8c.html#a850af53283a7801d99dd1c9e5ff39c60" title="Reflect" alt="" coords="711,107,774,133"/>
+<area shape="rect" id="node3" href="$rayplane_8c.html#a2d9da63f70736e7978942968a0752358" title="Get a plane normal. " alt="" coords="359,5,476,32"/>
+<area shape="rect" id="node9" href="$raysphere_8c.html#a1df175e29c72bbd229d8c972b4f3fd58" title="Get a sphere normal. " alt="" coords="355,56,480,83"/>
+<area shape="rect" id="node4" href="$rayobject_8c.html#ad5b91bc5eba77d5f29d82147b63bd30f" title="Get an object normal. " alt="" coords="528,56,651,83"/>
+<area shape="rect" id="node5" href="$raylight_8c.html#a233268c67064dbaf7faecaa4397ae31b" title="Get light contribution. " alt="" coords="699,56,787,83"/>
+<area shape="rect" id="node7" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1057,107,1108,133"/>
+</map>

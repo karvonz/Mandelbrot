@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/example_designs/hdl
+END
+ipbus_addr_decode.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/example_designs/hdl/ipbus_addr_decode.vhd
+END
+clkstuff_v5fxt.v
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/example_designs/hdl/clkstuff_v5fxt.v
+END
+clocks_s6_extphy.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/example_designs/hdl/clocks_s6_extphy.vhd
+END
+clocks_s6_basex.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/example_designs/hdl/clocks_s6_basex.vhd
+END
+div24.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/example_designs/hdl/div24.vhd
+END
+clocks_v5_extphy.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/example_designs/hdl/clocks_v5_extphy.vhd
+END
+clocks_v6_extphy.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/example_designs/hdl/clocks_v6_extphy.vhd
+END
+clocks_v6_basex.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/example_designs/hdl/clocks_v6_basex.vhd
+END
+slaves.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/example_designs/hdl/slaves.vhd
+END
+clock_divider_s6.v
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/example_designs/hdl/clock_divider_s6.v
+END
+ipbus_ver.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/example_designs/hdl/ipbus_ver.vhd
+END

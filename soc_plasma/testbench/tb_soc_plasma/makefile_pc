@@ -1,0 +1,43 @@
+# name of the generated binary file
+BIN_NAME=ray_trace
+
+# include directory paths
+INCLUDE = -I. -I/base
+
+# C++ compiler
+#CC=icc
+CC=g++
+
+# Compilation flags
+CFLAGS=$(INCLUDE) -O3
+#CFLAGS=$(INCLUDE) -xAVX -unroll -unroll-aggressive -opt-mem-layout-trans -march=core-avx-i
+#CFLAGS=$(INCLUDE) -mkl -W -Wall -O3 -march=native -fast -ansi-alias -fopenmp -fno-exceptions \
+                        -finline -funroll-loops -no-prec-div -opt-prefetch -unroll-aggressive \
+                        -m64 -ipo -auto-ilp32 -I../src -xCORE-AVX2 -fma -I/opt/local/include/
+
+# link flags
+LDFLAGS=-lgsl -lgslcblas -lrt
+#LDFLAGS=-fopenmp -L/opt/local/lib -mkl -lgsl -lgslcblas -lrt
+
+# Object directory path
+ODIR=obj
+
+SOURCES = polar_sim.cpp Code_parameters.cpp Base_PC_encoder.cpp PC_encoder.cpp Syst_PC_encoder.cpp Channels.cpp PC_decoder.cpp SC_decoder.cpp Genie_SC_decoder.cpp Base_node.cpp LLR_node.cpp LR_node.cpp Prob_node.cpp BP_decoder.cpp Quantizer.cpp CErrorAnalyzer.cpp CTerminal.cpp CTimer.cpp HD_node.cpp SCAN_decoder.cpp List2_SCAN_decoder.cpp Permuted_SC_decoder.cpp SC_decoder_side_info.cpp SCAN_decoder_side_info.cpp Interleaver.cpp SISO.cpp Fixed_PC_decoder.cpp Irregular_Interleaver.cpp Histo.cpp EXIT_Chart.cpp Relaxed_SCAN_decoder.cpp
+
+_OBJ = $(SOURCES:.cpp=.o)
+
+OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
+
+all : $(BIN_NAME)
+        @echo INFO: $(BIN_NAME) compilation completed
+
+$(BIN_NAME): $(OBJ)
+        $(CC) -o $@ $^ -pg $(LDFLAGS)
+
+$(ODIR)/%.o: %.cpp
+        $(CC) -c -o $@ $< $(CFLAGS)
+
+.PHONY: clean
+
+clean:
+	rm -f $(ODIR)/*.o *~ $(BIN_NAME)

@@ -1,0 +1,1051 @@
+# No longer need st set part.  Done in ISE, but left 
+# here as a record of the build part names.
+
+#CONFIG PART = 5vtx150tff1759-2;
+#CONFIG PART = 5vtx240tff1759-2;
+
+# GTX trasnsceivers with the same pin locations have different 
+# names depending on whether they are TX150T or TX240T parts.
+# (e.g. X0Y1 in a TX150T part is X0Y2 in a TX240T part).
+# Hence, it is necessary to change GCT transeiver info in UCF
+# depending on the Virtex 5 part.
+
+# The IPBus can eneter via fibre (ipf) or backplane (ipb).  
+# The UCF file contains both options, but it is complicated 
+# by the fact that GTX transceiver with the same pin locations 
+# can have different names depending on whether it is a TX150T 
+# or TX240T part (see paragraph above).  Hence, there are 4 
+# options for ethernet: 
+#  - TX150T with IPF or IPB
+#  - TX240T with IPF or IPB
+
+##################################
+# TEMAC BLOCK Level constraints
+##################################
+
+NET "eth/refclk125" TNM_NET=refclk125;
+TIMESPEC TS_refclk125 = PERIOD "refclk125" 125MHz HIGH 50%;
+
+#NET "ipbus_fibre/clk125_o" TNM_NET = ipbus_fibre/clk125_o;
+#TIMESPEC TS_ipbus_fibre_clk125_o = PERIOD "ipbus_fibre/clk125_o" 130 MHz HIGH 50%;
+
+#NET "ipbus_fibre/clk125" TNM_NET = ipbus_fibre/clk125;
+#TIMESPEC TS_ipbus_fibre_clk125 = PERIOD "ipbus_fibre/clk125" 130 MHz HIGH 50%;
+
+#NET "ipbus_backplane/clk125_o" TNM_NET = ipbus_backplane/clk125_o;
+#TIMESPEC TS_ipbus_backplane_clk125_o = PERIOD "ipbus_backplane/clk125_o" 130 MHz HIGH 50%;
+
+#NET "core_sys_inst/link_clk1x" TNM_NET = core_sys_inst/link_clk1x;
+#TIMESPEC TS_link_clk1x = PERIOD "core_sys_inst/link_clk1x" 130 MHz HIGH 50%;
+
+#NET "core_sys_inst/link_clk1x" TNM_NET = core_sys_inst/link_clk1x;
+#TIMESPEC TS_link_clk1x = PERIOD "core_sys_inst/link_clk1x" 260 MHz HIGH 50%;
+
+NET "osc1_p" TNM_NET = osc1_p;
+TIMESPEC TS_osc1_p = PERIOD "osc1_p" 125 MHz HIGH 50%;
+
+#NET "osc2_p" TNM_NET = osc2_p;
+#TIMESPEC TS_osc2_p = PERIOD "osc2_p" 125 MHz HIGH 50%;
+
+
+#NET "enet_gtx_rst*" TIG; 
+#NET "enet_mac_rst*" TIG; 
+
+# GTX: Outgoing flipflops used in clk domain crossing
+#INST "*minit_gtx_comm_inst/comm_clk_bridge_inst/comm_cntrl_local*" TNM = "gtx_async_out_ff";
+#INST "*minit_gtx_comm_inst/comm_clk_bridge_inst/comm_reply_local*" TNM = "gtx_async_out_ff";
+
+# QDR Incoming async flipflops used in clk domain crossing
+#INST "*minit_gtx_comm_inst/comm_clk_bridge_inst/stb_fdcpe_inst_a" TNM = "gtx_async_in_ff";
+#INST "*minit_gtx_comm_inst/comm_clk_bridge_inst/ack_fdcpe_inst_a" TNM = "gtx_async_in_ff";
+#INST "*minit_gtx_comm_inst/comm_clk_bridge_inst/comm_cntrl_slave_out*" TNM = "gtx_async_in_ff";
+#INST "*minit_gtx_comm_inst/comm_clk_bridge_inst/comm_reply_master_out*" TNM = "gtx_async_in_ff";
+
+#TIMESPEC "TS_gtx_async_ff" = FROM "gtx_async_out_ff" TO "gtx_async_in_ff" 8 ns DATAPATHONLY; 
+
+# QDR Outgoing flipflops used in clk domain crossing
+#INST "*qdr?_bridge_inst/comm_cntrl_local*" TNM = "qdr_async_out_ff";
+#INST "*qdr?_bridge_inst/comm_reply_local*" TNM = "qdr_async_out_ff";
+
+# QDR Incoming async flipflops used in clk domain crossing
+#INST "*qdr?_bridge_inst/stb_fdcpe_inst_a" TNM = "qdr_async_in_ff";
+#INST "*qdr?_bridge_inst/ack_fdcpe_inst_a" TNM = "qdr_async_in_ff";
+#INST "*qdr?_bridge_inst/comm_cntrl_slave_out*" TNM = "qdr_async_in_ff";
+#INST "*qdr?_bridge_inst/comm_reply_master_out*" TNM = "qdr_async_in_ff";
+
+#TIMESPEC "TS_qdr_async_ff" = FROM "qdr_async_out_ff" TO "qdr_async_in_ff" 4 ns DATAPATHONLY; 
+
+# Mark as async reg to stop 'X' propogation in back annotation.
+# Probably not really needed as back annotation would take eons...
+#INST "*qdr?_bridge_inst/stb_fdcpe_inst_a" ASYNC_REG;
+#INST "*qdr?_bridge_inst/ack_fdcpe_inst_a" ASYNC_REG;
+#INST "*qdr?_bridge_inst/comm_cntrl_slave_out*" ASYNC_REG;
+#INST "*qdr?_bridge_inst/comm_reply_master_out*" ASYNC_REG;
+
+
+##########################################################################
+# Ethernet Fibre: TX150T
+##########################################################################
+
+#INST "*ipbus_fibre?emac_block?enet_gtx_ch0_1000X_inst?rocketio_wrapper_gtx_inst?rocketio_wrapper_gtx_tile_inst?gtx_dual_i" LOC = "GTX_DUAL_X1Y9";
+#
+## Routed via X-Point & works
+#INST "enet_clkn" LOC = "C10";
+#INST "enet_clkp" LOC = "D10";
+#
+## Routed via x4 buffer and doesn't work reliably on R1 card
+#INST "enet_clkn" LOC = "C3";
+#INST "enet_clkp" LOC = "C4";
+
+##########################################################################
+# Ethernet Fibre: TX240T
+##########################################################################
+
+#INST "*ipbus_fibre?emac_block?enet_gtx_ch0_1000X_inst?rocketio_wrapper_gtx_inst?rocketio_wrapper_gtx_tile_inst?gtx_dual_i" LOC = "GTX_DUAL_X1Y10";
+#
+## Routed via x4 buffer.  Try with R2 card (new x4 buffers) and TX240T
+## Ahhh... But this is OSC2 not OSC1
+## Could this be the cause of the original x4 buffer woe?
+## Switch everthing to OSC1.  May need to instanstiate GTX in code.
+## INST "enet_clkn" LOC = "C3";
+## INST "enet_clkp" LOC = "C4";
+#
+## Try routing via X-Point
+#INST "enet_clkn" LOC = "C10";
+#INST "enet_clkp" LOC = "D10";
+
+##########################################################################
+# Ethernet Backplane: TX150T
+##########################################################################
+
+## Route clk from MGT116.  Need to instanstiate other MGTs
+#
+## MGT116
+#INST "enet_clkn" LOC = "M3";
+#INST "enet_clkp" LOC = "M4";
+#INST "*mgt116_gtx?gtx_dual_i" LOC = "GTX_DUAL_X1Y6";
+#
+## MGT112
+#INST "*mgt112_gtx?gtx_dual_i" LOC = "GTX_DUAL_X1Y5";
+#
+## MGT 114
+INST "*eth?mac?gtx_dual_1000X_inst?gtx_1000x?tile0_rocketio_wrapper_gtx_i?gtx_dual_i" LOC = "GTX_DUAL_X1Y4";
+## Routed via x4 buffer.... Didn't work
+INST "enet_bp_clkn" LOC = "AD3";
+INST "enet_bp_clkp" LOC = "AD4";
+
+##########################################################################
+# Ethernet Backplane: TX240T
+##########################################################################
+
+# Route clk from MGT116.  Need to instanstiate other MGTs
+
+# MGT116
+#INST "enet_clkn" LOC = "M3";
+#INST "enet_clkp" LOC = "M4";
+#INST "*mgt116_gtx?gtx_dual_i" LOC = "GTX_DUAL_X1Y7";
+
+# MGT112
+#INST "*mgt112_gtx?gtx_dual_i" LOC = "GTX_DUAL_X1Y6";
+
+# MGT 114
+#INST "*ipbus_backplane?emac_block?enet_gtx_ch1_1000X_inst?rocketio_wrapper_gtx_inst?rocketio_wrapper_gtx_tile_inst?gtx_dual_i" LOC = "GTX_DUAL_X1Y5";
+# Routed via x4 buffer.... Not yet tried in R2
+#INST "enet_clkn" LOC = "AD3";
+#INST "enet_clkp" LOC = "AD4";
+
+##########################################################################
+# Optics: TX150T
+##########################################################################
+
+## SNAP12-TX0, SNAP12-RX0
+#INST "*gtx_i[0].minit_gtx_comm_inst?minit_gtx_inst?minit_gtx_tile_inst?gtx_dual_i" LOC = "GTX_DUAL_X0Y2";   #Rev0 = ch7/8
+#INST "*gtx_i[1].minit_gtx_comm_inst?minit_gtx_inst?minit_gtx_tile_inst?gtx_dual_i" LOC = "GTX_DUAL_X0Y3";   #Rev0 = ch6/9
+#INST "*gtx_i[2].minit_gtx_comm_inst?minit_gtx_inst?minit_gtx_tile_inst?gtx_dual_i" LOC = "GTX_DUAL_X0Y4";   #Rev0 = ch10/11
+#INST "*gtx_i[3].minit_gtx_comm_inst?minit_gtx_inst?minit_gtx_tile_inst?gtx_dual_i" LOC = "GTX_DUAL_X0Y5";   #Rev0 = ch1/2
+#INST "*gtx_i[4].minit_gtx_comm_inst?minit_gtx_inst?minit_gtx_tile_inst?gtx_dual_i" LOC = "GTX_DUAL_X0Y6";   #Rev0 = ch0/3
+#INST "*gtx_i[5].minit_gtx_comm_inst?minit_gtx_inst?minit_gtx_tile_inst?gtx_dual_i" LOC = "GTX_DUAL_X0Y7";   #Rev0 = ch4/5
+#  
+## SNAP12-RX2
+#INST "*gtx_i[6].minit_gtx_comm_inst?minit_gtx_inst?minit_gtx_tile_inst?gtx_dual_i" LOC = "GTX_DUAL_X0Y0";   #Rev0 = ch3/0
+#INST "*gtx_i[7].minit_gtx_comm_inst?minit_gtx_inst?minit_gtx_tile_inst?gtx_dual_i" LOC = "GTX_DUAL_X0Y1";   #Rev0 = ch5/4
+#INST "*gtx_i[8].minit_gtx_comm_inst?minit_gtx_inst?minit_gtx_tile_inst?gtx_dual_i" LOC = "GTX_DUAL_X1Y0";   #Rev0 = ch2/1
+#INST "*gtx_i[9].minit_gtx_comm_inst?minit_gtx_inst?minit_gtx_tile_inst?gtx_dual_i" LOC = "GTX_DUAL_X1Y1";   #Rev0 = ch10/11
+#INST "*gtx_i[10].minit_gtx_comm_inst?minit_gtx_inst?minit_gtx_tile_inst?gtx_dual_i" LOC = "GTX_DUAL_X1Y2";   #Rev0 = ch8/7
+#INST "*gtx_i[11].minit_gtx_comm_inst?minit_gtx_inst?minit_gtx_tile_inst?gtx_dual_i" LOC = "GTX_DUAL_X1Y3";   #Rev0 = ch6/9
+
+## QFSP1
+##INST "*gtx_i[12].minit_gtx_comm_inst?minit_gtx_inst?minit_gtx_tile_inst?gtx_dual_i" LOC = "GTX_DUAL_X1Y8";   #ch3/1
+##INST "*gtx_i[13].minit_gtx_comm_inst?minit_gtx_inst?minit_gtx_tile_inst?gtx_dual_i" LOC = "GTX_DUAL_X1Y9";   #ch0/2
+#
+## QFSP2
+##INST "*gtx_i[14].minit_gtx_comm_inst?minit_gtx_inst?minit_gtx_tile_inst?gtx_dual_i" LOC = "GTX_DUAL_X0Y8";   #ch2/0
+##INST "*gtx_i[15].minit_gtx_comm_inst?minit_gtx_inst?minit_gtx_tile_inst?gtx_dual_i" LOC = "GTX_DUAL_X0Y9";   #ch1/3
+#
+##########################################################################
+# Optics: TX240T
+##########################################################################
+
+# SNAP12-TX0, SNAP12-RX0
+#INST "*gtx_i[0].minit_gtx_comm_inst?minit_gtx_inst?minit_gtx_tile_inst?gtx_dual_i" LOC = "GTX_DUAL_X0Y3";   #Rev0 = ch7/8
+#INST "*gtx_i[1].minit_gtx_comm_inst?minit_gtx_inst?minit_gtx_tile_inst?gtx_dual_i" LOC = "GTX_DUAL_X0Y4";   #Rev0 = ch6/9
+#INST "*gtx_i[2].minit_gtx_comm_inst?minit_gtx_inst?minit_gtx_tile_inst?gtx_dual_i" LOC = "GTX_DUAL_X0Y5";   #Rev0 = ch10/11
+#INST "*gtx_i[3].minit_gtx_comm_inst?minit_gtx_inst?minit_gtx_tile_inst?gtx_dual_i" LOC = "GTX_DUAL_X0Y6";   #Rev0 = ch1/2
+#INST "*gtx_i[4].minit_gtx_comm_inst?minit_gtx_inst?minit_gtx_tile_inst?gtx_dual_i" LOC = "GTX_DUAL_X0Y7";   #Rev0 = ch0/3
+#INST "*gtx_i[5].minit_gtx_comm_inst?minit_gtx_inst?minit_gtx_tile_inst?gtx_dual_i" LOC = "GTX_DUAL_X0Y8";   #Rev0 = ch4/5
+  
+# SNAP12-RX2
+#INST "*gtx_i[6].minit_gtx_comm_inst?minit_gtx_inst?minit_gtx_tile_inst?gtx_dual_i" LOC = "GTX_DUAL_X0Y1";   #Rev0 = ch3/0
+#INST "*gtx_i[7].minit_gtx_comm_inst?minit_gtx_inst?minit_gtx_tile_inst?gtx_dual_i" LOC = "GTX_DUAL_X0Y2";   #Rev0 = ch5/4
+#INST "*gtx_i[8].minit_gtx_comm_inst?minit_gtx_inst?minit_gtx_tile_inst?gtx_dual_i" LOC = "GTX_DUAL_X1Y1";   #Rev0 = ch2/1
+#INST "*gtx_i[9].minit_gtx_comm_inst?minit_gtx_inst?minit_gtx_tile_inst?gtx_dual_i" LOC = "GTX_DUAL_X1Y2";   #Rev0 = ch10/11
+#INST "*gtx_i[10].minit_gtx_comm_inst?minit_gtx_inst?minit_gtx_tile_inst?gtx_dual_i" LOC = "GTX_DUAL_X1Y3";   #Rev0 = ch8/7
+#INST "*gtx_i[11].minit_gtx_comm_inst?minit_gtx_inst?minit_gtx_tile_inst?gtx_dual_i" LOC = "GTX_DUAL_X1Y4";   #Rev0 = ch6/9
+
+## QFSP1
+##INST "*gtx_i[12].minit_gtx_comm_inst?minit_gtx_inst?minit_gtx_tile_inst?gtx_dual_i" LOC = "GTX_DUAL_X1Y9";   #ch3/1
+##INST "*gtx_i[13].minit_gtx_comm_inst?minit_gtx_inst?minit_gtx_tile_inst?gtx_dual_i" LOC = "GTX_DUAL_X1Y10";   #ch0/2
+#
+## QFSP2
+##INST "*gtx_i[14].minit_gtx_comm_inst?minit_gtx_inst?minit_gtx_tile_inst?gtx_dual_i" LOC = "GTX_DUAL_X0Y9";   #ch2/0
+##INST "*gtx_i[15].minit_gtx_comm_inst?minit_gtx_inst?minit_gtx_tile_inst?gtx_dual_i" LOC = "GTX_DUAL_X0Y10";   #ch1/3
+
+##########################################################################
+# Mai UCF file
+##########################################################################
+
+# SNAP12-TX0/RX0
+# Following are refclks for GTX_DUAL_X0Y6 (MGT115)
+#NET refclkn_in(4) LOC = M40;     # SCHEM NAME = V5_REFCLKN0
+#NET refclkp_in(4) LOC = M39;     # SCHEM NAME = V5_REFCLKP0
+# Following are refclks for GTX_DUAL_X0Y3 (MGT117)
+#NET refclkn_in(1) LOC = AK40;     # SCHEM NAME = V5_REFCLKN1
+#NET refclkp_in(1) LOC = AK39;     # SCHEM NAME = V5_REFCLKP1
+
+# SNAP12-RX2
+# Following are refclks for GTX_DUAL_X0Y0 (MGT129)
+#NET refclkn_in(6) LOC = AY34;    # SCHEM NAME = V5_REFCLKN2
+#NET refclkp_in(6) LOC = AW34;    # SCHEM NAME = V5_REFCLKP2
+# Following are refclks for GTX_DUAL_X1Y0 (MGT130)
+#NET refclkn_in(8) LOC = AY9;    # SCHEM NAME = V5_REFCLKN5
+#NET refclkp_in(8) LOC = AW9;    # SCHEM NAME = V5_REFCLKP5
+# Following are refclks for GTX_DUAL_X1Y3 (MGT118)
+#NET refclkn_in(11) LOC = AK3;    # SCHEM NAME = V5_REFCLKN6
+#NET refclkp_in(11) LOC = AK4;    # SCHEM NAME = V5_REFCLKP6
+
+# QFSP1
+# Following are refclks for GTX_DUAL_X1Y9 (MGT128)
+#NET refclkn_in(13) LOC = C10;    # SCHEM NAME = V5_REFCLKN4
+#NET refclkp_in(13) LOC = D10;    # SCHEM NAME = V5_REFCLKP4
+
+# QFSP2
+# Following are refclks for GTX_DUAL_X0Y9 (MGT127)
+#NET refclkn_in(15) LOC = C33;    # SCHEM NAME = V5_REFCLKN3
+#NET refclkp_in(15) LOC = D33;    # SCHEM NAME = V5_REFCLKP3
+
+# SNAP12-TX0/RX0
+# Unconnected refclks, but here to kep ISE happy :-)
+# Following are refclks for GTX_DUAL_X0Y2 (MGT121)
+#NET refclkn_in(0) LOC = AT40;     # SCHEM NAME = N/A
+#NET refclkp_in(0) LOC = AT39;     # SCHEM NAME = N/A
+# Following are refclks for GTX_DUAL_X0Y4 (MGT113)
+#NET refclkn_in(2) LOC = AD40;     # SCHEM NAME = N/A
+#NET refclkp_in(2) LOC = AD39;     # SCHEM NAME = N/A
+# Following are refclks for GTX_DUAL_X0Y5 (MGT111)
+#NET refclkn_in(3) LOC = V40;     # SCHEM NAME = N/A
+#NET refclkp_in(3) LOC = V39;     # SCHEM NAME = N/A
+# Following are refclks for GTX_DUAL_X0Y7 (MGT119)
+#NET refclkn_in(5) LOC = F40;     # SCHEM NAME = N/A
+#NET refclkp_in(5) LOC = F39;     # SCHEM NAME = N/A
+
+# SNAP12-RX2
+# Unconnected refclks, but here to kep ISE happy :-)
+# Following are refclks for GTX_DUAL_X0Y1 (MGT125)
+#NET refclkn_in(7) LOC = AY39;     # SCHEM NAME = N/A
+#NET refclkp_in(7) LOC = AW39;     # SCHEM NAME = N/A
+# Following are refclks for GTX_DUAL_X1Y1 (MGT126)
+#NET refclkn_in(9) LOC = AY4;     # SCHEM NAME = N/A
+#NET refclkp_in(9) LOC = AW4;     # SCHEM NAME = N/A
+# Following are refclks for GTX_DUAL_X1Y2 (MGT122)
+#NET refclkn_in(10) LOC = AT3;     # SCHEM NAME = N/A
+#NET refclkp_in(10) LOC = AT4;     # SCHEM NAME = N/A
+
+# QFSP1
+# Unconnected refclks, but here to kep ISE happy :-)
+# Following are refclks for GTX_DUAL_X1Y8 (MGT124)
+#NET refclkn_in(12) LOC = C3;    # SCHEM NAME = N/A
+#NET refclkp_in(12) LOC = C4;    # SCHEM NAME = N/A
+
+# QFSP2
+# Unconnected refclks, but here to kep ISE happy :-)
+# Following are refclks for GTX_DUAL_X0Y8 (MGT123)
+#NET refclkn_in(14) LOC = C40;    # SCHEM NAME = N/A
+#NET refclkp_in(14) LOC = C39;    # SCHEM NAME = N/A
+
+
+
+#NET AMC_TX_N(00) LOC =  AF2 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  AMC_TX_N00
+#NET AMC_TX_N(01) LOC =  AB2 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  AMC_TX_N01
+#NET AMC_TX_N(02) LOC =  Y2 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  AMC_TX_N02
+#NET AMC_TX_N(03) LOC =  AV19 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  AMC_TX_N03
+#NET AMC_TX_N(04) LOC =  T2 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  AMC_TX_N04
+#NET AMC_TX_N(05) LOC =  P2 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  AMC_TX_N05
+#NET AMC_TX_N(06) LOC =  K2 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  AMC_TX_N06
+#NET AMC_TX_N(07) LOC =  H2 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  AMC_TX_N07
+#NET AMC_TX_N(08) LOC =  D2 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  AMC_TX_N08
+#NET AMC_TX_N(09) LOC =  AJ13 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  AMC_TX_N09
+#NET AMC_TX_N(10) LOC =  AH15 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  AMC_TX_N10
+#NET AMC_TX_N(11) LOC =  AN15 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  AMC_TX_N11
+#NET AMC_TX_N(12) LOC =  AL15 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  AMC_TX_N12
+#NET AMC_TX_N(13) LOC =  AR18 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  AMC_TX_N13
+#NET AMC_TX_N(14) LOC =  AT15 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  AMC_TX_N14
+#NET AMC_TX_N(15) LOC =  AN24 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  AMC_TX_N15
+#NET AMC_TX_N(17) LOC =  AP23 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  AMC_TX_N17
+#NET AMC_TX_N(18) LOC =  AT22 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  AMC_TX_N18
+#NET AMC_TX_N(19) LOC =  AU23 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  AMC_TX_N19
+#NET AMC_TX_N(20) LOC =  BB21 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  AMC_TX_N20
+#NET AMC_TX_P(00) LOC =  AG2 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  AMC_TX_P00
+#NET AMC_TX_P(01) LOC =  AC2 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  AMC_TX_P01
+#NET AMC_TX_P(02) LOC =  AA2 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  AMC_TX_P02	
+#NET AMC_TX_P(03) LOC =  AV18 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  AMC_TX_P03
+#NET AMC_TX_P(04) LOC =  U2 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  AMC_TX_P04
+#NET AMC_TX_P(05) LOC =  R2 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  AMC_TX_P05
+#NET AMC_TX_P(06) LOC =  L2 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  AMC_TX_P06
+#NET AMC_TX_P(07) LOC =  J2 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  AMC_TX_P07
+#NET AMC_TX_P(08) LOC =  E2 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  AMC_TX_P08
+#NET AMC_TX_P(09) LOC =  AH13 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  AMC_TX_P09
+#NET AMC_TX_P(10) LOC =  AJ15 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  AMC_TX_P10
+#NET AMC_TX_P(11) LOC =  AN14 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  AMC_TX_P11
+#NET AMC_TX_P(12) LOC =  AK15 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  AMC_TX_P12
+#NET AMC_TX_P(13) LOC =  AR19 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  AMC_TX_P13
+#NET AMC_TX_P(14) LOC =  AU14 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  AMC_TX_P14
+#NET AMC_TX_P(15) LOC =  AM23 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  AMC_TX_P15
+#NET AMC_TX_P(17) LOC =  AN23 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  AMC_TX_P17
+#NET AMC_TX_P(18) LOC =  AR23 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  AMC_TX_P18
+#NET AMC_TX_P(19) LOC =  AV23 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  AMC_TX_P19
+#NET AMC_TX_P(20) LOC =  BA22 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  AMC_TX_P20
+
+#NET CLK_CNTRL(0) LOC =  AH30 | IOSTANDARD = LVCMOS25;      # SCHEM NAME  =  CLK_CNTRL00
+#NET CLK_CNTRL(1) LOC =  AH29 | IOSTANDARD = LVCMOS25;      # SCHEM NAME  =  CLK_CNTRL01
+#NET CLK_CNTRL(2) LOC =  AN28 | IOSTANDARD = LVCMOS25;      # SCHEM NAME  =  CLK_CNTRL02
+#NET CLK_CNTRL(3) LOC =  AP28 | IOSTANDARD = LVCMOS25;      # SCHEM NAME  =  CLK_CNTRL03
+#NET CLK_CNTRL(4) LOC =  AH31 | IOSTANDARD = LVCMOS25;      # SCHEM NAME  =  CLK_CNTRL04
+#NET CLK_CNTRL(5) LOC =  AT26 | IOSTANDARD = LVCMOS25;      # SCHEM NAME  =  CLK_CNTRL05
+#NET CLK_CNTRL(6) LOC =  AT25 | IOSTANDARD = LVCMOS25;      # SCHEM NAME  =  CLK_CNTRL06
+#NET CLK_CNTRL(7) LOC =  AK29 | IOSTANDARD = LVCMOS25;      # SCHEM NAME  =  CLK_CNTRL07
+#NET CLK_CNTRL(8) LOC =  AV26 | IOSTANDARD = LVCMOS25;      # SCHEM NAME  =  CLK_CNTRL08
+#NET CLK_CNTRL(9) LOC =  AV25 | IOSTANDARD = LVCMOS25;      # SCHEM NAME  =  CLK_CNTRL09
+#NET CLK_CNTRL(10) LOC =  AU34 | IOSTANDARD = LVCMOS25;      # SCHEM NAME  =  CLK_CNTRL10
+#NET CLK_CNTRL(11) LOC =  AT34 | IOSTANDARD = LVCMOS25;      # SCHEM NAME  =  CLK_CNTRL11
+#NET CLK_CNTRL(12) LOC =  AU27 | IOSTANDARD = LVCMOS25;      # SCHEM NAME  =  CLK_CNTRL12
+#NET CLK_CNTRL(13) LOC =  AT27 | IOSTANDARD = LVCMOS25;      # SCHEM NAME  =  CLK_CNTRL13
+#NET CLK_CNTRL(14) LOC =  AR34 | IOSTANDARD = LVCMOS25;      # SCHEM NAME  =  CLK_CNTRL14
+#NET CLK_CNTRL(15) LOC =  AM28 | IOSTANDARD = LVCMOS25;      # SCHEM NAME  =  CLK_CNTRL15
+#NET CLK_CNTRL(16) LOC =  AN29 | IOSTANDARD = LVCMOS25;      # SCHEM NAME  =  CLK_CNTRL16
+#NET CLK_CNTRL(17) LOC =  AR28 | IOSTANDARD = LVCMOS25;      # SCHEM NAME  =  CLK_CNTRL17
+#NET CLK_CNTRL(18) LOC =  AR29 | IOSTANDARD = LVCMOS25;      # SCHEM NAME  =  CLK_CNTRL18
+#NET CLK_CNTRL(19) LOC =  AU32 | IOSTANDARD = LVCMOS25;      # SCHEM NAME  =  CLK_CNTRL19
+#NET CLK_CNTRL(20) LOC =  AT32 | IOSTANDARD = LVCMOS25;      # SCHEM NAME  =  CLK_CNTRL20
+#NET CLK_CNTRL(21) LOC =  AT29 | IOSTANDARD = LVCMOS25;      # SCHEM NAME  =  CLK_CNTRL21
+#NET CLK_CNTRL(22) LOC =  AU28 | IOSTANDARD = LVCMOS25;      # SCHEM NAME  =  CLK_CNTRL22
+#NET CLK_CNTRL(23) LOC =  AM29 | IOSTANDARD = LVCMOS25;      # SCHEM NAME  =  CLK_CNTRL23
+
+#NET CLK1_P LOC =  AL26 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  CLK1BUF+2
+#NET CLK1_N LOC =  AM26 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  CLK1BUF-2
+#NET CLK2_P LOC =  AN25 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  CLK2BUF+2
+#NET CLK2_N LOC =  AM24 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  CLK2BUF-2
+#
+NET LED(0) LOC =  AM36 | IOSTANDARD = LVCMOS25;      # SCHEM NAME  =  LED0
+NET LED(1) LOC =  AL35 | IOSTANDARD = LVCMOS25;      # SCHEM NAME  =  LED1
+NET LED(2) LOC =  AM32 | IOSTANDARD = LVCMOS25;      # SCHEM NAME  =  LED2
+NET LED(3) LOC =  AM31 | IOSTANDARD = LVCMOS25;      # SCHEM NAME  =  LED3
+#
+NET OSC1_P LOC =  AP21 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  OSC1BUF+2
+NET OSC1_N LOC =  AP20 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  OSC1BUF-2
+#NET OSC2_P LOC =  AK23 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  OSC2BUF+2
+#NET OSC2_N LOC =  AK24 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  OSC2BUF-2
+
+#NET PFLASH_A(00) LOC =  N14 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PFLASH_A00
+#NET PFLASH_A(01) LOC =  N15 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PFLASH_A01
+#NET PFLASH_A(02) LOC =  R27 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PFLASH_A02
+#NET PFLASH_A(03) LOC =  P28 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PFLASH_A03
+#NET PFLASH_A(04) LOC =  N16 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PFLASH_A04
+#NET PFLASH_A(05) LOC =  M16 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PFLASH_A05
+#NET PFLASH_A(06) LOC =  N29 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PFLASH_A06
+#NET PFLASH_A(07) LOC =  M29 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PFLASH_A07
+#NET PFLASH_A(08) LOC =  M14 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PFLASH_A08
+#NET PFLASH_A(09) LOC =  L14 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PFLASH_A09
+#NET PFLASH_A(10) LOC =  P27 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PFLASH_A10
+#NET PFLASH_A(11) LOC =  N28 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PFLASH_A11
+#NET PFLASH_A(12) LOC =  P17 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PFLASH_A12
+#NET PFLASH_A(13) LOC =  N18 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PFLASH_A13
+#NET PFLASH_A(14) LOC =  N25 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PFLASH_A14
+#NET PFLASH_A(15) LOC =  N26 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PFLASH_A15
+#NET PFLASH_A(16) LOC =  P18 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PFLASH_A16
+#NET PFLASH_A(17) LOC =  N19 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PFLASH_A17
+#NET PFLASH_A(18) LOC =  P25 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PFLASH_A18
+#NET PFLASH_A(19) LOC =  P26 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PFLASH_A19
+#NET PFLASH_A(20) LOC =  AM27 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PFLASH_A20
+#NET PFLASH_A(21) LOC =  AL27 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PFLASH_A21
+#NET PFLASH_A(22) LOC =  AJ18 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PFLASH_A22
+#NET PFLASH_D(00) LOC =  AR25 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PFLASH_D00
+#NET PFLASH_D(01) LOC =  AP25 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PFLASH_D01
+#NET PFLASH_D(02) LOC =  AK19 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PFLASH_D02
+#NET PFLASH_D(03) LOC =  AL19 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PFLASH_D03
+#NET PFLASH_D(04) LOC =  AN26 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PFLASH_D04
+#NET PFLASH_D(05) LOC =  AP26 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PFLASH_D05
+#NET PFLASH_D(06) LOC =  AM19 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PFLASH_D06
+#NET PFLASH_D(07) LOC =  AM18 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PFLASH_D07
+#NET PFLASH_FCS_B LOC =  AL17 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PFLASH_FCS_B
+#NET PFLASH_FLE_B LOC =  AK20 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PFLASH_FLE_B
+#NET PFLASH_FOE_B LOC =  AM17 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PFLASH_FOE_B
+#NET PFLASH_FWE_B LOC =  AR27 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PFLASH_FWE_B
+
+#NET PPOD_RX0_CNTRL(0) LOC =  AG38 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PPOD-RX0-CNTRL0
+#NET PPOD_RX0_CNTRL(1) LOC =  AG36 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PPOD-RX0-CNTRL1
+#NET PPOD_RX0_CNTRL(2) LOC =  AG37 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PPOD-RX0-CNTRL2
+#NET PPOD_RX0_CNTRL(3) LOC =  AH36 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PPOD-RX0-CNTRL3
+#NET PPOD_RX0_CNTRL(4) LOC =  AK37 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PPOD-RX0-CNTRL4
+#NET PPOD_RX0_CNTRL(5) LOC =  AL36 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PPOD-RX0-CNTRL5
+#NET PPOD_RX0_CNTRL(6) LOC =  AH33 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PPOD-RX0-CNTRL6
+#NET PPOD_RX2_CNTRL(0) LOC =  AK33 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PPOD-RX2-CNTRL0
+#NET PPOD_RX2_CNTRL(1) LOC =  AP37 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PPOD-RX2-CNTRL1
+#NET PPOD_RX2_CNTRL(2) LOC =  AP38 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PPOD-RX2-CNTRL2
+#NET PPOD_RX2_CNTRL(3) LOC =  AN31 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PPOD-RX2-CNTRL3
+#NET PPOD_RX2_CNTRL(4) LOC =  AP31 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PPOD-RX2-CNTRL4
+#NET PPOD_RX2_CNTRL(5) LOC =  AN36 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PPOD-RX2-CNTRL5
+#NET PPOD_RX2_CNTRL(6) LOC =  AP32 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PPOD-RX2-CNTRL6
+#NET PPOD_TX0_CNTRL(0) LOC =  AF32 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PPOD-TX0-CNTRL0
+#NET PPOD_TX0_CNTRL(1) LOC =  AF31 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PPOD-TX0-CNTRL1
+#NET PPOD_TX0_CNTRL(2) LOC =  AF37 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PPOD-TX0-CNTRL2
+#NET PPOD_TX0_CNTRL(3) LOC =  AF34 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PPOD-TX0-CNTRL3
+#NET PPOD_TX0_CNTRL(4) LOC =  AG32 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PPOD-TX0-CNTRL4
+#NET PPOD_TX0_CNTRL(5) LOC =  AG31 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PPOD-TX0-CNTRL5
+#NET PPOD_TX0_CNTRL(6) LOC =  AH34 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  PPOD-TX0-CNTRL6
+
+#NET QSFP1_CTRL(0) LOC =  AB33 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  QSFP1_CTRL0
+#NET QSFP1_CTRL(1) LOC =  AC33 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  QSFP1_CTRL1
+#NET QSFP1_CTRL(2) LOC =  AC35 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  QSFP1_CTRL2
+#NET QSFP1_CTRL(3) LOC =  AC34 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  QSFP1_CTRL3	
+#NET QSFP1_CTRL(4) LOC =  AD37 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  QSFP1_CTRL4
+#NET QSFP1_CTRL(5) LOC =  AC31 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  QSFP1_CTRL5	
+#NET QSFP1_CTRL(6) LOC =  AD35 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  QSFP1_CTRL6
+#NET QSFP2_CTRL(0) LOC =  AD32 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  QSFP2_CTRL0
+#NET QSFP2_CTRL(1) LOC =  AD33 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  QSFP2_CTRL1
+#NET QSFP2_CTRL(2) LOC =  AD31 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  QSFP2_CTRL2
+#NET QSFP2_CTRL(3) LOC =  AE35 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  QSFP2_CTRL3
+#NET QSFP2_CTRL(4) LOC =  AE37 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  QSFP2_CTRL4
+#NET QSFP2_CTRL(5) LOC =  AF36 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  QSFP2_CTRL5
+#NET QSFP2_CTRL(6) LOC =  AF35 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  QSFP2_CTRL6
+
+#NET QSH-N(00) LOC =  T34 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-N00
+#NET QSH-N(01) LOC =  N35 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-N01
+#NET QSH-N(02) LOC =  L37 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-N02
+#NET QSH-N(03) LOC =  H36 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-N03
+#NET QSH-N(04) LOC =  F37 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-N04
+#NET QSH-N(05) LOC =  G34 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-N05
+#NET QSH-N(06) LOC =  K32 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-N06
+#NET QSH-N(07) LOC =  N30 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-N07
+#NET QSH-N(08) LOC =  L29 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-N08
+#NET QSH-N(09) LOC =  G28 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-N09
+#NET QSH-N(10) LOC =  G26 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-N10
+#NET QSH-N(11) LOC =  E25 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-N11
+#NET QSH-N(12) LOC =  B23 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-N12
+#NET QSH-N(13) LOC =  M21 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-N13
+#NET QSH-N(14) LOC =  D21 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-N14
+#NET QSH-N(15) LOC =  F20 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-N15
+#NET QSH-N(16) LOC =  F16 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-N16
+#NET QSH-N(17) LOC =  G14 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-N17
+#NET QSH-N(18) LOC =  F14 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-N18
+#NET QSH-N(19) LOC =  F12 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-N19
+#NET QSH-N(20) LOC =  F11 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-N20
+#NET QSH-N(21) LOC =  H9 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-N21
+#NET QSH-N(22) LOC =  E8 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-N22
+#NET QSH-N(23) LOC =  H8 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-N23
+#NET QSH-N(24) LOC =  F6 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-N24
+#NET QSH-N(25) LOC =  H5 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-N25
+#NET QSH-N(26) LOC =  N6 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-N26
+#NET QSH-N(27) LOC =  T5 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-N27
+#NET QSH-N(28) LOC =  V9 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-N28
+#NET QSH-N(29) LOC =  Y8 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-N29
+#NET QSH-N(30) LOC =  AA10 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-N30
+#NET QSH-N(31) LOC =  AD6 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-N31
+#NET QSH-N(32) LOC =  AF7 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-N32
+#NET QSH-N(33) LOC =  AH8 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-N33
+#NET QSH-N(34) LOC =  AH5 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-N34
+#NET QSH-N(35) LOC =  AL9 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-N35
+#NET QSH-N(36) LOC =  AM8 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-N36
+#NET QSH-N(37) LOC =  AP7 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-N37
+#NET QSH-N(38) LOC =  AT9 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-N38
+#NET QSH-N(39) LOC =  AT7 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-N39
+#NET QSH-P(00) LOC =  R34 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-P00
+#NET QSH-P(01) LOC =  P35 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-P01
+#NET QSH-P(02) LOC =  M37 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-P02
+#NET QSH-P(03) LOC =  H35 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-P03
+#NET QSH-P(04) LOC =  E37 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-P04
+#NET QSH-P(05) LOC =  F34 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-P05
+#NET QSH-P(06) LOC =  L31 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-P06
+#NET QSH-P(07) LOC =  N31 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-P07
+#NET QSH-P(08) LOC =  K29 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-P08
+#NET QSH-P(09) LOC =  H28 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-P09
+#NET QSH-P(10) LOC =  F26 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-P10
+#NET QSH-P(11) LOC =  F25 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-P11
+#NET QSH-P(12) LOC =  B22 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-P12
+#NET QSH-P(13) LOC =  N21 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-P13
+#NET QSH-P(14) LOC =  C21 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-P14
+#NET QSH-P(15) LOC =  E20 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-P15
+#NET QSH-P(16) LOC =  F17 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-P16
+#NET QSH-P(17) LOC =  F15 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-P17
+#NET QSH-P(18) LOC =  E14 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-P18
+#NET QSH-P(19) LOC =  G12 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-P19
+#NET QSH-P(20) LOC =  G11 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-P20
+#NET QSH-P(21) LOC =  G9 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-P21
+#NET QSH-P(22) LOC =  E7 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-P22
+#NET QSH-P(23) LOC =  J8 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-P23
+#NET QSH-P(24) LOC =  G6 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-P24
+#NET QSH-P(25) LOC =  H6 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-P25
+#NET QSH-P(26) LOC =  P6 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-P26
+#NET QSH-P(27) LOC =  T6 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-P27
+#NET QSH-P(28) LOC =  V8 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-P28
+#NET QSH-P(29) LOC =  Y7 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-P29
+#NET QSH-P(30) LOC =  AA11 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-P30		
+#NET QSH-P(31) LOC =  AD7 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-P31
+#NET QSH-P(32) LOC =  AE8 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-P32
+#NET QSH-P(33) LOC =  AG8 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-P33
+#NET QSH-P(34) LOC =  AG6 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-P34
+#NET QSH-P(35) LOC =  AK9 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-P35
+#NET QSH-P(36) LOC =  AM9 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-P36
+#NET QSH-P(37) LOC =  AR6 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-P37
+#NET QSH-P(38) LOC =  AR10 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-P38
+#NET QSH-P(39) LOC =  AR7 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QSH-P39
+
+#NET QTH-N(00) LOC =  N33 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-N00
+#NET QTH-N(01) LOC =  P37 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-N01
+#NET QTH-N(02) LOC =  K35 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-N02
+#NET QTH-N(03) LOC =  J35 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-N03
+#NET QTH-N(04) LOC =  G36 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-N04
+#NET QTH-N(05) LOC =  H33 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-N05
+#NET QTH-N(06) LOC =  L32 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-N06
+#NET QTH-N(07) LOC =  P32 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-N07
+#NET QTH-N(08) LOC =  H29 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-N08
+#NET QTH-N(09) LOC =  J27 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-N09
+#NET QTH-N(10) LOC =  J25 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-N10
+#NET QTH-N(11) LOC =  E23 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-N11
+#NET QTH-N(12) LOC =  A22 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-N12
+#NET QTH-N(13) LOC =  J21 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-N13
+#NET QTH-N(14) LOC =  K20 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-N14
+#NET QTH-N(15) LOC =  H19 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-N15
+#NET QTH-N(16) LOC =  G16 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-N16
+#NET QTH-N(17) LOC =  H15 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-N17
+#NET QTH-N(18) LOC =  J13 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-N18
+#NET QTH-N(19) LOC =  J12 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-N19
+#NET QTH-N(20) LOC =  N11 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-N20
+#NET QTH-N(21) LOC =  F9 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-N21
+#NET QTH-N(22) LOC =  G8 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-N22
+#NET QTH-N(23) LOC =  P8 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-N23
+#NET QTH-N(24) LOC =  L7 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-N24
+#NET QTH-N(25) LOC =  M6 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-N25
+#NET QTH-N(26) LOC =  P5 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-N26
+#NET QTH-N(27) LOC =  P7 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-N27
+#NET QTH-N(28) LOC =  Y9 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-N28
+#NET QTH-N(29) LOC =  Y10 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-N29
+#NET QTH-N(30) LOC =  AB7 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-N30
+#NET QTH-N(31) LOC =  AE10 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-N31
+#NET QTH-N(32) LOC =  AF6 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-N32
+#NET QTH-N(33) LOC =  AG9 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-N33
+#NET QTH-N(34) LOC =  AJ8 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-N34
+#NET QTH-N(35) LOC =  AN5 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-N35
+#NET QTH-N(36) LOC =  AN8 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-N36
+#NET QTH-N(37) LOC =  AR9 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-N37
+#NET QTH-N(38) LOC =  AT6 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-N38
+#NET QTH-N(39) LOC =  AV7 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-N39
+#NET QTH-P(00) LOC =  P33 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-P00
+#NET QTH-P(01) LOC =  R37 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-P01
+#NET QTH-P(02) LOC =  L34 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-P02
+#NET QTH-P(03) LOC =  J36 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-P03
+#NET QTH-P(04) LOC =  F35 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-P04
+#NET QTH-P(05) LOC =  J32 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-P05
+#NET QTH-P(06) LOC =  M33 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-P06
+#NET QTH-P(07) LOC =  P31 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-P07
+#NET QTH-P(08) LOC =  G29 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-P08
+#NET QTH-P(09) LOC =  J28 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-P09
+#NET QTH-P(10) LOC =  K25 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-P10
+#NET QTH-P(11) LOC =  E24 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-P11
+#NET QTH-P(12) LOC =  B21 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-P12
+#NET QTH-P(13) LOC =  J22 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-P13
+#NET QTH-P(14) LOC =  L20 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-P14
+#NET QTH-P(15) LOC =  H20 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-P15
+#NET QTH-P(16) LOC =  H16 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-P16
+#NET QTH-P(17) LOC =  H14 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-P17
+#NET QTH-P(18) LOC =  K14 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-P18
+#NET QTH-P(19) LOC =  H11 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-P19
+#NET QTH-P(20) LOC =  P11 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-P20
+#NET QTH-P(21) LOC =  F10 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-P21
+#NET QTH-P(22) LOC =  G7 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-P22
+#NET QTH-P(23) LOC =  R9 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-P23
+#NET QTH-P(24) LOC =  K7 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-P24
+#NET QTH-P(25) LOC =  M7 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-P25
+#NET QTH-P(26) LOC =  R5 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-P26
+#NET QTH-P(27) LOC =  R7 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-P27
+#NET QTH-P(28) LOC =  W8 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-P28
+#NET QTH-P(29) LOC =  AA9 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-P29		
+#NET QTH-P(30) LOC =  AB8 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-P30		
+#NET QTH-P(31) LOC =  AD10 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-P31
+#NET QTH-P(32) LOC =  AF5 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-P32
+#NET QTH-P(33) LOC =  AF10 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-P33
+#NET QTH-P(34) LOC =  AH9 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-P34
+#NET QTH-P(35) LOC =  AM5 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-P35
+#NET QTH-P(36) LOC =  AP8 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-P36
+#NET QTH-P(37) LOC =  AR8 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-P37
+#NET QTH-P(38) LOC =  AU6 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-P38
+#NET QTH-P(39) LOC =  AU8 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  QTH-P39
+
+#NET SI5326_CNTRL(0) LOC =  AJ37 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  SI5325_CNTRL0
+#NET SI5326_CNTRL(1) LOC =  AH38 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  SI5325_CNTRL1
+#NET SI5326_CNTRL(2) LOC =  AG34 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  SI5325_CNTRL2
+#NET SI5326_CNTRL(3) LOC =  AG33 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  SI5325_CNTRL3
+#NET SI5326_CNTRL(4) LOC =  AM38 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  SI5325_CNTRL4
+
+#NET UC(0) LOC =  Y30 | IOSTANDARD = LVDCI_25 | PULLUP;      # SCHEM NAME  =  UC00
+#NET UC(1) LOC =  Y29 | IOSTANDARD = LVDCI_25 | PULLUP;      # SCHEM NAME  =  UC01
+#NET UC(2) LOC =  W35 | IOSTANDARD = LVDCI_25 | PULLUP;      # SCHEM NAME  =  UC02
+#NET UC(3) LOC =  W36 | IOSTANDARD = LVDCI_25 | PULLUP;      # SCHEM NAME  =  UC03
+#NET UC(4) LOC =  AA37 | IOSTANDARD = LVDCI_25 | PULLUP;      # SCHEM NAME  =  UC04		
+#NET UC(5) LOC =  W37 | IOSTANDARD = LVDCI_25 | PULLUP;      # SCHEM NAME  =  UC05
+#NET UC(6) LOC =  V36 | IOSTANDARD = LVDCI_25 | PULLUP;      # SCHEM NAME  =  UC06
+#NET UC(7) LOC =  AA36 | IOSTANDARD = LVDCI_25 | PULLUP;      # SCHEM NAME  =  UC07
+#NET UC(8) LOC =  W33 | IOSTANDARD = LVDCI_25 | PULLUP;      # SCHEM NAME  =  UC08
+#NET UC(9) LOC =  W32 | IOSTANDARD = LVDCI_25 | PULLUP;      # SCHEM NAME  =  UC09
+#NET UC(10) LOC =  Y32 | IOSTANDARD = LVDCI_25 | PULLUP;      # SCHEM NAME  =  UC10
+#NET UC(11) LOC =  AA32 | IOSTANDARD = LVDCI_25 | PULLUP;      # SCHEM NAME  =  UC11		
+#NET UC(12) LOC =  V35 | IOSTANDARD = LVDCI_25 | PULLUP;      # SCHEM NAME  =  UC12
+#NET UC(13) LOC =  V34 | IOSTANDARD = LVDCI_25 | PULLUP;      # SCHEM NAME  =  UC13
+#NET UC(14) LOC =  Y33 | IOSTANDARD = LVDCI_25 | PULLUP;      # SCHEM NAME  =  UC14
+#NET UC(15) LOC =  U37 | IOSTANDARD = LVDCI_25 | PULLUP;      # SCHEM NAME  =  UC15
+#NET UC(16) LOC =  T37 | IOSTANDARD = LVDCI_25 | PULLUP;      # SCHEM NAME  =  UC16   MISO
+#NET UC(17) LOC =  W30 | IOSTANDARD = LVDCI_25 | PULLUP;      # SCHEM NAME  =  UC17   MOSI
+#NET UC(18) LOC =  W31 | IOSTANDARD = LVDCI_25 | PULLUP;      # SCHEM NAME  =  UC18   SCK
+#NET UC(19) LOC =  AA30 | IOSTANDARD = LVDCI_25 | PULLUP;      # SCHEM NAME  =  UC19  CS_B
+#NET UC(20) LOC =  Y35 | IOSTANDARD = LVDCI_25 | PULLUP;      # SCHEM NAME  =  UC20
+#NET UC(21) LOC =  U33 | IOSTANDARD = LVDCI_25 | PULLUP;      # SCHEM NAME  =  UC21
+#NET UC(22) LOC =  U34 | IOSTANDARD = LVDCI_25 | PULLUP;      # SCHEM NAME  =  UC22
+#NET UC(23) LOC =  AC36 | IOSTANDARD = LVDCI_25 | PULLUP;      # SCHEM NAME  =  UC23
+
+#NET V5_AMC_RX_N(00) LOC =  AE1 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_AMC_RX_N00
+#NET V5_AMC_RX_N(01) LOC =  AC1 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_AMC_RX_N01
+#NET V5_AMC_RX_N(02) LOC =  W1 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_AMC_RX_N02
+#NET V5_AMC_RX_N(03) LOC =  AU24 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_AMC_RX_N03
+#NET V5_AMC_RX_N(04) LOC =  U1 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_AMC_RX_N04
+#NET V5_AMC_RX_N(05) LOC =  N1 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_AMC_RX_N05
+#NET V5_AMC_RX_N(06) LOC =  L1 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_AMC_RX_N06
+#NET V5_AMC_RX_N(07) LOC =  G1 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_AMC_RX_N07
+#NET V5_AMC_RX_N(08) LOC =  E1 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_AMC_RX_N08
+#NET V5_AMC_RX_N(09) LOC =  AG13 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_AMC_RX_N09
+#NET V5_AMC_RX_N(10) LOC =  AK14 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_AMC_RX_N10
+#NET V5_AMC_RX_N(11) LOC =  AL14 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_AMC_RX_N11
+#NET V5_AMC_RX_N(12) LOC =  AR14 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_AMC_RX_N12
+#NET V5_AMC_RX_N(13) LOC =  AR17 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_AMC_RX_N13
+#NET V5_AMC_RX_N(14) LOC =  AU17 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_AMC_RX_N14
+#NET V5_AMC_RX_N(15) LOC =  AM22 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_AMC_RX_N15
+#NET V5_AMC_RX_N(17) LOC =  AP22 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_AMC_RX_N17
+#NET V5_AMC_RX_N(18) LOC =  AT24 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_AMC_RX_N18
+#NET V5_AMC_RX_N(19) LOC =  AT21 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_AMC_RX_N19
+#NET V5_AMC_RX_N(20) LOC =  BB23 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_AMC_RX_N20
+#NET V5_AMC_RX_P(00) LOC =  AF1 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_AMC_RX_P00
+#NET V5_AMC_RX_P(01) LOC =  AD1 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_AMC_RX_P01
+#NET V5_AMC_RX_P(02) LOC =  Y1 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_AMC_RX_P02
+#NET V5_AMC_RX_P(03) LOC =  AV24 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_AMC_RX_P03
+#NET V5_AMC_RX_P(04) LOC =  V1 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_AMC_RX_P04
+#NET V5_AMC_RX_P(05) LOC =  P1 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_AMC_RX_P05
+#NET V5_AMC_RX_P(06) LOC =  M1 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_AMC_RX_P06
+#NET V5_AMC_RX_P(07) LOC =  H1 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_AMC_RX_P07
+#NET V5_AMC_RX_P(08) LOC =  F1 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_AMC_RX_P08
+#NET V5_AMC_RX_P(09) LOC =  AH14 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_AMC_RX_P09
+#NET V5_AMC_RX_P(10) LOC =  AK13 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_AMC_RX_P10
+#NET V5_AMC_RX_P(11) LOC =  AM14 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_AMC_RX_P11
+#NET V5_AMC_RX_P(12) LOC =  AP15 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_AMC_RX_P12
+#NET V5_AMC_RX_P(13) LOC =  AT17 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_AMC_RX_P13
+#NET V5_AMC_RX_P(14) LOC =  AU18 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_AMC_RX_P14
+#NET V5_AMC_RX_P(15) LOC =  AN21 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_AMC_RX_P15
+#NET V5_AMC_RX_P(17) LOC =  AR22 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_AMC_RX_P17
+#NET V5_AMC_RX_P(18) LOC =  AR24 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_AMC_RX_P18
+#NET V5_AMC_RX_P(19) LOC =  AU21 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_AMC_RX_P19
+#NET V5_AMC_RX_P(20) LOC =  BB22 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_AMC_RX_P20
+
+#NET CPLD(0) LOC =  AJ33 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  V5_CPLD0
+#NET CPLD(1) LOC =  AK34 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  V5_CPLD1
+#NET CPLD(2) LOC =  AT36 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  V5_CPLD2
+#NET CPLD(3) LOC =  AJ31 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  V5_CPLD3
+#NET CPLD(4) LOC =  AJ32 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  V5_CPLD4
+#NET CPLD(5) LOC =  AR35 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  V5_CPLD5
+#NET CPLD(6) LOC =  AT35 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  V5_CPLD6
+#NET CPLD(7) LOC =  AM34 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  V5_CPLD7
+#NET CPLD(8) LOC =  AN34 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  V5_CPLD8
+#NET CPLD(9) LOC =  AP36 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  V5_CPLD9
+
+#NET V5_DONE LOC =  R14 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  V5_DONE
+
+#NET HDR_N(0) LOC =  M18 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  V5_HDR_N0
+#NET HDR_P(0) LOC =  M17 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  V5_HDR_P0
+#NET HDR_N(1) LOC =  K28 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_HDR_N1
+#NET HDR_P(1) LOC =  K27 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_HDR_P1
+#NET HDR_N(2) LOC =  L17 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_HDR_N2
+#NET HDR_P(2) LOC =  L16 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_HDR_P2
+#NET HDR_N(3) LOC =  M27 | IOSTANDARD = LVDCI_25; # LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_HDR_N3
+#NET HDR_P(3) LOC =  M28 | IOSTANDARD = LVDCI_25; # LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_HDR_P3
+
+#NET V5_INIT_B LOC =  T14 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  V5_INIT_B
+#NET V5_JTAG_TCK LOC =  AF16 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  V5_JTAG_TCK
+#NET V5_JTAG_TDI LOC =  AG16 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  V5_JTAG_TDI
+#NET V5_JTAG_TMS LOC =  AF15 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  V5_JTAG_TMS
+
+#NET V5_OSC1BUF+3 LOC =  AD4 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_OSC1BUF+3
+#NET V5_OSC1BUF-3 LOC =  AD3 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_OSC1BUF-3
+#NET V5_OSC2BUF+3 LOC =  C4 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_OSC2BUF+3
+#NET V5_OSC2BUF-3 LOC =  C3 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;      # SCHEM NAME  =  V5_OSC2BUF-3
+
+#NET SNAP12_RX0_N(00) LOC =  M42       # SCHEM NAME  =  V5_PPOD_RX0_N00
+#NET SNAP12_RX0_N(01) LOC =  G42       # SCHEM NAME  =  V5_PPOD_RX0_N01
+#NET SNAP12_RX0_N(02) LOC =  N42       # SCHEM NAME  =  V5_PPOD_RX0_N02
+#NET SNAP12_RX0_N(03) LOC =  V42       # SCHEM NAME  =  V5_PPOD_RX0_N03
+#NET SNAP12_RX0_N(04) LOC =  F42       # SCHEM NAME  =  V5_PPOD_RX0_N04
+#NET SNAP12_RX0_N(05) LOC =  W42       # SCHEM NAME  =  V5_PPOD_RX0_N05
+#NET SNAP12_RX0_N(06) LOC =  AD42       # SCHEM NAME  =  V5_PPOD_RX0_N06
+#NET SNAP12_RX0_N(07) LOC =  AE42       # SCHEM NAME  =  V5_PPOD_RX0_N07
+#NET SNAP12_RX0_N(08) LOC =  AU42       # SCHEM NAME  =  V5_PPOD_RX0_N08
+#NET SNAP12_RX0_N(09) LOC =  AL42       # SCHEM NAME  =  V5_PPOD_RX0_N09
+#NET SNAP12_RX0_N(10) LOC =  AK42       # SCHEM NAME  =  V5_PPOD_RX0_N10
+#NET SNAP12_RX0_N(11) LOC =  AT42       # SCHEM NAME  =  V5_PPOD_RX0_N11
+#NET SNAP12_RX0_P(00) LOC =  L42       # SCHEM NAME  =  V5_PPOD_RX0_P00
+#NET SNAP12_RX0_P(01) LOC =  H42       # SCHEM NAME  =  V5_PPOD_RX0_P01
+#NET SNAP12_RX0_P(02) LOC =  P42       # SCHEM NAME  =  V5_PPOD_RX0_P02
+#NET SNAP12_RX0_P(03) LOC =  U42       # SCHEM NAME  =  V5_PPOD_RX0_P03
+#NET SNAP12_RX0_P(04) LOC =  E42       # SCHEM NAME  =  V5_PPOD_RX0_P04
+#NET SNAP12_RX0_P(05) LOC =  Y42       # SCHEM NAME  =  V5_PPOD_RX0_P05
+#NET SNAP12_RX0_P(06) LOC =  AC42       # SCHEM NAME  =  V5_PPOD_RX0_P06
+#NET SNAP12_RX0_P(07) LOC =  AF42       # SCHEM NAME  =  V5_PPOD_RX0_P07
+#NET SNAP12_RX0_P(08) LOC =  AV42       # SCHEM NAME  =  V5_PPOD_RX0_P08
+#NET SNAP12_RX0_P(09) LOC =  AM42       # SCHEM NAME  =  V5_PPOD_RX0_P09
+#NET SNAP12_RX0_P(10) LOC =  AJ42       # SCHEM NAME  =  V5_PPOD_RX0_P10
+#NET SNAP12_RX0_P(11) LOC =  AR42       # SCHEM NAME  =  V5_PPOD_RX0_P11
+#NET SNAP12_RX2_N(00) LOC =  BB34       # SCHEM NAME  =  V5_PPOD_RX2_N00
+#NET SNAP12_RX2_N(01) LOC =  BB39       # SCHEM NAME  =  V5_PPOD_RX2_N01
+#NET SNAP12_RX2_N(02) LOC =  BB33       # SCHEM NAME  =  V5_PPOD_RX2_N02
+#NET SNAP12_RX2_N(03) LOC =  BB10       # SCHEM NAME  =  V5_PPOD_RX2_N03
+#NET SNAP12_RX2_N(04) LOC =  BB40       # SCHEM NAME  =  V5_PPOD_RX2_N04
+#NET SNAP12_RX2_N(05) LOC =  BB9       # SCHEM NAME  =  V5_PPOD_RX2_N05
+#NET SNAP12_RX2_N(06) LOC =  BB4       # SCHEM NAME  =  V5_PPOD_RX2_N06
+#NET SNAP12_RX2_N(07) LOC =  BB3       # SCHEM NAME  =  V5_PPOD_RX2_N07
+#NET SNAP12_RX2_N(08) LOC =  AK1       # SCHEM NAME  =  V5_PPOD_RX2_N08
+#NET SNAP12_RX2_N(09) LOC =  AT1       # SCHEM NAME  =  V5_PPOD_RX2_N09
+#NET SNAP12_RX2_N(10) LOC =  AU1       # SCHEM NAME  =  V5_PPOD_RX2_N10
+#NET SNAP12_RX2_N(11) LOC =  AL1       # SCHEM NAME  =  V5_PPOD_RX2_N11
+#NET SNAP12_RX2_P(00) LOC =  BB35       # SCHEM NAME  =  V5_PPOD_RX2_P00
+#NET SNAP12_RX2_P(01) LOC =  BB38       # SCHEM NAME  =  V5_PPOD_RX2_P01
+#NET SNAP12_RX2_P(02) LOC =  BB32       # SCHEM NAME  =  V5_PPOD_RX2_P02
+#NET SNAP12_RX2_P(03) LOC =  BB11       # SCHEM NAME  =  V5_PPOD_RX2_P03
+#NET SNAP12_RX2_P(04) LOC =  BB41       # SCHEM NAME  =  V5_PPOD_RX2_P04
+#NET SNAP12_RX2_P(05) LOC =  BB8       # SCHEM NAME  =  V5_PPOD_RX2_P05
+#NET SNAP12_RX2_P(06) LOC =  BB5       # SCHEM NAME  =  V5_PPOD_RX2_P06
+#NET SNAP12_RX2_P(07) LOC =  BB2       # SCHEM NAME  =  V5_PPOD_RX2_P07
+#NET SNAP12_RX2_P(08) LOC =  AJ1       # SCHEM NAME  =  V5_PPOD_RX2_P08
+#NET SNAP12_RX2_P(09) LOC =  AR1       # SCHEM NAME  =  V5_PPOD_RX2_P09
+#NET SNAP12_RX2_P(10) LOC =  AV1       # SCHEM NAME  =  V5_PPOD_RX2_P10
+#NET SNAP12_RX2_P(11) LOC =  AM1       # SCHEM NAME  =  V5_PPOD_RX2_P11
+#NET SNAP12_TX0_N(00) LOC =  L41       # SCHEM NAME  =  V5_PPOD_TX0_N00
+#NET SNAP12_TX0_N(01) LOC =  H41       # SCHEM NAME  =  V5_PPOD_TX0_N01
+#NET SNAP12_TX0_N(02) LOC =  P41       # SCHEM NAME  =  V5_PPOD_TX0_N02
+#NET SNAP12_TX0_N(03) LOC =  U41       # SCHEM NAME  =  V5_PPOD_TX0_N03
+#NET SNAP12_TX0_N(04) LOC =  E41       # SCHEM NAME  =  V5_PPOD_TX0_N04
+#NET SNAP12_TX0_N(05) LOC =  Y41       # SCHEM NAME  =  V5_PPOD_TX0_N05
+#NET SNAP12_TX0_N(06) LOC =  AC41       # SCHEM NAME  =  V5_PPOD_TX0_N06
+#NET SNAP12_TX0_N(07) LOC =  AF41       # SCHEM NAME  =  V5_PPOD_TX0_N07
+#NET SNAP12_TX0_N(08) LOC =  AV41       # SCHEM NAME  =  V5_PPOD_TX0_N08
+#NET SNAP12_TX0_N(09) LOC =  AM41       # SCHEM NAME  =  V5_PPOD_TX0_N09
+#NET SNAP12_TX0_N(10) LOC =  AJ41       # SCHEM NAME  =  V5_PPOD_TX0_N10
+#NET SNAP12_TX0_N(11) LOC =  AR41       # SCHEM NAME  =  V5_PPOD_TX0_N11
+#NET SNAP12_TX0_P(00) LOC =  K41       # SCHEM NAME  =  V5_PPOD_TX0_P00
+#NET SNAP12_TX0_P(01) LOC =  J41       # SCHEM NAME  =  V5_PPOD_TX0_P01
+#NET SNAP12_TX0_P(02) LOC =  R41       # SCHEM NAME  =  V5_PPOD_TX0_P02
+#NET SNAP12_TX0_P(03) LOC =  T41       # SCHEM NAME  =  V5_PPOD_TX0_P03
+#NET SNAP12_TX0_P(04) LOC =  D41       # SCHEM NAME  =  V5_PPOD_TX0_P04
+#NET SNAP12_TX0_P(05) LOC =  AA41       # SCHEM NAME  =  V5_PPOD_TX0_P05
+#NET SNAP12_TX0_P(06) LOC =  AB41       # SCHEM NAME  =  V5_PPOD_TX0_P06
+#NET SNAP12_TX0_P(07) LOC =  AG41       # SCHEM NAME  =  V5_PPOD_TX0_P07
+#NET SNAP12_TX0_P(08) LOC =  AW41       # SCHEM NAME  =  V5_PPOD_TX0_P08
+#NET SNAP12_TX0_P(09) LOC =  AN41       # SCHEM NAME  =  V5_PPOD_TX0_P09
+#NET SNAP12_TX0_P(10) LOC =  AH41       # SCHEM NAME  =  V5_PPOD_TX0_P10
+#NET SNAP12_TX0_P(11) LOC =  AP41       # SCHEM NAME  =  V5_PPOD_TX0_P11
+
+#NET V5_PROG_B LOC =  R29 | IOSTANDARD = LVDCI_25;      # SCHEM NAME  =  V5_PROG_B
+
+#NET V5_QSFP1_RX_N(0) LOC =  A10       # SCHEM NAME  =  V5_QSFP1_RX_N0	
+#NET V5_QSFP1_RX_N(1) LOC =  A2       # SCHEM NAME  =  V5_QSFP1_RX_N1	
+#NET V5_QSFP1_RX_N(2) LOC =  A8       # SCHEM NAME  =  V5_QSFP1_RX_N2
+#NET V5_QSFP1_RX_N(3) LOC =  A4       # SCHEM NAME  =  V5_QSFP1_RX_N3
+#NET V5_QSFP1_RX_P(0) LOC =  A11       # SCHEM NAME  =  V5_QSFP1_RX_P0
+#NET V5_QSFP1_RX_P(1) LOC =  A3       # SCHEM NAME  =  V5_QSFP1_RX_P1	
+#NET V5_QSFP1_RX_P(2) LOC =  A9       # SCHEM NAME  =  V5_QSFP1_RX_P2	
+#NET V5_QSFP1_RX_P(3) LOC =  A5       # SCHEM NAME  =  V5_QSFP1_RX_P3
+#NET V5_QSFP1_TX_N(0) LOC =  B12       # SCHEM NAME  =  V5_QSFP1_TX_N0
+#NET V5_QSFP1_TX_N(1) LOC =  B2       # SCHEM NAME  =  V5_QSFP1_TX_N1
+#NET V5_QSFP1_TX_N(2) LOC =  B8       # SCHEM NAME  =  V5_QSFP1_TX_N2
+#NET V5_QSFP1_TX_N(3) LOC =  B6       # SCHEM NAME  =  V5_QSFP1_TX_N3
+#NET V5_QSFP1_TX_P(0) LOC =  B11       # SCHEM NAME  =  V5_QSFP1_TX_P0
+#NET V5_QSFP1_TX_P(1) LOC =  B1       # SCHEM NAME  =  V5_QSFP1_TX_P1
+#NET V5_QSFP1_TX_P(2) LOC =  B7       # SCHEM NAME  =  V5_QSFP1_TX_P2
+#NET V5_QSFP1_TX_P(3) LOC =  B5       # SCHEM NAME  =  V5_QSFP1_TX_P3
+#NET V5_QSFP2_RX_N(0) LOC =  A40       # SCHEM NAME  =  V5_QSFP2_RX_N0	
+#NET V5_QSFP2_RX_N(1) LOC =  A32       # SCHEM NAME  =  V5_QSFP2_RX_N1	
+#NET V5_QSFP2_RX_N(2) LOC =  A38       # SCHEM NAME  =  V5_QSFP2_RX_N2	
+#NET V5_QSFP2_RX_N(3) LOC =  A34       # SCHEM NAME  =  V5_QSFP2_RX_N3
+#NET V5_QSFP2_RX_P(0) LOC =  A41       # SCHEM NAME  =  V5_QSFP2_RX_P0
+#NET V5_QSFP2_RX_P(1) LOC =  A33       # SCHEM NAME  =  V5_QSFP2_RX_P1
+#NET V5_QSFP2_RX_P(2) LOC =  A39       # SCHEM NAME  =  V5_QSFP2_RX_P2
+#NET V5_QSFP2_RX_P(3) LOC =  A35       # SCHEM NAME  =  V5_QSFP2_RX_P3	
+#NET V5_QSFP2_TX_N(0) LOC =  B42       # SCHEM NAME  =  V5_QSFP2_TX_N0
+#NET V5_QSFP2_TX_N(1) LOC =  B32       # SCHEM NAME  =  V5_QSFP2_TX_N1
+#NET V5_QSFP2_TX_N(2) LOC =  B38       # SCHEM NAME  =  V5_QSFP2_TX_N2
+#NET V5_QSFP2_TX_N(3) LOC =  B36       # SCHEM NAME  =  V5_QSFP2_TX_N3
+#NET V5_QSFP2_TX_P(0) LOC =  B41       # SCHEM NAME  =  V5_QSFP2_TX_P0
+#NET V5_QSFP2_TX_P(1) LOC =  B31       # SCHEM NAME  =  V5_QSFP2_TX_P1
+#NET V5_QSFP2_TX_P(2) LOC =  B37       # SCHEM NAME  =  V5_QSFP2_TX_P2
+#NET V5_QSFP2_TX_P(3) LOC =  B35       # SCHEM NAME  =  V5_QSFP2_TX_P3
+
+#NET V5_REFCLKN(0) LOC =  M40       # SCHEM NAME  =  V5_REFCLKN0
+#NET V5_REFCLKN(1) LOC =  AK40       # SCHEM NAME  =  V5_REFCLKN1
+#NET V5_REFCLKN(2) LOC =  AY34       # SCHEM NAME  =  V5_REFCLKN2
+#NET V5_REFCLKN(3) LOC =  C33       # SCHEM NAME  =  V5_REFCLKN3
+#NET V5_REFCLKN(4) LOC =  C10       # SCHEM NAME  =  V5_REFCLKN4
+#NET V5_REFCLKN(5) LOC =  AY9       # SCHEM NAME  =  V5_REFCLKN5
+#NET V5_REFCLKN(6) LOC =  AK3       # SCHEM NAME  =  V5_REFCLKN6
+#NET V5_REFCLKN(7) LOC =  M3       # SCHEM NAME  =  V5_REFCLKN7
+#NET V5_REFCLKP(0) LOC =  M39       # SCHEM NAME  =  V5_REFCLKP0
+#NET V5_REFCLKP(1) LOC =  AK39       # SCHEM NAME  =  V5_REFCLKP1
+#NET V5_REFCLKP(2) LOC =  AW34       # SCHEM NAME  =  V5_REFCLKP2
+#NET V5_REFCLKP(3) LOC =  D33       # SCHEM NAME  =  V5_REFCLKP3
+#NET V5_REFCLKP(4) LOC =  D10       # SCHEM NAME  =  V5_REFCLKP4
+#NET V5_REFCLKP(5) LOC =  AW9       # SCHEM NAME  =  V5_REFCLKP5
+#NET V5_REFCLKP(6) LOC =  AK4       # SCHEM NAME  =  V5_REFCLKP6
+#NET V5_REFCLKP(7) LOC =  M4       # SCHEM NAME  =  V5_REFCLKP7
+
+
+################################################################################
+# SRAM1
+################################################################################
+
+################################################################################
+# Clock constraints
+################################################################################
+
+# These constraints should not be needed because there is a constraint on 
+# the original source clock that should propagte through the PLLs/DCMs.
+
+# No timing constarints req for qdr1_cq<0>.  Only used in IOBs.
+
+################################################################################
+# I/O STANDARDS
+################################################################################
+
+#NET  "qdr1_d[*]"                                 IOSTANDARD = HSTL_I_18;
+#NET  "qdr1_q[*]"                                 IOSTANDARD = HSTL_I_DCI_18;
+#NET  "qdr1_sa[*]"                                IOSTANDARD = HSTL_I_18;
+#NET  "qdr1_w_n"                                  IOSTANDARD = HSTL_I_18;
+#NET  "qdr1_r_n"                                  IOSTANDARD = HSTL_I_18;
+#NET  "qdr1_dll_off_n"                            IOSTANDARD = HSTL_I_18;
+#NET  "qdr1_bw_n[*]"                              IOSTANDARD = HSTL_I_18;
+#NET  "qdr1_cq[*]"                                IOSTANDARD = HSTL_I_DCI_18;
+#NET  "qdr1_cq_n[*]"                              IOSTANDARD = HSTL_I_DCI_18;
+#NET  "qdr1_k[*]"                                 IOSTANDARD = HSTL_I_18;
+#NET  "qdr1_k_n[*]"                               IOSTANDARD = HSTL_I_18;
+#NET  "qdr1_c[*]"                                 IOSTANDARD = HSTL_I_18;
+#NET  "qdr1_c_n[*]"                               IOSTANDARD = HSTL_I_18;
+
+################################################################################
+#SAVE attributes to reserve the pins
+################################################################################
+
+#NET  qdr1_cq_n[*]       S;
+
+################################################################################
+# I/O Definitions
+###############################################################################
+
+#NET  qdr1_sa[0]         LOC =   AF11  ;
+#NET  qdr1_sa[1]         LOC =   AE9  ;
+#NET  qdr1_sa[2]         LOC =   AD6  ;
+#NET  qdr1_sa[3]         LOC =   AG12 ;
+#NET  qdr1_sa[4]         LOC =   AP10 ;
+#NET  qdr1_sa[5]         LOC =   AJ12 ;
+#NET  qdr1_sa[6]         LOC =   AL11 ;
+#NET  qdr1_sa[7]         LOC =   AM11 ;
+#NET  qdr1_sa[8]         LOC =   AU6  ;
+#NET  qdr1_sa[9]         LOC =   AM8  ;
+#NET  qdr1_sa[10]        LOC =   AP7  ;
+#NET  qdr1_sa[11]        LOC =   AP8  ;
+#NET  qdr1_sa[12]        LOC =   AR7  ;
+#NET  qdr1_sa[13]        LOC =   AN10 ;
+#NET  qdr1_sa[14]        LOC =   AL9  ;
+#NET  qdr1_sa[15]        LOC =   AU11 ;
+#NET  qdr1_sa[16]        LOC =   AP12 ;
+#NET  qdr1_sa[17]        LOC =   AN9  ;
+#NET  qdr1_sa[18]        LOC =   AR8  ;
+#NET  qdr1_sa[19]        LOC =   AM9  ;
+#NET  qdr1_sa[20]        LOC =   AR12 ;
+#NET  qdr1_bw_n[0]       LOC =   AF5  ;
+#NET  qdr1_bw_n[1]       LOC =   AF6  ;
+#NET  qdr1_c[0]          LOC =   AU8  ;
+#NET  qdr1_c_n[0]        LOC =   AV7  ;
+#NET  qdr1_cq[0]         LOC =   AF10 ;
+#NET  qdr1_cq_n[0]       LOC =   AG9  ;
+#NET  qdr1_d[0]          LOC =   AN13 ;
+#NET  qdr1_d[1]          LOC =   AR6  ;
+#NET  qdr1_d[2]          LOC =   AN8  ;
+#NET  qdr1_d[3]          LOC =   AT6  ;
+#NET  qdr1_d[4]          LOC =   AP13 ;
+#NET  qdr1_d[5]          LOC =   AR10 ;
+#NET  qdr1_d[6]          LOC =   AK10 ;
+#NET  qdr1_d[7]          LOC =   AJ10 ;
+#NET  qdr1_d[8]          LOC =   AP11 ;
+#NET  qdr1_d[9]          LOC =   AF12 ;
+#NET  qdr1_d[10]         LOC =   AG11 ;
+#NET  qdr1_d[11]         LOC =   AH11 ;
+#NET  qdr1_d[12]         LOC =   AL10 ;
+#NET  qdr1_d[13]         LOC =   AK12 ;
+#NET  qdr1_d[14]         LOC =   AM13 ;
+#NET  qdr1_d[15]         LOC =   AR9  ;
+#NET  qdr1_d[16]         LOC =   AT7  ;
+#NET  qdr1_d[17]         LOC =   AT9  ;
+#NET  qdr1_dll_off_n     LOC =   AN11 ;
+#NET  qdr1_k[0]          LOC =   AM12 ;
+#NET  qdr1_k_n[0]        LOC =   AL12 ;
+#NET  qdr1_q[0]          LOC =   AM6  ;
+#NET  qdr1_q[1]          LOC =   AM5  ;
+#NET  qdr1_q[2]          LOC =   AM7  ;
+#NET  qdr1_q[3]          LOC =   AL7  ;
+#NET  qdr1_q[4]          LOC =   AK7  ;
+#NET  qdr1_q[5]          LOC =   AH9  ;
+#NET  qdr1_q[6]          LOC =   AG6  ;
+#NET  qdr1_q[7]          LOC =   AE10 ;
+#NET  qdr1_q[8]          LOC =   AD10 ;
+#NET  qdr1_q[9]          LOC =   AF9  ;
+#NET  qdr1_q[10]         LOC =   AH6  ;
+#NET  qdr1_q[11]         LOC =   AH5  ;
+#NET  qdr1_q[12]         LOC =   AJ8  ;
+#NET  qdr1_q[13]         LOC =   AK8  ;
+#NET  qdr1_q[14]         LOC =   AN5  ;
+#NET  qdr1_q[15]         LOC =   AP5  ;
+#NET  qdr1_q[16]         LOC =   AP6  ;
+#NET  qdr1_q[17]         LOC =   AK9  ;
+#NET  qdr1_r_n           LOC =   AE8  ;
+#NET  qdr1_w_n           LOC =   AF7  ;
+#
+#################################################################################
+## SRAM2
+#################################################################################
+#
+#################################################################################
+## Clock constraints
+#################################################################################
+#
+## These constraints should not be needed because there is a constraint on 
+## the original source clock that should propagte through the PLLs/DCMs.
+#
+## No timing constarints req for qdr2_cq<0>.  Only used in IOBs.
+#
+#################################################################################
+## I/O STANDARDS
+#################################################################################
+#
+#NET  "qdr2_d[*]"                                 IOSTANDARD = HSTL_I_18;
+#NET  "qdr2_q[*]"                                 IOSTANDARD = HSTL_I_DCI_18;
+#NET  "qdr2_sa[*]"                                IOSTANDARD = HSTL_I_18;
+#NET  "qdr2_w_n"                                  IOSTANDARD = HSTL_I_18;
+#NET  "qdr2_r_n"                                  IOSTANDARD = HSTL_I_18;
+#NET  "qdr2_dll_off_n"                            IOSTANDARD = HSTL_I_18;
+#NET  "qdr2_bw_n[*]"                              IOSTANDARD = HSTL_I_18;
+#NET  "qdr2_cq[*]"                                IOSTANDARD = HSTL_I_DCI_18;
+#NET  "qdr2_cq_n[*]"                              IOSTANDARD = HSTL_I_DCI_18;
+#NET  "qdr2_k[*]"                                 IOSTANDARD = HSTL_I_18;
+#NET  "qdr2_k_n[*]"                               IOSTANDARD = HSTL_I_18;
+#NET  "qdr2_c[*]"                                 IOSTANDARD = HSTL_I_18;
+#NET  "qdr2_c_n[*]"                               IOSTANDARD = HSTL_I_18;
+#
+#################################################################################
+##SAVE attributes to reserve the pins
+#################################################################################
+#
+#NET  qdr2_cq_n[*]       S;
+#
+#################################################################################
+## I/O Definitions
+################################################################################
+#
+#NET  qdr2_sa[0]        LOC =   G6   ;
+#NET  qdr2_sa[1]        LOC =   G8   ;
+#NET  qdr2_sa[2]        LOC =   E8   ;
+#NET  qdr2_sa[3]        LOC =   K7   ;
+#NET  qdr2_sa[4]        LOC =   M7   ;
+#NET  qdr2_sa[5]        LOC =   N9   ;
+#NET  qdr2_sa[6]        LOC =   M6   ;
+#NET  qdr2_sa[7]        LOC =   P7   ;
+#NET  qdr2_sa[8]        LOC =   Y7   ;
+#NET  qdr2_sa[9]        LOC =   W7   ;
+#NET  qdr2_sa[10]        LOC =   V8   ;
+#NET  qdr2_sa[11]        LOC =   AA6  ;
+#NET  qdr2_sa[12]        LOC =   Y8   ;
+#NET  qdr2_sa[13]        LOC =   AC9  ;
+#NET  qdr2_sa[14]        LOC =   AD11 ;
+#NET  qdr2_sa[15]        LOC =   AB6  ;
+#NET  qdr2_sa[16]        LOC =   AB7  ;
+#NET  qdr2_sa[17]        LOC =   AB11 ;
+#NET  qdr2_sa[18]        LOC =   AA9  ;
+#NET  qdr2_sa[19]        LOC =   AC10 ;
+#NET  qdr2_sa[20]        LOC =   AB8  ;
+#NET  qdr2_bw_n[0]      LOC =   M8   ;
+#NET  qdr2_bw_n[1]      LOC =   N8   ;
+#NET  qdr2_c[0]        LOC =   AA11 ;
+#NET  qdr2_c_n[0]        LOC =   AA10 ;
+#NET  qdr2_cq[0]        LOC =   J8   ;
+#NET  qdr2_cq_n[0]        LOC =   H8   ;
+#NET  qdr2_d[0]        LOC =   AC6  ;
+#NET  qdr2_d[1]        LOC =   W6   ;
+#NET  qdr2_d[2]        LOC =   U7   ;
+#NET  qdr2_d[3]        LOC =   AC11 ;
+#NET  qdr2_d[4]        LOC =   T6   ;
+#NET  qdr2_d[5]        LOC =   R5   ;
+#NET  qdr2_d[6]        LOC =   P5   ;
+#NET  qdr2_d[7]        LOC =   P6   ;
+#NET  qdr2_d[8]        LOC =   N6   ;
+#NET  qdr2_d[9]        LOC =   J6   ;
+#NET  qdr2_d[10]        LOC =   K8   ;
+#NET  qdr2_d[11]        LOC =   L7   ;
+#NET  qdr2_d[12]        LOC =   R7   ;
+#NET  qdr2_d[13]        LOC =   T7   ;
+#NET  qdr2_d[14]        LOC =   V6   ;
+#NET  qdr2_d[15]        LOC =   W11  ;
+#NET  qdr2_d[16]        LOC =   W8   ;
+#NET  qdr2_d[17]        LOC =   Y9   ;
+#NET  qdr2_dll_off_n      LOC =   T5   ;
+#NET  qdr2_k[0]        LOC =   P10  ;
+#NET  qdr2_k_n[0]        LOC =   R10  ;
+#NET  qdr2_q[0]        LOC =   U12  ;
+#NET  qdr2_q[1]        LOC =   T10  ;
+#NET  qdr2_q[2]        LOC =   U9   ;
+#NET  qdr2_q[3]        LOC =   U8   ;
+#NET  qdr2_q[4]        LOC =   T11  ;
+#NET  qdr2_q[5]        LOC =   R9   ;
+#NET  qdr2_q[6]        LOC =   G7   ;
+#NET  qdr2_q[7]        LOC =   F6   ;
+#NET  qdr2_q[8]        LOC =   E7   ;
+#NET  qdr2_q[9]        LOC =   H6   ;
+#NET  qdr2_q[10]        LOC =   L6   ;
+#NET  qdr2_q[11]        LOC =   M9   ;
+#NET  qdr2_q[12]        LOC =   P8   ;
+#NET  qdr2_q[13]        LOC =   T9   ;
+#NET  qdr2_q[14]        LOC =   U11  ;
+#NET  qdr2_q[15]        LOC =   V10  ;
+#NET  qdr2_q[16]        LOC =   V11  ;
+#NET  qdr2_q[17]        LOC =   R8   ;
+#NET  qdr2_r_n      LOC =   J7   ;
+#NET  qdr2_w_n       LOC =   H5   ;

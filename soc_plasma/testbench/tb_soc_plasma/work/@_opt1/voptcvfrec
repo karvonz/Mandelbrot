@@ -1,0 +1,2342 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/cleroux/work/enseignement/ELEC/EN212/plasma/ASIP/testbench/tb_asip
+T_opt
+VF57k_XGGS4dEnTTTD?R]_2
+Z1 04 6 5 work tbench logic 1
+=1-000000000000-54d22e8c-ce370-d02
+Z2 o-quiet -auto_acc_if_foreign -work work
+n@_opt
+Z3 OE;O;10.1b_1;51
+Z4 d/home/cleroux/work/enseignement/ELEC/EN212/plasma/ASIP/testbench/tb_asip
+T_opt1
+VVUS_DOD9zFI=i4Nz4;_AR0
+R1
+=1-000000000000-54d39907-179f-200b
+R2
+n@_opt1
+R3
+Ealu
+Z5 w1373807898
+Z6 DPx4 work 10 mlite_pack 0 22 0eMXbTjO4ChVE1L_?okz83
+Z7 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z8 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z9 d/net/ens/cleroux/test_TP_semestre2/plasma/soc_plasma/testbench/tb_soc_plasma
+Z10 8../../vhdl/plasma_core/vhdl/alu.vhd
+Z11 F../../vhdl/plasma_core/vhdl/alu.vhd
+l0
+L16
+V:B=nLOcH`^Q@RDSedEC6P1
+Z12 OE;C;10.1b_1;51
+31
+Z13 !s108 1423153374.655177
+Z14 !s90 -quiet|-93|-work|work|../../vhdl/plasma_core/vhdl/cam/cam_pkg.vhd|../../vhdl/plasma_core/vhdl/ims/conversion.vhd|../../vhdl/plasma_core/vhdl/ims/txt_util.vhd|../../vhdl/plasma_core/vhdl/mlite_pack.vhd|../../vhdl/plasma_core/vhdl/plasma_3e.vhd|../../vhdl/plasma_core/vhdl/ddr_ctrl.vhd|../../vhdl/plasma_core/vhdl/memory_64k.vhd|../../vhdl/plasma_core/vhdl/simulation/txt_util.vhd|../../vhdl/plasma_core/vhdl/ram_boot_for_simu.vhd|../../vhdl/plasma_core/vhdl/simulation/pcie_in.vhd|../../vhdl/plasma_core/vhdl/simulation/pcie_out.vhd|../../vhdl/plasma_core/vhdl/simulation/pcie_cmp.vhd|../../vhdl/plasma_core/vhdl/uart.vhd|../../vhdl/plasma_core/vhdl/eth_dma.vhd|../../vhdl/plasma_core/vhdl/mlite_cpu.vhd|../../vhdl/plasma_core/vhdl/alu.vhd|../../vhdl/plasma_core/vhdl/bus_mux.vhd|../../vhdl/plasma_core/vhdl/control.vhd|../../vhdl/plasma_core/vhdl/disassembler.vhd|../../vhdl/plasma_core/vhdl/mem_ctrl.vhd|../../vhdl/plasma_core/vhdl/mult.vhd|../../vhdl/plasma_core/vhdl/pipeline.vhd|../../vhdl/plasma_core/vhdl/pc_next.vhd|../../vhdl/plasma_core/vhdl/reg_bank.vhd|../../vhdl/plasma_core/vhdl/shifter.vhd|../../vhdl/plasma_core/vhdl/dma_engine.vhd|../../vhdl/plasma_core/vhdl/ims/conversion.vhd|../../vhdl/plasma_core/vhdl/ims/function_1.vhd|../../vhdl/plasma_core/vhdl/ims/function_2.vhd|../../vhdl/plasma_core/vhdl/ims/function_3.vhd|../../vhdl/plasma_core/vhdl/ims/function_4.vhd|../../vhdl/plasma_core/vhdl/ims/function_5.vhd|../../vhdl/plasma_core/vhdl/ims/function_6.vhd|../../vhdl/plasma_core/vhdl/ims/function_7.vhd|../../vhdl/plasma_core/vhdl/ims/function_8.vhd|../../vhdl/plasma_core/vhdl/ims/function_9.vhd|../../vhdl/plasma_core/vhdl/ims/function_10.vhd|../../vhdl/plasma_core/vhdl/ims/function_11.vhd|../../vhdl/plasma_core/vhdl/ims/function_12.vhd|../../vhdl/plasma_core/vhdl/ims/function_13.vhd|../../vhdl/plasma_core/vhdl/ims/function_14.vhd|../../vhdl/plasma_core/vhdl/ims/function_15.vhd|../../vhdl/plasma_core/vhdl/ims/function_16.vhd|../../vhdl/plasma_core/vhdl/ims/function_17.vhd|../../vhdl/plasma_core/vhdl/ims/function_18.vhd|../../vhdl/plasma_core/vhdl/ims/function_19.vhd|../../vhdl/plasma_core/vhdl/ims/coproc_1.vhd|../../vhdl/plasma_core/vhdl/ims/coproc_2.vhd|../../vhdl/plasma_core/vhdl/ims/coproc_3.vhd|../../vhdl/plasma_core/vhdl/ims/coproc_4.vhd|../../vhdl/plasma_core/vhdl/ims/sequ_alu_1.vhd|../../vhdl/plasma_core/vhdl/cache.vhd|../../vhdl/plasma_core/vhdl/ims/comb_alu_1.vhd|../../vhdl/plasma_core/vhdl/plasma.vhd|
+Z15 !s107 ../../vhdl/plasma_core/vhdl/plasma.vhd|../../vhdl/plasma_core/vhdl/ims/comb_alu_1.vhd|../../vhdl/plasma_core/vhdl/cache.vhd|../../vhdl/plasma_core/vhdl/ims/sequ_alu_1.vhd|../../vhdl/plasma_core/vhdl/ims/coproc_4.vhd|../../vhdl/plasma_core/vhdl/ims/coproc_3.vhd|../../vhdl/plasma_core/vhdl/ims/coproc_2.vhd|../../vhdl/plasma_core/vhdl/ims/coproc_1.vhd|../../vhdl/plasma_core/vhdl/ims/function_19.vhd|../../vhdl/plasma_core/vhdl/ims/function_18.vhd|../../vhdl/plasma_core/vhdl/ims/function_17.vhd|../../vhdl/plasma_core/vhdl/ims/function_16.vhd|../../vhdl/plasma_core/vhdl/ims/function_15.vhd|../../vhdl/plasma_core/vhdl/ims/function_14.vhd|../../vhdl/plasma_core/vhdl/ims/function_13.vhd|../../vhdl/plasma_core/vhdl/ims/function_12.vhd|../../vhdl/plasma_core/vhdl/ims/function_11.vhd|../../vhdl/plasma_core/vhdl/ims/function_10.vhd|../../vhdl/plasma_core/vhdl/ims/function_9.vhd|../../vhdl/plasma_core/vhdl/ims/function_8.vhd|../../vhdl/plasma_core/vhdl/ims/function_7.vhd|../../vhdl/plasma_core/vhdl/ims/function_6.vhd|../../vhdl/plasma_core/vhdl/ims/function_5.vhd|../../vhdl/plasma_core/vhdl/ims/function_4.vhd|../../vhdl/plasma_core/vhdl/ims/function_3.vhd|../../vhdl/plasma_core/vhdl/ims/function_2.vhd|../../vhdl/plasma_core/vhdl/ims/function_1.vhd|../../vhdl/plasma_core/vhdl/dma_engine.vhd|../../vhdl/plasma_core/vhdl/shifter.vhd|../../vhdl/plasma_core/vhdl/reg_bank.vhd|../../vhdl/plasma_core/vhdl/pc_next.vhd|../../vhdl/plasma_core/vhdl/pipeline.vhd|../../vhdl/plasma_core/vhdl/mult.vhd|../../vhdl/plasma_core/vhdl/mem_ctrl.vhd|../../vhdl/plasma_core/vhdl/disassembler.vhd|../../vhdl/plasma_core/vhdl/control.vhd|../../vhdl/plasma_core/vhdl/bus_mux.vhd|../../vhdl/plasma_core/vhdl/alu.vhd|../../vhdl/plasma_core/vhdl/mlite_cpu.vhd|../../vhdl/plasma_core/vhdl/eth_dma.vhd|../../vhdl/plasma_core/vhdl/uart.vhd|../../vhdl/plasma_core/vhdl/simulation/pcie_cmp.vhd|../../vhdl/plasma_core/vhdl/simulation/pcie_out.vhd|../../vhdl/plasma_core/vhdl/simulation/pcie_in.vhd|../../vhdl/plasma_core/vhdl/ram_boot_for_simu.vhd|../../vhdl/plasma_core/vhdl/simulation/txt_util.vhd|../../vhdl/plasma_core/vhdl/memory_64k.vhd|../../vhdl/plasma_core/vhdl/ddr_ctrl.vhd|../../vhdl/plasma_core/vhdl/plasma_3e.vhd|../../vhdl/plasma_core/vhdl/mlite_pack.vhd|../../vhdl/plasma_core/vhdl/ims/txt_util.vhd|../../vhdl/plasma_core/vhdl/ims/conversion.vhd|../../vhdl/plasma_core/vhdl/cam/cam_pkg.vhd|
+Z16 o-quiet -93 -work work
+Z17 tExplicit 1
+!s100 WdhaWzdZ5C:Pe2_n]2bfe2
+!i10b 1
+Alogic
+R6
+R7
+R8
+DEx4 work 3 alu 0 22 :B=nLOcH`^Q@RDSedEC6P1
+l28
+L24
+V;XlFXb::Eoh?[1nHRdo3e3
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 dU52m@:>a2l2[?KkeMl<P2
+!i10b 1
+Pasip_config
+Z18 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R7
+R8
+R5
+R4
+Z19 8/home/cleroux/work/enseignement/ELEC/EN212/plasma/ASIP/vhdl/plasma_core/vhdl/ims/asip_config.vhd
+Z20 F/home/cleroux/work/enseignement/ELEC/EN212/plasma/ASIP/vhdl/plasma_core/vhdl/ims/asip_config.vhd
+l0
+L6
+VWo9ZK@5dkJ_dSV:Q=i:W30
+Z21 OV;C;10.1d;51
+32
+Z22 !s108 1420623613.171158
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|/home/cleroux/work/enseignement/ELEC/EN212/plasma/ASIP/vhdl/plasma_core/vhdl/ims/asip_config.vhd|
+Z24 !s107 /home/cleroux/work/enseignement/ELEC/EN212/plasma/ASIP/vhdl/plasma_core/vhdl/ims/asip_config.vhd|
+Z25 o-work work -2002 -explicit -O0
+R17
+!s100 nmK4BSRm9J:mXBgMiz:0@3
+!i10b 1
+Bbody
+DPx4 work 11 asip_config 0 22 Wo9ZK@5dkJ_dSV:Q=i:W30
+R18
+R7
+R8
+l0
+L127
+VC4SJX:L<oeA1A9XR7]Ymg2
+R21
+32
+R22
+R23
+R24
+R25
+R17
+nbody
+!s100 ;bGN[dU6iaDPnM<eRWo2_0
+!i10b 1
+Ebus_mux
+R5
+R6
+R7
+R8
+R9
+Z26 8../../vhdl/plasma_core/vhdl/bus_mux.vhd
+Z27 F../../vhdl/plasma_core/vhdl/bus_mux.vhd
+l0
+L22
+VKM3Y4dSBA4;@8CG>jU2S[3
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 3nT?8MZn<:Tc^2RMILj1I1
+!i10b 1
+Alogic
+R6
+R7
+R8
+DEx4 work 7 bus_mux 0 22 KM3Y4dSBA4;@8CG>jU2S[3
+l75
+L43
+V<B[WOaedYZ6T@3C96fD;43
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 eW2^GIeXVH]26DYCel=8>1
+!i10b 1
+Ecache
+R5
+R6
+Z28 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z29 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+R7
+R8
+R9
+Z30 8../../vhdl/plasma_core/vhdl/cache.vhd
+Z31 F../../vhdl/plasma_core/vhdl/cache.vhd
+l0
+L19
+VbXS1=GVhUBMMAn`PLC_jZ3
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 z24CMP2I>B5hTkTP7Hf<L3
+!i10b 1
+Alogic
+R6
+R28
+R29
+R7
+R8
+DEx4 work 5 cache 0 22 bXS1=GVhUBMMAn`PLC_jZ3
+l49
+L33
+V1JC:bFneSE`<Yg7OGOnV:2
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 i>IaXl_l;J<@gR1Gkb7AV2
+!i10b 1
+Pcam_pkg
+R18
+R7
+R8
+Z32 w1421058516
+R9
+Z33 8../../vhdl/plasma_core/vhdl/cam/cam_pkg.vhd
+Z34 F../../vhdl/plasma_core/vhdl/cam/cam_pkg.vhd
+l0
+L5
+VTQCW3UBF8n_LdO^nA?;`h2
+R12
+31
+b1
+R13
+R14
+R15
+R16
+R17
+!s100 GL<k=PT1glW?jJHdhV]K:0
+!i10b 1
+Bbody
+Z35 DPx4 work 7 cam_pkg 0 22 TQCW3UBF8n_LdO^nA?;`h2
+R18
+R7
+R8
+l0
+L14
+V@REBo6mOk>DhUAi>WWeBV1
+R12
+31
+R13
+R14
+R15
+R16
+R17
+nbody
+!s100 o^5ieUF@FNKoo00cI2=bm0
+!i10b 1
+Ecomb_alu_1
+Z36 w1379880770
+R6
+R18
+R7
+R8
+R9
+Z37 8../../vhdl/plasma_core/vhdl/ims/comb_alu_1.vhd
+Z38 F../../vhdl/plasma_core/vhdl/ims/comb_alu_1.vhd
+l0
+L17
+Ve?=B0[QJ>1>1>UTMjlQo]0
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 _K9?63iPe0EA5fBREcLB_2
+!i10b 1
+Alogic
+Z39 DEx4 work 11 function_19 0 22 77jf2GfR6P04GGSmHenj32
+Z40 DEx4 work 11 function_18 0 22 7k[4>LVK7`Z:biAz3iMoI1
+Z41 DEx4 work 11 function_17 0 22 Dooim_ccMMZa=RDFjMd7;2
+Z42 DEx4 work 11 function_16 0 22 >gmL3E=HHLBl5BSPN=cJ<0
+Z43 DEx4 work 11 function_15 0 22 J`ff^KkP4ooghO8XLjDMS2
+Z44 DEx4 work 11 function_14 0 22 D16zV0ZWZ@ek4hGFfWe^_2
+Z45 DEx4 work 11 function_13 0 22 zzkIf9Rjg0NEP1j?L9eFg1
+Z46 DEx4 work 11 function_12 0 22 6jN=kD=lmE]n^7dR;z@Ck3
+Z47 DEx4 work 11 function_11 0 22 kmV;Y?4cajoA[Z`mUJR^J0
+Z48 DEx4 work 11 function_10 0 22 l<2zGJ?G4J@n_F1MBLl<A0
+Z49 DEx4 work 10 function_9 0 22 LINA]aK3960ZU2jT]Sc6g0
+Z50 DEx4 work 10 function_8 0 22 jo;Q:1fB7L;W1T4[kjlj>2
+Z51 DEx4 work 10 function_7 0 22 f:il0Fe8ZFM@eh^UKOC630
+Z52 DEx4 work 10 function_6 0 22 c4K1ih9z;X2C[d:`2`7aS1
+R35
+Z53 DEx4 work 10 function_5 0 22 [?iLinR5QM0G[V3U<^Rdb1
+Z54 DEx4 work 10 function_4 0 22 O;98^BeD]iUIDaX[D8RLi2
+Z55 DEx4 work 10 function_3 0 22 BV<amXP_Wf6fL3]QdCj2I0
+Z56 DEx4 work 10 function_2 0 22 ?NEC:i5I7m=UTb^VA5IOK0
+Z57 DEx4 work 10 function_1 0 22 YFi>`n;dgZJCfR=^4mYZH3
+R6
+R18
+R7
+R8
+DEx4 work 10 comb_alu_1 0 22 e?=B0[QJ>1>1>UTMjlQo]0
+l55
+L28
+VMHc?R5ceVhIjK5nV`ODm41
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 gKJ7lb`^5Za^P@hUVO5:H0
+!i10b 1
+Econtrol
+Z58 w1380138814
+Z59 DPx4 ieee 16 std_logic_textio 0 22 ?Il0a149GV276[?[UMDWh2
+R6
+R18
+R7
+R8
+R9
+Z60 8../../vhdl/plasma_core/vhdl/control.vhd
+Z61 F../../vhdl/plasma_core/vhdl/control.vhd
+l0
+L30
+Vah2d47FXHHMA[Kdb:jK]O0
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 kABUU4VnnU:;:nfiY@DX[1
+!i10b 1
+Alogic
+R59
+R6
+R18
+R7
+R8
+DEx4 work 7 control 0 22 ah2d47FXHHMA[Kdb:jK]O0
+l56
+L52
+Vj1DI:efGRQdoJFF9>4VNI3
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 ^:`Sd;:zR@VaXdG[GCRg[0
+!i10b 1
+Pconversion
+R18
+R7
+R8
+Z62 w1382010081
+R9
+Z63 8../../vhdl/plasma_core/vhdl/ims/conversion.vhd
+Z64 F../../vhdl/plasma_core/vhdl/ims/conversion.vhd
+l0
+L66
+VjlZMkzR?=T[;cdL__6YZ@0
+R12
+31
+b1
+R13
+R14
+R15
+R16
+R17
+!s100 zUg^P4KS55]RmiM_?@_@O2
+!i10b 1
+Bbody
+Z65 DPx4 work 10 conversion 0 22 jlZMkzR?=T[;cdL__6YZ@0
+R18
+R7
+R8
+l0
+L344
+Vc@iO>e2A6eK6j@2Km:`^;2
+R12
+31
+R13
+R14
+R15
+R16
+R17
+nbody
+!s100 ]Q9;<TPVL:Ll]_aI]U=EA0
+!i10b 1
+Ecoproc_1
+Z66 w1420807201
+R6
+R18
+R7
+R8
+R9
+Z67 8../../vhdl/plasma_core/vhdl/ims/coproc_1.vhd
+Z68 F../../vhdl/plasma_core/vhdl/ims/coproc_1.vhd
+l0
+L17
+V;Xi[l3S2X4ON:;IU@AV=h1
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 Cc@h@GA2fzXb[?F?_mHI_1
+!i10b 1
+Alogic
+R6
+R18
+R7
+R8
+Z69 DEx4 work 8 coproc_1 0 22 ;Xi[l3S2X4ON:;IU@AV=h1
+l32
+L27
+VHa>MF2L0`7Dbkcgi93Rf63
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 bhOdWQ?Ch_?P;R7A:aOi43
+!i10b 1
+Ecoproc_2
+Z70 w1421074600
+R35
+R6
+R18
+R7
+R8
+R9
+Z71 8../../vhdl/plasma_core/vhdl/ims/coproc_2.vhd
+Z72 F../../vhdl/plasma_core/vhdl/ims/coproc_2.vhd
+l0
+L18
+Vkhmn9=Y>k0bl0HoWETI_90
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 =fEU:aR8@Wcg[nZcM1JHK1
+!i10b 1
+Alogic
+R35
+R6
+R18
+R7
+R8
+Z73 DEx4 work 8 coproc_2 0 22 khmn9=Y>k0bl0HoWETI_90
+l36
+L28
+VEA5J5hgTFV_a`3PB0Qch33
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 Cb?Y1`iP]7MNaiU;;VmjS2
+!i10b 1
+Ecoproc_3
+Z74 w1380378586
+R6
+R18
+R7
+R8
+R9
+Z75 8../../vhdl/plasma_core/vhdl/ims/coproc_3.vhd
+Z76 F../../vhdl/plasma_core/vhdl/ims/coproc_3.vhd
+l0
+L17
+VB7bNV0fPf;hV[<G`HgaE41
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 WIfh@c3U66CkO`f^OL]N<1
+!i10b 1
+Alogic
+R6
+R18
+R7
+R8
+Z77 DEx4 work 8 coproc_3 0 22 B7bNV0fPf;hV[<G`HgaE41
+l29
+L27
+VE0OYo@oJBDCGef]<13;H10
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 S10=Tlghjd:ZmhjIjHmae2
+!i10b 1
+Ecoproc_4
+R74
+R6
+R18
+R7
+R8
+R9
+Z78 8../../vhdl/plasma_core/vhdl/ims/coproc_4.vhd
+Z79 F../../vhdl/plasma_core/vhdl/ims/coproc_4.vhd
+l0
+L17
+VjlJ]do0eP?nE_gLI=RR@i3
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 =gAb=hXo=B9SMQ>^kI9Zh3
+!i10b 1
+Alogic
+R6
+R18
+R7
+R8
+Z80 DEx4 work 8 coproc_4 0 22 jlJ]do0eP?nE_gLI=RR@i3
+l29
+L27
+V=H3]KEFS?PX[WE:_eIYVN0
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 ]ece<mIi[Ch[KfTcW7WhI2
+!i10b 1
+Pcoprocessor
+R18
+R7
+R8
+R5
+R4
+Z81 8/home/cleroux/work/enseignement/ELEC/EN212/plasma/ASIP/vhdl/plasma_core/vhdl/ims/coprocessor.vhd
+Z82 F/home/cleroux/work/enseignement/ELEC/EN212/plasma/ASIP/vhdl/plasma_core/vhdl/ims/coprocessor.vhd
+l0
+L31
+VkE1ZQW2DE`g9Rd6efIMTi1
+R21
+32
+b1
+Z83 !s108 1420623613.450279
+Z84 !s90 -reportprogress|300|-work|work|-2002|-explicit|/home/cleroux/work/enseignement/ELEC/EN212/plasma/ASIP/vhdl/plasma_core/vhdl/ims/coprocessor.vhd|
+Z85 !s107 /home/cleroux/work/enseignement/ELEC/EN212/plasma/ASIP/vhdl/plasma_core/vhdl/ims/coprocessor.vhd|
+R25
+R17
+!s100 N21z`e76CZGHdSQ3HF?BG3
+!i10b 1
+Bbody
+DPx4 work 11 coprocessor 0 22 kE1ZQW2DE`g9Rd6efIMTi1
+R18
+R7
+R8
+l0
+L220
+VUKz>;fCkeon<A9h_13:Se0
+R21
+32
+R83
+R84
+R85
+R25
+R17
+nbody
+!s100 RdbTFVkOCiHEiVo56RhhB2
+!i10b 1
+Ecustom_fifo
+R5
+R18
+R7
+R8
+R4
+Z86 8/home/cleroux/work/enseignement/ELEC/EN212/plasma/ASIP/vhdl/plasma_core/vhdl/ims/CUSTOM_FIFO.vhd
+Z87 F/home/cleroux/work/enseignement/ELEC/EN212/plasma/ASIP/vhdl/plasma_core/vhdl/ims/CUSTOM_FIFO.vhd
+l0
+L5
+Vc_=d@MT878A7oR[fz4l2I0
+R21
+32
+Z88 !s108 1420623613.487140
+Z89 !s90 -reportprogress|300|-work|work|-2002|-explicit|/home/cleroux/work/enseignement/ELEC/EN212/plasma/ASIP/vhdl/plasma_core/vhdl/ims/CUSTOM_FIFO.vhd|
+Z90 !s107 /home/cleroux/work/enseignement/ELEC/EN212/plasma/ASIP/vhdl/plasma_core/vhdl/ims/CUSTOM_FIFO.vhd|
+R25
+R17
+!s100 3hAKM0n8h]W[ZKXTN>zUh1
+!i10b 1
+Aarch_custom_fifo
+R18
+R7
+R8
+DEx4 work 11 custom_fifo 0 22 c_=d@MT878A7oR[fz4l2I0
+l47
+L29
+V3IfkTlCQIhl5E8ngP^CQ:1
+R21
+32
+R88
+R89
+R90
+R25
+R17
+!s100 [[Y28oSbgk[:8cn?IkfCb1
+!i10b 1
+Eddr_ctrl
+R5
+R6
+R28
+R29
+R7
+R8
+R9
+Z91 8../../vhdl/plasma_core/vhdl/ddr_ctrl.vhd
+Z92 F../../vhdl/plasma_core/vhdl/ddr_ctrl.vhd
+l0
+L57
+VfITF;TaiJBz7<8MUn@WWL3
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 Xz:<FKYZleO?[`T6LM^BD0
+!i10b 1
+Alogic
+R6
+R28
+R29
+R7
+R8
+DEx4 work 8 ddr_ctrl 0 22 fITF;TaiJBz7<8MUn@WWL3
+l127
+L90
+V;G_bmo6WLhkKWUFZC7d=G1
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 T8G4I9>`eGmDZMZdInB[L2
+!i10b 1
+Edisassembler
+R5
+R59
+R6
+R18
+R7
+R8
+R9
+Z93 8../../vhdl/plasma_core/vhdl/disassembler.vhd
+Z94 F../../vhdl/plasma_core/vhdl/disassembler.vhd
+l0
+L30
+V0h7;5SjH?JcO<:meRk0QB3
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 _4ZRfeSC0752VO1^ob=X`3
+!i10b 1
+Alogic
+R59
+R6
+R18
+R7
+R8
+DEx4 work 12 disassembler 0 22 0h7;5SjH?JcO<:meRk0QB3
+l470
+L40
+Vz7ofjFdb:n7bkRJ]CO?9E1
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 E[L4]bKM=WWA]4S2OdYbA1
+!i10b 1
+Edma_engine
+Z95 w1381145410
+R65
+R6
+R18
+R7
+R8
+R9
+Z96 8../../vhdl/plasma_core/vhdl/dma_engine.vhd
+Z97 F../../vhdl/plasma_core/vhdl/dma_engine.vhd
+l0
+L22
+V67Cn5dncne23i3oFDGWR;0
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 >FX9I3fU6?If>8F1PHm@g1
+!i10b 1
+Alogic
+R65
+R6
+R18
+R7
+R8
+Z98 DEx4 work 10 dma_engine 0 22 67Cn5dncne23i3oFDGWR;0
+l64
+L45
+VPzDg4cS9dD@HkD=Df87922
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 VWZW44UmkLCozk<HVYfmd3
+!i10b 1
+Eeth_dma
+Z99 w1379935290
+R6
+R28
+R29
+R7
+R8
+R9
+Z100 8../../vhdl/plasma_core/vhdl/eth_dma.vhd
+Z101 F../../vhdl/plasma_core/vhdl/eth_dma.vhd
+l0
+L22
+VA?]3VUh:hHLYC:BPfR3723
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 GzFmhb33=?[SgZZ`]ESP32
+!i10b 1
+Alogic
+R6
+R28
+R29
+R7
+R8
+DEx4 work 7 eth_dma 0 22 A?]3VUh:hHLYC:BPfR3723
+l67
+L49
+V?Sz_iQV:z4Qcf5mE<WoO11
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 D^:JmQJ?7NGLN7EKQ[g;B3
+!i10b 1
+Efunction_1
+Z102 w1421080754
+R6
+R18
+R7
+R8
+R9
+Z103 8../../vhdl/plasma_core/vhdl/ims/function_1.vhd
+Z104 F../../vhdl/plasma_core/vhdl/ims/function_1.vhd
+l0
+L17
+VYFi>`n;dgZJCfR=^4mYZH3
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 X`K9a[b[I2`GFz3oPOdO;3
+!i10b 1
+Alogic
+R6
+R18
+R7
+R8
+R57
+l26
+L25
+VVa[<4mIQTW5_3:JUJNH=33
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 [7;1`^>WG`]Yel[f4eZ?O1
+!i10b 1
+Efunction_10
+Z105 w1379879472
+R6
+R18
+R7
+R8
+R9
+Z106 8../../vhdl/plasma_core/vhdl/ims/function_10.vhd
+Z107 F../../vhdl/plasma_core/vhdl/ims/function_10.vhd
+l0
+L17
+Vl<2zGJ?G4J@n_F1MBLl<A0
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 P_dZCg1lhZzX:CZ@X<?z_0
+!i10b 1
+Alogic
+R6
+R18
+R7
+R8
+R48
+l26
+L25
+VDhf_zf=abdG<Oeb2lmIn11
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 Dj89NT<QC<?0c8Se<^2ND1
+!i10b 1
+Efunction_11
+Z108 w1379879450
+R6
+R18
+R7
+R8
+R9
+Z109 8../../vhdl/plasma_core/vhdl/ims/function_11.vhd
+Z110 F../../vhdl/plasma_core/vhdl/ims/function_11.vhd
+l0
+L17
+VkmV;Y?4cajoA[Z`mUJR^J0
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 1V2IMGz[SAGioPd9DPUCd0
+!i10b 1
+Alogic
+R6
+R18
+R7
+R8
+R47
+l26
+L25
+V^;8Hc<6CX^ae[]]2>[F_j3
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 mmTi6dF96KIdEmnzF42eA2
+!i10b 1
+Efunction_12
+Z111 w1379879438
+R6
+R18
+R7
+R8
+R9
+Z112 8../../vhdl/plasma_core/vhdl/ims/function_12.vhd
+Z113 F../../vhdl/plasma_core/vhdl/ims/function_12.vhd
+l0
+L17
+V6jN=kD=lmE]n^7dR;z@Ck3
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 zRedW<3LXTE]7`WYc_QmW0
+!i10b 1
+Alogic
+R6
+R18
+R7
+R8
+R46
+l26
+L25
+V0@jU<]H`lC>=9F1fgd08E2
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 c67cGm;J@F_Y:?jPh_imZ0
+!i10b 1
+Efunction_13
+Z114 w1379879422
+R6
+R18
+R7
+R8
+R9
+Z115 8../../vhdl/plasma_core/vhdl/ims/function_13.vhd
+Z116 F../../vhdl/plasma_core/vhdl/ims/function_13.vhd
+l0
+L17
+VzzkIf9Rjg0NEP1j?L9eFg1
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 lE;LDI6<3M>J8b:X06KF`2
+!i10b 1
+Alogic
+R6
+R18
+R7
+R8
+R45
+l26
+L25
+V>6dlk@=ORU]Y;FWnAUP7`1
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 oQ]cY>>7MBl87j5blXMZT0
+!i10b 1
+Efunction_14
+Z117 w1379879394
+R6
+R18
+R7
+R8
+R9
+Z118 8../../vhdl/plasma_core/vhdl/ims/function_14.vhd
+Z119 F../../vhdl/plasma_core/vhdl/ims/function_14.vhd
+l0
+L17
+VD16zV0ZWZ@ek4hGFfWe^_2
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 P`9zaaI]EB?W=]dB@Y8iL2
+!i10b 1
+Alogic
+R6
+R18
+R7
+R8
+R44
+l26
+L25
+Vc8L5aGCJHim^[dm@P1PNi0
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 L:^>lfU8X7PMUzdQQ_38f3
+!i10b 1
+Efunction_15
+Z120 w1382008932
+R6
+R18
+R7
+R8
+R9
+Z121 8../../vhdl/plasma_core/vhdl/ims/function_15.vhd
+Z122 F../../vhdl/plasma_core/vhdl/ims/function_15.vhd
+l0
+L17
+VJ`ff^KkP4ooghO8XLjDMS2
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 jQJT=l@<46PHel2;aebV`1
+!i10b 1
+Alogic
+R6
+R18
+R7
+R8
+R43
+l26
+L25
+V;eHR[7XH1g9EI]H5FP@CN2
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 DXi9n0DkhUX>iNG>IX1=Y0
+!i10b 1
+Efunction_16
+Z123 w1381145700
+R6
+R18
+R7
+R8
+R9
+Z124 8../../vhdl/plasma_core/vhdl/ims/function_16.vhd
+Z125 F../../vhdl/plasma_core/vhdl/ims/function_16.vhd
+l0
+L17
+V>gmL3E=HHLBl5BSPN=cJ<0
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 5[00]ZJB<]o=1@6fV3N@f2
+!i10b 1
+Alogic
+R6
+R18
+R7
+R8
+R42
+l26
+L25
+VRe`b<lS0:fTYVRXebY=3f2
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 S7f]P<CRad9f^nQNn_0UL2
+!i10b 1
+Efunction_17
+Z126 w1381145254
+R6
+R18
+R7
+R8
+R9
+Z127 8../../vhdl/plasma_core/vhdl/ims/function_17.vhd
+Z128 F../../vhdl/plasma_core/vhdl/ims/function_17.vhd
+l0
+L17
+VDooim_ccMMZa=RDFjMd7;2
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 2iofGOi`eoBzB3lfOZ0;=0
+!i10b 1
+Alogic
+R6
+R18
+R7
+R8
+R41
+l26
+L25
+VVInj_XR^QoOD0=T;21_2i2
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 Q;EIan>5QfGFDRnM9W[1b1
+!i10b 1
+Efunction_18
+Z129 w1381145520
+R6
+R18
+R7
+R8
+R9
+Z130 8../../vhdl/plasma_core/vhdl/ims/function_18.vhd
+Z131 F../../vhdl/plasma_core/vhdl/ims/function_18.vhd
+l0
+L17
+V7k[4>LVK7`Z:biAz3iMoI1
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 0P_Dm_@;Y>XJEjL@7<@Tk2
+!i10b 1
+Alogic
+R6
+R18
+R7
+R8
+R40
+l26
+L25
+V@Q5RkcX?`AH>705JLHhag1
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 VZm5hf7fK_<mE2XHJS^H;3
+!i10b 1
+Efunction_19
+Z132 w1382009061
+R6
+R18
+R7
+R8
+R9
+Z133 8../../vhdl/plasma_core/vhdl/ims/function_19.vhd
+Z134 F../../vhdl/plasma_core/vhdl/ims/function_19.vhd
+l0
+L17
+V77jf2GfR6P04GGSmHenj32
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 XDHZ>6GLC:OQ<nWBndVBI3
+!i10b 1
+Alogic
+R6
+R18
+R7
+R8
+R39
+l26
+L25
+V7g7[5B8QPN@T0dO6Z5I>z3
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 B;ZFOYdg>5[U?]NUzLV>Y1
+!i10b 1
+Efunction_2
+Z135 w1421080774
+R6
+R18
+R7
+R8
+R9
+Z136 8../../vhdl/plasma_core/vhdl/ims/function_2.vhd
+Z137 F../../vhdl/plasma_core/vhdl/ims/function_2.vhd
+l0
+L17
+V?NEC:i5I7m=UTb^VA5IOK0
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 Eb0:zoLC7_dabN;9dH^mn2
+!i10b 1
+Alogic
+R6
+R18
+R7
+R8
+R56
+l26
+L25
+VNcZ@?ULC^el]PU6UHJgET0
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 GfkTYj@1J943F4iY6mgPz2
+!i10b 1
+Efunction_3
+Z138 w1421080781
+R6
+R18
+R7
+R8
+R9
+Z139 8../../vhdl/plasma_core/vhdl/ims/function_3.vhd
+Z140 F../../vhdl/plasma_core/vhdl/ims/function_3.vhd
+l0
+L17
+VBV<amXP_Wf6fL3]QdCj2I0
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 l8YZJEIhE[=d<FI_]l1@40
+!i10b 1
+Alogic
+R6
+R18
+R7
+R8
+R55
+l27
+L25
+V9V_mhIVH1jI7K1a_We@YA0
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 ;8ScVnGRU6W>LdA4WXiO72
+!i10b 1
+Efunction_4
+Z141 w1421076774
+R6
+R18
+R7
+R8
+R9
+Z142 8../../vhdl/plasma_core/vhdl/ims/function_4.vhd
+Z143 F../../vhdl/plasma_core/vhdl/ims/function_4.vhd
+l0
+L17
+VO;98^BeD]iUIDaX[D8RLi2
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 Y<R=J6LJ52:308X?GCDD_1
+!i10b 1
+Alogic
+R6
+R18
+R7
+R8
+R54
+l29
+L25
+Va2>HM>ZO@1edRE9TbZI[93
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 UH8hA2<5J@@X0d;K_dOC93
+!i10b 1
+Efunction_5
+Z144 w1421076775
+R35
+R6
+R18
+R7
+R8
+R9
+Z145 8../../vhdl/plasma_core/vhdl/ims/function_5.vhd
+Z146 F../../vhdl/plasma_core/vhdl/ims/function_5.vhd
+l0
+L18
+V[?iLinR5QM0G[V3U<^Rdb1
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 A_em08o016lb1h4XFegaO3
+!i10b 1
+Alogic
+R35
+R6
+R18
+R7
+R8
+R53
+l27
+L26
+VcWFDcT<zQzA:E__i]6EC]0
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 mGiJn8O7V4[n8k4<FJ3P63
+!i10b 1
+Efunction_6
+Z147 w1379877406
+R6
+R18
+R7
+R8
+R9
+Z148 8../../vhdl/plasma_core/vhdl/ims/function_6.vhd
+Z149 F../../vhdl/plasma_core/vhdl/ims/function_6.vhd
+l0
+L17
+Vc4K1ih9z;X2C[d:`2`7aS1
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 LLJ<UAMDaBddn59I_dmY?0
+!i10b 1
+Alogic
+R6
+R18
+R7
+R8
+R52
+l26
+L25
+VDgBD`T`gjo^]zECRHz13G0
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 CO`g9K=4GWJ2>nRHiO`Qk2
+!i10b 1
+Efunction_7
+Z150 w1379877396
+R6
+R18
+R7
+R8
+R9
+Z151 8../../vhdl/plasma_core/vhdl/ims/function_7.vhd
+Z152 F../../vhdl/plasma_core/vhdl/ims/function_7.vhd
+l0
+L17
+Vf:il0Fe8ZFM@eh^UKOC630
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 ikm`YHd[<MXA2DYd4^Wm?1
+!i10b 1
+Alogic
+R6
+R18
+R7
+R8
+R51
+l26
+L25
+VTD2BP?1gh=dT[Tc:^@Z392
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 W4fP>=iJjLO1F]g9acdJk0
+!i10b 1
+Efunction_8
+Z153 w1379877384
+R6
+R18
+R7
+R8
+R9
+Z154 8../../vhdl/plasma_core/vhdl/ims/function_8.vhd
+Z155 F../../vhdl/plasma_core/vhdl/ims/function_8.vhd
+l0
+L17
+Vjo;Q:1fB7L;W1T4[kjlj>2
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 KR2XdhZeS_5[?GZ5z9_WM3
+!i10b 1
+Alogic
+R6
+R18
+R7
+R8
+R50
+l26
+L25
+Vo_@3WEB>Y;C^3BYb99]7Y3
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 ACPY65n[PYDk6I3H1Q?T^1
+!i10b 1
+Efunction_9
+Z156 w1379879488
+R6
+R18
+R7
+R8
+R9
+Z157 8../../vhdl/plasma_core/vhdl/ims/function_9.vhd
+Z158 F../../vhdl/plasma_core/vhdl/ims/function_9.vhd
+l0
+L17
+VLINA]aK3960ZU2jT]Sc6g0
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 588eaAV]0`XVd]7_8oD[;3
+!i10b 1
+Alogic
+R6
+R18
+R7
+R8
+R49
+l26
+L25
+VF3mYT<DnkE70]P@c336hS0
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 X`Oe`i@eRiSMFYP=eG@SP2
+!i10b 1
+Emem_ctrl
+R5
+R6
+R7
+R8
+R9
+Z159 8../../vhdl/plasma_core/vhdl/mem_ctrl.vhd
+Z160 F../../vhdl/plasma_core/vhdl/mem_ctrl.vhd
+l0
+L17
+VnE2C94E63MNoeSgE8g=f[2
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 7LYeHjgK:A3EP^@KRZk>91
+!i10b 1
+Alogic
+R6
+R7
+R8
+DEx4 work 8 mem_ctrl 0 22 nE2C94E63MNoeSgE8g=f[2
+l52
+L40
+VVCC@_>306N5CI7fco5Cnj3
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 [Man@S1WVYS54noHV=Umk0
+!i10b 1
+Ememory_64k
+Z161 w1380375008
+R28
+R29
+R7
+R8
+R9
+Z162 8../../vhdl/plasma_core/vhdl/memory_64k.vhd
+Z163 F../../vhdl/plasma_core/vhdl/memory_64k.vhd
+l0
+L25
+V<^Dn5XhHnTdJQElR?I[S80
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 ITYJT4:KQcfeT86jFZ6]22
+!i10b 1
+Abehavioral
+R28
+R29
+R7
+R8
+DEx4 work 10 memory_64k 0 22 <^Dn5XhHnTdJQElR?I[S80
+l47
+L36
+V5LR5d6XlOKfi51f5P4bKM2
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 H3YTU5CLRJ?7=I@M<SVjJ2
+!i10b 1
+Emlite_cpu
+Z164 w1380204162
+R28
+R29
+R7
+R8
+R6
+R9
+Z165 8../../vhdl/plasma_core/vhdl/mlite_cpu.vhd
+Z166 F../../vhdl/plasma_core/vhdl/mlite_cpu.vhd
+l0
+L74
+VSJ2?NCEmnSC4T5<KXnKZ[0
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 NKEDn7DjB@fZHf_E_SI^U0
+!i10b 1
+Alogic
+R28
+R29
+R7
+R8
+R6
+DEx4 work 9 mlite_cpu 0 22 SJ2?NCEmnSC4T5<KXnKZ[0
+l168
+L98
+VYclPNTJUAjl`0WoO1d6If2
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 4192alA4hz9Q6jaHLQ;ZE3
+!i10b 1
+Pmlite_pack
+R7
+R8
+R5
+R9
+Z167 8../../vhdl/plasma_core/vhdl/mlite_pack.vhd
+Z168 F../../vhdl/plasma_core/vhdl/mlite_pack.vhd
+l0
+L15
+V0eMXbTjO4ChVE1L_?okz83
+R12
+31
+b1
+R13
+R14
+R15
+R16
+R17
+!s100 ^boCW5McbUf]KY<UnA5CU3
+!i10b 1
+Bbody
+R6
+R7
+R8
+l0
+L764
+V;<<zDPzc@JQT`PgQnVPT@0
+R12
+31
+R13
+R14
+R15
+R16
+R17
+nbody
+!s100 d1Q5hoceTJl7Onf91>:A<0
+!i10b 1
+Emt46v16m16
+R5
+R28
+R29
+R7
+R8
+R4
+Z169 8/home/cleroux/work/enseignement/ELEC/EN212/plasma/ASIP/vhdl/plasma_core/vhdl/mt46v16m16.vhd
+Z170 F/home/cleroux/work/enseignement/ELEC/EN212/plasma/ASIP/vhdl/plasma_core/vhdl/mt46v16m16.vhd
+l0
+L47
+VBgkO]AolQ9ME0YHGcDDYb0
+R21
+32
+Z171 !s108 1420623612.605910
+Z172 !s90 -reportprogress|300|-work|work|-2002|-explicit|/home/cleroux/work/enseignement/ELEC/EN212/plasma/ASIP/vhdl/plasma_core/vhdl/mt46v16m16.vhd|
+Z173 !s107 /home/cleroux/work/enseignement/ELEC/EN212/plasma/ASIP/vhdl/plasma_core/vhdl/mt46v16m16.vhd|
+R25
+R17
+!s100 o2cL;=n[lQ=z[J<1lcUeS2
+!i10b 1
+Abehave
+R28
+R29
+R7
+R8
+DEx4 work 10 mt46v16m16 0 22 BgkO]AolQ9ME0YHGcDDYb0
+l140
+L85
+VIoNlSKdKfT4R<N>UK^QNe2
+R21
+32
+R171
+R172
+R173
+R25
+R17
+!s100 l1bATYE3FKl@[haMhfi@c1
+!i10b 1
+Emult
+R5
+R6
+R28
+R29
+R7
+R8
+R9
+Z174 8../../vhdl/plasma_core/vhdl/mult.vhd
+Z175 F../../vhdl/plasma_core/vhdl/mult.vhd
+l0
+L45
+VAgZ^z4[Z<Ad<Z5A^8>nNa1
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 4MEGjC@D53dFT9[c2K7]C0
+!i10b 1
+Alogic
+R6
+R28
+R29
+R7
+R8
+DEx4 work 4 mult 0 22 AgZ^z4[Z<Ad<Z5A^8>nNa1
+l75
+L56
+VZ]fQd99B3;ESE`Sm1oZVA1
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 :Ndbbi3fC_?:Y7dRM1D5]0
+!i10b 1
+Epc_next
+R5
+R6
+R7
+R8
+R9
+Z176 8../../vhdl/plasma_core/vhdl/pc_next.vhd
+Z177 F../../vhdl/plasma_core/vhdl/pc_next.vhd
+l0
+L16
+VhH6VKaHHiR@UEgeb?770;0
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 :S`Ec?R1:=VT2nFT2X6gO1
+!i10b 1
+Alogic
+R6
+R7
+R8
+DEx4 work 7 pc_next 0 22 hH6VKaHHiR@UEgeb?770;0
+l31
+L29
+V[1[EkJTCGg<0T_XeZ@]k:1
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 R4nSeMV@6RfmBUJL?b=Di0
+!i10b 1
+Epcie_cmp
+R5
+R65
+Z178 DPx4 work 8 txt_util 0 22 _Bi5=VEPW3TJ<>5?bI`Q30
+R18
+R7
+R8
+R9
+Z179 8../../vhdl/plasma_core/vhdl/simulation/pcie_cmp.vhd
+Z180 F../../vhdl/plasma_core/vhdl/simulation/pcie_cmp.vhd
+l0
+L10
+V]f@[[>SziLDghm`JYjZie0
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 O4YbmNZNn0[hL?fl@8AY?0
+!i10b 1
+Alogic
+R65
+R178
+R18
+R7
+R8
+DEx4 work 8 pcie_cmp 0 22 ]f@[[>SziLDghm`JYjZie0
+l19
+L18
+VT[a<1j36XU1O?JhILdYo`2
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 DX=FT21SfEKzB[?AO5akl2
+!i10b 1
+Epcie_in
+R5
+R178
+R18
+R7
+R8
+R9
+Z181 8../../vhdl/plasma_core/vhdl/simulation/pcie_in.vhd
+Z182 F../../vhdl/plasma_core/vhdl/simulation/pcie_in.vhd
+l0
+L11
+V0deMlDJ@TU9IIROC5`lT?0
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 G?_47^:Od=QOG9cHaB:zf0
+!i10b 1
+Alogic
+R178
+R18
+R7
+R8
+DEx4 work 7 pcie_in 0 22 0deMlDJ@TU9IIROC5`lT?0
+l24
+L23
+VdKAdgcATTaV2IXP_QO?W80
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 C<e]5Z[n?:85lbzI3dlW01
+!i10b 1
+Epcie_out
+Z183 w1382012328
+R178
+R28
+R29
+R7
+R8
+R9
+Z184 8../../vhdl/plasma_core/vhdl/simulation/pcie_out.vhd
+Z185 F../../vhdl/plasma_core/vhdl/simulation/pcie_out.vhd
+l0
+L9
+VUKAI6Vj3[`A0]Ra^Sm6Xm1
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 ;bP[B:XQejI5mG;1dYA<E1
+!i10b 1
+Alogic
+R178
+R28
+R29
+R7
+R8
+DEx4 work 8 pcie_out 0 22 UKAI6Vj3[`A0]Ra^Sm6Xm1
+l21
+L20
+V;`a5RgC_0RL6CE>NV7PaT0
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 DD<e5@g0RR@3CeeZjJ:0G1
+!i10b 1
+Epipeline
+Z186 w1380051452
+R6
+R7
+R8
+R9
+Z187 8../../vhdl/plasma_core/vhdl/pipeline.vhd
+Z188 F../../vhdl/plasma_core/vhdl/pipeline.vhd
+l0
+L18
+VP>Z7Jm[VG3;Uled[`1NKz3
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 Tf@AeYgRRKg=9<U@Og5[A3
+!i10b 1
+Alogic
+R6
+R7
+R8
+DEx4 work 8 pipeline 0 22 P>Z7Jm[VG3;Uled[`1NKz3
+l58
+L52
+V?DGY5EG8iGnWYDzifKK4L1
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 oQ4l@ab9NGaRe_n<GY0a92
+!i10b 1
+Eplasma
+Z189 w1382012479
+R6
+R7
+R8
+R9
+Z190 8../../vhdl/plasma_core/vhdl/plasma.vhd
+Z191 F../../vhdl/plasma_core/vhdl/plasma.vhd
+l0
+L63
+V:L1UY_L5OE5POABVeTjTJ2
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 [hPTI@T6G5;Q0l8WSof7K2
+!i10b 1
+Alogic
+R80
+R77
+R35
+R73
+R69
+R65
+R18
+R98
+R6
+R7
+R8
+DEx4 work 6 plasma 0 22 :L1UY_L5OE5POABVeTjTJ2
+l179
+L103
+V8`E]4FjH[XOk9cB8lH8kk0
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 i7i9SDg_e^hQQdj]EoV_C0
+!i10b 1
+Eplasma_3e
+R5
+R28
+R29
+R7
+R8
+R9
+Z192 8../../vhdl/plasma_core/vhdl/plasma_3e.vhd
+Z193 F../../vhdl/plasma_core/vhdl/plasma_3e.vhd
+l0
+L19
+VUH03S8_gAU;4[__a:7SRn3
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 2oLCe;YzmUiGFkVE__<Yo3
+!i10b 1
+Alogic
+R28
+R29
+R7
+R8
+DEx4 work 9 plasma_3e 0 22 UH03S8_gAU;4[__a:7SRn3
+l156
+L80
+VK]g:ji0`;h4@MLNe>1;YF2
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 Hnh:Q4j4^GblV>h0S[_Hh2
+!i10b 1
+Eplasma_asic
+R5
+R28
+R29
+R7
+R8
+R4
+8/home/cleroux/work/enseignement/ELEC/EN212/plasma/ASIP/vhdl/plasma_core/vhdl/plasma_asic.vhd
+F/home/cleroux/work/enseignement/ELEC/EN212/plasma/ASIP/vhdl/plasma_core/vhdl/plasma_asic.vhd
+l0
+L19
+VDIOj=zaC3BG=]o6>A<Q<[2
+R21
+32
+R25
+R17
+!s100 TM^OV<]WXSeMhGQdHd^Q81
+!i10b 1
+!s108 1420623486.567295
+!s90 -reportprogress|300|-work|work|-2002|-explicit|/home/cleroux/work/enseignement/ELEC/EN212/plasma/ASIP/vhdl/plasma_core/vhdl/plasma_asic.vhd|
+!s107 /home/cleroux/work/enseignement/ELEC/EN212/plasma/ASIP/vhdl/plasma_core/vhdl/plasma_asic.vhd|
+Eplasma_if
+R5
+R7
+R8
+R4
+Z194 8/home/cleroux/work/enseignement/ELEC/EN212/plasma/ASIP/vhdl/plasma_core/vhdl/plasma_if.vhd
+Z195 F/home/cleroux/work/enseignement/ELEC/EN212/plasma/ASIP/vhdl/plasma_core/vhdl/plasma_if.vhd
+l0
+L18
+VD5e_KDXVZ3:0iWiXC`mRT0
+R21
+32
+Z196 !s108 1420623612.881235
+Z197 !s90 -reportprogress|300|-work|work|-2002|-explicit|/home/cleroux/work/enseignement/ELEC/EN212/plasma/ASIP/vhdl/plasma_core/vhdl/plasma_if.vhd|
+Z198 !s107 /home/cleroux/work/enseignement/ELEC/EN212/plasma/ASIP/vhdl/plasma_core/vhdl/plasma_if.vhd|
+R25
+R17
+!s100 g6bQVWffGFAn8zzDj`nhP1
+!i10b 1
+Alogic
+R7
+R8
+DEx4 work 9 plasma_if 0 22 D5e_KDXVZ3:0iWiXC`mRT0
+l69
+L40
+V7VM<ZUVk=UJE`nH2LCJQl3
+R21
+32
+R196
+R197
+R198
+R25
+R17
+!s100 ]8bm^U_3JnhMz4GRHEBU40
+!i10b 1
+Eram
+Z199 w1410445133
+R28
+R29
+R7
+R8
+R9
+Z200 8../../vhdl/plasma_core/vhdl/ram_boot_for_simu.vhd
+Z201 F../../vhdl/plasma_core/vhdl/ram_boot_for_simu.vhd
+l0
+L47
+VQKzzXn@109B7YcX:^586:1
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 e><l@`5Q`^U<7OK?>9CT73
+!i10b 1
+Alogic
+R28
+R29
+R7
+R8
+DEx4 work 3 ram 0 22 QKzzXn@109B7YcX:^586:1
+l105
+L61
+V2e548IA3QbFAV@F?OUTeA2
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 <1Sf3I70C4@GV8@QPJ`zi2
+!i10b 1
+Ereg_bank
+R5
+R6
+R28
+R29
+R7
+R8
+R9
+Z202 8../../vhdl/plasma_core/vhdl/reg_bank.vhd
+Z203 F../../vhdl/plasma_core/vhdl/reg_bank.vhd
+l0
+L22
+VS>C2fIK86OE>PT4Dkfkg>3
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 ]RH`:]B;^K]BQnI3P5KIk3
+!i10b 1
+Aram_block
+R6
+R28
+R29
+R7
+R8
+DEx4 work 8 reg_bank 0 22 S>C2fIK86OE>PT4Dkfkg>3
+l53
+L43
+V>;:;kOT6o7oeU0j2jOGDB0
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 e>2YzGM7TT]S>XEXkW2Mz3
+!i10b 1
+Esequ_alu_1
+R5
+R6
+R18
+R7
+R8
+R9
+Z204 8../../vhdl/plasma_core/vhdl/ims/sequ_alu_1.vhd
+Z205 F../../vhdl/plasma_core/vhdl/ims/sequ_alu_1.vhd
+l0
+L17
+Vc8eKijQ79>^QWB:XV7XM11
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 _V1zTaN[`E1^a?3;ae?L31
+!i10b 1
+Alogic
+R6
+R18
+R7
+R8
+DEx4 work 10 sequ_alu_1 0 22 c8eKijQ79>^QWB:XV7XM11
+l56
+L29
+V;mdJX7T26oa06DTY;F:]R2
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 RzYMUd^;W<L=T]iJR_9>V0
+!i10b 1
+Eshifter
+R5
+R6
+R7
+R8
+R9
+Z206 8../../vhdl/plasma_core/vhdl/shifter.vhd
+Z207 F../../vhdl/plasma_core/vhdl/shifter.vhd
+l0
+L17
+Vn8F?DL5ZGR[I;;R4Doez81
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 fQaXThi9f`KcR]m5j@5[I0
+!i10b 1
+Alogic
+R6
+R7
+R8
+DEx4 work 7 shifter 0 22 n8F?DL5ZGR[I;;R4Doez81
+l34
+L25
+VPV^_eCjhOQ5IKBk0DAC3U3
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 2RdRnW6hl@WkmAb1AgB>?1
+!i10b 1
+Etbench
+Z208 w1410352248
+R28
+R29
+R6
+R7
+R8
+R9
+Z209 8tbench.vhd
+Z210 Ftbench.vhd
+l0
+L17
+V]=a@l:5ZjP1TJY4zQ1l`20
+R12
+31
+Z211 !s108 1423153376.656778
+Z212 !s90 -quiet|-93|-work|work|tbench.vhd|
+Z213 !s107 tbench.vhd|
+R16
+R17
+!s100 IY`W^aI4gR4ZkeIUhLYTD0
+!i10b 1
+Alogic
+R28
+R29
+R6
+R7
+R8
+DEx4 work 6 tbench 0 22 ]=a@l:5ZjP1TJY4zQ1l`20
+l97
+L20
+V;P23EXFZ]ZCDKFbC?hRo00
+!s100 IDm2fXFn@Eb`N8QbBR3;j0
+R12
+31
+R211
+R212
+R213
+R16
+R17
+!i10b 1
+Ptxt_util
+R7
+R8
+Z214 w1382009688
+R9
+Z215 8../../vhdl/plasma_core/vhdl/simulation/txt_util.vhd
+Z216 F../../vhdl/plasma_core/vhdl/simulation/txt_util.vhd
+l0
+L6
+V_Bi5=VEPW3TJ<>5?bI`Q30
+R12
+31
+b1
+R13
+R14
+R15
+R16
+R17
+!s100 B^CliLPZnFWbnh<CDE3b21
+!i10b 1
+Bbody
+R178
+R7
+R8
+l0
+L86
+VL:DXk<;Q]RzljzE^M?C2E0
+R12
+31
+R13
+R14
+R15
+R16
+R17
+nbody
+!s100 YHCh9cF`AmlkM0MfA2B6J3
+!i10b 1
+Euart
+Z217 w1380779476
+R6
+R29
+R59
+R28
+Z218 DPx8 synopsys 10 attributes 0 22 J^T`lPA_8_J<l8kQiVE]>2
+Z219 DPx4 ieee 14 std_logic_misc 0 22 >dU:RInm^_6_mBJ^<6QGY2
+R7
+R8
+R9
+Z220 8../../vhdl/plasma_core/vhdl/uart.vhd
+Z221 F../../vhdl/plasma_core/vhdl/uart.vhd
+l0
+L21
+Vb?O]Rz0zBO=El3<6:]Z>V0
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 D=84J_@]cN]Y=9C98e=760
+!i10b 1
+Alogic
+R6
+R29
+R59
+R28
+R218
+R219
+R7
+R8
+DEx4 work 4 uart 0 22 b?O]Rz0zBO=El3<6:]Z>V0
+l48
+L35
+VZX=VU1fLFV^O6>IagVWU72
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 iS6In?0?9bSMb0n6_lJQm2
+!i10b 1

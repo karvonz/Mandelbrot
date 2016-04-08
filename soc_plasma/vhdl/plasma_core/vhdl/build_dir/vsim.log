@@ -1,0 +1,3 @@
+../control.vhd:161:48:@419100ns:(assertion failure): => SUCCESS <=
+./tbench:error: assertion failed
+./tbench:error: simulation failed

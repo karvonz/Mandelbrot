@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "Z:/design/code_16200x6480/16k_GPU_device_6_8_6.parallel.IOs/synthese/ipbus_asip_ml507_working/tb_FIFO_6b_isim_beh.exe" -prj "Z:/design/code_16200x6480/16k_GPU_device_6_8_6.parallel.IOs/synthese/ipbus_asip_ml507_working/tb_FIFO_6b_beh.prj" "work.tb_FIFO_6b" 

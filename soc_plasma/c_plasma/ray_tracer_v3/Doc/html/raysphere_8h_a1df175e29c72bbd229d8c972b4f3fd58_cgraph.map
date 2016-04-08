@@ -1,0 +1,7 @@
+<map id="SphereGetNormal" name="SphereGetNormal">
+<area shape="rect" id="node2" href="$raymath_8h.html#a075c2db2a273d9e2ab085f4cba6fbf9f" title="Normalize a 3D vector. " alt="" coords="179,56,317,83"/>
+<area shape="rect" id="node6" href="$raymath_8h.html#afc53ea0adde49d6b23d3d20f7242ce3b" title="Subtract two 3D vectors. " alt="" coords="196,107,300,133"/>
+<area shape="rect" id="node3" href="$raymath_8c.html#aa67fbe59543039467aa720334738e2a2" title="Compute the dot product between two vectors. " alt="" coords="372,5,473,32"/>
+<area shape="rect" id="node4" href="$raymath_8c.html#a414c0be0d1f209943c3ecbbae79002d2" title="Scale a 3D vector (multiply by a scalar) " alt="" coords="365,56,480,83"/>
+<area shape="rect" id="node5" href="$raymath_8c.html#a0c3b96d5e78c8899245e367835c0e1b4" title="Set a 3D vector. " alt="" coords="528,81,629,108"/>
+</map>

@@ -1,0 +1,28 @@
+I'm no expert in verilog so the following comes from the xilinx doc pages:
+
+---------------------------------------------------------------------------
+Defining Global Signals in Verilog 
+---------------------------------------------------------------------------
+To specify the global set/reset or global reset, you must first define them 
+in the $XILINX/verilog/src/glbl.v module. The VHDL UniSims library contains 
+the ROC, ROCBUF, TOC, TOCBUF, and STARTBUF cells to assist in VITAL VHDL 
+simulation of the global set/reset and tristate signals. However, Verilog 
+allows a global signal to be modeled as a wire in a global module, and, 
+thus, does not contain these cells. 
+
+---------------------------------------------------------------------------
+Using the glbl.v Module 
+---------------------------------------------------------------------------
+The glbl.v module connects the global signals to the design, which is why 
+it is necessary to compile this module with the other design files and load 
+it along with the design.v file and the testfixture.v file for simulation. 
+
+---------------------------------------------------------------------------
+End of Xilinx wisdom...
+---------------------------------------------------------------------------
+
+Hence my solution is just to reference the glbl.v file in the work 
+directory in modelsim.  I then compile it and load the design with the 
+following:
+
+vsim -L unisims_ver -t ps work.tb_top_sys work.glbl

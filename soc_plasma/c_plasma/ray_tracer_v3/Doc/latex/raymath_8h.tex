@@ -1,0 +1,592 @@
+\hypertarget{raymath_8h}{}\section{Includes/raymath.h File Reference}
+\label{raymath_8h}\index{Includes/raymath.\+h@{Includes/raymath.\+h}}
+
+
+Raytracer math.  
+
+
+{\ttfamily \#include $<$stdbool.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include $<$limits.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}raytypes.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}raymathfix.\+h\char`\"{}}\\*
+Include dependency graph for raymath.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{raymath_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{raymath_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structvec3}{vec3}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{raymath_8h_a239c6887425f7b28cd09f280d1070850}{F\+I\+X\+\_\+\+I\+MP}
+\begin{DoxyCompactList}\small\item\em Enable 32-\/bit fixed point raytracer implementation. \end{DoxyCompactList}\item 
+\#define \hyperlink{raymath_8h_ad612104cac2f0a71d39241cdab09a8db}{Math\+Max}(a,  b)    ~(((a) $>$ (b)) ? (a) \+: (b))
+\begin{DoxyCompactList}\small\item\em Get the maximum of two numbers. \end{DoxyCompactList}\item 
+\#define \hyperlink{raymath_8h_ae2b0e98ddd7c8b1ff8a366eec892d027}{Math\+Min}(a,  b)    ~(((a) $<$ (b)) ? (a) \+: (b))
+\begin{DoxyCompactList}\small\item\em Get the minimum of two numbers. \end{DoxyCompactList}\item 
+\#define \hyperlink{raymath_8h_aa97c1f529dc5a11a78758184c84a39c9}{number}~\hyperlink{raytypes_8h_abab37cf41841dab8dc81b8da87acd6c5}{fixed}
+\item 
+\#define \hyperlink{raymath_8h_a5f35899b3b66a3a746eef56145fd831f}{T}(f)~\hyperlink{raymathfix_8h_ab5cadba2a8639b9ef54ab46b3155799c}{Math\+Float2\+Fix}( f )
+\item 
+\#define \hyperlink{raymath_8h_a1a14019f88db2a0b038688cd9830ea7e}{add}(a,  b)~\hyperlink{raymathfix_8h_a662a769f40ac43a3d5e1afeda0f0e9c9}{Math\+Fix\+Add}( a, b )
+\item 
+\#define \hyperlink{raymath_8h_abc9bcff6c9dcede2fb7ec8e2ddff3358}{sub}(a,  b)~\hyperlink{raymathfix_8h_a9efdd30e8c235b4e7d710adfa2b933dc}{Math\+Fix\+Sub}( a, b )
+\item 
+\#define \hyperlink{raymath_8h_a0da29b54f1662523e9e9da60dde8b629}{mul}(a,  b)~\hyperlink{raymathfix_8h_a8d93126fdac6ca6825b80576bed9a7c5}{Math\+Fix\+Mul}( a, b )
+\item 
+\#define \hyperlink{raymath_8h_a5029d66da963c87e7314612c3102276a}{div}(a,  b)~\hyperlink{raymathfix_8h_a00f0fef6f042f8aea5ce731a68a3316a}{Math\+Fix\+Div}( a, b )
+\item 
+\#define \hyperlink{raymath_8h_a09f4b0d9da085264ffcb8d68fa045d67}{sqr}(a)~\hyperlink{raymathfix_8c_af55120a972b12f1773e0b5a95f92bea8}{Math\+Fix\+Sqrt}( a )
+\item 
+\#define \hyperlink{raymath_8h_aa2eab56fea61c2b43c875652a9115d5c}{E\+P\+S\+\_\+\+V\+A\+L\+UE}~1 $<$$<$ \hyperlink{raymathfix_8h_a8edc3240c157eecf1131299de27dea7a}{F\+I\+X\+\_\+\+S\+H\+I\+FT}
+\item 
+\#define \hyperlink{raymath_8h_a4ce3e2af80a76d816ab7f8567ec4a65a}{M\+A\+X\+\_\+\+V\+A\+L\+UE}~I\+N\+T\+\_\+\+M\+AX
+\item 
+\#define \hyperlink{raymath_8h_ac328e551bde3d39b6d7b8cc9e048d941}{Z\+E\+RO}~0
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structvec3}{vec3} \hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t}
+\begin{DoxyCompactList}\small\item\em A Structure to represent a 3D vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{raymath_8h_aa97c1f529dc5a11a78758184c84a39c9}{number} \hyperlink{raymath_8h_af55120a972b12f1773e0b5a95f92bea8}{Math\+Fix\+Sqrt} (\hyperlink{raymath_8h_aa97c1f529dc5a11a78758184c84a39c9}{number} n)
+\begin{DoxyCompactList}\small\item\em Float implementation of square root of n. \end{DoxyCompactList}\item 
+\hyperlink{raymath_8h_aa97c1f529dc5a11a78758184c84a39c9}{number} \hyperlink{raymath_8h_ad23db858056b973907f7dfc34cd430e5}{Math\+Clamp} (\hyperlink{raymath_8h_aa97c1f529dc5a11a78758184c84a39c9}{number} d, \hyperlink{raymath_8h_aa97c1f529dc5a11a78758184c84a39c9}{number} min, \hyperlink{raymath_8h_aa97c1f529dc5a11a78758184c84a39c9}{number} max)
+\begin{DoxyCompactList}\small\item\em Clamp a number between a range. \end{DoxyCompactList}\item 
+bool \hyperlink{raymath_8h_a4f748dcf42de8f0879bf0ff7ef9f4f36}{Math\+Is\+Odd} (int x)
+\begin{DoxyCompactList}\small\item\em Get the parity of a integer. \end{DoxyCompactList}\item 
+\hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} \hyperlink{raymath_8h_a0c3b96d5e78c8899245e367835c0e1b4}{Math\+Vec3\+Set} (\hyperlink{raymath_8h_aa97c1f529dc5a11a78758184c84a39c9}{number} x, \hyperlink{raymath_8h_aa97c1f529dc5a11a78758184c84a39c9}{number} y, \hyperlink{raymath_8h_aa97c1f529dc5a11a78758184c84a39c9}{number} z)
+\begin{DoxyCompactList}\small\item\em Set a 3D vector. \end{DoxyCompactList}\item 
+\hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} \hyperlink{raymath_8h_a1d9b3e20abf08441155772741c0ef939}{Math\+Vec3\+Add} (\hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} a, \hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} b)
+\begin{DoxyCompactList}\small\item\em Add two 3D vectors. \end{DoxyCompactList}\item 
+\hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} \hyperlink{raymath_8h_afc53ea0adde49d6b23d3d20f7242ce3b}{Math\+Vec3\+Sub} (\hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} a, \hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} b)
+\begin{DoxyCompactList}\small\item\em Subtract two 3D vectors. \end{DoxyCompactList}\item 
+\hyperlink{raymath_8h_aa97c1f529dc5a11a78758184c84a39c9}{number} \hyperlink{raymath_8h_aa67fbe59543039467aa720334738e2a2}{Math\+Vec3\+Dot} (\hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} a, \hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} b)
+\begin{DoxyCompactList}\small\item\em Compute the dot product between two vectors. \end{DoxyCompactList}\item 
+\hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} \hyperlink{raymath_8h_a414c0be0d1f209943c3ecbbae79002d2}{Math\+Vec3\+Scale} (\hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} a, \hyperlink{raymath_8h_aa97c1f529dc5a11a78758184c84a39c9}{number} c)
+\begin{DoxyCompactList}\small\item\em Scale a 3D vector (multiply by a scalar) \end{DoxyCompactList}\item 
+\hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} \hyperlink{raymath_8h_a075c2db2a273d9e2ab085f4cba6fbf9f}{Math\+Vec3\+Normalize} (\hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} v)
+\begin{DoxyCompactList}\small\item\em Normalize a 3D vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Raytracer math. 
+
+\begin{DoxyAuthor}{Author}
+J. Crenne \& C. Leroux 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+February 2016 
+\end{DoxyDate}
+
+
+\subsection{Macro Definition Documentation}
+\index{raymath.\+h@{raymath.\+h}!add@{add}}
+\index{add@{add}!raymath.\+h@{raymath.\+h}}
+\subsubsection[{\texorpdfstring{add}{add}}]{\setlength{\rightskip}{0pt plus 5cm}\#define add(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~{\bf Math\+Fix\+Add}( a, b )}\hypertarget{raymath_8h_a1a14019f88db2a0b038688cd9830ea7e}{}\label{raymath_8h_a1a14019f88db2a0b038688cd9830ea7e}
+
+
+Definition at line 65 of file raymath.\+h.
+
+\index{raymath.\+h@{raymath.\+h}!div@{div}}
+\index{div@{div}!raymath.\+h@{raymath.\+h}}
+\subsubsection[{\texorpdfstring{div}{div}}]{\setlength{\rightskip}{0pt plus 5cm}\#define div(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~{\bf Math\+Fix\+Div}( a, b )}\hypertarget{raymath_8h_a5029d66da963c87e7314612c3102276a}{}\label{raymath_8h_a5029d66da963c87e7314612c3102276a}
+
+
+Definition at line 68 of file raymath.\+h.
+
+\index{raymath.\+h@{raymath.\+h}!E\+P\+S\+\_\+\+V\+A\+L\+UE@{E\+P\+S\+\_\+\+V\+A\+L\+UE}}
+\index{E\+P\+S\+\_\+\+V\+A\+L\+UE@{E\+P\+S\+\_\+\+V\+A\+L\+UE}!raymath.\+h@{raymath.\+h}}
+\subsubsection[{\texorpdfstring{E\+P\+S\+\_\+\+V\+A\+L\+UE}{EPS_VALUE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+P\+S\+\_\+\+V\+A\+L\+UE~1 $<$$<$ {\bf F\+I\+X\+\_\+\+S\+H\+I\+FT}}\hypertarget{raymath_8h_aa2eab56fea61c2b43c875652a9115d5c}{}\label{raymath_8h_aa2eab56fea61c2b43c875652a9115d5c}
+
+
+Definition at line 71 of file raymath.\+h.
+
+\index{raymath.\+h@{raymath.\+h}!F\+I\+X\+\_\+\+I\+MP@{F\+I\+X\+\_\+\+I\+MP}}
+\index{F\+I\+X\+\_\+\+I\+MP@{F\+I\+X\+\_\+\+I\+MP}!raymath.\+h@{raymath.\+h}}
+\subsubsection[{\texorpdfstring{F\+I\+X\+\_\+\+I\+MP}{FIX_IMP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+I\+X\+\_\+\+I\+MP}\hypertarget{raymath_8h_a239c6887425f7b28cd09f280d1070850}{}\label{raymath_8h_a239c6887425f7b28cd09f280d1070850}
+
+
+Enable 32-\/bit fixed point raytracer implementation. 
+
+
+
+Definition at line 24 of file raymath.\+h.
+
+\index{raymath.\+h@{raymath.\+h}!Math\+Max@{Math\+Max}}
+\index{Math\+Max@{Math\+Max}!raymath.\+h@{raymath.\+h}}
+\subsubsection[{\texorpdfstring{Math\+Max}{MathMax}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Math\+Max(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~(((a) $>$ (b)) ? (a) \+: (b))}\hypertarget{raymath_8h_ad612104cac2f0a71d39241cdab09a8db}{}\label{raymath_8h_ad612104cac2f0a71d39241cdab09a8db}
+
+
+Get the maximum of two numbers. 
+
+
+
+Definition at line 36 of file raymath.\+h.
+
+\index{raymath.\+h@{raymath.\+h}!Math\+Min@{Math\+Min}}
+\index{Math\+Min@{Math\+Min}!raymath.\+h@{raymath.\+h}}
+\subsubsection[{\texorpdfstring{Math\+Min}{MathMin}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Math\+Min(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~(((a) $<$ (b)) ? (a) \+: (b))}\hypertarget{raymath_8h_ae2b0e98ddd7c8b1ff8a366eec892d027}{}\label{raymath_8h_ae2b0e98ddd7c8b1ff8a366eec892d027}
+
+
+Get the minimum of two numbers. 
+
+
+
+Definition at line 42 of file raymath.\+h.
+
+\index{raymath.\+h@{raymath.\+h}!M\+A\+X\+\_\+\+V\+A\+L\+UE@{M\+A\+X\+\_\+\+V\+A\+L\+UE}}
+\index{M\+A\+X\+\_\+\+V\+A\+L\+UE@{M\+A\+X\+\_\+\+V\+A\+L\+UE}!raymath.\+h@{raymath.\+h}}
+\subsubsection[{\texorpdfstring{M\+A\+X\+\_\+\+V\+A\+L\+UE}{MAX_VALUE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+V\+A\+L\+UE~I\+N\+T\+\_\+\+M\+AX}\hypertarget{raymath_8h_a4ce3e2af80a76d816ab7f8567ec4a65a}{}\label{raymath_8h_a4ce3e2af80a76d816ab7f8567ec4a65a}
+
+
+Definition at line 72 of file raymath.\+h.
+
+\index{raymath.\+h@{raymath.\+h}!mul@{mul}}
+\index{mul@{mul}!raymath.\+h@{raymath.\+h}}
+\subsubsection[{\texorpdfstring{mul}{mul}}]{\setlength{\rightskip}{0pt plus 5cm}\#define mul(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~{\bf Math\+Fix\+Mul}( a, b )}\hypertarget{raymath_8h_a0da29b54f1662523e9e9da60dde8b629}{}\label{raymath_8h_a0da29b54f1662523e9e9da60dde8b629}
+
+
+Definition at line 67 of file raymath.\+h.
+
+\index{raymath.\+h@{raymath.\+h}!number@{number}}
+\index{number@{number}!raymath.\+h@{raymath.\+h}}
+\subsubsection[{\texorpdfstring{number}{number}}]{\setlength{\rightskip}{0pt plus 5cm}\#define number~{\bf fixed}}\hypertarget{raymath_8h_aa97c1f529dc5a11a78758184c84a39c9}{}\label{raymath_8h_aa97c1f529dc5a11a78758184c84a39c9}
+
+
+Definition at line 62 of file raymath.\+h.
+
+\index{raymath.\+h@{raymath.\+h}!sqr@{sqr}}
+\index{sqr@{sqr}!raymath.\+h@{raymath.\+h}}
+\subsubsection[{\texorpdfstring{sqr}{sqr}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sqr(
+\begin{DoxyParamCaption}
+\item[{}]{a}
+\end{DoxyParamCaption}
+)~{\bf Math\+Fix\+Sqrt}( a )}\hypertarget{raymath_8h_a09f4b0d9da085264ffcb8d68fa045d67}{}\label{raymath_8h_a09f4b0d9da085264ffcb8d68fa045d67}
+
+
+Definition at line 69 of file raymath.\+h.
+
+\index{raymath.\+h@{raymath.\+h}!sub@{sub}}
+\index{sub@{sub}!raymath.\+h@{raymath.\+h}}
+\subsubsection[{\texorpdfstring{sub}{sub}}]{\setlength{\rightskip}{0pt plus 5cm}\#define sub(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~{\bf Math\+Fix\+Sub}( a, b )}\hypertarget{raymath_8h_abc9bcff6c9dcede2fb7ec8e2ddff3358}{}\label{raymath_8h_abc9bcff6c9dcede2fb7ec8e2ddff3358}
+
+
+Definition at line 66 of file raymath.\+h.
+
+\index{raymath.\+h@{raymath.\+h}!T@{T}}
+\index{T@{T}!raymath.\+h@{raymath.\+h}}
+\subsubsection[{\texorpdfstring{T}{T}}]{\setlength{\rightskip}{0pt plus 5cm}\#define T(
+\begin{DoxyParamCaption}
+\item[{}]{f}
+\end{DoxyParamCaption}
+)~{\bf Math\+Float2\+Fix}( f )}\hypertarget{raymath_8h_a5f35899b3b66a3a746eef56145fd831f}{}\label{raymath_8h_a5f35899b3b66a3a746eef56145fd831f}
+
+
+Definition at line 64 of file raymath.\+h.
+
+\index{raymath.\+h@{raymath.\+h}!Z\+E\+RO@{Z\+E\+RO}}
+\index{Z\+E\+RO@{Z\+E\+RO}!raymath.\+h@{raymath.\+h}}
+\subsubsection[{\texorpdfstring{Z\+E\+RO}{ZERO}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Z\+E\+RO~0}\hypertarget{raymath_8h_ac328e551bde3d39b6d7b8cc9e048d941}{}\label{raymath_8h_ac328e551bde3d39b6d7b8cc9e048d941}
+
+
+Definition at line 73 of file raymath.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\index{raymath.\+h@{raymath.\+h}!vec3\+\_\+t@{vec3\+\_\+t}}
+\index{vec3\+\_\+t@{vec3\+\_\+t}!raymath.\+h@{raymath.\+h}}
+\subsubsection[{\texorpdfstring{vec3\+\_\+t}{vec3_t}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3\+\_\+t}}\hypertarget{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{}\label{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}
+
+
+A Structure to represent a 3D vector. 
+
+
+
+\subsection{Function Documentation}
+\index{raymath.\+h@{raymath.\+h}!Math\+Clamp@{Math\+Clamp}}
+\index{Math\+Clamp@{Math\+Clamp}!raymath.\+h@{raymath.\+h}}
+\subsubsection[{\texorpdfstring{Math\+Clamp(number d, number min, number max)}{MathClamp(number d, number min, number max)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf number} Math\+Clamp (
+\begin{DoxyParamCaption}
+\item[{{\bf number}}]{d, }
+\item[{{\bf number}}]{min, }
+\item[{{\bf number}}]{max}
+\end{DoxyParamCaption}
+)}\hypertarget{raymath_8h_ad23db858056b973907f7dfc34cd430e5}{}\label{raymath_8h_ad23db858056b973907f7dfc34cd430e5}
+
+
+Clamp a number between a range. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & number to clamp \\
+\hline
+{\em min} & minimum number range \\
+\hline
+{\em max} & maximum number range \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+clamped number 
+\end{DoxyReturn}
+
+
+Definition at line 12 of file raymath.\+c.
+
+\index{raymath.\+h@{raymath.\+h}!Math\+Fix\+Sqrt@{Math\+Fix\+Sqrt}}
+\index{Math\+Fix\+Sqrt@{Math\+Fix\+Sqrt}!raymath.\+h@{raymath.\+h}}
+\subsubsection[{\texorpdfstring{Math\+Fix\+Sqrt(number n)}{MathFixSqrt(number n)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf number} Math\+Fix\+Sqrt (
+\begin{DoxyParamCaption}
+\item[{{\bf number}}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{raymath_8h_af55120a972b12f1773e0b5a95f92bea8}{}\label{raymath_8h_af55120a972b12f1773e0b5a95f92bea8}
+
+
+Float implementation of square root of n. 
+
+Fixed implementation of square root of n 
+
+Definition at line 29 of file raymathfix.\+c.
+
+\index{raymath.\+h@{raymath.\+h}!Math\+Is\+Odd@{Math\+Is\+Odd}}
+\index{Math\+Is\+Odd@{Math\+Is\+Odd}!raymath.\+h@{raymath.\+h}}
+\subsubsection[{\texorpdfstring{Math\+Is\+Odd(int x)}{MathIsOdd(int x)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Math\+Is\+Odd (
+\begin{DoxyParamCaption}
+\item[{int}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{raymath_8h_a4f748dcf42de8f0879bf0ff7ef9f4f36}{}\label{raymath_8h_a4f748dcf42de8f0879bf0ff7ef9f4f36}
+
+
+Get the parity of a integer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & integer to test \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the integer is odd, false if even 
+\end{DoxyReturn}
+
+
+Definition at line 17 of file raymath.\+c.
+
+\index{raymath.\+h@{raymath.\+h}!Math\+Vec3\+Add@{Math\+Vec3\+Add}}
+\index{Math\+Vec3\+Add@{Math\+Vec3\+Add}!raymath.\+h@{raymath.\+h}}
+\subsubsection[{\texorpdfstring{Math\+Vec3\+Add(vec3\+\_\+t a, vec3\+\_\+t b)}{MathVec3Add(vec3_t a, vec3_t b)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3\+\_\+t} Math\+Vec3\+Add (
+\begin{DoxyParamCaption}
+\item[{{\bf vec3\+\_\+t}}]{a, }
+\item[{{\bf vec3\+\_\+t}}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{raymath_8h_a1d9b3e20abf08441155772741c0ef939}{}\label{raymath_8h_a1d9b3e20abf08441155772741c0ef939}
+
+
+Add two 3D vectors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & 3D vector \\
+\hline
+{\em b} & 3D vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+resulting 3D vector (a + b) 
+\end{DoxyReturn}
+
+
+Definition at line 29 of file raymath.\+c.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{raymath_8h_a1d9b3e20abf08441155772741c0ef939_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{raymath_8h_a1d9b3e20abf08441155772741c0ef939_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{raymath.\+h@{raymath.\+h}!Math\+Vec3\+Dot@{Math\+Vec3\+Dot}}
+\index{Math\+Vec3\+Dot@{Math\+Vec3\+Dot}!raymath.\+h@{raymath.\+h}}
+\subsubsection[{\texorpdfstring{Math\+Vec3\+Dot(vec3\+\_\+t a, vec3\+\_\+t b)}{MathVec3Dot(vec3_t a, vec3_t b)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf number} Math\+Vec3\+Dot (
+\begin{DoxyParamCaption}
+\item[{{\bf vec3\+\_\+t}}]{a, }
+\item[{{\bf vec3\+\_\+t}}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{raymath_8h_aa67fbe59543039467aa720334738e2a2}{}\label{raymath_8h_aa67fbe59543039467aa720334738e2a2}
+
+
+Compute the dot product between two vectors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & 3D vector \\
+\hline
+{\em b} & 3D vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+resulting dot product (a . b) 
+\end{DoxyReturn}
+
+
+Definition at line 44 of file raymath.\+c.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{raymath_8h_aa67fbe59543039467aa720334738e2a2_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{raymath.\+h@{raymath.\+h}!Math\+Vec3\+Normalize@{Math\+Vec3\+Normalize}}
+\index{Math\+Vec3\+Normalize@{Math\+Vec3\+Normalize}!raymath.\+h@{raymath.\+h}}
+\subsubsection[{\texorpdfstring{Math\+Vec3\+Normalize(vec3\+\_\+t v)}{MathVec3Normalize(vec3_t v)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3\+\_\+t} Math\+Vec3\+Normalize (
+\begin{DoxyParamCaption}
+\item[{{\bf vec3\+\_\+t}}]{v}
+\end{DoxyParamCaption}
+)}\hypertarget{raymath_8h_a075c2db2a273d9e2ab085f4cba6fbf9f}{}\label{raymath_8h_a075c2db2a273d9e2ab085f4cba6fbf9f}
+
+
+Normalize a 3D vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & 3D vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+normalized 3D vector 
+\end{DoxyReturn}
+
+
+Definition at line 52 of file raymath.\+c.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{raymath_8h_a075c2db2a273d9e2ab085f4cba6fbf9f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{raymath_8h_a075c2db2a273d9e2ab085f4cba6fbf9f_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{raymath.\+h@{raymath.\+h}!Math\+Vec3\+Scale@{Math\+Vec3\+Scale}}
+\index{Math\+Vec3\+Scale@{Math\+Vec3\+Scale}!raymath.\+h@{raymath.\+h}}
+\subsubsection[{\texorpdfstring{Math\+Vec3\+Scale(vec3\+\_\+t a, number c)}{MathVec3Scale(vec3_t a, number c)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3\+\_\+t} Math\+Vec3\+Scale (
+\begin{DoxyParamCaption}
+\item[{{\bf vec3\+\_\+t}}]{a, }
+\item[{{\bf number}}]{c}
+\end{DoxyParamCaption}
+)}\hypertarget{raymath_8h_a414c0be0d1f209943c3ecbbae79002d2}{}\label{raymath_8h_a414c0be0d1f209943c3ecbbae79002d2}
+
+
+Scale a 3D vector (multiply by a scalar) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & 3D vector \\
+\hline
+{\em c} & scalar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+resulting 3D vector (a x c) 
+\end{DoxyReturn}
+
+
+Definition at line 39 of file raymath.\+c.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{raymath_8h_a414c0be0d1f209943c3ecbbae79002d2_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{raymath_8h_a414c0be0d1f209943c3ecbbae79002d2_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{raymath.\+h@{raymath.\+h}!Math\+Vec3\+Set@{Math\+Vec3\+Set}}
+\index{Math\+Vec3\+Set@{Math\+Vec3\+Set}!raymath.\+h@{raymath.\+h}}
+\subsubsection[{\texorpdfstring{Math\+Vec3\+Set(number x, number y, number z)}{MathVec3Set(number x, number y, number z)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3\+\_\+t} Math\+Vec3\+Set (
+\begin{DoxyParamCaption}
+\item[{{\bf number}}]{x, }
+\item[{{\bf number}}]{y, }
+\item[{{\bf number}}]{z}
+\end{DoxyParamCaption}
+)}\hypertarget{raymath_8h_a0c3b96d5e78c8899245e367835c0e1b4}{}\label{raymath_8h_a0c3b96d5e78c8899245e367835c0e1b4}
+
+
+Set a 3D vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x component \\
+\hline
+{\em y} & y component \\
+\hline
+{\em z} & z component \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+3D vector 
+\end{DoxyReturn}
+
+
+Definition at line 21 of file raymath.\+c.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{raymath_8h_a0c3b96d5e78c8899245e367835c0e1b4_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{raymath.\+h@{raymath.\+h}!Math\+Vec3\+Sub@{Math\+Vec3\+Sub}}
+\index{Math\+Vec3\+Sub@{Math\+Vec3\+Sub}!raymath.\+h@{raymath.\+h}}
+\subsubsection[{\texorpdfstring{Math\+Vec3\+Sub(vec3\+\_\+t a, vec3\+\_\+t b)}{MathVec3Sub(vec3_t a, vec3_t b)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3\+\_\+t} Math\+Vec3\+Sub (
+\begin{DoxyParamCaption}
+\item[{{\bf vec3\+\_\+t}}]{a, }
+\item[{{\bf vec3\+\_\+t}}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{raymath_8h_afc53ea0adde49d6b23d3d20f7242ce3b}{}\label{raymath_8h_afc53ea0adde49d6b23d3d20f7242ce3b}
+
+
+Subtract two 3D vectors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & 3D vector \\
+\hline
+{\em b} & 3D vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+resulting 3D vector (a -\/ b) 
+\end{DoxyReturn}
+
+
+Definition at line 34 of file raymath.\+c.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{raymath_8h_afc53ea0adde49d6b23d3d20f7242ce3b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{raymath_8h_afc53ea0adde49d6b23d3d20f7242ce3b_icgraph}
+\end{center}
+\end{figure}
+
+

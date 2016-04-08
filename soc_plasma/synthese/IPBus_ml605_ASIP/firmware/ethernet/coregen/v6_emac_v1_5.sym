@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="v6_emac_v1_5">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2012-11-16T20:42:56</timestamp>
+    <pin polarity="Input" x="0" y="80" name="reset" />
+    <pin polarity="Output" x="832" y="80" name="emacclientrxclientclkout" />
+    <pin polarity="Input" x="0" y="112" name="clientemacrxclientclkin" />
+    <pin polarity="Output" x="832" y="112" name="emacclientrxd[7:0]" />
+    <pin polarity="Output" x="832" y="144" name="emacclientrxdvld" />
+    <pin polarity="Output" x="832" y="208" name="emacclientrxgoodframe" />
+    <pin polarity="Output" x="832" y="240" name="emacclientrxbadframe" />
+    <pin polarity="Output" x="832" y="272" name="emacclientrxframedrop" />
+    <pin polarity="Output" x="832" y="304" name="emacclientrxstats[6:0]" />
+    <pin polarity="Output" x="832" y="336" name="emacclientrxstatsvld" />
+    <pin polarity="Output" x="832" y="368" name="emacclientrxstatsbytevld" />
+    <pin polarity="Output" x="832" y="400" name="emacclienttxclientclkout" />
+    <pin polarity="Input" x="0" y="144" name="clientemactxclientclkin" />
+    <pin polarity="Input" x="0" y="176" name="clientemactxd[7:0]" />
+    <pin polarity="Input" x="0" y="208" name="clientemactxdvld" />
+    <pin polarity="Output" x="832" y="432" name="emacclienttxack" />
+    <pin polarity="Input" x="0" y="272" name="clientemactxfirstbyte" />
+    <pin polarity="Input" x="0" y="304" name="clientemactxunderrun" />
+    <pin polarity="Input" x="0" y="336" name="clientemactxifgdelay[7:0]" />
+    <pin polarity="Output" x="832" y="528" name="emacclienttxstats" />
+    <pin polarity="Output" x="832" y="560" name="emacclienttxstatsvld" />
+    <pin polarity="Output" x="832" y="592" name="emacclienttxstatsbytevld" />
+    <pin polarity="Input" x="0" y="368" name="clientemacpausereq" />
+    <pin polarity="Input" x="0" y="400" name="clientemacpauseval[15:0]" />
+    <pin polarity="Input" x="0" y="432" name="phyemacgtx_clk" />
+    <pin polarity="Output" x="832" y="624" name="emacphytxgmiimiiclkout" />
+    <pin polarity="Input" x="0" y="464" name="phyemactxgmiimiiclkin" />
+    <pin polarity="Input" x="0" y="496" name="emac_speedis10100" />
+    <pin polarity="Output" x="832" y="1392" name="gmii_tx_clk" />
+    <pin polarity="Output" x="832" y="1424" name="gmii_tx_en" />
+    <pin polarity="Output" x="832" y="1456" name="gmii_tx_er" />
+    <pin polarity="Output" x="832" y="1488" name="gmii_txd[7:0]" />
+    <pin polarity="Input" x="0" y="1360" name="gmii_rx_clk" />
+    <pin polarity="Input" x="0" y="1392" name="gmii_rx_dv" />
+    <pin polarity="Input" x="0" y="1424" name="gmii_rx_er" />
+    <pin polarity="Input" x="0" y="1456" name="gmii_rxd[7:0]" />
+    <pin polarity="Input" x="0" y="1488" name="gmii_col" />
+    <pin polarity="Input" x="0" y="1520" name="gmii_crs" />
+    <graph>
+        <text style="fontsize:40;fontname:Arial" x="32" y="32">v6_emac_v1_5</text>
+        <rect width="768" x="32" y="32" height="2368" />
+        <line x2="32" y1="80" y2="80" x1="0" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="36" y="80" type="pin reset" />
+        <line x2="800" y1="80" y2="80" x1="832" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="796" y="80" type="pin emacclientrxclientclkout" />
+        <line x2="32" y1="112" y2="112" x1="0" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="36" y="112" type="pin clientemacrxclientclkin" />
+        <line x2="800" y1="112" y2="112" style="linewidth:W" x1="832" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="796" y="112" type="pin emacclientrxd[7:0]" />
+        <line x2="800" y1="144" y2="144" x1="832" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="796" y="144" type="pin emacclientrxdvld" />
+        <line x2="800" y1="208" y2="208" x1="832" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="796" y="208" type="pin emacclientrxgoodframe" />
+        <line x2="800" y1="240" y2="240" x1="832" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="796" y="240" type="pin emacclientrxbadframe" />
+        <line x2="800" y1="272" y2="272" x1="832" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="796" y="272" type="pin emacclientrxframedrop" />
+        <line x2="800" y1="304" y2="304" style="linewidth:W" x1="832" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="796" y="304" type="pin emacclientrxstats[6:0]" />
+        <line x2="800" y1="336" y2="336" x1="832" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="796" y="336" type="pin emacclientrxstatsvld" />
+        <line x2="800" y1="368" y2="368" x1="832" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="796" y="368" type="pin emacclientrxstatsbytevld" />
+        <line x2="800" y1="400" y2="400" x1="832" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="796" y="400" type="pin emacclienttxclientclkout" />
+        <line x2="32" y1="144" y2="144" x1="0" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="36" y="144" type="pin clientemactxclientclkin" />
+        <line x2="32" y1="176" y2="176" style="linewidth:W" x1="0" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="36" y="176" type="pin clientemactxd[7:0]" />
+        <line x2="32" y1="208" y2="208" x1="0" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="36" y="208" type="pin clientemactxdvld" />
+        <line x2="800" y1="432" y2="432" x1="832" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="796" y="432" type="pin emacclienttxack" />
+        <line x2="32" y1="272" y2="272" x1="0" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="36" y="272" type="pin clientemactxfirstbyte" />
+        <line x2="32" y1="304" y2="304" x1="0" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="36" y="304" type="pin clientemactxunderrun" />
+        <line x2="32" y1="336" y2="336" style="linewidth:W" x1="0" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="36" y="336" type="pin clientemactxifgdelay[7:0]" />
+        <line x2="800" y1="528" y2="528" x1="832" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="796" y="528" type="pin emacclienttxstats" />
+        <line x2="800" y1="560" y2="560" x1="832" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="796" y="560" type="pin emacclienttxstatsvld" />
+        <line x2="800" y1="592" y2="592" x1="832" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="796" y="592" type="pin emacclienttxstatsbytevld" />
+        <line x2="32" y1="368" y2="368" x1="0" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="36" y="368" type="pin clientemacpausereq" />
+        <line x2="32" y1="400" y2="400" style="linewidth:W" x1="0" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="36" y="400" type="pin clientemacpauseval[15:0]" />
+        <line x2="32" y1="432" y2="432" x1="0" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="36" y="432" type="pin phyemacgtx_clk" />
+        <line x2="800" y1="624" y2="624" x1="832" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="796" y="624" type="pin emacphytxgmiimiiclkout" />
+        <line x2="32" y1="464" y2="464" x1="0" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="36" y="464" type="pin phyemactxgmiimiiclkin" />
+        <line x2="32" y1="496" y2="496" x1="0" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="36" y="496" type="pin emac_speedis10100" />
+        <line x2="800" y1="1392" y2="1392" x1="832" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="796" y="1392" type="pin gmii_tx_clk" />
+        <line x2="800" y1="1424" y2="1424" x1="832" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="796" y="1424" type="pin gmii_tx_en" />
+        <line x2="800" y1="1456" y2="1456" x1="832" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="796" y="1456" type="pin gmii_tx_er" />
+        <line x2="800" y1="1488" y2="1488" style="linewidth:W" x1="832" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="796" y="1488" type="pin gmii_txd[7:0]" />
+        <line x2="32" y1="1360" y2="1360" x1="0" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="36" y="1360" type="pin gmii_rx_clk" />
+        <line x2="32" y1="1392" y2="1392" x1="0" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="36" y="1392" type="pin gmii_rx_dv" />
+        <line x2="32" y1="1424" y2="1424" x1="0" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="36" y="1424" type="pin gmii_rx_er" />
+        <line x2="32" y1="1456" y2="1456" style="linewidth:W" x1="0" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="36" y="1456" type="pin gmii_rxd[7:0]" />
+        <line x2="32" y1="1488" y2="1488" x1="0" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="36" y="1488" type="pin gmii_col" />
+        <line x2="32" y1="1520" y2="1520" x1="0" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="36" y="1520" type="pin gmii_crs" />
+    </graph>
+</symbol>

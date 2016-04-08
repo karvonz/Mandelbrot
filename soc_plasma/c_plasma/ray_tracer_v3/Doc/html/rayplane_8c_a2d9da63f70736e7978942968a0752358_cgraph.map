@@ -1,0 +1,8 @@
+<map id="PlaneGetNormal" name="PlaneGetNormal">
+<area shape="rect" id="node2" href="$rayplane_8c.html#a97ed0fc8fa14f7aded4e91aa8f3ac879" title="Get a plane axis. " alt="" coords="189,5,291,32"/>
+<area shape="rect" id="node3" href="$raymath_8h.html#a0c3b96d5e78c8899245e367835c0e1b4" title="Set a 3D vector. " alt="" coords="189,56,291,83"/>
+<area shape="rect" id="node4" href="$raymath_8h.html#a075c2db2a273d9e2ab085f4cba6fbf9f" title="Normalize a 3D vector. " alt="" coords="171,107,309,133"/>
+<area shape="rect" id="node5" href="$raymath_8c.html#aa67fbe59543039467aa720334738e2a2" title="Compute the dot product between two vectors. " alt="" coords="364,81,465,108"/>
+<area shape="rect" id="node6" href="$raymath_8c.html#a414c0be0d1f209943c3ecbbae79002d2" title="Scale a 3D vector (multiply by a scalar) " alt="" coords="357,132,472,159"/>
+<area shape="rect" id="node7" href="$raymath_8c.html#a0c3b96d5e78c8899245e367835c0e1b4" title="Set a 3D vector. " alt="" coords="520,132,621,159"/>
+</map>

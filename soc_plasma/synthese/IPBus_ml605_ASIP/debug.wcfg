@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Z:/design/code_16200x6480/16k_GPU_device_6_8_6.parallel.IOs/synthese/ipbus_asip_ml507_working/tbench_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="attributes" />
+            <top_module name="conversion" />
+            <top_module name="math_real" />
+            <top_module name="mlite_pack" />
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_misc" />
+            <top_module name="std_logic_textio" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="tbench" />
+            <top_module name="textio" />
+            <top_module name="txt_util" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="104" />
+   <wvobject fp_name="/tbench/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/interrupt" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">interrupt</obj_property>
+      <obj_property name="ObjectShortName">interrupt</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/address" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">address[31:2]</obj_property>
+      <obj_property name="ObjectShortName">address[31:2]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/data_write" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data_write[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_write[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/data_read" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data_read[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_read[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/pause1" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">pause1</obj_property>
+      <obj_property name="ObjectShortName">pause1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/pause2" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">pause2</obj_property>
+      <obj_property name="ObjectShortName">pause2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/pause" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">pause</obj_property>
+      <obj_property name="ObjectShortName">pause</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/no_ddr_start" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">no_ddr_start</obj_property>
+      <obj_property name="ObjectShortName">no_ddr_start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/no_ddr_stop" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">no_ddr_stop</obj_property>
+      <obj_property name="ObjectShortName">no_ddr_stop</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/byte_we" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">byte_we[3:0]</obj_property>
+      <obj_property name="ObjectShortName">byte_we[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/uart_write" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">uart_write</obj_property>
+      <obj_property name="ObjectShortName">uart_write</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/gpioa_in" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">gpioa_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gpioa_in[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider35" type="divider">
+      <obj_property name="label">PCIe_Configuration</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/fifo_1_out_data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">fifo_1_out_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fifo_1_out_data[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/fifo_1_compteur" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">fifo_1_compteur[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fifo_1_compteur[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/fifo_1_read_en" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">fifo_1_read_en</obj_property>
+      <obj_property name="ObjectShortName">fifo_1_read_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/fifo_1_empty" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">fifo_1_empty</obj_property>
+      <obj_property name="ObjectShortName">fifo_1_empty</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/fifo_1_full" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">fifo_1_full</obj_property>
+      <obj_property name="ObjectShortName">fifo_1_full</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/fifo_1_valid" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">fifo_1_valid</obj_property>
+      <obj_property name="ObjectShortName">fifo_1_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider35" type="divider">
+      <obj_property name="label">PCIe_LDPC_data</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/fifo_d_out_data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">fifo_d_out_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">fifo_d_out_data[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/fifo_d_compteur" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">fifo_d_compteur[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fifo_d_compteur[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/fifo_d_read_en" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">fifo_d_read_en</obj_property>
+      <obj_property name="ObjectShortName">fifo_d_read_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/fifo_d_empty" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">fifo_d_empty</obj_property>
+      <obj_property name="ObjectShortName">fifo_d_empty</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/fifo_d_full" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">fifo_d_full</obj_property>
+      <obj_property name="ObjectShortName">fifo_d_full</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/fifo_d_valid" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">fifo_d_valid</obj_property>
+      <obj_property name="ObjectShortName">fifo_d_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider35" type="divider">
+      <obj_property name="label">PCIe_output_data</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/fifo_2_compteur" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">fifo_2_compteur[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fifo_2_compteur[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/fifo_2_in_data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">fifo_2_in_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fifo_2_in_data[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/fifo_2_write_en" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">fifo_2_write_en</obj_property>
+      <obj_property name="ObjectShortName">fifo_2_write_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/fifo_2_full" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">fifo_2_full</obj_property>
+      <obj_property name="ObjectShortName">fifo_2_full</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/fifo_2_empty" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">fifo_2_empty</obj_property>
+      <obj_property name="ObjectShortName">fifo_2_empty</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/fifo_2_valid" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">fifo_2_valid</obj_property>
+      <obj_property name="ObjectShortName">fifo_2_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider35" type="divider">
+      <obj_property name="label">PLASMA_PROCESSEUR</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/cpu_pause" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">cpu_pause</obj_property>
+      <obj_property name="ObjectShortName">cpu_pause</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/opcode" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">opcode[31:0]</obj_property>
+      <obj_property name="ObjectShortName">opcode[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u1_pc_next/pc_current" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pc_current[31:2]</obj_property>
+      <obj_property name="ObjectShortName">pc_current[31:2]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u1_pc_next/pc_future" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pc_future[31:2]</obj_property>
+      <obj_property name="ObjectShortName">pc_future[31:2]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/address" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">address[31:2]</obj_property>
+      <obj_property name="ObjectShortName">address[31:2]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/address_next" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">address_next[31:2]</obj_property>
+      <obj_property name="ObjectShortName">address_next[31:2]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/cpu_byte_we" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">cpu_byte_we[3:0]</obj_property>
+      <obj_property name="ObjectShortName">cpu_byte_we[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/cpu_data_w" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">cpu_data_w[31:0]</obj_property>
+      <obj_property name="ObjectShortName">cpu_data_w[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/cpu_data_r" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">cpu_data_r[31:0]</obj_property>
+      <obj_property name="ObjectShortName">cpu_data_r[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider35" type="divider">
+      <obj_property name="label">COPROCESSEUR_LDPC</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/ceonverter/i_clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">i_clk</obj_property>
+      <obj_property name="ObjectShortName">i_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/ceonverter/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/ceonverter/FIFO_1/i_row_counter" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i_row_counter[11:0]</obj_property>
+      <obj_property name="ObjectShortName">i_row_counter[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/ceonverter/FIFO_1/i_col_counter" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i_col_counter[4:0]</obj_property>
+      <obj_property name="ObjectShortName">i_col_counter[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/ceonverter/i_data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">i_data[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/ceonverter/i_empty" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">i_empty</obj_property>
+      <obj_property name="ObjectShortName">i_empty</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/ceonverter/i_alm_empty" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">i_alm_empty</obj_property>
+      <obj_property name="ObjectShortName">i_alm_empty</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/ceonverter/i_valid" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">i_valid</obj_property>
+      <obj_property name="ObjectShortName">i_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/ceonverter/read_next_in" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">read_next_in</obj_property>
+      <obj_property name="ObjectShortName">read_next_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/ceonverter/o_empty" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">o_empty</obj_property>
+      <obj_property name="ObjectShortName">o_empty</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/ceonverter/o_alm_empty" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">o_alm_empty</obj_property>
+      <obj_property name="ObjectShortName">o_alm_empty</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/ceonverter/o_full" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">o_full</obj_property>
+      <obj_property name="ObjectShortName">o_full</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider83" type="divider">
+      <obj_property name="label">New Divider</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/ceonverter/o_clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">o_clk</obj_property>
+      <obj_property name="ObjectShortName">o_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/ceonverter/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/ceonverter/FIFO_1/o_row_counter" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">o_row_counter[11:0]</obj_property>
+      <obj_property name="ObjectShortName">o_row_counter[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/ceonverter/o_data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">o_data[255:0]</obj_property>
+      <obj_property name="ObjectShortName">o_data[255:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/ceonverter/o_valid" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">o_valid</obj_property>
+      <obj_property name="ObjectShortName">o_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider35" type="divider">
+      <obj_property name="label">INPUT_MUX</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/c0/multi_fu/out_MUX/mode_exec" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">mode_exec</obj_property>
+      <obj_property name="ObjectShortName">mode_exec</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/c0/multi_fu/in_MUXs/compteur_pnode" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">compteur_pnode[11:0]</obj_property>
+      <obj_property name="ObjectShortName">compteur_pnode[11:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/c0/multi_fu/in_MUXs/cpt_write_node" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">cpt_write_node[8:0]</obj_property>
+      <obj_property name="ObjectShortName">cpt_write_node[8:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/c0/multi_fu/in_MUXs/write_en_bus" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">write_en_bus[31:0]</obj_property>
+      <obj_property name="ObjectShortName">write_en_bus[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/fifo_1_out_data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">fifo_1_out_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fifo_1_out_data[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/c0/multi_fu/in_MUXs/input_1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">input_1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">input_1[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/c0/multi_fu/in_MUXs/input_2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">input_2[255:0]</obj_property>
+      <obj_property name="ObjectShortName">input_2[255:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/c0/multi_fu/in_MUXs/input_1_bus" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">input_1_bus[1023:0]</obj_property>
+      <obj_property name="ObjectShortName">input_1_bus[1023:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider35" type="divider">
+      <obj_property name="label">RAMs_PNODE</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/c0/multi_fu/\fu_gen(7)\/ATOMIC_MEMORY/bloc_pnode_1/i_RAM_pNode/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/c0/multi_fu/\fu_gen(7)\/ATOMIC_MEMORY/bloc_pnode_1/i_RAM_pNode/clock" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clock</obj_property>
+      <obj_property name="ObjectShortName">clock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/c0/multi_fu/\fu_gen(7)\/ATOMIC_MEMORY/bloc_pnode_1/i_RAM_pNode/entree_pnode" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">entree_pnode[8:0]</obj_property>
+      <obj_property name="ObjectShortName">entree_pnode[8:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/c0/multi_fu/\fu_gen(7)\/ATOMIC_MEMORY/bloc_pnode_1/i_RAM_pNode/cpt_read_pnode" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">cpt_read_pnode[11:0]</obj_property>
+      <obj_property name="ObjectShortName">cpt_read_pnode[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/c0/multi_fu/\fu_gen(7)\/ATOMIC_MEMORY/bloc_pnode_1/i_RAM_pNode/cpt_write_pnode" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">cpt_write_pnode[11:0]</obj_property>
+      <obj_property name="ObjectShortName">cpt_write_pnode[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/c0/multi_fu/\fu_gen(0)\/ATOMIC_MEMORY/bloc_pnode_1/i_RAM_pNode/ram_pnode" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ram_pnode[0:2815]</obj_property>
+      <obj_property name="ObjectShortName">ram_pnode[0:2815]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/c0/multi_fu/\fu_gen(1)\/ATOMIC_MEMORY/bloc_pnode_1/i_RAM_pNode/ram_pnode" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ram_pnode[0:2815]</obj_property>
+      <obj_property name="ObjectShortName">ram_pnode[0:2815]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/c0/multi_fu/\fu_gen(2)\/ATOMIC_MEMORY/bloc_pnode_1/i_RAM_pNode/ram_pnode" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ram_pnode[0:2815]</obj_property>
+      <obj_property name="ObjectShortName">ram_pnode[0:2815]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/c0/multi_fu/\fu_gen(3)\/ATOMIC_MEMORY/bloc_pnode_1/i_RAM_pNode/ram_pnode" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ram_pnode[0:2815]</obj_property>
+      <obj_property name="ObjectShortName">ram_pnode[0:2815]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/c0/multi_fu/\fu_gen(4)\/ATOMIC_MEMORY/bloc_pnode_1/i_RAM_pNode/ram_pnode" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ram_pnode[0:2815]</obj_property>
+      <obj_property name="ObjectShortName">ram_pnode[0:2815]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/c0/multi_fu/\fu_gen(5)\/ATOMIC_MEMORY/bloc_pnode_1/i_RAM_pNode/ram_pnode" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ram_pnode[0:2815]</obj_property>
+      <obj_property name="ObjectShortName">ram_pnode[0:2815]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/c0/multi_fu/\fu_gen(6)\/ATOMIC_MEMORY/bloc_pnode_1/i_RAM_pNode/ram_pnode" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ram_pnode[0:2815]</obj_property>
+      <obj_property name="ObjectShortName">ram_pnode[0:2815]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/c0/multi_fu/\fu_gen(7)\/ATOMIC_MEMORY/bloc_pnode_1/i_RAM_pNode/ram_pnode" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ram_pnode[0:2815]</obj_property>
+      <obj_property name="ObjectShortName">ram_pnode[0:2815]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider35" type="divider">
+      <obj_property name="label">RAMs_BENES</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider35" type="divider">
+      <obj_property name="label">RAMs_LLR</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/c0/multi_fu/\fu_gen(0)\/ATOMIC_MEMORY/ram_valeurs_node/ram_node" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ram_node[0:511]</obj_property>
+      <obj_property name="ObjectShortName">ram_node[0:511]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/c0/multi_fu/\fu_gen(1)\/ATOMIC_MEMORY/ram_valeurs_node/ram_node" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ram_node[0:511]</obj_property>
+      <obj_property name="ObjectShortName">ram_node[0:511]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/c0/multi_fu/\fu_gen(2)\/ATOMIC_MEMORY/ram_valeurs_node/ram_node" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ram_node[0:511]</obj_property>
+      <obj_property name="ObjectShortName">ram_node[0:511]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/c0/multi_fu/\fu_gen(3)\/ATOMIC_MEMORY/ram_valeurs_node/ram_node" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ram_node[0:511]</obj_property>
+      <obj_property name="ObjectShortName">ram_node[0:511]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/c0/multi_fu/\fu_gen(4)\/ATOMIC_MEMORY/ram_valeurs_node/ram_node" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ram_node[0:511]</obj_property>
+      <obj_property name="ObjectShortName">ram_node[0:511]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/c0/multi_fu/\fu_gen(5)\/ATOMIC_MEMORY/ram_valeurs_node/ram_node" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ram_node[0:511]</obj_property>
+      <obj_property name="ObjectShortName">ram_node[0:511]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/c0/multi_fu/\fu_gen(6)\/ATOMIC_MEMORY/ram_valeurs_node/ram_node" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ram_node[0:511]</obj_property>
+      <obj_property name="ObjectShortName">ram_node[0:511]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/c0/multi_fu/\fu_gen(7)\/ATOMIC_MEMORY/ram_valeurs_node/ram_node" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ram_node[0:511]</obj_property>
+      <obj_property name="ObjectShortName">ram_node[0:511]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider35" type="divider">
+      <obj_property name="label">OUTPUT_MUX</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/c0/multi_fu/out_MUX/mode_exec" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">mode_exec</obj_property>
+      <obj_property name="ObjectShortName">mode_exec</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/c0/multi_fu/out_MUX/output_1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">output_1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">output_1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tbench/u1_plasma/u1_cpu/u61_alu/ldpc/c0/multi_fu/out_MUX/output_1_bus" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">output_1_bus[255:0]</obj_property>
+      <obj_property name="ObjectShortName">output_1_bus[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider35" type="divider">
+      <obj_property name="label">PCIe_output_data</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+</wave_config>

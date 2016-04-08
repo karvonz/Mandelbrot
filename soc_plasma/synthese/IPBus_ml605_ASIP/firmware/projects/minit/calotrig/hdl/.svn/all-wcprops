@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/projects/minit/calotrig/hdl
+END
+ClusterOverlapFilter_ClusterOverlapFilter.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/projects/minit/calotrig/hdl/ClusterOverlapFilter_ClusterOverlapFilter.vhd
+END
+AlgorithmTop_AlgorithmTop.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/projects/minit/calotrig/hdl/AlgorithmTop_AlgorithmTop.vhd
+END
+ClusterWeight_ClusterWeight.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/projects/minit/calotrig/hdl/ClusterWeight_ClusterWeight.vhd
+END
+EPIM_EPIM.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/projects/minit/calotrig/hdl/EPIM_EPIM.vhd
+END
+types_pkg.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/projects/minit/calotrig/hdl/types_pkg.vhd
+END
+TowerPruning_TowerPruning.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/projects/minit/calotrig/hdl/TowerPruning_TowerPruning.vhd
+END
+components_pkg.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/projects/minit/calotrig/hdl/components_pkg.vhd
+END
+EHAdder_EHAdder.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/projects/minit/calotrig/hdl/EHAdder_EHAdder.vhd
+END
+TowerLinearizer_TowerLinearizer.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/projects/minit/calotrig/hdl/TowerLinearizer_TowerLinearizer.vhd
+END
+linkinterface_linkinterface.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/projects/minit/calotrig/hdl/linkinterface_linkinterface.vhd
+END
+constants_pkg.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/projects/minit/calotrig/hdl/constants_pkg.vhd
+END
+Comparitor_Comparitor.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/projects/minit/calotrig/hdl/Comparitor_Comparitor.vhd
+END

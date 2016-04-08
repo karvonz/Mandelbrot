@@ -1,0 +1,44 @@
+
+- méthode de profiling ? gprof ?
+- possible de passer en char plutot que int ? => faire du SIMD 
+- tps de calcul d'un pixel ~ 7000-15000 cc
+
+	 - attention my_printf = 1000 cycles !
+	 
+	 C_pixel ~ 2-2.5 * C_raytrace
+	 C_ray_trace = N_S*C_ISS +N_P*C_ISP
+	 
+	 C_ISS ~ 900 (ca passe à plus de 2000 si jamais on tape dans une sphere)
+	 C_ISP ~ 200-250
+	 
+Profiling:
+- mesurer le tps de la boucle principale, puis descendre 
+
+
+- leur faire raffiner une des fonctions en virgule fixe ?
+- passer la multiplication en 32 bits ?
+- passer la multiplication en combinatoire
+- leur faire coder des instructions composées en VHDL
+- leur faire inclure une IP sqrt VHDL
+
+Modif:
+- FixMul64 retourne un fixed plutot qu'un fixed64
+- ajout isa_custom : mult 64bit => on passe de 260000 à 170000 cycles
+
+
+
+- mettre le bon code couleur => testé en simu, testé en synthèse
+- 
+- mettre .vhd VGA dans le bon repertoire
+- refaire projet ISE proprement
+
+
+minicom --device /dev/ttyUSB1
+
+x simu linux pour voir l'image
+x profiling du code avec les timer => on optimize le calcule sur l'intersection sphere
+x on modelise le calcul au tableau (DFG)
+x on identifie une optimisation, on concoit son architecture
+x on la rajoute dans un copro et on vérifie en simu que c'est bien équivalent
+x on lance le debugger pour voir comment ca marche
+- on lance la synthèse

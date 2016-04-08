@@ -1,0 +1,6 @@
+<map id="Raytrace" name="Raytrace">
+<area shape="rect" id="node2" href="$rayobject_8h.html#a07163c81c5ae4159950c28fcaa835fc2" title="Get the number of objects given a type. " alt="" coords="128,31,299,57"/>
+<area shape="rect" id="node5" href="$rayintersect_8h.html#a1e360dcbfb3c2b89c18fb0f1dc03a084" title="Test if an intersection between a ray and a object occurs. " alt="" coords="138,81,289,108"/>
+<area shape="rect" id="node3" href="$raysphere_8h.html#ac10362606babe4fdfd1225750810046f" title="Return the total number of spheres in the current scene. " alt="" coords="347,5,465,32"/>
+<area shape="rect" id="node4" href="$rayplane_8h.html#ae013daff4214176716319374caa20a6d" title="Return the total number of planes in the current scene. " alt="" coords="351,56,461,83"/>
+</map>

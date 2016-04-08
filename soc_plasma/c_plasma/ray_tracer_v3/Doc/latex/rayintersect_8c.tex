@@ -1,0 +1,83 @@
+\hypertarget{rayintersect_8c}{}\section{Sources/rayintersect.c File Reference}
+\label{rayintersect_8c}\index{Sources/rayintersect.\+c@{Sources/rayintersect.\+c}}
+
+
+Raytracer ray intersection.  
+
+
+{\ttfamily \#include \char`\"{}../\+Includes/rayintersect.\+h\char`\"{}}\\*
+Include dependency graph for rayintersect.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rayintersect_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{rayintersect_8c_a1e360dcbfb3c2b89c18fb0f1dc03a084}{Intersection\+Ray\+Object} (int type, int idx, \hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} r, \hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} o, \hyperlink{rayintersect_8h_ad703c2567e842b299a9e6569790d090a}{rayintersect\+\_\+t} $\ast$info)
+\begin{DoxyCompactList}\small\item\em Test if an intersection between a ray and a object occurs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Raytracer ray intersection. 
+
+\begin{DoxyAuthor}{Author}
+J. Crenne \& C. Leroux 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+February 2016 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\index{rayintersect.\+c@{rayintersect.\+c}!Intersection\+Ray\+Object@{Intersection\+Ray\+Object}}
+\index{Intersection\+Ray\+Object@{Intersection\+Ray\+Object}!rayintersect.\+c@{rayintersect.\+c}}
+\subsubsection[{\texorpdfstring{Intersection\+Ray\+Object(int type, int idx, vec3\+\_\+t r, vec3\+\_\+t o, rayintersect\+\_\+t $\ast$info)}{IntersectionRayObject(int type, int idx, vec3_t r, vec3_t o, rayintersect_t *info)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Intersection\+Ray\+Object (
+\begin{DoxyParamCaption}
+\item[{int}]{type, }
+\item[{int}]{idx, }
+\item[{{\bf vec3\+\_\+t}}]{r, }
+\item[{{\bf vec3\+\_\+t}}]{o, }
+\item[{{\bf rayintersect\+\_\+t} $\ast$}]{info}
+\end{DoxyParamCaption}
+)}\hypertarget{rayintersect_8c_a1e360dcbfb3c2b89c18fb0f1dc03a084}{}\label{rayintersect_8c_a1e360dcbfb3c2b89c18fb0f1dc03a084}
+
+
+Test if an intersection between a ray and a object occurs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Object type ( O\+B\+J\+E\+C\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+P\+H\+E\+RE or O\+B\+J\+E\+C\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+L\+A\+NE ) \\
+\hline
+{\em idx} & Object identifier \\
+\hline
+{\em r} & Ray direction \\
+\hline
+{\em o} & Ray origin \\
+\hline
+{\em info} & A pointer holding a structure of intersection data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if an intersection occurs, false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 59 of file rayintersect.\+c.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rayintersect_8c_a1e360dcbfb3c2b89c18fb0f1dc03a084_icgraph}
+\end{center}
+\end{figure}
+
+

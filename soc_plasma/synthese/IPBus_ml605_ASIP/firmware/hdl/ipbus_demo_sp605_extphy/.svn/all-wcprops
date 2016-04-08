@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/example_designs/hdl/ipbus_demo_sp605_extphy
+END
+top_sp605.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/example_designs/hdl/ipbus_demo_sp605_extphy/top_sp605.vhd
+END
+oldtop.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/example_designs/hdl/ipbus_demo_sp605_extphy/oldtop.vhd
+END

@@ -1,0 +1,152 @@
+# vsim -do {set NumericStdNoWarnings 1; set StdArithNoWarnings 1;} -quiet tbench 
+# set NumericStdNoWarnings 1 
+# 1
+#  set StdArithNoWarnings 1 
+# 1
+#  
+add wave -position end  sim:/tbench/u1_plasma/u5a_coproc/clock
+add wave -position end  sim:/tbench/u1_plasma/u5a_coproc/reset
+add wave -position end  sim:/tbench/u1_plasma/u5a_coproc/INPUT_1
+add wave -position end  sim:/tbench/u1_plasma/u5a_coproc/INPUT_1_valid
+add wave -position end  sim:/tbench/u1_plasma/u5a_coproc/OUTPUT_1
+add wave -position end  sim:/tbench/u1_plasma/u5a_coproc/R0
+add wave -position end  sim:/tbench/u1_plasma/u5a_coproc/R1
+add wave -position end  sim:/tbench/u1_plasma/u5a_coproc/R2
+add wave -position end  sim:/tbench/u1_plasma/u5a_coproc/R3
+add wave -position end  sim:/tbench/u1_plasma/u5a_coproc/R4
+add wave -position end  sim:/tbench/u1_plasma/u5a_coproc/R5
+add wave -position end  sim:/tbench/u1_plasma/u5a_coproc/Temp01
+add wave -position end  sim:/tbench/u1_plasma/u5a_coproc/Temp23
+add wave -position end  sim:/tbench/u1_plasma/u5a_coproc/Temp45
+add wave -position end  sim:/tbench/u1_plasma/u5a_coproc/mul01
+add wave -position end  sim:/tbench/u1_plasma/u5a_coproc/mul23
+add wave -position end  sim:/tbench/u1_plasma/u5a_coproc/mul45
+add wave -position end  sim:/tbench/u1_plasma/u5a_coproc/reg_mul01
+add wave -position end  sim:/tbench/u1_plasma/u5a_coproc/reg_mul23
+add wave -position end  sim:/tbench/u1_plasma/u5a_coproc/reg_mul45
+add wave -position end  sim:/tbench/u1_plasma/u5a_coproc/sum1
+add wave -position end  sim:/tbench/u1_plasma/u5a_coproc/out_tmp
+add wave -position end  sim:/tbench/u1_plasma/u5a_coproc/counter
+add wave -position end  sim:/tbench/u1_plasma/u5a_coproc/pipe_enable
+restart
+run -all
+# ** Note: COUCOU
+#    Time: 0 ns  Iteration: 0  Instance: /tbench/pcie_i
+# a=3072
+# 
+# a_hw=3072
+# 
+# a=3072
+# 
+# a_hw=3072
+# 
+# a=5944
+# 
+# a_hw=5944
+# 
+# a=5944
+# 
+# a_hw=5944
+# 
+# a=3068
+# 
+# a_hw=3068
+# 
+# a=3068
+# 
+# a_hw=3068
+# 
+# a=5908
+# 
+# a_hw=5908
+# 
+# a=5908
+# 
+# a_hw=5908
+# 
+# a=3064
+# 
+# a_hw=3064
+# 
+# a=3064
+# 
+# a_hw=3064
+# 
+# a=5872
+# 
+# a_hw=5872
+# 
+# a=5872
+# 
+# a_hw=5872
+# 
+# a=3060
+# 
+# a_hw=3060
+# 
+# a=3060
+# 
+# a_hw=3060
+# 
+# a=5836
+# 
+# a_hw=5836
+# 
+# a=5836
+# 
+# a_hw=5836
+# 
+# a=3056
+# 
+# a_hw=3056
+# 
+# a=3056
+# 
+# a_hw=3056
+# 
+# a=5801
+# 
+# a_hw=5801
+# 
+# a=5801
+# 
+# a_hw=5801
+# 
+# a=3052
+# 
+# a_hw=3052
+# 
+# a=3052
+# 
+# a_hw=3052
+# 
+# a=5765
+# 
+# a_hw=5765
+# 
+# a=5765
+# 
+# a_hw=5765
+# 
+# a=3048
+# 
+# a_hw=3048
+# 
+# a=3048
+# 
+# a_hw=3048
+# 
+# a=5730
+# 
+# a_hw=5730
+# 
+# a=5730
+# 
+# a_hw=5730
+# 
+# a=3044
+# 
+# a_hw=3044
+# 
+# Break key hit 
+# Simulation stop requested.

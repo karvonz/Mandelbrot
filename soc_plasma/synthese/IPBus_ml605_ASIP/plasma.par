@@ -1,0 +1,136 @@
+Release 13.4 par O.87xd (nt)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+VMWARE-IMAGE::  Thu Nov 01 16:23:54 2012
+
+par -w -intstyle ise -ol high -xe n -mt 2 plasma_map.ncd plasma.ncd plasma.pcf 
+
+
+Constraints file: plasma.pcf.
+Loading device for application Rf_Device from file '5vfx70t.nph' in environment C:\Xilinx\13.4\ISE_DS\ISE\.
+   "plasma" is an NCD, version 3.2, device xc5vfx70t, package ff1136, speed -1
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+INFO:Security:56 - Part 'xc5vfx70t' is not a WebPack part.
+WARNING:Security:42 - Your license support version '2012.12' for ISE expires in 29 days after which you will not qualify
+for Xilinx software updates or new releases.
+
+----------------------------------------------------------------------
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 0.950 Volts. (default - Range: 0.950 to 1.050 Volts)
+
+INFO:Par:282 - No user timing constraints were detected or you have set the option to ignore timing constraints ("par
+   -x"). Place and Route will run in "Performance Evaluation Mode" to automatically improve the performance of all
+   internal clocks in this design. Because there are not defined timing requirements, a timing score will not be
+   reported in the PAR report in this mode. The PAR timing summary will list the performance achieved for each clock.
+   Note: For the fastest runtime, set the effort level to "std".  For best performance, set the effort level to "high".
+
+Device speed data version:  "PRODUCTION 1.73 2012-01-07".
+
+
+
+Device Utilization Summary:
+
+   Number of BUFGs                           1 out of 32      3%
+   Number of External IOBs                 167 out of 640    26%
+      Number of LOCed IOBs                   0 out of 167     0%
+
+   Number of RAMB36_EXPs                     8 out of 148     5%
+   Number of Slices                        891 out of 11200   7%
+   Number of Slice Registers              1613 out of 44800   3%
+      Number used as Flip Flops           1613
+      Number used as Latches                 0
+      Number used as LatchThrus              0
+
+   Number of Slice LUTS                   3075 out of 44800   6%
+   Number of Slice LUT-Flip Flop pairs    3395 out of 44800   7%
+
+
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
+
+WARNING:Par:545 - Multi-threading ("-mt" option) is not supported for the Performance Evaluation Mode. PAR will use only
+   one processor.
+
+Starting initial Timing Analysis.  REAL time: 16 secs 
+Finished initial Timing Analysis.  REAL time: 16 secs 
+
+Starting Router
+
+
+Phase  1  : 21037 unrouted;      REAL time: 18 secs 
+
+Phase  2  : 19865 unrouted;      REAL time: 19 secs 
+
+Phase  3  : 8216 unrouted;      REAL time: 35 secs 
+
+Phase  4  : 10655 unrouted; (Par is working to improve performance)     REAL time: 1 mins 4 secs 
+
+Updating file: plasma.ncd with current fully routed design.
+
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 2 mins 41 secs 
+
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 2 mins 41 secs 
+
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 2 mins 41 secs 
+
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 2 mins 41 secs 
+
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 2 mins 41 secs 
+
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 2 mins 45 secs 
+Total REAL time to Router completion: 2 mins 45 secs 
+Total CPU time to Router completion: 2 mins 48 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+INFO:Par:459 - The Clock Report is not displayed in the non timing-driven mode.
+Timing Score: 0 (Setup: 0, Hold: 0)
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net CLK | SETUP       |         N/A|    18.100ns|     N/A|           0
+  _BUFGP                                    | HOLD        |     0.459ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
+   constraint is not analyzed due to the following: No paths covered by this 
+   constraint; Other constraints intersect with this constraint; or This 
+   constraint was disabled by a Path Tracing Control. Please run the Timespec 
+   Interaction Report (TSI) via command line (trce tsi) or Timing Analyzer GUI.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 3 mins 42 secs 
+Total CPU time to PAR completion: 3 mins 45 secs 
+
+Peak Memory Usage:  354 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 1
+Number of info messages: 2
+
+Writing design to file plasma.ncd
+
+
+
+PAR done!

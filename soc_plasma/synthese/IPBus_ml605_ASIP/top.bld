@@ -1,0 +1,245 @@
+Release 13.4 ngdbuild O.87xd (nt)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx\13.4\ISE_DS\ISE\bin\nt\unwrapped\ngdbuild.exe -intstyle
+ise -dd _ngo -sd ipcore_dir -nt timestamp -uc
+firmware/example_designs/ucf/virtex5_fxt_eval.ucf -p xc6vlx240t-ff1156-1 top.ngc
+top.ngd
+
+Reading NGO file "C:/IPBus/ml605_from_ml507/top.ngc" ...
+Loading design module "ipcore_dir/dpbr8.ngc"...
+Loading design module "ipcore_dir/dpbr_8_32.ngc"...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file
+"firmware/example_designs/ucf/virtex5_fxt_eval.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+WARNING:ConstraintSystem:56 - Constraint <TIMEGRP "gmii_rx" OFFSET = IN 2 ns
+   VALID 2 ns BEFORE "GMII_RX_CLK" RISING;>
+   [firmware/example_designs/ucf/virtex5_fxt_eval.ucf(79)]: Unable to find an
+   active 'TimeGrp' or 'TNM' or 'TPSync' constraint named 'gmii_rx'.
+
+WARNING:ConstraintSystem:56 - Constraint <TIMEGRP "gmii_rx" OFFSET = IN 2 ns
+   VALID 2 ns BEFORE "GMII_RX_CLK" RISING;>
+   [firmware/example_designs/ucf/virtex5_fxt_eval.ucf(94)]: Unable to find an
+   active 'TimeGrp' or 'TNM' or 'TPSync' constraint named 'gmii_rx'.
+
+INFO:ConstraintSystem:178 - TNM 'SYSCLK_P', used in period specification
+   'TS_SYSCLK_P', was traced into MMCM_ADV instance MMCM_ADV_INST. The following
+   new TNM groups and period specifications were generated at the MMCM_ADV
+   output(s): 
+   CLKOUT1: <TIMESPEC TS_CLOCKS_CLOCK1_CLKOUT1 = PERIOD "CLOCKS_CLOCK1_CLKOUT1"
+   TS_SYSCLK_P / 0.625 HIGH 50% INPUT_JITTER 50 ps>
+
+INFO:ConstraintSystem:178 - TNM 'SYSCLK_P', used in period specification
+   'TS_SYSCLK_P', was traced into MMCM_ADV instance MMCM_ADV_INST. The following
+   new TNM groups and period specifications were generated at the MMCM_ADV
+   output(s): 
+   CLKOUT0: <TIMESPEC TS_CLOCKS_CLOCK1_CLKOUT0 = PERIOD "CLOCKS_CLOCK1_CLKOUT0"
+   TS_SYSCLK_P HIGH 50% INPUT_JITTER 50 ps>
+
+WARNING:NgdBuild:1345 - The constraint <TIMESPEC "TS_GMII_RX_CLK" = PERIOD
+   "gmii_rx_clk" 125MHz;>
+   [firmware/example_designs/ucf/virtex5_fxt_eval.ucf(77)] is overridden by the
+   constraint <TIMESPEC "TS_GMII_RX_CLK" = PERIOD "gmii_rx_clk" 125MHz;>
+   [firmware/example_designs/ucf/virtex5_fxt_eval.ucf(93)]. The overriden
+   constraint usually comes from the input netlist or ncf files. Please set
+   XIL_NGDBUILD_CONSTR_OVERRIDE_ERROR to promote this message to an error.
+Done...
+
+Checking expanded design ...
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].IPB_MASTER_OUT_IPB_ADDR<31>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].IPB_MASTER_OUT_IPB_ADDR<30>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].IPB_MASTER_OUT_IPB_ADDR<29>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].IPB_MASTER_OUT_IPB_ADDR<28>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].IPB_MASTER_OUT_IPB_ADDR<27>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].IPB_MASTER_OUT_IPB_ADDR<26>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].IPB_MASTER_OUT_IPB_ADDR<25>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].IPB_MASTER_OUT_IPB_ADDR<24>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].IPB_MASTER_OUT_IPB_ADDR<23>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].IPB_MASTER_OUT_IPB_ADDR<22>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].IPB_MASTER_OUT_IPB_ADDR<21>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].IPB_MASTER_OUT_IPB_ADDR<20>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].IPB_MASTER_OUT_IPB_ADDR<19>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].IPB_MASTER_OUT_IPB_ADDR<18>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].IPB_MASTER_OUT_IPB_ADDR<17>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].IPB_MASTER_OUT_IPB_ADDR<16>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].OOB_TOMI_DONE' has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].OOB_TOMI_WE' has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].OOB_MOTI_RDATA<31>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].OOB_MOTI_RDATA<30>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].OOB_MOTI_RDATA<29>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].OOB_MOTI_RDATA<28>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].OOB_MOTI_RDATA<27>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].OOB_MOTI_RDATA<26>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].OOB_MOTI_RDATA<25>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].OOB_MOTI_RDATA<24>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].OOB_MOTI_RDATA<23>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].OOB_MOTI_RDATA<22>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].OOB_MOTI_RDATA<21>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].OOB_MOTI_RDATA<20>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].OOB_MOTI_RDATA<19>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].OOB_MOTI_RDATA<18>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].OOB_MOTI_RDATA<17>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].OOB_MOTI_RDATA<16>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].OOB_MOTI_RDATA<15>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].OOB_MOTI_RDATA<14>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].OOB_MOTI_RDATA<13>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].OOB_MOTI_RDATA<12>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].OOB_MOTI_RDATA<11>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].OOB_MOTI_RDATA<10>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].OOB_MOTI_RDATA<9>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].OOB_MOTI_RDATA<8>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].OOB_MOTI_RDATA<7>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].OOB_MOTI_RDATA<6>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].OOB_MOTI_RDATA<5>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].OOB_MOTI_RDATA<4>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].OOB_MOTI_RDATA<3>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].OOB_MOTI_RDATA<2>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].OOB_MOTI_RDATA<1>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].OOB_MOTI_RDATA<0>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'O_UART_OBUF' has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].IPB_MASTER_IN_IPB_ERR' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].OOB_MOTI_ADDR_RST' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'CLOCKS/ONEHZ' has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].IPBUS/MOTI_UDP_ADDR_RST' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].SLAVES/IPBR[1]_IPB_ERR' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].SLAVES/IPBR[0]_IPB_RDATA<31>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].SLAVES/IPBR[0]_IPB_RDATA<30>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].SLAVES/IPBR[0]_IPB_RDATA<29>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].SLAVES/IPBR[0]_IPB_RDATA<28>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].SLAVES/IPBR[0]_IPB_RDATA<27>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].SLAVES/IPBR[0]_IPB_RDATA<26>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].SLAVES/IPBR[0]_IPB_RDATA<25>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].SLAVES/IPBR[0]_IPB_RDATA<24>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].SLAVES/IPBR[0]_IPB_RDATA<23>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].SLAVES/IPBR[0]_IPB_RDATA<22>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].SLAVES/IPBR[0]_IPB_RDATA<21>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].SLAVES/IPBR[0]_IPB_RDATA<20>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].SLAVES/IPBR[0]_IPB_RDATA<19>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].SLAVES/IPBR[0]_IPB_RDATA<18>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].SLAVES/IPBR[0]_IPB_RDATA<17>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].SLAVES/IPBR[0]_IPB_RDATA<16>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].SLAVES/IPBR[0]_IPB_RDATA<15>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].SLAVES/IPBR[0]_IPB_RDATA<14>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].SLAVES/IPBR[0]_IPB_RDATA<13>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].SLAVES/IPBR[0]_IPB_RDATA<12>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].SLAVES/IPBR[0]_IPB_RDATA<11>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].SLAVES/IPBR[0]_IPB_RDATA<10>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].SLAVES/IPBR[0]_IPB_RDATA<9>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].SLAVES/IPBR[0]_IPB_RDATA<8>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].SLAVES/IPBR[0]_IPB_RDATA<7>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].SLAVES/IPBR[0]_IPB_RDATA<6>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].SLAVES/IPBR[0]_IPB_RDATA<5>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].SLAVES/IPBR[0]_IPB_RDATA<4>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].SLAVES/IPBR[0]_IPB_RDATA<3>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].SLAVES/IPBR[0]_IPB_RDATA<2>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].SLAVES/IPBR[0]_IPB_RDATA<1>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].SLAVES/IPBR[0]_IPB_RDATA<0>'
+   has no driver
+WARNING:NgdBuild:452 - logical net 'IPBUS_GEN[0].SLAVES/IPBR[0]_IPB_ERR' has no
+   driver
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:  92
+
+Total memory usage is 110984 kilobytes
+
+Writing NGD file "top.ngd" ...
+Total REAL time to NGDBUILD completion:  8 sec
+Total CPU time to NGDBUILD completion:   7 sec
+
+Writing NGDBUILD log file "top.bld"...

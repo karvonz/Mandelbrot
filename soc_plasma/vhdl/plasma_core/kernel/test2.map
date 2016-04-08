@@ -1,0 +1,735 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                0x0000000000000000       0x10
+                0x0000000000000000       0x10 rtos.o
+                0x0000000000000000                entry
+                0x0000000000000000                _ftext = .
+                0x0000000000000010       0x10 libc.o
+                0x0000000000000020       0x10 uart.o
+                0x0000000000000030       0x10 rtos_test.o
+                0x000000000000003c                interrupt_service_routine
+                0x0000000000000040       0x10 math.o
+                0x0000000000000050       0x10 tcpip.o
+                0x0000000000000060       0x10 http.o
+                0x0000000000000070       0x10 netutil.o
+                0x0000000000000080       0x10 filesys.o
+                0x0000000000000128                OS_AsmInterruptEnable
+                0x000000000000013c                OS_AsmInterruptInit
+                0x0000000000000178                setjmp
+                0x00000000000001b0                longjmp
+                0x00000000000001e8                OS_AsmMult
+                0x00000000000001fc                OS_Syscall
+                0x0000000000000570                OS_HeapAlternate
+                0x0000000000000578                OS_HeapRegister
+                0x000000000000059c                OS_ThreadSelf
+                0x00000000000005a8                OS_ThreadTime
+                0x00000000000005b4                OS_ThreadInfoSet
+                0x00000000000005d4                OS_ThreadInfoGet
+                0x00000000000005fc                OS_ThreadPriorityGet
+                0x0000000000000608                OS_ThreadPrioritySet
+                0x0000000000000688                OS_ThreadProcessId
+                0x0000000000000694                OS_ThreadTick
+                0x00000000000007ac                OS_SemaphorePend
+                0x00000000000009a0                OS_ThreadSleep
+                0x00000000000009b0                OS_ThreadCpuLock
+                0x00000000000009d8                OS_SemaphorePost
+                0x0000000000000ae8                OS_HeapMalloc
+                0x0000000000000c60                OS_SemaphoreCreate
+                0x0000000000000d00                OS_HeapCreate
+                0x0000000000000da8                OS_HeapFree
+                0x0000000000000f44                OS_SemaphoreDelete
+                0x0000000000000f88                OS_HeapDestroy
+                0x0000000000000f94                OS_ThreadExit
+                0x0000000000001058                OS_ThreadCreate
+                0x000000000000121c                OS_MutexCreate
+                0x0000000000001298                OS_MutexDelete
+                0x00000000000012c8                OS_MutexPend
+                0x0000000000001360                OS_MutexPost
+                0x0000000000001420                OS_MQueueCreate
+                0x0000000000001520                OS_MQueueDelete
+                0x0000000000001550                OS_MQueueSend
+                0x0000000000001654                OS_MQueueGet
+                0x00000000000017a4                OS_Job
+                0x0000000000001870                OS_TimerCreate
+                0x0000000000001940                OS_TimerCallback
+                0x0000000000001948                OS_TimerStop
+                0x0000000000001a14                OS_TimerStart
+                0x0000000000001d38                OS_TimerDelete
+                0x0000000000001d60                OS_InterruptRegister
+                0x0000000000001d98                OS_InterruptStatus
+                0x0000000000001da8                OS_InterruptMaskSet
+                0x0000000000001df0                OS_InterruptMaskClear
+                0x0000000000001e40                OS_InterruptServiceRoutine
+                0x0000000000001f84                OS_Init
+                0x00000000000020f8                OS_Start
+                0x0000000000002108                OS_Assert
+                0x0000000000002110                main
+                0x0000000000002178                strcpy2
+                0x000000000000219c                strncpy
+                0x00000000000021dc                strcat2
+                0x000000000000222c                strncat2
+                0x00000000000022a0                strcmp2
+                0x00000000000022c8                strncmp
+                0x0000000000002304                strstr2
+                0x0000000000002380                strlen2
+                0x00000000000023a0                memcpy2
+                0x000000000000240c                memmove
+                0x0000000000002474                memcmp2
+                0x00000000000024ac                memset2
+                0x00000000000024d8                abs2
+                0x00000000000024f0                rand
+                0x000000000000253c                srand
+                0x0000000000002544                strtol
+                0x0000000000002620                atoi2
+                0x000000000000262c                itoa
+                0x000000000000271c                sprintf
+                0x0000000000002b24                sscanf
+                0x0000000000002d8c                BufferCreate
+                0x0000000000002e14                BufferWrite
+                0x0000000000002ee8                BufferRead
+                0x000000000000330c                UartInit
+                0x0000000000003360                UartWrite
+                0x0000000000003388                UartRead
+                0x00000000000033ac                UartWriteData
+                0x0000000000003408                UartReadData
+                0x0000000000003460                UartPrintf
+                0x000000000000358c                UartPrintfPoll
+                0x0000000000003718                UartPrintfCritical
+                0x0000000000003860                UartPrintfNull
+                0x0000000000003868                UartScanf
+                0x00000000000039ec                UartPacketConfig
+                0x00000000000039fc                UartPacketSend
+                0x0000000000003a10                Led
+                0x0000000000003a2c                puts
+                0x0000000000003ab4                getch
+                0x0000000000003ac0                kbhit
+                0x00000000000042dc                TestMath
+                0x0000000000004628                TestSyscall
+                0x0000000000004664                MainThread
+                0x0000000000004e5c                __negsf2
+                0x0000000000004e68                __addsf3
+                0x0000000000004fa4                __subsf3
+                0x0000000000004fb0                __mulsf3
+                0x00000000000050a4                __divsf3
+                0x0000000000005250                __fixsfsi
+                0x00000000000052ac                __floatsisf
+                0x0000000000005350                FP_Cmp
+                0x00000000000053e4                __ltsf2
+                0x00000000000053ec                __lesf2
+                0x00000000000053f4                __gtsf2
+                0x00000000000053fc                __gesf2
+                0x0000000000005404                __eqsf2
+                0x0000000000005410                __nesf2
+                0x000000000000541c                FP_Sqrt
+                0x0000000000005548                FP_Cos
+                0x00000000000056e4                FP_Sin
+                0x0000000000005708                FP_Atan
+                0x0000000000005954                FP_Atan2
+                0x00000000000059f8                FP_Exp
+                0x0000000000005b44                FP_Log
+                0x0000000000005cc4                FP_Pow
+                0x0000000000006258                IPFrameGet
+                0x0000000000006cec                MyPacketGet
+                0x0000000000006cf4                IPAddressSelf
+                0x0000000000006d20                IPProcessEthernetPacket
+                0x0000000000007b48                IPInit
+                0x0000000000007c84                IPOpen
+                0x0000000000007f88                IPWriteFlush
+                0x0000000000007ff4                IPWrite
+                0x00000000000082bc                IPRead
+                0x00000000000084d0                IPClose
+                0x00000000000086c0                IPPrintf
+                0x0000000000008800                IPTick
+                0x0000000000008cc4                IPResolve
+                0x0000000000008e48                HttpServer
+                0x00000000000092ec                HttpInit
+                0x0000000000009338                HtmlInit
+                0x000000000000b178                FtpdInit
+                0x000000000000b190                FtpTransfer
+                0x000000000000b3d0                TftpdInit
+                0x000000000000b3e8                TftpTransfer
+                0x000000000000b5b8                TelnetInit
+                0x000000000000b5d4                ConsoleInit
+                0x000000000000b810                OS_fread
+                0x000000000000bc04                OS_fwrite
+                0x000000000000bd88                OS_fseek
+                0x000000000000be4c                OS_fclose
+                0x000000000000bf54                OS_fdelete
+                0x000000000000c09c                OS_fopen
+                0x000000000000c2fc                OS_fmkdir
+                0x000000000000c344                OS_flength
+                0x000000000000c350                OS_fdir
+                0x000000000000c3e4                DirRecursive
+                0x000000000000c500                OS_ftest
+                0x000000000000c884       0x7d rtos.o
+                0x000000000000c884                PROVIDE (__etext, .)
+                0x000000000000c884                PROVIDE (_etext, .)
+                0x000000000000c884                PROVIDE (etext, .)
+                0x000000000000c904       0x1d uart.o
+                0x000000000000c924      0x3b6 rtos_test.o
+                0x000000000000cdb8        0x7 math.o
+                0x000000000000cdc0       0xb2 tcpip.o
+                0x000000000000cea8      0x170 http.o
+                0x000000000000d204      0x31f netutil.o
+                0x000000000000d538       0xc4 filesys.o
+                0x000000000000d5fc                . = .
+                0x000000000000d5fc                _fdata = .
+                0x000000000000d5fc                PROVIDE (__fini_array_end, .)
+                0x000000000000d5fc                PROVIDE (__fini_array_start, .)
+                0x000000000000d5fc                PROVIDE (__init_array_end, .)
+                0x000000000000d5fc                PROVIDE (__init_array_start, .)
+                0x000000000000d5fc                PROVIDE (__preinit_array_end, .)
+                0x000000000000d5fc                PROVIDE (__preinit_array_start, .)
+                0x000000000000d6f4                . = .
+                0x000000000000d6f8                macAddress
+                0x000000000000d768                IPVerbose
+                0x000000000000d784                __bss_start = .
+                0x000000000000d784                _edata = .
+                0x000000000000d784                _fbss = .
+                0x000000000000d784                PROVIDE (edata, .)
+                0x000000000000d868                CountOk
+                0x000000000000d86c                CountError
+                0x000000000000d870                Global
+                0x00000000000156f0                _gp = (ALIGN (0x10) + 0x7ff0)
+                0x000000000001dfd0                InitStack
+                0x000000000001e1d0                . = ALIGN ((. != 0x0)?0x4:0x1)
+                0x000000000001e1d0                . = ALIGN (0x4)
+                0x000000000001e1d0                . = ALIGN (0x4)
+                0x000000000001e1d0                _end = .
+                0x000000000001e1d0                PROVIDE (end, .)
+                0x0000000000400000                . = 0x400000
+                0x0000000000400000                PROVIDE (__executable_start, 0x400000)
+                0x0000000000400000                PROVIDE (__rela_iplt_end, .)
+                0x0000000000400000                PROVIDE (__rela_iplt_start, .)
+                0x0000000000400000                PROVIDE (__rel_iplt_end, .)
+                0x0000000000400000                PROVIDE (__rel_iplt_start, .)
+                                         0x12 (size before relaxing)
+                                        0x178 (size before relaxing)
+                                         0x1c (size before relaxing)
+                                         0x20 (size before relaxing)
+                                        0x34c (size before relaxing)
+                                        0x3d8 (size before relaxing)
+                                         0x80 (size before relaxing)
+                                         0xdc (size before relaxing)
+                                         0xdc (size before relaxing)
+Address of section .text set to 0x0
+Allocating common symbols
+ .bss           0x000000000000d880        0x0 boot.o
+ .bss           0x000000000000d880    0x100b8 rtos.o
+.bss            0x000000000000d880    0x10950
+ .bss           0x000000000001d938        0x0 libc.o
+ .bss           0x000000000001d938      0x400 uart.o
+ .bss           0x000000000001dd38        0x0 math.o
+ .bss           0x000000000001dd38        0x0 rtos_test.o
+ .bss           0x000000000001dd38       0x64 tcpip.o
+ .bss           0x000000000001dd9c        0x0 http.o
+ .bss           0x000000000001dd9c      0x1f4 netutil.o
+ .bss           0x000000000001df90       0x3c filesys.o
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ *(.comment)
+.comment        0x0000000000000000       0x11
+ .comment       0x0000000000000000       0x11 rtos.o
+ .comment       0x0000000000000000       0x12 filesys.o
+ .comment       0x0000000000000000       0x12 http.o
+ .comment       0x0000000000000000       0x12 libc.o
+ .comment       0x0000000000000000       0x12 math.o
+ .comment       0x0000000000000000       0x12 netutil.o
+ .comment       0x0000000000000000       0x12 rtos_test.o
+ .comment       0x0000000000000000       0x12 tcpip.o
+ .comment       0x0000000000000000       0x12 uart.o
+ *(COMMON)
+ COMMON         0x000000000001dfd0      0x200 boot.o
+Common symbol       size              file
+CountError          0x4               uart.o
+CountOk             0x4               uart.o
+ *crtbegin?.o(.ctors)
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.dtors)
+ *crtbegin.o(.dtors)
+ *(.ctors)
+.ctors
+ .data          0x000000000000d5fc        0x0 boot.o
+ .data          0x000000000000d5fc        0x0 libc.o
+ .data          0x000000000000d5fc        0x0 math.o
+ .data          0x000000000000d5fc        0x0 rtos.o
+ .data          0x000000000000d5fc        0x0 rtos_test.o
+ .data          0x000000000000d5fc        0x0 uart.o
+ .data          0x000000000000d5fc       0x20 tcpip.o
+.data           0x000000000000d5fc       0xf8
+ .data          0x000000000000d61c        0x0 http.o
+ .data          0x000000000000d61c       0xd8 netutil.o
+ .data          0x000000000000d6f4        0x0 filesys.o
+ *(.data1)
+.data1
+ *(.data .data.* .gnu.linkonce.d.*)
+.data.rel.ro
+ *(.data.rel.ro* .gnu.linkonce.d.rel.ro.*)
+ *(.data.rel.ro.local* .gnu.linkonce.d.rel.ro.local.*)
+ *(.debug)
+.debug
+.debug_abbrev
+ *(.debug_abbrev .zdebug_abbrev)
+.debug_aranges
+ *(.debug_aranges .zdebug_aranges)
+.debug_frame
+ *(.debug_frame .zdebug_frame)
+.debug_funcnames
+ *(.debug_funcnames .zdebug_funcnames)
+.debug_info
+ *(.debug_info .gnu.linkonce.wi.* .zdebug_info)
+.debug_line
+ *(.debug_line .zdebug_line)
+.debug_loc
+ *(.debug_loc .zdebug_loc)
+.debug_macinfo
+ *(.debug_macinfo .zdebug_macinfo)
+.debug_pubnames
+ *(.debug_pubnames .zdebug_pubnames)
+.debug_pubtypes
+ *(.debug_pubtypes .zdebug_pubtypes)
+.debug_ranges
+ *(.debug_ranges .zdebug_ranges)
+.debug_sfnames
+ *(.debug_sfnames .zdebug_sfnames)
+.debug_srcinfo
+ *(.debug_srcinfo .zdebug_srcinfo)
+.debug_str
+ *(.debug_str .zdebug_str)
+.debug_typenames
+ *(.debug_typenames .zdebug_typenames)
+.debug_varnames
+ *(.debug_varnames .zdebug_varnames)
+.debug_weaknames
+ *(.debug_weaknames .zdebug_weaknames)
+*default*        0x0000000000000000 0xffffffffffffffff
+/DISCARD/
+Discarded input sections
+ *(.dtors)
+.dtors
+ *(.dynamic)
+.dynamic
+ *(.dynbss)
+ *(.dynsbss)
+ *(.dynstr)
+.dynstr
+ *(.dynsym)
+.dynsym
+ *(.eh_frame)
+ *(.eh_frame)
+.eh_frame
+.eh_frame
+ *(.eh_frame_hdr)
+.eh_frame_hdr
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .ctors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
+ *fill*         0x000000000000c901        0x3 00
+ *fill*         0x000000000000c921        0x3 00
+ *fill*         0x000000000000ccda        0x2 00
+ *fill*         0x000000000000cdbf        0x1 00
+ *fill*         0x000000000000ce72        0x2 00
+ *fill*         0x000000000000d523        0x1 00
+ *fill*         0x000000000001dfcc        0x4 00
+ *(.fini)
+.fini
+ *(.fini_array)
+.fini_array     0x000000000000d5fc        0x0
+ *(.gcc_compiled_long32)
+.gcc_compiled_long32
+ *(.gcc_compiled_long64)
+.gcc_compiled_long64
+.gcc_except_table
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+ *(.gcc_except_table .gcc_except_table.*)
+Global              0x4               rtos_test.o
+ .gnu.attributes
+ .gnu.attributes
+ .gnu.attributes
+ .gnu.attributes
+ .gnu.attributes
+ .gnu.attributes
+ .gnu.attributes
+ .gnu.attributes
+ .gnu.attributes
+ *(.gnu.attributes)
+.gnu.attributes
+ *(.gnu_debuglink)
+ *(.gnu.hash)
+.gnu.hash
+ *(.gnu.lto_*)
+ *(.gnu.version)
+.gnu.version
+ *(.gnu.version_d)
+.gnu.version_d
+ *(.gnu.version_r)
+.gnu.version_r
+ *(.gnu.warning)
+ *(.got)
+.got
+ *(.got.plt)
+.got.plt
+ *(.gptab.bss)
+ *(.gptab.data)
+ *(.gptab.sbss)
+.gptab.sbss
+ *(.gptab.sdata)
+.gptab.sdata
+ *(.hash)
+.hash
+ *(.init)
+.init
+ *(.init_array)
+.init_array     0x000000000000d5fc        0x0
+InitStack           0x200             boot.o
+ *(.interp)
+.interp
+ *(.iplt)
+.iplt
+ *(.jcr)
+.jcr
+ *(.line)
+.line
+Linker script and memory map
+ *(.lit4)
+.lit4
+ *(.lit8)
+.lit8
+LOAD boot.o
+LOAD filesys.o
+LOAD http.o
+LOAD libc.o
+LOAD math.o
+LOAD netutil.o
+LOAD rtos.o
+LOAD rtos_test.o
+LOAD tcpip.o
+LOAD uart.o
+ *(.mdebug.abi32)
+.mdebug.abi32   0x000000000001e1d0        0x0
+ .mdebug.abi32  0x000000000001e1d0        0x0 filesys.o
+ .mdebug.abi32  0x000000000001e1d0        0x0 http.o
+ .mdebug.abi32  0x000000000001e1d0        0x0 libc.o
+ .mdebug.abi32  0x000000000001e1d0        0x0 math.o
+ .mdebug.abi32  0x000000000001e1d0        0x0 netutil.o
+ .mdebug.abi32  0x000000000001e1d0        0x0 rtos.o
+ .mdebug.abi32  0x000000000001e1d0        0x0 rtos_test.o
+ .mdebug.abi32  0x000000000001e1d0        0x0 tcpip.o
+ .mdebug.abi32  0x000000000001e1d0        0x0 uart.o
+ *(.mdebug.abi64)
+.mdebug.abi64
+ *(.mdebug.abiN32)
+.mdebug.abiN32
+ *(.mdebug.abiO64)
+.mdebug.abiO64
+ *(.mdebug.eabi32)
+.mdebug.eabi32
+ *(.mdebug.eabi64)
+.mdebug.eabi64
+Memory Configuration
+ *(.mips16.call.*)
+ *(.mips16.fn.*)
+Name             Origin             Length             Attributes
+ *(.note.gnu.build-id)
+.note.gnu.build-id
+ *(.note.GNU-stack)
+OUTPUT(test.axf elf32-bigmips)
+ .pdr           0x0000000000000000      0x100 boot.o
+.pdr            0x0000000000000000     0x1ae0
+ .pdr           0x0000000000000100      0x6e0 rtos.o
+ .pdr           0x00000000000007e0      0x280 libc.o
+ .pdr           0x0000000000000a60      0x280 uart.o
+ .pdr           0x0000000000000ce0      0x180 rtos_test.o
+ .pdr           0x0000000000000e60      0x2c0 math.o
+ .pdr           0x0000000000001120      0x360 tcpip.o
+ .pdr           0x0000000000001480       0x80 http.o
+ .pdr           0x0000000000001500      0x400 netutil.o
+ .pdr           0x0000000000001900      0x1e0 filesys.o
+ *(.plt)
+.plt
+ *(.preinit_array)
+.preinit_array  0x000000000000d5fc        0x0
+ *(.reginfo)
+ .reginfo       0x0000000000000000       0x18 filesys.o
+ .reginfo       0x0000000000000000       0x18 http.o
+ .reginfo       0x0000000000000000       0x18 libc.o
+ .reginfo       0x0000000000000000       0x18 math.o
+ .reginfo       0x0000000000000000       0x18 netutil.o
+ .reginfo       0x0000000000000000       0x18 rtos.o
+ .reginfo       0x0000000000000000       0x18 rtos_test.o
+ .reginfo       0x0000000000000000       0x18 tcpip.o
+ .reginfo       0x0000000000000000       0x18 uart.o
+.reginfo        0x0000000000400000       0x18
+ .reginfo       0x0000000000400000       0x18 boot.o
+.rela.bss
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+ *(.rela.ctors)
+.rela.ctors
+.rela.data
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+.rela.data.rel.ro
+ *(.rela.data.rel.ro* .rela.gnu.linkonce.d.rel.ro.*)
+ *(.rela.dtors)
+.rela.dtors
+ *(.rela.fini)
+.rela.fini
+ *(.rela.got)
+.rela.got
+ *(.rela.init)
+.rela.init
+ *(.rela.iplt)
+.rela.iplt      0x0000000000400000        0x0
+ *(.rela.plt)
+.rela.plt
+.rela.rodata
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+.rela.sbss
+.rela.sbss2
+ *(.rela.sbss2 .rela.sbss2.* .rela.gnu.linkonce.sb2.*)
+ *(.rela.sbss .rela.sbss.* .rela.gnu.linkonce.sb.*)
+.rela.sdata
+.rela.sdata2
+ *(.rela.sdata2 .rela.sdata2.* .rela.gnu.linkonce.s2.*)
+ *(.rela.sdata .rela.sdata.* .rela.gnu.linkonce.s.*)
+.rela.tbss
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+.rela.tdata
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+.rela.text
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+.rel.bss
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+ *(.rel.ctors)
+.rel.ctors
+.rel.data
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+.rel.data.rel.ro
+ *(.rel.data.rel.ro* .rel.gnu.linkonce.d.rel.ro.*)
+ *(.rel.dtors)
+.rel.dtors
+ *(.rel.dyn)
+.rel.dyn
+ *(.rel.fini)
+.rel.fini
+ *(.rel.got)
+.rel.got
+ *(.rel.init)
+.rel.init
+ *(.rel.iplt)
+.rel.iplt       0x0000000000400000        0x0
+ *(.rel.plt)
+.rel.plt
+.rel.rodata
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+.rel.sbss
+.rel.sbss2
+ *(.rel.sbss2 .rel.sbss2.* .rel.gnu.linkonce.sb2.*)
+ *(.rel.sbss .rel.sbss.* .rel.gnu.linkonce.sb.*)
+.rel.sdata
+.rel.sdata2
+ *(.rel.sdata2 .rel.sdata2.* .rel.gnu.linkonce.s2.*)
+ *(.rel.sdata .rel.sdata.* .rel.gnu.linkonce.s.*)
+.rel.tbss
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+.rel.tdata
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+.rel.text
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+.rodata         0x000000000000c884      0xd78
+ .rodata        0x000000000000ccdc       0xdc rtos_test.o
+ .rodata        0x000000000000ce74       0x34 tcpip.o
+ .rodata        0x000000000000d018      0x1ec http.o
+ .rodata        0x000000000000d524       0x14 netutil.o
+ *(.rodata1)
+.rodata1
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata.str1.4
+ .rodata.str1.4
+ .rodata.str1.4
+ .rodata.str1.4
+ .rodata.str1.4
+ .rodata.str1.4
+ .rodata.str1.4
+ .rodata.str1.4
+ .sbss          0x000000000000d784       0x44 rtos.o
+.sbss           0x000000000000d784       0xf0
+ .sbss          0x000000000000d7c8       0x38 uart.o
+ .sbss          0x000000000000d800       0x4c tcpip.o
+ .sbss          0x000000000000d84c        0x8 http.o
+ .sbss          0x000000000000d854       0x10 netutil.o
+ .sbss          0x000000000000d864        0x4 filesys.o
+.sbss2
+ *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
+ *(.sbss .sbss.* .gnu.linkonce.sb.*)
+ *(.scommon)
+ .scommon       0x000000000000d868        0x8 uart.o
+ .scommon       0x000000000000d870        0x4 rtos_test.o
+ .sdata         0x000000000000d6f4        0x4 libc.o
+.sdata          0x000000000000d6f4       0x90
+ .sdata         0x000000000000d6f8       0x1c rtos_test.o
+ .sdata         0x000000000000d714       0x54 math.o
+ .sdata         0x000000000000d768       0x1c tcpip.o
+.sdata2
+ *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
+ *(.sdata .sdata.* .gnu.linkonce.s.*)
+ *(SORT(.ctors.*))
+ *(SORT(.dtors.*))
+ *(SORT(.fini_array.*))
+ *(SORT(.init_array.*))
+ *(.stab)
+.stab
+ *(.stab.excl)
+.stab.excl
+ *(.stab.exclstr)
+.stab.exclstr
+ *(.stab.index)
+.stab.index
+ *(.stab.indexstr)
+.stab.indexstr
+ *(.stabstr)
+.stabstr
+.tbss
+ *(.tbss .tbss.* .gnu.linkonce.tb.*)
+ *(.tcommon)
+.tdata
+ *(.tdata .tdata.* .gnu.linkonce.td.*)
+ .text          0x0000000000000000      0x208 boot.o
+.text           0x0000000000000000     0xc884
+ .text          0x0000000000000208     0x1f70 rtos.o
+ .text          0x0000000000002178      0xc14 libc.o
+ .text          0x0000000000002d8c      0xd54 uart.o
+ .text          0x0000000000003ae0     0x137c rtos_test.o
+ .text          0x0000000000004e5c      0xe94 math.o
+ .text          0x0000000000005cf0     0x3110 tcpip.o
+ .text          0x0000000000008e00      0x548 http.o
+ .text          0x0000000000009348     0x22b8 netutil.o
+ .text          0x000000000000b600     0x1284 filesys.o
+ *(.text.exit .text.exit.*)
+ *(.text.hot .text.hot.*)
+ *(.text.startup .text.startup.*)
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ *(.text.unlikely .text.*_unlikely)

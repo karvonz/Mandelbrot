@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="90">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="../ray_tracer_v3" name="0">
+      <df name="Includes">
+        <in>glrenderer.h</in>
+        <in>plasmaCoprocessors.h</in>
+        <in>plasmaIsaCustom.h</in>
+        <in>plasmaMisc.h</in>
+        <in>plasmaMyPrint.h</in>
+        <in>plasmaSoPCDesign.h</in>
+        <in>rayintersect.h</in>
+        <in>rayintersect.h</in>
+        <in>raylight.h</in>
+        <in>raylight.h</in>
+        <in>raymath.h</in>
+        <in>raymath.h</in>
+        <in>raymathfix.h</in>
+        <in>raymathfix.h</in>
+        <in>rayobject.h</in>
+        <in>rayobject.h</in>
+        <in>rayplane.h</in>
+        <in>rayplane.h</in>
+        <in>rayrender.h</in>
+        <in>rayrender.h</in>
+        <in>raysphere.h</in>
+        <in>raysphere.h</in>
+        <in>raytypes.h</in>
+        <in>raytypes.h</in>
+        <in>text.h</in>
+      </df>
+      <df name="Includes_GL">
+        <in>glrenderer.h</in>
+        <in>text.h</in>
+      </df>
+      <df name="Sources">
+        <in>glrenderer.c</in>
+        <in>main.c</in>
+        <in>rayintersect.c</in>
+        <in>raylight.c</in>
+        <in>raymath.c</in>
+        <in>raymathfix.c</in>
+        <in>rayobject.c</in>
+        <in>rayplane.c</in>
+        <in>rayrender.c</in>
+        <in>raysphere.c</in>
+        <in>text.c</in>
+      </df>
+      <df name="Sources_GL">
+        <in>glrenderer.c</in>
+        <in>text.c</in>
+      </df>
+    </df>
+  </logicalFolder>
+  <projectmakefile>../../testbench/tb_soc_plasma/makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>2</platform>
+      </toolsSet>
+      <compile>
+        <compiledirpicklist>
+          <compiledirpicklistitem>.</compiledirpicklistitem>
+          <compiledirpicklistitem>${AUTO_FOLDER}</compiledirpicklistitem>
+        </compiledirpicklist>
+        <compiledir>${AUTO_FOLDER}</compiledir>
+        <compilecommandpicklist>
+          <compilecommandpicklistitem>${MAKE} ${ITEM_NAME}.o</compilecommandpicklistitem>
+          <compilecommandpicklistitem>${AUTO_COMPILE}</compilecommandpicklistitem>
+        </compilecommandpicklist>
+        <compilecommand>${AUTO_COMPILE}</compilecommand>
+      </compile>
+      <dbx_gdbdebugger version="1">
+        <gdb_pathmaps>
+        </gdb_pathmaps>
+        <gdb_interceptlist>
+          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
+        </gdb_interceptlist>
+        <gdb_options>
+          <DebugOptions>
+          </DebugOptions>
+        </gdb_options>
+        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
+      </dbx_gdbdebugger>
+      <nativedebugger version="1">
+        <engine>gdb</engine>
+      </nativedebugger>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>"${OUTPUT_PATH}"</runcommand>
+        <rundir>../../testbench/tb_soc_plasma</rundir>
+        <buildfirst>false</buildfirst>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+  </confs>
+</configurationDescriptor>

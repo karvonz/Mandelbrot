@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=/home/cleroux/ownCloud/ray_tracer/soc_plasma/synthese/IPBus_ml605_ASIP/impact.xsl
+OUTFILE=/home/cleroux/ownCloud/ray_tracer/soc_plasma/synthese/IPBus_ml605_ASIP/impact.xsl
+FAMILY=Single
+PART=Single
+WORKINGDIR=/home/cleroux/ownCloud/ray_tracer/soc_plasma/synthese/IPBus_ml605_ASIP
+LICENSE=iMPACT
+USER_INFO=iMPACT

@@ -1,0 +1,45 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$text_8h.html#a4366af149a529aa1eadd274f77775684" title="Init text resources. " alt="" coords="159,284,223,311"/>
+<area shape="rect" id="node3" href="$glrenderer_8h.html#aa420dfa2394ec1f353f4cde5d288e466" title="Init OpenGL renderer. " alt="" coords="137,335,245,361"/>
+<area shape="rect" id="node4" href="$glrenderer_8h.html#a7351deec81dbcc17908db0bf7ea1ab41" title="Setup OpenGL texture output. " alt="" coords="107,385,275,412"/>
+<area shape="rect" id="node7" href="$raymath_8h.html#a0c3b96d5e78c8899245e367835c0e1b4" title="Set a 3D vector. " alt="" coords="932,613,1033,640"/>
+<area shape="rect" id="node8" href="$rayrender_8h.html#acc66fa75cd6a184f46af374fc8004d2c" title="Setup the render context. " alt="" coords="351,689,449,716"/>
+<area shape="rect" id="node9" href="$rayrender_8h.html#afd5f3dfa0756d697a86e818cdbf49a56" title="Reset the render context. " alt="" coords="143,715,240,741"/>
+<area shape="rect" id="node10" href="$raysphere_8h.html#a8302a4a5bcd3589308b809744019650d" title="Add a sphere to the current scene. " alt="" coords="148,765,235,792"/>
+<area shape="rect" id="node11" href="$raysphere_8h.html#a0c92d9eb3842a709c714c1f758187b29" title="Set a sphere position, its radius, its color and its reflection property. " alt="" coords="150,816,233,843"/>
+<area shape="rect" id="node12" href="$rayplane_8h.html#a2496f928d63b409b68e1276c0fd9bd56" title="Add a plane to the current scene. " alt="" coords="152,867,231,893"/>
+<area shape="rect" id="node13" href="$rayplane_8h.html#abb59de43588ed0617065276581ef4688" title="Set a plane axis, its distance to camera and its color. " alt="" coords="154,917,229,944"/>
+<area shape="rect" id="node14" href="$rayrender_8h.html#a5cbf8abb7997119c522463eb111b2a3e" title="Render the current scene. " alt="" coords="104,436,279,463"/>
+<area shape="rect" id="node40" href="$glrenderer_8h.html#a791abd861c589ba6fc6408981293ff26" title="Init OpenGL renderer for 2d drawing. " alt="" coords="130,968,253,995"/>
+<area shape="rect" id="node41" href="$rayrender_8h.html#a436830dff9fbce05c931c5a6d8d5366d" title="Render the current scene. " alt="" coords="160,1019,223,1045"/>
+<area shape="rect" id="node42" href="$glrenderer_8h.html#ae8d1fe8eb46550797404ab9c666d72ba" title="Draw rendered image. " alt="" coords="114,1069,269,1096"/>
+<area shape="rect" id="node43" href="$text_8h.html#a15d84d3b2e3537f3f8019630209449d9" title="Draw a text on screen. " alt="" coords="153,1120,229,1147"/>
+<area shape="rect" id="node44" href="$text_8h.html#ac2975924071e907fd6c15d7c4310eb50" title="Free text resources. " alt="" coords="145,1171,237,1197"/>
+<area shape="rect" id="node5" href="$glrenderer_8c.html#a3a43011a027c2187d104f917d0e3a40a" title="Draw a pixel. " alt="" coords="327,5,473,32"/>
+<area shape="rect" id="node6" href="$glrenderer_8c.html#adf47c4b95572660f36ee8264b1d63580" title="Draw a pixel. " alt="" coords="532,5,681,32"/>
+<area shape="rect" id="node15" href="$rayrender_8c.html#aa411224771e850633c369beacd19965a" title="Raytrace" alt="" coords="363,411,437,437"/>
+<area shape="rect" id="node20" href="$raymath_8h.html#a414c0be0d1f209943c3ecbbae79002d2" title="Scale a 3D vector (multiply by a scalar) " alt="" coords="549,56,664,83"/>
+<area shape="rect" id="node22" href="$raysphere_8h.html#aac374b086db079dd05b2b3c953abf4e8" title="Get the reflection property of a sphere. " alt="" coords="329,512,471,539"/>
+<area shape="rect" id="node23" href="$rayrender_8c.html#a850af53283a7801d99dd1c9e5ff39c60" title="Reflect" alt="" coords="369,284,431,311"/>
+<area shape="rect" id="node29" href="$raymath_8h.html#afc53ea0adde49d6b23d3d20f7242ce3b" title="Subtract two 3D vectors. " alt="" coords="931,199,1035,225"/>
+<area shape="rect" id="node33" href="$raymath_8h.html#a1d9b3e20abf08441155772741c0ef939" title="Add two 3D vectors. " alt="" coords="1105,111,1209,137"/>
+<area shape="rect" id="node34" href="$raylight_8h.html#a233268c67064dbaf7faecaa4397ae31b" title="Get light contribution. " alt="" coords="356,360,444,387"/>
+<area shape="rect" id="node35" href="$rayrender_8c.html#aca31119008a3d66567390bb1a3231a9f" title="RenderGetColor" alt="" coords="549,664,664,691"/>
+<area shape="rect" id="node16" href="$rayobject_8h.html#a07163c81c5ae4159950c28fcaa835fc2" title="Get the number of objects given a type. " alt="" coords="521,423,692,449"/>
+<area shape="rect" id="node19" href="$rayintersect_8h.html#a1e360dcbfb3c2b89c18fb0f1dc03a084" title="Test if an intersection between a ray and a object occurs. " alt="" coords="531,473,682,500"/>
+<area shape="rect" id="node17" href="$raysphere_8h.html#ac10362606babe4fdfd1225750810046f" title="Return the total number of spheres in the current scene. " alt="" coords="743,512,862,539"/>
+<area shape="rect" id="node18" href="$rayplane_8h.html#ae013daff4214176716319374caa20a6d" title="Return the total number of planes in the current scene. " alt="" coords="747,461,858,488"/>
+<area shape="rect" id="node21" href="$raymath_8c.html#a0c3b96d5e78c8899245e367835c0e1b4" title="Set a 3D vector. " alt="" coords="1263,149,1364,176"/>
+<area shape="rect" id="node24" href="$rayobject_8h.html#ad5b91bc5eba77d5f29d82147b63bd30f" title="Get an object normal. " alt="" coords="545,360,668,387"/>
+<area shape="rect" id="node26" href="$raymath_8h.html#a075c2db2a273d9e2ab085f4cba6fbf9f" title="Normalize a 3D vector. " alt="" coords="913,307,1052,333"/>
+<area shape="rect" id="node32" href="$raymath_8h.html#aa67fbe59543039467aa720334738e2a2" title="Compute the dot product between two vectors. " alt="" coords="556,259,657,285"/>
+<area shape="rect" id="node25" href="$raysphere_8h.html#a1df175e29c72bbd229d8c972b4f3fd58" title="Get a sphere normal. " alt="" coords="740,259,865,285"/>
+<area shape="rect" id="node30" href="$rayplane_8h.html#a2d9da63f70736e7978942968a0752358" title="Get a plane normal. " alt="" coords="744,360,861,387"/>
+<area shape="rect" id="node27" href="$raymath_8c.html#aa67fbe59543039467aa720334738e2a2" title="Compute the dot product between two vectors. " alt="" coords="1107,307,1208,333"/>
+<area shape="rect" id="node28" href="$raymath_8c.html#a414c0be0d1f209943c3ecbbae79002d2" title="Scale a 3D vector (multiply by a scalar) " alt="" coords="1100,249,1215,276"/>
+<area shape="rect" id="node31" href="$rayplane_8c.html#a97ed0fc8fa14f7aded4e91aa8f3ac879" title="Get a plane axis. " alt="" coords="931,360,1034,387"/>
+<area shape="rect" id="node36" href="$rayrender_8c.html#a7bcd9f4840dfc55cacb2e1ead3855f89" title="RenderFilterColor" alt="" coords="741,664,864,691"/>
+<area shape="rect" id="node37" href="$rayobject_8h.html#a85b5e2864495dc8d6fb2089fd6ec183e" title="Get an object color. " alt="" coords="747,765,858,792"/>
+<area shape="rect" id="node38" href="$raysphere_8h.html#a5dd3152fdefb949ae232ee8d7d011cb6" title="Get the color of a sphere in the current scene. " alt="" coords="925,740,1040,767"/>
+<area shape="rect" id="node39" href="$rayplane_8h.html#a24796f2ce83ad2b6c54b7e128d2bfb79" title="Get a plane color. " alt="" coords="929,791,1036,817"/>
+</map>

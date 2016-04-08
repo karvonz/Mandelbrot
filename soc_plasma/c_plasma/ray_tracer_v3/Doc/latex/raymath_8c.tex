@@ -1,0 +1,369 @@
+\hypertarget{raymath_8c}{}\section{Sources/raymath.c File Reference}
+\label{raymath_8c}\index{Sources/raymath.\+c@{Sources/raymath.\+c}}
+
+
+Raytracer math.  
+
+
+{\ttfamily \#include \char`\"{}../\+Includes/raymath.\+h\char`\"{}}\\*
+Include dependency graph for raymath.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{raymath_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{raymath_8h_aa97c1f529dc5a11a78758184c84a39c9}{number} \hyperlink{raymath_8c_ad23db858056b973907f7dfc34cd430e5}{Math\+Clamp} (\hyperlink{raymath_8h_aa97c1f529dc5a11a78758184c84a39c9}{number} d, \hyperlink{raymath_8h_aa97c1f529dc5a11a78758184c84a39c9}{number} min, \hyperlink{raymath_8h_aa97c1f529dc5a11a78758184c84a39c9}{number} max)
+\begin{DoxyCompactList}\small\item\em Clamp a number between a range. \end{DoxyCompactList}\item 
+bool \hyperlink{raymath_8c_a4f748dcf42de8f0879bf0ff7ef9f4f36}{Math\+Is\+Odd} (int x)
+\begin{DoxyCompactList}\small\item\em Get the parity of a integer. \end{DoxyCompactList}\item 
+\hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} \hyperlink{raymath_8c_a0c3b96d5e78c8899245e367835c0e1b4}{Math\+Vec3\+Set} (\hyperlink{raymath_8h_aa97c1f529dc5a11a78758184c84a39c9}{number} x, \hyperlink{raymath_8h_aa97c1f529dc5a11a78758184c84a39c9}{number} y, \hyperlink{raymath_8h_aa97c1f529dc5a11a78758184c84a39c9}{number} z)
+\begin{DoxyCompactList}\small\item\em Set a 3D vector. \end{DoxyCompactList}\item 
+\hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} \hyperlink{raymath_8c_a1d9b3e20abf08441155772741c0ef939}{Math\+Vec3\+Add} (\hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} a, \hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} b)
+\begin{DoxyCompactList}\small\item\em Add two 3D vectors. \end{DoxyCompactList}\item 
+\hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} \hyperlink{raymath_8c_afc53ea0adde49d6b23d3d20f7242ce3b}{Math\+Vec3\+Sub} (\hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} a, \hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} b)
+\begin{DoxyCompactList}\small\item\em Subtract two 3D vectors. \end{DoxyCompactList}\item 
+\hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} \hyperlink{raymath_8c_a414c0be0d1f209943c3ecbbae79002d2}{Math\+Vec3\+Scale} (\hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} a, \hyperlink{raymath_8h_aa97c1f529dc5a11a78758184c84a39c9}{number} c)
+\begin{DoxyCompactList}\small\item\em Scale a 3D vector (multiply by a scalar) \end{DoxyCompactList}\item 
+\hyperlink{raymath_8h_aa97c1f529dc5a11a78758184c84a39c9}{number} \hyperlink{raymath_8c_aa67fbe59543039467aa720334738e2a2}{Math\+Vec3\+Dot} (\hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} a, \hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} b)
+\begin{DoxyCompactList}\small\item\em Compute the dot product between two vectors. \end{DoxyCompactList}\item 
+\hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} \hyperlink{raymath_8c_a075c2db2a273d9e2ab085f4cba6fbf9f}{Math\+Vec3\+Normalize} (\hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} v)
+\begin{DoxyCompactList}\small\item\em Normalize a 3D vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Raytracer math. 
+
+\begin{DoxyAuthor}{Author}
+J. Crenne \& C. Leroux 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+February 2016 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\index{raymath.\+c@{raymath.\+c}!Math\+Clamp@{Math\+Clamp}}
+\index{Math\+Clamp@{Math\+Clamp}!raymath.\+c@{raymath.\+c}}
+\subsubsection[{\texorpdfstring{Math\+Clamp(number d, number min, number max)}{MathClamp(number d, number min, number max)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf number} Math\+Clamp (
+\begin{DoxyParamCaption}
+\item[{{\bf number}}]{d, }
+\item[{{\bf number}}]{min, }
+\item[{{\bf number}}]{max}
+\end{DoxyParamCaption}
+)}\hypertarget{raymath_8c_ad23db858056b973907f7dfc34cd430e5}{}\label{raymath_8c_ad23db858056b973907f7dfc34cd430e5}
+
+
+Clamp a number between a range. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & number to clamp \\
+\hline
+{\em min} & minimum number range \\
+\hline
+{\em max} & maximum number range \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+clamped number 
+\end{DoxyReturn}
+
+
+Definition at line 12 of file raymath.\+c.
+
+\index{raymath.\+c@{raymath.\+c}!Math\+Is\+Odd@{Math\+Is\+Odd}}
+\index{Math\+Is\+Odd@{Math\+Is\+Odd}!raymath.\+c@{raymath.\+c}}
+\subsubsection[{\texorpdfstring{Math\+Is\+Odd(int x)}{MathIsOdd(int x)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Math\+Is\+Odd (
+\begin{DoxyParamCaption}
+\item[{int}]{x}
+\end{DoxyParamCaption}
+)}\hypertarget{raymath_8c_a4f748dcf42de8f0879bf0ff7ef9f4f36}{}\label{raymath_8c_a4f748dcf42de8f0879bf0ff7ef9f4f36}
+
+
+Get the parity of a integer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & integer to test \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the integer is odd, false if even 
+\end{DoxyReturn}
+
+
+Definition at line 17 of file raymath.\+c.
+
+\index{raymath.\+c@{raymath.\+c}!Math\+Vec3\+Add@{Math\+Vec3\+Add}}
+\index{Math\+Vec3\+Add@{Math\+Vec3\+Add}!raymath.\+c@{raymath.\+c}}
+\subsubsection[{\texorpdfstring{Math\+Vec3\+Add(vec3\+\_\+t a, vec3\+\_\+t b)}{MathVec3Add(vec3_t a, vec3_t b)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3\+\_\+t} Math\+Vec3\+Add (
+\begin{DoxyParamCaption}
+\item[{{\bf vec3\+\_\+t}}]{a, }
+\item[{{\bf vec3\+\_\+t}}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{raymath_8c_a1d9b3e20abf08441155772741c0ef939}{}\label{raymath_8c_a1d9b3e20abf08441155772741c0ef939}
+
+
+Add two 3D vectors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & 3D vector \\
+\hline
+{\em b} & 3D vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+resulting 3D vector (a + b) 
+\end{DoxyReturn}
+
+
+Definition at line 29 of file raymath.\+c.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{raymath_8c_a1d9b3e20abf08441155772741c0ef939_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{raymath_8c_a1d9b3e20abf08441155772741c0ef939_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{raymath.\+c@{raymath.\+c}!Math\+Vec3\+Dot@{Math\+Vec3\+Dot}}
+\index{Math\+Vec3\+Dot@{Math\+Vec3\+Dot}!raymath.\+c@{raymath.\+c}}
+\subsubsection[{\texorpdfstring{Math\+Vec3\+Dot(vec3\+\_\+t a, vec3\+\_\+t b)}{MathVec3Dot(vec3_t a, vec3_t b)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf number} Math\+Vec3\+Dot (
+\begin{DoxyParamCaption}
+\item[{{\bf vec3\+\_\+t}}]{a, }
+\item[{{\bf vec3\+\_\+t}}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{raymath_8c_aa67fbe59543039467aa720334738e2a2}{}\label{raymath_8c_aa67fbe59543039467aa720334738e2a2}
+
+
+Compute the dot product between two vectors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & 3D vector \\
+\hline
+{\em b} & 3D vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+resulting dot product (a . b) 
+\end{DoxyReturn}
+
+
+Definition at line 44 of file raymath.\+c.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{raymath_8c_aa67fbe59543039467aa720334738e2a2_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{raymath.\+c@{raymath.\+c}!Math\+Vec3\+Normalize@{Math\+Vec3\+Normalize}}
+\index{Math\+Vec3\+Normalize@{Math\+Vec3\+Normalize}!raymath.\+c@{raymath.\+c}}
+\subsubsection[{\texorpdfstring{Math\+Vec3\+Normalize(vec3\+\_\+t v)}{MathVec3Normalize(vec3_t v)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3\+\_\+t} Math\+Vec3\+Normalize (
+\begin{DoxyParamCaption}
+\item[{{\bf vec3\+\_\+t}}]{v}
+\end{DoxyParamCaption}
+)}\hypertarget{raymath_8c_a075c2db2a273d9e2ab085f4cba6fbf9f}{}\label{raymath_8c_a075c2db2a273d9e2ab085f4cba6fbf9f}
+
+
+Normalize a 3D vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & 3D vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+normalized 3D vector 
+\end{DoxyReturn}
+
+
+Definition at line 52 of file raymath.\+c.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{raymath_8c_a075c2db2a273d9e2ab085f4cba6fbf9f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{raymath_8c_a075c2db2a273d9e2ab085f4cba6fbf9f_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{raymath.\+c@{raymath.\+c}!Math\+Vec3\+Scale@{Math\+Vec3\+Scale}}
+\index{Math\+Vec3\+Scale@{Math\+Vec3\+Scale}!raymath.\+c@{raymath.\+c}}
+\subsubsection[{\texorpdfstring{Math\+Vec3\+Scale(vec3\+\_\+t a, number c)}{MathVec3Scale(vec3_t a, number c)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3\+\_\+t} Math\+Vec3\+Scale (
+\begin{DoxyParamCaption}
+\item[{{\bf vec3\+\_\+t}}]{a, }
+\item[{{\bf number}}]{c}
+\end{DoxyParamCaption}
+)}\hypertarget{raymath_8c_a414c0be0d1f209943c3ecbbae79002d2}{}\label{raymath_8c_a414c0be0d1f209943c3ecbbae79002d2}
+
+
+Scale a 3D vector (multiply by a scalar) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & 3D vector \\
+\hline
+{\em c} & scalar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+resulting 3D vector (a x c) 
+\end{DoxyReturn}
+
+
+Definition at line 39 of file raymath.\+c.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{raymath_8c_a414c0be0d1f209943c3ecbbae79002d2_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{raymath_8c_a414c0be0d1f209943c3ecbbae79002d2_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{raymath.\+c@{raymath.\+c}!Math\+Vec3\+Set@{Math\+Vec3\+Set}}
+\index{Math\+Vec3\+Set@{Math\+Vec3\+Set}!raymath.\+c@{raymath.\+c}}
+\subsubsection[{\texorpdfstring{Math\+Vec3\+Set(number x, number y, number z)}{MathVec3Set(number x, number y, number z)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3\+\_\+t} Math\+Vec3\+Set (
+\begin{DoxyParamCaption}
+\item[{{\bf number}}]{x, }
+\item[{{\bf number}}]{y, }
+\item[{{\bf number}}]{z}
+\end{DoxyParamCaption}
+)}\hypertarget{raymath_8c_a0c3b96d5e78c8899245e367835c0e1b4}{}\label{raymath_8c_a0c3b96d5e78c8899245e367835c0e1b4}
+
+
+Set a 3D vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x component \\
+\hline
+{\em y} & y component \\
+\hline
+{\em z} & z component \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+3D vector 
+\end{DoxyReturn}
+
+
+Definition at line 21 of file raymath.\+c.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{raymath_8c_a0c3b96d5e78c8899245e367835c0e1b4_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{raymath.\+c@{raymath.\+c}!Math\+Vec3\+Sub@{Math\+Vec3\+Sub}}
+\index{Math\+Vec3\+Sub@{Math\+Vec3\+Sub}!raymath.\+c@{raymath.\+c}}
+\subsubsection[{\texorpdfstring{Math\+Vec3\+Sub(vec3\+\_\+t a, vec3\+\_\+t b)}{MathVec3Sub(vec3_t a, vec3_t b)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3\+\_\+t} Math\+Vec3\+Sub (
+\begin{DoxyParamCaption}
+\item[{{\bf vec3\+\_\+t}}]{a, }
+\item[{{\bf vec3\+\_\+t}}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{raymath_8c_afc53ea0adde49d6b23d3d20f7242ce3b}{}\label{raymath_8c_afc53ea0adde49d6b23d3d20f7242ce3b}
+
+
+Subtract two 3D vectors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & 3D vector \\
+\hline
+{\em b} & 3D vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+resulting 3D vector (a -\/ b) 
+\end{DoxyReturn}
+
+
+Definition at line 34 of file raymath.\+c.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{raymath_8c_afc53ea0adde49d6b23d3d20f7242ce3b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{raymath_8c_afc53ea0adde49d6b23d3d20f7242ce3b_icgraph}
+\end{center}
+\end{figure}
+
+

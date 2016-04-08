@@ -1,0 +1,154 @@
+xst -intstyle ise -ifn "C:/IPBus/ml605_from_ml507/top.xst" -ofn "C:/IPBus/ml605_from_ml507/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc firmware/example_designs/ucf/virtex5_fxt_eval.ucf -p xc6vlx240t-ff1156-1 top.ngc top.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt off -ol high -xe n -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal on -mt 2 -ir off -pr b -lc auto -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -xe n -mt 2 top_map.ncd top.ncd top.pcf 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc firmware/example_designs/ucf/virtex5_fxt_eval.ucf -p xc6vlx240t-ff1156-1 top.ngc top.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt on -ol high -xe n -t 1 -xt 0 -register_duplication on -r 4 -global_opt off -mt 2 -ir off -pr b -lc auto -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -xe n -mt 2 top_map.ncd top.ncd top.pcf 
+xst -intstyle ise -ifn "C:/IPBus/ml605_from_ml507/top.xst" -ofn "C:/IPBus/ml605_from_ml507/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc firmware/example_designs/ucf/virtex5_fxt_eval.ucf -p xc6vlx240t-ff1156-1 top.ngc top.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt on -ol high -xe n -t 1 -xt 0 -register_duplication on -r 4 -global_opt off -mt 2 -ir off -pr b -lc auto -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -xe n -mt 2 top_map.ncd top.ncd top.pcf 
+xst -intstyle ise -ifn "C:/IPBus/ml605_from_ml507/top.xst" -ofn "C:/IPBus/ml605_from_ml507/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc firmware/example_designs/ucf/virtex5_fxt_eval.ucf -p xc6vlx240t-ff1156-1 top.ngc top.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt on -ol high -xe n -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal on -mt 2 -ir off -ignore_keep_hierarchy -pr b -lc auto -power off -o top_map.ncd top.ngd top.pcf 
+xst -intstyle ise -ifn "C:/IPBus/ml605_from_ml507/top.xst" -ofn "C:/IPBus/ml605_from_ml507/top.syr" 
+xst -intstyle ise -ifn "C:/IPBus/ml605_from_ml507/top.xst" -ofn "C:/IPBus/ml605_from_ml507/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc firmware/example_designs/ucf/virtex5_fxt_eval.ucf -p xc6vlx240t-ff1156-1 top.ngc top.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt on -ol high -xe n -t 1 -xt 0 -r 4 -global_opt speed -equivalent_register_removal on -mt 2 -ir off -ignore_keep_hierarchy -pr b -lc auto -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -xe n -mt 2 top_map.ncd top.ncd top.pcf 
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt on -ol high -xe n -t 1 -xt 0 -register_duplication on -r 4 -global_opt off -mt 2 -ir off -ignore_keep_hierarchy -pr b -lc auto -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol high -xe n -mt 2 top_map.ncd top.ncd top.pcf 
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt on -ol std -t 1 -xt 0 -register_duplication on -r 4 -global_opt off -mt 2 -ir off -ignore_keep_hierarchy -pr b -lc auto -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol std -mt 2 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -e 3 -s 1 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+trce -intstyle ise -e 3 -s 1 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+xst -intstyle ise -ifn "C:/IPBus/ml605_from_ml507/top.xst" -ofn "C:/IPBus/ml605_from_ml507/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc firmware/example_designs/ucf/virtex5_fxt_eval.ucf -p xc6vlx240t-ff1156-1 top.ngc top.ngd  
+xst -intstyle ise -ifn "C:/IPBus/ml605_from_ml507/top.xst" -ofn "C:/IPBus/ml605_from_ml507/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc firmware/example_designs/ucf/virtex5_fxt_eval.ucf -p xc6vlx240t-ff1156-1 top.ngc top.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt on -ol std -t 1 -xt 0 -register_duplication on -r 4 -global_opt off -mt 2 -ir off -ignore_keep_hierarchy -pr b -lc auto -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol std -mt 2 top_map.ncd top.ncd top.pcf 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc firmware/example_designs/ucf/virtex5_fxt_eval.ucf -p xc6vlx240t-ff1156-1 top.ngc top.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt on -ol std -t 1 -xt 0 -register_duplication on -r 4 -global_opt off -mt 2 -ir off -ignore_keep_hierarchy -pr b -lc auto -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol std -mt 2 top_map.ncd top.ncd top.pcf 
+xst -intstyle ise -ifn "C:/IPBus/ml605_from_ml507/top.xst" -ofn "C:/IPBus/ml605_from_ml507/top.syr" 
+xst -intstyle ise -ifn "C:/IPBus/ml605_from_ml507/top.xst" -ofn "C:/IPBus/ml605_from_ml507/top.syr" 
+xst -intstyle ise -ifn "C:/IPBus/ml605_from_ml507/top.xst" -ofn "C:/IPBus/ml605_from_ml507/top.syr" 
+xst -intstyle ise -ifn "C:/IPBus/ml605_from_ml507/top.xst" -ofn "C:/IPBus/ml605_from_ml507/top.syr" 
+xst -intstyle ise -ifn "C:/IPBus/ml605_from_ml507/top.xst" -ofn "C:/IPBus/ml605_from_ml507/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc firmware/example_designs/ucf/virtex5_fxt_eval.ucf -p xc6vlx240t-ff1156-1 top.ngc top.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt on -ol std -t 1 -xt 0 -register_duplication on -r 4 -global_opt off -mt 2 -ir off -ignore_keep_hierarchy -pr b -lc auto -power off -o top_map.ncd top.ngd top.pcf 
+xst -intstyle ise -ifn "C:/IPBus/ml605_from_ml507/top.xst" -ofn "C:/IPBus/ml605_from_ml507/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc firmware/example_designs/ucf/virtex5_fxt_eval.ucf -p xc6vlx240t-ff1156-1 top.ngc top.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt on -ol std -t 1 -xt 0 -register_duplication on -r 4 -global_opt off -mt 2 -ir off -ignore_keep_hierarchy -pr b -lc auto -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol std -mt 2 top_map.ncd top.ncd top.pcf 
+xst -intstyle ise -ifn "C:/IPBus/ml605_from_ml507/top.xst" -ofn "C:/IPBus/ml605_from_ml507/top.syr" 
+xst -intstyle ise -ifn "C:/IPBus/ml605_from_ml507/top.xst" -ofn "C:/IPBus/ml605_from_ml507/top.syr" 
+xst -intstyle ise -ifn "C:/IPBus/ml605_from_ml507/top.xst" -ofn "C:/IPBus/ml605_from_ml507/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc firmware/example_designs/ucf/virtex5_fxt_eval.ucf -p xc6vlx240t-ff1156-1 top.ngc top.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt on -ol std -t 1 -xt 0 -register_duplication on -r 4 -global_opt off -mt 2 -ir off -ignore_keep_hierarchy -pr b -lc auto -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol std -mt 2 top_map.ncd top.ncd top.pcf 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc firmware/example_designs/ucf/virtex5_fxt_eval.ucf -p xc6vlx240t-ff1156-1 top.ngc top.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt on -ol std -t 1 -xt 0 -register_duplication on -r 4 -global_opt off -mt 2 -ir off -ignore_keep_hierarchy -pr b -lc auto -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol std -mt 2 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -e 3 -s 1 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc firmware/example_designs/ucf/virtex5_fxt_eval.ucf -p xc6vlx240t-ff1156-1 top.ngc top.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt on -ol std -t 1 -xt 0 -register_duplication on -r 4 -global_opt off -mt 2 -ir off -ignore_keep_hierarchy -pr b -lc auto -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol std -mt 2 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -e 3 -s 1 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "C:/IPBus/ml605_from_ml507/top.xst" -ofn "C:/IPBus/ml605_from_ml507/top.syr" 
+xst -intstyle ise -ifn "C:/IPBus/ml605_from_ml507/top.xst" -ofn "C:/IPBus/ml605_from_ml507/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc firmware/example_designs/ucf/virtex5_fxt_eval.ucf -p xc6vlx240t-ff1156-1 top.ngc top.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt on -ol std -t 1 -xt 0 -register_duplication on -r 4 -global_opt off -mt 2 -ir off -ignore_keep_hierarchy -pr b -lc auto -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol std -mt 2 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -e 3 -s 1 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc firmware/example_designs/ucf/virtex5_fxt_eval.ucf -p xc6vlx240t-ff1156-1 top.ngc top.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc firmware/example_designs/ucf/virtex5_fxt_eval.ucf -p xc6vlx240t-ff1156-1 top.ngc top.ngd  
+xst -intstyle ise -ifn "C:/IPBus/ml605_from_ml507/top.xst" -ofn "C:/IPBus/ml605_from_ml507/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc firmware/example_designs/ucf/virtex5_fxt_eval.ucf -p xc6vlx240t-ff1156-1 top.ngc top.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc firmware/example_designs/ucf/virtex5_fxt_eval.ucf -p xc6vlx240t-ff1156-1 top.ngc top.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc firmware/example_designs/ucf/virtex5_fxt_eval.ucf -p xc6vlx240t-ff1156-1 top.ngc top.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt on -ol std -t 1 -xt 0 -register_duplication on -r 4 -global_opt off -mt 2 -ir off -ignore_keep_hierarchy -pr b -lc auto -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol std -mt 2 top_map.ncd top.ncd top.pcf 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc firmware/example_designs/ucf/virtex5_fxt_eval.ucf -p xc6vlx240t-ff1156-1 top.ngc top.ngd  
+xst -intstyle ise -ifn "C:/IPBus/ml605_from_ml507/top.xst" -ofn "C:/IPBus/ml605_from_ml507/top.syr" 
+xst -intstyle ise -ifn "C:/IPBus/ml605_from_ml507/top.xst" -ofn "C:/IPBus/ml605_from_ml507/top.syr" 
+xst -intstyle ise -ifn "C:/IPBus/ml605_from_ml507/top.xst" -ofn "C:/IPBus/ml605_from_ml507/top.syr" 
+xst -intstyle ise -ifn "C:/IPBus/ml605_from_ml507/top.xst" -ofn "C:/IPBus/ml605_from_ml507/top.syr" 
+xst -intstyle ise -ifn "C:/IPBus/ml605_from_ml507/top.xst" -ofn "C:/IPBus/ml605_from_ml507/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc firmware/example_designs/ucf/virtex5_fxt_eval.ucf -p xc6vlx240t-ff1156-1 top.ngc top.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt on -ol std -t 1 -xt 0 -register_duplication on -r 4 -global_opt off -mt 2 -ir off -ignore_keep_hierarchy -pr b -lc auto -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol std -mt 2 top_map.ncd top.ncd top.pcf 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc firmware/example_designs/ucf/virtex5_fxt_eval.ucf -p xc6vlx240t-ff1156-1 top.ngc top.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt on -ol std -t 1 -xt 0 -register_duplication on -r 4 -global_opt off -mt 2 -ir off -ignore_keep_hierarchy -pr b -lc auto -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol std -mt 2 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -e 3 -s 1 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "C:/IPBus/ml605_from_ml507/top.xst" -ofn "C:/IPBus/ml605_from_ml507/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc firmware/example_designs/ucf/virtex5_fxt_eval.ucf -p xc6vlx240t-ff1156-1 top.ngc top.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt on -ol std -t 1 -xt 0 -register_duplication on -r 4 -global_opt off -mt 2 -ir off -ignore_keep_hierarchy -pr b -lc auto -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol std -mt 2 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -e 3 -s 1 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "C:/IPBus/ml605_from_ml507/top.xst" -ofn "C:/IPBus/ml605_from_ml507/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc firmware/example_designs/ucf/virtex5_fxt_eval.ucf -p xc6vlx240t-ff1156-1 top.ngc top.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt on -ol std -t 1 -xt 0 -register_duplication on -r 4 -global_opt off -mt 2 -ir off -ignore_keep_hierarchy -pr b -lc auto -power off -o top_map.ncd top.ngd top.pcf 
+xst -intstyle ise -ifn "C:/IPBus/ml605_from_ml507/top.xst" -ofn "C:/IPBus/ml605_from_ml507/top.syr" 
+xst -intstyle ise -ifn "C:/IPBus/ml605_from_ml507/top.xst" -ofn "C:/IPBus/ml605_from_ml507/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc firmware/example_designs/ucf/virtex5_fxt_eval.ucf -p xc6vlx240t-ff1156-1 top.ngc top.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt on -ol std -t 1 -xt 0 -register_duplication on -r 4 -global_opt off -mt 2 -ir off -ignore_keep_hierarchy -pr b -lc auto -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol std -mt 2 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -e 3 -s 1 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc firmware/example_designs/ucf/virtex5_fxt_eval.ucf -p xc6vlx240t-ff1156-1 top.ngc top.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt on -ol std -t 1 -xt 0 -register_duplication on -r 4 -global_opt off -mt 2 -ir off -ignore_keep_hierarchy -pr b -lc auto -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol std -mt 2 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -e 3 -s 1 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "C:/IPBus/ml605_from_ml507/top.xst" -ofn "C:/IPBus/ml605_from_ml507/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc firmware/example_designs/ucf/virtex5_fxt_eval.ucf -uc ipcore_dir/v6_emac_v1_8/example_design/v6_emac_v1_8_example_design.ucf -p xc6vlx240t-ff1156-1 top.ngc top.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc firmware/example_designs/ucf/virtex5_fxt_eval.ucf -p xc6vlx240t-ff1156-1 top.ngc top.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt on -ol std -t 1 -xt 0 -register_duplication on -r 4 -global_opt off -mt 2 -ir off -ignore_keep_hierarchy -pr b -lc auto -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol std -mt 2 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -e 3 -s 1 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "C:/IPBus/ml605_from_ml507/top.xst" -ofn "C:/IPBus/ml605_from_ml507/top.syr" 
+xst -intstyle ise -ifn "C:/IPBus/ml605_from_ml507/top.xst" -ofn "C:/IPBus/ml605_from_ml507/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc firmware/example_designs/ucf/virtex5_fxt_eval.ucf -p xc6vlx240t-ff1156-1 top.ngc top.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt on -ol std -t 1 -xt 0 -register_duplication on -r 4 -global_opt off -mt 2 -ir off -ignore_keep_hierarchy -pr b -lc auto -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol std -mt 2 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -e 3 -s 1 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "C:/IPBus/ml605_from_ml507/top.xst" -ofn "C:/IPBus/ml605_from_ml507/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc firmware/example_designs/ucf/virtex5_fxt_eval.ucf -p xc6vlx240t-ff1156-1 top.ngc top.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt on -ol std -t 1 -xt 0 -register_duplication on -r 4 -global_opt off -mt 2 -ir off -ignore_keep_hierarchy -pr b -lc auto -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol std -mt 2 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -e 3 -s 1 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc firmware/example_designs/ucf/virtex5_fxt_eval.ucf -p xc6vlx240t-ff1156-1 top_cs.ngc top.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt on -ol std -t 1 -xt 0 -register_duplication on -r 4 -global_opt off -mt 2 -ir off -ignore_keep_hierarchy -pr b -lc auto -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol std -mt 2 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -e 3 -s 1 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "C:/IPBus/ml605_from_ml507/top.xst" -ofn "C:/IPBus/ml605_from_ml507/top.syr" 
+xst -intstyle ise -ifn "C:/IPBus/ml605_from_ml507/top.xst" -ofn "C:/IPBus/ml605_from_ml507/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc firmware/example_designs/ucf/virtex5_fxt_eval.ucf -p xc6vlx240t-ff1156-1 top_cs.ngc top.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt on -ol std -t 1 -xt 0 -register_duplication on -r 4 -global_opt off -mt 2 -ir off -ignore_keep_hierarchy -pr b -lc auto -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol std -mt 2 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -e 3 -s 1 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+xst -intstyle ise -ifn "C:/IPBus/ml605_from_ml507/top.xst" -ofn "C:/IPBus/ml605_from_ml507/top.syr" 
+xst -intstyle ise -ifn "C:/IPBus/ml605_from_ml507/top.xst" -ofn "C:/IPBus/ml605_from_ml507/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc firmware/example_designs/ucf/virtex5_fxt_eval.ucf -p xc6vlx240t-ff1156-1 top_cs.ngc top.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt on -ol std -t 1 -xt 0 -register_duplication on -r 4 -global_opt off -mt 2 -ir off -ignore_keep_hierarchy -pr b -lc auto -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol std -mt 2 top_map.ncd top.ncd top.pcf 
+trce -intstyle ise -e 3 -s 1 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf 
+bitgen -intstyle ise -f top.ut top.ncd 
+xst -intstyle ise -ifn "C:/IPBus/ml605_from_ml507/top.xst" -ofn "C:/IPBus/ml605_from_ml507/top.syr" 
+xst -intstyle ise -ifn "C:/IPBus/ml605_from_ml507/top.xst" -ofn "C:/IPBus/ml605_from_ml507/top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc firmware/example_designs/ucf/virtex5_fxt_eval.ucf -p xc6vlx240t-ff1156-1 top.ngc top.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt on -ol std -t 1 -xt 0 -register_duplication on -r 4 -global_opt off -mt 2 -ir off -ignore_keep_hierarchy -pr b -lc auto -power off -o top_map.ncd top.ngd top.pcf 
+par -w -intstyle ise -ol std -mt 2 top_map.ncd top.ncd top.pcf 

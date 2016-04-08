@@ -1,0 +1,53 @@
+\hypertarget{struct_s_d_l___text_editing_event}{}\section{S\+D\+L\+\_\+\+Text\+Editing\+Event Struct Reference}
+\label{struct_s_d_l___text_editing_event}\index{S\+D\+L\+\_\+\+Text\+Editing\+Event@{S\+D\+L\+\_\+\+Text\+Editing\+Event}}
+
+
+Keyboard text editing event structure (event.\+edit.$\ast$)  
+
+
+
+
+{\ttfamily \#include $<$S\+D\+L\+\_\+events.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32} \hyperlink{struct_s_d_l___text_editing_event_aa40a9b05c3154032b9f2d7220e9f08dc}{type}
+\item 
+\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32} {\bfseries timestamp}\hypertarget{struct_s_d_l___text_editing_event_abf1ed7edeab81db9c05d899836a44a2f}{}\label{struct_s_d_l___text_editing_event_abf1ed7edeab81db9c05d899836a44a2f}
+
+\item 
+\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32} \hyperlink{struct_s_d_l___text_editing_event_a78d9995068d6f40cd78bb8db7351b0a1}{window\+ID}
+\item 
+char \hyperlink{struct_s_d_l___text_editing_event_a43f22bc8cbe64d36f1e02c7f4ca9b445}{text} \mbox{[}S\+D\+L\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+I\+N\+G\+E\+V\+E\+N\+T\+\_\+\+T\+E\+X\+T\+\_\+\+S\+I\+ZE\mbox{]}
+\item 
+\hyperlink{_s_d_l__stdinc_8h_a7a90b941db9d4582e9ad7abb9940ff7e}{Sint32} \hyperlink{struct_s_d_l___text_editing_event_adb4db5cb1d25adb3d1c10bf8f00bab48}{start}
+\item 
+\hyperlink{_s_d_l__stdinc_8h_a7a90b941db9d4582e9ad7abb9940ff7e}{Sint32} \hyperlink{struct_s_d_l___text_editing_event_ae693591537f87d589b5a4fca7cbbf4dd}{length}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Keyboard text editing event structure (event.\+edit.$\ast$) 
+
+\subsection{Field Documentation}
+\index{S\+D\+L\+\_\+\+Text\+Editing\+Event@{S\+D\+L\+\_\+\+Text\+Editing\+Event}!length@{length}}
+\index{length@{length}!S\+D\+L\+\_\+\+Text\+Editing\+Event@{S\+D\+L\+\_\+\+Text\+Editing\+Event}}
+\subsubsection[{\texorpdfstring{length}{length}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sint32} length}\hypertarget{struct_s_d_l___text_editing_event_ae693591537f87d589b5a4fca7cbbf4dd}{}\label{struct_s_d_l___text_editing_event_ae693591537f87d589b5a4fca7cbbf4dd}
+The length of selected editing text \index{S\+D\+L\+\_\+\+Text\+Editing\+Event@{S\+D\+L\+\_\+\+Text\+Editing\+Event}!start@{start}}
+\index{start@{start}!S\+D\+L\+\_\+\+Text\+Editing\+Event@{S\+D\+L\+\_\+\+Text\+Editing\+Event}}
+\subsubsection[{\texorpdfstring{start}{start}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sint32} start}\hypertarget{struct_s_d_l___text_editing_event_adb4db5cb1d25adb3d1c10bf8f00bab48}{}\label{struct_s_d_l___text_editing_event_adb4db5cb1d25adb3d1c10bf8f00bab48}
+The start cursor of selected editing text \index{S\+D\+L\+\_\+\+Text\+Editing\+Event@{S\+D\+L\+\_\+\+Text\+Editing\+Event}!text@{text}}
+\index{text@{text}!S\+D\+L\+\_\+\+Text\+Editing\+Event@{S\+D\+L\+\_\+\+Text\+Editing\+Event}}
+\subsubsection[{\texorpdfstring{text}{text}}]{\setlength{\rightskip}{0pt plus 5cm}char text\mbox{[}S\+D\+L\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+I\+N\+G\+E\+V\+E\+N\+T\+\_\+\+T\+E\+X\+T\+\_\+\+S\+I\+ZE\mbox{]}}\hypertarget{struct_s_d_l___text_editing_event_a43f22bc8cbe64d36f1e02c7f4ca9b445}{}\label{struct_s_d_l___text_editing_event_a43f22bc8cbe64d36f1e02c7f4ca9b445}
+The editing text \index{S\+D\+L\+\_\+\+Text\+Editing\+Event@{S\+D\+L\+\_\+\+Text\+Editing\+Event}!type@{type}}
+\index{type@{type}!S\+D\+L\+\_\+\+Text\+Editing\+Event@{S\+D\+L\+\_\+\+Text\+Editing\+Event}}
+\subsubsection[{\texorpdfstring{type}{type}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Uint32} type}\hypertarget{struct_s_d_l___text_editing_event_aa40a9b05c3154032b9f2d7220e9f08dc}{}\label{struct_s_d_l___text_editing_event_aa40a9b05c3154032b9f2d7220e9f08dc}
+\hyperlink{_s_d_l__events_8h_a3b589e89be6b35c02e0dd34a55f3fccaa1b80c465df69c0b6d06f026ce7a230e3}{S\+D\+L\+\_\+\+T\+E\+X\+T\+E\+D\+I\+T\+I\+NG} \index{S\+D\+L\+\_\+\+Text\+Editing\+Event@{S\+D\+L\+\_\+\+Text\+Editing\+Event}!window\+ID@{window\+ID}}
+\index{window\+ID@{window\+ID}!S\+D\+L\+\_\+\+Text\+Editing\+Event@{S\+D\+L\+\_\+\+Text\+Editing\+Event}}
+\subsubsection[{\texorpdfstring{window\+ID}{windowID}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Uint32} window\+ID}\hypertarget{struct_s_d_l___text_editing_event_a78d9995068d6f40cd78bb8db7351b0a1}{}\label{struct_s_d_l___text_editing_event_a78d9995068d6f40cd78bb8db7351b0a1}
+The window with keyboard focus, if any 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Contrib/\+Includes/\+S\+D\+L2/\hyperlink{_s_d_l__events_8h}{S\+D\+L\+\_\+events.\+h}\end{DoxyCompactItemize}

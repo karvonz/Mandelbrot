@@ -1,0 +1,56 @@
+\hypertarget{struct_s_d_l___message_box_data}{}\section{S\+D\+L\+\_\+\+Message\+Box\+Data Struct Reference}
+\label{struct_s_d_l___message_box_data}\index{S\+D\+L\+\_\+\+Message\+Box\+Data@{S\+D\+L\+\_\+\+Message\+Box\+Data}}
+
+
+Message\+Box structure containing title, text, window, etc.  
+
+
+
+
+{\ttfamily \#include $<$S\+D\+L\+\_\+messagebox.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32} \hyperlink{struct_s_d_l___message_box_data_a048097c5cc2146ce1ff2450684f1b51c}{flags}
+\item 
+\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window} $\ast$ \hyperlink{struct_s_d_l___message_box_data_aaa8e409e04dcf575ef63fd5fb3db06f9}{window}
+\item 
+const char $\ast$ \hyperlink{struct_s_d_l___message_box_data_a8214780964530800368b406c681fd1d9}{title}
+\item 
+const char $\ast$ \hyperlink{struct_s_d_l___message_box_data_a254bf0858da09c96a48daf64404eb4f8}{message}
+\item 
+\hyperlink{_s_d_l__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} {\bfseries numbuttons}\hypertarget{struct_s_d_l___message_box_data_adff7d306bb56e132b0060191672c9525}{}\label{struct_s_d_l___message_box_data_adff7d306bb56e132b0060191672c9525}
+
+\item 
+const \hyperlink{struct_s_d_l___message_box_button_data}{S\+D\+L\+\_\+\+Message\+Box\+Button\+Data} $\ast$ {\bfseries buttons}\hypertarget{struct_s_d_l___message_box_data_a5d024a90e0db32dee923d8c873118225}{}\label{struct_s_d_l___message_box_data_a5d024a90e0db32dee923d8c873118225}
+
+\item 
+const \hyperlink{struct_s_d_l___message_box_color_scheme}{S\+D\+L\+\_\+\+Message\+Box\+Color\+Scheme} $\ast$ \hyperlink{struct_s_d_l___message_box_data_afcad43ea8520ac57b30b35bee0077618}{color\+Scheme}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Message\+Box structure containing title, text, window, etc. 
+
+\subsection{Field Documentation}
+\index{S\+D\+L\+\_\+\+Message\+Box\+Data@{S\+D\+L\+\_\+\+Message\+Box\+Data}!color\+Scheme@{color\+Scheme}}
+\index{color\+Scheme@{color\+Scheme}!S\+D\+L\+\_\+\+Message\+Box\+Data@{S\+D\+L\+\_\+\+Message\+Box\+Data}}
+\subsubsection[{\texorpdfstring{color\+Scheme}{colorScheme}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf S\+D\+L\+\_\+\+Message\+Box\+Color\+Scheme}$\ast$ color\+Scheme}\hypertarget{struct_s_d_l___message_box_data_afcad43ea8520ac57b30b35bee0077618}{}\label{struct_s_d_l___message_box_data_afcad43ea8520ac57b30b35bee0077618}
+\hyperlink{struct_s_d_l___message_box_color_scheme}{S\+D\+L\+\_\+\+Message\+Box\+Color\+Scheme}, can be N\+U\+LL to use system settings \index{S\+D\+L\+\_\+\+Message\+Box\+Data@{S\+D\+L\+\_\+\+Message\+Box\+Data}!flags@{flags}}
+\index{flags@{flags}!S\+D\+L\+\_\+\+Message\+Box\+Data@{S\+D\+L\+\_\+\+Message\+Box\+Data}}
+\subsubsection[{\texorpdfstring{flags}{flags}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Uint32} flags}\hypertarget{struct_s_d_l___message_box_data_a048097c5cc2146ce1ff2450684f1b51c}{}\label{struct_s_d_l___message_box_data_a048097c5cc2146ce1ff2450684f1b51c}
+\+::\+S\+D\+L\+\_\+\+Message\+Box\+Flags \index{S\+D\+L\+\_\+\+Message\+Box\+Data@{S\+D\+L\+\_\+\+Message\+Box\+Data}!message@{message}}
+\index{message@{message}!S\+D\+L\+\_\+\+Message\+Box\+Data@{S\+D\+L\+\_\+\+Message\+Box\+Data}}
+\subsubsection[{\texorpdfstring{message}{message}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ message}\hypertarget{struct_s_d_l___message_box_data_a254bf0858da09c96a48daf64404eb4f8}{}\label{struct_s_d_l___message_box_data_a254bf0858da09c96a48daf64404eb4f8}
+U\+T\+F-\/8 message text \index{S\+D\+L\+\_\+\+Message\+Box\+Data@{S\+D\+L\+\_\+\+Message\+Box\+Data}!title@{title}}
+\index{title@{title}!S\+D\+L\+\_\+\+Message\+Box\+Data@{S\+D\+L\+\_\+\+Message\+Box\+Data}}
+\subsubsection[{\texorpdfstring{title}{title}}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ title}\hypertarget{struct_s_d_l___message_box_data_a8214780964530800368b406c681fd1d9}{}\label{struct_s_d_l___message_box_data_a8214780964530800368b406c681fd1d9}
+U\+T\+F-\/8 title \index{S\+D\+L\+\_\+\+Message\+Box\+Data@{S\+D\+L\+\_\+\+Message\+Box\+Data}!window@{window}}
+\index{window@{window}!S\+D\+L\+\_\+\+Message\+Box\+Data@{S\+D\+L\+\_\+\+Message\+Box\+Data}}
+\subsubsection[{\texorpdfstring{window}{window}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+L\+\_\+\+Window}$\ast$ window}\hypertarget{struct_s_d_l___message_box_data_aaa8e409e04dcf575ef63fd5fb3db06f9}{}\label{struct_s_d_l___message_box_data_aaa8e409e04dcf575ef63fd5fb3db06f9}
+Parent window, can be N\+U\+LL 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Contrib/\+Includes/\+S\+D\+L2/S\+D\+L\+\_\+messagebox.\+h\end{DoxyCompactItemize}

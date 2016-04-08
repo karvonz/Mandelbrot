@@ -1,0 +1,6 @@
+<map id="ObjectGetNormal" name="ObjectGetNormal">
+<area shape="rect" id="node2" href="$raylight_8c.html#a233268c67064dbaf7faecaa4397ae31b" title="Get light contribution. " alt="" coords="176,5,264,32"/>
+<area shape="rect" id="node5" href="$rayrender_8c.html#a850af53283a7801d99dd1c9e5ff39c60" title="Reflect" alt="" coords="189,56,251,83"/>
+<area shape="rect" id="node3" href="$rayrender_8c.html#a5cbf8abb7997119c522463eb111b2a3e" title="Render the current scene. " alt="" coords="312,31,487,57"/>
+<area shape="rect" id="node4" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="535,31,585,57"/>
+</map>

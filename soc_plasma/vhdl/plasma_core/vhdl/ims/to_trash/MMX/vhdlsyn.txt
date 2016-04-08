@@ -1,0 +1,10 @@
+MMX_ADD_8b.vhd
+MMX_EQU_8b.vhd
+MMX_GRT_8b.vhd
+MMX_MAX_8b.vhd
+MMX_MIN_8b.vhd
+MMX_MIX_8b.vhd
+MMX_MUL_8b.vhd
+MMX_SUB_8b.vhd
+MMX_SUM_8b.vhd
+

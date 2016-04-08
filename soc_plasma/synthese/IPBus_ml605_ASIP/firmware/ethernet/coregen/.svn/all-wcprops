@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/ethernet/coregen
+END
+v6_emac_v1_5.xco
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/ethernet/coregen/v6_emac_v1_5.xco
+END
+soft_emac_gmii_4_5.xco
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/ethernet/coregen/soft_emac_gmii_4_5.xco
+END
+gig_eth_pcs_pma_v11_1.xco
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/ethernet/coregen/gig_eth_pcs_pma_v11_1.xco
+END
+v5_emac_v1_8_1000basex.xco
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/ethernet/coregen/v5_emac_v1_8_1000basex.xco
+END
+v5_emac_v1_8_gmii.xco
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/ethernet/coregen/v5_emac_v1_8_gmii.xco
+END
+v6_emac_v1_5_sgmii.xco
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/ethernet/coregen/v6_emac_v1_5_sgmii.xco
+END
+v5_emac_gmii.xco
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/ethernet/coregen/v5_emac_gmii.xco
+END

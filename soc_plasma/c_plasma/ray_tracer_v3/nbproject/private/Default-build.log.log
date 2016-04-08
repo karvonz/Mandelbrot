@@ -1,0 +1,4 @@
+mkdir -p obj
+vlib work
+make: vlib: Command not found
+make: *** [vhdl] Error 127

@@ -1,0 +1,94 @@
+\hypertarget{raylight_8c}{}\section{Sources/raylight.c File Reference}
+\label{raylight_8c}\index{Sources/raylight.\+c@{Sources/raylight.\+c}}
+
+
+Raytracer light.  
+
+
+{\ttfamily \#include \char`\"{}../\+Includes/raylight.\+h\char`\"{}}\\*
+Include dependency graph for raylight.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{raylight_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{raymath_8h_aa97c1f529dc5a11a78758184c84a39c9}{number} \hyperlink{raylight_8c_a233268c67064dbaf7faecaa4397ae31b}{Light\+Object} (int type, int idx, \hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} l, \hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} p, \hyperlink{raymath_8h_aa97c1f529dc5a11a78758184c84a39c9}{number} light\+Ambient)
+\begin{DoxyCompactList}\small\item\em Get light contribution. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Raytracer light. 
+
+\begin{DoxyAuthor}{Author}
+J. Crenne \& C. Leroux 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+February 2016 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\index{raylight.\+c@{raylight.\+c}!Light\+Object@{Light\+Object}}
+\index{Light\+Object@{Light\+Object}!raylight.\+c@{raylight.\+c}}
+\subsubsection[{\texorpdfstring{Light\+Object(int type, int idx, vec3\+\_\+t l, vec3\+\_\+t p, number light\+Ambient)}{LightObject(int type, int idx, vec3_t l, vec3_t p, number lightAmbient)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf number} Light\+Object (
+\begin{DoxyParamCaption}
+\item[{int}]{type, }
+\item[{int}]{idx, }
+\item[{{\bf vec3\+\_\+t}}]{l, }
+\item[{{\bf vec3\+\_\+t}}]{p, }
+\item[{{\bf number}}]{light\+Ambient}
+\end{DoxyParamCaption}
+)}\hypertarget{raylight_8c_a233268c67064dbaf7faecaa4397ae31b}{}\label{raylight_8c_a233268c67064dbaf7faecaa4397ae31b}
+
+
+Get light contribution. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Object type ( O\+B\+J\+E\+C\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+P\+H\+E\+RE or O\+B\+J\+E\+C\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+L\+A\+NE ) \\
+\hline
+{\em idx} & Object identifier \\
+\hline
+{\em l} & Light position \\
+\hline
+{\em p} & Intersection point position \\
+\hline
+{\em light\+Ambient} & Ambient light multiplier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Light contribution to object 
+\end{DoxyReturn}
+
+
+Definition at line 16 of file raylight.\+c.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{raylight_8c_a233268c67064dbaf7faecaa4397ae31b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{raylight_8c_a233268c67064dbaf7faecaa4397ae31b_icgraph}
+\end{center}
+\end{figure}
+
+

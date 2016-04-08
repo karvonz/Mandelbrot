@@ -1,0 +1,367 @@
+\hypertarget{raysphere_8h}{}\section{Includes/raysphere.h File Reference}
+\label{raysphere_8h}\index{Includes/raysphere.\+h@{Includes/raysphere.\+h}}
+
+
+Raytracer sphere object.  
+
+
+{\ttfamily \#include \char`\"{}raymath.\+h\char`\"{}}\\*
+Include dependency graph for raysphere.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{raysphere_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{raysphere_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structsphere}{sphere}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{raysphere_8h_a9266c2928d16a0ef8821cd280326a7ce}{M\+A\+X\+\_\+\+S\+P\+H\+E\+R\+ES}~16
+\begin{DoxyCompactList}\small\item\em Maximum number of spheres in the current scene. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structsphere}{sphere} \hyperlink{raysphere_8h_a29cdc396a1ac3ae3521d8a75a94f9909}{sphere\+\_\+t}
+\begin{DoxyCompactList}\small\item\em A Structure to represent a sphere. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{raytypes_8h_a0c0a490ab7fa397be6c764a935cc5ea4}{u32\+\_\+t} \hyperlink{raysphere_8h_a8302a4a5bcd3589308b809744019650d}{Sphere\+Add} ()
+\begin{DoxyCompactList}\small\item\em Add a sphere to the current scene. \end{DoxyCompactList}\item 
+\hyperlink{raytypes_8h_a0c0a490ab7fa397be6c764a935cc5ea4}{u32\+\_\+t} \hyperlink{raysphere_8h_ac10362606babe4fdfd1225750810046f}{Sphere\+Get\+Count} ()
+\begin{DoxyCompactList}\small\item\em Return the total number of spheres in the current scene. \end{DoxyCompactList}\item 
+void \hyperlink{raysphere_8h_a0c92d9eb3842a709c714c1f758187b29}{Sphere\+Set} (int idx, \hyperlink{raymath_8h_aa97c1f529dc5a11a78758184c84a39c9}{number} x, \hyperlink{raymath_8h_aa97c1f529dc5a11a78758184c84a39c9}{number} y, \hyperlink{raymath_8h_aa97c1f529dc5a11a78758184c84a39c9}{number} z, \hyperlink{raymath_8h_aa97c1f529dc5a11a78758184c84a39c9}{number} radius, \hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} color, bool reflect)
+\begin{DoxyCompactList}\small\item\em Set a sphere position, its radius, its color and its reflection property. \end{DoxyCompactList}\item 
+bool \hyperlink{raysphere_8h_aac374b086db079dd05b2b3c953abf4e8}{Sphere\+Has\+Reflection} (int idx)
+\begin{DoxyCompactList}\small\item\em Get the reflection property of a sphere. \end{DoxyCompactList}\item 
+\hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} \hyperlink{raysphere_8h_a1390f345c99ed67d84f05224e398a809}{Sphere\+Get\+Position} (int idx)
+\begin{DoxyCompactList}\small\item\em Get the position of a sphere in the current scene. \end{DoxyCompactList}\item 
+\hyperlink{raymath_8h_aa97c1f529dc5a11a78758184c84a39c9}{number} \hyperlink{raysphere_8h_a6a36d9c97c2630d8a078d3bc88b85d96}{Sphere\+Get\+Radius} (int idx)
+\begin{DoxyCompactList}\small\item\em Get the radius of a sphere in the current scene. \end{DoxyCompactList}\item 
+\hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} \hyperlink{raysphere_8h_a5dd3152fdefb949ae232ee8d7d011cb6}{Sphere\+Get\+Color} (int idx)
+\begin{DoxyCompactList}\small\item\em Get the color of a sphere in the current scene. \end{DoxyCompactList}\item 
+\hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} \hyperlink{raysphere_8h_a1df175e29c72bbd229d8c972b4f3fd58}{Sphere\+Get\+Normal} (int idx, \hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} p)
+\begin{DoxyCompactList}\small\item\em Get a sphere normal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Raytracer sphere object. 
+
+\begin{DoxyAuthor}{Author}
+J. Crenne \& C. Leroux 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+February 2016 
+\end{DoxyDate}
+
+
+\subsection{Macro Definition Documentation}
+\index{raysphere.\+h@{raysphere.\+h}!M\+A\+X\+\_\+\+S\+P\+H\+E\+R\+ES@{M\+A\+X\+\_\+\+S\+P\+H\+E\+R\+ES}}
+\index{M\+A\+X\+\_\+\+S\+P\+H\+E\+R\+ES@{M\+A\+X\+\_\+\+S\+P\+H\+E\+R\+ES}!raysphere.\+h@{raysphere.\+h}}
+\subsubsection[{\texorpdfstring{M\+A\+X\+\_\+\+S\+P\+H\+E\+R\+ES}{MAX_SPHERES}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+S\+P\+H\+E\+R\+ES~16}\hypertarget{raysphere_8h_a9266c2928d16a0ef8821cd280326a7ce}{}\label{raysphere_8h_a9266c2928d16a0ef8821cd280326a7ce}
+
+
+Maximum number of spheres in the current scene. 
+
+
+
+Definition at line 18 of file raysphere.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\index{raysphere.\+h@{raysphere.\+h}!sphere\+\_\+t@{sphere\+\_\+t}}
+\index{sphere\+\_\+t@{sphere\+\_\+t}!raysphere.\+h@{raysphere.\+h}}
+\subsubsection[{\texorpdfstring{sphere\+\_\+t}{sphere_t}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf sphere\+\_\+t}}\hypertarget{raysphere_8h_a29cdc396a1ac3ae3521d8a75a94f9909}{}\label{raysphere_8h_a29cdc396a1ac3ae3521d8a75a94f9909}
+
+
+A Structure to represent a sphere. 
+
+
+
+\subsection{Function Documentation}
+\index{raysphere.\+h@{raysphere.\+h}!Sphere\+Add@{Sphere\+Add}}
+\index{Sphere\+Add@{Sphere\+Add}!raysphere.\+h@{raysphere.\+h}}
+\subsubsection[{\texorpdfstring{Sphere\+Add()}{SphereAdd()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32\+\_\+t} Sphere\+Add (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{raysphere_8h_a8302a4a5bcd3589308b809744019650d}{}\label{raysphere_8h_a8302a4a5bcd3589308b809744019650d}
+
+
+Add a sphere to the current scene. 
+
+\begin{DoxyReturn}{Returns}
+a unique sphere identifier 
+\end{DoxyReturn}
+
+
+Definition at line 14 of file raysphere.\+c.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{raysphere_8h_a8302a4a5bcd3589308b809744019650d_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{raysphere.\+h@{raysphere.\+h}!Sphere\+Get\+Color@{Sphere\+Get\+Color}}
+\index{Sphere\+Get\+Color@{Sphere\+Get\+Color}!raysphere.\+h@{raysphere.\+h}}
+\subsubsection[{\texorpdfstring{Sphere\+Get\+Color(int idx)}{SphereGetColor(int idx)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3\+\_\+t} Sphere\+Get\+Color (
+\begin{DoxyParamCaption}
+\item[{int}]{idx}
+\end{DoxyParamCaption}
+)}\hypertarget{raysphere_8h_a5dd3152fdefb949ae232ee8d7d011cb6}{}\label{raysphere_8h_a5dd3152fdefb949ae232ee8d7d011cb6}
+
+
+Get the color of a sphere in the current scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & Sphere identifier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A 3D vector representing the rgb components of the sphere 
+\end{DoxyReturn}
+
+
+Definition at line 43 of file raysphere.\+c.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{raysphere_8h_a5dd3152fdefb949ae232ee8d7d011cb6_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{raysphere.\+h@{raysphere.\+h}!Sphere\+Get\+Count@{Sphere\+Get\+Count}}
+\index{Sphere\+Get\+Count@{Sphere\+Get\+Count}!raysphere.\+h@{raysphere.\+h}}
+\subsubsection[{\texorpdfstring{Sphere\+Get\+Count()}{SphereGetCount()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32\+\_\+t} Sphere\+Get\+Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{raysphere_8h_ac10362606babe4fdfd1225750810046f}{}\label{raysphere_8h_ac10362606babe4fdfd1225750810046f}
+
+
+Return the total number of spheres in the current scene. 
+
+\begin{DoxyReturn}{Returns}
+Number of spheres 
+\end{DoxyReturn}
+
+
+Definition at line 18 of file raysphere.\+c.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{raysphere_8h_ac10362606babe4fdfd1225750810046f_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{raysphere.\+h@{raysphere.\+h}!Sphere\+Get\+Normal@{Sphere\+Get\+Normal}}
+\index{Sphere\+Get\+Normal@{Sphere\+Get\+Normal}!raysphere.\+h@{raysphere.\+h}}
+\subsubsection[{\texorpdfstring{Sphere\+Get\+Normal(int idx, vec3\+\_\+t p)}{SphereGetNormal(int idx, vec3_t p)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3\+\_\+t} Sphere\+Get\+Normal (
+\begin{DoxyParamCaption}
+\item[{int}]{idx, }
+\item[{{\bf vec3\+\_\+t}}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{raysphere_8h_a1df175e29c72bbd229d8c972b4f3fd58}{}\label{raysphere_8h_a1df175e29c72bbd229d8c972b4f3fd58}
+
+
+Get a sphere normal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & Sphere identifier \\
+\hline
+{\em p} & Intersection point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Sphere normal 
+\end{DoxyReturn}
+
+
+Definition at line 47 of file raysphere.\+c.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{raysphere_8h_a1df175e29c72bbd229d8c972b4f3fd58_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{raysphere_8h_a1df175e29c72bbd229d8c972b4f3fd58_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{raysphere.\+h@{raysphere.\+h}!Sphere\+Get\+Position@{Sphere\+Get\+Position}}
+\index{Sphere\+Get\+Position@{Sphere\+Get\+Position}!raysphere.\+h@{raysphere.\+h}}
+\subsubsection[{\texorpdfstring{Sphere\+Get\+Position(int idx)}{SphereGetPosition(int idx)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3\+\_\+t} Sphere\+Get\+Position (
+\begin{DoxyParamCaption}
+\item[{int}]{idx}
+\end{DoxyParamCaption}
+)}\hypertarget{raysphere_8h_a1390f345c99ed67d84f05224e398a809}{}\label{raysphere_8h_a1390f345c99ed67d84f05224e398a809}
+
+
+Get the position of a sphere in the current scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & Sphere identifier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A 3D vector representing the position of the sphere 
+\end{DoxyReturn}
+
+
+Definition at line 35 of file raysphere.\+c.
+
+\index{raysphere.\+h@{raysphere.\+h}!Sphere\+Get\+Radius@{Sphere\+Get\+Radius}}
+\index{Sphere\+Get\+Radius@{Sphere\+Get\+Radius}!raysphere.\+h@{raysphere.\+h}}
+\subsubsection[{\texorpdfstring{Sphere\+Get\+Radius(int idx)}{SphereGetRadius(int idx)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf number} Sphere\+Get\+Radius (
+\begin{DoxyParamCaption}
+\item[{int}]{idx}
+\end{DoxyParamCaption}
+)}\hypertarget{raysphere_8h_a6a36d9c97c2630d8a078d3bc88b85d96}{}\label{raysphere_8h_a6a36d9c97c2630d8a078d3bc88b85d96}
+
+
+Get the radius of a sphere in the current scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & Sphere identifier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The radius of the sphere 
+\end{DoxyReturn}
+
+
+Definition at line 39 of file raysphere.\+c.
+
+\index{raysphere.\+h@{raysphere.\+h}!Sphere\+Has\+Reflection@{Sphere\+Has\+Reflection}}
+\index{Sphere\+Has\+Reflection@{Sphere\+Has\+Reflection}!raysphere.\+h@{raysphere.\+h}}
+\subsubsection[{\texorpdfstring{Sphere\+Has\+Reflection(int idx)}{SphereHasReflection(int idx)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Sphere\+Has\+Reflection (
+\begin{DoxyParamCaption}
+\item[{int}]{idx}
+\end{DoxyParamCaption}
+)}\hypertarget{raysphere_8h_aac374b086db079dd05b2b3c953abf4e8}{}\label{raysphere_8h_aac374b086db079dd05b2b3c953abf4e8}
+
+
+Get the reflection property of a sphere. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & Sphere identifier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean set to true if the sphere has a material reflection property, false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 31 of file raysphere.\+c.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{raysphere_8h_aac374b086db079dd05b2b3c953abf4e8_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{raysphere.\+h@{raysphere.\+h}!Sphere\+Set@{Sphere\+Set}}
+\index{Sphere\+Set@{Sphere\+Set}!raysphere.\+h@{raysphere.\+h}}
+\subsubsection[{\texorpdfstring{Sphere\+Set(int idx, number x, number y, number z, number radius, vec3\+\_\+t color, bool reflect)}{SphereSet(int idx, number x, number y, number z, number radius, vec3_t color, bool reflect)}}]{\setlength{\rightskip}{0pt plus 5cm}void Sphere\+Set (
+\begin{DoxyParamCaption}
+\item[{int}]{idx, }
+\item[{{\bf number}}]{x, }
+\item[{{\bf number}}]{y, }
+\item[{{\bf number}}]{z, }
+\item[{{\bf number}}]{radius, }
+\item[{{\bf vec3\+\_\+t}}]{color, }
+\item[{bool}]{reflect}
+\end{DoxyParamCaption}
+)}\hypertarget{raysphere_8h_a0c92d9eb3842a709c714c1f758187b29}{}\label{raysphere_8h_a0c92d9eb3842a709c714c1f758187b29}
+
+
+Set a sphere position, its radius, its color and its reflection property. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & Sphere identifier \\
+\hline
+{\em x} & Sphere x position \\
+\hline
+{\em y} & Sphere y position \\
+\hline
+{\em z} & Sphere z position \\
+\hline
+{\em radius} & Sphere radius \\
+\hline
+{\em color} & Sphere color \\
+\hline
+{\em reflect} & Sphere reflection property \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 22 of file raysphere.\+c.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{raysphere_8h_a0c92d9eb3842a709c714c1f758187b29_icgraph}
+\end{center}
+\end{figure}
+
+

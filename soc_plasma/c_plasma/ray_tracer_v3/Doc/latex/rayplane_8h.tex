@@ -1,0 +1,330 @@
+\hypertarget{rayplane_8h}{}\section{Includes/rayplane.h File Reference}
+\label{rayplane_8h}\index{Includes/rayplane.\+h@{Includes/rayplane.\+h}}
+
+
+Raytracer plane object.  
+
+
+{\ttfamily \#include \char`\"{}raymath.\+h\char`\"{}}\\*
+Include dependency graph for rayplane.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rayplane_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rayplane_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structplane}{plane}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{rayplane_8h_a4269718bae6e29c6059d666ec76df24b}{M\+A\+X\+\_\+\+P\+L\+A\+N\+ES}~16
+\begin{DoxyCompactList}\small\item\em Maximum number of planes in the current scene. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structplane}{plane} \hyperlink{rayplane_8h_af6157b036db4c4437002ed82ab68cd3a}{plane\+\_\+t}
+\begin{DoxyCompactList}\small\item\em A Structure to represent an intersection data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{raytypes_8h_a0c0a490ab7fa397be6c764a935cc5ea4}{u32\+\_\+t} \hyperlink{rayplane_8h_a2496f928d63b409b68e1276c0fd9bd56}{Plane\+Add} ()
+\begin{DoxyCompactList}\small\item\em Add a plane to the current scene. \end{DoxyCompactList}\item 
+\hyperlink{raytypes_8h_a0c0a490ab7fa397be6c764a935cc5ea4}{u32\+\_\+t} \hyperlink{rayplane_8h_ae013daff4214176716319374caa20a6d}{Plane\+Get\+Count} ()
+\begin{DoxyCompactList}\small\item\em Return the total number of planes in the current scene. \end{DoxyCompactList}\item 
+void \hyperlink{rayplane_8h_abb59de43588ed0617065276581ef4688}{Plane\+Set} (int idx, \hyperlink{raymath_8h_aa97c1f529dc5a11a78758184c84a39c9}{number} axis, \hyperlink{raymath_8h_aa97c1f529dc5a11a78758184c84a39c9}{number} dist, \hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} color)
+\begin{DoxyCompactList}\small\item\em Set a plane axis, its distance to camera and its color. \end{DoxyCompactList}\item 
+int \hyperlink{rayplane_8h_ac2e10806dc95ee948ebd52bd20788511}{Plane\+Get\+Axis} (int idx)
+\begin{DoxyCompactList}\small\item\em Get a plane axis. \end{DoxyCompactList}\item 
+\hyperlink{raymath_8h_aa97c1f529dc5a11a78758184c84a39c9}{number} \hyperlink{rayplane_8h_ad19ab75282017457d843661c97f2e980}{Plane\+Get\+Distance} (int idx)
+\begin{DoxyCompactList}\small\item\em Get a plane distance from camera. \end{DoxyCompactList}\item 
+\hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} \hyperlink{rayplane_8h_a24796f2ce83ad2b6c54b7e128d2bfb79}{Plane\+Get\+Color} (int idx)
+\begin{DoxyCompactList}\small\item\em Get a plane color. \end{DoxyCompactList}\item 
+\hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} \hyperlink{rayplane_8h_a2d9da63f70736e7978942968a0752358}{Plane\+Get\+Normal} (int idx, \hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} o)
+\begin{DoxyCompactList}\small\item\em Get a plane normal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Raytracer plane object. 
+
+\begin{DoxyAuthor}{Author}
+J. Crenne \& C. Leroux 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+February 2016 
+\end{DoxyDate}
+
+
+\subsection{Macro Definition Documentation}
+\index{rayplane.\+h@{rayplane.\+h}!M\+A\+X\+\_\+\+P\+L\+A\+N\+ES@{M\+A\+X\+\_\+\+P\+L\+A\+N\+ES}}
+\index{M\+A\+X\+\_\+\+P\+L\+A\+N\+ES@{M\+A\+X\+\_\+\+P\+L\+A\+N\+ES}!rayplane.\+h@{rayplane.\+h}}
+\subsubsection[{\texorpdfstring{M\+A\+X\+\_\+\+P\+L\+A\+N\+ES}{MAX_PLANES}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+P\+L\+A\+N\+ES~16}\hypertarget{rayplane_8h_a4269718bae6e29c6059d666ec76df24b}{}\label{rayplane_8h_a4269718bae6e29c6059d666ec76df24b}
+
+
+Maximum number of planes in the current scene. 
+
+
+
+Definition at line 18 of file rayplane.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\index{rayplane.\+h@{rayplane.\+h}!plane\+\_\+t@{plane\+\_\+t}}
+\index{plane\+\_\+t@{plane\+\_\+t}!rayplane.\+h@{rayplane.\+h}}
+\subsubsection[{\texorpdfstring{plane\+\_\+t}{plane_t}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf plane\+\_\+t}}\hypertarget{rayplane_8h_af6157b036db4c4437002ed82ab68cd3a}{}\label{rayplane_8h_af6157b036db4c4437002ed82ab68cd3a}
+
+
+A Structure to represent an intersection data. 
+
+A Structure to represent a plane. 
+
+\subsection{Function Documentation}
+\index{rayplane.\+h@{rayplane.\+h}!Plane\+Add@{Plane\+Add}}
+\index{Plane\+Add@{Plane\+Add}!rayplane.\+h@{rayplane.\+h}}
+\subsubsection[{\texorpdfstring{Plane\+Add()}{PlaneAdd()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32\+\_\+t} Plane\+Add (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{rayplane_8h_a2496f928d63b409b68e1276c0fd9bd56}{}\label{rayplane_8h_a2496f928d63b409b68e1276c0fd9bd56}
+
+
+Add a plane to the current scene. 
+
+\begin{DoxyReturn}{Returns}
+a unique plane identifier 
+\end{DoxyReturn}
+
+
+Definition at line 14 of file rayplane.\+c.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{rayplane_8h_a2496f928d63b409b68e1276c0fd9bd56_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{rayplane.\+h@{rayplane.\+h}!Plane\+Get\+Axis@{Plane\+Get\+Axis}}
+\index{Plane\+Get\+Axis@{Plane\+Get\+Axis}!rayplane.\+h@{rayplane.\+h}}
+\subsubsection[{\texorpdfstring{Plane\+Get\+Axis(int idx)}{PlaneGetAxis(int idx)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf number} Plane\+Get\+Axis (
+\begin{DoxyParamCaption}
+\item[{int}]{idx}
+\end{DoxyParamCaption}
+)}\hypertarget{rayplane_8h_ac2e10806dc95ee948ebd52bd20788511}{}\label{rayplane_8h_ac2e10806dc95ee948ebd52bd20788511}
+
+
+Get a plane axis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & Plane identifier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Plane axis 
+\end{DoxyReturn}
+
+
+Definition at line 32 of file rayplane.\+c.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rayplane_8h_ac2e10806dc95ee948ebd52bd20788511_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{rayplane.\+h@{rayplane.\+h}!Plane\+Get\+Color@{Plane\+Get\+Color}}
+\index{Plane\+Get\+Color@{Plane\+Get\+Color}!rayplane.\+h@{rayplane.\+h}}
+\subsubsection[{\texorpdfstring{Plane\+Get\+Color(int idx)}{PlaneGetColor(int idx)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3\+\_\+t} Plane\+Get\+Color (
+\begin{DoxyParamCaption}
+\item[{int}]{idx}
+\end{DoxyParamCaption}
+)}\hypertarget{rayplane_8h_a24796f2ce83ad2b6c54b7e128d2bfb79}{}\label{rayplane_8h_a24796f2ce83ad2b6c54b7e128d2bfb79}
+
+
+Get a plane color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & Plane identifier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Plane color 
+\end{DoxyReturn}
+
+
+Definition at line 36 of file rayplane.\+c.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rayplane_8h_a24796f2ce83ad2b6c54b7e128d2bfb79_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{rayplane.\+h@{rayplane.\+h}!Plane\+Get\+Count@{Plane\+Get\+Count}}
+\index{Plane\+Get\+Count@{Plane\+Get\+Count}!rayplane.\+h@{rayplane.\+h}}
+\subsubsection[{\texorpdfstring{Plane\+Get\+Count()}{PlaneGetCount()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32\+\_\+t} Plane\+Get\+Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{rayplane_8h_ae013daff4214176716319374caa20a6d}{}\label{rayplane_8h_ae013daff4214176716319374caa20a6d}
+
+
+Return the total number of planes in the current scene. 
+
+\begin{DoxyReturn}{Returns}
+Number of planes 
+\end{DoxyReturn}
+
+
+Definition at line 18 of file rayplane.\+c.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rayplane_8h_ae013daff4214176716319374caa20a6d_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{rayplane.\+h@{rayplane.\+h}!Plane\+Get\+Distance@{Plane\+Get\+Distance}}
+\index{Plane\+Get\+Distance@{Plane\+Get\+Distance}!rayplane.\+h@{rayplane.\+h}}
+\subsubsection[{\texorpdfstring{Plane\+Get\+Distance(int idx)}{PlaneGetDistance(int idx)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf number} Plane\+Get\+Distance (
+\begin{DoxyParamCaption}
+\item[{int}]{idx}
+\end{DoxyParamCaption}
+)}\hypertarget{rayplane_8h_ad19ab75282017457d843661c97f2e980}{}\label{rayplane_8h_ad19ab75282017457d843661c97f2e980}
+
+
+Get a plane distance from camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & Plane identifier \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 28 of file rayplane.\+c.
+
+\index{rayplane.\+h@{rayplane.\+h}!Plane\+Get\+Normal@{Plane\+Get\+Normal}}
+\index{Plane\+Get\+Normal@{Plane\+Get\+Normal}!rayplane.\+h@{rayplane.\+h}}
+\subsubsection[{\texorpdfstring{Plane\+Get\+Normal(int idx, vec3\+\_\+t o)}{PlaneGetNormal(int idx, vec3_t o)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3\+\_\+t} Plane\+Get\+Normal (
+\begin{DoxyParamCaption}
+\item[{int}]{idx, }
+\item[{{\bf vec3\+\_\+t}}]{o}
+\end{DoxyParamCaption}
+)}\hypertarget{rayplane_8h_a2d9da63f70736e7978942968a0752358}{}\label{rayplane_8h_a2d9da63f70736e7978942968a0752358}
+
+
+Get a plane normal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & Plane identifier \\
+\hline
+{\em o} & origin \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Plane normal 
+\end{DoxyReturn}
+
+
+Definition at line 40 of file rayplane.\+c.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rayplane_8h_a2d9da63f70736e7978942968a0752358_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rayplane_8h_a2d9da63f70736e7978942968a0752358_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{rayplane.\+h@{rayplane.\+h}!Plane\+Set@{Plane\+Set}}
+\index{Plane\+Set@{Plane\+Set}!rayplane.\+h@{rayplane.\+h}}
+\subsubsection[{\texorpdfstring{Plane\+Set(int idx, number axis, number dist, vec3\+\_\+t color)}{PlaneSet(int idx, number axis, number dist, vec3_t color)}}]{\setlength{\rightskip}{0pt plus 5cm}void Plane\+Set (
+\begin{DoxyParamCaption}
+\item[{int}]{idx, }
+\item[{{\bf number}}]{axis, }
+\item[{{\bf number}}]{dist, }
+\item[{{\bf vec3\+\_\+t}}]{color}
+\end{DoxyParamCaption}
+)}\hypertarget{rayplane_8h_abb59de43588ed0617065276581ef4688}{}\label{rayplane_8h_abb59de43588ed0617065276581ef4688}
+
+
+Set a plane axis, its distance to camera and its color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & Plane identifier \\
+\hline
+{\em axis} & Plane axis \\
+\hline
+{\em dist} & Plane distance to camera \\
+\hline
+{\em color} & Plane color \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 22 of file rayplane.\+c.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{rayplane_8h_abb59de43588ed0617065276581ef4688_icgraph}
+\end{center}
+\end{figure}
+
+

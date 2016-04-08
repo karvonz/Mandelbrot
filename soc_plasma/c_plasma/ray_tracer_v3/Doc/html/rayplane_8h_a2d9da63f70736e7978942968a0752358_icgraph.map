@@ -1,0 +1,7 @@
+<map id="PlaneGetNormal" name="PlaneGetNormal">
+<area shape="rect" id="node2" href="$rayobject_8c.html#ad5b91bc5eba77d5f29d82147b63bd30f" title="Get an object normal. " alt="" coords="171,31,293,57"/>
+<area shape="rect" id="node3" href="$raylight_8c.html#a233268c67064dbaf7faecaa4397ae31b" title="Get light contribution. " alt="" coords="341,5,429,32"/>
+<area shape="rect" id="node6" href="$rayrender_8c.html#a850af53283a7801d99dd1c9e5ff39c60" title="Reflect" alt="" coords="354,56,417,83"/>
+<area shape="rect" id="node4" href="$rayrender_8c.html#a5cbf8abb7997119c522463eb111b2a3e" title="Render the current scene. " alt="" coords="477,31,652,57"/>
+<area shape="rect" id="node5" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="700,31,751,57"/>
+</map>

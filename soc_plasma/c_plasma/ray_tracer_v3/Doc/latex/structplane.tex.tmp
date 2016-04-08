@@ -1,0 +1,23 @@
+\hypertarget{structplane}{}\section{plane Struct Reference}
+\label{structplane}\index{plane@{plane}}
+
+
+Collaboration diagram for plane\+:
+% FIG 0
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+number {\bfseries axis}\hypertarget{structplane_a0fef057ff8b9f6d358fcb427b1166edc}{}\label{structplane_a0fef057ff8b9f6d358fcb427b1166edc}
+
+\item 
+number {\bfseries dist}\hypertarget{structplane_a07e9dd77b166f64838cd72a6213894ef}{}\label{structplane_a07e9dd77b166f64838cd72a6213894ef}
+
+\item 
+\hyperlink{structvec3}{vec3\+\_\+t} {\bfseries color}\hypertarget{structplane_af1ec6dab64553dc67dc77bdc13deecb8}{}\label{structplane_af1ec6dab64553dc67dc77bdc13deecb8}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Includes/rayplane.\+h\end{DoxyCompactItemize}

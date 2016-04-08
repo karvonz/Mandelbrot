@@ -1,0 +1,106 @@
+\hypertarget{struct_s_d_l___haptic_custom}{}\section{S\+D\+L\+\_\+\+Haptic\+Custom Struct Reference}
+\label{struct_s_d_l___haptic_custom}\index{S\+D\+L\+\_\+\+Haptic\+Custom@{S\+D\+L\+\_\+\+Haptic\+Custom}}
+
+
+A structure containing a template for the \hyperlink{_s_d_l__haptic_8h_a8a18c4de1076ac9bebd718329d16db29}{S\+D\+L\+\_\+\+H\+A\+P\+T\+I\+C\+\_\+\+C\+U\+S\+T\+OM} effect.  
+
+
+
+
+{\ttfamily \#include $<$S\+D\+L\+\_\+haptic.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_s_d_l__stdinc_8h_a31fcc0a076c9068668173ee26d33e42b}{Uint16} \hyperlink{struct_s_d_l___haptic_custom_a8db4a3e9f29940892f2773bca31c74e1}{type}
+\item 
+\hyperlink{struct_s_d_l___haptic_direction}{S\+D\+L\+\_\+\+Haptic\+Direction} \hyperlink{struct_s_d_l___haptic_custom_a9fe6fc39233e26d6c0705ae77e43d96c}{direction}
+\item 
+\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32} \hyperlink{struct_s_d_l___haptic_custom_afbde362d49894774c8b9c9e85ac0a913}{length}
+\item 
+\hyperlink{_s_d_l__stdinc_8h_a31fcc0a076c9068668173ee26d33e42b}{Uint16} \hyperlink{struct_s_d_l___haptic_custom_a069408e960d0f2ba482421f2dd2ec003}{delay}
+\item 
+\hyperlink{_s_d_l__stdinc_8h_a31fcc0a076c9068668173ee26d33e42b}{Uint16} \hyperlink{struct_s_d_l___haptic_custom_a9dab31b41646c5d046ea33d0cfb3794a}{button}
+\item 
+\hyperlink{_s_d_l__stdinc_8h_a31fcc0a076c9068668173ee26d33e42b}{Uint16} \hyperlink{struct_s_d_l___haptic_custom_a263a60513b1bdb1e91b28bd2e128e9d4}{interval}
+\item 
+\hyperlink{_s_d_l__stdinc_8h_a2944638813a090aa23e62f4da842c3e2}{Uint8} \hyperlink{struct_s_d_l___haptic_custom_a2a6435e054f3ee99cbef44344bf83289}{channels}
+\item 
+\hyperlink{_s_d_l__stdinc_8h_a31fcc0a076c9068668173ee26d33e42b}{Uint16} \hyperlink{struct_s_d_l___haptic_custom_aacbf2f8754962f2848ff53502e42e64b}{period}
+\item 
+\hyperlink{_s_d_l__stdinc_8h_a31fcc0a076c9068668173ee26d33e42b}{Uint16} \hyperlink{struct_s_d_l___haptic_custom_afe09cc5fd2bca18a01641bc94ff31b2c}{samples}
+\item 
+\hyperlink{_s_d_l__stdinc_8h_a31fcc0a076c9068668173ee26d33e42b}{Uint16} $\ast$ \hyperlink{struct_s_d_l___haptic_custom_a111ff9da6466e6bd4b5cc4fe3d1ddca8}{data}
+\item 
+\hyperlink{_s_d_l__stdinc_8h_a31fcc0a076c9068668173ee26d33e42b}{Uint16} \hyperlink{struct_s_d_l___haptic_custom_ac1af5d594e082747b14fa520f74764c0}{attack\+\_\+length}
+\item 
+\hyperlink{_s_d_l__stdinc_8h_a31fcc0a076c9068668173ee26d33e42b}{Uint16} \hyperlink{struct_s_d_l___haptic_custom_accde1dae084b0e3b5027c7731cde9080}{attack\+\_\+level}
+\item 
+\hyperlink{_s_d_l__stdinc_8h_a31fcc0a076c9068668173ee26d33e42b}{Uint16} \hyperlink{struct_s_d_l___haptic_custom_a576ff5ee847dd20a8f1c4a69ce09ba79}{fade\+\_\+length}
+\item 
+\hyperlink{_s_d_l__stdinc_8h_a31fcc0a076c9068668173ee26d33e42b}{Uint16} \hyperlink{struct_s_d_l___haptic_custom_a03b48c5ffd631a0f35741e1aa7f482dd}{fade\+\_\+level}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A structure containing a template for the \hyperlink{_s_d_l__haptic_8h_a8a18c4de1076ac9bebd718329d16db29}{S\+D\+L\+\_\+\+H\+A\+P\+T\+I\+C\+\_\+\+C\+U\+S\+T\+OM} effect. 
+
+A custom force feedback effect is much like a periodic effect, where the application can define its exact shape. You will have to allocate the data yourself. Data should consist of channels $\ast$ samples Uint16 samples.
+
+If channels is one, the effect is rotated using the defined direction. Otherwise it uses the samples in data for the different axes.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{_s_d_l__haptic_8h_a8a18c4de1076ac9bebd718329d16db29}{S\+D\+L\+\_\+\+H\+A\+P\+T\+I\+C\+\_\+\+C\+U\+S\+T\+OM} 
+
+\hyperlink{union_s_d_l___haptic_effect}{S\+D\+L\+\_\+\+Haptic\+Effect} 
+\end{DoxySeeAlso}
+
+
+\subsection{Field Documentation}
+\index{S\+D\+L\+\_\+\+Haptic\+Custom@{S\+D\+L\+\_\+\+Haptic\+Custom}!attack\+\_\+length@{attack\+\_\+length}}
+\index{attack\+\_\+length@{attack\+\_\+length}!S\+D\+L\+\_\+\+Haptic\+Custom@{S\+D\+L\+\_\+\+Haptic\+Custom}}
+\subsubsection[{\texorpdfstring{attack\+\_\+length}{attack_length}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Uint16} attack\+\_\+length}\hypertarget{struct_s_d_l___haptic_custom_ac1af5d594e082747b14fa520f74764c0}{}\label{struct_s_d_l___haptic_custom_ac1af5d594e082747b14fa520f74764c0}
+Duration of the attack. \index{S\+D\+L\+\_\+\+Haptic\+Custom@{S\+D\+L\+\_\+\+Haptic\+Custom}!attack\+\_\+level@{attack\+\_\+level}}
+\index{attack\+\_\+level@{attack\+\_\+level}!S\+D\+L\+\_\+\+Haptic\+Custom@{S\+D\+L\+\_\+\+Haptic\+Custom}}
+\subsubsection[{\texorpdfstring{attack\+\_\+level}{attack_level}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Uint16} attack\+\_\+level}\hypertarget{struct_s_d_l___haptic_custom_accde1dae084b0e3b5027c7731cde9080}{}\label{struct_s_d_l___haptic_custom_accde1dae084b0e3b5027c7731cde9080}
+Level at the start of the attack. \index{S\+D\+L\+\_\+\+Haptic\+Custom@{S\+D\+L\+\_\+\+Haptic\+Custom}!button@{button}}
+\index{button@{button}!S\+D\+L\+\_\+\+Haptic\+Custom@{S\+D\+L\+\_\+\+Haptic\+Custom}}
+\subsubsection[{\texorpdfstring{button}{button}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Uint16} button}\hypertarget{struct_s_d_l___haptic_custom_a9dab31b41646c5d046ea33d0cfb3794a}{}\label{struct_s_d_l___haptic_custom_a9dab31b41646c5d046ea33d0cfb3794a}
+Button that triggers the effect. \index{S\+D\+L\+\_\+\+Haptic\+Custom@{S\+D\+L\+\_\+\+Haptic\+Custom}!channels@{channels}}
+\index{channels@{channels}!S\+D\+L\+\_\+\+Haptic\+Custom@{S\+D\+L\+\_\+\+Haptic\+Custom}}
+\subsubsection[{\texorpdfstring{channels}{channels}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Uint8} channels}\hypertarget{struct_s_d_l___haptic_custom_a2a6435e054f3ee99cbef44344bf83289}{}\label{struct_s_d_l___haptic_custom_a2a6435e054f3ee99cbef44344bf83289}
+Axes to use, minimum of one. \index{S\+D\+L\+\_\+\+Haptic\+Custom@{S\+D\+L\+\_\+\+Haptic\+Custom}!data@{data}}
+\index{data@{data}!S\+D\+L\+\_\+\+Haptic\+Custom@{S\+D\+L\+\_\+\+Haptic\+Custom}}
+\subsubsection[{\texorpdfstring{data}{data}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Uint16}$\ast$ data}\hypertarget{struct_s_d_l___haptic_custom_a111ff9da6466e6bd4b5cc4fe3d1ddca8}{}\label{struct_s_d_l___haptic_custom_a111ff9da6466e6bd4b5cc4fe3d1ddca8}
+Should contain channels$\ast$samples items. \index{S\+D\+L\+\_\+\+Haptic\+Custom@{S\+D\+L\+\_\+\+Haptic\+Custom}!delay@{delay}}
+\index{delay@{delay}!S\+D\+L\+\_\+\+Haptic\+Custom@{S\+D\+L\+\_\+\+Haptic\+Custom}}
+\subsubsection[{\texorpdfstring{delay}{delay}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Uint16} delay}\hypertarget{struct_s_d_l___haptic_custom_a069408e960d0f2ba482421f2dd2ec003}{}\label{struct_s_d_l___haptic_custom_a069408e960d0f2ba482421f2dd2ec003}
+Delay before starting the effect. \index{S\+D\+L\+\_\+\+Haptic\+Custom@{S\+D\+L\+\_\+\+Haptic\+Custom}!direction@{direction}}
+\index{direction@{direction}!S\+D\+L\+\_\+\+Haptic\+Custom@{S\+D\+L\+\_\+\+Haptic\+Custom}}
+\subsubsection[{\texorpdfstring{direction}{direction}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+D\+L\+\_\+\+Haptic\+Direction} direction}\hypertarget{struct_s_d_l___haptic_custom_a9fe6fc39233e26d6c0705ae77e43d96c}{}\label{struct_s_d_l___haptic_custom_a9fe6fc39233e26d6c0705ae77e43d96c}
+Direction of the effect. \index{S\+D\+L\+\_\+\+Haptic\+Custom@{S\+D\+L\+\_\+\+Haptic\+Custom}!fade\+\_\+length@{fade\+\_\+length}}
+\index{fade\+\_\+length@{fade\+\_\+length}!S\+D\+L\+\_\+\+Haptic\+Custom@{S\+D\+L\+\_\+\+Haptic\+Custom}}
+\subsubsection[{\texorpdfstring{fade\+\_\+length}{fade_length}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Uint16} fade\+\_\+length}\hypertarget{struct_s_d_l___haptic_custom_a576ff5ee847dd20a8f1c4a69ce09ba79}{}\label{struct_s_d_l___haptic_custom_a576ff5ee847dd20a8f1c4a69ce09ba79}
+Duration of the fade. \index{S\+D\+L\+\_\+\+Haptic\+Custom@{S\+D\+L\+\_\+\+Haptic\+Custom}!fade\+\_\+level@{fade\+\_\+level}}
+\index{fade\+\_\+level@{fade\+\_\+level}!S\+D\+L\+\_\+\+Haptic\+Custom@{S\+D\+L\+\_\+\+Haptic\+Custom}}
+\subsubsection[{\texorpdfstring{fade\+\_\+level}{fade_level}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Uint16} fade\+\_\+level}\hypertarget{struct_s_d_l___haptic_custom_a03b48c5ffd631a0f35741e1aa7f482dd}{}\label{struct_s_d_l___haptic_custom_a03b48c5ffd631a0f35741e1aa7f482dd}
+Level at the end of the fade. \index{S\+D\+L\+\_\+\+Haptic\+Custom@{S\+D\+L\+\_\+\+Haptic\+Custom}!interval@{interval}}
+\index{interval@{interval}!S\+D\+L\+\_\+\+Haptic\+Custom@{S\+D\+L\+\_\+\+Haptic\+Custom}}
+\subsubsection[{\texorpdfstring{interval}{interval}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Uint16} interval}\hypertarget{struct_s_d_l___haptic_custom_a263a60513b1bdb1e91b28bd2e128e9d4}{}\label{struct_s_d_l___haptic_custom_a263a60513b1bdb1e91b28bd2e128e9d4}
+How soon it can be triggered again after button. \index{S\+D\+L\+\_\+\+Haptic\+Custom@{S\+D\+L\+\_\+\+Haptic\+Custom}!length@{length}}
+\index{length@{length}!S\+D\+L\+\_\+\+Haptic\+Custom@{S\+D\+L\+\_\+\+Haptic\+Custom}}
+\subsubsection[{\texorpdfstring{length}{length}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Uint32} length}\hypertarget{struct_s_d_l___haptic_custom_afbde362d49894774c8b9c9e85ac0a913}{}\label{struct_s_d_l___haptic_custom_afbde362d49894774c8b9c9e85ac0a913}
+Duration of the effect. \index{S\+D\+L\+\_\+\+Haptic\+Custom@{S\+D\+L\+\_\+\+Haptic\+Custom}!period@{period}}
+\index{period@{period}!S\+D\+L\+\_\+\+Haptic\+Custom@{S\+D\+L\+\_\+\+Haptic\+Custom}}
+\subsubsection[{\texorpdfstring{period}{period}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Uint16} period}\hypertarget{struct_s_d_l___haptic_custom_aacbf2f8754962f2848ff53502e42e64b}{}\label{struct_s_d_l___haptic_custom_aacbf2f8754962f2848ff53502e42e64b}
+Sample periods. \index{S\+D\+L\+\_\+\+Haptic\+Custom@{S\+D\+L\+\_\+\+Haptic\+Custom}!samples@{samples}}
+\index{samples@{samples}!S\+D\+L\+\_\+\+Haptic\+Custom@{S\+D\+L\+\_\+\+Haptic\+Custom}}
+\subsubsection[{\texorpdfstring{samples}{samples}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Uint16} samples}\hypertarget{struct_s_d_l___haptic_custom_afe09cc5fd2bca18a01641bc94ff31b2c}{}\label{struct_s_d_l___haptic_custom_afe09cc5fd2bca18a01641bc94ff31b2c}
+Amount of samples. \index{S\+D\+L\+\_\+\+Haptic\+Custom@{S\+D\+L\+\_\+\+Haptic\+Custom}!type@{type}}
+\index{type@{type}!S\+D\+L\+\_\+\+Haptic\+Custom@{S\+D\+L\+\_\+\+Haptic\+Custom}}
+\subsubsection[{\texorpdfstring{type}{type}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Uint16} type}\hypertarget{struct_s_d_l___haptic_custom_a8db4a3e9f29940892f2773bca31c74e1}{}\label{struct_s_d_l___haptic_custom_a8db4a3e9f29940892f2773bca31c74e1}
+\hyperlink{_s_d_l__haptic_8h_a8a18c4de1076ac9bebd718329d16db29}{S\+D\+L\+\_\+\+H\+A\+P\+T\+I\+C\+\_\+\+C\+U\+S\+T\+OM} 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Contrib/\+Includes/\+S\+D\+L2/\hyperlink{_s_d_l__haptic_8h}{S\+D\+L\+\_\+haptic.\+h}\end{DoxyCompactItemize}

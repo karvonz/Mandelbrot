@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/ipbus/hdl
+END
+ip_checksum_8bit.v
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/ipbus/hdl/ip_checksum_8bit.v
+END
+bus_arb_decl.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/ipbus/hdl/bus_arb_decl.vhd
+END
+ipbus_ctrl.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/ipbus/hdl/ipbus_ctrl.vhd
+END
+arp.v
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/ipbus/hdl/arp.v
+END
+udp_shim.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/ipbus/hdl/udp_shim.vhd
+END
+icmp.v
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/ipbus/hdl/icmp.v
+END
+gbe_rxpacketbuffer.v
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/ipbus/hdl/gbe_rxpacketbuffer.v
+END
+sub_packetreq.v
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/ipbus/hdl/sub_packetreq.v
+END
+bus_arb.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/ipbus/hdl/bus_arb.vhd
+END
+gbe_txpacketbuffer.v
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/ipbus/hdl/gbe_txpacketbuffer.v
+END
+ipbus_addr_decode.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/ipbus/hdl/ipbus_addr_decode.vhd
+END
+transactor_sm.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/ipbus/hdl/transactor_sm.vhd
+END
+ipbus_ctrl_udponly.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/ipbus/hdl/ipbus_ctrl_udponly.vhd
+END
+transactor.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/ipbus/hdl/transactor.vhd
+END
+ipbus_fabric.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/ipbus/hdl/ipbus_fabric.vhd
+END
+packet_handler.v
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/ipbus/hdl/packet_handler.v
+END
+transactor_rx.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/ipbus/hdl/transactor_rx.vhd
+END
+transactor_tx.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/ipbus/hdl/transactor_tx.vhd
+END
+ipbus_package.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/ipbus/hdl/ipbus_package.vhd
+END
+ipbus_ctrl_decl.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/ipbus/hdl/ipbus_ctrl_decl.vhd
+END
+sub_packetbuffer.v
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/ipbus/hdl/sub_packetbuffer.v
+END
+sub_packetresp.v
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/774/tags/IPbusFirmware_1_3_0/ipbus/hdl/sub_packetresp.v
+END

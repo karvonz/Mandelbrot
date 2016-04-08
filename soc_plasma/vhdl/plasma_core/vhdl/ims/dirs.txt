@@ -1,0 +1,9 @@
+coprocessor
+complex
+ldpc
+mmx
+others
+trigo
+undef
+graphlab
+video

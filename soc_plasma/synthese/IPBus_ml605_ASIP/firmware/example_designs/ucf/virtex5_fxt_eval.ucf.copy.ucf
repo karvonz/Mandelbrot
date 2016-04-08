@@ -1,0 +1,84 @@
+# X1 - USER_CLK -  AH15 - 100 MHz single-ended
+NET sys_clk_n  LOC=H9  | DIFF_TERM=TRUE;# | TNM_NET=sysclk;
+NET sys_clk_p  LOC=J9  | DIFF_TERM=TRUE;
+NET sys_clk_66 LOC=U23;
+
+#NET clk125 TNM_NET=clk125;
+#TIMESPEC TS_sysclk = PERIOD sysclk 5ns;
+
+#NET      "clk125"   TNM_NET = "clk125";
+#TIMESPEC "TS_clk125" = PERIOD "clk125" 8 ns HIGH 50%;
+
+#NET      "clk200"   TNM_NET = "clk200";
+#TIMESPEC "TS_clk200" = PERIOD "clk200" 5 ns HIGH 50%;
+
+#NET      "ipb_clk"   TNM_NET = "ipb_clk";
+#TIMESPEC "TS_ipb_clk" = PERIOD "ipb_clk" 20 ns HIGH 50%;
+
+#INST clk125  TNM_NET=clk125;
+#INST clk200  TNM_NET=clk200;
+#INST ipb_clk TNM_NET=ipb_clk;
+#TIMESPEC TS_clk125  = PERIOD clk125  8ns;
+#TIMESPEC TS_clk200  = PERIOD clk200  5ns;
+#TIMESPEC TS_ipb_clk = PERIOD ipb_clk 20ns;
+
+
+NET phy_rstb LOC=AE13 | IOSTANDARD = LVCMOS25; 
+
+# V5 # NET sys_clk_pin LOC= AH15 | IOSTANDARD = LVCMOS33;
+# V5 # NET sys_clk_pin TNM_NET = sys_clk_pin;
+
+# V5 # NET sys_clk_pin LOC= AH15 | IOSTANDARD = LVCMOS33;
+# V5 # NET sys_clk_pin TNM_NET = sys_clk_pin;
+
+# V5 # TIMESPEC TS_sys_clk_pin = PERIOD sys_clk_pin 10000 ps;
+#TIMESPEC sys_clk_n = PERIOD sys_clk_pin 5000 ps;
+#TIMESPEC sys_clk_p = PERIOD sys_clk_pin 5000 ps;
+
+NET leds<0> LOC= AC22; #  | PULLUP | IOSTANDARD = "LVTTL";
+NET leds<1> LOC= AC24; #  | PULLUP | IOSTANDARD = "LVTTL";
+NET leds<2> LOC= AE22; #  | PULLUP | IOSTANDARD = "LVTTL";
+NET leds<3> LOC= AE23; #  | PULLUP | IOSTANDARD = "LVTTL";
+
+NET deds<0> LOC= AB23; # | PULLUP | IOSTANDARD = "LVTTL";
+NET deds<1> LOC= AG23; # | PULLUP | IOSTANDARD = "LVTTL";
+NET deds<2> LOC= AE24; # | PULLUP | IOSTANDARD = "LVTTL";
+NET deds<3> LOC= AD24; # | PULLUP | IOSTANDARD = "LVTTL";
+
+NET dip_switch<0>   LOC= D22 | IOSTANDARD = LVCMOS25; 
+NET dip_switch<1>   LOC= C22 | IOSTANDARD = LVCMOS25; 
+NET dip_switch<2>   LOC= L21 | IOSTANDARD = LVCMOS25;
+NET dip_switch<3>   LOC= L20 | IOSTANDARD = LVCMOS25;
+
+INST "GMII_TX_CLK"  LOC = "AD12"  ;                   #<---> NET  PHY_TXCLK            LOC="K17";   # Bank 3, Vcco=2.5V, No DCI
+INST "GMII_GTX_CLK" LOC = "AH12"  ;                   #<---> NET  PHY_TXCLK            LOC="K17";   # Bank 3, Vcco=2.5V, No DCI
+INST "GMII_TX_EN"   LOC = "AJ10"  ;   						#<---> NET  PHY_TXCTL_TXEN       LOC="AJ10";  # Bank 22, Vcco=3.3V, DCI
+INST "GMII_TX_ER"   LOC = "AH10"  | FAST | DRIVE=8;   #<---> NET  PHY_TXER             LOC="AJ9";   # Bank 22, Vcco=3.3V, DCI
+
+INST "GMII_TXD<0>"  LOC = "AM11"  | FAST | DRIVE=8;   #<---> NET  PHY_TXD0             LOC="AF11";  # Bank 22, Vcco=3.3V, DCI
+INST "GMII_TXD<1>"  LOC = "AL11"  | FAST | DRIVE=8;   #<---> NET  PHY_TXD1             LOC="AE11";  # Bank 22, Vcco=3.3V, DCI
+INST "GMII_TXD<2>"  LOC = "AG10"  | FAST | DRIVE=8;   #<---> NET  PHY_TXD2             LOC="AH9";   # Bank 22, Vcco=3.3V, DCI
+INST "GMII_TXD<3>"  LOC = "AG11"  | FAST | DRIVE=8;   #<---> NET  PHY_TXD3             LOC="AH10";  # Bank 22, Vcco=3.3V, DCI
+INST "GMII_TXD<4>"  LOC = "AL10"  | FAST | DRIVE=8;   #<---> NET  PHY_TXD4             LOC="AG8";   # Bank 22, Vcco=3.3V, DCI 
+INST "GMII_TXD<5>"  LOC = "AM10"  | FAST | DRIVE=8;   #<---> NET  PHY_TXD5             LOC="AH8";   # Bank 22, Vcco=3.3V, DCI
+INST "GMII_TXD<6>"  LOC = "AE11"  | FAST | DRIVE=8;   #<---> NET  PHY_TXD6             LOC="AG10";  # Bank 22, Vcco=3.3V, DCI
+INST "GMII_TXD<7>"  LOC = "AF11"  | FAST | DRIVE=8;   #<---> NET  PHY_TXD7             LOC="AG11";  # Bank 22, Vcco=3.3V, DCI
+
+NET gmii_rx_clk     LOC=AP11  | IOSTANDARD = LVCMOS25 | TNM= "gmii_rx_clk";	# ADAPTE ML507 (BLG)
+TIMESPEC "TS_GMII_RX_CLK" = PERIOD "gmii_rx_clk" 125MHz;
+#OFFSET = IN 2ns VALID 2ns BEFORE gmii_rx_clk;
+TIMEGRP "gmii_rx" OFFSET = IN 2 ns VALID 2 ns BEFORE "GMII_RX_CLK" RISING;
+
+NET "GMII_RXD<0>" LOC = AN13  ; # <---> PHY_RXD0             LOC="A33";   # Bank 11
+NET "GMII_RXD<1>" LOC = AF14  ; # <---> PHY_RXD1             LOC="B33";   # Bank 11
+NET "GMII_RXD<2>" LOC = AE14  ; # <---> PHY_RXD2             LOC="C33";   # Bank 11
+NET "GMII_RXD<3>" LOC = AN12  ; # <---> PHY_RXD3             LOC="C32";   # Bank 11
+NET "GMII_RXD<4>" LOC = AM12  ; # <---> PHY_RXD4             LOC="D32";   # Bank 11
+NET "GMII_RXD<5>" LOC = AD11  ; # <---> PHY_RXD5             LOC="C34";   # Bank 11
+NET "GMII_RXD<6>" LOC = AC12  ; # <---> PHY_RXD6             LOC="D34";   # Bank 11
+NET "GMII_RXD<7>" LOC = AC13  ; # <---> PHY_RXD7             LOC="F33";   # Bank 11
+NET "GMII_RX_ER"  LOC = AG12  ; # <---> PHY_RXER             LOC="E33";   # Bank 11
+NET "GMII_RX_DV"  LOC = AM13  ; # <---> PHY_RXCTL_RXDV       LOC="E32";   # Bank 11 
+
+#INST "i_uart"  LOC = "J24"  ;
+#INST "o_uart"  LOC = "J25"  ;

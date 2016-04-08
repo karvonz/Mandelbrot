@@ -1,0 +1,112 @@
+\hypertarget{_s_d_l__test__assert_8h}{}\section{Contrib/\+Includes/\+S\+D\+L2/\+S\+D\+L\+\_\+test\+\_\+assert.h File Reference}
+\label{_s_d_l__test__assert_8h}\index{Contrib/\+Includes/\+S\+D\+L2/\+S\+D\+L\+\_\+test\+\_\+assert.\+h@{Contrib/\+Includes/\+S\+D\+L2/\+S\+D\+L\+\_\+test\+\_\+assert.\+h}}
+{\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}close\+\_\+code.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_s_d_l__test__assert_8h_adc9dbc949d8699a6f6515211a2efa0cf}{A\+S\+S\+E\+R\+T\+\_\+\+F\+A\+IL}~0\hypertarget{_s_d_l__test__assert_8h_adc9dbc949d8699a6f6515211a2efa0cf}{}\label{_s_d_l__test__assert_8h_adc9dbc949d8699a6f6515211a2efa0cf}
+
+\begin{DoxyCompactList}\small\item\em Fails the assert. \end{DoxyCompactList}\item 
+\#define \hyperlink{_s_d_l__test__assert_8h_ae67a2f28e6df1e351df870754835a09a}{A\+S\+S\+E\+R\+T\+\_\+\+P\+A\+SS}~1\hypertarget{_s_d_l__test__assert_8h_ae67a2f28e6df1e351df870754835a09a}{}\label{_s_d_l__test__assert_8h_ae67a2f28e6df1e351df870754835a09a}
+
+\begin{DoxyCompactList}\small\item\em Passes the assert. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_s_d_l__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} \hyperlink{_s_d_l__test__assert_8h_a59e7e8f7ecf1ac4a0c8c10c810483add}{S\+D\+L\+Test\+\_\+\+Assert} (\hyperlink{_s_d_l__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} assert\+Condition, const char $\ast$assert\+Description,...)
+\begin{DoxyCompactList}\small\item\em Assert that logs and break execution flow on failures. \end{DoxyCompactList}\item 
+\hyperlink{_s_d_l__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} \hyperlink{_s_d_l__test__assert_8h_a5920e6901ad268836111c2226ae03c28}{S\+D\+L\+Test\+\_\+\+Assert\+Check} (\hyperlink{_s_d_l__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} assert\+Condition, const char $\ast$assert\+Description,...)
+\begin{DoxyCompactList}\small\item\em Assert for test cases that logs but does not break execution flow on failures. Updates assertion counters. \end{DoxyCompactList}\item 
+\hyperlink{_s_d_l__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} \hyperlink{_s_d_l__test__assert_8h_a8d7023e35d3a2c5961a00f097408d34a}{S\+D\+L\+Test\+\_\+\+Assert\+Pass} (const char $\ast$assert\+Description,...)
+\begin{DoxyCompactList}\small\item\em Explicitely pass without checking an assertion condition. Updates assertion counter. \end{DoxyCompactList}\item 
+\hyperlink{_s_d_l__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} \hyperlink{_s_d_l__test__assert_8h_a64f6f1dfd462826ad4fbc33bc0658954}{S\+D\+L\+Test\+\_\+\+Reset\+Assert\+Summary} ()\hypertarget{_s_d_l__test__assert_8h_a64f6f1dfd462826ad4fbc33bc0658954}{}\label{_s_d_l__test__assert_8h_a64f6f1dfd462826ad4fbc33bc0658954}
+
+\begin{DoxyCompactList}\small\item\em Resets the assert summary counters to zero. \end{DoxyCompactList}\item 
+\hyperlink{_s_d_l__audio_8h_a52835ae37c4bb905b903cbaf5d04b05f}{void} \hyperlink{_s_d_l__test__assert_8h_a91bf7c3d801ba6d0ded433e5ed661bbe}{S\+D\+L\+Test\+\_\+\+Log\+Assert\+Summary} ()\hypertarget{_s_d_l__test__assert_8h_a91bf7c3d801ba6d0ded433e5ed661bbe}{}\label{_s_d_l__test__assert_8h_a91bf7c3d801ba6d0ded433e5ed661bbe}
+
+\begin{DoxyCompactList}\small\item\em Logs summary of all assertions (total, pass, fail) since last reset as I\+N\+FO or E\+R\+R\+OR. \end{DoxyCompactList}\item 
+\hyperlink{_s_d_l__thread_8h_a6a64f9be4433e4de6e2f2f548cf3c08e}{int} \hyperlink{_s_d_l__test__assert_8h_a2196b3c11e7eba93ec4ff797ed20bc3c}{S\+D\+L\+Test\+\_\+\+Assert\+Summary\+To\+Test\+Result} ()
+\begin{DoxyCompactList}\small\item\em Converts the current assert summary state to a test result. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Include file for S\+DL test framework.
+
+This code is a part of the S\+D\+L2\+\_\+test library, not the main S\+DL library. 
+
+\subsection{Function Documentation}
+\index{S\+D\+L\+\_\+test\+\_\+assert.\+h@{S\+D\+L\+\_\+test\+\_\+assert.\+h}!S\+D\+L\+Test\+\_\+\+Assert@{S\+D\+L\+Test\+\_\+\+Assert}}
+\index{S\+D\+L\+Test\+\_\+\+Assert@{S\+D\+L\+Test\+\_\+\+Assert}!S\+D\+L\+\_\+test\+\_\+assert.\+h@{S\+D\+L\+\_\+test\+\_\+assert.\+h}}
+\subsubsection[{\texorpdfstring{S\+D\+L\+Test\+\_\+\+Assert(int assert\+Condition, const char $\ast$assert\+Description,...)}{SDLTest_Assert(int assertCondition, const char *assertDescription,...)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} S\+D\+L\+Test\+\_\+\+Assert (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{assert\+Condition, }
+\item[{const char $\ast$}]{assert\+Description, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\hypertarget{_s_d_l__test__assert_8h_a59e7e8f7ecf1ac4a0c8c10c810483add}{}\label{_s_d_l__test__assert_8h_a59e7e8f7ecf1ac4a0c8c10c810483add}
+
+
+Assert that logs and break execution flow on failures. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em assert\+Condition} & Evaluated condition or variable to assert; fail (==0) or pass (!=0). \\
+\hline
+{\em assert\+Description} & Message to log with the assert describing it. \\
+\hline
+\end{DoxyParams}
+\index{S\+D\+L\+\_\+test\+\_\+assert.\+h@{S\+D\+L\+\_\+test\+\_\+assert.\+h}!S\+D\+L\+Test\+\_\+\+Assert\+Check@{S\+D\+L\+Test\+\_\+\+Assert\+Check}}
+\index{S\+D\+L\+Test\+\_\+\+Assert\+Check@{S\+D\+L\+Test\+\_\+\+Assert\+Check}!S\+D\+L\+\_\+test\+\_\+assert.\+h@{S\+D\+L\+\_\+test\+\_\+assert.\+h}}
+\subsubsection[{\texorpdfstring{S\+D\+L\+Test\+\_\+\+Assert\+Check(int assert\+Condition, const char $\ast$assert\+Description,...)}{SDLTest_AssertCheck(int assertCondition, const char *assertDescription,...)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} S\+D\+L\+Test\+\_\+\+Assert\+Check (
+\begin{DoxyParamCaption}
+\item[{{\bf int}}]{assert\+Condition, }
+\item[{const char $\ast$}]{assert\+Description, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\hypertarget{_s_d_l__test__assert_8h_a5920e6901ad268836111c2226ae03c28}{}\label{_s_d_l__test__assert_8h_a5920e6901ad268836111c2226ae03c28}
+
+
+Assert for test cases that logs but does not break execution flow on failures. Updates assertion counters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em assert\+Condition} & Evaluated condition or variable to assert; fail (==0) or pass (!=0). \\
+\hline
+{\em assert\+Description} & Message to log with the assert describing it.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the assert\+Condition so it can be used to externally to break execution flow if desired. 
+\end{DoxyReturn}
+\index{S\+D\+L\+\_\+test\+\_\+assert.\+h@{S\+D\+L\+\_\+test\+\_\+assert.\+h}!S\+D\+L\+Test\+\_\+\+Assert\+Pass@{S\+D\+L\+Test\+\_\+\+Assert\+Pass}}
+\index{S\+D\+L\+Test\+\_\+\+Assert\+Pass@{S\+D\+L\+Test\+\_\+\+Assert\+Pass}!S\+D\+L\+\_\+test\+\_\+assert.\+h@{S\+D\+L\+\_\+test\+\_\+assert.\+h}}
+\subsubsection[{\texorpdfstring{S\+D\+L\+Test\+\_\+\+Assert\+Pass(const char $\ast$assert\+Description,...)}{SDLTest_AssertPass(const char *assertDescription,...)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf void} S\+D\+L\+Test\+\_\+\+Assert\+Pass (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{assert\+Description, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\hypertarget{_s_d_l__test__assert_8h_a8d7023e35d3a2c5961a00f097408d34a}{}\label{_s_d_l__test__assert_8h_a8d7023e35d3a2c5961a00f097408d34a}
+
+
+Explicitely pass without checking an assertion condition. Updates assertion counter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em assert\+Description} & Message to log with the assert describing it. \\
+\hline
+\end{DoxyParams}
+\index{S\+D\+L\+\_\+test\+\_\+assert.\+h@{S\+D\+L\+\_\+test\+\_\+assert.\+h}!S\+D\+L\+Test\+\_\+\+Assert\+Summary\+To\+Test\+Result@{S\+D\+L\+Test\+\_\+\+Assert\+Summary\+To\+Test\+Result}}
+\index{S\+D\+L\+Test\+\_\+\+Assert\+Summary\+To\+Test\+Result@{S\+D\+L\+Test\+\_\+\+Assert\+Summary\+To\+Test\+Result}!S\+D\+L\+\_\+test\+\_\+assert.\+h@{S\+D\+L\+\_\+test\+\_\+assert.\+h}}
+\subsubsection[{\texorpdfstring{S\+D\+L\+Test\+\_\+\+Assert\+Summary\+To\+Test\+Result()}{SDLTest_AssertSummaryToTestResult()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int} S\+D\+L\+Test\+\_\+\+Assert\+Summary\+To\+Test\+Result (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{_s_d_l__test__assert_8h_a2196b3c11e7eba93ec4ff797ed20bc3c}{}\label{_s_d_l__test__assert_8h_a2196b3c11e7eba93ec4ff797ed20bc3c}
+
+
+Converts the current assert summary state to a test result. 
+
+\begin{DoxyReturn}{Returns}
+T\+E\+S\+T\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+\+P\+A\+S\+S\+ED, T\+E\+S\+T\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+\+F\+A\+I\+L\+ED, or T\+E\+S\+T\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+\+N\+O\+\_\+\+A\+S\+S\+E\+RT 
+\end{DoxyReturn}

@@ -1,0 +1,188 @@
+\hypertarget{rayobject_8c}{}\section{Sources/rayobject.c File Reference}
+\label{rayobject_8c}\index{Sources/rayobject.\+c@{Sources/rayobject.\+c}}
+
+
+Raytracer object.  
+
+
+{\ttfamily \#include \char`\"{}../\+Includes/rayobject.\+h\char`\"{}}\\*
+Include dependency graph for rayobject.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rayobject_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{raytypes_8h_a0c0a490ab7fa397be6c764a935cc5ea4}{u32\+\_\+t} \hyperlink{rayobject_8c_a07163c81c5ae4159950c28fcaa835fc2}{Object\+Get\+Number\+By\+Type} (int type)
+\begin{DoxyCompactList}\small\item\em Get the number of objects given a type. \end{DoxyCompactList}\item 
+\hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} \hyperlink{rayobject_8c_ad5b91bc5eba77d5f29d82147b63bd30f}{Object\+Get\+Normal} (int type, int idx, \hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} p, \hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} inside)
+\begin{DoxyCompactList}\small\item\em Get an object normal. \end{DoxyCompactList}\item 
+\hyperlink{raymath_8h_afb3684d7701a8417d1a52fd94c84457c}{vec3\+\_\+t} \hyperlink{rayobject_8c_a85b5e2864495dc8d6fb2089fd6ec183e}{Object\+Get\+Color} (int type, int idx)
+\begin{DoxyCompactList}\small\item\em Get an object color. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Raytracer object. 
+
+\begin{DoxyAuthor}{Author}
+J. Crenne \& C. Leroux 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+February 2016 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\index{rayobject.\+c@{rayobject.\+c}!Object\+Get\+Color@{Object\+Get\+Color}}
+\index{Object\+Get\+Color@{Object\+Get\+Color}!rayobject.\+c@{rayobject.\+c}}
+\subsubsection[{\texorpdfstring{Object\+Get\+Color(int type, int idx)}{ObjectGetColor(int type, int idx)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3\+\_\+t} Object\+Get\+Color (
+\begin{DoxyParamCaption}
+\item[{int}]{type, }
+\item[{int}]{idx}
+\end{DoxyParamCaption}
+)}\hypertarget{rayobject_8c_a85b5e2864495dc8d6fb2089fd6ec183e}{}\label{rayobject_8c_a85b5e2864495dc8d6fb2089fd6ec183e}
+
+
+Get an object color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Object type (O\+B\+J\+E\+C\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+P\+H\+E\+RE or O\+B\+J\+E\+C\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+L\+A\+NE) \\
+\hline
+{\em idx} & Object identifier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Object color 
+\end{DoxyReturn}
+
+
+Definition at line 29 of file rayobject.\+c.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{rayobject_8c_a85b5e2864495dc8d6fb2089fd6ec183e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rayobject_8c_a85b5e2864495dc8d6fb2089fd6ec183e_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{rayobject.\+c@{rayobject.\+c}!Object\+Get\+Normal@{Object\+Get\+Normal}}
+\index{Object\+Get\+Normal@{Object\+Get\+Normal}!rayobject.\+c@{rayobject.\+c}}
+\subsubsection[{\texorpdfstring{Object\+Get\+Normal(int type, int idx, vec3\+\_\+t p, vec3\+\_\+t inside)}{ObjectGetNormal(int type, int idx, vec3_t p, vec3_t inside)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vec3\+\_\+t} Object\+Get\+Normal (
+\begin{DoxyParamCaption}
+\item[{int}]{type, }
+\item[{int}]{idx, }
+\item[{{\bf vec3\+\_\+t}}]{p, }
+\item[{{\bf vec3\+\_\+t}}]{inside}
+\end{DoxyParamCaption}
+)}\hypertarget{rayobject_8c_ad5b91bc5eba77d5f29d82147b63bd30f}{}\label{rayobject_8c_ad5b91bc5eba77d5f29d82147b63bd30f}
+
+
+Get an object normal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Object type (O\+B\+J\+E\+C\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+P\+H\+E\+RE or O\+B\+J\+E\+C\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+L\+A\+NE) \\
+\hline
+{\em idx} & Object identifier \\
+\hline
+{\em p} & Intersection point position \\
+\hline
+{\em inside} & origin (applies for planes only) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Object normal 
+\end{DoxyReturn}
+
+
+Definition at line 20 of file rayobject.\+c.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rayobject_8c_ad5b91bc5eba77d5f29d82147b63bd30f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rayobject_8c_ad5b91bc5eba77d5f29d82147b63bd30f_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{rayobject.\+c@{rayobject.\+c}!Object\+Get\+Number\+By\+Type@{Object\+Get\+Number\+By\+Type}}
+\index{Object\+Get\+Number\+By\+Type@{Object\+Get\+Number\+By\+Type}!rayobject.\+c@{rayobject.\+c}}
+\subsubsection[{\texorpdfstring{Object\+Get\+Number\+By\+Type(int type)}{ObjectGetNumberByType(int type)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf u32\+\_\+t} Object\+Get\+Number\+By\+Type (
+\begin{DoxyParamCaption}
+\item[{int}]{type}
+\end{DoxyParamCaption}
+)}\hypertarget{rayobject_8c_a07163c81c5ae4159950c28fcaa835fc2}{}\label{rayobject_8c_a07163c81c5ae4159950c28fcaa835fc2}
+
+
+Get the number of objects given a type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Object type (O\+B\+J\+E\+C\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+P\+H\+E\+RE or O\+B\+J\+E\+C\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+L\+A\+NE) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of objects (by type) 
+\end{DoxyReturn}
+
+
+Definition at line 11 of file rayobject.\+c.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{rayobject_8c_a07163c81c5ae4159950c28fcaa835fc2_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rayobject_8c_a07163c81c5ae4159950c28fcaa835fc2_icgraph}
+\end{center}
+\end{figure}
+
+

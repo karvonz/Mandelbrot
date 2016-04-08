@@ -1,0 +1,129 @@
+# Makefile permettant de :
+# - compiler le code source à exécuter sur le Plasma
+# - compiler les fichiers VHDL du SoC Plasma
+# - lancer la simulation VHDL du SoC Plasma
+# Usage: 
+# - make soft : compile l'exécutable avec le compilateur MIPS et génère le fichier .txt correspondant
+# - make vhdl : compile les fichiers VHDL du SoC Plasma
+# - make simu : lance la simulation VHDL du SoC Plasma
+# - make all : fait toutes les étapes précédentes une par une
+
+SIM_TOP = tbench
+OBJDIR = obj
+
+all: vhdl soft simu
+
+####################################################################################################
+#
+# ON GENERE LE CODE EXECUTABLE QUE L'ON VA FAIRE TOURNER SUR LE PROCESSEUR PLASMA
+#
+####################################################################################################
+
+CFLAGS      = -O3 -Wall -c -s -funroll-loops -mips1 -mtune=mips1 -msoft-float
+GCC_MIPS    = mips-elf-gcc $(CFLAGS)
+AS_MIPS     = mips-elf-as
+LD_MIPS     = mips-elf-ld
+CONVERT_BIN = ../../c_plasma/tools/convert_bin.exe
+
+soft:
+	$(AS_MIPS) -o boot.o  ../../c_plasma/shared/boot.asm
+	$(AS_MIPS) -o uboot.o ../../c_plasma/shared/uboot.asm
+	$(GCC_MIPS) ../../c_plasma/shared/no_os.c -o no_os.o 
+	$(GCC_MIPS) -DVHDL_SIMULATION ../../c_plasma/0_c_hello_world/main.c
+	$(LD_MIPS) -Ttext 0 -eentry -Map test.map -s -N -o test.axf boot.o main.o no_os.o 
+	$(CONVERT_BIN)
+	cp code_bin.txt ..
+
+####################################################################################################
+#
+# ON GENERE LE MODELE SIMULABLE DU PROCESSEUR AVEC MODELSIM
+#
+####################################################################################################
+NAME=main	$(VHDL_DIR)/ims/function_19.vhd \
+
+workdir:
+	mkdir -p $(OBJDIR)
+
+GENE_DIR = ../../vhdl/dedicated
+VHDL_DIR = ../../vhdl/plasma_core/vhdl
+PROJ_VHDL = \
+	$(VHDL_DIR)/ims/conversion.vhd \
+	$(VHDL_DIR)/ims/txt_util.vhd  \
+	$(VHDL_DIR)/ims/conversion.vhd \
+	$(VHDL_DIR)/ims/function_1.vhd \
+	$(VHDL_DIR)/ims/function_2.vhd \
+	$(VHDL_DIR)/ims/function_3.vhd \
+	$(VHDL_DIR)/ims/function_4.vhd \
+	$(VHDL_DIR)/ims/function_5.vhd \
+	$(VHDL_DIR)/ims/function_6.vhd \
+	$(VHDL_DIR)/ims/function_7.vhd \
+	$(VHDL_DIR)/ims/function_8.vhd \
+	$(VHDL_DIR)/ims/function_9.vhd \
+	$(VHDL_DIR)/ims/function_10.vhd \
+	$(VHDL_DIR)/ims/function_11.vhd \
+	$(VHDL_DIR)/ims/function_12.vhd \
+	$(VHDL_DIR)/ims/function_13.vhd \
+	$(VHDL_DIR)/ims/function_14.vhd \
+	$(VHDL_DIR)/ims/function_15.vhd \
+	$(VHDL_DIR)/ims/function_16.vhd \
+	$(VHDL_DIR)/ims/function_17.vhd \
+	$(VHDL_DIR)/ims/function_18.vhd \
+	$(VHDL_DIR)/ims/function_19.vhd \
+	$(VHDL_DIR)/ims/coproc_1.vhd \
+	$(VHDL_DIR)/ims/coproc_2.vhd \
+	$(VHDL_DIR)/ims/coproc_3.vhd \
+	$(VHDL_DIR)/ims/coproc_4.vhd \
+	$(VHDL_DIR)/ims/sequ_alu_1.vhd \
+	$(VHDL_DIR)/ims/comb_alu_1.vhd \
+	$(VHDL_DIR)/mlite_pack.vhd \
+	$(VHDL_DIR)/plasma_3e.vhd \
+	$(VHDL_DIR)/ddr_ctrl.vhd \
+	$(VHDL_DIR)/memory_64k.vhd \
+	$(VHDL_DIR)/uart.vhd \
+	$(VHDL_DIR)/eth_dma.vhd \
+	$(VHDL_DIR)/mlite_cpu.vhd \
+	$(VHDL_DIR)/alu.vhd \
+	$(VHDL_DIR)/bus_mux.vhd \
+	$(VHDL_DIR)/control.vhd \
+	$(VHDL_DIR)/disassembler.vhd \
+	$(VHDL_DIR)/mem_ctrl.vhd \
+	$(VHDL_DIR)/mult.vhd \
+	$(VHDL_DIR)/pipeline.vhd \
+	$(VHDL_DIR)/pc_next.vhd \
+	$(VHDL_DIR)/reg_bank.vhd \
+	$(VHDL_DIR)/shifter.vhd \
+	$(VHDL_DIR)/dma_engine.vhd \
+	$(VHDL_DIR)/cache.vhd \
+	$(VHDL_DIR)/ram_boot_for_simu.vhd \
+	$(VHDL_DIR)/simulation/txt_util.vhd \
+	$(VHDL_DIR)/simulation/pcie_in.vhd \
+	$(VHDL_DIR)/simulation/pcie_out.vhd \
+	$(VHDL_DIR)/simulation/pcie_cmp.vhd \
+	$(VHDL_DIR)/plasma.vhd
+
+clean:
+	rm -rf *.o *.cf $(OBJDIR) tb *.vcd main $(SIM_TOP) *.ghw
+	rm -f *.bit *.bgn *_pad.txt *_pad.csv *.xpi *.srp *.ngc *.par
+	rm -f *.lst *.ngd *.ngm *.pcf *.mrp *.unroutes *.pad
+	rm -f *.bld *.ncd *.twr *.drcvlib
+	rm -rf xst $(NAME).prj
+	rm -rf generated
+
+vhdl: workdir
+	vlib work
+	vmap work work
+	vcom -quiet  -93  -work work $(PROJ_VHDL)
+	vcom -quiet  -93  -work work tbench.vhd
+
+####################################################################################################
+#
+# ON LANCE LA SIMULATION DU MODELE VHDL DU PROCESSEUR
+#
+####################################################################################################
+
+simu:
+	cp code_bin.txt ..
+	vsim tbench -c -quiet -do "set NumericStdNoWarnings 1; set StdArithNoWarnings 1; run 100ms; exit"
+	rm ../code_bin.txt
+
+

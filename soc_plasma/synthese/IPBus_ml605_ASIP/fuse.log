@@ -1,0 +1,35 @@
+Running: C:\Xilinx\13.4\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o Z:/design/code_16200x6480/16k_GPU_device_6_8_6.parallel.IOs/synthese/ipbus_asip_ml507_working/tb_FIFO_6b_isim_beh.exe -prj Z:/design/code_16200x6480/16k_GPU_device_6_8_6.parallel.IOs/synthese/ipbus_asip_ml507_working/tb_FIFO_6b_beh.prj work.tb_FIFO_6b 
+ISim O.87xd (signature 0x2f00eba5)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Parsing VHDL file "Z:/design/code_16200x6480/16k_GPU_device_6_8_6.parallel.IOs/synthese/ipbus_asip_ml507_working/ipcore_dir/dpbr8.vhd" into library work
+Parsing VHDL file "Z:/design/code_16200x6480/16k_GPU_device_6_8_6.parallel.IOs/synthese/ipbus_asip_ml507_working/../ise_virtex6_rom_based/custom_RAM.vhd" into library work
+Parsing VHDL file "Z:/design/code_16200x6480/16k_GPU_device_6_8_6.parallel.IOs/synthese/ipbus_asip_ml507_working/../ise_virtex6_rom_based/custom_FIFO.vhd" into library work
+Parsing VHDL file "Z:/design/code_16200x6480/16k_GPU_device_6_8_6.parallel.IOs/synthese/ipbus_asip_ml507_working/../ise_virtex6_rom_based/n_k_FIFO.vhd" into library work
+Parsing VHDL file "Z:/design/code_16200x6480/16k_GPU_device_6_8_6.parallel.IOs/synthese/ipbus_asip_ml507_working/ipcore_dir/fifo_16384_words.vhd" into library work
+Parsing VHDL file "Z:/design/code_16200x6480/16k_GPU_device_6_8_6.parallel.IOs/synthese/ipbus_asip_ml507_working/../ise_virtex6_rom_based/tb_FIFO_6b.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 68780 KB
+Fuse CPU Usage: 1889 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling architecture behavioral of entity custom_RAM [\custom_RAM(8,8,256)\]
+Compiling architecture behavioral of entity custom_FIFO [\custom_FIFO(8,5,32,8,256)\]
+Compiling architecture behavioral of entity LLR_DATA_TO_ASIP_PU_CONVERTER [\LLR_DATA_TO_ASIP_PU_CONVERTER(8...]
+Compiling architecture behavioral of entity fifo_generator_v8_4_bhv_as [\fifo_generator_v8_4_bhv_as(32,"...]
+Compiling architecture behavioral of entity fifo_generator_v8_4_bhv_preload0 [\fifo_generator_v8_4_bhv_preload...]
+Compiling architecture behavioral of entity fifo_generator_v8_4_conv [\fifo_generator_v8_4_conv(0,0,14...]
+Compiling architecture behavioral of entity fifo_generator_v8_4 [\fifo_generator_v8_4(0,0,14,"Bla...]
+Compiling architecture fifo_16384_words_a of entity fifo_16384_words [fifo_16384_words_default]
+Compiling architecture behavior of entity tb_fifo_6b
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 22 VHDL Units
+Built simulation executable Z:/design/code_16200x6480/16k_GPU_device_6_8_6.parallel.IOs/synthese/ipbus_asip_ml507_working/tb_FIFO_6b_isim_beh.exe
+Fuse Memory Usage: 88560 KB
+Fuse CPU Usage: 3218 ms
