@@ -11,8 +11,8 @@
 # - make simu_debug : make soft + make vhdl + lancement de la simu modelsim en mode graphique
 # - make ppm : permet d'executer le programme sur votre machine linux (attention tous les appels à du materiel isa_custom etc... ne fonctionneront pas)
 
-MY_PROJECT=ray_tracer_v3
-#MY_PROJECT=mandelbrot
+#MY_PROJECT=ray_tracer_v3
+MY_PROJECT=mandelbrot
 #MY_PROJECT=filtre
 #MY_PROJECT=tuto_plasma
 SRC_DIR=Sources
