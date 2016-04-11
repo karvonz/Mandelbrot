@@ -140,6 +140,7 @@ PROJ_VHDL = \
 	$(VHDL_CUSTOM_DIR)/function_17.vhd \
 	$(VHDL_CUSTOM_DIR)/function_18.vhd \
 	$(VHDL_CUSTOM_DIR)/function_19.vhd \
+	$(VHDL_CUSTOM_DIR)/Shared.vhd \
 	$(VHDL_CUSTOM_DIR)/coproc_1.vhd \
 	$(VHDL_CUSTOM_DIR)/coproc_2.vhd \
 	$(VHDL_CUSTOM_DIR)/coproc_3.vhd \

@@ -29,7 +29,7 @@ int Convergence_Fixed(int X, int Y, int maxi)
     x2 = isa_custom_1(x1 , x1);
     y2 = isa_custom_1(y1 , y1);
     const int temp = x2 - y2 + X;
-    y1 = (isa_custom_1(x1 , y1) >> (precision-1 ) + Y;
+    y1 = (isa_custom_1(x1 , y1) >> 23 ) + Y;
     x1 = temp;
     i++;
   }while( ((x2 + y2) <= deux) && ( i < maxi )  );
