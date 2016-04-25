@@ -34,7 +34,7 @@ begin
 		variable rTemp3  : SIGNED(31 downto 0);
 	begin
 		rTemp1 := (signed(INPUT_1) * signed(INPUT_2));
-		OUTPUT_1 <= (std_logic_vector(rTemp1(FIXED+32 downto FIXED)) sll 1);  --x1*y1*2
+		OUTPUT_1 <= std_logic_vector(rTemp1(32+(FIXED-1)-1 downto FIXED))&'0';  --x1*y1*2
 	end process;
 	
 	-------------------------------------------------------------------------

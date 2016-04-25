@@ -36,7 +36,7 @@ begin
 		rTemp1 := (signed(INPUT_1) * signed(INPUT_1));
 		rTemp2 := (signed(INPUT_2) * signed(INPUT_2));
 		rTemp3 := rTemp1+rTemp2;
-		OUTPUT_1 <= std_logic_vector(rTemp3(FIXED+32 downto FIXED));  --x1²+y1²
+		OUTPUT_1 <= std_logic_vector(rTemp3(32+(FIXED-1) downto FIXED));  --x1²+y1²
 	end process;
 	
 	-------------------------------------------------------------------------
