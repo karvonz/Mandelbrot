@@ -13,8 +13,11 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use work.mlite_pack.all;
+<<<<<<< HEAD
 use WORK.CONSTANTS.ALL;
 
+=======
+>>>>>>> master
 
 entity function_1 is
    port(
@@ -33,7 +36,15 @@ begin
 		variable rTemp2  : UNSIGNED(31 downto 0);
 		variable rTemp3  : UNSIGNED(31 downto 0);
 	begin
+<<<<<<< HEAD
 		OUTPUT_1<=mult(INPUT_1, INPUT_2, FIXED);
+=======
+		if(INPUT_1 > INPUT_2) then
+			OUTPUT_1 <= INPUT_1;
+		else
+			OUTPUT_1 <= INPUT_2;
+		end if;
+>>>>>>> master
 
 	end process;
 	-------------------------------------------------------------------------

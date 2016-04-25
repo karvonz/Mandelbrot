@@ -145,6 +145,7 @@ PROJ_VHDL = \
 	$(VHDL_CUSTOM_DIR)/coproc_2.vhd \
 	$(VHDL_CUSTOM_DIR)/coproc_3.vhd \
 	$(VHDL_CUSTOM_DIR)/coproc_4.vhd \
+	$(VHDL_CUSTOM_DIR)/Shared.vhd \
 	$(VHDL_DIR)/ims/sequ_alu_1.vhd \
 	$(VHDL_DIR)/vgd_bitmap_640x480.vhd \
 	$(VHDL_DIR)/cache.vhd \

@@ -16,20 +16,18 @@ int Convergence_Fixed(int X, int Y, int maxi)
   int      i = 0;
   long long x1 = 0;
   long long y1 = 0;
-/*
-  while( ( ((x1 * x1 + y1 * y1) >> 24) <= deux ) and ( i < maxi ) ){
-    int64_t temp = ((x1 * x1) >> 24) - ((y1 * y1) >> 24) + X;
-    y1 = ((x1 * y1) >> 23 ) + Y;
-    x1 = temp;
-    i++;
-  }
-*/
+
+
   int x2, y2;
   do{
     x2 = isa_custom_1(x1 , x1);
     y2 = isa_custom_1(y1 , y1);
     const int temp = x2 - y2 + X;
+<<<<<<< HEAD
     y1 = (isa_custom_1(x1 , y1) >> (precision-1 ) + Y;
+=======
+    y1 = (isa_custom_1(x1 , y1) >> 23 ) + Y;
+>>>>>>> master
     x1 = temp;
     i++;
   }while( ((x2 + y2) <= deux) && ( i < maxi )  );
@@ -41,10 +39,10 @@ int Convergence_Fixed(int X, int Y, int maxi)
 
  int main( int argc, char ** argv ) {
 
-  const int _xstart   = 0xFE000000;
-  const int _ystart   = 0xFF000000;
-  const int _xinc     = 0x000133AE;
-  const int _yinc     = 0x000111A3;
+  const int _xstart   = 0xE0000000;
+  const int _ystart   = 0xF0000000;
+  const int _xinc     = 0x004D4874;
+  const int _yinc     = 0x0052BF5B;
 
 coproc_reset(COPROC_4_RST);
 int height = 480;

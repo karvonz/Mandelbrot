@@ -14,7 +14,10 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use work.mlite_pack.all;
 use WORK.CONSTANTS.ALL;
+<<<<<<< HEAD
 use work.functions.all;
+=======
+>>>>>>> master
 
 entity function_1 is
    port(
@@ -29,12 +32,13 @@ begin
 	
 	-------------------------------------------------------------------------
 	computation : process (INPUT_1, INPUT_2)
-		variable rTemp1  : UNSIGNED(31 downto 0);
-		variable rTemp2  : UNSIGNED(31 downto 0);
-		variable rTemp3  : UNSIGNED(31 downto 0);
 	begin
+<<<<<<< HEAD
 		OUTPUT_1<=mult(INPUT_1, INPUT_2, FIXED);
 
+=======
+		OUTPUT_1 <= mult(INPUT_1, INPUT_2, FIXED)
+>>>>>>> master
 	end process;
 	-------------------------------------------------------------------------
 
