@@ -10,7 +10,7 @@ Target Device  : xc7a100t
 Target Package : csg324
 Target Speed   : -1
 Mapper Version : artix7 -- $Revision: 1.55 $
-Mapped Date    : Mon Mar 21 12:01:08 2016
+Mapped Date    : Mon Apr 25 10:57:56 2016
 
 Design Summary
 --------------
@@ -112,9 +112,9 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                13.31
 
-Peak Memory Usage:  1621 MB
-Total REAL time to MAP completion:  3 mins 16 secs 
-Total CPU time to MAP completion (all processors):   2 mins 28 secs 
+Peak Memory Usage:  1588 MB
+Total REAL time to MAP completion:  4 mins 5 secs 
+Total CPU time to MAP completion (all processors):   4 mins 11 secs 
 
 Table of Contents
 -----------------
@@ -137,18 +137,12 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
-WARNING:Security:42 - Your software subscription period has lapsed. Your current
-version of Xilinx tools will continue to function, but you no longer qualify for
-Xilinx software updates or new releases.
 
 Section 3 - Informational
 -------------------------
 INFO:Map:284 - Map is running with the multi-threading option on. Map currently
    supports the use of up to 2 processors. Based on the the user options and
    machine load, Map will use 2 processors during this run.
-INFO:Security:67 - XILINXD_LICENSE_FILE is set to '/home/cleroux/.Xilinx' in
-/home/cleroux/.flexlmrc.
-INFO:Security:54 - 'xc7a100t' is a WebPack part.
 INFO:LIT:243 - Logical network INST_PLASMA/U1_CPU/SALU_1_FUNCD<5> has no load.
 INFO:LIT:395 - The above info message is repeated 74 more times for the
    following (max. 5 shown):

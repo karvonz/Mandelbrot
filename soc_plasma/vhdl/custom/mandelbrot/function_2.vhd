@@ -1,3 +1,4 @@
+
 ---------------------------------------------------------------------
 -- TITLE: Arithmetic Logic Unit
 -- AUTHOR: Steve Rhoads (rhoadss@yahoo.com)
@@ -13,6 +14,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use work.mlite_pack.all;
+use work.constants.all;
 
 entity function_2 is
    port(
@@ -24,15 +26,16 @@ end; --comb_alu_1
 
 architecture logic of function_2 is
 begin
+	
 	-------------------------------------------------------------------------
-
 	computation : process (INPUT_1, INPUT_2)
+		variable rTemp1  : SIGNED(63 downto 0);
+		variable rTemp2  : SIGNED(63 downto 0);
+		variable rTemp3  : SIGNED(31 downto 0);
 	begin
-		if(INPUT_1 < INPUT_2) then
-			OUTPUT_1 <= INPUT_1;
-		else
-			OUTPUT_1 <= INPUT_2;
-		end if;
+		rTemp1 := (signed(INPUT_1) * signed(INPUT_1));
+		rTemp2 := (signed(INPUT_2) * signed(INPUT_2));
+		OUTPUT_1 <= std_logic_vector((rTemp1-rTemp2)(FIXED+32 downto FIXED));  --x1²-y1²
 	end process;
 	
 	-------------------------------------------------------------------------

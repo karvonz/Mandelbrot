@@ -10,16 +10,8 @@ Target Device  : xc7a100t
 Target Package : csg324
 Target Speed   : -1
 Mapper Version : artix7 -- $Revision: 1.55 $
-Mapped Date    : Mon Mar 21 12:01:08 2016
+Mapped Date    : Mon Apr 25 10:57:56 2016
 
-vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-INFO:Security:67 - XILINXD_LICENSE_FILE is set to '/home/cleroux/.Xilinx' in
-/home/cleroux/.flexlmrc.
-INFO:Security:54 - 'xc7a100t' is a WebPack part.
-WARNING:Security:42 - Your software subscription period has lapsed. Your current
-version of Xilinx tools will continue to function, but you no longer qualify for
-Xilinx software updates or new releases.
-----------------------------------------------------------------------
 Mapping design into LUTs...
 Running directed packing...
 Running delay-based LUT packing...
@@ -27,53 +19,53 @@ Updating timing models...
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
 Running timing-driven placement...
-Total REAL time at the beginning of Placer: 1 mins 39 secs 
-Total CPU  time at the beginning of Placer: 46 secs 
+Total REAL time at the beginning of Placer: 1 mins 14 secs 
+Total CPU  time at the beginning of Placer: 1 mins 9 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:d148f6e2) REAL time: 1 mins 47 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:d148f6e2) REAL time: 1 mins 27 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:d148f6e2) REAL time: 1 mins 48 secs 
+Phase 2.7  Design Feasibility Check (Checksum:d148f6e2) REAL time: 1 mins 29 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:d148f6e2) REAL time: 1 mins 48 secs 
+Phase 3.31  Local Placement Optimization (Checksum:d148f6e2) REAL time: 1 mins 29 secs 
 
 Phase 4.2  Initial Placement for Architecture Specific Features
 
 Phase 4.2  Initial Placement for Architecture Specific Features
-(Checksum:d47b38a1) REAL time: 1 mins 52 secs 
+(Checksum:d47b38a1) REAL time: 1 mins 36 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:d47b38a1) REAL time: 1 mins 52 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:d47b38a1) REAL time: 1 mins 36 secs 
 
 Phase 6.3  Local Placement Optimization
-Phase 6.3  Local Placement Optimization (Checksum:d47b38a1) REAL time: 1 mins 53 secs 
+Phase 6.3  Local Placement Optimization (Checksum:d47b38a1) REAL time: 1 mins 37 secs 
 
 Phase 7.5  Local Placement Optimization
-Phase 7.5  Local Placement Optimization (Checksum:d47b38a1) REAL time: 1 mins 53 secs 
+Phase 7.5  Local Placement Optimization (Checksum:d47b38a1) REAL time: 1 mins 37 secs 
 
 Phase 8.8  Global Placement
 ...........................
 .........................................................................................................
 ......................................................................................................
 ............................................................................................................
-Phase 8.8  Global Placement (Checksum:abeeff90) REAL time: 2 mins 29 secs 
+Phase 8.8  Global Placement (Checksum:abeeff90) REAL time: 2 mins 36 secs 
 
 Phase 9.5  Local Placement Optimization
-Phase 9.5  Local Placement Optimization (Checksum:abeeff90) REAL time: 2 mins 29 secs 
+Phase 9.5  Local Placement Optimization (Checksum:abeeff90) REAL time: 2 mins 37 secs 
 
 Phase 10.18  Placement Optimization
-Phase 10.18  Placement Optimization (Checksum:4585ac71) REAL time: 2 mins 33 secs 
+Phase 10.18  Placement Optimization (Checksum:4585ac71) REAL time: 2 mins 42 secs 
 
 Phase 11.5  Local Placement Optimization
-Phase 11.5  Local Placement Optimization (Checksum:4585ac71) REAL time: 2 mins 33 secs 
+Phase 11.5  Local Placement Optimization (Checksum:4585ac71) REAL time: 2 mins 42 secs 
 
 Phase 12.34  Placement Validation
-Phase 12.34  Placement Validation (Checksum:4585ac71) REAL time: 2 mins 33 secs 
+Phase 12.34  Placement Validation (Checksum:4585ac71) REAL time: 2 mins 43 secs 
 
-Total REAL time to Placer completion: 2 mins 34 secs 
-Total CPU  time to Placer completion: 1 mins 46 secs 
+Total REAL time to Placer completion: 2 mins 44 secs 
+Total CPU  time to Placer completion: 2 mins 50 secs 
 Running post-placement packing...
 Writing output files...
 
@@ -179,9 +171,9 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                13.31
 
-Peak Memory Usage:  1621 MB
-Total REAL time to MAP completion:  3 mins 16 secs 
-Total CPU time to MAP completion (all processors):   2 mins 28 secs 
+Peak Memory Usage:  1588 MB
+Total REAL time to MAP completion:  4 mins 5 secs 
+Total CPU time to MAP completion (all processors):   4 mins 11 secs 
 
 Mapping completed.
 See MAP report file "top_ml605_extphy_map.mrp" for details.

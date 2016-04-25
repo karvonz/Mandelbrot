@@ -2,9 +2,9 @@
 Release 14.7 Trace  (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -e 3 -s 1 -n
-3 -fastpaths -xml top_ml605_extphy.twx top_ml605_extphy.ncd -o
-top_ml605_extphy.twr top_ml605_extphy.pcf
+/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce
+-intstyle ise -e 3 -s 1 -n 3 -fastpaths -xml top_ml605_extphy.twx
+top_ml605_extphy.ncd -o top_ml605_extphy.twr top_ml605_extphy.pcf
 
 Design file:              top_ml605_extphy.ncd
 Physical constraint file: top_ml605_extphy.pcf
@@ -63,7 +63,7 @@ Design statistics:
    Minimum period:   9.968ns   (Maximum frequency: 100.321MHz)
 
 
-Analysis completed Mon Mar 21 11:53:05 2016 
+Analysis completed Mon Apr 25 11:11:04 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:

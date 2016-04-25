@@ -5,39 +5,51 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Map" timeStamp="Mon Mar 21 12:04:24 2016">
+  <application stringID="Map" timeStamp="Mon Apr 25 11:02:01 2016">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
-          <item stringID="variable" value="LD_LIBRARY_PATH"/>
-          <item stringID="value" value="/opt/Xilinx/14.7/ISE_DS/ISE//lib/lin64:/usr/lib64:/opt/intel/composer_xe_2013_sp1/mkl/lib/intel64:/opt/intel/composer_xe_2013_sp1/lib/intel64"/>
+          <item stringID="variable" value="XILINX_DSP"/>
+          <item stringID="value" value="/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/ISE"/>
         </row>
         <row stringID="row" value="1">
-          <item stringID="variable" value="XILINXD_LICENSE_FILE"/>
-          <item stringID="value" value="1700@narrhavas:30000@hurin.cnfm.fr:1700@johnny.enseirb.fr:1717@f.ims.bordeaux"/>
+          <item stringID="variable" value="LD_LIBRARY_PATH"/>
+          <item stringID="value" value="/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/ISE//lib/lin64:/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/ISE/lib/lin64:/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/ISE/smartmodel/lin64/installed_lin64/lib:/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/ISE/sysgen/lib:/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/EDK/lib/lin64:/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/common/lib/lin64"/>
         </row>
         <row stringID="row" value="2">
-          <item stringID="variable" value="PATH"/>
-          <item stringID="value" value="/opt/Xilinx/14.7/ISE_DS/ISE//bin/lin64:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/cleroux/work/bin:/opt/altera/13.1/modelsim_ase/bin:/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/:/usr/local/share/kits/AMS_400_CDS/cds/bin:/usr/local/share/kits/ST:/usr/local/share/installs/SOC81/bin:/usr/local/share/installs/SOC81/tools/bin:/opt/gcc_mips/gnu_toolchain-1.5.4-Linux-i686/bin:/opt/intel/composer_xe_2013_sp1/bin"/>
+          <item stringID="variable" value="XILINX_EDK"/>
+          <item stringID="value" value="/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/EDK"/>
         </row>
         <row stringID="row" value="3">
+          <item stringID="variable" value="PATH"/>
+          <item stringID="value" value="/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/ISE//bin/lin64:/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/ISE/bin/lin64:/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/ISE/sysgen/util:/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/ISE/sysgen/bin:/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/ISE/../../../DocNav:/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/PlanAhead/bin:/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/EDK/bin/lin64:/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin:/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/EDK/gnu/powerpc-eabi/lin/bin:/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/EDK/gnu/arm/lin/bin:/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/EDK/gnu/microblaze/linux_toolchain/lin64_be/bin:/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/EDK/gnu/microblaze/linux_toolchain/lin64_le/bin:/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/common/bin/lin64:/usr/local/mips-projetc-asm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"/>
+        </row>
+        <row stringID="row" value="4">
+          <item stringID="variable" value="LMC_HOME"/>
+          <item stringID="value" value="/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/ISE/smartmodel/lin64/installed_lin64"/>
+        </row>
+        <row stringID="row" value="5">
+          <item stringID="variable" value="XILINX_PLANAHEAD"/>
+          <item stringID="value" value="/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/PlanAhead"/>
+        </row>
+        <row stringID="row" value="6">
           <item stringID="variable" value="XILINX"/>
-          <item stringID="value" value="/opt/Xilinx/14.7/ISE_DS/ISE/"/>
+          <item stringID="value" value="/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/ISE/"/>
         </row>
       </table>
       <item stringID="User_EnvOs" value="OS Information">
         <item stringID="User_EnvOsname" value="Ubuntu"/>
-        <item stringID="User_EnvOsrelease" value="Ubuntu 14.04.4 LTS"/>
+        <item stringID="User_EnvOsrelease" value="Ubuntu 15.10"/>
       </item>
-      <item stringID="User_EnvHost" value="flammarion"/>
+      <item stringID="User_EnvHost" value="vincent-XPS-L501X"/>
       <table stringID="User_EnvCpu">
         <column stringID="arch"/>
         <column stringID="speed"/>
         <row stringID="row" value="0">
-          <item stringID="arch" value="Intel(R) Xeon(R) CPU E31225 @ 3.10GHz"/>
-          <item stringID="speed" value="1600.000 MHz"/>
+          <item stringID="arch" value="Intel(R) Core(TM) i5 CPU       M 560  @ 2.67GHz"/>
+          <item stringID="speed" value="1866.000 MHz"/>
         </row>
       </table>
     </section>
@@ -110,9 +122,9 @@
         <item dataType="int" stringID="MAP_NUM_ERRORS" value="0"/>
         <item dataType="int" stringID="MAP_FILTERED_WARNINGS" value="0"/>
         <item dataType="int" stringID="MAP_NUM_WARNINGS" value="0"/>
-        <item UNITS="KB" dataType="int" stringID="MAP_PEAK_MEMORY" value="1659568"/>
-        <item stringID="MAP_TOTAL_REAL_TIME" value="3 mins 16 secs "/>
-        <item stringID="MAP_TOTAL_CPU_TIME" value="2 mins 28 secs "/>
+        <item UNITS="KB" dataType="int" stringID="MAP_PEAK_MEMORY" value="1625812"/>
+        <item stringID="MAP_TOTAL_REAL_TIME" value="4 mins 5 secs "/>
+        <item stringID="MAP_TOTAL_CPU_TIME" value="4 mins 11 secs "/>
       </section>
       <section stringID="MAP_SLICE_REPORTING">
         <item AVAILABLE="126800" dataType="int" label="Number of Slice Registers" stringID="MAP_SLICE_REGISTERS" value="1435">

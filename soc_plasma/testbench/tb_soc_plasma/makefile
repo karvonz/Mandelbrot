@@ -64,7 +64,7 @@ soft:
 	$(GCC_MIPS) -DVHDL_SIMULATION $(C_DIR)/$(MY_PROJECT)/$(SRC_DIR)/*.c
 	$(GCC_MIPS) -DVHDL_SIMULATION ../../c_plasma/$(MY_PROJECT)/$(SRC_DIR)/main.c
 	#$(LD_MIPS) -Ttext 0 -eentry -Map test.map -s -N -o test.axf uboot.o main.o no_os.o *.o
-	$(LD_MIPS) -Ttext 0 -eentry -Map test.map -s -N -o test.axf boot.o main.o no_os.o raymath.o raymathfix.o raylight.o rayplane.o raysphere.o rayintersect.o rayobject.o rayrender.o
+	$(LD_MIPS) -Ttext 0 -eentry -Map test.map -s -N -o test.axf boot.o main.o no_os.o #raymath.o raymathfix.o raylight.o rayplane.o raysphere.o rayintersect.o rayobject.o rayrender.o
 	#$(LD_MIPS) -Ttext 0 -eentry -Map test.map -s -N -o test.axf boot.o main.o no_os.o
 	# raymath.o raymathfix.o raylight.o rayplane.o raysphere.o rayintersect.o rayobject.o rayrender.o
 
@@ -77,7 +77,7 @@ ppm:
 	g++ -c $(C_DIR)/$(MY_PROJECT)/$(INC_DIR)/*.h
 	g++ -c $(C_DIR)/$(MY_PROJECT)/$(SRC_DIR)/*.c
 	g++ -c ../../c_plasma/$(MY_PROJECT)/$(SRC_DIR)/main.c
-	g++ -o ray_trace main.o raymath.o raymathfix.o raylight.o rayplane.o raysphere.o rayintersect.o rayobject.o rayrender.o
+	#g++ -o ray_trace main.o raymath.o raymathfix.o raylight.o rayplane.o raysphere.o rayintersect.o rayobject.o rayrender.o
 
 ####################################################################################################
 #
@@ -95,6 +95,7 @@ VHDL_DIR = ../../vhdl/plasma_core/vhdl
 VHDL_CUSTOM_DIR = ../../vhdl/custom/$(MY_PROJECT)
 PROJ_VHDL = \
 	$(VHDL_DIR)/cam/cam_pkg.vhd\
+	$(VHDL_CUSTOM_DIR)/Shared.vhd \
 	$(VHDL_DIR)/ims/conversion.vhd \
 	$(VHDL_DIR)/ims/txt_util.vhd  \
 	$(VHDL_DIR)/mlite_pack.vhd \
@@ -140,12 +141,10 @@ PROJ_VHDL = \
 	$(VHDL_CUSTOM_DIR)/function_17.vhd \
 	$(VHDL_CUSTOM_DIR)/function_18.vhd \
 	$(VHDL_CUSTOM_DIR)/function_19.vhd \
-	$(VHDL_CUSTOM_DIR)/Shared.vhd \
 	$(VHDL_CUSTOM_DIR)/coproc_1.vhd \
 	$(VHDL_CUSTOM_DIR)/coproc_2.vhd \
 	$(VHDL_CUSTOM_DIR)/coproc_3.vhd \
 	$(VHDL_CUSTOM_DIR)/coproc_4.vhd \
-	$(VHDL_CUSTOM_DIR)/Shared.vhd \
 	$(VHDL_DIR)/ims/sequ_alu_1.vhd \
 	$(VHDL_DIR)/vgd_bitmap_640x480.vhd \
 	$(VHDL_DIR)/cache.vhd \

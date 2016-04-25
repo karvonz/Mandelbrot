@@ -16,21 +16,17 @@ int Convergence_Fixed(int X, int Y, int maxi)
   int      i = 0;
   long long x1 = 0;
   long long y1 = 0;
+int temp;
 
-
-  int x2, y2;
+  //int x2, y2;
   do{
-    x2 = isa_custom_1(x1 , x1);
-    y2 = isa_custom_1(y1 , y1);
-    const int temp = x2 - y2 + X;
-<<<<<<< HEAD
-    y1 = (isa_custom_1(x1 , y1) >> (precision-1 ) + Y;
-=======
-    y1 = (isa_custom_1(x1 , y1) >> 23 ) + Y;
->>>>>>> master
-    x1 = temp;
+    //x2 = isa_custom_1(x1 , x1);
+    //y2 = isa_custom_1(y1 , y1);
+    temp = isa_custom_3(x1,y1); //x2 - y2 + X;
+    y1 = isa_custom_1(x1 , y1) + Y; //x1*y1*2+Y
+    x1 = isa_custom_2(x1,y1) + X;
     i++;
-  }while( ((x2 + y2) <= deux) && ( i < maxi )  );
+  }while( (temp <= deux) && ( i < maxi )  );
 
 
   return i;

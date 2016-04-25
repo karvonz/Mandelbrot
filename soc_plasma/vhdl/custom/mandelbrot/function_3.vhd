@@ -1,3 +1,4 @@
+
 ---------------------------------------------------------------------
 -- TITLE: Arithmetic Logic Unit
 -- AUTHOR: Steve Rhoads (rhoadss@yahoo.com)
@@ -13,6 +14,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use work.mlite_pack.all;
+use work.constants.all;
 
 entity function_3 is
    port(
@@ -23,26 +25,20 @@ entity function_3 is
 end; --comb_alu_1
 
 architecture logic of function_3 is
-
 begin
 	
 	-------------------------------------------------------------------------
 	computation : process (INPUT_1, INPUT_2)
-		variable data  : UNSIGNED(7 downto 0);
-		variable mini  : UNSIGNED(7 downto 0);
-		variable diff : UNSIGNED(7 downto 0);
-		variable mult : UNSIGNED(23 downto 0);
-		variable beta  : UNSIGNED(15 downto 0);
+		variable rTemp1  : SIGNED(63 downto 0);
+		variable rTemp2  : SIGNED(63 downto 0);
+		variable rTemp3  : SIGNED(63 downto 0);
 	begin
-		data := UNSIGNED( INPUT_1(7 downto 0) ); 
-		mini := UNSIGNED( INPUT_2(7 downto 0) );
-		beta := UNSIGNED( INPUT_2(31 downto 16) );
-		diff := data - mini; -- 8
-		mult := diff * beta; -- 24
-		OUTPUT_1(7 downto 0) <= std_logic_vector(mult(15 downto 8));
-		OUTPUT_1(31 downto 8) <= (others => '0');
-		
+		rTemp1 := (signed(INPUT_1) * signed(INPUT_1));
+		rTemp2 := (signed(INPUT_2) * signed(INPUT_2));
+		rTemp3 := rTemp1+rTemp2;
+		OUTPUT_1 <= std_logic_vector(rTemp3(FIXED+32 downto FIXED));  --x1²+y1²
 	end process;
+	
 	-------------------------------------------------------------------------
 
 end; --architecture logic
