@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> 
 Reading design: top_ml605_extphy.prj
@@ -2045,13 +2045,13 @@ CLK50          |   18.903|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 135.00 secs
-Total CPU time to Xst completion: 133.87 secs
+Total REAL time to Xst completion: 123.00 secs
+Total CPU time to Xst completion: 122.78 secs
  
 --> 
 
 
-Total memory usage is 927320 kilobytes
+Total memory usage is 927388 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   88 (   0 filtered)

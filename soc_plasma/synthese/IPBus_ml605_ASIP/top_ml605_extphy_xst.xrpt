@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Xst" timeStamp="Mon Apr 25 12:13:11 2016">
+  <application stringID="Xst" timeStamp="Mon May  2 09:46:45 2016">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -24,7 +24,7 @@
         </row>
         <row stringID="row" value="3">
           <item stringID="variable" value="PATH"/>
-          <item stringID="value" value="/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/ISE//bin/lin64:/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/ISE/bin/lin64:/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/ISE/sysgen/util:/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/ISE/sysgen/bin:/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/ISE/../../../DocNav:/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/PlanAhead/bin:/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/EDK/bin/lin64:/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin:/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/EDK/gnu/powerpc-eabi/lin/bin:/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/EDK/gnu/arm/lin/bin:/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/EDK/gnu/microblaze/linux_toolchain/lin64_be/bin:/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/EDK/gnu/microblaze/linux_toolchain/lin64_le/bin:/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/common/bin/lin64:/usr/local/mips-projetc-asm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"/>
+          <item stringID="value" value="/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/ISE//bin/lin64:/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/ISE/bin/lin64:/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/ISE/sysgen/util:/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/ISE/sysgen/bin:/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/ISE/../../../DocNav:/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/PlanAhead/bin:/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/EDK/bin/lin64:/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin:/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/EDK/gnu/powerpc-eabi/lin/bin:/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/EDK/gnu/arm/lin/bin:/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/EDK/gnu/microblaze/linux_toolchain/lin64_be/bin:/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/EDK/gnu/microblaze/linux_toolchain/lin64_le/bin:/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/common/bin/lin64:/usr/local/mips-projetc-asm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"/>
         </row>
         <row stringID="row" value="4">
           <item stringID="variable" value="LMC_HOME"/>
@@ -43,7 +43,7 @@
         <item stringID="User_EnvOsname" value="Ubuntu"/>
         <item stringID="User_EnvOsrelease" value="Ubuntu 16.04 LTS"/>
       </item>
-      <item stringID="User_EnvHost" value="vincent-XPS-L501X"/>
+      <item stringID="User_EnvHost" value="vincent"/>
       <table stringID="User_EnvCpu">
         <column stringID="arch"/>
         <column stringID="speed"/>

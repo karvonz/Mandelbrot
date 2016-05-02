@@ -1,0 +1,6 @@
+PATH=$PATH:/opt/modelsim/modeltech/bin/:~/gnu_toolchain-1.5.4-Linux-i686/bin/
+export PATH
+
+LM_LICENSE_FILE=1700@johnny182:30000@hurin.cnfm.fr:1700@johnny:2100@johnny:17008@johnny
+export LM_LICENSE_FILE
+
