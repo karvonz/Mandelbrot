@@ -12,6 +12,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use work.mlite_pack.all;
+use ieee.numeric_std.all;
 
 entity alu is
    generic(alu_type  : string := "DEFAULT");
@@ -26,8 +27,10 @@ architecture logic of alu is
    signal sum       : std_logic_vector(32 downto 0);
    signal less_than : std_logic;
 begin
+   sum       <= STD_LOGIC_VECTOR( RESIZE(SIGNED(a_in), 33) + RESIZE(SIGNED(b_in), 33) ) WHEN alu_function = ALU_ADD
+					ELSE STD_LOGIC_VECTOR( RESIZE(SIGNED(a_in), 33) - RESIZE(SIGNED(b_in), 33) );
 
-   sum       <= bv_adder(a_in, b_in, do_add);
+   --sum       <= bv_adder(a_in, b_in, do_add);
    do_add    <= '1'     when alu_function = ALU_ADD else '0';
 
 	-- BEGIN ENABLE_(SLT,SLTU,SLTI,SLTIU)

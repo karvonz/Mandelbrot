@@ -278,6 +278,7 @@ Elaborating entity <bus_mux> (architecture <logic>) from library <work>.
 INFO:HDLCompiler:679 - "/home/vincent/Mandelbrot/soc_plasma/vhdl/plasma_core/vhdl/bus_mux.vhd" Line 123. Case statement is complete. others clause is never selected
 
 Elaborating entity <alu> (architecture <logic>) with generics from library <work>.
+WARNING:HDLCompiler:1127 - "/home/vincent/Mandelbrot/soc_plasma/vhdl/plasma_core/vhdl/alu.vhd" Line 34: Assignment to do_add ignored, since the identifier is never used
 
 Elaborating entity <comb_alu_1> (architecture <logic>) from library <work>.
 
@@ -410,11 +411,11 @@ Synthesizing Unit <memory_64k>.
     Set property "ram_style = DISTRIBUTED" for signal <memBank2>.
     Set property "ram_style = DISTRIBUTED" for signal <memBank3>.
     Set property "ram_style = DISTRIBUTED" for signal <memBank4>.
-WARNING:Xst:647 - Input <addr_in<31:17>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 32768x8-bit single-port RAM <Mram_memBank1> for signal <memBank1>.
-    Found 32768x8-bit single-port RAM <Mram_memBank2> for signal <memBank2>.
-    Found 32768x8-bit single-port RAM <Mram_memBank3> for signal <memBank3>.
-    Found 32768x8-bit single-port RAM <Mram_memBank4> for signal <memBank4>.
+WARNING:Xst:647 - Input <addr_in<31:10>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 256x8-bit single-port RAM <Mram_memBank1> for signal <memBank1>.
+    Found 256x8-bit single-port RAM <Mram_memBank2> for signal <memBank2>.
+    Found 256x8-bit single-port RAM <Mram_memBank3> for signal <memBank3>.
+    Found 256x8-bit single-port RAM <Mram_memBank4> for signal <memBank4>.
     Found 1-bit register for signal <data_out<6>>.
     Found 1-bit register for signal <data_out<5>>.
     Found 1-bit register for signal <data_out<4>>.
@@ -523,8 +524,11 @@ Unit <bus_mux> synthesized.
 Synthesizing Unit <alu>.
     Related source file is "/home/vincent/Mandelbrot/soc_plasma/vhdl/plasma_core/vhdl/alu.vhd".
         alu_type = "DEFAULT"
+    Found 33-bit adder for signal <a_in[31]_b_in[31]_add_2_OUT> created at line 30.
+    Found 33-bit subtractor for signal <a_in[31]_b_in[31]_sub_2_OUT<32:0>> created at line 31.
     Summary:
-	inferred  12 Multiplexer(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  11 Multiplexer(s).
 Unit <alu> synthesized.
 
 Synthesizing Unit <comb_alu_1>.
@@ -708,11 +712,11 @@ Synthesizing Unit <function_18>.
     Found 9-bit adder for signal <computation.rTemp3> created at line 41.
     Found 9-bit adder for signal <computation.rTemp4> created at line 42.
     Found 9-bit comparator greater for signal <INPUT_1[7]_GND_42_o_LessThan_5_o> created at line 44
-    Found 9-bit comparator greater for signal <PWR_43_o_INPUT_1[7]_LessThan_6_o> created at line 45
+    Found 9-bit comparator greater for signal <PWR_44_o_INPUT_1[7]_LessThan_6_o> created at line 45
     Found 9-bit comparator greater for signal <INPUT_1[15]_GND_42_o_LessThan_9_o> created at line 49
-    Found 9-bit comparator greater for signal <PWR_43_o_INPUT_1[15]_LessThan_10_o> created at line 50
+    Found 9-bit comparator greater for signal <PWR_44_o_INPUT_1[15]_LessThan_10_o> created at line 50
     Found 9-bit comparator greater for signal <INPUT_1[23]_GND_42_o_LessThan_17_o> created at line 59
-    Found 9-bit comparator greater for signal <PWR_43_o_INPUT_1[23]_LessThan_18_o> created at line 60
+    Found 9-bit comparator greater for signal <PWR_44_o_INPUT_1[23]_LessThan_18_o> created at line 60
     Summary:
 	inferred   4 Adder/Subtractor(s).
 	inferred   6 Comparator(s).
@@ -967,7 +971,7 @@ WARNING:Xst:647 - Input <INPUT_1<31:12>> is never used. This port will be preser
 INFO:Xst:3210 - "/home/vincent/Mandelbrot/soc_plasma/vhdl/custom/ray_tracer_v3/coproc_4.vhd" line 106: Output port <data_out> of the instance <vga> is unconnected or connected to loadless signal.
     Found 19-bit register for signal <counter>.
     Found 19-bit adder for signal <counter[18]_GND_56_o_add_1_OUT> created at line 75.
-    Found 19-bit comparator lessequal for signal <counter[18]_PWR_61_o_LessThan_1_o> created at line 74
+    Found 19-bit comparator lessequal for signal <counter[18]_PWR_62_o_LessThan_1_o> created at line 74
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  19 D-type flip-flop(s).
@@ -1007,15 +1011,15 @@ HDL Synthesis Report
 Macro Statistics
 # RAMs                                                 : 14
  16x32-bit single-port Read Only RAM                   : 2
+ 256x8-bit single-port RAM                             : 4
  307200x12-bit dual-port RAM                           : 1
- 32768x8-bit single-port RAM                           : 4
  32x32-bit dual-port RAM                               : 2
  4096x8-bit single-port RAM                            : 4
  64x20-bit single-port Read Only RAM                   : 1
 # Multipliers                                          : 12
  16x8-bit multiplier                                   : 4
  32x32-bit multiplier                                  : 8
-# Adders/Subtractors                                   : 49
+# Adders/Subtractors                                   : 50
  10-bit adder                                          : 1
  11-bit adder                                          : 1
  11-bit subtractor                                     : 1
@@ -1025,6 +1029,7 @@ Macro Statistics
  3-bit adder                                           : 1
  32-bit adder                                          : 23
  33-bit adder                                          : 1
+ 33-bit addsub                                         : 1
  34-bit adder                                          : 1
  4-bit adder                                           : 1
  4-bit subtractor                                      : 2
@@ -1058,7 +1063,7 @@ Macro Statistics
  8-bit comparator greater                              : 8
  8-bit comparator lessequal                            : 4
  9-bit comparator greater                              : 6
-# Multiplexers                                         : 309
+# Multiplexers                                         : 308
  1-bit 2-to-1 multiplexer                              : 68
  1-bit 3-to-1 multiplexer                              : 1
  1-bit 8-to-1 multiplexer                              : 1
@@ -1069,7 +1074,7 @@ Macro Statistics
  3-bit 2-to-1 multiplexer                              : 16
  30-bit 2-to-1 multiplexer                             : 8
  30-bit 3-to-1 multiplexer                             : 1
- 32-bit 2-to-1 multiplexer                             : 122
+ 32-bit 2-to-1 multiplexer                             : 121
  32-bit 3-to-1 multiplexer                             : 2
  32-bit 4-to-1 multiplexer                             : 2
  32-bit 5-to-1 multiplexer                             : 1
@@ -1082,8 +1087,8 @@ Macro Statistics
  8-bit 2-to-1 multiplexer                              : 17
  9-bit 2-to-1 multiplexer                              : 1
 # FSMs                                                 : 2
-# Xors                                                 : 288
- 1-bit xor2                                            : 286
+# Xors                                                 : 223
+ 1-bit xor2                                            : 221
  2-bit xor2                                            : 1
  32-bit xor2                                           : 1
 
@@ -1228,7 +1233,7 @@ INFO:Xst:3216 - HDL ADVISOR - LUT implementation is currently selected for the R
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
-    |     aspect ratio   | 32768-word x 8-bit                  |          |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
     |     clkA           | connected to signal <clk>           | rise     |
     |     weA            | connected to signal <we_select<0>_0> | high     |
     |     addrA          | connected to signal <addr_in>       |          |
@@ -1240,7 +1245,7 @@ INFO:Xst:3216 - HDL ADVISOR - LUT implementation is currently selected for the R
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
-    |     aspect ratio   | 32768-word x 8-bit                  |          |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
     |     clkA           | connected to signal <clk>           | rise     |
     |     weA            | connected to signal <we_select<1>_0> | high     |
     |     addrA          | connected to signal <addr_in>       |          |
@@ -1252,7 +1257,7 @@ INFO:Xst:3216 - HDL ADVISOR - LUT implementation is currently selected for the R
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
-    |     aspect ratio   | 32768-word x 8-bit                  |          |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
     |     clkA           | connected to signal <clk>           | rise     |
     |     weA            | connected to signal <we_select<2>_0> | high     |
     |     addrA          | connected to signal <addr_in>       |          |
@@ -1264,7 +1269,7 @@ INFO:Xst:3216 - HDL ADVISOR - LUT implementation is currently selected for the R
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
-    |     aspect ratio   | 32768-word x 8-bit                  |          |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
     |     clkA           | connected to signal <clk>           | rise     |
     |     weA            | connected to signal <we_select<3>_0> | high     |
     |     addrA          | connected to signal <addr_in>       |          |
@@ -1354,17 +1359,18 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # RAMs                                                 : 14
  16x32-bit single-port distributed Read Only RAM       : 2
+ 256x8-bit single-port distributed RAM                 : 4
  307200x12-bit dual-port block RAM                     : 1
- 32768x8-bit single-port distributed RAM               : 4
  32x32-bit dual-port distributed RAM                   : 2
  4096x8-bit single-port block RAM                      : 4
  64x20-bit single-port distributed Read Only RAM       : 1
 # Multipliers                                          : 12
  16x8-bit multiplier                                   : 4
  32x32-bit multiplier                                  : 8
-# Adders/Subtractors                                   : 38
+# Adders/Subtractors                                   : 39
  11-bit adder                                          : 1
  32-bit adder                                          : 25
+ 33-bit addsub                                         : 1
  6-bit subtractor                                      : 1
  60-bit adder                                          : 1
  60-bit subtractor                                     : 1
@@ -1390,7 +1396,7 @@ Macro Statistics
  8-bit comparator greater                              : 8
  8-bit comparator lessequal                            : 4
  9-bit comparator greater                              : 6
-# Multiplexers                                         : 303
+# Multiplexers                                         : 302
  1-bit 2-to-1 multiplexer                              : 68
  1-bit 3-to-1 multiplexer                              : 1
  1-bit 8-to-1 multiplexer                              : 1
@@ -1400,7 +1406,7 @@ Macro Statistics
  3-bit 2-to-1 multiplexer                              : 15
  30-bit 2-to-1 multiplexer                             : 8
  30-bit 3-to-1 multiplexer                             : 1
- 32-bit 2-to-1 multiplexer                             : 121
+ 32-bit 2-to-1 multiplexer                             : 120
  32-bit 3-to-1 multiplexer                             : 2
  32-bit 4-to-1 multiplexer                             : 2
  32-bit 5-to-1 multiplexer                             : 1
@@ -1413,8 +1419,8 @@ Macro Statistics
  8-bit 2-to-1 multiplexer                              : 17
  9-bit 2-to-1 multiplexer                              : 1
 # FSMs                                                 : 2
-# Xors                                                 : 288
- 1-bit xor2                                            : 286
+# Xors                                                 : 223
+ 1-bit xor2                                            : 221
  2-bit xor2                                            : 1
  32-bit xor2                                           : 1
 
@@ -1549,6 +1555,9 @@ WARNING:Xst:2677 - Node <struc_ptr_0> of sequential type is unconnected in block
 WARNING:Xst:2677 - Node <struc_ptr_1> of sequential type is unconnected in block <u4_dma>.
 WARNING:Xst:2677 - Node <address_0> of sequential type is unconnected in block <u4_dma>.
 WARNING:Xst:2677 - Node <address_1> of sequential type is unconnected in block <u4_dma>.
+WARNING:Xst:2677 - Node <address_14> of sequential type is unconnected in block <u4_dma>.
+WARNING:Xst:2677 - Node <address_15> of sequential type is unconnected in block <u4_dma>.
+WARNING:Xst:2677 - Node <address_16> of sequential type is unconnected in block <u4_dma>.
 WARNING:Xst:2677 - Node <address_17> of sequential type is unconnected in block <u4_dma>.
 WARNING:Xst:2677 - Node <address_18> of sequential type is unconnected in block <u4_dma>.
 WARNING:Xst:2677 - Node <address_19> of sequential type is unconnected in block <u4_dma>.
@@ -1571,7 +1580,7 @@ WARNING:Xst:1710 - FF/Latch <delay_read_reg_10> (without init value) has a const
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block top_ml605_extphy, actual ratio is 2.
+Found area constraint ratio of 100 (+ 5) on block top_ml605_extphy, actual ratio is 1.
 In hierarchy level Inst_plasma/u5d_coproc.
 Forward register balancing over carry chain Mcount_counter_cy<0>
 
@@ -1587,8 +1596,8 @@ Unit <VGA> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1187
- Flip-Flops                                            : 1187
+# Registers                                            : 1184
+ Flip-Flops                                            : 1184
 # Shift Registers                                      : 3
  2-bit shift register                                  : 3
 
@@ -1613,30 +1622,30 @@ Top Level Output File Name         : top_ml605_extphy.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 7528
+# BELS                             : 5661
 #      GND                         : 23
 #      INV                         : 20
 #      LUT1                        : 230
-#      LUT2                        : 553
-#      LUT3                        : 726
-#      LUT4                        : 405
-#      LUT5                        : 776
-#      LUT6                        : 3198
-#      MUXCY                       : 757
-#      MUXF7                       : 105
+#      LUT2                        : 559
+#      LUT3                        : 740
+#      LUT4                        : 350
+#      LUT5                        : 868
+#      LUT6                        : 1252
+#      MUXCY                       : 789
+#      MUXF7                       : 62
 #      VCC                         : 13
-#      XORCY                       : 722
-# FlipFlops/Latches                : 1190
-#      FDC                         : 153
-#      FDCE                        : 587
+#      XORCY                       : 755
+# FlipFlops/Latches                : 1187
+#      FDC                         : 185
+#      FDCE                        : 552
 #      FDE                         : 65
 #      FDPE                        : 8
 #      FDR                         : 117
 #      FDRE                        : 258
 #      FDS                         : 1
 #      FDSE                        : 1
-# RAMS                             : 4284
-#      RAM256X1S                   : 4096
+# RAMS                             : 220
+#      RAM256X1S                   : 32
 #      RAM32X1D                    : 64
 #      RAMB36E1                    : 124
 # Shift Registers                  : 3
@@ -1657,18 +1666,18 @@ Selected Device : 7a100tcsg324-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            1189  out of  126800     0%  
- Number of Slice LUTs:                22423  out of  63400    35%  
-    Number used as Logic:              5908  out of  63400     9%  
-    Number used as Memory:            16515  out of  19000    86%  
-       Number used as RAM:            16512
+ Number of Slice Registers:            1186  out of  126800     0%  
+ Number of Slice LUTs:                 4278  out of  63400     6%  
+    Number used as Logic:              4019  out of  63400     6%  
+    Number used as Memory:              259  out of  19000     1%  
+       Number used as RAM:              256
        Number used as SRL:                3
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:  22853
-   Number with an unused Flip Flop:   21664  out of  22853    94%  
-   Number with an unused LUT:           430  out of  22853     1%  
-   Number of fully used LUT-FF pairs:   759  out of  22853     3%  
+ Number of LUT Flip Flop pairs used:   4732
+   Number with an unused Flip Flop:    3546  out of   4732    74%  
+   Number with an unused LUT:           454  out of   4732     9%  
+   Number of fully used LUT-FF pairs:   732  out of   4732    15%  
    Number of unique control sets:        52
 
 IO Utilization: 
@@ -1704,7 +1713,7 @@ Clock Information:
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
 CLK100                             | BUFGP                  | 172   |
-CLK50                              | BUFG                   | 5437  |
+CLK50                              | BUFG                   | 1370  |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -1839,8 +1848,8 @@ Timing Summary:
 ---------------
 Speed Grade: -1
 
-   Minimum period: 18.903ns (Maximum Frequency: 52.903MHz)
-   Minimum input arrival time before clock: 6.497ns
+   Minimum period: 17.720ns (Maximum Frequency: 56.432MHz)
+   Minimum input arrival time before clock: 5.983ns
    Maximum output required time after clock: 2.672ns
    Maximum combinational path delay: No path found
 
@@ -1874,24 +1883,24 @@ Delay:               4.628ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK50'
-  Clock period: 18.903ns (frequency: 52.903MHz)
-  Total number of paths / destination ports: 32795924631785 / 45322
+  Clock period: 17.720ns (frequency: 56.432MHz)
+  Total number of paths / destination ports: 383142721753 / 4644
 -------------------------------------------------------------------------
-Delay:               18.903ns (Levels of Logic = 27)
-  Source:            INST_PLASMA/U1_CPU/U9_PIPELINE/A_BUSD_0 (FF)
-  Destination:       INST_PLASMA/LOCAL_MEMORY/DATA_OUT_0 (FF)
+Delay:               17.720ns (Levels of Logic = 41)
+  Source:            INST_PLASMA/U1_CPU/U9_PIPELINE/A_BUSD_2 (FF)
+  Destination:       INST_PLASMA/LOCAL_MEMORY/MRAM_MEMBANK11 (RAM)
   Source Clock:      CLK50 rising
   Destination Clock: CLK50 rising
 
-  Data Path: INST_PLASMA/U1_CPU/U9_PIPELINE/A_BUSD_0 to INST_PLASMA/LOCAL_MEMORY/DATA_OUT_0
+  Data Path: INST_PLASMA/U1_CPU/U9_PIPELINE/A_BUSD_2 to INST_PLASMA/LOCAL_MEMORY/MRAM_MEMBANK11
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q           136   0.478   0.574  A_BUSD_0 (A_BUSD_0)
-     end scope: 'INST_PLASMA/U1_CPU/U9_PIPELINE:A_BUSD<0>'
-     begin scope: 'INST_PLASMA/U1_CPU/U61_ALU:A_IN<0>'
-     begin scope: 'INST_PLASMA/U1_CPU/U61_ALU/FX3:INPUT_1<0>'
-     DSP48E1:A0->PCOUT47    1   4.036   0.000  MMULT_COMPUTATION.RTEMP1 (MMULT_COMPUTATION.RTEMP1_PCOUT_TO_MMULT_COMPUTATION.RTEMP11_PCIN_47)
+     FDCE:C->Q           129   0.478   0.573  A_BUSD_2 (A_BUSD_2)
+     end scope: 'INST_PLASMA/U1_CPU/U9_PIPELINE:A_BUSD<2>'
+     begin scope: 'INST_PLASMA/U1_CPU/U61_ALU:A_IN<2>'
+     begin scope: 'INST_PLASMA/U1_CPU/U61_ALU/FX3:INPUT_1<2>'
+     DSP48E1:A2->PCOUT47    1   4.036   0.000  MMULT_COMPUTATION.RTEMP1 (MMULT_COMPUTATION.RTEMP1_PCOUT_TO_MMULT_COMPUTATION.RTEMP11_PCIN_47)
      DSP48E1:PCIN47->PCOUT47    1   1.713   0.000  MMULT_COMPUTATION.RTEMP11 (MMULT_COMPUTATION.RTEMP11_PCOUT_TO_MMULT_COMPUTATION.RTEMP12_PCIN_47)
      DSP48E1:PCIN47->PCOUT47    1   1.713   0.000  MMULT_COMPUTATION.RTEMP12 (MMULT_COMPUTATION.RTEMP12_PCOUT_TO_MMULT_COMPUTATION.RTEMP13_PCIN_47)
      DSP48E1:PCIN47->P0    1   1.518   0.536  MMULT_COMPUTATION.RTEMP13 (COMPUTATION.RTEMP1<34>)
@@ -1900,36 +1909,50 @@ Delay:               18.903ns (Levels of Logic = 27)
      MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<35> (MADD_COMPUTATION.RTEMP3_MADD_CY<35>)
      MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<36> (MADD_COMPUTATION.RTEMP3_MADD_CY<36>)
      MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<37> (MADD_COMPUTATION.RTEMP3_MADD_CY<37>)
-     XORCY:CI->O           1   0.510   0.421  MADD_COMPUTATION.RTEMP3_MADD_XOR<38> (OUTPUT_1<10>)
-     end scope: 'INST_PLASMA/U1_CPU/U61_ALU/FX3:OUTPUT_1<10>'
-     LUT6:I5->O            1   0.124   0.536  MMUX_C_ALU128 (MMUX_C_ALU126)
-     LUT6:I4->O            1   0.124   0.421  MMUX_C_ALU1211 (C_ALU<10>)
-     end scope: 'INST_PLASMA/U1_CPU/U61_ALU:C_ALU<10>'
-     LUT5:I4->O            7   0.124   0.461  C_BUS<10>1 (C_BUS<10>)
-     begin scope: 'INST_PLASMA/U1_CPU/U1_PC_NEXT:PC_NEW<10>'
-     LUT6:I5->O            2   0.124   0.427  MMUX_PC_SELECT.PC_NEXT112 (MMUX_PC_SELECT.PC_NEXT112)
-     LUT5:I4->O            1   0.124   0.421  MMUX_PC_SELECT.PC_NEXT18 (PC_FUTURE<10>)
-     end scope: 'INST_PLASMA/U1_CPU/U1_PC_NEXT:PC_FUTURE<10>'
-     begin scope: 'INST_PLASMA/U1_CPU/U2_MEM_CTRL:ADDRESS_PC<10>'
-     LUT5:I4->O            2   0.124   0.427  MMUX_MEM_PROC.ADDRESS_VAR110 (ADDRESS_NEXT<10>)
-     end scope: 'INST_PLASMA/U1_CPU/U2_MEM_CTRL:ADDRESS_NEXT<10>'
-     end scope: 'INST_PLASMA/U1_CPU:ADDRESS_NEXT<10>'
-     LUT3:I2->O         1540   0.124   0.837  MMUX_RAM_ADDRESS11 (RAM_ADDRESS<10>)
-     begin scope: 'INST_PLASMA/LOCAL_MEMORY:ADDR_IN<10>'
-     LUT6:I4->O            1   0.124   0.776  INST_LPM_MUX1_134 (INST_LPM_MUX1_134)
-     LUT6:I2->O            1   0.124   0.776  INST_LPM_MUX1_81 (INST_LPM_MUX1_81)
-     LUT6:I2->O            1   0.124   0.000  INST_LPM_MUX1_3 (INST_LPM_MUX1_3)
-     MUXF7:I1->O           1   0.368   0.000  INST_LPM_MUX1_2_F7 (_N0084<1>)
-     FDE:D                     0.030          DATA_OUT_1
+     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<38> (MADD_COMPUTATION.RTEMP3_MADD_CY<38>)
+     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<39> (MADD_COMPUTATION.RTEMP3_MADD_CY<39>)
+     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<40> (MADD_COMPUTATION.RTEMP3_MADD_CY<40>)
+     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<41> (MADD_COMPUTATION.RTEMP3_MADD_CY<41>)
+     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<42> (MADD_COMPUTATION.RTEMP3_MADD_CY<42>)
+     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<43> (MADD_COMPUTATION.RTEMP3_MADD_CY<43>)
+     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<44> (MADD_COMPUTATION.RTEMP3_MADD_CY<44>)
+     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<45> (MADD_COMPUTATION.RTEMP3_MADD_CY<45>)
+     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<46> (MADD_COMPUTATION.RTEMP3_MADD_CY<46>)
+     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<47> (MADD_COMPUTATION.RTEMP3_MADD_CY<47>)
+     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<48> (MADD_COMPUTATION.RTEMP3_MADD_CY<48>)
+     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<49> (MADD_COMPUTATION.RTEMP3_MADD_CY<49>)
+     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<50> (MADD_COMPUTATION.RTEMP3_MADD_CY<50>)
+     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<51> (MADD_COMPUTATION.RTEMP3_MADD_CY<51>)
+     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<52> (MADD_COMPUTATION.RTEMP3_MADD_CY<52>)
+     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<53> (MADD_COMPUTATION.RTEMP3_MADD_CY<53>)
+     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<54> (MADD_COMPUTATION.RTEMP3_MADD_CY<54>)
+     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<55> (MADD_COMPUTATION.RTEMP3_MADD_CY<55>)
+     XORCY:CI->O           1   0.510   0.421  MADD_COMPUTATION.RTEMP3_MADD_XOR<56> (OUTPUT_1<28>)
+     end scope: 'INST_PLASMA/U1_CPU/U61_ALU/FX3:OUTPUT_1<28>'
+     LUT6:I5->O            1   0.124   0.536  MMUX_C_ALU1267 (MMUX_C_ALU1267)
+     LUT6:I4->O            1   0.124   0.421  MMUX_C_ALU12610 (C_ALU<28>)
+     end scope: 'INST_PLASMA/U1_CPU/U61_ALU:C_ALU<28>'
+     LUT5:I4->O            8   0.124   0.467  C_BUS<28>1 (C_BUS<28>)
+     begin scope: 'INST_PLASMA/U1_CPU/U1_PC_NEXT:PC_NEW<28>'
+     LUT6:I5->O            1   0.124   0.421  MMUX_PC_SELECT.PC_NEXT191 (PC_FUTURE<28>)
+     end scope: 'INST_PLASMA/U1_CPU/U1_PC_NEXT:PC_FUTURE<28>'
+     begin scope: 'INST_PLASMA/U1_CPU/U2_MEM_CTRL:ADDRESS_PC<28>'
+     LUT5:I4->O            3   0.124   0.790  MMUX_MEM_PROC.ADDRESS_VAR191 (ADDRESS_NEXT<28>)
+     end scope: 'INST_PLASMA/U1_CPU/U2_MEM_CTRL:ADDRESS_NEXT<28>'
+     end scope: 'INST_PLASMA/U1_CPU:ADDRESS_NEXT<28>'
+     LUT6:I2->O           36   0.124   0.574  MMUX_ENABLE_LOCAL_MEM12 (ENABLE_LOCAL_MEM)
+     begin scope: 'INST_PLASMA/LOCAL_MEMORY:ENABLE'
+     LUT2:I1->O            8   0.124   0.445  WE_SELECT<0>1 (WE_SELECT<0>_0)
+     RAM256X1S:WE              0.490          MRAM_MEMBANK11
     ----------------------------------------
-    Total                     18.903ns (12.290ns logic, 6.613ns route)
-                                       (65.0% logic, 35.0% route)
+    Total                     17.720ns (12.536ns logic, 5.184ns route)
+                                       (70.7% logic, 29.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK100'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Offset:              1.103ns (Levels of Logic = 1)
+Offset:              1.102ns (Levels of Logic = 1)
   Source:            RST (PAD)
   Destination:       CLK50 (FF)
   Destination Clock: CLK100 rising
@@ -1938,44 +1961,44 @@ Offset:              1.103ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           290   0.001   0.608  RST_IBUF (RST_IBUF)
+     IBUF:I->O           287   0.001   0.607  RST_IBUF (RST_IBUF)
      FDC:CLR                   0.494          CLK50
     ----------------------------------------
-    Total                      1.103ns (0.495ns logic, 0.608ns route)
+    Total                      1.102ns (0.495ns logic, 0.607ns route)
                                        (44.9% logic, 55.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK50'
-  Total number of paths / destination ports: 93888 / 37749
+  Total number of paths / destination ports: 1403 / 1138
 -------------------------------------------------------------------------
-Offset:              6.497ns (Levels of Logic = 11)
+Offset:              5.983ns (Levels of Logic = 11)
   Source:            RST (PAD)
-  Destination:       INST_PLASMA/LOCAL_MEMORY/MRAM_MEMBANK12 (RAM)
+  Destination:       INST_PLASMA/LOCAL_MEMORY/MRAM_MEMBANK11 (RAM)
   Destination Clock: CLK50 rising
 
-  Data Path: RST to INST_PLASMA/LOCAL_MEMORY/MRAM_MEMBANK12
+  Data Path: RST to INST_PLASMA/LOCAL_MEMORY/MRAM_MEMBANK11
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           290   0.001   0.925  RST_IBUF (RST_IBUF)
+     IBUF:I->O           287   0.001   0.924  RST_IBUF (RST_IBUF)
      begin scope: 'INST_PLASMA:RESET'
      begin scope: 'INST_PLASMA/U1_CPU:RESET_IN'
-     LUT5:I2->O          493   0.124   1.172  RESET11 (RESET)
+     LUT5:I2->O          491   0.124   1.172  RESET11 (RESET)
      begin scope: 'INST_PLASMA/U1_CPU/U1_PC_NEXT:RESET_IN'
-     LUT5:I0->O            1   0.124   0.776  MMUX_PC_SELECT.PC_NEXT2011_SW1 (N72)
-     LUT6:I2->O            1   0.124   0.421  MMUX_PC_SELECT.PC_NEXT202 (PC_FUTURE<29>)
-     end scope: 'INST_PLASMA/U1_CPU/U1_PC_NEXT:PC_FUTURE<29>'
-     begin scope: 'INST_PLASMA/U1_CPU/U2_MEM_CTRL:ADDRESS_PC<29>'
-     LUT5:I4->O            3   0.124   0.730  MMUX_MEM_PROC.ADDRESS_VAR201 (ADDRESS_NEXT<29>)
-     end scope: 'INST_PLASMA/U1_CPU/U2_MEM_CTRL:ADDRESS_NEXT<29>'
-     end scope: 'INST_PLASMA/U1_CPU:ADDRESS_NEXT<29>'
-     LUT6:I3->O          544   0.124   0.793  MMUX_ENABLE_LOCAL_MEM12 (ENABLE_LOCAL_MEM)
+     LUT5:I0->O            1   0.124   0.776  MMUX_PC_SELECT.PC_NEXT2311_SW1 (N63)
+     LUT6:I2->O            1   0.124   0.421  MMUX_PC_SELECT.PC_NEXT232 (PC_FUTURE<31>)
+     end scope: 'INST_PLASMA/U1_CPU/U1_PC_NEXT:PC_FUTURE<31>'
+     begin scope: 'INST_PLASMA/U1_CPU/U2_MEM_CTRL:ADDRESS_PC<31>'
+     LUT5:I4->O            3   0.124   0.435  MMUX_MEM_PROC.ADDRESS_VAR231 (ADDRESS_NEXT<31>)
+     end scope: 'INST_PLASMA/U1_CPU/U2_MEM_CTRL:ADDRESS_NEXT<31>'
+     end scope: 'INST_PLASMA/U1_CPU:ADDRESS_NEXT<31>'
+     LUT6:I5->O           36   0.124   0.574  MMUX_ENABLE_LOCAL_MEM12 (ENABLE_LOCAL_MEM)
      begin scope: 'INST_PLASMA/LOCAL_MEMORY:ENABLE'
-     LUT6:I4->O            8   0.124   0.445  WRITE_CTRL32 (WRITE_CTRL32)
-     RAM256X1S:WE              0.490          MRAM_MEMBANK133
+     LUT2:I1->O            8   0.124   0.445  WE_SELECT<0>1 (WE_SELECT<0>_0)
+     RAM256X1S:WE              0.490          MRAM_MEMBANK11
     ----------------------------------------
-    Total                      6.497ns (1.235ns logic, 5.262ns route)
-                                       (19.0% logic, 81.0% route)
+    Total                      5.983ns (1.235ns logic, 4.748ns route)
+                                       (20.6% logic, 79.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK100'
@@ -2039,21 +2062,21 @@ Clock to Setup on destination clock CLK50
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK50          |   18.903|         |         |         |
+CLK50          |   17.720|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 123.00 secs
-Total CPU time to Xst completion: 122.78 secs
+Total REAL time to Xst completion: 86.00 secs
+Total CPU time to Xst completion: 85.48 secs
  
 --> 
 
 
-Total memory usage is 927388 kilobytes
+Total memory usage is 788384 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   88 (   0 filtered)
+Number of warnings :   92 (   0 filtered)
 Number of infos    :   25 (   0 filtered)
 
