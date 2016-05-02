@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=E:\Workspace\Programmation\Github\Mandelbrot\VHDL\TOP_LEVEL.ncd
+OUTFILE=E:\Workspace\Programmation\Github\Mandelbrot\VHDL\TOP_LEVEL.bit
+FAMILY=Artix7
+PART=xc7a100t-3csg324
+WORKINGDIR=E:\Workspace\Programmation\Github\Mandelbrot\VHDL
+LICENSE=WebPack
+USER_INFO=210978484_0_0_937

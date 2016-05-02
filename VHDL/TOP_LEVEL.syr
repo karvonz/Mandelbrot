@@ -1,0 +1,2588 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.33 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.34 secs
+ 
+--> Reading design: TOP_LEVEL.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "TOP_LEVEL.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "TOP_LEVEL"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : TOP_LEVEL
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "E:\Workspace\Programmation\Github\Mandelbrot\VHDL\Shared.vhd" into library work
+Parsing package <CONSTANTS>.
+Parsing package <FUNCTIONS>.
+Parsing package body <FUNCTIONS>.
+Parsing VHDL file "E:\Workspace\Programmation\Github\Mandelbrot\VHDL\config_mandelbrot.vhd" into library work
+Parsing package <CONFIG_MANDELBROT>.
+Parsing VHDL file "E:\Workspace\Programmation\Github\Mandelbrot\VHDL\Calc.vhd" into library work
+Parsing entity <Calc>.
+Parsing architecture <Behavioral> of entity <calc>.
+Parsing VHDL file "E:\Workspace\Programmation\Github\Mandelbrot\VHDL\Zoom.vhd" into library work
+Parsing entity <Zoom>.
+Parsing architecture <Behavioral> of entity <zoom>.
+Parsing VHDL file "E:\Workspace\Programmation\Github\Mandelbrot\VHDL\vga_bitmap_640x480.vhd" into library work
+Parsing entity <VGA_bitmap_640x480>.
+Parsing architecture <Behavioral> of entity <vga_bitmap_640x480>.
+Parsing VHDL file "E:\Workspace\Programmation\Github\Mandelbrot\VHDL\Iterator.vhd" into library work
+Parsing entity <Iterator>.
+Parsing architecture <Behavioral> of entity <iterator>.
+Parsing VHDL file "E:\Workspace\Programmation\Github\Mandelbrot\VHDL\increment.vhd" into library work
+Parsing entity <increment>.
+Parsing architecture <Behavioral> of entity <increment>.
+Parsing VHDL file "E:\Workspace\Programmation\Github\Mandelbrot\VHDL\FSM.vhd" into library work
+Parsing entity <FSM>.
+Parsing architecture <Behavioral> of entity <fsm>.
+Parsing VHDL file "E:\Workspace\Programmation\Github\Mandelbrot\VHDL\cpt_iter.vhd" into library work
+Parsing entity <cpt_iter>.
+Parsing architecture <Behavioral> of entity <cpt_iter>.
+Parsing VHDL file "E:\Workspace\Programmation\Github\Mandelbrot\VHDL\Colorgen.vhd" into library work
+Parsing entity <Colorgen>.
+Parsing architecture <Behavioral> of entity <colorgen>.
+Parsing VHDL file "E:\Workspace\Programmation\Github\Mandelbrot\VHDL\ClockManager.vhd" into library work
+Parsing entity <ClockManager>.
+Parsing architecture <Behavioral> of entity <clockmanager>.
+Parsing VHDL file "E:\Workspace\Programmation\Github\Mandelbrot\VHDL\TOP_LEVEL.vhd" into library work
+Parsing entity <TOP_LEVEL>.
+Parsing architecture <Behavioral> of entity <top_level>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <TOP_LEVEL> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Colorgen> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <VGA_bitmap_640x480> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <increment> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <FSM> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Iterator> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Calc> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <cpt_iter> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Zoom> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <ClockManager> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <TOP_LEVEL>.
+    Related source file is "E:\Workspace\Programmation\Github\Mandelbrot\VHDL\TOP_LEVEL.vhd".
+INFO:Xst:3210 - "E:\Workspace\Programmation\Github\Mandelbrot\VHDL\TOP_LEVEL.vhd" line 145: Output port <data_out> of the instance <InstVGA> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <TOP_LEVEL> synthesized.
+
+Synthesizing Unit <Colorgen>.
+    Related source file is "E:\Workspace\Programmation\Github\Mandelbrot\VHDL\Colorgen.vhd".
+    Found 12-bit comparator equal for signal <itermax[11]_iters[11]_equal_1_o> created at line 4120
+    Summary:
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <Colorgen> synthesized.
+
+Synthesizing Unit <VGA_bitmap_640x480>.
+    Related source file is "E:\Workspace\Programmation\Github\Mandelbrot\VHDL\vga_bitmap_640x480.vhd".
+        grayscale = false
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <screen>, simulation mismatch.
+    Found 307200x12-bit dual-port RAM <Mram_screen> for signal <screen>.
+    Found 19-bit register for signal <ADDR>.
+    Found 12-bit register for signal <next_pixel>.
+    Found 12-bit register for signal <data_out>.
+    Found 19-bit register for signal <pix_read_addr>.
+    Found 1-bit register for signal <VGA_vs>.
+    Found 1-bit register for signal <TOP_display>.
+    Found 4-bit register for signal <VGA_red>.
+    Found 4-bit register for signal <VGA_green>.
+    Found 4-bit register for signal <VGA_blue>.
+    Found 1-bit register for signal <VGA_hs>.
+    Found 1-bit register for signal <TOP_line>.
+    Found 12-bit register for signal <h_counter>.
+    Found 10-bit register for signal <v_counter>.
+    Found 19-bit adder for signal <ADDR[18]_GND_8_o_add_1_OUT> created at line 1241.
+    Found 19-bit adder for signal <pix_read_addr[18]_GND_8_o_add_12_OUT> created at line 103.
+    Found 10-bit adder for signal <v_counter[9]_GND_8_o_add_42_OUT> created at line 278.
+    Found 12-bit adder for signal <h_counter[11]_GND_8_o_add_44_OUT> created at line 281.
+    Found 19-bit comparator greater for signal <ADDR[18]_PWR_8_o_LessThan_1_o> created at line 72
+    Summary:
+	inferred   1 RAM(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred 100 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <VGA_bitmap_640x480> synthesized.
+
+Synthesizing Unit <increment>.
+    Related source file is "E:\Workspace\Programmation\Github\Mandelbrot\VHDL\increment.vhd".
+    Found 9-bit register for signal <ycount>.
+    Found 10-bit register for signal <xcount>.
+    Found 1-bit register for signal <stop>.
+    Found 1-bit register for signal <xs<31>>.
+    Found 1-bit register for signal <xs<30>>.
+    Found 1-bit register for signal <xs<29>>.
+    Found 1-bit register for signal <xs<28>>.
+    Found 1-bit register for signal <xs<27>>.
+    Found 1-bit register for signal <xs<26>>.
+    Found 1-bit register for signal <xs<25>>.
+    Found 1-bit register for signal <xs<24>>.
+    Found 1-bit register for signal <xs<23>>.
+    Found 1-bit register for signal <xs<22>>.
+    Found 1-bit register for signal <xs<21>>.
+    Found 1-bit register for signal <xs<20>>.
+    Found 1-bit register for signal <xs<19>>.
+    Found 1-bit register for signal <xs<18>>.
+    Found 1-bit register for signal <xs<17>>.
+    Found 1-bit register for signal <xs<16>>.
+    Found 1-bit register for signal <xs<15>>.
+    Found 1-bit register for signal <xs<14>>.
+    Found 1-bit register for signal <xs<13>>.
+    Found 1-bit register for signal <xs<12>>.
+    Found 1-bit register for signal <xs<11>>.
+    Found 1-bit register for signal <xs<10>>.
+    Found 1-bit register for signal <xs<9>>.
+    Found 1-bit register for signal <xs<8>>.
+    Found 1-bit register for signal <xs<7>>.
+    Found 1-bit register for signal <xs<6>>.
+    Found 1-bit register for signal <xs<5>>.
+    Found 1-bit register for signal <xs<4>>.
+    Found 1-bit register for signal <xs<3>>.
+    Found 1-bit register for signal <xs<2>>.
+    Found 1-bit register for signal <xs<1>>.
+    Found 1-bit register for signal <xs<0>>.
+    Found 1-bit register for signal <ys<31>>.
+    Found 1-bit register for signal <ys<30>>.
+    Found 1-bit register for signal <ys<29>>.
+    Found 1-bit register for signal <ys<28>>.
+    Found 1-bit register for signal <ys<27>>.
+    Found 1-bit register for signal <ys<26>>.
+    Found 1-bit register for signal <ys<25>>.
+    Found 1-bit register for signal <ys<24>>.
+    Found 1-bit register for signal <ys<23>>.
+    Found 1-bit register for signal <ys<22>>.
+    Found 1-bit register for signal <ys<21>>.
+    Found 1-bit register for signal <ys<20>>.
+    Found 1-bit register for signal <ys<19>>.
+    Found 1-bit register for signal <ys<18>>.
+    Found 1-bit register for signal <ys<17>>.
+    Found 1-bit register for signal <ys<16>>.
+    Found 1-bit register for signal <ys<15>>.
+    Found 1-bit register for signal <ys<14>>.
+    Found 1-bit register for signal <ys<13>>.
+    Found 1-bit register for signal <ys<12>>.
+    Found 1-bit register for signal <ys<11>>.
+    Found 1-bit register for signal <ys<10>>.
+    Found 1-bit register for signal <ys<9>>.
+    Found 1-bit register for signal <ys<8>>.
+    Found 1-bit register for signal <ys<7>>.
+    Found 1-bit register for signal <ys<6>>.
+    Found 1-bit register for signal <ys<5>>.
+    Found 1-bit register for signal <ys<4>>.
+    Found 1-bit register for signal <ys<3>>.
+    Found 1-bit register for signal <ys<2>>.
+    Found 1-bit register for signal <ys<1>>.
+    Found 1-bit register for signal <ys<0>>.
+    Found 9-bit adder for signal <ycount[8]_GND_10_o_add_2_OUT> created at line 53.
+    Found 32-bit adder for signal <ys[31]_step[31]_add_3_OUT> created at line 54.
+    Found 32-bit adder for signal <xs[31]_step[31]_add_6_OUT> created at line 60.
+    Found 10-bit adder for signal <xcount[9]_GND_10_o_add_7_OUT> created at line 61.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  84 D-type flip-flop(s).
+	inferred   8 Multiplexer(s).
+Unit <increment> synthesized.
+
+Synthesizing Unit <FSM>.
+    Related source file is "E:\Workspace\Programmation\Github\Mandelbrot\VHDL\FSM.vhd".
+    Found 2-bit register for signal <etat_present>.
+    Found finite state machine <FSM_0> for signal <etat_present>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 1                                              |
+    | Clock              | clock (rising_edge)                            |
+    | Reset              | reset (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | init                                           |
+    | Power Up State     | init                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <FSM> synthesized.
+
+Synthesizing Unit <Iterator>.
+    Related source file is "E:\Workspace\Programmation\Github\Mandelbrot\VHDL\Iterator.vhd".
+    Found 1-bit register for signal <donestate>.
+    Found 32-bit register for signal <xi>.
+    Found 32-bit register for signal <yi>.
+    Found 12-bit register for signal <cptiters>.
+    Found 32-bit adder for signal <xi[31]_yi[31]_add_3_OUT> created at line 57.
+    Found 12-bit adder for signal <cptiters[11]_GND_12_o_add_5_OUT> created at line 1241.
+    Found 32x32-bit multiplier for signal <n0031> created at line 39.
+    Found 32x32-bit multiplier for signal <n0032> created at line 39.
+    Found 12-bit comparator greater for signal <cptiters[11]_itermax[11]_LessThan_1_o> created at line 57
+    Found 32-bit comparator greater for signal <GND_12_o_xi[31]_LessThan_5_o> created at line 57
+    Summary:
+	inferred   2 Multiplier(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  77 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   3 Multiplexer(s).
+Unit <Iterator> synthesized.
+
+Synthesizing Unit <Calc>.
+    Related source file is "E:\Workspace\Programmation\Github\Mandelbrot\VHDL\Calc.vhd".
+    Found 32-bit adder for signal <yi1> created at line 24.
+    Found 32-bit adder for signal <xi1> created at line 25.
+    Found 32-bit subtractor for signal <n0022> created at line 0.
+    Found 32x32-bit multiplier for signal <n0012> created at line 39.
+    Found 32x32-bit multiplier for signal <n0013> created at line 39.
+    Found 32x32-bit multiplier for signal <n0014> created at line 39.
+    Summary:
+	inferred   3 Multiplier(s).
+	inferred   3 Adder/Subtractor(s).
+Unit <Calc> synthesized.
+
+Synthesizing Unit <cpt_iter>.
+    Related source file is "E:\Workspace\Programmation\Github\Mandelbrot\VHDL\cpt_iter.vhd".
+    Found 12-bit register for signal <iterS>.
+    Found 12-bit adder for signal <iterS[11]_GND_16_o_add_1_OUT> created at line 1241.
+    Found 12-bit comparator greater for signal <iterS[11]_PWR_16_o_LessThan_1_o> created at line 54
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  12 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <cpt_iter> synthesized.
+
+Synthesizing Unit <Zoom>.
+    Related source file is "E:\Workspace\Programmation\Github\Mandelbrot\VHDL\Zoom.vhd".
+    Found 32-bit register for signal <s_ystart>.
+    Found 32-bit register for signal <s_step>.
+    Found 32-bit register for signal <s_xstart>.
+    Found 32-bit adder for signal <s_xstart[31]_GND_18_o_add_1_OUT> created at line 38.
+    Found 32-bit adder for signal <s_ystart[31]_GND_18_o_add_3_OUT> created at line 39.
+    Found 32-bit adder for signal <s_ystart[31]_s_step[24]_add_14_OUT> created at line 47.
+    Found 32-bit adder for signal <s_xstart[31]_s_step[24]_add_22_OUT> created at line 69.
+    Found 32-bit subtractor for signal <s_xstart[31]_GND_18_o_sub_6_OUT<31:0>> created at line 43.
+    Found 32-bit subtractor for signal <s_ystart[31]_GND_18_o_sub_8_OUT<31:0>> created at line 44.
+    Found 32-bit subtractor for signal <s_ystart[31]_s_step[24]_sub_16_OUT<31:0>> created at line 49.
+    Found 32-bit subtractor for signal <s_xstart[31]_s_step[24]_sub_22_OUT<31:0>> created at line 66.
+    Found 31x31-bit multiplier for signal <n0040> created at line 39.
+    Found 31x30-bit multiplier for signal <n0042> created at line 39.
+    Summary:
+	inferred   2 Multiplier(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  96 D-type flip-flop(s).
+	inferred   7 Multiplexer(s).
+Unit <Zoom> synthesized.
+
+Synthesizing Unit <ClockManager>.
+    Related source file is "E:\Workspace\Programmation\Github\Mandelbrot\VHDL\ClockManager.vhd".
+    Found 32-bit register for signal <cpt>.
+    Found 1-bit register for signal <ce_param>.
+    Found 32-bit adder for signal <cpt[31]_GND_22_o_add_1_OUT> created at line 25.
+    Found 32-bit comparator greater for signal <GND_22_o_cpt[31]_LessThan_1_o> created at line 24
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  33 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <ClockManager> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 307200x12-bit dual-port RAM                           : 1
+# Multipliers                                          : 7
+ 31x30-bit multiplier                                  : 1
+ 31x31-bit multiplier                                  : 1
+ 32x32-bit multiplier                                  : 5
+# Adders/Subtractors                                   : 17
+ 10-bit adder                                          : 2
+ 12-bit adder                                          : 3
+ 19-bit adder                                          : 2
+ 32-bit adder                                          : 6
+ 32-bit addsub                                         : 2
+ 32-bit subtractor                                     : 1
+ 9-bit adder                                           : 1
+# Registers                                            : 88
+ 1-bit register                                        : 71
+ 10-bit register                                       : 2
+ 12-bit register                                       : 6
+ 19-bit register                                       : 2
+ 32-bit register                                       : 6
+ 9-bit register                                        : 1
+# Comparators                                          : 6
+ 12-bit comparator equal                               : 1
+ 12-bit comparator greater                             : 2
+ 19-bit comparator greater                             : 1
+ 32-bit comparator greater                             : 2
+# Multiplexers                                         : 23
+ 1-bit 2-to-1 multiplexer                              : 4
+ 10-bit 2-to-1 multiplexer                             : 1
+ 12-bit 2-to-1 multiplexer                             : 3
+ 19-bit 2-to-1 multiplexer                             : 2
+ 32-bit 2-to-1 multiplexer                             : 12
+ 9-bit 2-to-1 multiplexer                              : 1
+# FSMs                                                 : 1
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <ClockManager>.
+The following registers are absorbed into counter <cpt>: 1 register on signal <cpt>.
+Unit <ClockManager> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Iterator>.
+The following registers are absorbed into counter <cptiters>: 1 register on signal <cptiters>.
+Unit <Iterator> synthesized (advanced).
+
+Synthesizing (advanced) Unit <VGA_bitmap_640x480>.
+The following registers are absorbed into counter <h_counter>: 1 register on signal <h_counter>.
+The following registers are absorbed into counter <pix_read_addr>: 1 register on signal <pix_read_addr>.
+The following registers are absorbed into counter <v_counter>: 1 register on signal <v_counter>.
+INFO:Xst:3226 - The RAM <Mram_screen> will be implemented as a BLOCK RAM, absorbing the following register(s): <data_out> <next_pixel> <VGA_blue_VGA_green_VGA_red>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 307200-word x 12-bit                |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <data_write>    | high     |
+    |     addrA          | connected to signal <ADDR>          |          |
+    |     diA            | connected to signal <data_in>       |          |
+    |     doA            | connected to signal <data_out>      |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 307200-word x 12-bit                |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk>           | rise     |
+    |     addrB          | connected to signal <pix_read_addr> |          |
+    |     doB            | connected to internal node          |          |
+    |     doregrstB      | connected to internal node          | high     |
+    | reset value        | 000000000000                                   |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <VGA_bitmap_640x480> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Zoom>.
+The following registers are absorbed into accumulator <s_xstart>: 1 register on signal <s_xstart>.
+The following registers are absorbed into accumulator <s_ystart>: 1 register on signal <s_ystart>.
+Unit <Zoom> synthesized (advanced).
+
+Synthesizing (advanced) Unit <cpt_iter>.
+The following registers are absorbed into counter <iterS>: 1 register on signal <iterS>.
+Unit <cpt_iter> synthesized (advanced).
+
+Synthesizing (advanced) Unit <increment>.
+The following registers are absorbed into counter <ycount>: 1 register on signal <ycount>.
+The following registers are absorbed into counter <xcount>: 1 register on signal <xcount>.
+Unit <increment> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 307200x12-bit dual-port block RAM                     : 1
+# Multipliers                                          : 7
+ 31x30-bit multiplier                                  : 1
+ 31x31-bit multiplier                                  : 1
+ 32x32-bit multiplier                                  : 5
+# Adders/Subtractors                                   : 7
+ 19-bit adder                                          : 1
+ 32-bit adder                                          : 5
+ 32-bit subtractor                                     : 1
+# Counters                                             : 8
+ 10-bit up counter                                     : 2
+ 12-bit up counter                                     : 3
+ 19-bit up counter                                     : 1
+ 32-bit up counter                                     : 1
+ 9-bit up counter                                      : 1
+# Accumulators                                         : 2
+ 32-bit updown accumulator                             : 2
+# Registers                                            : 186
+ Flip-Flops                                            : 186
+# Comparators                                          : 6
+ 12-bit comparator equal                               : 1
+ 12-bit comparator greater                             : 2
+ 19-bit comparator greater                             : 1
+ 32-bit comparator greater                             : 2
+# Multiplexers                                         : 18
+ 1-bit 2-to-1 multiplexer                              : 4
+ 12-bit 2-to-1 multiplexer                             : 1
+ 19-bit 2-to-1 multiplexer                             : 2
+ 32-bit 2-to-1 multiplexer                             : 11
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <etat_present[1:2]> with user encoding.
+--------------------
+ State  | Encoding
+--------------------
+ init   | 00
+ inc    | 01
+ finish | 10
+ calcul | 11
+--------------------
+WARNING:Xst:3001 - This design contains one or more registers or latches with an active
+   asynchronous set and asynchronous reset. While this circuit can be built,
+   it creates a sub-optimal implementation in terms of area, power and
+   performance. For a more optimal implementation Xilinx highly recommends
+   one of the following:
+
+          1) Remove either the set or reset from all registers and latches if
+             not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Artix7 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    ys_0 in unit <increment>
+    xs_0 in unit <increment>
+    ys_1 in unit <increment>
+    ys_2 in unit <increment>
+    ys_3 in unit <increment>
+    ys_4 in unit <increment>
+    ys_5 in unit <increment>
+    ys_6 in unit <increment>
+    ys_7 in unit <increment>
+    ys_9 in unit <increment>
+    ys_10 in unit <increment>
+    ys_8 in unit <increment>
+    ys_11 in unit <increment>
+    ys_12 in unit <increment>
+    ys_13 in unit <increment>
+    ys_14 in unit <increment>
+    ys_15 in unit <increment>
+    ys_16 in unit <increment>
+    ys_18 in unit <increment>
+    ys_19 in unit <increment>
+    ys_17 in unit <increment>
+    ys_20 in unit <increment>
+    ys_21 in unit <increment>
+    ys_23 in unit <increment>
+    ys_24 in unit <increment>
+    ys_22 in unit <increment>
+    ys_25 in unit <increment>
+    ys_26 in unit <increment>
+    ys_28 in unit <increment>
+    ys_29 in unit <increment>
+    ys_27 in unit <increment>
+    ys_30 in unit <increment>
+    ys_31 in unit <increment>
+    xs_1 in unit <increment>
+    xs_2 in unit <increment>
+    xs_3 in unit <increment>
+    xs_5 in unit <increment>
+    xs_6 in unit <increment>
+    xs_4 in unit <increment>
+    xs_7 in unit <increment>
+    xs_8 in unit <increment>
+    xs_10 in unit <increment>
+    xs_11 in unit <increment>
+    xs_9 in unit <increment>
+    xs_12 in unit <increment>
+    xs_13 in unit <increment>
+    xs_15 in unit <increment>
+    xs_16 in unit <increment>
+    xs_14 in unit <increment>
+    xs_17 in unit <increment>
+    xs_18 in unit <increment>
+    xs_19 in unit <increment>
+    xs_20 in unit <increment>
+    xs_21 in unit <increment>
+    xs_22 in unit <increment>
+    xs_24 in unit <increment>
+    xs_25 in unit <increment>
+    xs_23 in unit <increment>
+    xs_26 in unit <increment>
+    xs_27 in unit <increment>
+    xs_29 in unit <increment>
+    xs_30 in unit <increment>
+    xs_28 in unit <increment>
+    xs_31 in unit <increment>
+
+
+Optimizing unit <TOP_LEVEL> ...
+
+Optimizing unit <VGA_bitmap_640x480> ...
+
+Optimizing unit <increment> ...
+
+Optimizing unit <Iterator> ...
+
+Optimizing unit <Zoom> ...
+
+Optimizing unit <Colorgen> ...
+WARNING:Xst:2677 - Node <InstVGA/inst_LPM_FF_0> of sequential type is unconnected in block <TOP_LEVEL>.
+WARNING:Xst:2677 - Node <InstVGA/inst_LPM_FF_1> of sequential type is unconnected in block <TOP_LEVEL>.
+WARNING:Xst:2677 - Node <InstVGA/inst_LPM_FF_2> of sequential type is unconnected in block <TOP_LEVEL>.
+WARNING:Xst:1710 - FF/Latch <inst_zoom/s_ystart_0> (without init value) has a constant value of 0 in block <TOP_LEVEL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <inst_zoom/s_ystart_1> (without init value) has a constant value of 0 in block <TOP_LEVEL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <inst_zoom/s_ystart_4> (without init value) has a constant value of 0 in block <TOP_LEVEL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <inst_zoom/s_ystart_2> (without init value) has a constant value of 0 in block <TOP_LEVEL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <inst_zoom/s_ystart_3> (without init value) has a constant value of 0 in block <TOP_LEVEL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <inst_zoom/s_ystart_5> (without init value) has a constant value of 0 in block <TOP_LEVEL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <inst_zoom/s_ystart_6> (without init value) has a constant value of 0 in block <TOP_LEVEL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <inst_zoom/s_xstart_0> (without init value) has a constant value of 0 in block <TOP_LEVEL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <inst_zoom/s_xstart_1> (without init value) has a constant value of 0 in block <TOP_LEVEL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <inst_zoom/s_xstart_2> (without init value) has a constant value of 0 in block <TOP_LEVEL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <inst_zoom/s_xstart_3> (without init value) has a constant value of 0 in block <TOP_LEVEL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <inst_zoom/s_xstart_4> (without init value) has a constant value of 0 in block <TOP_LEVEL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <inst_zoom/s_xstart_5> (without init value) has a constant value of 0 in block <TOP_LEVEL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <inst_zoom/s_xstart_6> (without init value) has a constant value of 0 in block <TOP_LEVEL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <inst_clock_manager/cpt_31> has a constant value of 0 in block <TOP_LEVEL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <inst_clock_manager/cpt_30> has a constant value of 0 in block <TOP_LEVEL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <inst_clock_manager/cpt_29> has a constant value of 0 in block <TOP_LEVEL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <inst_clock_manager/cpt_28> has a constant value of 0 in block <TOP_LEVEL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <inst_clock_manager/cpt_27> has a constant value of 0 in block <TOP_LEVEL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <inst_clock_manager/cpt_26> has a constant value of 0 in block <TOP_LEVEL>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block TOP_LEVEL, actual ratio is 3.
+
+Final Macro Processing ...
+
+Processing Unit <TOP_LEVEL> :
+	Found 2-bit shift register for signal <InstVGA/inst_LPM_FF2_0>.
+	Found 2-bit shift register for signal <InstVGA/inst_LPM_FF2_1>.
+	Found 2-bit shift register for signal <InstVGA/inst_LPM_FF2_2>.
+Unit <TOP_LEVEL> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 398
+ Flip-Flops                                            : 398
+# Shift Registers                                      : 3
+ 2-bit shift register                                  : 3
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : TOP_LEVEL.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 2589
+#      GND                         : 1
+#      INV                         : 13
+#      LUT1                        : 56
+#      LUT2                        : 205
+#      LUT3                        : 291
+#      LUT4                        : 261
+#      LUT5                        : 337
+#      LUT6                        : 697
+#      MUXCY                       : 392
+#      MUXF7                       : 27
+#      VCC                         : 1
+#      XORCY                       : 308
+# FlipFlops/Latches                : 451
+#      FDC                         : 92
+#      FDCE                        : 194
+#      FDE                         : 4
+#      FDP                         : 51
+#      FDPE                        : 15
+#      FDR                         : 16
+#      FDRE                        : 29
+#      LDC                         : 50
+# RAMS                             : 120
+#      RAMB36E1                    : 120
+# Shift Registers                  : 3
+#      SRLC16E                     : 3
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 21
+#      IBUF                        : 7
+#      OBUF                        : 14
+# DSPs                             : 28
+#      DSP48E1                     : 28
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             451  out of  126800     0%  
+ Number of Slice LUTs:                 1863  out of  63400     2%  
+    Number used as Logic:              1860  out of  63400     2%  
+    Number used as Memory:                3  out of  19000     0%  
+       Number used as SRL:                3
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1983
+   Number with an unused Flip Flop:    1532  out of   1983    77%  
+   Number with an unused LUT:           120  out of   1983     6%  
+   Number of fully used LUT-FF pairs:   331  out of   1983    16%  
+   Number of unique control sets:       165
+
+IO Utilization: 
+ Number of IOs:                          34
+ Number of bonded IOBs:                  22  out of    210    10%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:              120  out of    135    88%  
+    Number using Block RAM only:        120
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+ Number of DSP48E1s:                     28  out of    240    11%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------------------------------------------------+--------------------------------+-------+
+Clock Signal                                                                         | Clock buffer(FF name)          | Load  |
+-------------------------------------------------------------------------------------+--------------------------------+-------+
+clock                                                                                | BUFGP                          | 524   |
+Instincrment/reset_y_start[7]_AND_119_o(Instincrment/reset_y_start[7]_AND_119_o1:O)  | NONE(*)(Instincrment/ys_7_LDC) | 1     |
+Instincrment/reset_y_start[9]_AND_115_o(Instincrment/reset_y_start[9]_AND_115_o1:O)  | NONE(*)(Instincrment/ys_9_LDC) | 1     |
+Instincrment/reset_y_start[10]_AND_113_o(Instincrment/reset_y_start[10]_AND_113_o1:O)| NONE(*)(Instincrment/ys_10_LDC)| 1     |
+Instincrment/reset_y_start[8]_AND_117_o(Instincrment/reset_y_start[8]_AND_117_o1:O)  | NONE(*)(Instincrment/ys_8_LDC) | 1     |
+Instincrment/reset_y_start[11]_AND_111_o(Instincrment/reset_y_start[11]_AND_111_o1:O)| NONE(*)(Instincrment/ys_11_LDC)| 1     |
+Instincrment/reset_y_start[12]_AND_109_o(Instincrment/reset_y_start[12]_AND_109_o1:O)| NONE(*)(Instincrment/ys_12_LDC)| 1     |
+Instincrment/reset_y_start[13]_AND_107_o(Instincrment/reset_y_start[13]_AND_107_o1:O)| NONE(*)(Instincrment/ys_13_LDC)| 1     |
+Instincrment/reset_y_start[14]_AND_105_o(Instincrment/reset_y_start[14]_AND_105_o1:O)| NONE(*)(Instincrment/ys_14_LDC)| 1     |
+Instincrment/reset_y_start[15]_AND_103_o(Instincrment/reset_y_start[15]_AND_103_o1:O)| NONE(*)(Instincrment/ys_15_LDC)| 1     |
+Instincrment/reset_y_start[16]_AND_101_o(Instincrment/reset_y_start[16]_AND_101_o1:O)| NONE(*)(Instincrment/ys_16_LDC)| 1     |
+Instincrment/reset_y_start[18]_AND_97_o(Instincrment/reset_y_start[18]_AND_97_o1:O)  | NONE(*)(Instincrment/ys_18_LDC)| 1     |
+Instincrment/reset_y_start[19]_AND_95_o(Instincrment/reset_y_start[19]_AND_95_o1:O)  | NONE(*)(Instincrment/ys_19_LDC)| 1     |
+Instincrment/reset_y_start[17]_AND_99_o(Instincrment/reset_y_start[17]_AND_99_o1:O)  | NONE(*)(Instincrment/ys_17_LDC)| 1     |
+Instincrment/reset_y_start[20]_AND_93_o(Instincrment/reset_y_start[20]_AND_93_o1:O)  | NONE(*)(Instincrment/ys_20_LDC)| 1     |
+Instincrment/reset_y_start[21]_AND_91_o(Instincrment/reset_y_start[21]_AND_91_o1:O)  | NONE(*)(Instincrment/ys_21_LDC)| 1     |
+Instincrment/reset_y_start[23]_AND_87_o(Instincrment/reset_y_start[23]_AND_87_o1:O)  | NONE(*)(Instincrment/ys_23_LDC)| 1     |
+Instincrment/reset_y_start[24]_AND_85_o(Instincrment/reset_y_start[24]_AND_85_o1:O)  | NONE(*)(Instincrment/ys_24_LDC)| 1     |
+Instincrment/reset_y_start[22]_AND_89_o(Instincrment/reset_y_start[22]_AND_89_o1:O)  | NONE(*)(Instincrment/ys_22_LDC)| 1     |
+Instincrment/reset_y_start[25]_AND_83_o(Instincrment/reset_y_start[25]_AND_83_o1:O)  | NONE(*)(Instincrment/ys_25_LDC)| 1     |
+Instincrment/reset_y_start[26]_AND_81_o(Instincrment/reset_y_start[26]_AND_81_o1:O)  | NONE(*)(Instincrment/ys_26_LDC)| 1     |
+Instincrment/reset_y_start[28]_AND_77_o(Instincrment/reset_y_start[28]_AND_77_o1:O)  | NONE(*)(Instincrment/ys_28_LDC)| 1     |
+Instincrment/reset_y_start[29]_AND_75_o(Instincrment/reset_y_start[29]_AND_75_o1:O)  | NONE(*)(Instincrment/ys_29_LDC)| 1     |
+Instincrment/reset_y_start[27]_AND_79_o(Instincrment/reset_y_start[27]_AND_79_o1:O)  | NONE(*)(Instincrment/ys_27_LDC)| 1     |
+Instincrment/reset_y_start[30]_AND_73_o(Instincrment/reset_y_start[30]_AND_73_o1:O)  | NONE(*)(Instincrment/ys_30_LDC)| 1     |
+Instincrment/reset_y_start[31]_AND_71_o(Instincrment/reset_y_start[31]_AND_71_o1:O)  | NONE(*)(Instincrment/ys_31_LDC)| 1     |
+Instincrment/reset_x_start[7]_AND_55_o(Instincrment/reset_x_start[7]_AND_55_o1:O)    | NONE(*)(Instincrment/xs_7_LDC) | 1     |
+Instincrment/reset_x_start[8]_AND_53_o(Instincrment/reset_x_start[8]_AND_53_o1:O)    | NONE(*)(Instincrment/xs_8_LDC) | 1     |
+Instincrment/reset_x_start[10]_AND_49_o(Instincrment/reset_x_start[10]_AND_49_o1:O)  | NONE(*)(Instincrment/xs_10_LDC)| 1     |
+Instincrment/reset_x_start[11]_AND_47_o(Instincrment/reset_x_start[11]_AND_47_o1:O)  | NONE(*)(Instincrment/xs_11_LDC)| 1     |
+Instincrment/reset_x_start[9]_AND_51_o(Instincrment/reset_x_start[9]_AND_51_o1:O)    | NONE(*)(Instincrment/xs_9_LDC) | 1     |
+Instincrment/reset_x_start[12]_AND_45_o(Instincrment/reset_x_start[12]_AND_45_o1:O)  | NONE(*)(Instincrment/xs_12_LDC)| 1     |
+Instincrment/reset_x_start[13]_AND_43_o(Instincrment/reset_x_start[13]_AND_43_o1:O)  | NONE(*)(Instincrment/xs_13_LDC)| 1     |
+Instincrment/reset_x_start[15]_AND_39_o(Instincrment/reset_x_start[15]_AND_39_o1:O)  | NONE(*)(Instincrment/xs_15_LDC)| 1     |
+Instincrment/reset_x_start[16]_AND_37_o(Instincrment/reset_x_start[16]_AND_37_o1:O)  | NONE(*)(Instincrment/xs_16_LDC)| 1     |
+Instincrment/reset_x_start[14]_AND_41_o(Instincrment/reset_x_start[14]_AND_41_o1:O)  | NONE(*)(Instincrment/xs_14_LDC)| 1     |
+Instincrment/reset_x_start[17]_AND_35_o(Instincrment/reset_x_start[17]_AND_35_o1:O)  | NONE(*)(Instincrment/xs_17_LDC)| 1     |
+Instincrment/reset_x_start[18]_AND_33_o(Instincrment/reset_x_start[18]_AND_33_o1:O)  | NONE(*)(Instincrment/xs_18_LDC)| 1     |
+Instincrment/reset_x_start[19]_AND_31_o(Instincrment/reset_x_start[19]_AND_31_o1:O)  | NONE(*)(Instincrment/xs_19_LDC)| 1     |
+Instincrment/reset_x_start[20]_AND_29_o(Instincrment/reset_x_start[20]_AND_29_o1:O)  | NONE(*)(Instincrment/xs_20_LDC)| 1     |
+Instincrment/reset_x_start[21]_AND_27_o(Instincrment/reset_x_start[21]_AND_27_o1:O)  | NONE(*)(Instincrment/xs_21_LDC)| 1     |
+Instincrment/reset_x_start[22]_AND_25_o(Instincrment/reset_x_start[22]_AND_25_o1:O)  | NONE(*)(Instincrment/xs_22_LDC)| 1     |
+Instincrment/reset_x_start[24]_AND_21_o(Instincrment/reset_x_start[24]_AND_21_o1:O)  | NONE(*)(Instincrment/xs_24_LDC)| 1     |
+Instincrment/reset_x_start[25]_AND_19_o(Instincrment/reset_x_start[25]_AND_19_o1:O)  | NONE(*)(Instincrment/xs_25_LDC)| 1     |
+Instincrment/reset_x_start[23]_AND_23_o(Instincrment/reset_x_start[23]_AND_23_o1:O)  | NONE(*)(Instincrment/xs_23_LDC)| 1     |
+Instincrment/reset_x_start[26]_AND_17_o(Instincrment/reset_x_start[26]_AND_17_o1:O)  | NONE(*)(Instincrment/xs_26_LDC)| 1     |
+Instincrment/reset_x_start[27]_AND_15_o(Instincrment/reset_x_start[27]_AND_15_o1:O)  | NONE(*)(Instincrment/xs_27_LDC)| 1     |
+Instincrment/reset_x_start[29]_AND_11_o(Instincrment/reset_x_start[29]_AND_11_o1:O)  | NONE(*)(Instincrment/xs_29_LDC)| 1     |
+Instincrment/reset_x_start[30]_AND_9_o(Instincrment/reset_x_start[30]_AND_9_o1:O)    | NONE(*)(Instincrment/xs_30_LDC)| 1     |
+Instincrment/reset_x_start[28]_AND_13_o(Instincrment/reset_x_start[28]_AND_13_o1:O)  | NONE(*)(Instincrment/xs_28_LDC)| 1     |
+Instincrment/reset_x_start[31]_AND_7_o(Instincrment/reset_x_start[31]_AND_7_o1:O)    | NONE(*)(Instincrment/xs_31_LDC)| 1     |
+-------------------------------------------------------------------------------------+--------------------------------+-------+
+(*) These 50 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+FindSrcOfAsyncThruGates : 100 (1)
+------------------------------------------------+----------------------------+-------+
+Control Signal                                  | Buffer(FF name)            | Load  |
+------------------------------------------------+----------------------------+-------+
+InstVGA/N137(InstVGA/Mram_screen110:CASCADEOUTA)| NONE(InstVGA/Mram_screen1) | 1     |
+InstVGA/N139(InstVGA/Mram_screen110:CASCADEOUTB)| NONE(InstVGA/Mram_screen1) | 1     |
+InstVGA/N141(InstVGA/Mram_screen210:CASCADEOUTA)| NONE(InstVGA/Mram_screen2) | 1     |
+InstVGA/N143(InstVGA/Mram_screen210:CASCADEOUTB)| NONE(InstVGA/Mram_screen2) | 1     |
+InstVGA/N145(InstVGA/Mram_screen310:CASCADEOUTA)| NONE(InstVGA/Mram_screen3) | 1     |
+InstVGA/N147(InstVGA/Mram_screen310:CASCADEOUTB)| NONE(InstVGA/Mram_screen3) | 1     |
+InstVGA/N149(InstVGA/Mram_screen410:CASCADEOUTA)| NONE(InstVGA/Mram_screen4) | 1     |
+InstVGA/N151(InstVGA/Mram_screen410:CASCADEOUTB)| NONE(InstVGA/Mram_screen4) | 1     |
+InstVGA/N153(InstVGA/Mram_screen510:CASCADEOUTA)| NONE(InstVGA/Mram_screen5) | 1     |
+InstVGA/N155(InstVGA/Mram_screen510:CASCADEOUTB)| NONE(InstVGA/Mram_screen5) | 1     |
+InstVGA/N157(InstVGA/Mram_screen61:CASCADEOUTA) | NONE(InstVGA/Mram_screen6) | 1     |
+InstVGA/N159(InstVGA/Mram_screen61:CASCADEOUTB) | NONE(InstVGA/Mram_screen6) | 1     |
+InstVGA/N161(InstVGA/Mram_screen71:CASCADEOUTA) | NONE(InstVGA/Mram_screen7) | 1     |
+InstVGA/N163(InstVGA/Mram_screen71:CASCADEOUTB) | NONE(InstVGA/Mram_screen7) | 1     |
+InstVGA/N165(InstVGA/Mram_screen81:CASCADEOUTA) | NONE(InstVGA/Mram_screen8) | 1     |
+InstVGA/N167(InstVGA/Mram_screen81:CASCADEOUTB) | NONE(InstVGA/Mram_screen8) | 1     |
+InstVGA/N169(InstVGA/Mram_screen91:CASCADEOUTA) | NONE(InstVGA/Mram_screen9) | 1     |
+InstVGA/N171(InstVGA/Mram_screen91:CASCADEOUTB) | NONE(InstVGA/Mram_screen9) | 1     |
+InstVGA/N173(InstVGA/Mram_screen101:CASCADEOUTA)| NONE(InstVGA/Mram_screen10)| 1     |
+InstVGA/N175(InstVGA/Mram_screen101:CASCADEOUTB)| NONE(InstVGA/Mram_screen10)| 1     |
+InstVGA/N177(InstVGA/Mram_screen111:CASCADEOUTA)| NONE(InstVGA/Mram_screen11)| 1     |
+InstVGA/N179(InstVGA/Mram_screen111:CASCADEOUTB)| NONE(InstVGA/Mram_screen11)| 1     |
+InstVGA/N181(InstVGA/Mram_screen141:CASCADEOUTA)| NONE(InstVGA/Mram_screen14)| 1     |
+InstVGA/N183(InstVGA/Mram_screen141:CASCADEOUTB)| NONE(InstVGA/Mram_screen14)| 1     |
+InstVGA/N185(InstVGA/Mram_screen121:CASCADEOUTA)| NONE(InstVGA/Mram_screen12)| 1     |
+InstVGA/N187(InstVGA/Mram_screen121:CASCADEOUTB)| NONE(InstVGA/Mram_screen12)| 1     |
+InstVGA/N189(InstVGA/Mram_screen131:CASCADEOUTA)| NONE(InstVGA/Mram_screen13)| 1     |
+InstVGA/N191(InstVGA/Mram_screen131:CASCADEOUTB)| NONE(InstVGA/Mram_screen13)| 1     |
+InstVGA/N193(InstVGA/Mram_screen151:CASCADEOUTA)| NONE(InstVGA/Mram_screen15)| 1     |
+InstVGA/N195(InstVGA/Mram_screen151:CASCADEOUTB)| NONE(InstVGA/Mram_screen15)| 1     |
+InstVGA/N197(InstVGA/Mram_screen161:CASCADEOUTA)| NONE(InstVGA/Mram_screen16)| 1     |
+InstVGA/N199(InstVGA/Mram_screen161:CASCADEOUTB)| NONE(InstVGA/Mram_screen16)| 1     |
+InstVGA/N201(InstVGA/Mram_screen171:CASCADEOUTA)| NONE(InstVGA/Mram_screen17)| 1     |
+InstVGA/N203(InstVGA/Mram_screen171:CASCADEOUTB)| NONE(InstVGA/Mram_screen17)| 1     |
+InstVGA/N205(InstVGA/Mram_screen181:CASCADEOUTA)| NONE(InstVGA/Mram_screen18)| 1     |
+InstVGA/N207(InstVGA/Mram_screen181:CASCADEOUTB)| NONE(InstVGA/Mram_screen18)| 1     |
+InstVGA/N209(InstVGA/Mram_screen211:CASCADEOUTA)| NONE(InstVGA/Mram_screen21)| 1     |
+InstVGA/N211(InstVGA/Mram_screen211:CASCADEOUTB)| NONE(InstVGA/Mram_screen21)| 1     |
+InstVGA/N213(InstVGA/Mram_screen191:CASCADEOUTA)| NONE(InstVGA/Mram_screen19)| 1     |
+InstVGA/N215(InstVGA/Mram_screen191:CASCADEOUTB)| NONE(InstVGA/Mram_screen19)| 1     |
+InstVGA/N217(InstVGA/Mram_screen201:CASCADEOUTA)| NONE(InstVGA/Mram_screen20)| 1     |
+InstVGA/N219(InstVGA/Mram_screen201:CASCADEOUTB)| NONE(InstVGA/Mram_screen20)| 1     |
+InstVGA/N221(InstVGA/Mram_screen221:CASCADEOUTA)| NONE(InstVGA/Mram_screen22)| 1     |
+InstVGA/N223(InstVGA/Mram_screen221:CASCADEOUTB)| NONE(InstVGA/Mram_screen22)| 1     |
+InstVGA/N225(InstVGA/Mram_screen231:CASCADEOUTA)| NONE(InstVGA/Mram_screen23)| 1     |
+InstVGA/N227(InstVGA/Mram_screen231:CASCADEOUTB)| NONE(InstVGA/Mram_screen23)| 1     |
+InstVGA/N229(InstVGA/Mram_screen241:CASCADEOUTA)| NONE(InstVGA/Mram_screen24)| 1     |
+InstVGA/N231(InstVGA/Mram_screen241:CASCADEOUTB)| NONE(InstVGA/Mram_screen24)| 1     |
+InstVGA/N233(InstVGA/Mram_screen251:CASCADEOUTA)| NONE(InstVGA/Mram_screen25)| 1     |
+InstVGA/N235(InstVGA/Mram_screen251:CASCADEOUTB)| NONE(InstVGA/Mram_screen25)| 1     |
+InstVGA/N237(InstVGA/Mram_screen281:CASCADEOUTA)| NONE(InstVGA/Mram_screen28)| 1     |
+InstVGA/N239(InstVGA/Mram_screen281:CASCADEOUTB)| NONE(InstVGA/Mram_screen28)| 1     |
+InstVGA/N241(InstVGA/Mram_screen261:CASCADEOUTA)| NONE(InstVGA/Mram_screen26)| 1     |
+InstVGA/N243(InstVGA/Mram_screen261:CASCADEOUTB)| NONE(InstVGA/Mram_screen26)| 1     |
+InstVGA/N245(InstVGA/Mram_screen271:CASCADEOUTA)| NONE(InstVGA/Mram_screen27)| 1     |
+InstVGA/N247(InstVGA/Mram_screen271:CASCADEOUTB)| NONE(InstVGA/Mram_screen27)| 1     |
+InstVGA/N249(InstVGA/Mram_screen291:CASCADEOUTA)| NONE(InstVGA/Mram_screen29)| 1     |
+InstVGA/N251(InstVGA/Mram_screen291:CASCADEOUTB)| NONE(InstVGA/Mram_screen29)| 1     |
+InstVGA/N253(InstVGA/Mram_screen301:CASCADEOUTA)| NONE(InstVGA/Mram_screen30)| 1     |
+InstVGA/N255(InstVGA/Mram_screen301:CASCADEOUTB)| NONE(InstVGA/Mram_screen30)| 1     |
+InstVGA/N257(InstVGA/Mram_screen311:CASCADEOUTA)| NONE(InstVGA/Mram_screen31)| 1     |
+InstVGA/N259(InstVGA/Mram_screen311:CASCADEOUTB)| NONE(InstVGA/Mram_screen31)| 1     |
+InstVGA/N261(InstVGA/Mram_screen321:CASCADEOUTA)| NONE(InstVGA/Mram_screen32)| 1     |
+InstVGA/N263(InstVGA/Mram_screen321:CASCADEOUTB)| NONE(InstVGA/Mram_screen32)| 1     |
+InstVGA/N265(InstVGA/Mram_screen331:CASCADEOUTA)| NONE(InstVGA/Mram_screen33)| 1     |
+InstVGA/N267(InstVGA/Mram_screen331:CASCADEOUTB)| NONE(InstVGA/Mram_screen33)| 1     |
+InstVGA/N269(InstVGA/Mram_screen341:CASCADEOUTA)| NONE(InstVGA/Mram_screen34)| 1     |
+InstVGA/N271(InstVGA/Mram_screen341:CASCADEOUTB)| NONE(InstVGA/Mram_screen34)| 1     |
+InstVGA/N273(InstVGA/Mram_screen351:CASCADEOUTA)| NONE(InstVGA/Mram_screen35)| 1     |
+InstVGA/N275(InstVGA/Mram_screen351:CASCADEOUTB)| NONE(InstVGA/Mram_screen35)| 1     |
+InstVGA/N277(InstVGA/Mram_screen361:CASCADEOUTA)| NONE(InstVGA/Mram_screen36)| 1     |
+InstVGA/N279(InstVGA/Mram_screen361:CASCADEOUTB)| NONE(InstVGA/Mram_screen36)| 1     |
+InstVGA/N281(InstVGA/Mram_screen371:CASCADEOUTA)| NONE(InstVGA/Mram_screen37)| 1     |
+InstVGA/N283(InstVGA/Mram_screen371:CASCADEOUTB)| NONE(InstVGA/Mram_screen37)| 1     |
+InstVGA/N285(InstVGA/Mram_screen381:CASCADEOUTA)| NONE(InstVGA/Mram_screen38)| 1     |
+InstVGA/N287(InstVGA/Mram_screen381:CASCADEOUTB)| NONE(InstVGA/Mram_screen38)| 1     |
+InstVGA/N289(InstVGA/Mram_screen391:CASCADEOUTA)| NONE(InstVGA/Mram_screen39)| 1     |
+InstVGA/N291(InstVGA/Mram_screen391:CASCADEOUTB)| NONE(InstVGA/Mram_screen39)| 1     |
+InstVGA/N293(InstVGA/Mram_screen401:CASCADEOUTA)| NONE(InstVGA/Mram_screen40)| 1     |
+InstVGA/N295(InstVGA/Mram_screen401:CASCADEOUTB)| NONE(InstVGA/Mram_screen40)| 1     |
+InstVGA/N297(InstVGA/Mram_screen431:CASCADEOUTA)| NONE(InstVGA/Mram_screen43)| 1     |
+InstVGA/N299(InstVGA/Mram_screen431:CASCADEOUTB)| NONE(InstVGA/Mram_screen43)| 1     |
+InstVGA/N301(InstVGA/Mram_screen411:CASCADEOUTA)| NONE(InstVGA/Mram_screen41)| 1     |
+InstVGA/N303(InstVGA/Mram_screen411:CASCADEOUTB)| NONE(InstVGA/Mram_screen41)| 1     |
+InstVGA/N305(InstVGA/Mram_screen421:CASCADEOUTA)| NONE(InstVGA/Mram_screen42)| 1     |
+InstVGA/N307(InstVGA/Mram_screen421:CASCADEOUTB)| NONE(InstVGA/Mram_screen42)| 1     |
+InstVGA/N309(InstVGA/Mram_screen441:CASCADEOUTA)| NONE(InstVGA/Mram_screen44)| 1     |
+InstVGA/N311(InstVGA/Mram_screen441:CASCADEOUTB)| NONE(InstVGA/Mram_screen44)| 1     |
+InstVGA/N313(InstVGA/Mram_screen451:CASCADEOUTA)| NONE(InstVGA/Mram_screen45)| 1     |
+InstVGA/N315(InstVGA/Mram_screen451:CASCADEOUTB)| NONE(InstVGA/Mram_screen45)| 1     |
+InstVGA/N317(InstVGA/Mram_screen461:CASCADEOUTA)| NONE(InstVGA/Mram_screen46)| 1     |
+InstVGA/N319(InstVGA/Mram_screen461:CASCADEOUTB)| NONE(InstVGA/Mram_screen46)| 1     |
+InstVGA/N321(InstVGA/Mram_screen471:CASCADEOUTA)| NONE(InstVGA/Mram_screen47)| 1     |
+InstVGA/N323(InstVGA/Mram_screen471:CASCADEOUTB)| NONE(InstVGA/Mram_screen47)| 1     |
+InstVGA/N325(InstVGA/Mram_screen481:CASCADEOUTA)| NONE(InstVGA/Mram_screen48)| 1     |
+InstVGA/N327(InstVGA/Mram_screen481:CASCADEOUTB)| NONE(InstVGA/Mram_screen48)| 1     |
+InstVGA/N329(InstVGA/Mram_screen491:CASCADEOUTA)| NONE(InstVGA/Mram_screen49)| 1     |
+InstVGA/N331(InstVGA/Mram_screen491:CASCADEOUTB)| NONE(InstVGA/Mram_screen49)| 1     |
+InstVGA/N333(InstVGA/Mram_screen501:CASCADEOUTA)| NONE(InstVGA/Mram_screen50)| 1     |
+InstVGA/N335(InstVGA/Mram_screen501:CASCADEOUTB)| NONE(InstVGA/Mram_screen50)| 1     |
+InstVGA/N337(InstVGA/Mram_screen511:CASCADEOUTA)| NONE(InstVGA/Mram_screen51)| 1     |
+InstVGA/N339(InstVGA/Mram_screen511:CASCADEOUTB)| NONE(InstVGA/Mram_screen51)| 1     |
+InstVGA/N341(InstVGA/Mram_screen521:CASCADEOUTA)| NONE(InstVGA/Mram_screen52)| 1     |
+InstVGA/N343(InstVGA/Mram_screen521:CASCADEOUTB)| NONE(InstVGA/Mram_screen52)| 1     |
+InstVGA/N345(InstVGA/Mram_screen531:CASCADEOUTA)| NONE(InstVGA/Mram_screen53)| 1     |
+InstVGA/N347(InstVGA/Mram_screen531:CASCADEOUTB)| NONE(InstVGA/Mram_screen53)| 1     |
+InstVGA/N349(InstVGA/Mram_screen541:CASCADEOUTA)| NONE(InstVGA/Mram_screen54)| 1     |
+InstVGA/N351(InstVGA/Mram_screen541:CASCADEOUTB)| NONE(InstVGA/Mram_screen54)| 1     |
+InstVGA/N353(InstVGA/Mram_screen551:CASCADEOUTA)| NONE(InstVGA/Mram_screen55)| 1     |
+InstVGA/N355(InstVGA/Mram_screen551:CASCADEOUTB)| NONE(InstVGA/Mram_screen55)| 1     |
+InstVGA/N357(InstVGA/Mram_screen581:CASCADEOUTA)| NONE(InstVGA/Mram_screen58)| 1     |
+InstVGA/N359(InstVGA/Mram_screen581:CASCADEOUTB)| NONE(InstVGA/Mram_screen58)| 1     |
+InstVGA/N361(InstVGA/Mram_screen561:CASCADEOUTA)| NONE(InstVGA/Mram_screen56)| 1     |
+InstVGA/N363(InstVGA/Mram_screen561:CASCADEOUTB)| NONE(InstVGA/Mram_screen56)| 1     |
+InstVGA/N365(InstVGA/Mram_screen571:CASCADEOUTA)| NONE(InstVGA/Mram_screen57)| 1     |
+InstVGA/N367(InstVGA/Mram_screen571:CASCADEOUTB)| NONE(InstVGA/Mram_screen57)| 1     |
+InstVGA/N369(InstVGA/Mram_screen591:CASCADEOUTA)| NONE(InstVGA/Mram_screen59)| 1     |
+InstVGA/N371(InstVGA/Mram_screen591:CASCADEOUTB)| NONE(InstVGA/Mram_screen59)| 1     |
+InstVGA/N373(InstVGA/Mram_screen601:CASCADEOUTA)| NONE(InstVGA/Mram_screen60)| 1     |
+InstVGA/N375(InstVGA/Mram_screen601:CASCADEOUTB)| NONE(InstVGA/Mram_screen60)| 1     |
+------------------------------------------------+----------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 9.956ns (Maximum Frequency: 100.441MHz)
+   Minimum input arrival time before clock: 2.148ns
+   Maximum output required time after clock: 1.957ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock'
+  Clock period: 9.956ns (frequency: 100.441MHz)
+  Total number of paths / destination ports: 55578472381 / 903
+-------------------------------------------------------------------------
+Delay:               9.956ns (Levels of Logic = 31)
+  Source:            instIterator/xi_16 (FF)
+  Destination:       instIterator/cptiters_11 (FF)
+  Source Clock:      clock rising
+  Destination Clock: clock rising
+
+  Data Path: instIterator/xi_16 to instIterator/cptiters_11
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             8   0.361   0.311  instIterator/xi_16 (instIterator/xi_16)
+     DSP48E1:A16->PCOUT47    1   2.970   0.000  instIterator/Mmult_n0031 (instIterator/Mmult_n0031_PCOUT_to_Mmult_n00311_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.255   0.000  instIterator/Mmult_n00311 (instIterator/Mmult_n00311_PCOUT_to_Mmult_n00312_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.255   0.000  instIterator/Mmult_n00312 (instIterator/Mmult_n00312_PCOUT_to_Mmult_n00313_PCIN_47)
+     DSP48E1:PCIN47->P0    1   1.107   0.379  instIterator/Mmult_n00313 (instIterator/n0031<34>)
+     LUT2:I0->O            1   0.097   0.000  instIterator/Madd_xi[31]_yi[31]_add_3_OUT_lut<6> (instIterator/Madd_xi[31]_yi[31]_add_3_OUT_lut<6>)
+     MUXCY:S->O            1   0.353   0.000  instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<6> (instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<7> (instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<8> (instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<9> (instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<10> (instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<11> (instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<12> (instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<13> (instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<14> (instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<15> (instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<16> (instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<17> (instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<17>)
+     MUXCY:CI->O           1   0.023   0.000  instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<18> (instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<18>)
+     MUXCY:CI->O           1   0.023   0.000  instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<19> (instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<19>)
+     MUXCY:CI->O           1   0.023   0.000  instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<20> (instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<20>)
+     MUXCY:CI->O           1   0.023   0.000  instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<21> (instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<21>)
+     MUXCY:CI->O           1   0.023   0.000  instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<22> (instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<22>)
+     MUXCY:CI->O           1   0.023   0.000  instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<23> (instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<23>)
+     MUXCY:CI->O           1   0.023   0.000  instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<24> (instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<24>)
+     MUXCY:CI->O           1   0.023   0.000  instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<25> (instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<25>)
+     MUXCY:CI->O           1   0.023   0.000  instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<26> (instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<26>)
+     MUXCY:CI->O           1   0.023   0.000  instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<27> (instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<27>)
+     MUXCY:CI->O           1   0.023   0.000  instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<28> (instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<28>)
+     MUXCY:CI->O           1   0.023   0.000  instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<29> (instIterator/Madd_xi[31]_yi[31]_add_3_OUT_cy<29>)
+     XORCY:CI->O           2   0.370   0.383  instIterator/Madd_xi[31]_yi[31]_add_3_OUT_xor<30> (instIterator/xi[31]_yi[31]_add_3_OUT<30>)
+     LUT6:I4->O           76   0.097   0.393  instIterator/_n0056_inv1 (instIterator/_n0056_inv)
+     FDCE:CE                   0.095          instIterator/xi_0
+    ----------------------------------------
+    Total                      9.956ns (8.489ns logic, 1.467ns route)
+                                       (85.3% logic, 14.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock'
+  Total number of paths / destination ports: 3138 / 574
+-------------------------------------------------------------------------
+Offset:              2.148ns (Levels of Logic = 27)
+  Source:            bleft (PAD)
+  Destination:       inst_zoom/s_xstart_31 (FF)
+  Destination Clock: clock rising
+
+  Data Path: bleft to inst_zoom/s_xstart_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            33   0.001   0.790  bleft_IBUF (bleft_IBUF)
+     LUT5:I0->O            1   0.097   0.000  inst_zoom/Maccum_s_xstart_lut<7> (inst_zoom/Maccum_s_xstart_lut<7>)
+     MUXCY:S->O            1   0.353   0.000  inst_zoom/Maccum_s_xstart_cy<7> (inst_zoom/Maccum_s_xstart_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  inst_zoom/Maccum_s_xstart_cy<8> (inst_zoom/Maccum_s_xstart_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  inst_zoom/Maccum_s_xstart_cy<9> (inst_zoom/Maccum_s_xstart_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  inst_zoom/Maccum_s_xstart_cy<10> (inst_zoom/Maccum_s_xstart_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  inst_zoom/Maccum_s_xstart_cy<11> (inst_zoom/Maccum_s_xstart_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  inst_zoom/Maccum_s_xstart_cy<12> (inst_zoom/Maccum_s_xstart_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  inst_zoom/Maccum_s_xstart_cy<13> (inst_zoom/Maccum_s_xstart_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  inst_zoom/Maccum_s_xstart_cy<14> (inst_zoom/Maccum_s_xstart_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  inst_zoom/Maccum_s_xstart_cy<15> (inst_zoom/Maccum_s_xstart_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  inst_zoom/Maccum_s_xstart_cy<16> (inst_zoom/Maccum_s_xstart_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  inst_zoom/Maccum_s_xstart_cy<17> (inst_zoom/Maccum_s_xstart_cy<17>)
+     MUXCY:CI->O           1   0.023   0.000  inst_zoom/Maccum_s_xstart_cy<18> (inst_zoom/Maccum_s_xstart_cy<18>)
+     MUXCY:CI->O           1   0.023   0.000  inst_zoom/Maccum_s_xstart_cy<19> (inst_zoom/Maccum_s_xstart_cy<19>)
+     MUXCY:CI->O           1   0.023   0.000  inst_zoom/Maccum_s_xstart_cy<20> (inst_zoom/Maccum_s_xstart_cy<20>)
+     MUXCY:CI->O           1   0.023   0.000  inst_zoom/Maccum_s_xstart_cy<21> (inst_zoom/Maccum_s_xstart_cy<21>)
+     MUXCY:CI->O           1   0.023   0.000  inst_zoom/Maccum_s_xstart_cy<22> (inst_zoom/Maccum_s_xstart_cy<22>)
+     MUXCY:CI->O           1   0.023   0.000  inst_zoom/Maccum_s_xstart_cy<23> (inst_zoom/Maccum_s_xstart_cy<23>)
+     MUXCY:CI->O           1   0.023   0.000  inst_zoom/Maccum_s_xstart_cy<24> (inst_zoom/Maccum_s_xstart_cy<24>)
+     MUXCY:CI->O           1   0.023   0.000  inst_zoom/Maccum_s_xstart_cy<25> (inst_zoom/Maccum_s_xstart_cy<25>)
+     MUXCY:CI->O           1   0.023   0.000  inst_zoom/Maccum_s_xstart_cy<26> (inst_zoom/Maccum_s_xstart_cy<26>)
+     MUXCY:CI->O           1   0.023   0.000  inst_zoom/Maccum_s_xstart_cy<27> (inst_zoom/Maccum_s_xstart_cy<27>)
+     MUXCY:CI->O           1   0.023   0.000  inst_zoom/Maccum_s_xstart_cy<28> (inst_zoom/Maccum_s_xstart_cy<28>)
+     MUXCY:CI->O           1   0.023   0.000  inst_zoom/Maccum_s_xstart_cy<29> (inst_zoom/Maccum_s_xstart_cy<29>)
+     MUXCY:CI->O           0   0.023   0.000  inst_zoom/Maccum_s_xstart_cy<30> (inst_zoom/Maccum_s_xstart_cy<30>)
+     XORCY:CI->O           1   0.370   0.000  inst_zoom/Maccum_s_xstart_xor<31> (inst_zoom/Result<31>1)
+     FDPE:D                    0.008          inst_zoom/s_xstart_31
+    ----------------------------------------
+    Total                      2.148ns (1.358ns logic, 0.790ns route)
+                                       (63.2% logic, 36.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_y_start[7]_AND_119_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/ys_7_LDC (LATCH)
+  Destination Clock: Instincrment/reset_y_start[7]_AND_119_o falling
+
+  Data Path: reset to Instincrment/ys_7_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_y_start[7]_AND_120_o1 (Instincrment/reset_y_start[7]_AND_120_o)
+     LDC:CLR                   0.349          Instincrment/ys_7_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_y_start[9]_AND_115_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/ys_9_LDC (LATCH)
+  Destination Clock: Instincrment/reset_y_start[9]_AND_115_o falling
+
+  Data Path: reset to Instincrment/ys_9_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_y_start[9]_AND_116_o1 (Instincrment/reset_y_start[9]_AND_116_o)
+     LDC:CLR                   0.349          Instincrment/ys_9_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_y_start[10]_AND_113_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/ys_10_LDC (LATCH)
+  Destination Clock: Instincrment/reset_y_start[10]_AND_113_o falling
+
+  Data Path: reset to Instincrment/ys_10_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_y_start[10]_AND_114_o1 (Instincrment/reset_y_start[10]_AND_114_o)
+     LDC:CLR                   0.349          Instincrment/ys_10_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_y_start[8]_AND_117_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/ys_8_LDC (LATCH)
+  Destination Clock: Instincrment/reset_y_start[8]_AND_117_o falling
+
+  Data Path: reset to Instincrment/ys_8_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_y_start[8]_AND_118_o1 (Instincrment/reset_y_start[8]_AND_118_o)
+     LDC:CLR                   0.349          Instincrment/ys_8_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_y_start[11]_AND_111_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/ys_11_LDC (LATCH)
+  Destination Clock: Instincrment/reset_y_start[11]_AND_111_o falling
+
+  Data Path: reset to Instincrment/ys_11_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_y_start[11]_AND_112_o1 (Instincrment/reset_y_start[11]_AND_112_o)
+     LDC:CLR                   0.349          Instincrment/ys_11_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_y_start[12]_AND_109_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/ys_12_LDC (LATCH)
+  Destination Clock: Instincrment/reset_y_start[12]_AND_109_o falling
+
+  Data Path: reset to Instincrment/ys_12_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_y_start[12]_AND_110_o1 (Instincrment/reset_y_start[12]_AND_110_o)
+     LDC:CLR                   0.349          Instincrment/ys_12_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_y_start[13]_AND_107_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/ys_13_LDC (LATCH)
+  Destination Clock: Instincrment/reset_y_start[13]_AND_107_o falling
+
+  Data Path: reset to Instincrment/ys_13_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_y_start[13]_AND_108_o1 (Instincrment/reset_y_start[13]_AND_108_o)
+     LDC:CLR                   0.349          Instincrment/ys_13_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_y_start[14]_AND_105_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/ys_14_LDC (LATCH)
+  Destination Clock: Instincrment/reset_y_start[14]_AND_105_o falling
+
+  Data Path: reset to Instincrment/ys_14_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_y_start[14]_AND_106_o1 (Instincrment/reset_y_start[14]_AND_106_o)
+     LDC:CLR                   0.349          Instincrment/ys_14_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_y_start[15]_AND_103_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/ys_15_LDC (LATCH)
+  Destination Clock: Instincrment/reset_y_start[15]_AND_103_o falling
+
+  Data Path: reset to Instincrment/ys_15_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_y_start[15]_AND_104_o1 (Instincrment/reset_y_start[15]_AND_104_o)
+     LDC:CLR                   0.349          Instincrment/ys_15_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_y_start[16]_AND_101_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/ys_16_LDC (LATCH)
+  Destination Clock: Instincrment/reset_y_start[16]_AND_101_o falling
+
+  Data Path: reset to Instincrment/ys_16_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_y_start[16]_AND_102_o1 (Instincrment/reset_y_start[16]_AND_102_o)
+     LDC:CLR                   0.349          Instincrment/ys_16_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_y_start[18]_AND_97_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/ys_18_LDC (LATCH)
+  Destination Clock: Instincrment/reset_y_start[18]_AND_97_o falling
+
+  Data Path: reset to Instincrment/ys_18_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_y_start[18]_AND_98_o1 (Instincrment/reset_y_start[18]_AND_98_o)
+     LDC:CLR                   0.349          Instincrment/ys_18_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_y_start[19]_AND_95_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/ys_19_LDC (LATCH)
+  Destination Clock: Instincrment/reset_y_start[19]_AND_95_o falling
+
+  Data Path: reset to Instincrment/ys_19_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_y_start[19]_AND_96_o1 (Instincrment/reset_y_start[19]_AND_96_o)
+     LDC:CLR                   0.349          Instincrment/ys_19_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_y_start[17]_AND_99_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/ys_17_LDC (LATCH)
+  Destination Clock: Instincrment/reset_y_start[17]_AND_99_o falling
+
+  Data Path: reset to Instincrment/ys_17_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_y_start[17]_AND_100_o1 (Instincrment/reset_y_start[17]_AND_100_o)
+     LDC:CLR                   0.349          Instincrment/ys_17_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_y_start[20]_AND_93_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/ys_20_LDC (LATCH)
+  Destination Clock: Instincrment/reset_y_start[20]_AND_93_o falling
+
+  Data Path: reset to Instincrment/ys_20_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_y_start[20]_AND_94_o1 (Instincrment/reset_y_start[20]_AND_94_o)
+     LDC:CLR                   0.349          Instincrment/ys_20_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_y_start[21]_AND_91_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/ys_21_LDC (LATCH)
+  Destination Clock: Instincrment/reset_y_start[21]_AND_91_o falling
+
+  Data Path: reset to Instincrment/ys_21_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_y_start[21]_AND_92_o1 (Instincrment/reset_y_start[21]_AND_92_o)
+     LDC:CLR                   0.349          Instincrment/ys_21_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_y_start[23]_AND_87_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/ys_23_LDC (LATCH)
+  Destination Clock: Instincrment/reset_y_start[23]_AND_87_o falling
+
+  Data Path: reset to Instincrment/ys_23_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_y_start[23]_AND_88_o1 (Instincrment/reset_y_start[23]_AND_88_o)
+     LDC:CLR                   0.349          Instincrment/ys_23_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_y_start[24]_AND_85_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/ys_24_LDC (LATCH)
+  Destination Clock: Instincrment/reset_y_start[24]_AND_85_o falling
+
+  Data Path: reset to Instincrment/ys_24_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_y_start[24]_AND_86_o1 (Instincrment/reset_y_start[24]_AND_86_o)
+     LDC:CLR                   0.349          Instincrment/ys_24_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_y_start[22]_AND_89_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/ys_22_LDC (LATCH)
+  Destination Clock: Instincrment/reset_y_start[22]_AND_89_o falling
+
+  Data Path: reset to Instincrment/ys_22_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_y_start[22]_AND_90_o1 (Instincrment/reset_y_start[22]_AND_90_o)
+     LDC:CLR                   0.349          Instincrment/ys_22_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_y_start[25]_AND_83_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/ys_25_LDC (LATCH)
+  Destination Clock: Instincrment/reset_y_start[25]_AND_83_o falling
+
+  Data Path: reset to Instincrment/ys_25_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_y_start[25]_AND_84_o1 (Instincrment/reset_y_start[25]_AND_84_o)
+     LDC:CLR                   0.349          Instincrment/ys_25_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_y_start[26]_AND_81_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/ys_26_LDC (LATCH)
+  Destination Clock: Instincrment/reset_y_start[26]_AND_81_o falling
+
+  Data Path: reset to Instincrment/ys_26_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_y_start[26]_AND_82_o1 (Instincrment/reset_y_start[26]_AND_82_o)
+     LDC:CLR                   0.349          Instincrment/ys_26_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_y_start[28]_AND_77_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/ys_28_LDC (LATCH)
+  Destination Clock: Instincrment/reset_y_start[28]_AND_77_o falling
+
+  Data Path: reset to Instincrment/ys_28_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_y_start[28]_AND_78_o1 (Instincrment/reset_y_start[28]_AND_78_o)
+     LDC:CLR                   0.349          Instincrment/ys_28_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_y_start[29]_AND_75_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/ys_29_LDC (LATCH)
+  Destination Clock: Instincrment/reset_y_start[29]_AND_75_o falling
+
+  Data Path: reset to Instincrment/ys_29_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_y_start[29]_AND_76_o1 (Instincrment/reset_y_start[29]_AND_76_o)
+     LDC:CLR                   0.349          Instincrment/ys_29_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_y_start[27]_AND_79_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/ys_27_LDC (LATCH)
+  Destination Clock: Instincrment/reset_y_start[27]_AND_79_o falling
+
+  Data Path: reset to Instincrment/ys_27_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_y_start[27]_AND_80_o1 (Instincrment/reset_y_start[27]_AND_80_o)
+     LDC:CLR                   0.349          Instincrment/ys_27_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_y_start[30]_AND_73_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/ys_30_LDC (LATCH)
+  Destination Clock: Instincrment/reset_y_start[30]_AND_73_o falling
+
+  Data Path: reset to Instincrment/ys_30_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_y_start[30]_AND_74_o1 (Instincrment/reset_y_start[30]_AND_74_o)
+     LDC:CLR                   0.349          Instincrment/ys_30_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_y_start[31]_AND_71_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/ys_31_LDC (LATCH)
+  Destination Clock: Instincrment/reset_y_start[31]_AND_71_o falling
+
+  Data Path: reset to Instincrment/ys_31_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_y_start[31]_AND_72_o1 (Instincrment/reset_y_start[31]_AND_72_o)
+     LDC:CLR                   0.349          Instincrment/ys_31_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_x_start[7]_AND_55_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/xs_7_LDC (LATCH)
+  Destination Clock: Instincrment/reset_x_start[7]_AND_55_o falling
+
+  Data Path: reset to Instincrment/xs_7_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_x_start[7]_AND_56_o1 (Instincrment/reset_x_start[7]_AND_56_o)
+     LDC:CLR                   0.349          Instincrment/xs_7_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_x_start[8]_AND_53_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/xs_8_LDC (LATCH)
+  Destination Clock: Instincrment/reset_x_start[8]_AND_53_o falling
+
+  Data Path: reset to Instincrment/xs_8_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_x_start[8]_AND_54_o1 (Instincrment/reset_x_start[8]_AND_54_o)
+     LDC:CLR                   0.349          Instincrment/xs_8_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_x_start[10]_AND_49_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/xs_10_LDC (LATCH)
+  Destination Clock: Instincrment/reset_x_start[10]_AND_49_o falling
+
+  Data Path: reset to Instincrment/xs_10_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_x_start[10]_AND_50_o1 (Instincrment/reset_x_start[10]_AND_50_o)
+     LDC:CLR                   0.349          Instincrment/xs_10_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_x_start[11]_AND_47_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/xs_11_LDC (LATCH)
+  Destination Clock: Instincrment/reset_x_start[11]_AND_47_o falling
+
+  Data Path: reset to Instincrment/xs_11_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_x_start[11]_AND_48_o1 (Instincrment/reset_x_start[11]_AND_48_o)
+     LDC:CLR                   0.349          Instincrment/xs_11_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_x_start[9]_AND_51_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/xs_9_LDC (LATCH)
+  Destination Clock: Instincrment/reset_x_start[9]_AND_51_o falling
+
+  Data Path: reset to Instincrment/xs_9_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_x_start[9]_AND_52_o1 (Instincrment/reset_x_start[9]_AND_52_o)
+     LDC:CLR                   0.349          Instincrment/xs_9_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_x_start[12]_AND_45_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/xs_12_LDC (LATCH)
+  Destination Clock: Instincrment/reset_x_start[12]_AND_45_o falling
+
+  Data Path: reset to Instincrment/xs_12_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_x_start[12]_AND_46_o1 (Instincrment/reset_x_start[12]_AND_46_o)
+     LDC:CLR                   0.349          Instincrment/xs_12_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_x_start[13]_AND_43_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/xs_13_LDC (LATCH)
+  Destination Clock: Instincrment/reset_x_start[13]_AND_43_o falling
+
+  Data Path: reset to Instincrment/xs_13_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_x_start[13]_AND_44_o1 (Instincrment/reset_x_start[13]_AND_44_o)
+     LDC:CLR                   0.349          Instincrment/xs_13_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_x_start[15]_AND_39_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/xs_15_LDC (LATCH)
+  Destination Clock: Instincrment/reset_x_start[15]_AND_39_o falling
+
+  Data Path: reset to Instincrment/xs_15_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_x_start[15]_AND_40_o1 (Instincrment/reset_x_start[15]_AND_40_o)
+     LDC:CLR                   0.349          Instincrment/xs_15_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_x_start[16]_AND_37_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/xs_16_LDC (LATCH)
+  Destination Clock: Instincrment/reset_x_start[16]_AND_37_o falling
+
+  Data Path: reset to Instincrment/xs_16_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_x_start[16]_AND_38_o1 (Instincrment/reset_x_start[16]_AND_38_o)
+     LDC:CLR                   0.349          Instincrment/xs_16_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_x_start[14]_AND_41_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/xs_14_LDC (LATCH)
+  Destination Clock: Instincrment/reset_x_start[14]_AND_41_o falling
+
+  Data Path: reset to Instincrment/xs_14_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_x_start[14]_AND_42_o1 (Instincrment/reset_x_start[14]_AND_42_o)
+     LDC:CLR                   0.349          Instincrment/xs_14_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_x_start[17]_AND_35_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/xs_17_LDC (LATCH)
+  Destination Clock: Instincrment/reset_x_start[17]_AND_35_o falling
+
+  Data Path: reset to Instincrment/xs_17_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_x_start[17]_AND_36_o1 (Instincrment/reset_x_start[17]_AND_36_o)
+     LDC:CLR                   0.349          Instincrment/xs_17_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_x_start[18]_AND_33_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/xs_18_LDC (LATCH)
+  Destination Clock: Instincrment/reset_x_start[18]_AND_33_o falling
+
+  Data Path: reset to Instincrment/xs_18_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_x_start[18]_AND_34_o1 (Instincrment/reset_x_start[18]_AND_34_o)
+     LDC:CLR                   0.349          Instincrment/xs_18_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_x_start[19]_AND_31_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/xs_19_LDC (LATCH)
+  Destination Clock: Instincrment/reset_x_start[19]_AND_31_o falling
+
+  Data Path: reset to Instincrment/xs_19_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_x_start[19]_AND_32_o1 (Instincrment/reset_x_start[19]_AND_32_o)
+     LDC:CLR                   0.349          Instincrment/xs_19_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_x_start[20]_AND_29_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/xs_20_LDC (LATCH)
+  Destination Clock: Instincrment/reset_x_start[20]_AND_29_o falling
+
+  Data Path: reset to Instincrment/xs_20_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_x_start[20]_AND_30_o1 (Instincrment/reset_x_start[20]_AND_30_o)
+     LDC:CLR                   0.349          Instincrment/xs_20_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_x_start[21]_AND_27_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/xs_21_LDC (LATCH)
+  Destination Clock: Instincrment/reset_x_start[21]_AND_27_o falling
+
+  Data Path: reset to Instincrment/xs_21_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_x_start[21]_AND_28_o1 (Instincrment/reset_x_start[21]_AND_28_o)
+     LDC:CLR                   0.349          Instincrment/xs_21_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_x_start[22]_AND_25_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/xs_22_LDC (LATCH)
+  Destination Clock: Instincrment/reset_x_start[22]_AND_25_o falling
+
+  Data Path: reset to Instincrment/xs_22_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_x_start[22]_AND_26_o1 (Instincrment/reset_x_start[22]_AND_26_o)
+     LDC:CLR                   0.349          Instincrment/xs_22_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_x_start[24]_AND_21_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/xs_24_LDC (LATCH)
+  Destination Clock: Instincrment/reset_x_start[24]_AND_21_o falling
+
+  Data Path: reset to Instincrment/xs_24_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_x_start[24]_AND_22_o1 (Instincrment/reset_x_start[24]_AND_22_o)
+     LDC:CLR                   0.349          Instincrment/xs_24_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_x_start[25]_AND_19_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/xs_25_LDC (LATCH)
+  Destination Clock: Instincrment/reset_x_start[25]_AND_19_o falling
+
+  Data Path: reset to Instincrment/xs_25_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_x_start[25]_AND_20_o1 (Instincrment/reset_x_start[25]_AND_20_o)
+     LDC:CLR                   0.349          Instincrment/xs_25_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_x_start[23]_AND_23_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/xs_23_LDC (LATCH)
+  Destination Clock: Instincrment/reset_x_start[23]_AND_23_o falling
+
+  Data Path: reset to Instincrment/xs_23_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_x_start[23]_AND_24_o1 (Instincrment/reset_x_start[23]_AND_24_o)
+     LDC:CLR                   0.349          Instincrment/xs_23_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_x_start[26]_AND_17_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/xs_26_LDC (LATCH)
+  Destination Clock: Instincrment/reset_x_start[26]_AND_17_o falling
+
+  Data Path: reset to Instincrment/xs_26_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_x_start[26]_AND_18_o1 (Instincrment/reset_x_start[26]_AND_18_o)
+     LDC:CLR                   0.349          Instincrment/xs_26_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_x_start[27]_AND_15_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/xs_27_LDC (LATCH)
+  Destination Clock: Instincrment/reset_x_start[27]_AND_15_o falling
+
+  Data Path: reset to Instincrment/xs_27_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_x_start[27]_AND_16_o1 (Instincrment/reset_x_start[27]_AND_16_o)
+     LDC:CLR                   0.349          Instincrment/xs_27_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_x_start[29]_AND_11_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/xs_29_LDC (LATCH)
+  Destination Clock: Instincrment/reset_x_start[29]_AND_11_o falling
+
+  Data Path: reset to Instincrment/xs_29_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_x_start[29]_AND_12_o1 (Instincrment/reset_x_start[29]_AND_12_o)
+     LDC:CLR                   0.349          Instincrment/xs_29_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_x_start[30]_AND_9_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/xs_30_LDC (LATCH)
+  Destination Clock: Instincrment/reset_x_start[30]_AND_9_o falling
+
+  Data Path: reset to Instincrment/xs_30_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_x_start[30]_AND_10_o1 (Instincrment/reset_x_start[30]_AND_10_o)
+     LDC:CLR                   0.349          Instincrment/xs_30_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_x_start[28]_AND_13_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/xs_28_LDC (LATCH)
+  Destination Clock: Instincrment/reset_x_start[28]_AND_13_o falling
+
+  Data Path: reset to Instincrment/xs_28_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_x_start[28]_AND_14_o1 (Instincrment/reset_x_start[28]_AND_14_o)
+     LDC:CLR                   0.349          Instincrment/xs_28_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Instincrment/reset_x_start[31]_AND_7_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.267ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Instincrment/xs_31_LDC (LATCH)
+  Destination Clock: Instincrment/reset_x_start[31]_AND_7_o falling
+
+  Data Path: reset to Instincrment/xs_31_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           360   0.001   0.536  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            2   0.097   0.283  Instincrment/reset_x_start[31]_AND_8_o1 (Instincrment/reset_x_start[31]_AND_8_o)
+     LDC:CLR                   0.349          Instincrment/xs_31_LDC
+    ----------------------------------------
+    Total                      1.267ns (0.447ns logic, 0.820ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock'
+  Total number of paths / destination ports: 38 / 14
+-------------------------------------------------------------------------
+Offset:              1.957ns (Levels of Logic = 3)
+  Source:            InstVGA/inst_LPM_FF2_2 (FF)
+  Destination:       VGA_red<3> (PAD)
+  Source Clock:      clock rising
+
+  Data Path: InstVGA/inst_LPM_FF2_2 to VGA_red<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             12   0.361   0.744  InstVGA/inst_LPM_FF2_2 (InstVGA/inst_LPM_FF2_2)
+     LUT6:I0->O            1   0.097   0.379  InstVGA/inst_LPM_MUX2311 (InstVGA/inst_LPM_MUX231)
+     LUT3:I1->O            1   0.097   0.279  InstVGA/inst_LPM_MUX2312 (VGA_red_3_OBUF)
+     OBUF:I->O                 0.000          VGA_red_3_OBUF (VGA_red<3>)
+    ----------------------------------------
+    Total                      1.957ns (0.555ns logic, 1.402ns route)
+                                       (28.4% logic, 71.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock Instincrment/reset_x_start[10]_AND_49_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_x_start[11]_AND_47_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_x_start[12]_AND_45_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_x_start[13]_AND_43_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_x_start[14]_AND_41_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_x_start[15]_AND_39_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_x_start[16]_AND_37_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_x_start[17]_AND_35_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_x_start[18]_AND_33_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_x_start[19]_AND_31_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_x_start[20]_AND_29_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_x_start[21]_AND_27_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_x_start[22]_AND_25_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_x_start[23]_AND_23_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_x_start[24]_AND_21_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_x_start[25]_AND_19_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_x_start[26]_AND_17_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_x_start[27]_AND_15_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_x_start[28]_AND_13_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_x_start[29]_AND_11_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_x_start[30]_AND_9_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_x_start[31]_AND_7_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_x_start[7]_AND_55_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_x_start[8]_AND_53_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_x_start[9]_AND_51_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_y_start[10]_AND_113_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_y_start[11]_AND_111_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_y_start[12]_AND_109_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_y_start[13]_AND_107_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_y_start[14]_AND_105_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_y_start[15]_AND_103_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_y_start[16]_AND_101_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_y_start[17]_AND_99_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_y_start[18]_AND_97_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_y_start[19]_AND_95_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_y_start[20]_AND_93_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_y_start[21]_AND_91_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_y_start[22]_AND_89_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_y_start[23]_AND_87_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_y_start[24]_AND_85_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_y_start[25]_AND_83_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_y_start[26]_AND_81_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_y_start[27]_AND_79_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_y_start[28]_AND_77_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_y_start[29]_AND_75_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_y_start[30]_AND_73_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_y_start[31]_AND_71_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_y_start[7]_AND_119_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_y_start[8]_AND_117_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Instincrment/reset_y_start[9]_AND_115_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.400|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clock
+----------------------------------------+---------+---------+---------+---------+
+                                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------------+---------+---------+---------+---------+
+Instincrment/reset_x_start[10]_AND_49_o |         |    3.439|         |         |
+Instincrment/reset_x_start[11]_AND_47_o |         |    3.416|         |         |
+Instincrment/reset_x_start[12]_AND_45_o |         |    3.393|         |         |
+Instincrment/reset_x_start[13]_AND_43_o |         |    3.370|         |         |
+Instincrment/reset_x_start[14]_AND_41_o |         |    3.347|         |         |
+Instincrment/reset_x_start[15]_AND_39_o |         |    3.324|         |         |
+Instincrment/reset_x_start[16]_AND_37_o |         |    3.301|         |         |
+Instincrment/reset_x_start[17]_AND_35_o |         |    3.278|         |         |
+Instincrment/reset_x_start[18]_AND_33_o |         |    3.255|         |         |
+Instincrment/reset_x_start[19]_AND_31_o |         |    3.232|         |         |
+Instincrment/reset_x_start[20]_AND_29_o |         |    3.209|         |         |
+Instincrment/reset_x_start[21]_AND_27_o |         |    3.186|         |         |
+Instincrment/reset_x_start[22]_AND_25_o |         |    3.163|         |         |
+Instincrment/reset_x_start[23]_AND_23_o |         |    3.140|         |         |
+Instincrment/reset_x_start[24]_AND_21_o |         |    3.117|         |         |
+Instincrment/reset_x_start[25]_AND_19_o |         |    3.094|         |         |
+Instincrment/reset_x_start[26]_AND_17_o |         |    3.071|         |         |
+Instincrment/reset_x_start[27]_AND_15_o |         |    3.048|         |         |
+Instincrment/reset_x_start[28]_AND_13_o |         |    3.025|         |         |
+Instincrment/reset_x_start[29]_AND_11_o |         |    3.002|         |         |
+Instincrment/reset_x_start[30]_AND_9_o  |         |    2.697|         |         |
+Instincrment/reset_x_start[31]_AND_7_o  |         |    2.144|         |         |
+Instincrment/reset_x_start[7]_AND_55_o  |         |    3.508|         |         |
+Instincrment/reset_x_start[8]_AND_53_o  |         |    3.485|         |         |
+Instincrment/reset_x_start[9]_AND_51_o  |         |    3.462|         |         |
+Instincrment/reset_y_start[10]_AND_113_o|         |    3.153|         |         |
+Instincrment/reset_y_start[11]_AND_111_o|         |    3.130|         |         |
+Instincrment/reset_y_start[12]_AND_109_o|         |    3.107|         |         |
+Instincrment/reset_y_start[13]_AND_107_o|         |    3.084|         |         |
+Instincrment/reset_y_start[14]_AND_105_o|         |    3.061|         |         |
+Instincrment/reset_y_start[15]_AND_103_o|         |    3.038|         |         |
+Instincrment/reset_y_start[16]_AND_101_o|         |    3.015|         |         |
+Instincrment/reset_y_start[17]_AND_99_o |         |    2.992|         |         |
+Instincrment/reset_y_start[18]_AND_97_o |         |    2.969|         |         |
+Instincrment/reset_y_start[19]_AND_95_o |         |    2.946|         |         |
+Instincrment/reset_y_start[20]_AND_93_o |         |    2.923|         |         |
+Instincrment/reset_y_start[21]_AND_91_o |         |    2.900|         |         |
+Instincrment/reset_y_start[22]_AND_89_o |         |    2.877|         |         |
+Instincrment/reset_y_start[23]_AND_87_o |         |    2.854|         |         |
+Instincrment/reset_y_start[24]_AND_85_o |         |    2.831|         |         |
+Instincrment/reset_y_start[25]_AND_83_o |         |    2.808|         |         |
+Instincrment/reset_y_start[26]_AND_81_o |         |    2.785|         |         |
+Instincrment/reset_y_start[27]_AND_79_o |         |    2.762|         |         |
+Instincrment/reset_y_start[28]_AND_77_o |         |    2.739|         |         |
+Instincrment/reset_y_start[29]_AND_75_o |         |    2.716|         |         |
+Instincrment/reset_y_start[30]_AND_73_o |         |    2.693|         |         |
+Instincrment/reset_y_start[31]_AND_71_o |         |    1.879|         |         |
+Instincrment/reset_y_start[7]_AND_119_o |         |    3.222|         |         |
+Instincrment/reset_y_start[8]_AND_117_o |         |    3.199|         |         |
+Instincrment/reset_y_start[9]_AND_115_o |         |    3.176|         |         |
+clock                                   |    9.956|         |         |         |
+----------------------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 337.00 secs
+Total CPU time to Xst completion: 336.71 secs
+ 
+--> 
+
+Total memory usage is 688644 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   25 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
+

@@ -1,0 +1,1541 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Mon May 02 11:04:30 2016
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "reset" LOCATE = SITE "U9" LEVEL 1;
+COMP "VGA_green<3>" LOCATE = SITE "A6" LEVEL 1;
+COMP "VGA_green<1>" LOCATE = SITE "A5" LEVEL 1;
+COMP "VGA_green<2>" LOCATE = SITE "B6" LEVEL 1;
+COMP "VGA_green<0>" LOCATE = SITE "C6" LEVEL 1;
+COMP "bright" LOCATE = SITE "R10" LEVEL 1;
+COMP "clock" LOCATE = SITE "E3" LEVEL 1;
+COMP "VGA_blue<2>" LOCATE = SITE "D7" LEVEL 1;
+COMP "VGA_blue<1>" LOCATE = SITE "C7" LEVEL 1;
+COMP "VGA_blue<3>" LOCATE = SITE "D8" LEVEL 1;
+COMP "VGA_blue<0>" LOCATE = SITE "B7" LEVEL 1;
+COMP "VGA_hs" LOCATE = SITE "B11" LEVEL 1;
+COMP "VGA_vs" LOCATE = SITE "B12" LEVEL 1;
+COMP "VGA_red<3>" LOCATE = SITE "A4" LEVEL 1;
+COMP "VGA_red<2>" LOCATE = SITE "C5" LEVEL 1;
+COMP "VGA_red<1>" LOCATE = SITE "B4" LEVEL 1;
+COMP "VGA_red<0>" LOCATE = SITE "A3" LEVEL 1;
+COMP "bup" LOCATE = SITE "F15" LEVEL 1;
+COMP "bleft" LOCATE = SITE "T16" LEVEL 1;
+COMP "bctr" LOCATE = SITE "E16" LEVEL 1;
+COMP "bdwn" LOCATE = SITE "V10" LEVEL 1;
+COMP "inib" LOCATE = SITE "U8" LEVEL 1;
+PIN InstVGA/Mram_screen1_pins<65> = BEL "InstVGA/Mram_screen1" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen1_pins<64> = BEL "InstVGA/Mram_screen1" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen1_pins<67> = BEL "InstVGA/Mram_screen1" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen1_pins<66> = BEL "InstVGA/Mram_screen1" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen10_pins<65> = BEL "InstVGA/Mram_screen10" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen10_pins<64> = BEL "InstVGA/Mram_screen10" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen10_pins<67> = BEL "InstVGA/Mram_screen10" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen10_pins<66> = BEL "InstVGA/Mram_screen10" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen101_pins<65> = BEL "InstVGA/Mram_screen101" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen101_pins<64> = BEL "InstVGA/Mram_screen101" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen101_pins<67> = BEL "InstVGA/Mram_screen101" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen101_pins<66> = BEL "InstVGA/Mram_screen101" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen11_pins<65> = BEL "InstVGA/Mram_screen11" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen11_pins<64> = BEL "InstVGA/Mram_screen11" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen11_pins<67> = BEL "InstVGA/Mram_screen11" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen11_pins<66> = BEL "InstVGA/Mram_screen11" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen110_pins<65> = BEL "InstVGA/Mram_screen110" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen110_pins<64> = BEL "InstVGA/Mram_screen110" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen110_pins<67> = BEL "InstVGA/Mram_screen110" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen110_pins<66> = BEL "InstVGA/Mram_screen110" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen111_pins<65> = BEL "InstVGA/Mram_screen111" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen111_pins<64> = BEL "InstVGA/Mram_screen111" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen111_pins<67> = BEL "InstVGA/Mram_screen111" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen111_pins<66> = BEL "InstVGA/Mram_screen111" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen12_pins<65> = BEL "InstVGA/Mram_screen12" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen12_pins<64> = BEL "InstVGA/Mram_screen12" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen12_pins<67> = BEL "InstVGA/Mram_screen12" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen12_pins<66> = BEL "InstVGA/Mram_screen12" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen121_pins<65> = BEL "InstVGA/Mram_screen121" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen121_pins<64> = BEL "InstVGA/Mram_screen121" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen121_pins<67> = BEL "InstVGA/Mram_screen121" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen121_pins<66> = BEL "InstVGA/Mram_screen121" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen13_pins<65> = BEL "InstVGA/Mram_screen13" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen13_pins<64> = BEL "InstVGA/Mram_screen13" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen13_pins<67> = BEL "InstVGA/Mram_screen13" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen13_pins<66> = BEL "InstVGA/Mram_screen13" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen131_pins<65> = BEL "InstVGA/Mram_screen131" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen131_pins<64> = BEL "InstVGA/Mram_screen131" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen131_pins<67> = BEL "InstVGA/Mram_screen131" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen131_pins<66> = BEL "InstVGA/Mram_screen131" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen14_pins<65> = BEL "InstVGA/Mram_screen14" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen14_pins<64> = BEL "InstVGA/Mram_screen14" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen14_pins<67> = BEL "InstVGA/Mram_screen14" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen14_pins<66> = BEL "InstVGA/Mram_screen14" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen141_pins<65> = BEL "InstVGA/Mram_screen141" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen141_pins<64> = BEL "InstVGA/Mram_screen141" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen141_pins<67> = BEL "InstVGA/Mram_screen141" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen141_pins<66> = BEL "InstVGA/Mram_screen141" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen15_pins<65> = BEL "InstVGA/Mram_screen15" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen15_pins<64> = BEL "InstVGA/Mram_screen15" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen15_pins<67> = BEL "InstVGA/Mram_screen15" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen15_pins<66> = BEL "InstVGA/Mram_screen15" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen151_pins<65> = BEL "InstVGA/Mram_screen151" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen151_pins<64> = BEL "InstVGA/Mram_screen151" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen151_pins<67> = BEL "InstVGA/Mram_screen151" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen151_pins<66> = BEL "InstVGA/Mram_screen151" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen16_pins<65> = BEL "InstVGA/Mram_screen16" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen16_pins<64> = BEL "InstVGA/Mram_screen16" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen16_pins<67> = BEL "InstVGA/Mram_screen16" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen16_pins<66> = BEL "InstVGA/Mram_screen16" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen161_pins<65> = BEL "InstVGA/Mram_screen161" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen161_pins<64> = BEL "InstVGA/Mram_screen161" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen161_pins<67> = BEL "InstVGA/Mram_screen161" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen161_pins<66> = BEL "InstVGA/Mram_screen161" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen17_pins<65> = BEL "InstVGA/Mram_screen17" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen17_pins<64> = BEL "InstVGA/Mram_screen17" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen17_pins<67> = BEL "InstVGA/Mram_screen17" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen17_pins<66> = BEL "InstVGA/Mram_screen17" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen171_pins<65> = BEL "InstVGA/Mram_screen171" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen171_pins<64> = BEL "InstVGA/Mram_screen171" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen171_pins<67> = BEL "InstVGA/Mram_screen171" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen171_pins<66> = BEL "InstVGA/Mram_screen171" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen18_pins<65> = BEL "InstVGA/Mram_screen18" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen18_pins<64> = BEL "InstVGA/Mram_screen18" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen18_pins<67> = BEL "InstVGA/Mram_screen18" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen18_pins<66> = BEL "InstVGA/Mram_screen18" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen181_pins<65> = BEL "InstVGA/Mram_screen181" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen181_pins<64> = BEL "InstVGA/Mram_screen181" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen181_pins<67> = BEL "InstVGA/Mram_screen181" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen181_pins<66> = BEL "InstVGA/Mram_screen181" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen19_pins<65> = BEL "InstVGA/Mram_screen19" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen19_pins<64> = BEL "InstVGA/Mram_screen19" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen19_pins<67> = BEL "InstVGA/Mram_screen19" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen19_pins<66> = BEL "InstVGA/Mram_screen19" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen191_pins<65> = BEL "InstVGA/Mram_screen191" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen191_pins<64> = BEL "InstVGA/Mram_screen191" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen191_pins<67> = BEL "InstVGA/Mram_screen191" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen191_pins<66> = BEL "InstVGA/Mram_screen191" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen2_pins<65> = BEL "InstVGA/Mram_screen2" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen2_pins<64> = BEL "InstVGA/Mram_screen2" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen2_pins<67> = BEL "InstVGA/Mram_screen2" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen2_pins<66> = BEL "InstVGA/Mram_screen2" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen20_pins<65> = BEL "InstVGA/Mram_screen20" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen20_pins<64> = BEL "InstVGA/Mram_screen20" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen20_pins<67> = BEL "InstVGA/Mram_screen20" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen20_pins<66> = BEL "InstVGA/Mram_screen20" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen201_pins<65> = BEL "InstVGA/Mram_screen201" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen201_pins<64> = BEL "InstVGA/Mram_screen201" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen201_pins<67> = BEL "InstVGA/Mram_screen201" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen201_pins<66> = BEL "InstVGA/Mram_screen201" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen21_pins<65> = BEL "InstVGA/Mram_screen21" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen21_pins<64> = BEL "InstVGA/Mram_screen21" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen21_pins<67> = BEL "InstVGA/Mram_screen21" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen21_pins<66> = BEL "InstVGA/Mram_screen21" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen210_pins<65> = BEL "InstVGA/Mram_screen210" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen210_pins<64> = BEL "InstVGA/Mram_screen210" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen210_pins<67> = BEL "InstVGA/Mram_screen210" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen210_pins<66> = BEL "InstVGA/Mram_screen210" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen211_pins<65> = BEL "InstVGA/Mram_screen211" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen211_pins<64> = BEL "InstVGA/Mram_screen211" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen211_pins<67> = BEL "InstVGA/Mram_screen211" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen211_pins<66> = BEL "InstVGA/Mram_screen211" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen22_pins<65> = BEL "InstVGA/Mram_screen22" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen22_pins<64> = BEL "InstVGA/Mram_screen22" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen22_pins<67> = BEL "InstVGA/Mram_screen22" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen22_pins<66> = BEL "InstVGA/Mram_screen22" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen221_pins<65> = BEL "InstVGA/Mram_screen221" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen221_pins<64> = BEL "InstVGA/Mram_screen221" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen221_pins<67> = BEL "InstVGA/Mram_screen221" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen221_pins<66> = BEL "InstVGA/Mram_screen221" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen23_pins<65> = BEL "InstVGA/Mram_screen23" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen23_pins<64> = BEL "InstVGA/Mram_screen23" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen23_pins<67> = BEL "InstVGA/Mram_screen23" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen23_pins<66> = BEL "InstVGA/Mram_screen23" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen231_pins<65> = BEL "InstVGA/Mram_screen231" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen231_pins<64> = BEL "InstVGA/Mram_screen231" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen231_pins<67> = BEL "InstVGA/Mram_screen231" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen231_pins<66> = BEL "InstVGA/Mram_screen231" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen24_pins<65> = BEL "InstVGA/Mram_screen24" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen24_pins<64> = BEL "InstVGA/Mram_screen24" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen24_pins<67> = BEL "InstVGA/Mram_screen24" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen24_pins<66> = BEL "InstVGA/Mram_screen24" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen241_pins<65> = BEL "InstVGA/Mram_screen241" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen241_pins<64> = BEL "InstVGA/Mram_screen241" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen241_pins<67> = BEL "InstVGA/Mram_screen241" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen241_pins<66> = BEL "InstVGA/Mram_screen241" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen25_pins<65> = BEL "InstVGA/Mram_screen25" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen25_pins<64> = BEL "InstVGA/Mram_screen25" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen25_pins<67> = BEL "InstVGA/Mram_screen25" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen25_pins<66> = BEL "InstVGA/Mram_screen25" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen251_pins<65> = BEL "InstVGA/Mram_screen251" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen251_pins<64> = BEL "InstVGA/Mram_screen251" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen251_pins<67> = BEL "InstVGA/Mram_screen251" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen251_pins<66> = BEL "InstVGA/Mram_screen251" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen26_pins<65> = BEL "InstVGA/Mram_screen26" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen26_pins<64> = BEL "InstVGA/Mram_screen26" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen26_pins<67> = BEL "InstVGA/Mram_screen26" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen26_pins<66> = BEL "InstVGA/Mram_screen26" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen261_pins<65> = BEL "InstVGA/Mram_screen261" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen261_pins<64> = BEL "InstVGA/Mram_screen261" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen261_pins<67> = BEL "InstVGA/Mram_screen261" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen261_pins<66> = BEL "InstVGA/Mram_screen261" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen27_pins<65> = BEL "InstVGA/Mram_screen27" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen27_pins<64> = BEL "InstVGA/Mram_screen27" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen27_pins<67> = BEL "InstVGA/Mram_screen27" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen27_pins<66> = BEL "InstVGA/Mram_screen27" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen271_pins<65> = BEL "InstVGA/Mram_screen271" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen271_pins<64> = BEL "InstVGA/Mram_screen271" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen271_pins<67> = BEL "InstVGA/Mram_screen271" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen271_pins<66> = BEL "InstVGA/Mram_screen271" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen28_pins<65> = BEL "InstVGA/Mram_screen28" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen28_pins<64> = BEL "InstVGA/Mram_screen28" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen28_pins<67> = BEL "InstVGA/Mram_screen28" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen28_pins<66> = BEL "InstVGA/Mram_screen28" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen281_pins<65> = BEL "InstVGA/Mram_screen281" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen281_pins<64> = BEL "InstVGA/Mram_screen281" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen281_pins<67> = BEL "InstVGA/Mram_screen281" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen281_pins<66> = BEL "InstVGA/Mram_screen281" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen29_pins<65> = BEL "InstVGA/Mram_screen29" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen29_pins<64> = BEL "InstVGA/Mram_screen29" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen29_pins<67> = BEL "InstVGA/Mram_screen29" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen29_pins<66> = BEL "InstVGA/Mram_screen29" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen291_pins<65> = BEL "InstVGA/Mram_screen291" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen291_pins<64> = BEL "InstVGA/Mram_screen291" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen291_pins<67> = BEL "InstVGA/Mram_screen291" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen291_pins<66> = BEL "InstVGA/Mram_screen291" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen3_pins<65> = BEL "InstVGA/Mram_screen3" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen3_pins<64> = BEL "InstVGA/Mram_screen3" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen3_pins<67> = BEL "InstVGA/Mram_screen3" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen3_pins<66> = BEL "InstVGA/Mram_screen3" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen30_pins<65> = BEL "InstVGA/Mram_screen30" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen30_pins<64> = BEL "InstVGA/Mram_screen30" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen30_pins<67> = BEL "InstVGA/Mram_screen30" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen30_pins<66> = BEL "InstVGA/Mram_screen30" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen301_pins<65> = BEL "InstVGA/Mram_screen301" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen301_pins<64> = BEL "InstVGA/Mram_screen301" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen301_pins<67> = BEL "InstVGA/Mram_screen301" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen301_pins<66> = BEL "InstVGA/Mram_screen301" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen31_pins<65> = BEL "InstVGA/Mram_screen31" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen31_pins<64> = BEL "InstVGA/Mram_screen31" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen31_pins<67> = BEL "InstVGA/Mram_screen31" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen31_pins<66> = BEL "InstVGA/Mram_screen31" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen310_pins<65> = BEL "InstVGA/Mram_screen310" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen310_pins<64> = BEL "InstVGA/Mram_screen310" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen310_pins<67> = BEL "InstVGA/Mram_screen310" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen310_pins<66> = BEL "InstVGA/Mram_screen310" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen311_pins<65> = BEL "InstVGA/Mram_screen311" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen311_pins<64> = BEL "InstVGA/Mram_screen311" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen311_pins<67> = BEL "InstVGA/Mram_screen311" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen311_pins<66> = BEL "InstVGA/Mram_screen311" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen32_pins<65> = BEL "InstVGA/Mram_screen32" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen32_pins<64> = BEL "InstVGA/Mram_screen32" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen32_pins<67> = BEL "InstVGA/Mram_screen32" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen32_pins<66> = BEL "InstVGA/Mram_screen32" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen321_pins<65> = BEL "InstVGA/Mram_screen321" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen321_pins<64> = BEL "InstVGA/Mram_screen321" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen321_pins<67> = BEL "InstVGA/Mram_screen321" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen321_pins<66> = BEL "InstVGA/Mram_screen321" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen33_pins<65> = BEL "InstVGA/Mram_screen33" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen33_pins<64> = BEL "InstVGA/Mram_screen33" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen33_pins<67> = BEL "InstVGA/Mram_screen33" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen33_pins<66> = BEL "InstVGA/Mram_screen33" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen331_pins<65> = BEL "InstVGA/Mram_screen331" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen331_pins<64> = BEL "InstVGA/Mram_screen331" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen331_pins<67> = BEL "InstVGA/Mram_screen331" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen331_pins<66> = BEL "InstVGA/Mram_screen331" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen34_pins<65> = BEL "InstVGA/Mram_screen34" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen34_pins<64> = BEL "InstVGA/Mram_screen34" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen34_pins<67> = BEL "InstVGA/Mram_screen34" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen34_pins<66> = BEL "InstVGA/Mram_screen34" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen341_pins<65> = BEL "InstVGA/Mram_screen341" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen341_pins<64> = BEL "InstVGA/Mram_screen341" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen341_pins<67> = BEL "InstVGA/Mram_screen341" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen341_pins<66> = BEL "InstVGA/Mram_screen341" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen35_pins<65> = BEL "InstVGA/Mram_screen35" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen35_pins<64> = BEL "InstVGA/Mram_screen35" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen35_pins<67> = BEL "InstVGA/Mram_screen35" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen35_pins<66> = BEL "InstVGA/Mram_screen35" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen351_pins<65> = BEL "InstVGA/Mram_screen351" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen351_pins<64> = BEL "InstVGA/Mram_screen351" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen351_pins<67> = BEL "InstVGA/Mram_screen351" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen351_pins<66> = BEL "InstVGA/Mram_screen351" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen36_pins<65> = BEL "InstVGA/Mram_screen36" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen36_pins<64> = BEL "InstVGA/Mram_screen36" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen36_pins<67> = BEL "InstVGA/Mram_screen36" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen36_pins<66> = BEL "InstVGA/Mram_screen36" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen361_pins<65> = BEL "InstVGA/Mram_screen361" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen361_pins<64> = BEL "InstVGA/Mram_screen361" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen361_pins<67> = BEL "InstVGA/Mram_screen361" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen361_pins<66> = BEL "InstVGA/Mram_screen361" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen37_pins<65> = BEL "InstVGA/Mram_screen37" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen37_pins<64> = BEL "InstVGA/Mram_screen37" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen37_pins<67> = BEL "InstVGA/Mram_screen37" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen37_pins<66> = BEL "InstVGA/Mram_screen37" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen371_pins<65> = BEL "InstVGA/Mram_screen371" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen371_pins<64> = BEL "InstVGA/Mram_screen371" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen371_pins<67> = BEL "InstVGA/Mram_screen371" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen371_pins<66> = BEL "InstVGA/Mram_screen371" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen38_pins<65> = BEL "InstVGA/Mram_screen38" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen38_pins<64> = BEL "InstVGA/Mram_screen38" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen38_pins<67> = BEL "InstVGA/Mram_screen38" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen38_pins<66> = BEL "InstVGA/Mram_screen38" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen381_pins<65> = BEL "InstVGA/Mram_screen381" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen381_pins<64> = BEL "InstVGA/Mram_screen381" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen381_pins<67> = BEL "InstVGA/Mram_screen381" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen381_pins<66> = BEL "InstVGA/Mram_screen381" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen39_pins<65> = BEL "InstVGA/Mram_screen39" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen39_pins<64> = BEL "InstVGA/Mram_screen39" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen39_pins<67> = BEL "InstVGA/Mram_screen39" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen39_pins<66> = BEL "InstVGA/Mram_screen39" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen391_pins<65> = BEL "InstVGA/Mram_screen391" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen391_pins<64> = BEL "InstVGA/Mram_screen391" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen391_pins<67> = BEL "InstVGA/Mram_screen391" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen391_pins<66> = BEL "InstVGA/Mram_screen391" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen4_pins<65> = BEL "InstVGA/Mram_screen4" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen4_pins<64> = BEL "InstVGA/Mram_screen4" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen4_pins<67> = BEL "InstVGA/Mram_screen4" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen4_pins<66> = BEL "InstVGA/Mram_screen4" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen40_pins<65> = BEL "InstVGA/Mram_screen40" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen40_pins<64> = BEL "InstVGA/Mram_screen40" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen40_pins<67> = BEL "InstVGA/Mram_screen40" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen40_pins<66> = BEL "InstVGA/Mram_screen40" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen401_pins<65> = BEL "InstVGA/Mram_screen401" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen401_pins<64> = BEL "InstVGA/Mram_screen401" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen401_pins<67> = BEL "InstVGA/Mram_screen401" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen401_pins<66> = BEL "InstVGA/Mram_screen401" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen41_pins<65> = BEL "InstVGA/Mram_screen41" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen41_pins<64> = BEL "InstVGA/Mram_screen41" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen41_pins<67> = BEL "InstVGA/Mram_screen41" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen41_pins<66> = BEL "InstVGA/Mram_screen41" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen410_pins<65> = BEL "InstVGA/Mram_screen410" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen410_pins<64> = BEL "InstVGA/Mram_screen410" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen410_pins<67> = BEL "InstVGA/Mram_screen410" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen410_pins<66> = BEL "InstVGA/Mram_screen410" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen411_pins<65> = BEL "InstVGA/Mram_screen411" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen411_pins<64> = BEL "InstVGA/Mram_screen411" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen411_pins<67> = BEL "InstVGA/Mram_screen411" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen411_pins<66> = BEL "InstVGA/Mram_screen411" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen42_pins<65> = BEL "InstVGA/Mram_screen42" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen42_pins<64> = BEL "InstVGA/Mram_screen42" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen42_pins<67> = BEL "InstVGA/Mram_screen42" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen42_pins<66> = BEL "InstVGA/Mram_screen42" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen421_pins<65> = BEL "InstVGA/Mram_screen421" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen421_pins<64> = BEL "InstVGA/Mram_screen421" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen421_pins<67> = BEL "InstVGA/Mram_screen421" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen421_pins<66> = BEL "InstVGA/Mram_screen421" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen43_pins<65> = BEL "InstVGA/Mram_screen43" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen43_pins<64> = BEL "InstVGA/Mram_screen43" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen43_pins<67> = BEL "InstVGA/Mram_screen43" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen43_pins<66> = BEL "InstVGA/Mram_screen43" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen431_pins<65> = BEL "InstVGA/Mram_screen431" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen431_pins<64> = BEL "InstVGA/Mram_screen431" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen431_pins<67> = BEL "InstVGA/Mram_screen431" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen431_pins<66> = BEL "InstVGA/Mram_screen431" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen44_pins<65> = BEL "InstVGA/Mram_screen44" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen44_pins<64> = BEL "InstVGA/Mram_screen44" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen44_pins<67> = BEL "InstVGA/Mram_screen44" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen44_pins<66> = BEL "InstVGA/Mram_screen44" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen441_pins<65> = BEL "InstVGA/Mram_screen441" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen441_pins<64> = BEL "InstVGA/Mram_screen441" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen441_pins<67> = BEL "InstVGA/Mram_screen441" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen441_pins<66> = BEL "InstVGA/Mram_screen441" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen45_pins<65> = BEL "InstVGA/Mram_screen45" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen45_pins<64> = BEL "InstVGA/Mram_screen45" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen45_pins<67> = BEL "InstVGA/Mram_screen45" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen45_pins<66> = BEL "InstVGA/Mram_screen45" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen451_pins<65> = BEL "InstVGA/Mram_screen451" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen451_pins<64> = BEL "InstVGA/Mram_screen451" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen451_pins<67> = BEL "InstVGA/Mram_screen451" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen451_pins<66> = BEL "InstVGA/Mram_screen451" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen46_pins<65> = BEL "InstVGA/Mram_screen46" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen46_pins<64> = BEL "InstVGA/Mram_screen46" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen46_pins<67> = BEL "InstVGA/Mram_screen46" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen46_pins<66> = BEL "InstVGA/Mram_screen46" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen461_pins<65> = BEL "InstVGA/Mram_screen461" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen461_pins<64> = BEL "InstVGA/Mram_screen461" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen461_pins<67> = BEL "InstVGA/Mram_screen461" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen461_pins<66> = BEL "InstVGA/Mram_screen461" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen47_pins<65> = BEL "InstVGA/Mram_screen47" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen47_pins<64> = BEL "InstVGA/Mram_screen47" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen47_pins<67> = BEL "InstVGA/Mram_screen47" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen47_pins<66> = BEL "InstVGA/Mram_screen47" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen471_pins<65> = BEL "InstVGA/Mram_screen471" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen471_pins<64> = BEL "InstVGA/Mram_screen471" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen471_pins<67> = BEL "InstVGA/Mram_screen471" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen471_pins<66> = BEL "InstVGA/Mram_screen471" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen48_pins<65> = BEL "InstVGA/Mram_screen48" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen48_pins<64> = BEL "InstVGA/Mram_screen48" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen48_pins<67> = BEL "InstVGA/Mram_screen48" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen48_pins<66> = BEL "InstVGA/Mram_screen48" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen481_pins<65> = BEL "InstVGA/Mram_screen481" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen481_pins<64> = BEL "InstVGA/Mram_screen481" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen481_pins<67> = BEL "InstVGA/Mram_screen481" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen481_pins<66> = BEL "InstVGA/Mram_screen481" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen49_pins<65> = BEL "InstVGA/Mram_screen49" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen49_pins<64> = BEL "InstVGA/Mram_screen49" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen49_pins<67> = BEL "InstVGA/Mram_screen49" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen49_pins<66> = BEL "InstVGA/Mram_screen49" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen491_pins<65> = BEL "InstVGA/Mram_screen491" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen491_pins<64> = BEL "InstVGA/Mram_screen491" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen491_pins<67> = BEL "InstVGA/Mram_screen491" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen491_pins<66> = BEL "InstVGA/Mram_screen491" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen5_pins<65> = BEL "InstVGA/Mram_screen5" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen5_pins<64> = BEL "InstVGA/Mram_screen5" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen5_pins<67> = BEL "InstVGA/Mram_screen5" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen5_pins<66> = BEL "InstVGA/Mram_screen5" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen50_pins<65> = BEL "InstVGA/Mram_screen50" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen50_pins<64> = BEL "InstVGA/Mram_screen50" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen50_pins<67> = BEL "InstVGA/Mram_screen50" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen50_pins<66> = BEL "InstVGA/Mram_screen50" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen501_pins<65> = BEL "InstVGA/Mram_screen501" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen501_pins<64> = BEL "InstVGA/Mram_screen501" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen501_pins<67> = BEL "InstVGA/Mram_screen501" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen501_pins<66> = BEL "InstVGA/Mram_screen501" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen51_pins<65> = BEL "InstVGA/Mram_screen51" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen51_pins<64> = BEL "InstVGA/Mram_screen51" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen51_pins<67> = BEL "InstVGA/Mram_screen51" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen51_pins<66> = BEL "InstVGA/Mram_screen51" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen510_pins<65> = BEL "InstVGA/Mram_screen510" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen510_pins<64> = BEL "InstVGA/Mram_screen510" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen510_pins<67> = BEL "InstVGA/Mram_screen510" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen510_pins<66> = BEL "InstVGA/Mram_screen510" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen511_pins<65> = BEL "InstVGA/Mram_screen511" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen511_pins<64> = BEL "InstVGA/Mram_screen511" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen511_pins<67> = BEL "InstVGA/Mram_screen511" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen511_pins<66> = BEL "InstVGA/Mram_screen511" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen52_pins<65> = BEL "InstVGA/Mram_screen52" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen52_pins<64> = BEL "InstVGA/Mram_screen52" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen52_pins<67> = BEL "InstVGA/Mram_screen52" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen52_pins<66> = BEL "InstVGA/Mram_screen52" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen521_pins<65> = BEL "InstVGA/Mram_screen521" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen521_pins<64> = BEL "InstVGA/Mram_screen521" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen521_pins<67> = BEL "InstVGA/Mram_screen521" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen521_pins<66> = BEL "InstVGA/Mram_screen521" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen53_pins<65> = BEL "InstVGA/Mram_screen53" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen53_pins<64> = BEL "InstVGA/Mram_screen53" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen53_pins<67> = BEL "InstVGA/Mram_screen53" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen53_pins<66> = BEL "InstVGA/Mram_screen53" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen531_pins<65> = BEL "InstVGA/Mram_screen531" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen531_pins<64> = BEL "InstVGA/Mram_screen531" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen531_pins<67> = BEL "InstVGA/Mram_screen531" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen531_pins<66> = BEL "InstVGA/Mram_screen531" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen54_pins<65> = BEL "InstVGA/Mram_screen54" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen54_pins<64> = BEL "InstVGA/Mram_screen54" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen54_pins<67> = BEL "InstVGA/Mram_screen54" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen54_pins<66> = BEL "InstVGA/Mram_screen54" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen541_pins<65> = BEL "InstVGA/Mram_screen541" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen541_pins<64> = BEL "InstVGA/Mram_screen541" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen541_pins<67> = BEL "InstVGA/Mram_screen541" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen541_pins<66> = BEL "InstVGA/Mram_screen541" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen55_pins<65> = BEL "InstVGA/Mram_screen55" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen55_pins<64> = BEL "InstVGA/Mram_screen55" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen55_pins<67> = BEL "InstVGA/Mram_screen55" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen55_pins<66> = BEL "InstVGA/Mram_screen55" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen551_pins<65> = BEL "InstVGA/Mram_screen551" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen551_pins<64> = BEL "InstVGA/Mram_screen551" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen551_pins<67> = BEL "InstVGA/Mram_screen551" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen551_pins<66> = BEL "InstVGA/Mram_screen551" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen56_pins<65> = BEL "InstVGA/Mram_screen56" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen56_pins<64> = BEL "InstVGA/Mram_screen56" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen56_pins<67> = BEL "InstVGA/Mram_screen56" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen56_pins<66> = BEL "InstVGA/Mram_screen56" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen561_pins<65> = BEL "InstVGA/Mram_screen561" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen561_pins<64> = BEL "InstVGA/Mram_screen561" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen561_pins<67> = BEL "InstVGA/Mram_screen561" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen561_pins<66> = BEL "InstVGA/Mram_screen561" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen57_pins<65> = BEL "InstVGA/Mram_screen57" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen57_pins<64> = BEL "InstVGA/Mram_screen57" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen57_pins<67> = BEL "InstVGA/Mram_screen57" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen57_pins<66> = BEL "InstVGA/Mram_screen57" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen571_pins<65> = BEL "InstVGA/Mram_screen571" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen571_pins<64> = BEL "InstVGA/Mram_screen571" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen571_pins<67> = BEL "InstVGA/Mram_screen571" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen571_pins<66> = BEL "InstVGA/Mram_screen571" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen58_pins<65> = BEL "InstVGA/Mram_screen58" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen58_pins<64> = BEL "InstVGA/Mram_screen58" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen58_pins<67> = BEL "InstVGA/Mram_screen58" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen58_pins<66> = BEL "InstVGA/Mram_screen58" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen581_pins<65> = BEL "InstVGA/Mram_screen581" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen581_pins<64> = BEL "InstVGA/Mram_screen581" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen581_pins<67> = BEL "InstVGA/Mram_screen581" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen581_pins<66> = BEL "InstVGA/Mram_screen581" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen59_pins<65> = BEL "InstVGA/Mram_screen59" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen59_pins<64> = BEL "InstVGA/Mram_screen59" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen59_pins<67> = BEL "InstVGA/Mram_screen59" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen59_pins<66> = BEL "InstVGA/Mram_screen59" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen591_pins<65> = BEL "InstVGA/Mram_screen591" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen591_pins<64> = BEL "InstVGA/Mram_screen591" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen591_pins<67> = BEL "InstVGA/Mram_screen591" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen591_pins<66> = BEL "InstVGA/Mram_screen591" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen6_pins<65> = BEL "InstVGA/Mram_screen6" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen6_pins<64> = BEL "InstVGA/Mram_screen6" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen6_pins<67> = BEL "InstVGA/Mram_screen6" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen6_pins<66> = BEL "InstVGA/Mram_screen6" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen60_pins<65> = BEL "InstVGA/Mram_screen60" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen60_pins<64> = BEL "InstVGA/Mram_screen60" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen60_pins<67> = BEL "InstVGA/Mram_screen60" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen60_pins<66> = BEL "InstVGA/Mram_screen60" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen601_pins<65> = BEL "InstVGA/Mram_screen601" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen601_pins<64> = BEL "InstVGA/Mram_screen601" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen601_pins<67> = BEL "InstVGA/Mram_screen601" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen601_pins<66> = BEL "InstVGA/Mram_screen601" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen61_pins<65> = BEL "InstVGA/Mram_screen61" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen61_pins<64> = BEL "InstVGA/Mram_screen61" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen61_pins<67> = BEL "InstVGA/Mram_screen61" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen61_pins<66> = BEL "InstVGA/Mram_screen61" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen7_pins<65> = BEL "InstVGA/Mram_screen7" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen7_pins<64> = BEL "InstVGA/Mram_screen7" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen7_pins<67> = BEL "InstVGA/Mram_screen7" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen7_pins<66> = BEL "InstVGA/Mram_screen7" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen71_pins<65> = BEL "InstVGA/Mram_screen71" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen71_pins<64> = BEL "InstVGA/Mram_screen71" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen71_pins<67> = BEL "InstVGA/Mram_screen71" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen71_pins<66> = BEL "InstVGA/Mram_screen71" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen8_pins<65> = BEL "InstVGA/Mram_screen8" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen8_pins<64> = BEL "InstVGA/Mram_screen8" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen8_pins<67> = BEL "InstVGA/Mram_screen8" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen8_pins<66> = BEL "InstVGA/Mram_screen8" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen81_pins<65> = BEL "InstVGA/Mram_screen81" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen81_pins<64> = BEL "InstVGA/Mram_screen81" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen81_pins<67> = BEL "InstVGA/Mram_screen81" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen81_pins<66> = BEL "InstVGA/Mram_screen81" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen9_pins<65> = BEL "InstVGA/Mram_screen9" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen9_pins<64> = BEL "InstVGA/Mram_screen9" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen9_pins<67> = BEL "InstVGA/Mram_screen9" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen9_pins<66> = BEL "InstVGA/Mram_screen9" PINNAME
+        CLKBWRCLKL;
+PIN InstVGA/Mram_screen91_pins<65> = BEL "InstVGA/Mram_screen91" PINNAME
+        CLKARDCLKU;
+PIN InstVGA/Mram_screen91_pins<64> = BEL "InstVGA/Mram_screen91" PINNAME
+        CLKARDCLKL;
+PIN InstVGA/Mram_screen91_pins<67> = BEL "InstVGA/Mram_screen91" PINNAME
+        CLKBWRCLKU;
+PIN InstVGA/Mram_screen91_pins<66> = BEL "InstVGA/Mram_screen91" PINNAME
+        CLKBWRCLKL;
+TIMEGRP sys_clk_pin = BEL "inst_clock_manager/ce_param" BEL
+        "instFSM/etat_present_FSM_FFd1" BEL "instFSM/etat_present_FSM_FFd2"
+        BEL "inst_cpt_iter/iterS_0" BEL "inst_cpt_iter/iterS_1" BEL
+        "inst_cpt_iter/iterS_4" BEL "inst_cpt_iter/iterS_2" BEL
+        "inst_cpt_iter/iterS_3" BEL "inst_cpt_iter/iterS_7" BEL
+        "inst_cpt_iter/iterS_5" BEL "inst_cpt_iter/iterS_6" BEL
+        "inst_cpt_iter/iterS_10" BEL "inst_cpt_iter/iterS_8" BEL
+        "inst_cpt_iter/iterS_9" BEL "inst_cpt_iter/iterS_11" BEL
+        "inst_clock_manager/cpt_0" BEL "inst_clock_manager/cpt_1" BEL
+        "inst_clock_manager/cpt_2" BEL "inst_clock_manager/cpt_3" BEL
+        "inst_clock_manager/cpt_4" BEL "inst_clock_manager/cpt_5" BEL
+        "inst_clock_manager/cpt_6" BEL "inst_clock_manager/cpt_7" BEL
+        "inst_clock_manager/cpt_8" BEL "inst_clock_manager/cpt_9" BEL
+        "inst_clock_manager/cpt_10" BEL "inst_clock_manager/cpt_11" BEL
+        "inst_clock_manager/cpt_12" BEL "inst_clock_manager/cpt_13" BEL
+        "inst_clock_manager/cpt_14" BEL "inst_clock_manager/cpt_15" BEL
+        "inst_clock_manager/cpt_16" BEL "inst_clock_manager/cpt_17" BEL
+        "inst_clock_manager/cpt_18" BEL "inst_clock_manager/cpt_19" BEL
+        "inst_clock_manager/cpt_20" BEL "inst_clock_manager/cpt_21" BEL
+        "inst_clock_manager/cpt_22" BEL "inst_clock_manager/cpt_23" BEL
+        "inst_clock_manager/cpt_24" BEL "inst_clock_manager/cpt_25" BEL
+        "InstVGA/v_counter_9" BEL "InstVGA/v_counter_7" BEL
+        "InstVGA/v_counter_6" BEL "InstVGA/v_counter_8" BEL
+        "InstVGA/v_counter_5" BEL "InstVGA/v_counter_4" BEL
+        "InstVGA/v_counter_3" BEL "InstVGA/v_counter_2" BEL
+        "InstVGA/v_counter_0" BEL "InstVGA/v_counter_1" BEL
+        "InstVGA/pix_read_addr_18" BEL "InstVGA/pix_read_addr_17" BEL
+        "InstVGA/pix_read_addr_16" BEL "InstVGA/pix_read_addr_15" BEL
+        "InstVGA/pix_read_addr_14" BEL "InstVGA/pix_read_addr_13" BEL
+        "InstVGA/pix_read_addr_12" BEL "InstVGA/pix_read_addr_11" BEL
+        "InstVGA/pix_read_addr_10" BEL "InstVGA/pix_read_addr_9" BEL
+        "InstVGA/pix_read_addr_8" BEL "InstVGA/pix_read_addr_7" BEL
+        "InstVGA/pix_read_addr_6" BEL "InstVGA/pix_read_addr_5" BEL
+        "InstVGA/pix_read_addr_4" BEL "InstVGA/pix_read_addr_3" BEL
+        "InstVGA/pix_read_addr_2" BEL "InstVGA/pix_read_addr_1" BEL
+        "InstVGA/pix_read_addr_0" BEL "InstVGA/h_counter_11" BEL
+        "InstVGA/h_counter_10" BEL "InstVGA/h_counter_8" BEL
+        "InstVGA/h_counter_7" BEL "InstVGA/h_counter_9" BEL
+        "InstVGA/h_counter_6" BEL "InstVGA/h_counter_5" BEL
+        "InstVGA/h_counter_4" BEL "InstVGA/h_counter_3" BEL
+        "InstVGA/h_counter_2" BEL "InstVGA/h_counter_1" BEL
+        "InstVGA/h_counter_0" BEL "InstVGA/ADDR_18" BEL "InstVGA/ADDR_17" BEL
+        "InstVGA/ADDR_16" BEL "InstVGA/ADDR_15" BEL "InstVGA/ADDR_14" BEL
+        "InstVGA/ADDR_13" BEL "InstVGA/ADDR_12" BEL "InstVGA/ADDR_11" BEL
+        "InstVGA/ADDR_10" BEL "InstVGA/ADDR_9" BEL "InstVGA/ADDR_8" BEL
+        "InstVGA/ADDR_7" BEL "InstVGA/ADDR_6" BEL "InstVGA/ADDR_5" BEL
+        "InstVGA/ADDR_4" BEL "InstVGA/ADDR_3" BEL "InstVGA/ADDR_2" BEL
+        "InstVGA/ADDR_1" BEL "InstVGA/ADDR_0" BEL "InstVGA/TOP_line" BEL
+        "InstVGA/VGA_hs" BEL "InstVGA/TOP_display" BEL "InstVGA/VGA_vs" BEL
+        "Instincrment/xcount_9" BEL "Instincrment/xcount_8" BEL
+        "Instincrment/xcount_7" BEL "Instincrment/xcount_6" BEL
+        "Instincrment/xcount_5" BEL "Instincrment/xcount_4" BEL
+        "Instincrment/xcount_3" BEL "Instincrment/xcount_2" BEL
+        "Instincrment/xcount_1" BEL "Instincrment/xcount_0" BEL
+        "Instincrment/ycount_8" BEL "Instincrment/ycount_7" BEL
+        "Instincrment/ycount_6" BEL "Instincrment/ycount_5" BEL
+        "Instincrment/ycount_4" BEL "Instincrment/ycount_3" BEL
+        "Instincrment/ycount_2" BEL "Instincrment/ycount_1" BEL
+        "Instincrment/ycount_0" BEL "Instincrment/stop" BEL
+        "instIterator/cptiters_11" BEL "instIterator/cptiters_10" BEL
+        "instIterator/cptiters_9" BEL "instIterator/cptiters_8" BEL
+        "instIterator/cptiters_7" BEL "instIterator/cptiters_6" BEL
+        "instIterator/cptiters_5" BEL "instIterator/cptiters_4" BEL
+        "instIterator/cptiters_3" BEL "instIterator/cptiters_2" BEL
+        "instIterator/cptiters_1" BEL "instIterator/cptiters_0" BEL
+        "instIterator/yi_31" BEL "instIterator/yi_30" BEL "instIterator/yi_29"
+        BEL "instIterator/yi_28" BEL "instIterator/yi_27" BEL
+        "instIterator/yi_26" BEL "instIterator/yi_25" BEL "instIterator/yi_24"
+        BEL "instIterator/yi_23" BEL "instIterator/yi_22" BEL
+        "instIterator/yi_21" BEL "instIterator/yi_20" BEL "instIterator/yi_19"
+        BEL "instIterator/yi_18" BEL "instIterator/yi_17" BEL
+        "instIterator/yi_16" BEL "instIterator/yi_15" BEL "instIterator/yi_14"
+        BEL "instIterator/yi_13" BEL "instIterator/yi_12" BEL
+        "instIterator/yi_11" BEL "instIterator/yi_10" BEL "instIterator/yi_9"
+        BEL "instIterator/yi_8" BEL "instIterator/yi_7" BEL
+        "instIterator/yi_6" BEL "instIterator/yi_5" BEL "instIterator/yi_4"
+        BEL "instIterator/yi_3" BEL "instIterator/yi_2" BEL
+        "instIterator/yi_1" BEL "instIterator/yi_0" BEL "instIterator/xi_31"
+        BEL "instIterator/xi_30" BEL "instIterator/xi_29" BEL
+        "instIterator/xi_28" BEL "instIterator/xi_27" BEL "instIterator/xi_26"
+        BEL "instIterator/xi_25" BEL "instIterator/xi_24" BEL
+        "instIterator/xi_23" BEL "instIterator/xi_22" BEL "instIterator/xi_21"
+        BEL "instIterator/xi_20" BEL "instIterator/xi_19" BEL
+        "instIterator/xi_18" BEL "instIterator/xi_17" BEL "instIterator/xi_16"
+        BEL "instIterator/xi_15" BEL "instIterator/xi_14" BEL
+        "instIterator/xi_13" BEL "instIterator/xi_12" BEL "instIterator/xi_11"
+        BEL "instIterator/xi_10" BEL "instIterator/xi_9" BEL
+        "instIterator/xi_8" BEL "instIterator/xi_7" BEL "instIterator/xi_6"
+        BEL "instIterator/xi_5" BEL "instIterator/xi_4" BEL
+        "instIterator/xi_3" BEL "instIterator/xi_2" BEL "instIterator/xi_1"
+        BEL "instIterator/xi_0" BEL "inst_zoom/s_xstart_31" BEL
+        "inst_zoom/s_xstart_30" BEL "inst_zoom/s_xstart_29" BEL
+        "inst_zoom/s_xstart_28" BEL "inst_zoom/s_xstart_27" BEL
+        "inst_zoom/s_xstart_26" BEL "inst_zoom/s_xstart_24" BEL
+        "inst_zoom/s_xstart_23" BEL "inst_zoom/s_xstart_25" BEL
+        "inst_zoom/s_xstart_22" BEL "inst_zoom/s_xstart_21" BEL
+        "inst_zoom/s_xstart_20" BEL "inst_zoom/s_xstart_19" BEL
+        "inst_zoom/s_xstart_18" BEL "inst_zoom/s_xstart_17" BEL
+        "inst_zoom/s_xstart_15" BEL "inst_zoom/s_xstart_14" BEL
+        "inst_zoom/s_xstart_16" BEL "inst_zoom/s_xstart_13" BEL
+        "inst_zoom/s_xstart_12" BEL "inst_zoom/s_xstart_11" BEL
+        "inst_zoom/s_xstart_10" BEL "inst_zoom/s_xstart_9" BEL
+        "inst_zoom/s_xstart_8" BEL "inst_zoom/s_xstart_7" BEL
+        "inst_zoom/s_ystart_30" BEL "inst_zoom/s_ystart_29" BEL
+        "inst_zoom/s_ystart_31" BEL "inst_zoom/s_ystart_28" BEL
+        "inst_zoom/s_ystart_27" BEL "inst_zoom/s_ystart_26" BEL
+        "inst_zoom/s_ystart_25" BEL "inst_zoom/s_ystart_24" BEL
+        "inst_zoom/s_ystart_23" BEL "inst_zoom/s_ystart_21" BEL
+        "inst_zoom/s_ystart_20" BEL "inst_zoom/s_ystart_22" BEL
+        "inst_zoom/s_ystart_19" BEL "inst_zoom/s_ystart_18" BEL
+        "inst_zoom/s_ystart_17" BEL "inst_zoom/s_ystart_16" BEL
+        "inst_zoom/s_ystart_15" BEL "inst_zoom/s_ystart_14" BEL
+        "inst_zoom/s_ystart_12" BEL "inst_zoom/s_ystart_11" BEL
+        "inst_zoom/s_ystart_13" BEL "inst_zoom/s_ystart_10" BEL
+        "inst_zoom/s_ystart_9" BEL "inst_zoom/s_ystart_8" BEL
+        "inst_zoom/s_ystart_7" BEL "inst_zoom/s_step_31" BEL
+        "inst_zoom/s_step_30" BEL "inst_zoom/s_step_29" BEL
+        "inst_zoom/s_step_28" BEL "inst_zoom/s_step_27" BEL
+        "inst_zoom/s_step_26" BEL "inst_zoom/s_step_25" BEL
+        "inst_zoom/s_step_24" BEL "inst_zoom/s_step_23" BEL
+        "inst_zoom/s_step_22" BEL "inst_zoom/s_step_21" BEL
+        "inst_zoom/s_step_20" BEL "inst_zoom/s_step_19" BEL
+        "inst_zoom/s_step_18" BEL "inst_zoom/s_step_17" BEL
+        "inst_zoom/s_step_16" BEL "inst_zoom/s_step_15" BEL
+        "inst_zoom/s_step_14" BEL "inst_zoom/s_step_13" BEL
+        "inst_zoom/s_step_12" BEL "inst_zoom/s_step_11" BEL
+        "inst_zoom/s_step_10" BEL "inst_zoom/s_step_9" BEL
+        "inst_zoom/s_step_8" BEL "inst_zoom/s_step_7" BEL "inst_zoom/s_step_6"
+        BEL "inst_zoom/s_step_5" BEL "inst_zoom/s_step_4" BEL
+        "inst_zoom/s_step_3" BEL "inst_zoom/s_step_2" BEL "inst_zoom/s_step_1"
+        BEL "inst_zoom/s_step_0" BEL "instIterator/donestate" BEL
+        "Instincrment/ys_0" BEL "Instincrment/xs_0" BEL "Instincrment/ys_1"
+        BEL "Instincrment/ys_2" BEL "Instincrment/ys_3" BEL
+        "Instincrment/ys_4" BEL "Instincrment/ys_5" BEL "Instincrment/ys_6"
+        BEL "Instincrment/ys_7_C_7" BEL "Instincrment/ys_7_P_7" BEL
+        "Instincrment/ys_9_C_9" BEL "Instincrment/ys_9_P_9" BEL
+        "Instincrment/ys_10_C_10" BEL "Instincrment/ys_10_P_10" BEL
+        "Instincrment/ys_8_C_8" BEL "Instincrment/ys_8_P_8" BEL
+        "Instincrment/ys_11_C_11" BEL "Instincrment/ys_11_P_11" BEL
+        "Instincrment/ys_12_C_12" BEL "Instincrment/ys_12_P_12" BEL
+        "Instincrment/ys_13_C_13" BEL "Instincrment/ys_13_P_13" BEL
+        "Instincrment/ys_14_C_14" BEL "Instincrment/ys_14_P_14" BEL
+        "Instincrment/ys_15_C_15" BEL "Instincrment/ys_15_P_15" BEL
+        "Instincrment/ys_16_C_16" BEL "Instincrment/ys_16_P_16" BEL
+        "Instincrment/ys_18_C_18" BEL "Instincrment/ys_18_P_18" BEL
+        "Instincrment/ys_19_C_19" BEL "Instincrment/ys_19_P_19" BEL
+        "Instincrment/ys_17_C_17" BEL "Instincrment/ys_17_P_17" BEL
+        "Instincrment/ys_20_C_20" BEL "Instincrment/ys_20_P_20" BEL
+        "Instincrment/ys_21_C_21" BEL "Instincrment/ys_21_P_21" BEL
+        "Instincrment/ys_23_C_23" BEL "Instincrment/ys_23_P_23" BEL
+        "Instincrment/ys_24_C_24" BEL "Instincrment/ys_24_P_24" BEL
+        "Instincrment/ys_22_C_22" BEL "Instincrment/ys_22_P_22" BEL
+        "Instincrment/ys_25_C_25" BEL "Instincrment/ys_25_P_25" BEL
+        "Instincrment/ys_26_C_26" BEL "Instincrment/ys_26_P_26" BEL
+        "Instincrment/ys_28_C_28" BEL "Instincrment/ys_28_P_28" BEL
+        "Instincrment/ys_29_C_29" BEL "Instincrment/ys_29_P_29" BEL
+        "Instincrment/ys_27_C_27" BEL "Instincrment/ys_27_P_27" BEL
+        "Instincrment/ys_30_C_30" BEL "Instincrment/ys_30_P_30" BEL
+        "Instincrment/ys_31_C_31" BEL "Instincrment/ys_31_P_31" BEL
+        "Instincrment/xs_1" BEL "Instincrment/xs_2" BEL "Instincrment/xs_3"
+        BEL "Instincrment/xs_5" BEL "Instincrment/xs_6" BEL
+        "Instincrment/xs_4" BEL "Instincrment/xs_7_C_7" BEL
+        "Instincrment/xs_7_P_7" BEL "Instincrment/xs_8_C_8" BEL
+        "Instincrment/xs_8_P_8" BEL "Instincrment/xs_10_C_10" BEL
+        "Instincrment/xs_10_P_10" BEL "Instincrment/xs_11_C_11" BEL
+        "Instincrment/xs_11_P_11" BEL "Instincrment/xs_9_C_9" BEL
+        "Instincrment/xs_9_P_9" BEL "Instincrment/xs_12_C_12" BEL
+        "Instincrment/xs_12_P_12" BEL "Instincrment/xs_13_C_13" BEL
+        "Instincrment/xs_13_P_13" BEL "Instincrment/xs_15_C_15" BEL
+        "Instincrment/xs_15_P_15" BEL "Instincrment/xs_16_C_16" BEL
+        "Instincrment/xs_16_P_16" BEL "Instincrment/xs_14_C_14" BEL
+        "Instincrment/xs_14_P_14" BEL "Instincrment/xs_17_C_17" BEL
+        "Instincrment/xs_17_P_17" BEL "Instincrment/xs_18_C_18" BEL
+        "Instincrment/xs_18_P_18" BEL "Instincrment/xs_19_C_19" BEL
+        "Instincrment/xs_19_P_19" BEL "Instincrment/xs_20_C_20" BEL
+        "Instincrment/xs_20_P_20" BEL "Instincrment/xs_21_C_21" BEL
+        "Instincrment/xs_21_P_21" BEL "Instincrment/xs_22_C_22" BEL
+        "Instincrment/xs_22_P_22" BEL "Instincrment/xs_24_C_24" BEL
+        "Instincrment/xs_24_P_24" BEL "Instincrment/xs_25_C_25" BEL
+        "Instincrment/xs_25_P_25" BEL "Instincrment/xs_23_C_23" BEL
+        "Instincrment/xs_23_P_23" BEL "Instincrment/xs_26_C_26" BEL
+        "Instincrment/xs_26_P_26" BEL "Instincrment/xs_27_C_27" BEL
+        "Instincrment/xs_27_P_27" BEL "Instincrment/xs_29_C_29" BEL
+        "Instincrment/xs_29_P_29" BEL "Instincrment/xs_30_C_30" BEL
+        "Instincrment/xs_30_P_30" BEL "Instincrment/xs_28_C_28" BEL
+        "Instincrment/xs_28_P_28" BEL "Instincrment/xs_31_C_31" BEL
+        "Instincrment/xs_31_P_31" BEL "clock_BUFGP/BUFG" BEL
+        "InstVGA/Mshreg_inst_LPM_FF2_2" BEL "InstVGA/inst_LPM_FF2_2" BEL
+        "InstVGA/Mshreg_inst_LPM_FF2_0" BEL "InstVGA/inst_LPM_FF2_0" BEL
+        "InstVGA/Mshreg_inst_LPM_FF2_1" BEL "InstVGA/inst_LPM_FF2_1" PIN
+        "InstVGA/Mram_screen1_pins<65>" PIN "InstVGA/Mram_screen1_pins<64>"
+        PIN "InstVGA/Mram_screen1_pins<67>" PIN
+        "InstVGA/Mram_screen1_pins<66>" PIN "InstVGA/Mram_screen10_pins<65>"
+        PIN "InstVGA/Mram_screen10_pins<64>" PIN
+        "InstVGA/Mram_screen10_pins<67>" PIN "InstVGA/Mram_screen10_pins<66>"
+        PIN "InstVGA/Mram_screen101_pins<65>" PIN
+        "InstVGA/Mram_screen101_pins<64>" PIN
+        "InstVGA/Mram_screen101_pins<67>" PIN
+        "InstVGA/Mram_screen101_pins<66>" PIN "InstVGA/Mram_screen11_pins<65>"
+        PIN "InstVGA/Mram_screen11_pins<64>" PIN
+        "InstVGA/Mram_screen11_pins<67>" PIN "InstVGA/Mram_screen11_pins<66>"
+        PIN "InstVGA/Mram_screen110_pins<65>" PIN
+        "InstVGA/Mram_screen110_pins<64>" PIN
+        "InstVGA/Mram_screen110_pins<67>" PIN
+        "InstVGA/Mram_screen110_pins<66>" PIN
+        "InstVGA/Mram_screen111_pins<65>" PIN
+        "InstVGA/Mram_screen111_pins<64>" PIN
+        "InstVGA/Mram_screen111_pins<67>" PIN
+        "InstVGA/Mram_screen111_pins<66>" PIN "InstVGA/Mram_screen12_pins<65>"
+        PIN "InstVGA/Mram_screen12_pins<64>" PIN
+        "InstVGA/Mram_screen12_pins<67>" PIN "InstVGA/Mram_screen12_pins<66>"
+        PIN "InstVGA/Mram_screen121_pins<65>" PIN
+        "InstVGA/Mram_screen121_pins<64>" PIN
+        "InstVGA/Mram_screen121_pins<67>" PIN
+        "InstVGA/Mram_screen121_pins<66>" PIN "InstVGA/Mram_screen13_pins<65>"
+        PIN "InstVGA/Mram_screen13_pins<64>" PIN
+        "InstVGA/Mram_screen13_pins<67>" PIN "InstVGA/Mram_screen13_pins<66>"
+        PIN "InstVGA/Mram_screen131_pins<65>" PIN
+        "InstVGA/Mram_screen131_pins<64>" PIN
+        "InstVGA/Mram_screen131_pins<67>" PIN
+        "InstVGA/Mram_screen131_pins<66>" PIN "InstVGA/Mram_screen14_pins<65>"
+        PIN "InstVGA/Mram_screen14_pins<64>" PIN
+        "InstVGA/Mram_screen14_pins<67>" PIN "InstVGA/Mram_screen14_pins<66>"
+        PIN "InstVGA/Mram_screen141_pins<65>" PIN
+        "InstVGA/Mram_screen141_pins<64>" PIN
+        "InstVGA/Mram_screen141_pins<67>" PIN
+        "InstVGA/Mram_screen141_pins<66>" PIN "InstVGA/Mram_screen15_pins<65>"
+        PIN "InstVGA/Mram_screen15_pins<64>" PIN
+        "InstVGA/Mram_screen15_pins<67>" PIN "InstVGA/Mram_screen15_pins<66>"
+        PIN "InstVGA/Mram_screen151_pins<65>" PIN
+        "InstVGA/Mram_screen151_pins<64>" PIN
+        "InstVGA/Mram_screen151_pins<67>" PIN
+        "InstVGA/Mram_screen151_pins<66>" PIN "InstVGA/Mram_screen16_pins<65>"
+        PIN "InstVGA/Mram_screen16_pins<64>" PIN
+        "InstVGA/Mram_screen16_pins<67>" PIN "InstVGA/Mram_screen16_pins<66>"
+        PIN "InstVGA/Mram_screen161_pins<65>" PIN
+        "InstVGA/Mram_screen161_pins<64>" PIN
+        "InstVGA/Mram_screen161_pins<67>" PIN
+        "InstVGA/Mram_screen161_pins<66>" PIN "InstVGA/Mram_screen17_pins<65>"
+        PIN "InstVGA/Mram_screen17_pins<64>" PIN
+        "InstVGA/Mram_screen17_pins<67>" PIN "InstVGA/Mram_screen17_pins<66>"
+        PIN "InstVGA/Mram_screen171_pins<65>" PIN
+        "InstVGA/Mram_screen171_pins<64>" PIN
+        "InstVGA/Mram_screen171_pins<67>" PIN
+        "InstVGA/Mram_screen171_pins<66>" PIN "InstVGA/Mram_screen18_pins<65>"
+        PIN "InstVGA/Mram_screen18_pins<64>" PIN
+        "InstVGA/Mram_screen18_pins<67>" PIN "InstVGA/Mram_screen18_pins<66>"
+        PIN "InstVGA/Mram_screen181_pins<65>" PIN
+        "InstVGA/Mram_screen181_pins<64>" PIN
+        "InstVGA/Mram_screen181_pins<67>" PIN
+        "InstVGA/Mram_screen181_pins<66>" PIN "InstVGA/Mram_screen19_pins<65>"
+        PIN "InstVGA/Mram_screen19_pins<64>" PIN
+        "InstVGA/Mram_screen19_pins<67>" PIN "InstVGA/Mram_screen19_pins<66>"
+        PIN "InstVGA/Mram_screen191_pins<65>" PIN
+        "InstVGA/Mram_screen191_pins<64>" PIN
+        "InstVGA/Mram_screen191_pins<67>" PIN
+        "InstVGA/Mram_screen191_pins<66>" PIN "InstVGA/Mram_screen2_pins<65>"
+        PIN "InstVGA/Mram_screen2_pins<64>" PIN
+        "InstVGA/Mram_screen2_pins<67>" PIN "InstVGA/Mram_screen2_pins<66>"
+        PIN "InstVGA/Mram_screen20_pins<65>" PIN
+        "InstVGA/Mram_screen20_pins<64>" PIN "InstVGA/Mram_screen20_pins<67>"
+        PIN "InstVGA/Mram_screen20_pins<66>" PIN
+        "InstVGA/Mram_screen201_pins<65>" PIN
+        "InstVGA/Mram_screen201_pins<64>" PIN
+        "InstVGA/Mram_screen201_pins<67>" PIN
+        "InstVGA/Mram_screen201_pins<66>" PIN "InstVGA/Mram_screen21_pins<65>"
+        PIN "InstVGA/Mram_screen21_pins<64>" PIN
+        "InstVGA/Mram_screen21_pins<67>" PIN "InstVGA/Mram_screen21_pins<66>"
+        PIN "InstVGA/Mram_screen210_pins<65>" PIN
+        "InstVGA/Mram_screen210_pins<64>" PIN
+        "InstVGA/Mram_screen210_pins<67>" PIN
+        "InstVGA/Mram_screen210_pins<66>" PIN
+        "InstVGA/Mram_screen211_pins<65>" PIN
+        "InstVGA/Mram_screen211_pins<64>" PIN
+        "InstVGA/Mram_screen211_pins<67>" PIN
+        "InstVGA/Mram_screen211_pins<66>" PIN "InstVGA/Mram_screen22_pins<65>"
+        PIN "InstVGA/Mram_screen22_pins<64>" PIN
+        "InstVGA/Mram_screen22_pins<67>" PIN "InstVGA/Mram_screen22_pins<66>"
+        PIN "InstVGA/Mram_screen221_pins<65>" PIN
+        "InstVGA/Mram_screen221_pins<64>" PIN
+        "InstVGA/Mram_screen221_pins<67>" PIN
+        "InstVGA/Mram_screen221_pins<66>" PIN "InstVGA/Mram_screen23_pins<65>"
+        PIN "InstVGA/Mram_screen23_pins<64>" PIN
+        "InstVGA/Mram_screen23_pins<67>" PIN "InstVGA/Mram_screen23_pins<66>"
+        PIN "InstVGA/Mram_screen231_pins<65>" PIN
+        "InstVGA/Mram_screen231_pins<64>" PIN
+        "InstVGA/Mram_screen231_pins<67>" PIN
+        "InstVGA/Mram_screen231_pins<66>" PIN "InstVGA/Mram_screen24_pins<65>"
+        PIN "InstVGA/Mram_screen24_pins<64>" PIN
+        "InstVGA/Mram_screen24_pins<67>" PIN "InstVGA/Mram_screen24_pins<66>"
+        PIN "InstVGA/Mram_screen241_pins<65>" PIN
+        "InstVGA/Mram_screen241_pins<64>" PIN
+        "InstVGA/Mram_screen241_pins<67>" PIN
+        "InstVGA/Mram_screen241_pins<66>" PIN "InstVGA/Mram_screen25_pins<65>"
+        PIN "InstVGA/Mram_screen25_pins<64>" PIN
+        "InstVGA/Mram_screen25_pins<67>" PIN "InstVGA/Mram_screen25_pins<66>"
+        PIN "InstVGA/Mram_screen251_pins<65>" PIN
+        "InstVGA/Mram_screen251_pins<64>" PIN
+        "InstVGA/Mram_screen251_pins<67>" PIN
+        "InstVGA/Mram_screen251_pins<66>" PIN "InstVGA/Mram_screen26_pins<65>"
+        PIN "InstVGA/Mram_screen26_pins<64>" PIN
+        "InstVGA/Mram_screen26_pins<67>" PIN "InstVGA/Mram_screen26_pins<66>"
+        PIN "InstVGA/Mram_screen261_pins<65>" PIN
+        "InstVGA/Mram_screen261_pins<64>" PIN
+        "InstVGA/Mram_screen261_pins<67>" PIN
+        "InstVGA/Mram_screen261_pins<66>" PIN "InstVGA/Mram_screen27_pins<65>"
+        PIN "InstVGA/Mram_screen27_pins<64>" PIN
+        "InstVGA/Mram_screen27_pins<67>" PIN "InstVGA/Mram_screen27_pins<66>"
+        PIN "InstVGA/Mram_screen271_pins<65>" PIN
+        "InstVGA/Mram_screen271_pins<64>" PIN
+        "InstVGA/Mram_screen271_pins<67>" PIN
+        "InstVGA/Mram_screen271_pins<66>" PIN "InstVGA/Mram_screen28_pins<65>"
+        PIN "InstVGA/Mram_screen28_pins<64>" PIN
+        "InstVGA/Mram_screen28_pins<67>" PIN "InstVGA/Mram_screen28_pins<66>"
+        PIN "InstVGA/Mram_screen281_pins<65>" PIN
+        "InstVGA/Mram_screen281_pins<64>" PIN
+        "InstVGA/Mram_screen281_pins<67>" PIN
+        "InstVGA/Mram_screen281_pins<66>" PIN "InstVGA/Mram_screen29_pins<65>"
+        PIN "InstVGA/Mram_screen29_pins<64>" PIN
+        "InstVGA/Mram_screen29_pins<67>" PIN "InstVGA/Mram_screen29_pins<66>"
+        PIN "InstVGA/Mram_screen291_pins<65>" PIN
+        "InstVGA/Mram_screen291_pins<64>" PIN
+        "InstVGA/Mram_screen291_pins<67>" PIN
+        "InstVGA/Mram_screen291_pins<66>" PIN "InstVGA/Mram_screen3_pins<65>"
+        PIN "InstVGA/Mram_screen3_pins<64>" PIN
+        "InstVGA/Mram_screen3_pins<67>" PIN "InstVGA/Mram_screen3_pins<66>"
+        PIN "InstVGA/Mram_screen30_pins<65>" PIN
+        "InstVGA/Mram_screen30_pins<64>" PIN "InstVGA/Mram_screen30_pins<67>"
+        PIN "InstVGA/Mram_screen30_pins<66>" PIN
+        "InstVGA/Mram_screen301_pins<65>" PIN
+        "InstVGA/Mram_screen301_pins<64>" PIN
+        "InstVGA/Mram_screen301_pins<67>" PIN
+        "InstVGA/Mram_screen301_pins<66>" PIN "InstVGA/Mram_screen31_pins<65>"
+        PIN "InstVGA/Mram_screen31_pins<64>" PIN
+        "InstVGA/Mram_screen31_pins<67>" PIN "InstVGA/Mram_screen31_pins<66>"
+        PIN "InstVGA/Mram_screen310_pins<65>" PIN
+        "InstVGA/Mram_screen310_pins<64>" PIN
+        "InstVGA/Mram_screen310_pins<67>" PIN
+        "InstVGA/Mram_screen310_pins<66>" PIN
+        "InstVGA/Mram_screen311_pins<65>" PIN
+        "InstVGA/Mram_screen311_pins<64>" PIN
+        "InstVGA/Mram_screen311_pins<67>" PIN
+        "InstVGA/Mram_screen311_pins<66>" PIN "InstVGA/Mram_screen32_pins<65>"
+        PIN "InstVGA/Mram_screen32_pins<64>" PIN
+        "InstVGA/Mram_screen32_pins<67>" PIN "InstVGA/Mram_screen32_pins<66>"
+        PIN "InstVGA/Mram_screen321_pins<65>" PIN
+        "InstVGA/Mram_screen321_pins<64>" PIN
+        "InstVGA/Mram_screen321_pins<67>" PIN
+        "InstVGA/Mram_screen321_pins<66>" PIN "InstVGA/Mram_screen33_pins<65>"
+        PIN "InstVGA/Mram_screen33_pins<64>" PIN
+        "InstVGA/Mram_screen33_pins<67>" PIN "InstVGA/Mram_screen33_pins<66>"
+        PIN "InstVGA/Mram_screen331_pins<65>" PIN
+        "InstVGA/Mram_screen331_pins<64>" PIN
+        "InstVGA/Mram_screen331_pins<67>" PIN
+        "InstVGA/Mram_screen331_pins<66>" PIN "InstVGA/Mram_screen34_pins<65>"
+        PIN "InstVGA/Mram_screen34_pins<64>" PIN
+        "InstVGA/Mram_screen34_pins<67>" PIN "InstVGA/Mram_screen34_pins<66>"
+        PIN "InstVGA/Mram_screen341_pins<65>" PIN
+        "InstVGA/Mram_screen341_pins<64>" PIN
+        "InstVGA/Mram_screen341_pins<67>" PIN
+        "InstVGA/Mram_screen341_pins<66>" PIN "InstVGA/Mram_screen35_pins<65>"
+        PIN "InstVGA/Mram_screen35_pins<64>" PIN
+        "InstVGA/Mram_screen35_pins<67>" PIN "InstVGA/Mram_screen35_pins<66>"
+        PIN "InstVGA/Mram_screen351_pins<65>" PIN
+        "InstVGA/Mram_screen351_pins<64>" PIN
+        "InstVGA/Mram_screen351_pins<67>" PIN
+        "InstVGA/Mram_screen351_pins<66>" PIN "InstVGA/Mram_screen36_pins<65>"
+        PIN "InstVGA/Mram_screen36_pins<64>" PIN
+        "InstVGA/Mram_screen36_pins<67>" PIN "InstVGA/Mram_screen36_pins<66>"
+        PIN "InstVGA/Mram_screen361_pins<65>" PIN
+        "InstVGA/Mram_screen361_pins<64>" PIN
+        "InstVGA/Mram_screen361_pins<67>" PIN
+        "InstVGA/Mram_screen361_pins<66>" PIN "InstVGA/Mram_screen37_pins<65>"
+        PIN "InstVGA/Mram_screen37_pins<64>" PIN
+        "InstVGA/Mram_screen37_pins<67>" PIN "InstVGA/Mram_screen37_pins<66>"
+        PIN "InstVGA/Mram_screen371_pins<65>" PIN
+        "InstVGA/Mram_screen371_pins<64>" PIN
+        "InstVGA/Mram_screen371_pins<67>" PIN
+        "InstVGA/Mram_screen371_pins<66>" PIN "InstVGA/Mram_screen38_pins<65>"
+        PIN "InstVGA/Mram_screen38_pins<64>" PIN
+        "InstVGA/Mram_screen38_pins<67>" PIN "InstVGA/Mram_screen38_pins<66>"
+        PIN "InstVGA/Mram_screen381_pins<65>" PIN
+        "InstVGA/Mram_screen381_pins<64>" PIN
+        "InstVGA/Mram_screen381_pins<67>" PIN
+        "InstVGA/Mram_screen381_pins<66>" PIN "InstVGA/Mram_screen39_pins<65>"
+        PIN "InstVGA/Mram_screen39_pins<64>" PIN
+        "InstVGA/Mram_screen39_pins<67>" PIN "InstVGA/Mram_screen39_pins<66>"
+        PIN "InstVGA/Mram_screen391_pins<65>" PIN
+        "InstVGA/Mram_screen391_pins<64>" PIN
+        "InstVGA/Mram_screen391_pins<67>" PIN
+        "InstVGA/Mram_screen391_pins<66>" PIN "InstVGA/Mram_screen4_pins<65>"
+        PIN "InstVGA/Mram_screen4_pins<64>" PIN
+        "InstVGA/Mram_screen4_pins<67>" PIN "InstVGA/Mram_screen4_pins<66>"
+        PIN "InstVGA/Mram_screen40_pins<65>" PIN
+        "InstVGA/Mram_screen40_pins<64>" PIN "InstVGA/Mram_screen40_pins<67>"
+        PIN "InstVGA/Mram_screen40_pins<66>" PIN
+        "InstVGA/Mram_screen401_pins<65>" PIN
+        "InstVGA/Mram_screen401_pins<64>" PIN
+        "InstVGA/Mram_screen401_pins<67>" PIN
+        "InstVGA/Mram_screen401_pins<66>" PIN "InstVGA/Mram_screen41_pins<65>"
+        PIN "InstVGA/Mram_screen41_pins<64>" PIN
+        "InstVGA/Mram_screen41_pins<67>" PIN "InstVGA/Mram_screen41_pins<66>"
+        PIN "InstVGA/Mram_screen410_pins<65>" PIN
+        "InstVGA/Mram_screen410_pins<64>" PIN
+        "InstVGA/Mram_screen410_pins<67>" PIN
+        "InstVGA/Mram_screen410_pins<66>" PIN
+        "InstVGA/Mram_screen411_pins<65>" PIN
+        "InstVGA/Mram_screen411_pins<64>" PIN
+        "InstVGA/Mram_screen411_pins<67>" PIN
+        "InstVGA/Mram_screen411_pins<66>" PIN "InstVGA/Mram_screen42_pins<65>"
+        PIN "InstVGA/Mram_screen42_pins<64>" PIN
+        "InstVGA/Mram_screen42_pins<67>" PIN "InstVGA/Mram_screen42_pins<66>"
+        PIN "InstVGA/Mram_screen421_pins<65>" PIN
+        "InstVGA/Mram_screen421_pins<64>" PIN
+        "InstVGA/Mram_screen421_pins<67>" PIN
+        "InstVGA/Mram_screen421_pins<66>" PIN "InstVGA/Mram_screen43_pins<65>"
+        PIN "InstVGA/Mram_screen43_pins<64>" PIN
+        "InstVGA/Mram_screen43_pins<67>" PIN "InstVGA/Mram_screen43_pins<66>"
+        PIN "InstVGA/Mram_screen431_pins<65>" PIN
+        "InstVGA/Mram_screen431_pins<64>" PIN
+        "InstVGA/Mram_screen431_pins<67>" PIN
+        "InstVGA/Mram_screen431_pins<66>" PIN "InstVGA/Mram_screen44_pins<65>"
+        PIN "InstVGA/Mram_screen44_pins<64>" PIN
+        "InstVGA/Mram_screen44_pins<67>" PIN "InstVGA/Mram_screen44_pins<66>"
+        PIN "InstVGA/Mram_screen441_pins<65>" PIN
+        "InstVGA/Mram_screen441_pins<64>" PIN
+        "InstVGA/Mram_screen441_pins<67>" PIN
+        "InstVGA/Mram_screen441_pins<66>" PIN "InstVGA/Mram_screen45_pins<65>"
+        PIN "InstVGA/Mram_screen45_pins<64>" PIN
+        "InstVGA/Mram_screen45_pins<67>" PIN "InstVGA/Mram_screen45_pins<66>"
+        PIN "InstVGA/Mram_screen451_pins<65>" PIN
+        "InstVGA/Mram_screen451_pins<64>" PIN
+        "InstVGA/Mram_screen451_pins<67>" PIN
+        "InstVGA/Mram_screen451_pins<66>" PIN "InstVGA/Mram_screen46_pins<65>"
+        PIN "InstVGA/Mram_screen46_pins<64>" PIN
+        "InstVGA/Mram_screen46_pins<67>" PIN "InstVGA/Mram_screen46_pins<66>"
+        PIN "InstVGA/Mram_screen461_pins<65>" PIN
+        "InstVGA/Mram_screen461_pins<64>" PIN
+        "InstVGA/Mram_screen461_pins<67>" PIN
+        "InstVGA/Mram_screen461_pins<66>" PIN "InstVGA/Mram_screen47_pins<65>"
+        PIN "InstVGA/Mram_screen47_pins<64>" PIN
+        "InstVGA/Mram_screen47_pins<67>" PIN "InstVGA/Mram_screen47_pins<66>"
+        PIN "InstVGA/Mram_screen471_pins<65>" PIN
+        "InstVGA/Mram_screen471_pins<64>" PIN
+        "InstVGA/Mram_screen471_pins<67>" PIN
+        "InstVGA/Mram_screen471_pins<66>" PIN "InstVGA/Mram_screen48_pins<65>"
+        PIN "InstVGA/Mram_screen48_pins<64>" PIN
+        "InstVGA/Mram_screen48_pins<67>" PIN "InstVGA/Mram_screen48_pins<66>"
+        PIN "InstVGA/Mram_screen481_pins<65>" PIN
+        "InstVGA/Mram_screen481_pins<64>" PIN
+        "InstVGA/Mram_screen481_pins<67>" PIN
+        "InstVGA/Mram_screen481_pins<66>" PIN "InstVGA/Mram_screen49_pins<65>"
+        PIN "InstVGA/Mram_screen49_pins<64>" PIN
+        "InstVGA/Mram_screen49_pins<67>" PIN "InstVGA/Mram_screen49_pins<66>"
+        PIN "InstVGA/Mram_screen491_pins<65>" PIN
+        "InstVGA/Mram_screen491_pins<64>" PIN
+        "InstVGA/Mram_screen491_pins<67>" PIN
+        "InstVGA/Mram_screen491_pins<66>" PIN "InstVGA/Mram_screen5_pins<65>"
+        PIN "InstVGA/Mram_screen5_pins<64>" PIN
+        "InstVGA/Mram_screen5_pins<67>" PIN "InstVGA/Mram_screen5_pins<66>"
+        PIN "InstVGA/Mram_screen50_pins<65>" PIN
+        "InstVGA/Mram_screen50_pins<64>" PIN "InstVGA/Mram_screen50_pins<67>"
+        PIN "InstVGA/Mram_screen50_pins<66>" PIN
+        "InstVGA/Mram_screen501_pins<65>" PIN
+        "InstVGA/Mram_screen501_pins<64>" PIN
+        "InstVGA/Mram_screen501_pins<67>" PIN
+        "InstVGA/Mram_screen501_pins<66>" PIN "InstVGA/Mram_screen51_pins<65>"
+        PIN "InstVGA/Mram_screen51_pins<64>" PIN
+        "InstVGA/Mram_screen51_pins<67>" PIN "InstVGA/Mram_screen51_pins<66>"
+        PIN "InstVGA/Mram_screen510_pins<65>" PIN
+        "InstVGA/Mram_screen510_pins<64>" PIN
+        "InstVGA/Mram_screen510_pins<67>" PIN
+        "InstVGA/Mram_screen510_pins<66>" PIN
+        "InstVGA/Mram_screen511_pins<65>" PIN
+        "InstVGA/Mram_screen511_pins<64>" PIN
+        "InstVGA/Mram_screen511_pins<67>" PIN
+        "InstVGA/Mram_screen511_pins<66>" PIN "InstVGA/Mram_screen52_pins<65>"
+        PIN "InstVGA/Mram_screen52_pins<64>" PIN
+        "InstVGA/Mram_screen52_pins<67>" PIN "InstVGA/Mram_screen52_pins<66>"
+        PIN "InstVGA/Mram_screen521_pins<65>" PIN
+        "InstVGA/Mram_screen521_pins<64>" PIN
+        "InstVGA/Mram_screen521_pins<67>" PIN
+        "InstVGA/Mram_screen521_pins<66>" PIN "InstVGA/Mram_screen53_pins<65>"
+        PIN "InstVGA/Mram_screen53_pins<64>" PIN
+        "InstVGA/Mram_screen53_pins<67>" PIN "InstVGA/Mram_screen53_pins<66>"
+        PIN "InstVGA/Mram_screen531_pins<65>" PIN
+        "InstVGA/Mram_screen531_pins<64>" PIN
+        "InstVGA/Mram_screen531_pins<67>" PIN
+        "InstVGA/Mram_screen531_pins<66>" PIN "InstVGA/Mram_screen54_pins<65>"
+        PIN "InstVGA/Mram_screen54_pins<64>" PIN
+        "InstVGA/Mram_screen54_pins<67>" PIN "InstVGA/Mram_screen54_pins<66>"
+        PIN "InstVGA/Mram_screen541_pins<65>" PIN
+        "InstVGA/Mram_screen541_pins<64>" PIN
+        "InstVGA/Mram_screen541_pins<67>" PIN
+        "InstVGA/Mram_screen541_pins<66>" PIN "InstVGA/Mram_screen55_pins<65>"
+        PIN "InstVGA/Mram_screen55_pins<64>" PIN
+        "InstVGA/Mram_screen55_pins<67>" PIN "InstVGA/Mram_screen55_pins<66>"
+        PIN "InstVGA/Mram_screen551_pins<65>" PIN
+        "InstVGA/Mram_screen551_pins<64>" PIN
+        "InstVGA/Mram_screen551_pins<67>" PIN
+        "InstVGA/Mram_screen551_pins<66>" PIN "InstVGA/Mram_screen56_pins<65>"
+        PIN "InstVGA/Mram_screen56_pins<64>" PIN
+        "InstVGA/Mram_screen56_pins<67>" PIN "InstVGA/Mram_screen56_pins<66>"
+        PIN "InstVGA/Mram_screen561_pins<65>" PIN
+        "InstVGA/Mram_screen561_pins<64>" PIN
+        "InstVGA/Mram_screen561_pins<67>" PIN
+        "InstVGA/Mram_screen561_pins<66>" PIN "InstVGA/Mram_screen57_pins<65>"
+        PIN "InstVGA/Mram_screen57_pins<64>" PIN
+        "InstVGA/Mram_screen57_pins<67>" PIN "InstVGA/Mram_screen57_pins<66>"
+        PIN "InstVGA/Mram_screen571_pins<65>" PIN
+        "InstVGA/Mram_screen571_pins<64>" PIN
+        "InstVGA/Mram_screen571_pins<67>" PIN
+        "InstVGA/Mram_screen571_pins<66>" PIN "InstVGA/Mram_screen58_pins<65>"
+        PIN "InstVGA/Mram_screen58_pins<64>" PIN
+        "InstVGA/Mram_screen58_pins<67>" PIN "InstVGA/Mram_screen58_pins<66>"
+        PIN "InstVGA/Mram_screen581_pins<65>" PIN
+        "InstVGA/Mram_screen581_pins<64>" PIN
+        "InstVGA/Mram_screen581_pins<67>" PIN
+        "InstVGA/Mram_screen581_pins<66>" PIN "InstVGA/Mram_screen59_pins<65>"
+        PIN "InstVGA/Mram_screen59_pins<64>" PIN
+        "InstVGA/Mram_screen59_pins<67>" PIN "InstVGA/Mram_screen59_pins<66>"
+        PIN "InstVGA/Mram_screen591_pins<65>" PIN
+        "InstVGA/Mram_screen591_pins<64>" PIN
+        "InstVGA/Mram_screen591_pins<67>" PIN
+        "InstVGA/Mram_screen591_pins<66>" PIN "InstVGA/Mram_screen6_pins<65>"
+        PIN "InstVGA/Mram_screen6_pins<64>" PIN
+        "InstVGA/Mram_screen6_pins<67>" PIN "InstVGA/Mram_screen6_pins<66>"
+        PIN "InstVGA/Mram_screen60_pins<65>" PIN
+        "InstVGA/Mram_screen60_pins<64>" PIN "InstVGA/Mram_screen60_pins<67>"
+        PIN "InstVGA/Mram_screen60_pins<66>" PIN
+        "InstVGA/Mram_screen601_pins<65>" PIN
+        "InstVGA/Mram_screen601_pins<64>" PIN
+        "InstVGA/Mram_screen601_pins<67>" PIN
+        "InstVGA/Mram_screen601_pins<66>" PIN "InstVGA/Mram_screen61_pins<65>"
+        PIN "InstVGA/Mram_screen61_pins<64>" PIN
+        "InstVGA/Mram_screen61_pins<67>" PIN "InstVGA/Mram_screen61_pins<66>"
+        PIN "InstVGA/Mram_screen7_pins<65>" PIN
+        "InstVGA/Mram_screen7_pins<64>" PIN "InstVGA/Mram_screen7_pins<67>"
+        PIN "InstVGA/Mram_screen7_pins<66>" PIN
+        "InstVGA/Mram_screen71_pins<65>" PIN "InstVGA/Mram_screen71_pins<64>"
+        PIN "InstVGA/Mram_screen71_pins<67>" PIN
+        "InstVGA/Mram_screen71_pins<66>" PIN "InstVGA/Mram_screen8_pins<65>"
+        PIN "InstVGA/Mram_screen8_pins<64>" PIN
+        "InstVGA/Mram_screen8_pins<67>" PIN "InstVGA/Mram_screen8_pins<66>"
+        PIN "InstVGA/Mram_screen81_pins<65>" PIN
+        "InstVGA/Mram_screen81_pins<64>" PIN "InstVGA/Mram_screen81_pins<67>"
+        PIN "InstVGA/Mram_screen81_pins<66>" PIN
+        "InstVGA/Mram_screen9_pins<65>" PIN "InstVGA/Mram_screen9_pins<64>"
+        PIN "InstVGA/Mram_screen9_pins<67>" PIN
+        "InstVGA/Mram_screen9_pins<66>" PIN "InstVGA/Mram_screen91_pins<65>"
+        PIN "InstVGA/Mram_screen91_pins<64>" PIN
+        "InstVGA/Mram_screen91_pins<67>" PIN "InstVGA/Mram_screen91_pins<66>";
+SCHEMATIC END;
+

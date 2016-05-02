@@ -33,6 +33,11 @@ entity TOP_LEVEL is
     Port ( clock : in  STD_LOGIC;
            reset : in  STD_LOGIC;
 			  inib : in std_logic;
+			  bleft : in STD_LOGIC;
+           bright : in STD_LOGIC;
+           bup : in STD_LOGIC;
+           bdwn : in STD_LOGIC;
+           bctr : in STD_LOGIC;
 			  VGA_hs       : out std_logic;   -- horisontal vga syncr.
 			  VGA_vs       : out std_logic;   -- vertical vga syncr.
 			  VGA_red      : out std_logic_vector(3 downto 0);   -- red output
@@ -79,9 +84,12 @@ component Iterator
 end component;
 
 component increment
-    Port ( clock : in  STD_LOGIC;
+     Port ( clock : in  STD_LOGIC;
            reset : in  STD_LOGIC;
            start : in  STD_LOGIC;
+			  x_start : in STD_LOGIC_VECTOR (XY_RANGE-1 downto 0);
+			  y_start : in STD_LOGIC_VECTOR (XY_RANGE-1 downto 0);
+			  step : in STD_LOGIC_VECTOR (XY_RANGE-1 downto 0);
            x : out  STD_LOGIC_VECTOR (XY_RANGE-1 downto 0);
            y : out  STD_LOGIC_VECTOR (XY_RANGE-1 downto 0);
 			  stop : out std_logic);
@@ -105,8 +113,29 @@ component VGA_bitmap_640x480
        data_out     : out std_logic_vector(bit_per_pixel - 1 downto 0));
 end component;
 
-Signal doneS, startS,stopS, xincS, yincS : std_logic;
+component Zoom
+	port ( bleft : in STD_LOGIC;
+           bright : in STD_LOGIC;
+           bup : in STD_LOGIC;
+           bdwn : in STD_LOGIC;
+           bctr : in STD_LOGIC;
+			  clock : in STD_LOGIC;
+			  reset : in STD_LOGIC;
+			  ce_param : in STD_LOGIC;
+			  x_start : out STD_LOGIC_VECTOR(XY_RANGE-1 downto 0);
+			  y_start : out STD_LOGIC_VECTOR(XY_RANGE-1 downto 0);
+			  step : out STD_LOGIC_VECTOR(XY_RANGE-1 downto 0));
+end component;
+
+component ClockManager 
+    Port ( clock : in std_logic;
+           reset : in std_logic;
+           ce_param : out std_logic);
+end component;
+
+Signal doneS, startS,stopS, xincS, yincS, s_param : std_logic;
 Signal xS, yS : std_logic_vector(XY_RANGE - 1 downto 0);
+Signal s_xstart, s_ystart, s_step : std_logic_vector(XY_RANGE - 1 downto 0);
 Signal colorS : STD_LOGIC_VECTOR (bit_per_pixel-1 downto 0);
 Signal itersS, itermaxS : STD_LOGIC_VECTOR (ITER_RANGE-1 downto 0);
 begin
@@ -130,6 +159,9 @@ Instincrment: increment
 Port map (clock,
 	  reset,
 	  startS,
+	  s_xstart,
+	  s_ystart,
+	  s_step,
 	  xS,
 	  yS,
 	  stopS);
@@ -157,5 +189,11 @@ inst_cpt_iter: cpt_iter
 					inib,
 					stopS,
 					itermaxS);
+
+inst_zoom : Zoom
+	port map (bleft, bright, bup, bdwn, bctr, clock, reset, s_param, s_xstart, s_ystart, s_step);
+
+inst_clock_manager : ClockManager
+	port map (clock, reset, s_param);
 
 end Behavioral;
