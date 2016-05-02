@@ -4,7 +4,7 @@ Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 Project Information
 --------------------
 ProjectID=6FD56ADE591F46D482FA45BDF8740392
-ProjectIteration=15
+ProjectIteration=16
 
 WebTalk Summary
 ----------------
@@ -13,4 +13,4 @@ INFO:WebTalk:1 - WebTalk is enabled because you are using a WebPACK license.
 INFO:WebTalk:8 - WebTalk Install setting is ON.
 INFO:WebTalk:6 - WebTalk User setting is ON.
 
-INFO:WebTalk:4 - E:/Workspace/Programmation/Github/Mandelbrot/VHDL/usage_statistics_webtalk.html WebTalk report has been successfully sent to Xilinx on 2016-05-02T11:10:45.  For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/14.7/ISE_DS/ISE/data/reports/webtalk_introduction.html
+INFO:WebTalk:4 - E:/Workspace/Programmation/Github/Mandelbrot/VHDL/usage_statistics_webtalk.html WebTalk report has been successfully sent to Xilinx on 2016-05-02T11:30:12.  For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/14.7/ISE_DS/ISE/data/reports/webtalk_introduction.html
