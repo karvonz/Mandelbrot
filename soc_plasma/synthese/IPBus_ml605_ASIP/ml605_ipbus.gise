@@ -204,6 +204,8 @@
     <transform xil_pn:end_ts="1462179571" xil_pn:in_ck="825234733754894703" xil_pn:name="TRANEXT_map_virtex7" xil_pn:prop_ck="-2571580194349536042" xil_pn:start_ts="1462179448">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
       <outfile xil_pn:name="top_ml605_extphy.pcf"/>
       <outfile xil_pn:name="top_ml605_extphy_map.map"/>

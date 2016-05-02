@@ -67,6 +67,10 @@
          <ClosedNode>/top_ml605_extphy - rtl |home|cleroux|ownCloud|ray_tracer|soc_plasma|synthese|IPBus_ml605_ASIP|firmware|hdl|ipbus_demo_ml605_extphy|top_sp605.vhd/ipbus_ctrl_decl</ClosedNode>
          <ClosedNode>/top_ml605_extphy - rtl |home|cleroux|ownCloud|ray_tracer|soc_plasma|vhdl|plasma_core|vhdl|top_sp605.vhd/Inst_plasma - plasma - logic/u1_cpu - mlite_cpu - logic</ClosedNode>
          <ClosedNode>/top_ml605_extphy - rtl |home|cleroux|ownCloud|ray_tracer|soc_plasma|vhdl|plasma_core|vhdl|top_sp605.vhd/Inst_plasma - plasma - logic/u1_cpu - mlite_cpu - logic/u61_alu - comb_alu_1 - logic</ClosedNode>
+         <ClosedNode>/top_ml605_extphy - rtl |home|vincent|Mandelbrot|soc_plasma|vhdl|plasma_core|vhdl|top_sp605.vhd/FUNCTIONS</ClosedNode>
+         <ClosedNode>/top_ml605_extphy - rtl |home|vincent|Mandelbrot|soc_plasma|vhdl|plasma_core|vhdl|top_sp605.vhd/Inst_plasma - plasma - logic</ClosedNode>
+         <ClosedNode>/top_ml605_extphy - rtl |home|vincent|Mandelbrot|soc_plasma|vhdl|plasma_core|vhdl|top_sp605.vhd/Inst_plasma - plasma - logic/u1_cpu - mlite_cpu - logic</ClosedNode>
+         <ClosedNode>/top_ml605_extphy - rtl |home|vincent|Mandelbrot|soc_plasma|vhdl|plasma_core|vhdl|top_sp605.vhd/Inst_plasma - plasma - logic/u5d_coproc - coproc_4 - logic</ClosedNode>
          <ClosedNode>/top_ml605_sgmii - rtl C:|IPBus|ml605_from_ml507|firmware|hdl|ipbus_demo_ml605_sgmii|top_sp605.vhd/clocks - clocks_v6_serdes - rtl</ClosedNode>
          <ClosedNode>/top_ml605_sgmii - rtl C:|IPBus|ml605_from_ml507|firmware|hdl|ipbus_demo_ml605_sgmii|top_sp605.vhd/eth - eth_v6_sgmii - rtl</ClosedNode>
          <ClosedNode>/top_ml605_sgmii - rtl C:|IPBus|ml605_from_ml507|firmware|hdl|ipbus_demo_ml605_sgmii|top_sp605.vhd/ipbus - ipbus_ctrl - rtl</ClosedNode>
@@ -81,9 +85,9 @@
       <SelectedItems>
          <SelectedItem>top_ml605_extphy - rtl (/home/vincent/Mandelbrot/soc_plasma/vhdl/plasma_core/vhdl/top_sp605.vhd)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >37</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001d1000000020000000000000000000000000200000064ffffffff000000810000000300000002000001d10000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000127000000020000000000000000000000000200000064ffffffff000000810000000300000002000001270000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
       <CurrentItem>top_ml605_extphy - rtl (/home/vincent/Mandelbrot/soc_plasma/vhdl/plasma_core/vhdl/top_sp605.vhd)</CurrentItem>
    </ItemView>
@@ -101,13 +105,13 @@
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Design Summary/Reports</SelectedItem>
+         <SelectedItem>Generate Programming File</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >10</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >5</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000e5000000010000000100000000000000000000000064ffffffff000000810000000000000001000000e50000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001cc000000010000000100000000000000000000000064ffffffff000000810000000000000001000001cc0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Design Summary/Reports</CurrentItem>
+      <CurrentItem>Generate Programming File</CurrentItem>
    </ItemView>
    <ItemView guiview="File" >
       <ClosedNodes>
@@ -198,7 +202,7 @@
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem/>
    </ItemView>
-   <SourceProcessView>000000ff00000000000000020000017d000000da01000000050100000002</SourceProcessView>
+   <SourceProcessView>000000ff0000000000000002000000dd000000fd01000000050100000002</SourceProcessView>
    <CurrentView>Implementation</CurrentView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VHDL_PACKAGE_BODY" guiview="Process" >
       <ClosedNodes>
