@@ -169,14 +169,14 @@ LOAD no_os.o
 .plt
  *(.plt)
 
-.text           0x0000000000000000     0x1204
+.text           0x0000000000000000     0x119c
                 0x0000000000000000                _ftext = .
  *(.text .stub .text.* .gnu.linkonce.t.*)
  .text          0x0000000000000000       0xac boot.o
                 0x0000000000000074                longjmp
                 0x0000000000000000                entry
                 0x000000000000003c                setjmp
- .text          0x00000000000000ac      0x76c main.o
+ .text          0x00000000000000ac      0x704 main.o
                 0x00000000000000ac                my_printf
                 0x000000000000016c                LoadImage
                 0x0000000000000448                Convergence_Fixed
@@ -184,27 +184,27 @@ LOAD no_os.o
                 0x00000000000002a4                StoreImage
                 0x00000000000005f4                main
                 0x00000000000000dc                my_printfh
- .text          0x0000000000000818      0x9ec no_os.o
-                0x0000000000000818                putchar
-                0x0000000000000bbc                print
-                0x000000000000083c                puts
-                0x0000000000000ebc                print_int
-                0x0000000000000938                itoa3
-                0x00000000000008b8                print_hex
+ .text          0x00000000000007b0      0x9ec no_os.o
+                0x00000000000007b0                putchar
+                0x0000000000000b54                print
+                0x00000000000007d4                puts
+                0x0000000000000e54                print_int
+                0x00000000000008d0                itoa3
+                0x0000000000000850                print_hex
  *(.gnu.warning)
  *(.mips16.fn.*)
  *(.mips16.call.*)
 
 .fini
  *(.fini)
-                0x0000000000001204                PROVIDE (__etext, .)
-                0x0000000000001204                PROVIDE (_etext, .)
-                0x0000000000001204                PROVIDE (etext, .)
+                0x000000000000119c                PROVIDE (__etext, .)
+                0x000000000000119c                PROVIDE (_etext, .)
+                0x000000000000119c                PROVIDE (etext, .)
 
-.rodata         0x0000000000001204       0xf8
+.rodata         0x000000000000119c       0xf8
  *(.rodata .rodata.* .gnu.linkonce.r.*)
  .rodata.str1.4
-                0x0000000000001204       0xf8 main.o
+                0x000000000000119c       0xf8 main.o
                                          0xfc (size before relaxing)
 
 .rodata1
@@ -224,7 +224,7 @@ LOAD no_os.o
 
 .gcc_except_table
  *(.gcc_except_table .gcc_except_table.*)
-                0x00000000000012fc                . = .
+                0x0000000000001294                . = .
 
 .eh_frame
  *(.eh_frame)
@@ -239,22 +239,22 @@ LOAD no_os.o
  *(.tbss .tbss.* .gnu.linkonce.tb.*)
  *(.tcommon)
 
-.preinit_array  0x00000000000012fc        0x0
-                0x00000000000012fc                PROVIDE (__preinit_array_start, .)
+.preinit_array  0x0000000000001294        0x0
+                0x0000000000001294                PROVIDE (__preinit_array_start, .)
  *(.preinit_array)
-                0x00000000000012fc                PROVIDE (__preinit_array_end, .)
+                0x0000000000001294                PROVIDE (__preinit_array_end, .)
 
-.init_array     0x00000000000012fc        0x0
-                0x00000000000012fc                PROVIDE (__init_array_start, .)
+.init_array     0x0000000000001294        0x0
+                0x0000000000001294                PROVIDE (__init_array_start, .)
  *(SORT(.init_array.*))
  *(.init_array)
-                0x00000000000012fc                PROVIDE (__init_array_end, .)
+                0x0000000000001294                PROVIDE (__init_array_end, .)
 
-.fini_array     0x00000000000012fc        0x0
-                0x00000000000012fc                PROVIDE (__fini_array_start, .)
+.fini_array     0x0000000000001294        0x0
+                0x0000000000001294                PROVIDE (__fini_array_start, .)
  *(.fini_array)
  *(SORT(.fini_array.*))
-                0x00000000000012fc                PROVIDE (__fini_array_end, .)
+                0x0000000000001294                PROVIDE (__fini_array_end, .)
 
 .ctors
  *crtbegin.o(.ctors)
@@ -277,20 +277,20 @@ LOAD no_os.o
  *(.data.rel.ro.local* .gnu.linkonce.d.rel.ro.local.*)
  *(.data.rel.ro* .gnu.linkonce.d.rel.ro.*)
 
-.data           0x00000000000012fc        0x0
-                0x00000000000012fc                _fdata = .
+.data           0x0000000000001294        0x0
+                0x0000000000001294                _fdata = .
  *(.data .data.* .gnu.linkonce.d.*)
- .data          0x00000000000012fc        0x0 boot.o
- .data          0x00000000000012fc        0x0 main.o
- .data          0x00000000000012fc        0x0 no_os.o
+ .data          0x0000000000001294        0x0 boot.o
+ .data          0x0000000000001294        0x0 main.o
+ .data          0x0000000000001294        0x0 no_os.o
 
 .data1
  *(.data1)
 
 .got.plt
  *(.got.plt)
-                0x00000000000012fc                . = .
-                0x00000000000092f0                _gp = (ALIGN (0x10) + 0x7ff0)
+                0x0000000000001294                . = .
+                0x0000000000009290                _gp = (ALIGN (0x10) + 0x7ff0)
 
 .got
  *(.got)
@@ -303,32 +303,32 @@ LOAD no_os.o
 
 .lit4
  *(.lit4)
-                0x00000000000012fc                _edata = .
-                0x00000000000012fc                PROVIDE (edata, .)
-                0x00000000000012fc                __bss_start = .
-                0x00000000000012fc                _fbss = .
+                0x0000000000001294                _edata = .
+                0x0000000000001294                PROVIDE (edata, .)
+                0x0000000000001294                __bss_start = .
+                0x0000000000001294                _fbss = .
 
 .sbss
  *(.dynsbss)
  *(.sbss .sbss.* .gnu.linkonce.sb.*)
  *(.scommon)
 
-.bss            0x0000000000001300     0x1040
+.bss            0x00000000000012a0     0x1040
  *(.dynbss)
  *(.bss .bss.* .gnu.linkonce.b.*)
- .bss           0x0000000000001300        0x0 boot.o
- .bss           0x0000000000001300        0x0 main.o
- .bss           0x0000000000001300        0x0 no_os.o
+ .bss           0x00000000000012a0        0x0 boot.o
+ .bss           0x00000000000012a0        0x0 main.o
+ .bss           0x00000000000012a0        0x0 no_os.o
  *(COMMON)
- COMMON         0x0000000000001300     0x1000 boot.o
-                0x0000000000001300                InitStack
- COMMON         0x0000000000002300       0x40 no_os.o
-                0x0000000000002300                buffer
-                0x0000000000002340                . = ALIGN ((. != 0x0)?0x4:0x1)
-                0x0000000000002340                . = ALIGN (0x4)
-                0x0000000000002340                . = ALIGN (0x4)
-                0x0000000000002340                _end = .
-                0x0000000000002340                PROVIDE (end, .)
+ COMMON         0x00000000000012a0     0x1000 boot.o
+                0x00000000000012a0                InitStack
+ COMMON         0x00000000000022a0       0x40 no_os.o
+                0x00000000000022a0                buffer
+                0x00000000000022e0                . = ALIGN ((. != 0x0)?0x4:0x1)
+                0x00000000000022e0                . = ALIGN (0x4)
+                0x00000000000022e0                . = ALIGN (0x4)
+                0x00000000000022e0                _end = .
+                0x00000000000022e0                PROVIDE (end, .)
 
 .stab
  *(.stab)
