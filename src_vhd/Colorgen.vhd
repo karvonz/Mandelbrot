@@ -13,7 +13,7 @@ entity Colorgen is
 end Colorgen;
 
 
-architecture Behavioral of Colorgen is
+architecture Behavioral of Colorgen is -- TODO : Améliorer colorgen (comparaison OpenGL)
 	type  rom_type is array (0 to ITER_MAX-1) of std_logic_vector (bit_per_pixel-1 downto 0);
 	constant color_scheme : rom_type := (
 		"000000000000",
@@ -4116,10 +4116,11 @@ architecture Behavioral of Colorgen is
 begin
 process(iters, itermax)
 begin
+	--color <= not iters;
 	if (iters = itermax) then
 		color<= (others=>'0');
 	else
-		color <= color_scheme(to_integer(unsigned(iters)));
+		color <= not color_scheme(to_integer(unsigned(iters)));
 	end if;
 end process;end Behavioral;
 

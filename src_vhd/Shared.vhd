@@ -3,6 +3,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
 package CONSTANTS is
+	-- Param --
+	constant PARAM_DELAY : integer := 50000000; --~500ms
+	
 	-- Fixed format --
 	constant FIXED : INTEGER := 28; --Number of bits for , part
    
@@ -22,6 +25,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 package FUNCTIONS is
 	function mult(A : STD_LOGIC_VECTOR; B : STD_LOGIC_VECTOR; QF : integer) return STD_LOGIC_VECTOR;
+	function mult(A : SIGNED; B : SIGNED; QF : integer) return SIGNED;
 end FUNCTIONS;
 
 package body FUNCTIONS is
