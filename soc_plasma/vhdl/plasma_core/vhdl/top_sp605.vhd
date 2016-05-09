@@ -24,6 +24,9 @@ entity top_ml605_extphy is port(
 	led: out std_logic;
    i_uart : in std_logic;
    o_uart : out std_logic;
+
+   buttons : in std_logic_vector( 7 downto 0 );
+
 	VGA_hs       : out std_logic;   -- horisontal vga syncr.
    VGA_vs       : out std_logic;   -- vertical vga syncr.
    VGA_red      : out std_logic_vector(3 downto 0);   -- red output
@@ -118,7 +121,7 @@ end process;
 		VGA_blue => VGA_blue,
 		
 		gpio0_out       => open,
-		gpioA_in        => x"00000000" --open
+		gpioA_in        => x"000000" & buttons ;--open
 	);
 	
 --led <= "01101001";
