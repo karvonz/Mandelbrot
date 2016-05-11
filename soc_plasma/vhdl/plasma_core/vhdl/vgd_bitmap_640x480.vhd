@@ -43,8 +43,8 @@ entity VGA_bitmap_640x480 is
 
        ADDR         : in  std_logic_vector(18 downto 0);
        data_in      : in  std_logic_vector(bit_per_pixel - 1 downto 0);
-       data_write   : in  std_logic;
-       data_out     : out std_logic_vector(bit_per_pixel - 1 downto 0));
+       data_write   : in  std_logic);
+       --data_out     : out std_logic_vector(bit_per_pixel - 1 downto 0));
 end VGA_bitmap_640x480;
 
 architecture Behavioral of VGA_bitmap_640x480 is
@@ -101,7 +101,7 @@ begin
          if (data_write = '1') then
             screen(to_integer(unsigned(ADDR))) <= TO_BitVector( data_in );
          end if;
-         data_out <= To_StdLogicVector( screen(to_integer(unsigned(ADDR))) );
+        -- data_out <= To_StdLogicVector( screen(to_integer(unsigned(ADDR))) );
 --      end if;
    end if;
 end process;

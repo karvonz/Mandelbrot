@@ -121,7 +121,7 @@ end process;
 		VGA_blue => VGA_blue,
 		
 		gpio0_out       => open,
-		gpioA_in        => x"000000" & buttons ;--open
+		gpioA_in        => x"000000" & buttons --open
 	);
 	
 --led <= "01101001";

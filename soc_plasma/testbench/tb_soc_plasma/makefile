@@ -39,7 +39,7 @@ fpga:
 	# software compilation
 	make soft
 	# build hardware 
-	make vhdl
+	#make vhdl
 	# move the program in the synthesis directory
 	cp ../code_bin.txt ../../synthese/
 

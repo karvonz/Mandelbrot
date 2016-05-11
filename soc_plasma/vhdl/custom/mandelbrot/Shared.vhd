@@ -8,8 +8,8 @@ package CONSTANTS is
    
 	-- Data size --
 	constant XY_RANGE : INTEGER := 32; --Number of bits for x and y data
-	constant ITER_MAX : INTEGER := 4095; --Max number of iteration
-	constant ITER_RANGE : INTEGER := 12;
+	constant ITER_MAX : INTEGER := 256; --Max number of iteration
+	constant ITER_RANGE : INTEGER := 3;
 	constant QUATRE : SIGNED (XY_RANGE-1 downto 0) := to_signed(4,32) sll FIXED ;
 	constant bit_per_pixel : integer := 12;
 	constant COLOR_MAX : integer := 2047;

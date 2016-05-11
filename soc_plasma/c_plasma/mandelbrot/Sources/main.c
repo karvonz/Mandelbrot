@@ -14,53 +14,69 @@
 #define ZOOM 2
 #define ITER 50
 
+#define MASK_SWITCH_ITER 0x00000020
+#define MASK_SWITCH_ZOOM 0x00000040
 
-int Convergence_Fixed(int X, int Y, int maxi)
+
+inline bool switchIter ( int unsigned *p){
+    if((*p & MASK_SWITCH_ITER)== MASK_SWITCH_ITER)
+        return true;
+    return false;
+}
+
+/*inline void majButtons(int* x, int* y){
+    volatile int* p;
+    p=0x20000050
+    if
+}*/
+
+inline int Convergence_Fixed(int X, int Y, int maxi)
 {
-  int   deux = 2 << precision;
-  int      i = 0;
-  long long x1 = 0;
-  long long y1 = 0;
-int temp, tempy1;
+    int   deux = 2 << precision;
+    int      i = 0;
+    long long x1 = 0;
+    long long y1 = 0;
+    int temp, tempy1;
 
-  //int x2, y2;
-  do{
+    //int x2, y2;
+    do{
 
-    temp = isa_custom_3(x1,y1); //x1²+y1²
-    tempy1=y1;
-    y1 = isa_custom_1(x1 , y1) + Y; //x1*y1*2+Y
-    x1 = isa_custom_2(x1,tempy1) + X; //x2² - y2² + X;
-    i++;
-  }while( (temp <= deux) && ( i < maxi )  );
+        temp = isa_custom_3(x1,y1); //x1²+y1²
+        tempy1=y1;
+        y1 = isa_custom_1(x1 , y1) + Y; //x1*y1*2+Y
+        x1 = isa_custom_2(x1,tempy1) + X; //x2² - y2² + X;
+        i++;
+    }while( (temp <= deux) && ( i < maxi )  );
 
 
-  return i;
+    return i;
 }
 
 
- int main( int argc, char ** argv ) {
-
-  /*const int _xstart   = 0xE0000000;
+int main( int argc, char ** argv ) {
+    volatile unsigned int* p;
+    p=0x20000050;
+    /*const int _xstart   = 0xE0000000;
   const int _ystart   = 0xF0000000;
   const int _xinc     = 0x00133AE4;
   const int _yinc     = 0x00111A30;
 */
-	
-	int _xstart = XPOINT-0x18000000;  // - 1,5 
-	int _ystart = YPOINT-0x10000000;
-	int step    = 0x00111111;
-	int _delta = 0x00000000;
+
+    int _xstart = XPOINT-0x18000000;  // - 1,5
+    int _ystart = YPOINT-0x10000000;
+    int step    = 0x00111111;
+    int _delta = 0x00000000;
 
 
-	//step <= 0x00111111"; //Mandelbrot -2 1 x -1 1 sur 640x480
+    //step <= 0x00111111"; //Mandelbrot -2 1 x -1 1 sur 640x480
 
-coproc_reset(COPROC_4_RST);
-int height = 480;
-int width = 640;
+    coproc_reset(COPROC_4_RST);
+    int height = 480;
+    int width = 640;
 
-for(int maxi=1; maxi<256; maxi++)
+    /*for(int maxi=1; maxi<256; maxi++)
 {
-  
+
   int posY = _ystart;
   for(int py = 0; py < height; py += 1)
   {
@@ -68,20 +84,51 @@ for(int maxi=1; maxi<256; maxi++)
 
     for(int px = 0; px < width; px += 1){
 
-      int i = Convergence_Fixed(posX, posY, ITER);
-		int value = (256 * i) / maxi;
-		coproc_write(COPROC_4_RW, value);
-      
+      int i = Convergence_Fixed(posX, posY, i);
+        int value = (256 * i) / maxi;
+        coproc_write(COPROC_4_RW, value);
+
       posX += step;
     }
       posY += step;
+
   }
-	_xstart = isa_custom_4(_xstart,_delta);  
-	_ystart = isa_custom_5(_ystart,_delta);  
-	step = step>>1;
-wait(5);
-	
-}
+*/
+
+    for(;;){
+
+        for(int maxi=1; maxi<256; maxi++)
+        {
+            int posY = _ystart;
+            for(int py = 0; py < height; py += 1)
+            {
+                int posX = _xstart;
+
+                for(int px = 0; px < width; px += 1){
+
+                    int i = Convergence_Fixed(posX, posY, i);
+                    int value = (256 * i) / maxi;
+                    coproc_write(COPROC_4_RW, value);
+
+                    posX += step;
+                }
+                posY += step;
+
+            }
+            while(!switchIter(p))
+            {}
+        }
+    }
+
+
+    //
+    //ZOOM
+    //
+    //_xstart = isa_custom_4(_xstart,_delta);
+    //_ystart = isa_custom_5(_ystart,_delta);
+    //step = step>>1;
 
 }
+
+
 
