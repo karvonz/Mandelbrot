@@ -30,8 +30,6 @@ use IEEE.numeric_std.ALL;
 use std.textio.ALL;
 
 entity VGA_bitmap_640x480 is
-  generic(bit_per_pixel : integer range 1 to 12:=12;    -- number of bits per pixel
-          grayscale     : boolean := false);           -- should data be displayed in grayscale
   port(clk          : in  std_logic;
 		 clk_vga      : in  std_logic;
        reset        : in  std_logic;
@@ -42,7 +40,7 @@ entity VGA_bitmap_640x480 is
       -- VGA_blue     : out std_logic_vector(3 downto 0);   -- blue output
 
        ADDR         : in  std_logic_vector(18 downto 0);
-       data_in      : in  std_logic_vector(bit_per_pixel - 1 downto 0);
+       data_in      : in  std_logic_vector(3 downto 0);
        data_write   : in  std_logic);
        --data_out     : out std_logic_vector(bit_per_pixel - 1 downto 0));
 end VGA_bitmap_640x480;
@@ -74,7 +72,7 @@ architecture Behavioral of VGA_bitmap_640x480 is
 
 	signal pix_read_addr : integer range 0 to 307199:=0;  -- the address at which displayed data is read
 
-	signal next_pixel    : std_logic_vector(bit_per_pixel - 1 downto 0);  -- the data coding the value of the pixel to be displayed
+	signal next_pixel    : std_logic_vector(3 downto 0);  -- the data coding the value of the pixel to be displayed
 
 begin
 

@@ -7,13 +7,17 @@ use WORK.CONSTANTS.ALL;
 use WORK.FUNCTIONS.ALL;
 
 entity Colorgen is
-    Port ( iters : in STD_LOGIC_VECTOR (ITER_RANGE-1 downto 0);
-			  itermax : in STD_LOGIC_VECTOR (ITER_RANGE-1 downto 0);
-           color : out STD_LOGIC_VECTOR (bit_per_pixel-1 downto 0));
+    Port ( iter : in STD_LOGIC_VECTOR (3 downto 0);
+	 VGA_red      : out std_logic_vector(3 downto 0);   -- red output
+       VGA_green    : out std_logic_vector(3 downto 0);   -- green output
+       VGA_blue     : out std_logic_vector(3 downto 0));   -- blue output
 end Colorgen;
 
 
 architecture Behavioral of Colorgen is -- TODO : Améliorer colorgen (comparaison OpenGL)
+	
+	
+	
 	type  rom_type is array (0 to ITER_MAX-1) of std_logic_vector (bit_per_pixel-1 downto 0);
 	constant color_scheme : rom_type := (
 		x"000", 
@@ -274,15 +278,17 @@ x"000",
 x"000");
 
 begin
-process(iters, itermax)
+process(iter)
 begin
 	--color <= not iters;
-	if (iters = itermax) then
-		color<= (others=>'0');
-	else
-		color <= not color_scheme(to_integer(unsigned(iters)));
-	end if;
-end process;end Behavioral;
+	
+	           VGA_red   <= color_scheme(to_integer(unsigned(iter)))(11 downto 8);
+               VGA_green <= color_scheme(to_integer(unsigned(iter)))( 7 downto 4);
+               VGA_blue  <= color_scheme(to_integer(unsigned(iter)))( 3 downto 0);
+
+end process;
+
+end Behavioral;
 
 
 --Cut and paste following lines into Shared.vhd.

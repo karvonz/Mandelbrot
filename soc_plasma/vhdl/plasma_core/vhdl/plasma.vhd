@@ -99,9 +99,9 @@ entity plasma is
 				
 				VGA_hs       : out std_logic;   -- horisontal vga syncr.
 				VGA_vs       : out std_logic;   -- vertical vga syncr.
-				VGA_red      : out std_logic_vector(3 downto 0);   -- red output
-				VGA_green    : out std_logic_vector(3 downto 0);   -- green output
-				VGA_blue     : out std_logic_vector(3 downto 0);   -- blue output
+				iter      : out std_logic_vector(3 downto 0);   -- red output
+				--VGA_green    : out std_logic_vector(3 downto 0);   -- green output
+				--VGA_blue     : out std_logic_vector(3 downto 0);   -- blue output
 
 				gpio0_out    : out std_logic_vector(31 downto 0);
 				gpioA_in     : in  std_logic_vector(31 downto 0));
@@ -648,9 +648,9 @@ begin  --architecture
 		OUTPUT_1       => cop_4_output,
 		VGA_hs => VGA_hs,
 		VGA_vs => VGA_vs,
-		VGA_red => VGA_red,
-		VGA_green => VGA_green,
-		VGA_blue => VGA_blue
+		iter => iter
+		--VGA_green => VGA_green,
+		--VGA_blue => VGA_blue
 	);
 
 
