@@ -166,8 +166,8 @@ int main( int argc, char ** argv ) {
                     for(int px = 0; px < width; px += 1){
 
                         int i = Convergence_Fixed(posX, posY, maxi); //maxi
-                        int value = (256 * i) / maxi; //maxi
-                        coproc_write(COPROC_4_RW, value);
+                       // int value = (256 * i) / maxi; //maxi
+                        coproc_write(COPROC_4_RW, i);
 
                         posX += step;
 
