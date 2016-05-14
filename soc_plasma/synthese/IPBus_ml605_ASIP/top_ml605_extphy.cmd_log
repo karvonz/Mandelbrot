@@ -118,3 +118,109 @@ map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt on -ol std -t 1 -xt 0 -r 4 
 par -w -intstyle ise -ol std -mt 4 top_ml605_extphy_map.ncd top_ml605_extphy.ncd top_ml605_extphy.pcf 
 trce -intstyle ise -e 3 -s 1 -n 3 -fastpaths -xml top_ml605_extphy.twx top_ml605_extphy.ncd -o top_ml605_extphy.twr top_ml605_extphy.pcf 
 bitgen -intstyle ise -f top_ml605_extphy.ut top_ml605_extphy.ncd 
+xst -intstyle ise -ifn "/home/vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/top_ml605_extphy.xst" -ofn "/home/vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/top_ml605_extphy.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc firmware/example_designs/ucf/ml605_extphy.ucf -p xc7a100t-csg324-1 top_ml605_extphy.ngc top_ml605_extphy.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt on -ol std -t 1 -xt 0 -r 4 -mt 2 -ir off -ignore_keep_hierarchy -pr b -lc auto -power off -o top_ml605_extphy_map.ncd top_ml605_extphy.ngd top_ml605_extphy.pcf 
+par -w -intstyle ise -ol std -mt 4 top_ml605_extphy_map.ncd top_ml605_extphy.ncd top_ml605_extphy.pcf 
+trce -intstyle ise -e 3 -s 1 -n 3 -fastpaths -xml top_ml605_extphy.twx top_ml605_extphy.ncd -o top_ml605_extphy.twr top_ml605_extphy.pcf 
+bitgen -intstyle ise -f top_ml605_extphy.ut top_ml605_extphy.ncd 
+xst -intstyle ise -ifn "/home/vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/top_ml605_extphy.xst" -ofn "/home/vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/top_ml605_extphy.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc firmware/example_designs/ucf/ml605_extphy.ucf -p xc7a100t-csg324-1 top_ml605_extphy.ngc top_ml605_extphy.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt on -ol std -t 1 -xt 0 -r 4 -mt 2 -ir off -ignore_keep_hierarchy -pr b -lc auto -power off -o top_ml605_extphy_map.ncd top_ml605_extphy.ngd top_ml605_extphy.pcf 
+par -w -intstyle ise -ol std -mt 4 top_ml605_extphy_map.ncd top_ml605_extphy.ncd top_ml605_extphy.pcf 
+trce -intstyle ise -e 3 -s 1 -n 3 -fastpaths -xml top_ml605_extphy.twx top_ml605_extphy.ncd -o top_ml605_extphy.twr top_ml605_extphy.pcf 
+bitgen -intstyle ise -f top_ml605_extphy.ut top_ml605_extphy.ncd 
+xst -intstyle ise -ifn "/home/vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/top_ml605_extphy.xst" -ofn "/home/vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/top_ml605_extphy.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc firmware/example_designs/ucf/ml605_extphy.ucf -p xc7a100t-csg324-1 top_ml605_extphy.ngc top_ml605_extphy.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt on -ol std -t 1 -xt 0 -r 4 -mt 2 -ir off -ignore_keep_hierarchy -pr b -lc auto -power off -o top_ml605_extphy_map.ncd top_ml605_extphy.ngd top_ml605_extphy.pcf 
+par -w -intstyle ise -ol std -mt 4 top_ml605_extphy_map.ncd top_ml605_extphy.ncd top_ml605_extphy.pcf 
+trce -intstyle ise -e 3 -s 1 -n 3 -fastpaths -xml top_ml605_extphy.twx top_ml605_extphy.ncd -o top_ml605_extphy.twr top_ml605_extphy.pcf 
+bitgen -intstyle ise -f top_ml605_extphy.ut top_ml605_extphy.ncd 
+xst -intstyle ise -ifn "/home/vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/top_ml605_extphy.xst" -ofn "/home/vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/top_ml605_extphy.syr" 
+xst -intstyle ise -ifn "/home/vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/top_ml605_extphy.xst" -ofn "/home/vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/top_ml605_extphy.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc firmware/example_designs/ucf/ml605_extphy.ucf -p xc7a100t-csg324-1 top_ml605_extphy.ngc top_ml605_extphy.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt on -ol std -t 1 -xt 0 -r 4 -mt 2 -ir off -ignore_keep_hierarchy -pr b -lc auto -power off -o top_ml605_extphy_map.ncd top_ml605_extphy.ngd top_ml605_extphy.pcf 
+par -w -intstyle ise -ol std -mt 4 top_ml605_extphy_map.ncd top_ml605_extphy.ncd top_ml605_extphy.pcf 
+trce -intstyle ise -e 3 -s 1 -n 3 -fastpaths -xml top_ml605_extphy.twx top_ml605_extphy.ncd -o top_ml605_extphy.twr top_ml605_extphy.pcf 
+bitgen -intstyle ise -f top_ml605_extphy.ut top_ml605_extphy.ncd 
+xst -intstyle ise -ifn "/home/vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/top_ml605_extphy.xst" -ofn "/home/vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/top_ml605_extphy.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc firmware/example_designs/ucf/ml605_extphy.ucf -p xc7a100t-csg324-1 top_ml605_extphy.ngc top_ml605_extphy.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt on -ol std -t 1 -xt 0 -r 4 -mt 2 -ir off -ignore_keep_hierarchy -pr b -lc auto -power off -o top_ml605_extphy_map.ncd top_ml605_extphy.ngd top_ml605_extphy.pcf 
+par -w -intstyle ise -ol std -mt 4 top_ml605_extphy_map.ncd top_ml605_extphy.ncd top_ml605_extphy.pcf 
+trce -intstyle ise -e 3 -s 1 -n 3 -fastpaths -xml top_ml605_extphy.twx top_ml605_extphy.ncd -o top_ml605_extphy.twr top_ml605_extphy.pcf 
+bitgen -intstyle ise -f top_ml605_extphy.ut top_ml605_extphy.ncd 
+xst -intstyle ise -ifn "/home/vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/top_ml605_extphy.xst" -ofn "/home/vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/top_ml605_extphy.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc firmware/example_designs/ucf/ml605_extphy.ucf -p xc7a100t-csg324-1 top_ml605_extphy.ngc top_ml605_extphy.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt on -ol std -t 1 -xt 0 -r 4 -mt 2 -ir off -ignore_keep_hierarchy -pr b -lc auto -power off -o top_ml605_extphy_map.ncd top_ml605_extphy.ngd top_ml605_extphy.pcf 
+par -w -intstyle ise -ol std -mt 4 top_ml605_extphy_map.ncd top_ml605_extphy.ncd top_ml605_extphy.pcf 
+trce -intstyle ise -e 3 -s 1 -n 3 -fastpaths -xml top_ml605_extphy.twx top_ml605_extphy.ncd -o top_ml605_extphy.twr top_ml605_extphy.pcf 
+bitgen -intstyle ise -f top_ml605_extphy.ut top_ml605_extphy.ncd 
+xst -intstyle ise -ifn "/home/vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/top_ml605_extphy.xst" -ofn "/home/vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/top_ml605_extphy.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc firmware/example_designs/ucf/ml605_extphy.ucf -p xc7a100t-csg324-1 top_ml605_extphy.ngc top_ml605_extphy.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt on -ol std -t 1 -xt 0 -r 4 -mt 2 -ir off -ignore_keep_hierarchy -pr b -lc auto -power off -o top_ml605_extphy_map.ncd top_ml605_extphy.ngd top_ml605_extphy.pcf 
+par -w -intstyle ise -ol std -mt 4 top_ml605_extphy_map.ncd top_ml605_extphy.ncd top_ml605_extphy.pcf 
+trce -intstyle ise -e 3 -s 1 -n 3 -fastpaths -xml top_ml605_extphy.twx top_ml605_extphy.ncd -o top_ml605_extphy.twr top_ml605_extphy.pcf 
+bitgen -intstyle ise -f top_ml605_extphy.ut top_ml605_extphy.ncd 
+xst -intstyle ise -ifn "/home/vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/top_ml605_extphy.xst" -ofn "/home/vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/top_ml605_extphy.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc firmware/example_designs/ucf/ml605_extphy.ucf -p xc7a100t-csg324-1 top_ml605_extphy.ngc top_ml605_extphy.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt on -ol std -t 1 -xt 0 -r 4 -mt 2 -ir off -ignore_keep_hierarchy -pr b -lc auto -power off -o top_ml605_extphy_map.ncd top_ml605_extphy.ngd top_ml605_extphy.pcf 
+par -w -intstyle ise -ol std -mt 4 top_ml605_extphy_map.ncd top_ml605_extphy.ncd top_ml605_extphy.pcf 
+trce -intstyle ise -e 3 -s 1 -n 3 -fastpaths -xml top_ml605_extphy.twx top_ml605_extphy.ncd -o top_ml605_extphy.twr top_ml605_extphy.pcf 
+bitgen -intstyle ise -f top_ml605_extphy.ut top_ml605_extphy.ncd 
+xst -intstyle ise -ifn "/home/vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/top_ml605_extphy.xst" -ofn "/home/vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/top_ml605_extphy.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc firmware/example_designs/ucf/ml605_extphy.ucf -p xc7a100t-csg324-1 top_ml605_extphy.ngc top_ml605_extphy.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt on -ol std -t 1 -xt 0 -r 4 -mt 2 -ir off -ignore_keep_hierarchy -pr b -lc auto -power off -o top_ml605_extphy_map.ncd top_ml605_extphy.ngd top_ml605_extphy.pcf 
+par -w -intstyle ise -ol std -mt 4 top_ml605_extphy_map.ncd top_ml605_extphy.ncd top_ml605_extphy.pcf 
+trce -intstyle ise -e 3 -s 1 -n 3 -fastpaths -xml top_ml605_extphy.twx top_ml605_extphy.ncd -o top_ml605_extphy.twr top_ml605_extphy.pcf 
+bitgen -intstyle ise -f top_ml605_extphy.ut top_ml605_extphy.ncd 
+xst -intstyle ise -ifn "/home/vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/top_ml605_extphy.xst" -ofn "/home/vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/top_ml605_extphy.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc firmware/example_designs/ucf/ml605_extphy.ucf -p xc7a100t-csg324-1 top_ml605_extphy.ngc top_ml605_extphy.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt on -ol std -t 1 -xt 0 -r 4 -mt 2 -ir off -ignore_keep_hierarchy -pr b -lc auto -power off -o top_ml605_extphy_map.ncd top_ml605_extphy.ngd top_ml605_extphy.pcf 
+par -w -intstyle ise -ol std -mt 4 top_ml605_extphy_map.ncd top_ml605_extphy.ncd top_ml605_extphy.pcf 
+trce -intstyle ise -e 3 -s 1 -n 3 -fastpaths -xml top_ml605_extphy.twx top_ml605_extphy.ncd -o top_ml605_extphy.twr top_ml605_extphy.pcf 
+bitgen -intstyle ise -f top_ml605_extphy.ut top_ml605_extphy.ncd 
+xst -intstyle ise -ifn "/home/vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/top_ml605_extphy.xst" -ofn "/home/vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/top_ml605_extphy.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc firmware/example_designs/ucf/ml605_extphy.ucf -p xc7a100t-csg324-1 top_ml605_extphy.ngc top_ml605_extphy.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt on -ol std -t 1 -xt 0 -r 4 -mt 2 -ir off -ignore_keep_hierarchy -pr b -lc auto -power off -o top_ml605_extphy_map.ncd top_ml605_extphy.ngd top_ml605_extphy.pcf 
+par -w -intstyle ise -ol std -mt 4 top_ml605_extphy_map.ncd top_ml605_extphy.ncd top_ml605_extphy.pcf 
+trce -intstyle ise -e 3 -s 1 -n 3 -fastpaths -xml top_ml605_extphy.twx top_ml605_extphy.ncd -o top_ml605_extphy.twr top_ml605_extphy.pcf 
+bitgen -intstyle ise -f top_ml605_extphy.ut top_ml605_extphy.ncd 
+xst -intstyle ise -ifn "/home/vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/top_ml605_extphy.xst" -ofn "/home/vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/top_ml605_extphy.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc firmware/example_designs/ucf/ml605_extphy.ucf -p xc7a100t-csg324-1 top_ml605_extphy.ngc top_ml605_extphy.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt on -ol std -t 1 -xt 0 -r 4 -mt 2 -ir off -ignore_keep_hierarchy -pr b -lc auto -power off -o top_ml605_extphy_map.ncd top_ml605_extphy.ngd top_ml605_extphy.pcf 
+par -w -intstyle ise -ol std -mt 4 top_ml605_extphy_map.ncd top_ml605_extphy.ncd top_ml605_extphy.pcf 
+trce -intstyle ise -e 3 -s 1 -n 3 -fastpaths -xml top_ml605_extphy.twx top_ml605_extphy.ncd -o top_ml605_extphy.twr top_ml605_extphy.pcf 
+bitgen -intstyle ise -f top_ml605_extphy.ut top_ml605_extphy.ncd 
+xst -intstyle ise -ifn "/home/vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/top_ml605_extphy.xst" -ofn "/home/vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/top_ml605_extphy.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc firmware/example_designs/ucf/ml605_extphy.ucf -p xc7a100t-csg324-1 top_ml605_extphy.ngc top_ml605_extphy.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt on -ol std -t 1 -xt 0 -r 4 -mt 2 -ir off -ignore_keep_hierarchy -pr b -lc auto -power off -o top_ml605_extphy_map.ncd top_ml605_extphy.ngd top_ml605_extphy.pcf 
+par -w -intstyle ise -ol std -mt 4 top_ml605_extphy_map.ncd top_ml605_extphy.ncd top_ml605_extphy.pcf 
+trce -intstyle ise -e 3 -s 1 -n 3 -fastpaths -xml top_ml605_extphy.twx top_ml605_extphy.ncd -o top_ml605_extphy.twr top_ml605_extphy.pcf 
+bitgen -intstyle ise -f top_ml605_extphy.ut top_ml605_extphy.ncd 
+xst -intstyle ise -ifn "/home/vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/top_ml605_extphy.xst" -ofn "/home/vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/top_ml605_extphy.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc firmware/example_designs/ucf/ml605_extphy.ucf -p xc7a100t-csg324-1 top_ml605_extphy.ngc top_ml605_extphy.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt on -ol std -t 1 -xt 0 -r 4 -mt 2 -ir off -ignore_keep_hierarchy -pr b -lc auto -power off -o top_ml605_extphy_map.ncd top_ml605_extphy.ngd top_ml605_extphy.pcf 
+par -w -intstyle ise -ol std -mt 4 top_ml605_extphy_map.ncd top_ml605_extphy.ncd top_ml605_extphy.pcf 
+trce -intstyle ise -e 3 -s 1 -n 3 -fastpaths -xml top_ml605_extphy.twx top_ml605_extphy.ncd -o top_ml605_extphy.twr top_ml605_extphy.pcf 
+bitgen -intstyle ise -f top_ml605_extphy.ut top_ml605_extphy.ncd 
+xst -intstyle ise -ifn "/home/vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/top_ml605_extphy.xst" -ofn "/home/vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/top_ml605_extphy.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc firmware/example_designs/ucf/ml605_extphy.ucf -p xc7a100t-csg324-1 top_ml605_extphy.ngc top_ml605_extphy.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt on -ol std -t 1 -xt 0 -r 4 -mt 2 -ir off -ignore_keep_hierarchy -pr b -lc auto -power off -o top_ml605_extphy_map.ncd top_ml605_extphy.ngd top_ml605_extphy.pcf 
+par -w -intstyle ise -ol std -mt 4 top_ml605_extphy_map.ncd top_ml605_extphy.ncd top_ml605_extphy.pcf 
+trce -intstyle ise -e 3 -s 1 -n 3 -fastpaths -xml top_ml605_extphy.twx top_ml605_extphy.ncd -o top_ml605_extphy.twr top_ml605_extphy.pcf 
+bitgen -intstyle ise -f top_ml605_extphy.ut top_ml605_extphy.ncd 
+xst -intstyle ise -ifn "/home/vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/top_ml605_extphy.xst" -ofn "/home/vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/top_ml605_extphy.syr" 
+xst -intstyle ise -ifn "/home/vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/top_ml605_extphy.xst" -ofn "/home/vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/top_ml605_extphy.syr" 
+xst -intstyle ise -ifn "/home/vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/top_ml605_extphy.xst" -ofn "/home/vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/top_ml605_extphy.syr" 
+xst -intstyle ise -ifn "/home/vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/top_ml605_extphy.xst" -ofn "/home/vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/top_ml605_extphy.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc firmware/example_designs/ucf/ml605_extphy.ucf -p xc7a100t-csg324-1 top_ml605_extphy.ngc top_ml605_extphy.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt on -ol std -t 1 -xt 0 -r 4 -mt 2 -ir off -ignore_keep_hierarchy -pr b -lc auto -power off -o top_ml605_extphy_map.ncd top_ml605_extphy.ngd top_ml605_extphy.pcf 
+par -w -intstyle ise -ol std -mt 4 top_ml605_extphy_map.ncd top_ml605_extphy.ncd top_ml605_extphy.pcf 
+trce -intstyle ise -e 3 -s 1 -n 3 -fastpaths -xml top_ml605_extphy.twx top_ml605_extphy.ncd -o top_ml605_extphy.twr top_ml605_extphy.pcf 
+bitgen -intstyle ise -f top_ml605_extphy.ut top_ml605_extphy.ncd 
+xst -intstyle ise -ifn "/home/vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/top_ml605_extphy.xst" -ofn "/home/vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/top_ml605_extphy.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc firmware/example_designs/ucf/ml605_extphy.ucf -p xc7a100t-csg324-1 top_ml605_extphy.ngc top_ml605_extphy.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt on -ol std -t 1 -xt 0 -r 4 -mt 2 -ir off -ignore_keep_hierarchy -pr b -lc auto -power off -o top_ml605_extphy_map.ncd top_ml605_extphy.ngd top_ml605_extphy.pcf 
+par -w -intstyle ise -ol std -mt 4 top_ml605_extphy_map.ncd top_ml605_extphy.ncd top_ml605_extphy.pcf 
+trce -intstyle ise -e 3 -s 1 -n 3 -fastpaths -xml top_ml605_extphy.twx top_ml605_extphy.ncd -o top_ml605_extphy.twr top_ml605_extphy.pcf 
+bitgen -intstyle ise -f top_ml605_extphy.ut top_ml605_extphy.ncd 

@@ -12,23 +12,99 @@
 #define XPOINT 0xE994DE80 
 #define YPOINT 0x00000000
 #define ZOOM 2
-#define ITER 50
+#define ITER_MAX 255
+#define ITER_BEGIN 50
 
 #define MASK_SWITCH_ITER 0x00000020
 #define MASK_SWITCH_ZOOM 0x00000040
+#define MASK_UP  0x00000010
+#define MASK_DOWN  0x00000002
+#define MASK_LEFT 0x00000008
+#define MASK_RIGHT  0x00000004
+#define MASK_CENTER  0x00000001
 
-
-inline bool switchIter ( int unsigned *p){
-    if((*p & MASK_SWITCH_ITER)== MASK_SWITCH_ITER)
-        return true;
+volatile bool buttonLeft (volatile unsigned int *p ){
+    static bool b=false;
+    if(((*p) & MASK_LEFT) == MASK_LEFT){
+        if (b==false)
+        {
+            b=true;
+            return true;
+        }
+        else
+            return false;
+    }
+    b=false;
     return false;
 }
 
-/*inline void majButtons(int* x, int* y){
-    volatile int* p;
-    p=0x20000050
-    if
-}*/
+volatile bool buttonCenter (volatile unsigned int *p ){
+    static bool b=false;
+    if(((*p) & MASK_CENTER) == MASK_CENTER){
+        if (b==false)
+        {
+            b=true;
+            return true;
+        }
+        else
+            return false;
+    }
+    b=false;
+    return false;
+}
+volatile bool buttonDown (volatile unsigned int *p ){
+    static bool b=false;
+    if(((*p) & MASK_DOWN) == MASK_DOWN){
+        if (b==false)
+        {
+            b=true;
+            return true;
+        }
+        else
+            return false;
+    }
+    b=false;
+    return false;
+}
+
+volatile bool buttonUp (volatile unsigned int *p ){
+    static bool b=false;
+    if(((*p) & MASK_UP) == MASK_UP){
+        if (b==false)
+        {
+            b=true;
+            return true;
+        }
+        else
+            return false;
+    }
+    b=false;
+    return false;
+}
+
+volatile bool buttonRight (volatile unsigned int *p ){
+    static bool b=false;
+    if(((*p) & MASK_RIGHT) == MASK_RIGHT){
+        if (b==false)
+        {
+            b=true;
+            return true;
+        }
+        else
+            return false;
+    }
+    b=false;
+    return false;
+}
+
+volatile bool switchZoom (volatile unsigned int *p ){
+    return (((*p) & MASK_SWITCH_ZOOM) == MASK_SWITCH_ZOOM);
+}
+
+volatile bool switchIter (volatile unsigned int *p){
+    return (((*p) & MASK_SWITCH_ITER) == MASK_SWITCH_ITER);
+}
+
 
 inline int Convergence_Fixed(int X, int Y, int maxi)
 {
@@ -55,7 +131,8 @@ inline int Convergence_Fixed(int X, int Y, int maxi)
 
 int main( int argc, char ** argv ) {
     volatile unsigned int* p;
-    p=0x20000050;
+    //volatile unsigned int* p;
+    p= 0x20000050;
     /*const int _xstart   = 0xE0000000;
   const int _ystart   = 0xF0000000;
   const int _xinc     = 0x00133AE4;
@@ -66,58 +143,78 @@ int main( int argc, char ** argv ) {
     int _ystart = YPOINT-0x10000000;
     int step    = 0x00111111;
     int _delta = 0x00000000;
-
-
-    //step <= 0x00111111"; //Mandelbrot -2 1 x -1 1 sur 640x480
+    int maxi = ITER_BEGIN;
 
     coproc_reset(COPROC_4_RST);
     int height = 480;
     int width = 640;
 
-    /*for(int maxi=1; maxi<256; maxi++)
-{
+    while(true){
 
-  int posY = _ystart;
-  for(int py = 0; py < height; py += 1)
-  {
-    int posX = _xstart;
 
-    for(int px = 0; px < width; px += 1){
-
-      int i = Convergence_Fixed(posX, posY, i);
-        int value = (256 * i) / maxi;
-        coproc_write(COPROC_4_RW, value);
-
-      posX += step;
-    }
-      posY += step;
-
-  }
-*/
-
-    for(;;){
-
-        for(int maxi=1; maxi<256; maxi++)
+        if (!switchIter(p))
         {
-            int posY = _ystart;
-            for(int py = 0; py < height; py += 1)
+            while(maxi<ITER_MAX)
             {
-                int posX = _xstart;
+                // for(int maxi=1; maxi<256; maxi++)
+                //{
+                int posY = _ystart;
+                for(int py = 0; py < height; py += 1)
+                {
+                    int posX = _xstart;
 
-                for(int px = 0; px < width; px += 1){
+                    for(int px = 0; px < width; px += 1){
 
-                    int i = Convergence_Fixed(posX, posY, i);
-                    int value = (256 * i) / maxi;
-                    coproc_write(COPROC_4_RW, value);
+                        int i = Convergence_Fixed(posX, posY, maxi); //maxi
+                        int value = (256 * i) / maxi; //maxi
+                        coproc_write(COPROC_4_RW, value);
 
-                    posX += step;
+                        posX += step;
+
+                        if(buttonRight(p)){
+                            _xstart += (step<<7);
+                            maxi = ITER_BEGIN;
+                        }
+
+                        if(buttonLeft(p)){
+                            _xstart -= (step<<7);
+                            maxi = ITER_BEGIN;
+                        }
+
+                        if(buttonUp(p)){
+                            _ystart += (step<<7);
+                            maxi = ITER_BEGIN;
+                        }
+
+                        if(buttonDown(p)){
+                            _ystart -= (step<<7);
+                            maxi = ITER_BEGIN;
+                        }
+                        if(buttonCenter(p)){
+                            _xstart += isa_custom_4(step,0x28000000);
+                            _ystart += isa_custom_4(step,0x1E000000);
+                            //s_xstart <= s_xstart + (mult(s_step srl 2,x"28000000",FIXED) sll 8);
+                            //s_ystart <= s_ystart + (mult(s_step srl 2,x"1E000000",FIXED) sll 8);
+                            step = step >> 1; //--Zoom x2> réduction du step
+                            maxi = ITER_BEGIN;
+                        }
+
+                    }
+                    posY += step;
+
                 }
-                posY += step;
-
+                maxi++;
             }
-            while(!switchIter(p))
-            {}
         }
+        else
+            maxi = 5;
+
+
+        //    while(switchIter(p))
+        //    {}
+
+        // }
+
     }
 
 

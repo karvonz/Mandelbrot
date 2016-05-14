@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> 
 Reading design: top_ml605_extphy.prj
@@ -138,9 +138,6 @@ Parsing architecture <logic> of entity <function_6>.
 Parsing VHDL file "/home/vincent/Mandelbrot/soc_plasma/vhdl/custom/ray_tracer_v3/function_5.vhd" into library work
 Parsing entity <function_5>.
 Parsing architecture <logic> of entity <function_5>.
-Parsing VHDL file "/home/vincent/Mandelbrot/soc_plasma/vhdl/custom/ray_tracer_v3/function_4.vhd" into library work
-Parsing entity <function_4>.
-Parsing architecture <logic> of entity <function_4>.
 Parsing VHDL file "/home/vincent/Mandelbrot/soc_plasma/vhdl/custom/ray_tracer_v3/function_18.vhd" into library work
 Parsing entity <function_18>.
 Parsing architecture <logic> of entity <function_18>.
@@ -168,6 +165,9 @@ Parsing architecture <logic> of entity <function_11>.
 Parsing VHDL file "/home/vincent/Mandelbrot/soc_plasma/vhdl/custom/ray_tracer_v3/function_10.vhd" into library work
 Parsing entity <function_10>.
 Parsing architecture <logic> of entity <function_10>.
+Parsing VHDL file "/home/vincent/Mandelbrot/soc_plasma/vhdl/custom/mandelbrot/function_4.vhd" into library work
+Parsing entity <function_4>.
+Parsing architecture <logic> of entity <function_4>.
 Parsing VHDL file "/home/vincent/Mandelbrot/soc_plasma/vhdl/custom/mandelbrot/function_3.vhd" into library work
 Parsing entity <function_3>.
 Parsing architecture <logic> of entity <function_3>.
@@ -568,19 +568,11 @@ Synthesizing Unit <function_3>.
 Unit <function_3> synthesized.
 
 Synthesizing Unit <function_4>.
-    Related source file is "/home/vincent/Mandelbrot/soc_plasma/vhdl/custom/ray_tracer_v3/function_4.vhd".
-WARNING:Xst:647 - Input <INPUT_2<31:16>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 8-bit comparator greater for signal <val1[7]_val0[7]_LessThan_7_o> created at line 41
-    Found 8-bit comparator greater for signal <val3[7]_val2[7]_LessThan_9_o> created at line 47
-    Found 8-bit comparator greater for signal <max23[7]_max01[7]_LessThan_11_o> created at line 53
-    Found 8-bit comparator greater for signal <max[7]_max0123[7]_LessThan_13_o> created at line 59
-    Found 8-bit comparator greater for signal <val0[7]_val1[7]_LessThan_15_o> created at line 68
-    Found 8-bit comparator greater for signal <val2[7]_val3[7]_LessThan_17_o> created at line 74
-    Found 8-bit comparator greater for signal <min01[7]_min23[7]_LessThan_19_o> created at line 80
-    Found 8-bit comparator greater for signal <min0123[7]_min[7]_LessThan_21_o> created at line 86
+    Related source file is "/home/vincent/Mandelbrot/soc_plasma/vhdl/custom/mandelbrot/function_4.vhd".
+WARNING:Xst:647 - Input <INPUT_1<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 31x32-bit multiplier for signal <n0005> created at line 36.
     Summary:
-	inferred   8 Comparator(s).
-	inferred   8 Multiplexer(s).
+	inferred   1 Multiplier(s).
 Unit <function_4> synthesized.
 
 Synthesizing Unit <function_5>.
@@ -700,7 +692,7 @@ WARNING:Xst:647 - Input <INPUT_2<23:0>> is never used. This port will be preserv
 WARNING:Xst:653 - Signal <computation.vTemp2> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <computation.vTemp3> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <computation.vTemp4> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-    Found 8-bit subtractor for signal <GND_41_o_INPUT_2[31]_sub_7_OUT<7:0>> created at line 56.
+    Found 8-bit subtractor for signal <GND_42_o_INPUT_2[31]_sub_7_OUT<7:0>> created at line 56.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred   1 Multiplexer(s).
@@ -712,12 +704,12 @@ Synthesizing Unit <function_18>.
     Found 9-bit adder for signal <computation.rTemp2> created at line 40.
     Found 9-bit adder for signal <computation.rTemp3> created at line 41.
     Found 9-bit adder for signal <computation.rTemp4> created at line 42.
-    Found 9-bit comparator greater for signal <INPUT_1[7]_GND_42_o_LessThan_5_o> created at line 44
-    Found 9-bit comparator greater for signal <PWR_44_o_INPUT_1[7]_LessThan_6_o> created at line 45
-    Found 9-bit comparator greater for signal <INPUT_1[15]_GND_42_o_LessThan_9_o> created at line 49
-    Found 9-bit comparator greater for signal <PWR_44_o_INPUT_1[15]_LessThan_10_o> created at line 50
-    Found 9-bit comparator greater for signal <INPUT_1[23]_GND_42_o_LessThan_17_o> created at line 59
-    Found 9-bit comparator greater for signal <PWR_44_o_INPUT_1[23]_LessThan_18_o> created at line 60
+    Found 9-bit comparator greater for signal <INPUT_1[7]_GND_43_o_LessThan_5_o> created at line 44
+    Found 9-bit comparator greater for signal <PWR_45_o_INPUT_1[7]_LessThan_6_o> created at line 45
+    Found 9-bit comparator greater for signal <INPUT_1[15]_GND_43_o_LessThan_9_o> created at line 49
+    Found 9-bit comparator greater for signal <PWR_45_o_INPUT_1[15]_LessThan_10_o> created at line 50
+    Found 9-bit comparator greater for signal <INPUT_1[23]_GND_43_o_LessThan_17_o> created at line 59
+    Found 9-bit comparator greater for signal <PWR_45_o_INPUT_1[23]_LessThan_18_o> created at line 60
     Summary:
 	inferred   4 Adder/Subtractor(s).
 	inferred   6 Comparator(s).
@@ -747,9 +739,9 @@ WARNING:Xst:647 - Input <alu_function<5:1>> is never used. This port will be pre
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 3-bit adder for signal <counter[2]_GND_43_o_add_7_OUT> created at line 161.
-    Found 32-bit adder for signal <a_in[31]_GND_43_o_add_12_OUT> created at line 181.
-    Found 32-bit adder for signal <tmp[31]_GND_43_o_add_13_OUT> created at line 182.
+    Found 3-bit adder for signal <counter[2]_GND_44_o_add_7_OUT> created at line 161.
+    Found 32-bit adder for signal <a_in[31]_GND_44_o_add_12_OUT> created at line 181.
+    Found 32-bit adder for signal <tmp[31]_GND_44_o_add_13_OUT> created at line 182.
     Found 1-bit 3-to-1 multiplexer for signal <busy> created at line 104.
     Summary:
 	inferred   3 Adder/Subtractor(s).
@@ -778,7 +770,7 @@ Synthesizing Unit <mult>.
     Found 1-bit register for signal <mode_reg>.
     Found 1-bit register for signal <sign_reg>.
     Found 1-bit register for signal <sign2_reg>.
-    Found 6-bit subtractor for signal <GND_45_o_GND_45_o_sub_39_OUT<5:0>> created at line 246.
+    Found 6-bit subtractor for signal <GND_46_o_GND_46_o_sub_39_OUT<5:0>> created at line 246.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred 138 D-type flip-flop(s).
@@ -864,12 +856,12 @@ Synthesizing Unit <uart>.
     Found 8-bit register for signal <data_read_reg>.
     Found 18-bit register for signal <data_save_reg>.
     Found 9-bit register for signal <data_write_reg>.
-    Found 11-bit adder for signal <delay_write_reg[10]_GND_49_o_add_6_OUT> created at line 97.
-    Found 7-bit adder for signal <read_value_reg[6]_GND_49_o_add_16_OUT> created at line 108.
-    Found 4-bit subtractor for signal <GND_49_o_GND_49_o_sub_8_OUT<3:0>> created at line 100.
-    Found 7-bit subtractor for signal <GND_49_o_GND_49_o_sub_20_OUT<6:0>> created at line 112.
-    Found 4-bit subtractor for signal <GND_49_o_GND_49_o_sub_27_OUT<3:0>> created at line 125.
-    Found 11-bit subtractor for signal <GND_49_o_GND_49_o_sub_31_OUT<10:0>> created at line 129.
+    Found 11-bit adder for signal <delay_write_reg[10]_GND_50_o_add_6_OUT> created at line 97.
+    Found 7-bit adder for signal <read_value_reg[6]_GND_50_o_add_16_OUT> created at line 108.
+    Found 4-bit subtractor for signal <GND_50_o_GND_50_o_sub_8_OUT<3:0>> created at line 100.
+    Found 7-bit subtractor for signal <GND_50_o_GND_50_o_sub_20_OUT<6:0>> created at line 112.
+    Found 4-bit subtractor for signal <GND_50_o_GND_50_o_sub_27_OUT<3:0>> created at line 125.
+    Found 11-bit subtractor for signal <GND_50_o_GND_50_o_sub_31_OUT<10:0>> created at line 129.
     Summary:
 	inferred   5 Adder/Subtractor(s).
 	inferred  72 D-type flip-flop(s).
@@ -905,10 +897,10 @@ INFO:Xst:1799 - State read_ptr_src_2 is never reached in FSM <dma_state>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 32-bit adder for signal <struc_ptr[31]_GND_52_o_add_18_OUT> created at line 170.
-    Found 32-bit adder for signal <ptr_src[31]_GND_52_o_add_22_OUT> created at line 202.
-    Found 32-bit adder for signal <ptr_dst[31]_GND_52_o_add_27_OUT> created at line 229.
-    Found 16-bit subtractor for signal <GND_52_o_GND_52_o_sub_29_OUT<15:0>> created at line 232.
+    Found 32-bit adder for signal <struc_ptr[31]_GND_53_o_add_18_OUT> created at line 170.
+    Found 32-bit adder for signal <ptr_src[31]_GND_53_o_add_22_OUT> created at line 202.
+    Found 32-bit adder for signal <ptr_dst[31]_GND_53_o_add_27_OUT> created at line 229.
+    Found 16-bit subtractor for signal <GND_53_o_GND_53_o_sub_29_OUT<15:0>> created at line 232.
     Summary:
 	inferred   4 Adder/Subtractor(s).
 	inferred 189 D-type flip-flop(s).
@@ -960,7 +952,7 @@ Unit <coproc_2> synthesized.
 Synthesizing Unit <coproc_3>.
     Related source file is "/home/vincent/Mandelbrot/soc_plasma/vhdl/custom/ray_tracer_v3/coproc_3.vhd".
     Found 32-bit register for signal <mem>.
-    Found 32-bit adder for signal <INPUT_1[31]_GND_55_o_add_0_OUT> created at line 39.
+    Found 32-bit adder for signal <INPUT_1[31]_GND_56_o_add_0_OUT> created at line 39.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  32 D-type flip-flop(s).
@@ -970,8 +962,8 @@ Synthesizing Unit <coproc_4>.
     Related source file is "/home/vincent/Mandelbrot/soc_plasma/vhdl/custom/ray_tracer_v3/coproc_4.vhd".
 WARNING:Xst:647 - Input <INPUT_1<31:12>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 19-bit register for signal <counter>.
-    Found 19-bit adder for signal <counter[18]_GND_56_o_add_1_OUT> created at line 75.
-    Found 19-bit comparator lessequal for signal <counter[18]_PWR_62_o_LessThan_1_o> created at line 74
+    Found 19-bit adder for signal <counter[18]_GND_57_o_add_1_OUT> created at line 75.
+    Found 19-bit comparator lessequal for signal <counter[18]_PWR_63_o_LessThan_1_o> created at line 74
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  19 D-type flip-flop(s).
@@ -995,9 +987,9 @@ WARNING:Xst:3035 - Index value(s) does not match array range for signal <screen>
     Found 12-bit register for signal <h_counter>.
     Found 10-bit register for signal <v_counter>.
     Found 12-bit register for signal <next_pixel>.
-    Found 19-bit adder for signal <pix_read_addr[18]_GND_57_o_add_4_OUT> created at line 127.
-    Found 10-bit adder for signal <v_counter[9]_GND_57_o_add_36_OUT> created at line 303.
-    Found 12-bit adder for signal <h_counter[11]_GND_57_o_add_38_OUT> created at line 306.
+    Found 19-bit adder for signal <pix_read_addr[18]_GND_58_o_add_4_OUT> created at line 127.
+    Found 10-bit adder for signal <v_counter[9]_GND_58_o_add_36_OUT> created at line 303.
+    Found 12-bit adder for signal <h_counter[11]_GND_58_o_add_38_OUT> created at line 306.
     Summary:
 	inferred   1 RAM(s).
 	inferred   3 Adder/Subtractor(s).
@@ -1015,8 +1007,9 @@ Macro Statistics
  32x32-bit dual-port RAM                               : 2
  4096x8-bit single-port RAM                            : 4
  64x20-bit single-port Read Only RAM                   : 1
-# Multipliers                                          : 12
+# Multipliers                                          : 13
  16x8-bit multiplier                                   : 4
+ 32x31-bit multiplier                                  : 1
  32x32-bit multiplier                                  : 8
 # Adders/Subtractors                                   : 50
  10-bit adder                                          : 1
@@ -1055,14 +1048,13 @@ Macro Statistics
  7-bit register                                        : 1
  8-bit register                                        : 3
  9-bit register                                        : 1
-# Comparators                                          : 22
+# Comparators                                          : 14
  19-bit comparator lessequal                           : 1
  32-bit comparator equal                               : 1
  6-bit comparator not equal                            : 2
- 8-bit comparator greater                              : 8
  8-bit comparator lessequal                            : 4
  9-bit comparator greater                              : 6
-# Multiplexers                                         : 308
+# Multiplexers                                         : 300
  1-bit 2-to-1 multiplexer                              : 68
  1-bit 3-to-1 multiplexer                              : 1
  1-bit 8-to-1 multiplexer                              : 1
@@ -1083,7 +1075,7 @@ Macro Statistics
  4-bit 2-to-1 multiplexer                              : 24
  5-bit 2-to-1 multiplexer                              : 2
  6-bit 2-to-1 multiplexer                              : 23
- 8-bit 2-to-1 multiplexer                              : 17
+ 8-bit 2-to-1 multiplexer                              : 9
  9-bit 2-to-1 multiplexer                              : 1
 # FSMs                                                 : 2
 # Xors                                                 : 223
@@ -1362,8 +1354,9 @@ Macro Statistics
  32x32-bit dual-port distributed RAM                   : 2
  4096x8-bit single-port block RAM                      : 4
  64x20-bit single-port distributed Read Only RAM       : 1
-# Multipliers                                          : 12
+# Multipliers                                          : 13
  16x8-bit multiplier                                   : 4
+ 32x31-bit multiplier                                  : 1
  32x32-bit multiplier                                  : 8
 # Adders/Subtractors                                   : 39
  11-bit adder                                          : 1
@@ -1387,14 +1380,13 @@ Macro Statistics
  7-bit updown counter                                  : 1
 # Registers                                            : 1176
  Flip-Flops                                            : 1176
-# Comparators                                          : 22
+# Comparators                                          : 14
  19-bit comparator lessequal                           : 1
  32-bit comparator equal                               : 1
  6-bit comparator not equal                            : 2
- 8-bit comparator greater                              : 8
  8-bit comparator lessequal                            : 4
  9-bit comparator greater                              : 6
-# Multiplexers                                         : 302
+# Multiplexers                                         : 294
  1-bit 2-to-1 multiplexer                              : 68
  1-bit 3-to-1 multiplexer                              : 1
  1-bit 8-to-1 multiplexer                              : 1
@@ -1414,7 +1406,7 @@ Macro Statistics
  4-bit 2-to-1 multiplexer                              : 22
  5-bit 2-to-1 multiplexer                              : 2
  6-bit 2-to-1 multiplexer                              : 23
- 8-bit 2-to-1 multiplexer                              : 17
+ 8-bit 2-to-1 multiplexer                              : 9
  9-bit 2-to-1 multiplexer                              : 1
 # FSMs                                                 : 2
 # Xors                                                 : 223
@@ -1465,6 +1457,8 @@ Optimizing unit <function_2> ...
 
 Optimizing unit <function_3> ...
 
+Optimizing unit <function_4> ...
+
 Optimizing unit <function_5> ...
 
 Optimizing unit <function_6> ...
@@ -1508,8 +1502,6 @@ Optimizing unit <pc_next> ...
 Optimizing unit <reg_bank> ...
 
 Optimizing unit <comb_alu_1> ...
-
-Optimizing unit <function_4> ...
 
 Optimizing unit <function_15> ...
 
@@ -1615,18 +1607,18 @@ Top Level Output File Name         : top_ml605_extphy.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 5709
-#      GND                         : 23
+# BELS                             : 5605
+#      GND                         : 24
 #      INV                         : 20
 #      LUT1                        : 230
 #      LUT2                        : 570
-#      LUT3                        : 731
-#      LUT4                        : 356
-#      LUT5                        : 948
-#      LUT6                        : 1215
+#      LUT3                        : 689
+#      LUT4                        : 337
+#      LUT5                        : 882
+#      LUT6                        : 1238
 #      MUXCY                       : 789
-#      MUXF7                       : 59
-#      VCC                         : 13
+#      MUXF7                       : 57
+#      VCC                         : 14
 #      XORCY                       : 755
 # FlipFlops/Latches                : 1168
 #      FDC                         : 185
@@ -1648,8 +1640,8 @@ Primitive and Black Box Usage:
 # IO Buffers                       : 27
 #      IBUF                        : 11
 #      OBUF                        : 16
-# DSPs                             : 36
-#      DSP48E1                     : 36
+# DSPs                             : 40
+#      DSP48E1                     : 40
 
 Device utilization summary:
 ---------------------------
@@ -1659,17 +1651,17 @@ Selected Device : 7a100tcsg324-1
 
 Slice Logic Utilization: 
  Number of Slice Registers:            1167  out of  126800     0%  
- Number of Slice LUTs:                 4329  out of  63400     6%  
-    Number used as Logic:              4070  out of  63400     6%  
+ Number of Slice LUTs:                 4225  out of  63400     6%  
+    Number used as Logic:              3966  out of  63400     6%  
     Number used as Memory:              259  out of  19000     1%  
        Number used as RAM:              256
        Number used as SRL:                3
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   4766
-   Number with an unused Flip Flop:    3599  out of   4766    75%  
-   Number with an unused LUT:           437  out of   4766     9%  
-   Number of fully used LUT-FF pairs:   730  out of   4766    15%  
+ Number of LUT Flip Flop pairs used:   4662
+   Number with an unused Flip Flop:    3495  out of   4662    74%  
+   Number with an unused LUT:           437  out of   4662     9%  
+   Number of fully used LUT-FF pairs:   730  out of   4662    15%  
    Number of unique control sets:        52
 
 IO Utilization: 
@@ -1681,7 +1673,7 @@ Specific Feature Utilization:
  Number of Block RAM/FIFO:              124  out of    135    91%  
     Number using Block RAM only:        124
  Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
- Number of DSP48E1s:                     36  out of    240    15%  
+ Number of DSP48E1s:                     40  out of    240    16%  
 
 ---------------------------
 Partition Resource Summary:
@@ -1840,7 +1832,7 @@ Timing Summary:
 ---------------
 Speed Grade: -1
 
-   Minimum period: 17.720ns (Maximum Frequency: 56.432MHz)
+   Minimum period: 17.714ns (Maximum Frequency: 56.454MHz)
    Minimum input arrival time before clock: 6.013ns
    Maximum output required time after clock: 2.672ns
    Maximum combinational path delay: No path found
@@ -1875,10 +1867,10 @@ Delay:               4.628ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK50'
-  Clock period: 17.720ns (frequency: 56.432MHz)
-  Total number of paths / destination ports: 383142716526 / 4587
+  Clock period: 17.714ns (frequency: 56.454MHz)
+  Total number of paths / destination ports: 384636120023 / 4587
 -------------------------------------------------------------------------
-Delay:               17.720ns (Levels of Logic = 41)
+Delay:               17.714ns (Levels of Logic = 41)
   Source:            INST_PLASMA/U1_CPU/U9_PIPELINE/A_BUSD_2 (FF)
   Destination:       INST_PLASMA/LOCAL_MEMORY/MRAM_MEMBANK11 (RAM)
   Source Clock:      CLK50 rising
@@ -1888,7 +1880,7 @@ Delay:               17.720ns (Levels of Logic = 41)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q           129   0.478   0.573  A_BUSD_2 (A_BUSD_2)
+     FDCE:C->Q           125   0.478   0.572  A_BUSD_2 (A_BUSD_2)
      end scope: 'INST_PLASMA/U1_CPU/U9_PIPELINE:A_BUSD<2>'
      begin scope: 'INST_PLASMA/U1_CPU/U61_ALU:A_IN<2>'
      begin scope: 'INST_PLASMA/U1_CPU/U61_ALU/FX3:INPUT_1<2>'
@@ -1924,7 +1916,7 @@ Delay:               17.720ns (Levels of Logic = 41)
      LUT6:I5->O            1   0.124   0.536  MMUX_C_ALU1267 (MMUX_C_ALU1267)
      LUT6:I4->O            1   0.124   0.421  MMUX_C_ALU12610 (C_ALU<28>)
      end scope: 'INST_PLASMA/U1_CPU/U61_ALU:C_ALU<28>'
-     LUT5:I4->O            8   0.124   0.467  C_BUS<28>1 (C_BUS<28>)
+     LUT5:I4->O            7   0.124   0.461  C_BUS<28>1 (C_BUS<28>)
      begin scope: 'INST_PLASMA/U1_CPU/U1_PC_NEXT:PC_NEW<28>'
      LUT6:I5->O            1   0.124   0.421  MMUX_PC_SELECT.PC_NEXT191 (PC_FUTURE<28>)
      end scope: 'INST_PLASMA/U1_CPU/U1_PC_NEXT:PC_FUTURE<28>'
@@ -1937,8 +1929,8 @@ Delay:               17.720ns (Levels of Logic = 41)
      LUT2:I1->O            8   0.124   0.445  WE_SELECT<0>1 (WE_SELECT<0>_0)
      RAM256X1S:WE              0.490          MRAM_MEMBANK11
     ----------------------------------------
-    Total                     17.720ns (12.536ns logic, 5.184ns route)
-                                       (70.7% logic, 29.3% route)
+    Total                     17.714ns (12.536ns logic, 5.177ns route)
+                                       (70.8% logic, 29.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK100'
@@ -2056,19 +2048,19 @@ Clock to Setup on destination clock CLK50
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK50          |   17.720|         |         |         |
+CLK50          |   17.714|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 76.00 secs
-Total CPU time to Xst completion: 75.40 secs
+Total REAL time to Xst completion: 77.00 secs
+Total CPU time to Xst completion: 76.33 secs
  
 --> 
 
 
-Total memory usage is 788264 kilobytes
+Total memory usage is 791800 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   90 (   0 filtered)

@@ -12,7 +12,7 @@
 ---------------------------------------------------------------------
 library ieee;
 use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
+use IEEE.NUMERIC_STD.ALL;
 use work.mlite_pack.all;
 use work.constants.all;
 
@@ -33,7 +33,7 @@ begin
 		variable rTemp2  : SIGNED(31 downto 0);
 		variable rTemp3  : SIGNED(31 downto 0);
 	begin
-		rTemp1 := (signed(INPUT_1 srl 2) * x"28000000")  --* signed(INPUT_2));
+		rTemp1 := (signed(signed(INPUT_1) srl 2) * signed(INPUT_2));  --* signed(INPUT_2));
 		OUTPUT_1 <= std_logic_vector((rTemp1(32+(FIXED-1) downto FIXED)) sll 8);  --x1*y1
 	end process;
 	
