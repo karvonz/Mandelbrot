@@ -49,6 +49,7 @@
          <ClosedNode>/top_ml605_extphy - rtl C:|IPBus|ml605_from_ml507|firmware|hdl|ipbus_demo_ml605_extphy|top_sp605.vhd/eth - eth_v6_gmii - rtl</ClosedNode>
          <ClosedNode>/top_ml605_extphy - rtl C:|IPBus|ml605_from_ml507|firmware|hdl|ipbus_demo_ml605_extphy|top_sp605.vhd/ipbus - ipbus_ctrl - rtl</ClosedNode>
          <ClosedNode>/top_ml605_extphy - rtl C:|IPBus|ml605_from_ml507|firmware|hdl|ipbus_demo_ml605_extphy|top_sp605.vhd/slaves - slaves - rtl</ClosedNode>
+         <ClosedNode>/top_ml605_extphy - rtl D:|Vincent|Mandelbrot|soc_plasma|vhdl|plasma_core|vhdl|top_sp605.vhd/Inst_plasma - plasma - logic/u1_cpu - mlite_cpu - logic</ClosedNode>
          <ClosedNode>/top_ml605_extphy - rtl Z:|design|code_16200x6480|16k_GPU_device_5_7_5.parallel.IOs|synthese|IPBus_ml605_ASIP|firmware|hdl|ipbus_demo_ml605_extphy|top_sp605.vhd/asip_config</ClosedNode>
          <ClosedNode>/top_ml605_extphy - rtl Z:|design|code_16200x6480|16k_GPU_device_5_7_5.parallel.IOs|synthese|IPBus_ml605_ASIP|firmware|hdl|ipbus_demo_ml605_extphy|top_sp605.vhd/clocks - clocks_v6 - rtl</ClosedNode>
          <ClosedNode>/top_ml605_extphy - rtl Z:|design|code_16200x6480|16k_GPU_device_5_7_5.parallel.IOs|synthese|IPBus_ml605_ASIP|firmware|hdl|ipbus_demo_ml605_extphy|top_sp605.vhd/conversion</ClosedNode>
@@ -81,18 +82,17 @@
          <ClosedNode>/v6_emac_v1_8_example_design - TOP_LEVEL C:|IPBus|ml605_from_ml507|ipcore_dir|v6_emac_v1_8|example_design|v6_emac_v1_8_example_design.vhd/v6_emac_v1_8_locallink_inst - v6_emac_v1_8_locallink - TOP_LEVEL/v6_emac_v1_8_block_inst - v6_emac_v1_8_block - TOP_LEVEL</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>top_ml605_extphy - rtl (/home/vincent/Mandelbrot/soc_plasma/vhdl/plasma_core/vhdl/top_sp605.vhd)</SelectedItem>
+         <SelectedItem>top_ml605_extphy - rtl (D:/Vincent/Mandelbrot/soc_plasma/vhdl/plasma_core/vhdl/top_sp605.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000255000000020000000000000000000000000200000064ffffffff000000810000000300000002000002550000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001de000000020000000000000000000000000200000064ffffffff000000810000000300000002000001de0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>top_ml605_extphy - rtl (/home/vincent/Mandelbrot/soc_plasma/vhdl/plasma_core/vhdl/top_sp605.vhd)</CurrentItem>
+      <CurrentItem>top_ml605_extphy - rtl (D:/Vincent/Mandelbrot/soc_plasma/vhdl/plasma_core/vhdl/top_sp605.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
-         <ClosedNode>Design Utilities</ClosedNode>
          <ClosedNode>Design Utilities/Compile HDL Simulation Libraries</ClosedNode>
          <ClosedNode>Implement Design/Map</ClosedNode>
          <ClosedNode>Implement Design/Map/Generate Post-Map Static Timing</ClosedNode>
@@ -103,26 +103,24 @@
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Generate Programming File</SelectedItem>
+         <SelectedItem>Synthesize - XST</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >11</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >3</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001d8000000010000000100000000000000000000000064ffffffff000000810000000000000001000001d80000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000132000000010000000100000000000000000000000064ffffffff000000810000000000000001000001320000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Generate Programming File</CurrentItem>
+      <CurrentItem>Synthesize - XST</CurrentItem>
    </ItemView>
    <ItemView guiview="File" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
-      <SelectedItems>
-         <SelectedItem>../../vhdl/custom/ray_tracer_v3/coproc_4.vhd</SelectedItem>
-      </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >29</ScrollbarPosition>
+      <SelectedItems/>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000010100000000000000000000000000000000000004f6000000040101000100000000000000000000000064ffffffff000000810000000000000004000003550000000100000000000000d70000000100000000000000660000000100000000000000640000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>../../vhdl/custom/ray_tracer_v3/coproc_4.vhd</CurrentItem>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView guiview="Library" >
       <ClosedNodes>
@@ -131,7 +129,7 @@
       <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000001d8000000010001000100000000000000000000000064ffffffff000000810000000000000001000001d80000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000132000000010001000100000000000000000000000064ffffffff000000810000000000000001000001320000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>work</CurrentItem>
    </ItemView>
@@ -154,13 +152,13 @@
          <ClosedNode>Design Utilities/Compile HDL Simulation Libraries</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f2000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f20000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VERILOG" guiview="Process" >
       <ClosedNodes>
@@ -181,13 +179,13 @@
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem/>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001e7000000010000000100000000000000000000000064ffffffff000000810000000000000001000001e70000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem/>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_CDC" guiview="Process" >
       <ClosedNodes>
@@ -202,7 +200,7 @@
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem/>
    </ItemView>
-   <SourceProcessView>000000ff0000000000000002000000f80000007801000000050100000002</SourceProcessView>
+   <SourceProcessView>000000ff00000000000000020000007f000000cf01000000050100000002</SourceProcessView>
    <CurrentView>Implementation</CurrentView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VHDL_PACKAGE_BODY" guiview="Process" >
       <ClosedNodes>
@@ -222,13 +220,13 @@
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001db000000010000000100000000000000000000000064ffffffff000000810000000000000001000001db0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000143000000010000000100000000000000000000000064ffffffff000000810000000000000001000001430000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
@@ -257,13 +255,13 @@
          <ClosedNode>/top_ml605_extphy - rtl |home|cleroux|ownCloud|ray_tracer|soc_plasma|synthese|IPBus_ml605_ASIP|firmware|hdl|ipbus_demo_ml605_extphy|top_sp605.vhd/clocks - clocks_v6 - rtl</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>top_ml605_extphy - rtl (/home/cleroux/ownCloud/ray_tracer/soc_plasma/synthese/IPBus_ml605_ASIP/firmware/hdl/ipbus_demo_ml605_extphy/top_sp605.vhd)</SelectedItem>
+         <SelectedItem>top_ml605_extphy - rtl (D:/Vincent/Mandelbrot/soc_plasma/vhdl/plasma_core/vhdl/top_sp605.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001ff000000020000000000000000000000000200000064ffffffff000000810000000300000002000001ff0000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001de000000020000000000000000000000000200000064ffffffff000000810000000300000002000001de0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>top_ml605_extphy - rtl (/home/cleroux/ownCloud/ray_tracer/soc_plasma/synthese/IPBus_ml605_ASIP/firmware/hdl/ipbus_demo_ml605_extphy/top_sp605.vhd)</CurrentItem>
+      <CurrentItem>top_ml605_extphy - rtl (D:/Vincent/Mandelbrot/soc_plasma/vhdl/plasma_core/vhdl/top_sp605.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -271,13 +269,13 @@
          <ClosedNode>Design Utilities</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000002fe000000010000000100000000000000000000000064ffffffff000000810000000000000001000002fe0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000143000000010000000100000000000000000000000064ffffffff000000810000000000000001000001430000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="PostTransSim" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
@@ -309,16 +307,15 @@
    <ItemView engineview="BehavioralSim" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
-         <ClosedNode>ISim Simulator</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000002fe000000010000000100000000000000000000000064ffffffff000000810000000000000001000002fe0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000143000000010000000100000000000000000000000064ffffffff000000810000000000000001000001430000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="DESUT_VERILOG" guiview="Process" >
       <ClosedNodes>

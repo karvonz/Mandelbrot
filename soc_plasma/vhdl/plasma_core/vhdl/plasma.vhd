@@ -65,7 +65,10 @@ entity plasma is
            log_file    : string := "UNUSED";
            ethernet    : std_logic  := '0';
            eUart       : std_logic  := '0';
-           use_cache   : std_logic  := '0');
+           use_cache   : std_logic  := '0';
+			  plasma_name : string := "P1";
+			  plasma_code : string := "../code_bin.txt"
+);
    port(clk          : in std_logic;
 			clk_VGA			: in std_logic;
 				reset        : in std_logic;
@@ -97,9 +100,11 @@ entity plasma is
 				fifo_2_compteur  : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
 				-- BLG END
 				
-				VGA_hs       : out std_logic;   -- horisontal vga syncr.
-				VGA_vs       : out std_logic;   -- vertical vga syncr.
-				iter      : out std_logic_vector(3 downto 0);   -- red output
+				--VGA_hs       : out std_logic;   -- horisontal vga syncr.
+			--	VGA_vs       : out std_logic;   -- vertical vga syncr.
+				data_write :out std_logic;
+		      ADDR         : out std_logic_vector(18 downto 0);
+				data_out      : out std_logic_vector(3 downto 0);   
 				--VGA_green    : out std_logic_vector(3 downto 0);   -- green output
 				--VGA_blue     : out std_logic_vector(3 downto 0);   -- blue output
 
@@ -639,16 +644,22 @@ begin  --architecture
 		OUTPUT_1       => cop_3_output
 	);
 
-   u5d_coproc: entity WORK.coproc_4 port map(
+   u5d_coproc: entity WORK.coproc_4 
+	GENERIC MAP (plasma_name=>plasma_name)
+	port map(
 		clock          => clk,
 		clock_VGA      => clk_VGA,
 		reset          => cop_4_reset,
 		INPUT_1        => cpu_data_w,
 		INPUT_1_valid  => cop_4_valid,
 		OUTPUT_1       => cop_4_output,
-		VGA_hs => VGA_hs,
-		VGA_vs => VGA_vs,
-		iter => iter
+		data_out       => data_out,
+		data_write     => data_write,
+      ADDR           => ADDR
+
+	--	VGA_hs => VGA_hs,
+	--	VGA_vs => VGA_vs,
+		--iter => iter
 		--VGA_green => VGA_green,
 		--VGA_blue => VGA_blue
 	);

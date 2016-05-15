@@ -45,8 +45,24 @@ component Colorgen
        VGA_blue     : out std_logic_vector(3 downto 0));   -- blue output
 end component;
 
-		signal clk50, clk100_sig: std_logic;
-		signal iterS : std_logic_vector(3 downto 0);
+component VGA_bitmap_640x480 
+  port(clk          : in  std_logic;
+		 clk_vga      : in  std_logic;
+       reset        : in  std_logic;
+       VGA_hs       : out std_logic;   -- horisontal vga syncr.
+       VGA_vs       : out std_logic;   -- vertical vga syncr.
+       iter      : out std_logic_vector(3 downto 0);   -- iter output
+       ADDR1         : in  std_logic_vector(18 downto 0);
+       data_in1      : in  std_logic_vector(3 downto 0);
+       data_write1   : in  std_logic;
+		 ADDR2         : in  std_logic_vector(18 downto 0);
+       data_in2      : in  std_logic_vector(3 downto 0);
+       data_write2   : in  std_logic);
+end component;
+
+		signal data_write1, data_write2, clk50, clk100_sig: std_logic;
+		signal iterS, data_out1,data_out2 : std_logic_vector(3 downto 0);
+		signal ADDR2, ADDR1 : std_logic_vector(18 downto 0);
 		
 		--component clk_wiz_0 is -- vivado
 --		component clkgen is --ise
@@ -96,13 +112,15 @@ begin
 	--	leds(7 downto 0) <= ('0','0','0','0','0','0', locked, onehz);
 
 
-		Inst_plasma: entity work.plasma
+		Inst_plasma1: entity work.plasma
 		GENERIC MAP (
 			memory_type => "XILINX_16X",
 			log_file    => "UNUSED",
 			ethernet    => '0',
 			eUart       => '1',
-			use_cache   => '0'
+			use_cache   => '0',
+			plasma_name => "P1",
+			plasma_code => "../code_bin.txt"
 		)
 		PORT MAP(
 			clk           => clk50,
@@ -124,15 +142,66 @@ begin
 			fifo_1_compteur  => x"00000000",
 			fifo_2_compteur  => x"00000000",
 
-			VGA_hs => VGA_hs,
-			VGA_vs => VGA_vs,
-			iter => iterS,
-			--VGA_green => VGA_green,
-			--VGA_blue => VGA_blue,
+			data_write => data_write1,
+			ADDR => ADDR1,
+			data_out => data_out1,
 			
 			gpio0_out       => open,
 			gpioA_in        => x"000000" & buttons --open
 		);
+		
+	Inst_plasma2: entity work.plasma
+		GENERIC MAP (
+			memory_type => "XILINX_16X",
+			log_file    => "UNUSED",
+			ethernet    => '0',
+			eUart       => '1',
+			use_cache   => '0',
+			plasma_name => "P2",
+			plasma_code => "../code_bin2.txt"
+		)
+		PORT MAP(
+			clk           => clk50,
+			clk_VGA 		=> clk100,
+			reset         => rst,
+			uart_write    => o_uart,
+			uart_read     => i_uart,
+			fifo_1_out_data  => x"00000000",
+			fifo_1_read_en   => open,
+			fifo_1_empty     => '0',
+			fifo_2_in_data   => open,
+			fifo_1_write_en  => open,
+			fifo_2_full      => '0',
+
+			fifo_1_full      => '0',
+			fifo_1_valid     => '0',
+			fifo_2_empty     => '0',
+			fifo_2_valid     => '0',
+			fifo_1_compteur  => x"00000000",
+			fifo_2_compteur  => x"00000000",
+
+			data_write => data_write2,
+			ADDR => ADDR2,
+			data_out => data_out2,
+			
+			gpio0_out       => open,
+			gpioA_in        => x"000000" & buttons --open
+		);
+		
+		
+		InstVGA: VGA_bitmap_640x480
+		port map(clk50,
+					clk100,
+					rst,
+					VGA_hs,
+					VGA_vs,
+					iterS,
+					ADDR1,
+					data_out1,
+					data_write1,
+					ADDR2,
+					data_out2,
+					data_write2);
 		
 		InstColorgen: Colorgen
 		port map(iterS,VGA_red,VGA_green,VGA_blue);

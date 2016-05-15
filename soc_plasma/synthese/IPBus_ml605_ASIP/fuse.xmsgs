@@ -8,7 +8,10 @@
 <msg type="warning" file="HDLCompiler" num="797" delta="unknown" >"D:/Vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/../../vhdl/plasma_core/vhdl/cam/cam_pkg.vhd" Line 16: Subprogram &lt;<arg fmt="%s" index="1">divide</arg>&gt; does not conform with its declaration.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="946" delta="unknown" >"D:/Vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/../../vhdl/plasma_core/vhdl/top_sp605.vhd" Line 134: Actual for formal port <arg fmt="%s" index="1">gpioa_in</arg> is neither a static name nor a globally static expression
+<msg type="warning" file="HDLCompiler" num="946" delta="unknown" >"D:/Vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/../../vhdl/plasma_core/vhdl/top_sp605.vhd" Line 150: Actual for formal port <arg fmt="%s" index="1">gpioa_in</arg> is neither a static name nor a globally static expression
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="946" delta="unknown" >"D:/Vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/../../vhdl/plasma_core/vhdl/top_sp605.vhd" Line 188: Actual for formal port <arg fmt="%s" index="1">gpioa_in</arg> is neither a static name nor a globally static expression
 </msg>
 
 </messages>

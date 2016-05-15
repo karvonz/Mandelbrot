@@ -1,10 +1,10 @@
 --------------------------------------------------------------------------------
-Release 14.7 Trace  (lin64)
+Release 14.7 Trace  (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce
--intstyle ise -e 3 -s 1 -n 3 -fastpaths -xml top_ml605_extphy.twx
-top_ml605_extphy.ncd -o top_ml605_extphy.twr top_ml605_extphy.pcf
+D:\ISE\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -e 3 -s 1 -n 3
+-fastpaths -xml top_ml605_extphy.twx top_ml605_extphy.ncd -o
+top_ml605_extphy.twr top_ml605_extphy.pcf
 
 Design file:              top_ml605_extphy.ncd
 Physical constraint file: top_ml605_extphy.pcf
@@ -30,9 +30,9 @@ Timing constraint: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH
 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 6186 paths analyzed, 4179 endpoints analyzed, 0 failing endpoints
+ 2986 paths analyzed, 1539 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   9.884ns.
+ Minimum period is   6.092ns.
 --------------------------------------------------------------------------------
 
 
@@ -48,7 +48,7 @@ Clock to Setup on destination clock CLK100
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK100         |    9.884|         |         |         |
+CLK100         |    6.092|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -57,20 +57,20 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 6186 paths, 0 nets, and 4652 connections
+Constraints cover 2986 paths, 0 nets, and 1692 connections
 
 Design statistics:
-   Minimum period:   9.884ns   (Maximum frequency: 101.174MHz)
+   Minimum period:   6.092ns   (Maximum frequency: 164.150MHz)
 
 
-Analysis completed Sat May 14 16:33:38 2016 
+Analysis completed Sat May 14 19:41:54 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 817 MB
+Peak Memory Usage: 705 MB
 
 
 

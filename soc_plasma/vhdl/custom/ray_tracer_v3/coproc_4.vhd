@@ -15,6 +15,7 @@ use ieee.numeric_std.all;
 use work.mlite_pack.all;
 
 entity coproc_4 is
+generic(plasma_name : string := "P1");
    port(
 		clock          : in  std_logic;
 		clock_vga      : in  std_logic;
@@ -22,9 +23,12 @@ entity coproc_4 is
 		INPUT_1        : in  std_logic_vector(31 downto 0);
 		INPUT_1_valid  : in  std_logic;
 		OUTPUT_1       : out std_logic_vector(31 downto 0);
-		VGA_hs       	: out std_logic;   -- horisontal vga syncr.
-      VGA_vs       	: out std_logic;   -- vertical vga syncr.
-      iter      	: out std_logic_vector(3 downto 0)   -- red output
+		--VGA_hs       	: out std_logic;   -- horisontal vga syncr.
+     -- VGA_vs       	: out std_logic;   -- vertical vga syncr.
+      --iter      	: out std_logic_vector(3 downto 0)   -- red output
+		data_write :out std_logic;
+		ADDR         : out  std_logic_vector(18 downto 0);
+		data_out      : out std_logic_vector(3 downto 0)
     --  VGA_green    	: out std_logic_vector(3 downto 0);   -- green output
     --  VGA_blue    	 : out std_logic_vector(3 downto 0)   -- blue output
 	);
@@ -32,27 +36,10 @@ end; --comb_alu_1
 
 architecture logic of coproc_4 is
 
-component VGA_bitmap_640x480 is
-  port(clk          : in  std_logic;
-		 clk_vga      : in  std_logic;
-       reset        : in  std_logic;
-       VGA_hs       : out std_logic;   -- horisontal vga syncr.
-       VGA_vs       : out std_logic;   -- vertical vga syncr.
-       iter      : out std_logic_vector(3 downto 0);   -- red output
-      --VGA_green    : out std_logic_vector(3 downto 0);   -- green output
-      -- VGA_blue     : out std_logic_vector(3 downto 0);   -- blue output
-
-       ADDR         : in  std_logic_vector(18 downto 0);
-       data_in      : in  std_logic_vector(3 downto 0);
-       data_write   : in  std_logic);
-       --data_out     : out std_logic_vector(bit_per_pixel - 1 downto 0));
-end component;
-
 	SIGNAL mem : UNSIGNED(31 downto 0);
 	signal tmp_addr : std_logic_vector(18 downto 0);
 	signal pixel : std_logic_vector(7 downto 0);
 	--signal tmp_out : std_logic_vector(10 downto 0);
-	signal data_write : std_logic;
 	signal counter : integer range 0 to 307199:= 0;
 begin
 	
@@ -62,22 +49,36 @@ begin
 	--tmp_addr <= INPUT_1(31 downto 13);
 	--pixel <= INPUT_1(7 downto 0);
 --	
+
 	process (clock)
 	begin
 		IF clock'event AND clock = '1' THEN
 			IF reset = '1' THEN
-				counter <= 0;
+				if (plasma_name="P1") then
+					counter <= 0;
+				else
+					counter <=153600;
+				end if;
 			ELSE
 				IF INPUT_1_valid = '1' THEN
-					IF counter < 307199 THEN
-						counter <= counter + 1;
-					ELSE
-						counter <= 0;
-					END IF;
+					if (plasma_name = "P1") then
+						IF counter < 153599 THEN
+							counter <= counter + 1;
+						ELSE
+							counter <= 0;
+						END IF;
+					else
+						IF counter < 307199 THEN
+							counter <= counter + 1;
+						ELSE
+							counter <= 0;
+						END IF;
+					end if;
 				END IF;
 			END IF;
 		END IF;
 	end process;
+
 --	
 --
 --	process (clock, reset)
@@ -101,20 +102,10 @@ begin
 --	
 	tmp_addr <= std_logic_vector(to_signed(counter, 19));
 --	
-		vga : VGA_bitmap_640x480  
-		port map(
-				clk        => clock,
-				clk_vga    => clock_vga,
-				reset      => reset,
-				VGA_hs     => VGA_hs,
-				VGA_vs     => VGA_vs,
-				iter    => iter,
-			--	VGA_green  => VGA_green,
-			--VGA_blue   => VGA_blue,
-				ADDR       => tmp_addr, 
-				data_in    => INPUT_1(3 downto 0),
-				data_write => INPUT_1_valid);
-				--data_out   => open);
+
+		data_write <=INPUT_1_valid;
+		data_out <=INPUT_1(3 downto 0);
+		ADDR <= tmp_addr;
 	
 		OUTPUT_1 <= "0000000000000"&tmp_addr;
 

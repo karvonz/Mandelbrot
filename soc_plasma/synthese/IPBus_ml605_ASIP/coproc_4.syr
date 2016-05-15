@@ -1,0 +1,410 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.22 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.22 secs
+ 
+--> Reading design: coproc_4.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "coproc_4.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "coproc_4"
+Output Format                      : NGC
+Target Device                      : xc7a100t-1-csg324
+
+---- Source Options
+Top Module Name                    : coproc_4
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+CASE Implementation Style          : Full-Parallel
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : Yes
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Move First FlipFlop Stage          : YES
+Move Last FlipFlop Stage           : YES
+Optimize Instantiated Primitives   : YES
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 2
+Power Reduction                    : NO
+Keep Hierarchy                     : Soft
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Upper
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : YES
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\mlite_pack.vhd" into library work
+Parsing package <mlite_pack>.
+Parsing package body <mlite_pack>.
+Parsing VHDL file "D:\Vincent\Mandelbrot\soc_plasma\vhdl\custom\ray_tracer_v3\coproc_4.vhd" into library work
+Parsing entity <coproc_4>.
+Parsing architecture <logic> of entity <coproc_4>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <coproc_4> (architecture <logic>) with generics from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <coproc_4>.
+    Related source file is "D:\Vincent\Mandelbrot\soc_plasma\vhdl\custom\ray_tracer_v3\coproc_4.vhd".
+        plasma_name = "P1"
+WARNING:Xst:647 - Input <INPUT_1<31:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <clock_vga> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 19-bit register for signal <counter>.
+    Found 19-bit adder for signal <counter[18]_GND_5_o_add_1_OUT> created at line 66.
+    Found 19-bit comparator lessequal for signal <counter[18]_GND_5_o_LessThan_1_o> created at line 65
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  19 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <coproc_4> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 19-bit adder                                          : 1
+# Registers                                            : 1
+ 19-bit register                                       : 1
+# Comparators                                          : 1
+ 19-bit comparator lessequal                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <coproc_4>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <coproc_4> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 19-bit up counter                                     : 1
+# Comparators                                          : 1
+ 19-bit comparator lessequal                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <coproc_4> ...
+WARNING:Xst:1293 - FF/Latch <counter_18> has a constant value of 0 in block <coproc_4>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block coproc_4, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 18
+ Flip-Flops                                            : 18
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : coproc_4.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 81
+#      GND                         : 1
+#      INV                         : 1
+#      LUT1                        : 17
+#      LUT2                        : 1
+#      LUT3                        : 1
+#      LUT4                        : 19
+#      LUT6                        : 5
+#      MUXCY                       : 17
+#      VCC                         : 1
+#      XORCY                       : 18
+# FlipFlops/Latches                : 18
+#      FD                          : 18
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 62
+#      IBUF                        : 6
+#      OBUF                        : 56
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              18  out of  126800     0%  
+ Number of Slice LUTs:                   44  out of  63400     0%  
+    Number used as Logic:                44  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     44
+   Number with an unused Flip Flop:      26  out of     44    59%  
+   Number with an unused LUT:             0  out of     44     0%  
+   Number of fully used LUT-FF pairs:    18  out of     44    40%  
+   Number of unique control sets:         1
+
+IO Utilization: 
+ Number of IOs:                          92
+ Number of bonded IOBs:                  63  out of    210    30%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLOCK                              | BUFGP                  | 18    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 3.345ns (Maximum Frequency: 298.954MHz)
+   Minimum input arrival time before clock: 2.050ns
+   Maximum output required time after clock: 0.917ns
+   Maximum combinational path delay: 0.536ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLOCK'
+  Clock period: 3.345ns (frequency: 298.954MHz)
+  Total number of paths / destination ports: 516 / 18
+-------------------------------------------------------------------------
+Delay:               3.345ns (Levels of Logic = 4)
+  Source:            COUNTER_4 (FF)
+  Destination:       COUNTER_3 (FF)
+  Source Clock:      CLOCK rising
+  Destination Clock: CLOCK rising
+
+  Data Path: COUNTER_4 to COUNTER_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               5   0.478   0.966  COUNTER_4 (COUNTER_4)
+     LUT6:I0->O            1   0.124   0.421  MCOUNT_COUNTER_VAL5_SW0 (N3)
+     LUT6:I5->O            2   0.124   0.427  MCOUNT_COUNTER_VAL5 (MCOUNT_COUNTER_VAL5)
+     LUT6:I5->O           17   0.124   0.527  MCOUNT_COUNTER_VAL6 (MCOUNT_COUNTER_VAL)
+     LUT4:I3->O            1   0.124   0.000  COUNTER_3_RSTPOT (COUNTER_3_RSTPOT)
+     FD:D                      0.030          COUNTER_3
+    ----------------------------------------
+    Total                      3.345ns (1.004ns logic, 2.341ns route)
+                                       (30.0% logic, 70.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLOCK'
+  Total number of paths / destination ports: 57 / 18
+-------------------------------------------------------------------------
+Offset:              2.050ns (Levels of Logic = 3)
+  Source:            INPUT_1_VALID (PAD)
+  Destination:       COUNTER_0 (FF)
+  Destination Clock: CLOCK rising
+
+  Data Path: INPUT_1_VALID to COUNTER_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            22   0.001   0.852  INPUT_1_VALID_IBUF (DATA_WRITE_OBUF)
+     LUT3:I0->O            1   0.124   0.919  MCOUNT_COUNTER_VAL6_SW0 (N5)
+     LUT6:I1->O            1   0.124   0.000  COUNTER_0_RSTPOT (COUNTER_0_RSTPOT)
+     FD:D                      0.030          COUNTER_0
+    ----------------------------------------
+    Total                      2.050ns (0.279ns logic, 1.771ns route)
+                                       (13.6% logic, 86.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLOCK'
+  Total number of paths / destination ports: 36 / 36
+-------------------------------------------------------------------------
+Offset:              0.917ns (Levels of Logic = 1)
+  Source:            COUNTER_17 (FF)
+  Destination:       OUTPUT_1<17> (PAD)
+  Source Clock:      CLOCK rising
+
+  Data Path: COUNTER_17 to OUTPUT_1<17>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               7   0.478   0.439  COUNTER_17 (COUNTER_17)
+     OBUF:I->O                 0.000          OUTPUT_1_17_OBUF (OUTPUT_1<17>)
+    ----------------------------------------
+    Total                      0.917ns (0.478ns logic, 0.439ns route)
+                                       (52.1% logic, 47.9% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               0.536ns (Levels of Logic = 2)
+  Source:            INPUT_1_VALID (PAD)
+  Destination:       DATA_WRITE (PAD)
+
+  Data Path: INPUT_1_VALID to DATA_WRITE
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            22   0.001   0.535  INPUT_1_VALID_IBUF (DATA_WRITE_OBUF)
+     OBUF:I->O                 0.000          DATA_WRITE_OBUF (DATA_WRITE)
+    ----------------------------------------
+    Total                      0.536ns (0.001ns logic, 0.535ns route)
+                                       (0.2% logic, 99.8% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLOCK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK          |    3.345|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 8.67 secs
+ 
+--> 
+
+Total memory usage is 411028 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

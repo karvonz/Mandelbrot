@@ -1,15 +1,13 @@
-Release 14.7 ngdbuild P.20131013 (lin64)
+Release 14.7 ngdbuild P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Command Line:
-/media/vincent/3A94AC4694AC068B/partition_linux/ise/14.7/ISE_DS/ISE/bin/lin64/un
-wrapped/ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc
-firmware/example_designs/ucf/ml605_extphy.ucf -p xc7a100t-csg324-1
-top_ml605_extphy.ngc top_ml605_extphy.ngd
+Command Line: D:\ISE\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe -intstyle
+ise -dd _ngo -nt timestamp -uc firmware/example_designs/ucf/ml605_extphy.ucf -p
+xc7a100t-csg324-1 top_ml605_extphy.ngc top_ml605_extphy.ngd
 
 Reading NGO file
-"/home/vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/top_ml605_extphy.
-ngc" ...
+"D:/Vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/top_ml605_extphy.ngc
+" ...
 Gathering constraint information from source properties...
 Done.
 
@@ -54,10 +52,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:  11
 
-Total memory usage is 500284 kilobytes
+Total memory usage is 286784 kilobytes
 
 Writing NGD file "top_ml605_extphy.ngd" ...
-Total REAL time to NGDBUILD completion:  45 sec
-Total CPU time to NGDBUILD completion:   44 sec
+Total REAL time to NGDBUILD completion:  17 sec
+Total CPU time to NGDBUILD completion:   15 sec
 
 Writing NGDBUILD log file "top_ml605_extphy.bld"...

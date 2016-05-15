@@ -35,14 +35,13 @@ entity VGA_bitmap_640x480 is
        reset        : in  std_logic;
        VGA_hs       : out std_logic;   -- horisontal vga syncr.
        VGA_vs       : out std_logic;   -- vertical vga syncr.
-       iter      : out std_logic_vector(3 downto 0);   -- red output
-      --VGA_green    : out std_logic_vector(3 downto 0);   -- green output
-      -- VGA_blue     : out std_logic_vector(3 downto 0);   -- blue output
-
-       ADDR         : in  std_logic_vector(18 downto 0);
-       data_in      : in  std_logic_vector(3 downto 0);
-       data_write   : in  std_logic);
-       --data_out     : out std_logic_vector(bit_per_pixel - 1 downto 0));
+       iter      : out std_logic_vector(3 downto 0);   -- iter output
+       ADDR1         : in  std_logic_vector(18 downto 0);
+       data_in1      : in  std_logic_vector(3 downto 0);
+       data_write1   : in  std_logic;
+		 ADDR2         : in  std_logic_vector(18 downto 0);
+       data_in2      : in  std_logic_vector(3 downto 0);
+       data_write2   : in  std_logic);
 end VGA_bitmap_640x480;
 
 architecture Behavioral of VGA_bitmap_640x480 is
@@ -96,8 +95,11 @@ process (clk)
 begin
    if (clk'event and clk = '1') then
 --      if (<enableA> = '1') then
-         if (data_write = '1') then
-            screen(to_integer(unsigned(ADDR))) <= TO_BitVector( data_in );
+         if (data_write1 = '1') then
+            screen(to_integer(unsigned(ADDR1))) <= TO_BitVector( data_in1 );
+         end if;
+			if (data_write2 = '1') then
+            screen(to_integer(unsigned(ADDR2))) <= TO_BitVector( data_in2 );
          end if;
         -- data_out <= To_StdLogicVector( screen(to_integer(unsigned(ADDR))) );
 --      end if;

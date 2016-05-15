@@ -1,0 +1,2 @@
+vhdl isim_temp "../../vhdl/plasma_core/vhdl/mlite_pack.vhd"
+vhdl isim_temp "../../vhdl/custom/ray_tracer_v3/coproc_4.vhd"

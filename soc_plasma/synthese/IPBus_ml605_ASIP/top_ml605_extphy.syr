@@ -1470,3 +1470,543 @@ Optimizing FSM <Inst_plasma/u4_dma/FSM_1> on signal <dma_state[1:4]> with user e
  init_write_data | 1101
  wait_one_cycle  | 1110
 -----------------------------
+INFO:Xst:2261 - The FF/Latch <byte_we_0> in Unit <dma_engine> is equivalent to the following 3 FFs/Latches, which will be removed : <byte_we_1> <byte_we_2> <byte_we_3> 
+
+Optimizing unit <function_1> ...
+
+Optimizing unit <function_2> ...
+
+Optimizing unit <function_3> ...
+
+Optimizing unit <function_4> ...
+
+Optimizing unit <function_5> ...
+
+Optimizing unit <function_6> ...
+
+Optimizing unit <function_7> ...
+
+Optimizing unit <function_8> ...
+
+Optimizing unit <function_9> ...
+
+Optimizing unit <function_10> ...
+
+Optimizing unit <function_11> ...
+
+Optimizing unit <function_12> ...
+
+Optimizing unit <function_13> ...
+
+Optimizing unit <function_14> ...
+
+Optimizing unit <function_16> ...
+
+Optimizing unit <RAM> ...
+
+Optimizing unit <coproc_1> ...
+
+Optimizing unit <coproc_3> ...
+
+Optimizing unit <top_ml605_extphy> ...
+
+Optimizing unit <plasma> ...
+
+Optimizing unit <memory_64k> ...
+
+Optimizing unit <mlite_cpu> ...
+
+Optimizing unit <mem_ctrl> ...
+
+Optimizing unit <pc_next> ...
+
+Optimizing unit <reg_bank> ...
+
+Optimizing unit <comb_alu_1> ...
+
+Optimizing unit <function_15> ...
+
+Optimizing unit <function_17> ...
+
+Optimizing unit <function_18> ...
+
+Optimizing unit <sequ_alu_1> ...
+
+Optimizing unit <mult> ...
+
+Optimizing unit <pipeline> ...
+
+Optimizing unit <control> ...
+
+Optimizing unit <bus_mux> ...
+
+Optimizing unit <alu> ...
+
+Optimizing unit <shifter> ...
+
+Optimizing unit <uart> ...
+
+Optimizing unit <dma_engine> ...
+
+Optimizing unit <coproc_2> ...
+
+Optimizing unit <coproc_4> ...
+
+Optimizing unit <VGA_bitmap_640x480> ...
+
+Optimizing unit <Colorgen> ...
+WARNING:Xst:2677 - Node <salu_1_funcD_1> of sequential type is unconnected in block <u9_pipeline>.
+WARNING:Xst:2677 - Node <salu_1_funcD_2> of sequential type is unconnected in block <u9_pipeline>.
+WARNING:Xst:2677 - Node <salu_1_funcD_3> of sequential type is unconnected in block <u9_pipeline>.
+WARNING:Xst:2677 - Node <salu_1_funcD_4> of sequential type is unconnected in block <u9_pipeline>.
+WARNING:Xst:2677 - Node <salu_1_funcD_5> of sequential type is unconnected in block <u9_pipeline>.
+WARNING:Xst:2677 - Node <ptr_dst_0> of sequential type is unconnected in block <u4_dma>.
+WARNING:Xst:2677 - Node <ptr_dst_1> of sequential type is unconnected in block <u4_dma>.
+WARNING:Xst:2677 - Node <ptr_src_0> of sequential type is unconnected in block <u4_dma>.
+WARNING:Xst:2677 - Node <ptr_src_1> of sequential type is unconnected in block <u4_dma>.
+WARNING:Xst:2677 - Node <struc_ptr_0> of sequential type is unconnected in block <u4_dma>.
+WARNING:Xst:2677 - Node <struc_ptr_1> of sequential type is unconnected in block <u4_dma>.
+WARNING:Xst:2677 - Node <address_0> of sequential type is unconnected in block <u4_dma>.
+WARNING:Xst:2677 - Node <address_1> of sequential type is unconnected in block <u4_dma>.
+WARNING:Xst:2677 - Node <address_14> of sequential type is unconnected in block <u4_dma>.
+WARNING:Xst:2677 - Node <address_15> of sequential type is unconnected in block <u4_dma>.
+WARNING:Xst:2677 - Node <address_16> of sequential type is unconnected in block <u4_dma>.
+WARNING:Xst:2677 - Node <address_17> of sequential type is unconnected in block <u4_dma>.
+WARNING:Xst:2677 - Node <address_18> of sequential type is unconnected in block <u4_dma>.
+WARNING:Xst:2677 - Node <address_19> of sequential type is unconnected in block <u4_dma>.
+WARNING:Xst:2677 - Node <address_20> of sequential type is unconnected in block <u4_dma>.
+WARNING:Xst:2677 - Node <address_21> of sequential type is unconnected in block <u4_dma>.
+WARNING:Xst:2677 - Node <address_22> of sequential type is unconnected in block <u4_dma>.
+WARNING:Xst:2677 - Node <address_23> of sequential type is unconnected in block <u4_dma>.
+WARNING:Xst:2677 - Node <address_24> of sequential type is unconnected in block <u4_dma>.
+WARNING:Xst:2677 - Node <address_25> of sequential type is unconnected in block <u4_dma>.
+WARNING:Xst:2677 - Node <address_26> of sequential type is unconnected in block <u4_dma>.
+WARNING:Xst:2677 - Node <address_27> of sequential type is unconnected in block <u4_dma>.
+WARNING:Xst:1293 - FF/Latch <counter_2> has a constant value of 0 in block <u62_alu>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <delay_write_reg_9> (without init value) has a constant value of 0 in block <uart_gen.u3_uart>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <delay_write_reg_10> (without init value) has a constant value of 0 in block <uart_gen.u3_uart>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <delay_read_reg_9> (without init value) has a constant value of 0 in block <uart_gen.u3_uart>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <delay_read_reg_10> (without init value) has a constant value of 0 in block <uart_gen.u3_uart>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top_ml605_extphy, actual ratio is 1.
+
+Final Macro Processing ...
+
+Processing Unit <VGA> :
+	Found 2-bit shift register for signal <INST_LPM_FF1_2>.
+	Found 2-bit shift register for signal <INST_LPM_FF1_1>.
+	Found 2-bit shift register for signal <INST_LPM_FF1_0>.
+Unit <VGA> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1165
+ Flip-Flops                                            : 1165
+# Shift Registers                                      : 3
+ 2-bit shift register                                  : 3
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : top_ml605_extphy.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 5593
+#      GND                         : 25
+#      INV                         : 20
+#      LUT1                        : 230
+#      LUT2                        : 570
+#      LUT3                        : 681
+#      LUT4                        : 340
+#      LUT5                        : 882
+#      LUT6                        : 1230
+#      MUXCY                       : 789
+#      MUXF7                       : 57
+#      VCC                         : 14
+#      XORCY                       : 755
+# FlipFlops/Latches                : 1168
+#      FDC                         : 185
+#      FDCE                        : 552
+#      FDE                         : 65
+#      FDPE                        : 8
+#      FDR                         : 117
+#      FDRE                        : 240
+#      FDS                         : 1
+# RAMS                             : 140
+#      RAM256X1S                   : 32
+#      RAM32X1D                    : 64
+#      RAMB36E1                    : 44
+# Shift Registers                  : 3
+#      SRLC16E                     : 3
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 27
+#      IBUF                        : 11
+#      OBUF                        : 16
+# DSPs                             : 40
+#      DSP48E1                     : 40
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            1167  out of  126800     0%  
+ Number of Slice LUTs:                 4212  out of  63400     6%  
+    Number used as Logic:              3953  out of  63400     6%  
+    Number used as Memory:              259  out of  19000     1%  
+       Number used as RAM:              256
+       Number used as SRL:                3
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   4649
+   Number with an unused Flip Flop:    3482  out of   4649    74%  
+   Number with an unused LUT:           437  out of   4649     9%  
+   Number of fully used LUT-FF pairs:   730  out of   4649    15%  
+   Number of unique control sets:        52
+
+IO Utilization: 
+ Number of IOs:                          28
+ Number of bonded IOBs:                  28  out of    210    13%  
+    IOB Flip Flops/Latches:               1
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:               44  out of    135    32%  
+    Number using Block RAM only:         44
+ Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
+ Number of DSP48E1s:                     40  out of    240    16%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK100                             | BUFGP                  | 92    |
+CLK50                              | BUFG                   | 1271  |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+--------------------------------------------------------------------------------------+-----------------------------------------------+-------+
+Control Signal                                                                        | Buffer(FF name)                               | Load  |
+--------------------------------------------------------------------------------------+-----------------------------------------------+-------+
+INST_PLASMA/U5D_COPROC/VGA/N100(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN111:CASCADEOUTB)| NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN11)| 2     |
+INST_PLASMA/U5D_COPROC/VGA/N102(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN131:CASCADEOUTA)| NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN13)| 2     |
+INST_PLASMA/U5D_COPROC/VGA/N104(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN131:CASCADEOUTB)| NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN13)| 2     |
+INST_PLASMA/U5D_COPROC/VGA/N106(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN141:CASCADEOUTA)| NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN14)| 2     |
+INST_PLASMA/U5D_COPROC/VGA/N108(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN141:CASCADEOUTB)| NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN14)| 2     |
+INST_PLASMA/U5D_COPROC/VGA/N110(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN151:CASCADEOUTA)| NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN15)| 2     |
+INST_PLASMA/U5D_COPROC/VGA/N112(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN151:CASCADEOUTB)| NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN15)| 2     |
+INST_PLASMA/U5D_COPROC/VGA/N114(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN161:CASCADEOUTA)| NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN16)| 2     |
+INST_PLASMA/U5D_COPROC/VGA/N116(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN161:CASCADEOUTB)| NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN16)| 2     |
+INST_PLASMA/U5D_COPROC/VGA/N118(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN171:CASCADEOUTA)| NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN17)| 2     |
+INST_PLASMA/U5D_COPROC/VGA/N120(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN171:CASCADEOUTB)| NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN17)| 2     |
+INST_PLASMA/U5D_COPROC/VGA/N122(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN181:CASCADEOUTA)| NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN18)| 2     |
+INST_PLASMA/U5D_COPROC/VGA/N124(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN181:CASCADEOUTB)| NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN18)| 2     |
+INST_PLASMA/U5D_COPROC/VGA/N126(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN191:CASCADEOUTA)| NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN19)| 2     |
+INST_PLASMA/U5D_COPROC/VGA/N128(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN191:CASCADEOUTB)| NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN19)| 2     |
+INST_PLASMA/U5D_COPROC/VGA/N130(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN201:CASCADEOUTA)| NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN20)| 2     |
+INST_PLASMA/U5D_COPROC/VGA/N132(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN201:CASCADEOUTB)| NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN20)| 2     |
+INST_PLASMA/U5D_COPROC/VGA/N54(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN31:CASCADEOUTA)  | NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN3) | 2     |
+INST_PLASMA/U5D_COPROC/VGA/N56(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN31:CASCADEOUTB)  | NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN3) | 2     |
+INST_PLASMA/U5D_COPROC/VGA/N58(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN110:CASCADEOUTA) | NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN1) | 2     |
+INST_PLASMA/U5D_COPROC/VGA/N60(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN110:CASCADEOUTB) | NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN1) | 2     |
+INST_PLASMA/U5D_COPROC/VGA/N62(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN21:CASCADEOUTA)  | NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN2) | 2     |
+INST_PLASMA/U5D_COPROC/VGA/N64(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN21:CASCADEOUTB)  | NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN2) | 2     |
+INST_PLASMA/U5D_COPROC/VGA/N66(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN41:CASCADEOUTA)  | NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN4) | 2     |
+INST_PLASMA/U5D_COPROC/VGA/N68(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN41:CASCADEOUTB)  | NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN4) | 2     |
+INST_PLASMA/U5D_COPROC/VGA/N70(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN51:CASCADEOUTA)  | NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN5) | 2     |
+INST_PLASMA/U5D_COPROC/VGA/N72(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN51:CASCADEOUTB)  | NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN5) | 2     |
+INST_PLASMA/U5D_COPROC/VGA/N74(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN61:CASCADEOUTA)  | NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN6) | 2     |
+INST_PLASMA/U5D_COPROC/VGA/N76(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN61:CASCADEOUTB)  | NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN6) | 2     |
+INST_PLASMA/U5D_COPROC/VGA/N78(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN71:CASCADEOUTA)  | NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN7) | 2     |
+INST_PLASMA/U5D_COPROC/VGA/N80(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN71:CASCADEOUTB)  | NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN7) | 2     |
+INST_PLASMA/U5D_COPROC/VGA/N82(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN81:CASCADEOUTA)  | NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN8) | 2     |
+INST_PLASMA/U5D_COPROC/VGA/N84(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN81:CASCADEOUTB)  | NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN8) | 2     |
+INST_PLASMA/U5D_COPROC/VGA/N86(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN91:CASCADEOUTA)  | NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN9) | 2     |
+INST_PLASMA/U5D_COPROC/VGA/N88(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN91:CASCADEOUTB)  | NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN9) | 2     |
+INST_PLASMA/U5D_COPROC/VGA/N90(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN121:CASCADEOUTA) | NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN12)| 2     |
+INST_PLASMA/U5D_COPROC/VGA/N92(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN121:CASCADEOUTB) | NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN12)| 2     |
+INST_PLASMA/U5D_COPROC/VGA/N94(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN101:CASCADEOUTA) | NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN10)| 2     |
+INST_PLASMA/U5D_COPROC/VGA/N96(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN101:CASCADEOUTB) | NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN10)| 2     |
+INST_PLASMA/U5D_COPROC/VGA/N98(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN111:CASCADEOUTA) | NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN11)| 2     |
+--------------------------------------------------------------------------------------+-----------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 17.714ns (Maximum Frequency: 56.454MHz)
+   Minimum input arrival time before clock: 6.013ns
+   Maximum output required time after clock: 3.534ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK100'
+  Clock period: 4.611ns (frequency: 216.886MHz)
+  Total number of paths / destination ports: 1389 / 122
+-------------------------------------------------------------------------
+Delay:               4.611ns (Levels of Logic = 3)
+  Source:            INST_PLASMA/U5D_COPROC/VGA/PIX_READ_ADDR_6 (FF)
+  Destination:       INST_PLASMA/U5D_COPROC/VGA/PIX_READ_ADDR_0 (FF)
+  Source Clock:      CLK100 rising
+  Destination Clock: CLK100 rising
+
+  Data Path: INST_PLASMA/U5D_COPROC/VGA/PIX_READ_ADDR_6 to INST_PLASMA/U5D_COPROC/VGA/PIX_READ_ADDR_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            42   0.478   1.094  PIX_READ_ADDR_6 (PIX_READ_ADDR_6)
+     LUT6:I0->O            1   0.124   0.939  MCOUNT_PIX_READ_ADDR_VAL1 (MCOUNT_PIX_READ_ADDR_VAL1)
+     LUT6:I0->O            1   0.124   0.716  MCOUNT_PIX_READ_ADDR_VAL5 (MCOUNT_PIX_READ_ADDR_VAL5)
+     LUT3:I0->O           19   0.124   0.518  MCOUNT_PIX_READ_ADDR_VAL6 (MCOUNT_PIX_READ_ADDR_VAL)
+     FDRE:R                    0.494          PIX_READ_ADDR_0
+    ----------------------------------------
+    Total                      4.611ns (1.344ns logic, 3.267ns route)
+                                       (29.1% logic, 70.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK50'
+  Clock period: 17.714ns (frequency: 56.454MHz)
+  Total number of paths / destination ports: 384636093663 / 4507
+-------------------------------------------------------------------------
+Delay:               17.714ns (Levels of Logic = 41)
+  Source:            INST_PLASMA/U1_CPU/U9_PIPELINE/A_BUSD_2 (FF)
+  Destination:       INST_PLASMA/LOCAL_MEMORY/MRAM_MEMBANK11 (RAM)
+  Source Clock:      CLK50 rising
+  Destination Clock: CLK50 rising
+
+  Data Path: INST_PLASMA/U1_CPU/U9_PIPELINE/A_BUSD_2 to INST_PLASMA/LOCAL_MEMORY/MRAM_MEMBANK11
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q           125   0.478   0.572  A_BUSD_2 (A_BUSD_2)
+     end scope: 'INST_PLASMA/U1_CPU/U9_PIPELINE:A_BUSD<2>'
+     begin scope: 'INST_PLASMA/U1_CPU/U61_ALU:A_IN<2>'
+     begin scope: 'INST_PLASMA/U1_CPU/U61_ALU/FX3:INPUT_1<2>'
+     DSP48E1:A2->PCOUT47    1   4.036   0.000  MMULT_COMPUTATION.RTEMP1 (MMULT_COMPUTATION.RTEMP1_PCOUT_TO_MMULT_COMPUTATION.RTEMP11_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.713   0.000  MMULT_COMPUTATION.RTEMP11 (MMULT_COMPUTATION.RTEMP11_PCOUT_TO_MMULT_COMPUTATION.RTEMP12_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.713   0.000  MMULT_COMPUTATION.RTEMP12 (MMULT_COMPUTATION.RTEMP12_PCOUT_TO_MMULT_COMPUTATION.RTEMP13_PCIN_47)
+     DSP48E1:PCIN47->P0    1   1.518   0.536  MMULT_COMPUTATION.RTEMP13 (COMPUTATION.RTEMP1<34>)
+     LUT2:I0->O            1   0.124   0.000  MADD_COMPUTATION.RTEMP3_MADD_LUT<34> (MADD_COMPUTATION.RTEMP3_MADD_LUT<34>)
+     MUXCY:S->O            1   0.472   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<34> (MADD_COMPUTATION.RTEMP3_MADD_CY<34>)
+     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<35> (MADD_COMPUTATION.RTEMP3_MADD_CY<35>)
+     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<36> (MADD_COMPUTATION.RTEMP3_MADD_CY<36>)
+     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<37> (MADD_COMPUTATION.RTEMP3_MADD_CY<37>)
+     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<38> (MADD_COMPUTATION.RTEMP3_MADD_CY<38>)
+     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<39> (MADD_COMPUTATION.RTEMP3_MADD_CY<39>)
+     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<40> (MADD_COMPUTATION.RTEMP3_MADD_CY<40>)
+     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<41> (MADD_COMPUTATION.RTEMP3_MADD_CY<41>)
+     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<42> (MADD_COMPUTATION.RTEMP3_MADD_CY<42>)
+     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<43> (MADD_COMPUTATION.RTEMP3_MADD_CY<43>)
+     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<44> (MADD_COMPUTATION.RTEMP3_MADD_CY<44>)
+     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<45> (MADD_COMPUTATION.RTEMP3_MADD_CY<45>)
+     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<46> (MADD_COMPUTATION.RTEMP3_MADD_CY<46>)
+     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<47> (MADD_COMPUTATION.RTEMP3_MADD_CY<47>)
+     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<48> (MADD_COMPUTATION.RTEMP3_MADD_CY<48>)
+     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<49> (MADD_COMPUTATION.RTEMP3_MADD_CY<49>)
+     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<50> (MADD_COMPUTATION.RTEMP3_MADD_CY<50>)
+     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<51> (MADD_COMPUTATION.RTEMP3_MADD_CY<51>)
+     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<52> (MADD_COMPUTATION.RTEMP3_MADD_CY<52>)
+     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<53> (MADD_COMPUTATION.RTEMP3_MADD_CY<53>)
+     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<54> (MADD_COMPUTATION.RTEMP3_MADD_CY<54>)
+     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<55> (MADD_COMPUTATION.RTEMP3_MADD_CY<55>)
+     XORCY:CI->O           1   0.510   0.421  MADD_COMPUTATION.RTEMP3_MADD_XOR<56> (OUTPUT_1<28>)
+     end scope: 'INST_PLASMA/U1_CPU/U61_ALU/FX3:OUTPUT_1<28>'
+     LUT6:I5->O            1   0.124   0.536  MMUX_C_ALU1267 (MMUX_C_ALU1267)
+     LUT6:I4->O            1   0.124   0.421  MMUX_C_ALU12610 (C_ALU<28>)
+     end scope: 'INST_PLASMA/U1_CPU/U61_ALU:C_ALU<28>'
+     LUT5:I4->O            7   0.124   0.461  C_BUS<28>1 (C_BUS<28>)
+     begin scope: 'INST_PLASMA/U1_CPU/U1_PC_NEXT:PC_NEW<28>'
+     LUT6:I5->O            1   0.124   0.421  MMUX_PC_SELECT.PC_NEXT191 (PC_FUTURE<28>)
+     end scope: 'INST_PLASMA/U1_CPU/U1_PC_NEXT:PC_FUTURE<28>'
+     begin scope: 'INST_PLASMA/U1_CPU/U2_MEM_CTRL:ADDRESS_PC<28>'
+     LUT5:I4->O            3   0.124   0.790  MMUX_MEM_PROC.ADDRESS_VAR191 (ADDRESS_NEXT<28>)
+     end scope: 'INST_PLASMA/U1_CPU/U2_MEM_CTRL:ADDRESS_NEXT<28>'
+     end scope: 'INST_PLASMA/U1_CPU:ADDRESS_NEXT<28>'
+     LUT6:I2->O           36   0.124   0.574  MMUX_ENABLE_LOCAL_MEM12 (ENABLE_LOCAL_MEM)
+     begin scope: 'INST_PLASMA/LOCAL_MEMORY:ENABLE'
+     LUT2:I1->O            8   0.124   0.445  WE_SELECT<0>1 (WE_SELECT<0>_0)
+     RAM256X1S:WE              0.490          MRAM_MEMBANK11
+    ----------------------------------------
+    Total                     17.714ns (12.536ns logic, 5.177ns route)
+                                       (70.8% logic, 29.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK100'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.102ns (Levels of Logic = 1)
+  Source:            RST (PAD)
+  Destination:       CLK50 (FF)
+  Destination Clock: CLK100 rising
+
+  Data Path: RST to CLK50
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           287   0.001   0.607  RST_IBUF (RST_IBUF)
+     FDC:CLR                   0.494          CLK50
+    ----------------------------------------
+    Total                      1.102ns (0.495ns logic, 0.607ns route)
+                                       (44.9% logic, 55.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK50'
+  Total number of paths / destination ports: 1603 / 1232
+-------------------------------------------------------------------------
+Offset:              6.013ns (Levels of Logic = 14)
+  Source:            BUTTONS<7> (PAD)
+  Destination:       INST_PLASMA/U1_CPU/U9_PIPELINE/REG_DEST_REG_16 (FF)
+  Destination Clock: CLK50 rising
+
+  Data Path: BUTTONS<7> to INST_PLASMA/U1_CPU/U9_PIPELINE/REG_DEST_REG_16
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   0.001   0.782  BUTTONS_7_IBUF (BUTTONS_7_IBUF)
+     begin scope: 'INST_PLASMA:GPIOA_IN<7>'
+     LUT5:I1->O            1   0.124   0.421  MMUX_CPU_DATA_R301 (MMUX_CPU_DATA_R30)
+     LUT6:I5->O            1   0.124   0.536  MMUX_CPU_DATA_R302 (MMUX_CPU_DATA_R301)
+     LUT6:I4->O            1   0.124   0.536  MMUX_CPU_DATA_R303 (MMUX_CPU_DATA_R302)
+     LUT3:I1->O            5   0.124   0.803  MMUX_CPU_DATA_R306 (CPU_DATA_R<7>)
+     begin scope: 'INST_PLASMA/U1_CPU:DATA_R<7>'
+     begin scope: 'INST_PLASMA/U1_CPU/U2_MEM_CTRL:DATA_R<7>'
+     LUT6:I2->O            2   0.124   0.427  MMUX_MEM_PROC.DATA_READ_VAR331 (MMUX_MEM_PROC.DATA_READ_VAR33)
+     LUT6:I5->O           16   0.124   0.519  MMUX_MEM_PROC.DATA_READ_VAR102 (MMUX_MEM_PROC.DATA_READ_VAR102)
+     LUT6:I5->O            1   0.124   0.421  MMUX_MEM_PROC.DATA_READ_VAR101 (DATA_READ<17>)
+     end scope: 'INST_PLASMA/U1_CPU/U2_MEM_CTRL:DATA_READ<17>'
+     begin scope: 'INST_PLASMA/U1_CPU/U5_BUS_MUX:C_MEMORY<17>'
+     LUT6:I5->O            1   0.124   0.421  MMUX_REG_DEST_OUT91 (MMUX_REG_DEST_OUT9)
+     LUT2:I1->O            1   0.124   0.000  MMUX_REG_DEST_OUT93 (REG_DEST_OUT<17>)
+     end scope: 'INST_PLASMA/U1_CPU/U5_BUS_MUX:REG_DEST_OUT<17>'
+     begin scope: 'INST_PLASMA/U1_CPU/U9_PIPELINE:REG_DEST<17>'
+     FDCE:D                    0.030          REG_DEST_REG_17
+    ----------------------------------------
+    Total                      6.013ns (1.147ns logic, 4.866ns route)
+                                       (19.1% logic, 80.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK100'
+  Total number of paths / destination ports: 38 / 5
+-------------------------------------------------------------------------
+Offset:              3.534ns (Levels of Logic = 7)
+  Source:            INST_PLASMA/U5D_COPROC/VGA/INST_LPM_FF1_2 (FF)
+  Destination:       VGA_BLUE<2> (PAD)
+  Source Clock:      CLK100 rising
+
+  Data Path: INST_PLASMA/U5D_COPROC/VGA/INST_LPM_FF1_2 to VGA_BLUE<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              4   0.478   0.959  INST_LPM_FF1_2 (INST_LPM_FF1_2)
+     LUT6:I0->O            1   0.124   0.536  INST_LPM_MUX1111 (INST_LPM_MUX111)
+     LUT3:I1->O            3   0.124   0.790  INST_LPM_MUX1112 (ITER<1>)
+     end scope: 'INST_PLASMA/U5D_COPROC/VGA:ITER<1>'
+     end scope: 'INST_PLASMA/U5D_COPROC:ITER<1>'
+     end scope: 'INST_PLASMA:ITER<1>'
+     begin scope: 'INSTCOLORGEN:ITER<1>'
+     LUT4:I0->O            1   0.124   0.399  MRAM_N000211 (VGA_BLUE<0>)
+     end scope: 'INSTCOLORGEN:VGA_BLUE<0>'
+     OBUF:I->O                 0.000          VGA_BLUE_0_OBUF (VGA_BLUE<0>)
+    ----------------------------------------
+    Total                      3.534ns (0.850ns logic, 2.684ns route)
+                                       (24.1% logic, 75.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK50'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              0.877ns (Levels of Logic = 1)
+  Source:            LED (FF)
+  Destination:       LED (PAD)
+  Source Clock:      CLK50 rising
+
+  Data Path: LED to LED
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              1   0.478   0.399  LED (LED_OBUF)
+     OBUF:I->O                 0.000          LED_OBUF (LED)
+    ----------------------------------------
+    Total                      0.877ns (0.478ns logic, 0.399ns route)
+                                       (54.5% logic, 45.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK100
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK100         |    4.611|         |         |         |
+CLK50          |    5.611|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock CLK50
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK50          |   17.714|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 39.00 secs
+Total CPU time to Xst completion: 38.77 secs
+ 
+--> 
+
+Total memory usage is 589852 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   90 (   0 filtered)
+Number of infos    :   25 (   0 filtered)
+

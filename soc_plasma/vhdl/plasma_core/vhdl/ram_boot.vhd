@@ -47,7 +47,8 @@ USE std.textio.ALL;
 ENTITY RAM IS
     GENERIC(
         memory_type : string  := "DEFAULT";
-        block_count : integer := 03); 
+        block_count : integer := 03;
+		  plasma_code : string := "../code_bin.txt"); 
     PORT(
         clk               : IN  std_logic;
         enable            : IN  std_logic;
@@ -86,11 +87,13 @@ ARCHITECTURE logic OF RAM IS
         END LOOP;
         RETURN ram_name;
     END FUNCTION;
+	 
 
-    SIGNAL laRAM1 : memoire := load_memoire("../code_bin.txt", 1);
-    SIGNAL laRAM2 : memoire := load_memoire("../code_bin.txt", 2);
-    SIGNAL laRAM3 : memoire := load_memoire("../code_bin.txt", 3);
-    SIGNAL laRAM4 : memoire := load_memoire("../code_bin.txt", 4);
+    SIGNAL laRAM1 : memoire := load_memoire(plasma_code, 1);
+    SIGNAL laRAM2 : memoire := load_memoire(plasma_code, 2);
+    SIGNAL laRAM3 : memoire := load_memoire(plasma_code, 3);
+    SIGNAL laRAM4 : memoire := load_memoire(plasma_code, 4);
+
 
 	--
 	-- CETTE MEMOIRE EST MICROSCOPIQUE... PAS LA PEINE D'UTILISER UN BLOC RAM POUR
