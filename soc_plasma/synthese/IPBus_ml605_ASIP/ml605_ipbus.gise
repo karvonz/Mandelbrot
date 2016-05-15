@@ -42,6 +42,16 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="coproc_4_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="coproc_4_summary.html"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="coproc_4_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="dma_engine.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="dma_engine.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="dma_engine.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="dma_engine.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="dma_engine.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="dma_engine.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="dma_engine.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="dma_engine.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="dma_engine_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="dma_engine_xst.xrpt"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="function_1_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="test_top_guide.ncd" xil_pn:origination="imported"/>
@@ -100,67 +110,64 @@
     <transform xil_pn:end_ts="1463320161" xil_pn:in_ck="-6039520857042180486" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1463320161">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="../../vhdl/custom/mandelbrot/Colorgen.vhd"/>
-      <outfile xil_pn:name="../../vhdl/custom/mandelbrot/Shared.vhd"/>
-      <outfile xil_pn:name="../../vhdl/custom/mandelbrot/function_1.vhd"/>
-      <outfile xil_pn:name="../../vhdl/custom/mandelbrot/function_2.vhd"/>
-      <outfile xil_pn:name="../../vhdl/custom/mandelbrot/function_3.vhd"/>
-      <outfile xil_pn:name="../../vhdl/custom/mandelbrot/function_4.vhd"/>
-      <outfile xil_pn:name="../../vhdl/custom/mandelbrot/vga_bitmap_640x480.vhd"/>
-      <outfile xil_pn:name="../../vhdl/custom/ray_tracer_v3/coproc_1.vhd"/>
-      <outfile xil_pn:name="../../vhdl/custom/ray_tracer_v3/coproc_2.vhd"/>
-      <outfile xil_pn:name="../../vhdl/custom/ray_tracer_v3/coproc_3.vhd"/>
-      <outfile xil_pn:name="../../vhdl/custom/ray_tracer_v3/coproc_4.vhd"/>
-      <outfile xil_pn:name="../../vhdl/custom/ray_tracer_v3/function_10.vhd"/>
-      <outfile xil_pn:name="../../vhdl/custom/ray_tracer_v3/function_11.vhd"/>
-      <outfile xil_pn:name="../../vhdl/custom/ray_tracer_v3/function_12.vhd"/>
-      <outfile xil_pn:name="../../vhdl/custom/ray_tracer_v3/function_13.vhd"/>
-      <outfile xil_pn:name="../../vhdl/custom/ray_tracer_v3/function_14.vhd"/>
-      <outfile xil_pn:name="../../vhdl/custom/ray_tracer_v3/function_15.vhd"/>
-      <outfile xil_pn:name="../../vhdl/custom/ray_tracer_v3/function_16.vhd"/>
-      <outfile xil_pn:name="../../vhdl/custom/ray_tracer_v3/function_17.vhd"/>
-      <outfile xil_pn:name="../../vhdl/custom/ray_tracer_v3/function_18.vhd"/>
-      <outfile xil_pn:name="../../vhdl/custom/ray_tracer_v3/function_19.vhd"/>
-      <outfile xil_pn:name="../../vhdl/custom/ray_tracer_v3/function_5.vhd"/>
-      <outfile xil_pn:name="../../vhdl/custom/ray_tracer_v3/function_6.vhd"/>
-      <outfile xil_pn:name="../../vhdl/custom/ray_tracer_v3/function_7.vhd"/>
-      <outfile xil_pn:name="../../vhdl/custom/ray_tracer_v3/function_8.vhd"/>
-      <outfile xil_pn:name="../../vhdl/custom/ray_tracer_v3/function_9.vhd"/>
-      <outfile xil_pn:name="../../vhdl/plasma_core/vhdl/alu.vhd"/>
-      <outfile xil_pn:name="../../vhdl/plasma_core/vhdl/bus_mux.vhd"/>
-      <outfile xil_pn:name="../../vhdl/plasma_core/vhdl/cam/cam_pkg.vhd"/>
-      <outfile xil_pn:name="../../vhdl/plasma_core/vhdl/control.vhd"/>
-      <outfile xil_pn:name="../../vhdl/plasma_core/vhdl/dma_engine.vhd"/>
-      <outfile xil_pn:name="../../vhdl/plasma_core/vhdl/ims/comb_alu_1.vhd"/>
-      <outfile xil_pn:name="../../vhdl/plasma_core/vhdl/ims/conversion.vhd"/>
-      <outfile xil_pn:name="../../vhdl/plasma_core/vhdl/ims/sequ_alu_1.vhd"/>
-      <outfile xil_pn:name="../../vhdl/plasma_core/vhdl/mem_ctrl.vhd"/>
-      <outfile xil_pn:name="../../vhdl/plasma_core/vhdl/memory_64k.vhd"/>
-      <outfile xil_pn:name="../../vhdl/plasma_core/vhdl/mlite_cpu.vhd"/>
-      <outfile xil_pn:name="../../vhdl/plasma_core/vhdl/mlite_pack.vhd"/>
-      <outfile xil_pn:name="../../vhdl/plasma_core/vhdl/mult.vhd"/>
-      <outfile xil_pn:name="../../vhdl/plasma_core/vhdl/pc_next.vhd"/>
-      <outfile xil_pn:name="../../vhdl/plasma_core/vhdl/pipeline.vhd"/>
-      <outfile xil_pn:name="../../vhdl/plasma_core/vhdl/plasma.vhd"/>
-      <outfile xil_pn:name="../../vhdl/plasma_core/vhdl/ram_boot.vhd"/>
-      <outfile xil_pn:name="../../vhdl/plasma_core/vhdl/reg_bank.vhd"/>
-      <outfile xil_pn:name="../../vhdl/plasma_core/vhdl/shifter.vhd"/>
-      <outfile xil_pn:name="../../vhdl/plasma_core/vhdl/top_sp605.vhd"/>
-      <outfile xil_pn:name="../../vhdl/plasma_core/vhdl/uart.vhd"/>
-      <outfile xil_pn:name="firmware/ethernet/hdl/mac_arbiter_decl.vhd"/>
-      <outfile xil_pn:name="firmware/ipbus/hdl/bus_arb_decl.vhd"/>
-      <outfile xil_pn:name="firmware/ipbus/hdl/ipbus_package.vhd"/>
-      <outfile xil_pn:name="test_top.vhd"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputChanged"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
-    <transform xil_pn:end_ts="1463318789" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1463318789">
+    <transform xil_pn:end_ts="1463332087" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1463332087">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1463247590" xil_pn:in_ck="-8510067790769689823" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-8274319280777203436" xil_pn:start_ts="1463247590">
+    <transform xil_pn:end_ts="1463333543" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="6330855278189163485" xil_pn:start_ts="1463333543">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
+    </transform>
+    <transform xil_pn:end_ts="1463333543" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-7908642995059783261" xil_pn:start_ts="1463333543">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1463333543" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1463333543">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1463333543" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="5673133688264116671" xil_pn:start_ts="1463333543">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1463333543" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="3206529612922900429" xil_pn:start_ts="1463333543">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1463333543" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="6323636857311594221" xil_pn:start_ts="1463333543">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1463334444" xil_pn:in_ck="-6039520857042180486" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="6806261483332067926" xil_pn:start_ts="1463333543">
+      <status xil_pn:value="AbortedRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="coproc_4.ngr"/>
+      <outfile xil_pn:name="dma_engine.ngr"/>
+      <outfile xil_pn:name="top_ml605_extphy.lso"/>
+      <outfile xil_pn:name="top_ml605_extphy.ngc"/>
+      <outfile xil_pn:name="top_ml605_extphy.ngr"/>
+      <outfile xil_pn:name="top_ml605_extphy.prj"/>
+      <outfile xil_pn:name="top_ml605_extphy.syr"/>
+      <outfile xil_pn:name="top_ml605_extphy.xst"/>
+      <outfile xil_pn:name="top_ml605_extphy_stx_beh.prj"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1463331234" xil_pn:in_ck="-8510067790769689823" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-8274319280777203436" xil_pn:start_ts="1463331234">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
     </transform>
   </transforms>
 

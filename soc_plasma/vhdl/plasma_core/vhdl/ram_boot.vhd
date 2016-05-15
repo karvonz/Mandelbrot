@@ -47,8 +47,9 @@ USE std.textio.ALL;
 ENTITY RAM IS
     GENERIC(
         memory_type : string  := "DEFAULT";
-        block_count : integer := 03;
-		  plasma_code : string := "../code_bin.txt"); 
+        plasma_code : string;
+		  block_count : integer := 03
+		  ); 
     PORT(
         clk               : IN  std_logic;
         enable            : IN  std_logic;

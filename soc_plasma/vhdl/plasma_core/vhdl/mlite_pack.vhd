@@ -591,7 +591,8 @@ PACKAGE mlite_pack IS
     ---------------------------------------------------------------------------------------
     COMPONENT ram
         GENERIC(
-            memory_type : string := "DEFAULT"
+            memory_type : string := "DEFAULT";
+				plasma_code : string
             );
         PORT(
             clk               : IN  std_logic;
@@ -655,7 +656,9 @@ PACKAGE mlite_pack IS
             log_file    : string    := "UNUSED";
             ethernet    : std_logic := '0';
             eUart       : std_logic := '0';
-            use_cache   : std_logic := '0'
+            use_cache   : std_logic := '0';
+				plasma_name : string;
+				plasma_code : string
             );
         PORT(
             clk             : IN  std_logic;

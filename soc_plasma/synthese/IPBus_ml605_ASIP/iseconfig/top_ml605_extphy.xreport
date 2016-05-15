@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-05-15T15:27:02</DateModified>
+  <DateModified>2016-05-15T19:32:21</DateModified>
   <ModuleName>top_ml605_extphy</ModuleName>
-  <SummaryTimeStamp>2016-05-15T15:26:42</SummaryTimeStamp>
+  <SummaryTimeStamp>2016-05-15T19:26:56</SummaryTimeStamp>
   <SavedFilePath>D:/Vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/iseconfig/top_ml605_extphy.xreport</SavedFilePath>
   <ImplementationReportsDirectory>D:/Vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP\</ImplementationReportsDirectory>
-  <DateInitialized>2016-05-15T15:27:02</DateInitialized>
+  <DateInitialized>2016-05-15T19:32:21</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>

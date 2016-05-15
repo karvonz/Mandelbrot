@@ -18,27 +18,27 @@ Checking Constraint Associations...
 Done...
 
 Checking expanded design ...
-WARNING:NgdBuild:452 - logical net 'INST_PLASMA/U1_CPU/SALU_1_FUNCD<5>' has no
+WARNING:NgdBuild:452 - logical net 'INST_PLASMA2/U1_CPU/SALU_1_FUNCD<5>' has no
    driver
-WARNING:NgdBuild:452 - logical net 'INST_PLASMA/U1_CPU/SALU_1_FUNCD<4>' has no
+WARNING:NgdBuild:452 - logical net 'INST_PLASMA2/U1_CPU/SALU_1_FUNCD<4>' has no
    driver
-WARNING:NgdBuild:452 - logical net 'INST_PLASMA/U1_CPU/SALU_1_FUNCD<3>' has no
+WARNING:NgdBuild:452 - logical net 'INST_PLASMA2/U1_CPU/SALU_1_FUNCD<3>' has no
    driver
-WARNING:NgdBuild:452 - logical net 'INST_PLASMA/U1_CPU/SALU_1_FUNCD<2>' has no
+WARNING:NgdBuild:452 - logical net 'INST_PLASMA2/U1_CPU/SALU_1_FUNCD<2>' has no
    driver
-WARNING:NgdBuild:452 - logical net 'INST_PLASMA/U1_CPU/SALU_1_FUNCD<1>' has no
+WARNING:NgdBuild:452 - logical net 'INST_PLASMA2/U1_CPU/SALU_1_FUNCD<1>' has no
    driver
-WARNING:NgdBuild:452 - logical net 'INST_PLASMA/U1_CPU/RT_INDEX<5>' has no
+WARNING:NgdBuild:452 - logical net 'INST_PLASMA2/U1_CPU/RT_INDEX<5>' has no
    driver
-WARNING:NgdBuild:452 - logical net 'INST_PLASMA/U1_CPU/SALU_1_FUNC<5>' has no
+WARNING:NgdBuild:452 - logical net 'INST_PLASMA2/U1_CPU/SALU_1_FUNC<5>' has no
    driver
-WARNING:NgdBuild:452 - logical net 'INST_PLASMA/U1_CPU/SALU_1_FUNC<4>' has no
+WARNING:NgdBuild:452 - logical net 'INST_PLASMA2/U1_CPU/SALU_1_FUNC<4>' has no
    driver
-WARNING:NgdBuild:452 - logical net 'INST_PLASMA/U1_CPU/SALU_1_FUNC<3>' has no
+WARNING:NgdBuild:452 - logical net 'INST_PLASMA2/U1_CPU/SALU_1_FUNC<3>' has no
    driver
-WARNING:NgdBuild:452 - logical net 'INST_PLASMA/U1_CPU/SALU_1_FUNC<2>' has no
+WARNING:NgdBuild:452 - logical net 'INST_PLASMA2/U1_CPU/SALU_1_FUNC<2>' has no
    driver
-WARNING:NgdBuild:452 - logical net 'INST_PLASMA/U1_CPU/SALU_1_FUNC<1>' has no
+WARNING:NgdBuild:452 - logical net 'INST_PLASMA2/U1_CPU/SALU_1_FUNC<1>' has no
    driver
 
 Partition Implementation Status
@@ -52,10 +52,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:  11
 
-Total memory usage is 286784 kilobytes
+Total memory usage is 286796 kilobytes
 
 Writing NGD file "top_ml605_extphy.ngd" ...
-Total REAL time to NGDBUILD completion:  17 sec
-Total CPU time to NGDBUILD completion:   15 sec
+Total REAL time to NGDBUILD completion:  16 sec
+Total CPU time to NGDBUILD completion:   16 sec
 
 Writing NGDBUILD log file "top_ml605_extphy.bld"...

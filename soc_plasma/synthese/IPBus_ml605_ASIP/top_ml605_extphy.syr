@@ -210,9 +210,6 @@ Parsing architecture <logic> of entity <bus_mux>.
 Parsing VHDL file "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\alu.vhd" into library work
 Parsing entity <alu>.
 Parsing architecture <logic> of entity <alu>.
-Parsing VHDL file "D:\Vincent\Mandelbrot\soc_plasma\vhdl\custom\mandelbrot\vga_bitmap_640x480.vhd" into library work
-Parsing entity <VGA_bitmap_640x480>.
-Parsing architecture <Behavioral> of entity <vga_bitmap_640x480>.
 Parsing VHDL file "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\uart.vhd" into library work
 Parsing entity <uart>.
 Parsing architecture <logic> of entity <uart>.
@@ -243,13 +240,17 @@ Parsing architecture <logic> of entity <coproc_1>.
 Parsing VHDL file "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\plasma.vhd" into library work
 Parsing entity <plasma>.
 Parsing architecture <logic> of entity <plasma>.
+Parsing VHDL file "D:\Vincent\Mandelbrot\soc_plasma\vhdl\custom\mandelbrot\vga_bitmap_640x480.vhd" into library work
+Parsing entity <VGA_bitmap_640x480>.
+Parsing architecture <Behavioral> of entity <vga_bitmap_640x480>.
 Parsing VHDL file "D:\Vincent\Mandelbrot\soc_plasma\vhdl\custom\mandelbrot\Colorgen.vhd" into library work
 Parsing entity <Colorgen>.
 Parsing architecture <Behavioral> of entity <colorgen>.
 Parsing VHDL file "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\top_sp605.vhd" into library work
 Parsing entity <top_ml605_extphy>.
 Parsing architecture <rtl> of entity <top_ml605_extphy>.
-WARNING:HDLCompiler:946 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\top_sp605.vhd" Line 134: Actual for formal port gpioa_in is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\top_sp605.vhd" Line 151: Actual for formal port gpioa_in is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\top_sp605.vhd" Line 189: Actual for formal port gpioa_in is neither a static name nor a globally static expression
 
 =========================================================================
 *                            HDL Elaboration                            *
@@ -258,8 +259,8 @@ WARNING:HDLCompiler:946 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhd
 Elaborating entity <top_ml605_extphy> (architecture <rtl>) from library <work>.
 
 Elaborating entity <plasma> (architecture <logic>) with generics from library <work>.
-WARNING:HDLCompiler:1127 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\plasma.vhd" Line 189: Assignment to cache_hit ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\plasma.vhd" Line 207: Assignment to enable_eth ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\plasma.vhd" Line 194: Assignment to cache_hit ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\plasma.vhd" Line 212: Assignment to enable_eth ignored, since the identifier is never used
 
 Elaborating entity <memory_64k> (architecture <Behavioral>) from library <work>.
 
@@ -329,12 +330,12 @@ Elaborating entity <shifter> (architecture <logic>) with generics from library <
 Elaborating entity <mult> (architecture <logic>) with generics from library <work>.
 
 Elaborating entity <pipeline> (architecture <logic>) from library <work>.
-WARNING:HDLCompiler:1127 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\plasma.vhd" Line 281: Assignment to cache_access ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\plasma.vhd" Line 309: Assignment to eth_pause_in ignored, since the identifier is never used
-WARNING:HDLCompiler:92 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\plasma.vhd" Line 378: cop_1_output should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\plasma.vhd" Line 379: cop_2_output should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\plasma.vhd" Line 380: cop_3_output should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\plasma.vhd" Line 381: cop_4_output should be on the sensitivity list of the process
+WARNING:HDLCompiler:1127 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\plasma.vhd" Line 286: Assignment to cache_access ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\plasma.vhd" Line 314: Assignment to eth_pause_in ignored, since the identifier is never used
+WARNING:HDLCompiler:92 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\plasma.vhd" Line 383: cop_1_output should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\plasma.vhd" Line 384: cop_2_output should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\plasma.vhd" Line 385: cop_3_output should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\plasma.vhd" Line 386: cop_4_output should be on the sensitivity list of the process
 
 Elaborating entity <RAM> (architecture <logic>) with generics from library <work>.
 
@@ -342,7 +343,7 @@ Elaborating entity <uart> (architecture <logic>) with generics from library <wor
 WARNING:HDLCompiler:1127 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\uart.vhd" Line 50: Assignment to reg_debug ignored, since the identifier is never used
 
 Elaborating entity <dma_engine> (architecture <logic>) from library <work>.
-WARNING:HDLCompiler:1127 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\dma_engine.vhd" Line 77: Assignment to ptr_src_2 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\dma_engine.vhd" Line 78: Assignment to ptr_src_2 ignored, since the identifier is never used
 
 Elaborating entity <coproc_1> (architecture <logic>) from library <work>.
 
@@ -353,11 +354,17 @@ WARNING:HDLCompiler:634 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\custom\ray_trac
 
 Elaborating entity <coproc_3> (architecture <logic>) from library <work>.
 
-Elaborating entity <coproc_4> (architecture <logic>) from library <work>.
+Elaborating entity <coproc_4> (architecture <logic>) with generics from library <work>.
+WARNING:HDLCompiler:634 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\plasma.vhd" Line 145: Net <irq_eth_rec> does not have a driver.
+WARNING:HDLCompiler:634 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\plasma.vhd" Line 146: Net <irq_eth_send> does not have a driver.
+
+Elaborating entity <plasma> (architecture <logic>) with generics from library <work>.
+
+Elaborating entity <RAM> (architecture <logic>) with generics from library <work>.
+
+Elaborating entity <coproc_4> (architecture <logic>) with generics from library <work>.
 
 Elaborating entity <VGA_bitmap_640x480> (architecture <Behavioral>) from library <work>.
-WARNING:HDLCompiler:634 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\plasma.vhd" Line 140: Net <irq_eth_rec> does not have a driver.
-WARNING:HDLCompiler:634 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\plasma.vhd" Line 141: Net <irq_eth_send> does not have a driver.
 
 Elaborating entity <Colorgen> (architecture <Behavioral>) from library <work>.
 
@@ -367,27 +374,37 @@ Elaborating entity <Colorgen> (architecture <Behavioral>) from library <work>.
 
 Synthesizing Unit <top_ml605_extphy>.
     Related source file is "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\top_sp605.vhd".
-INFO:Xst:3210 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\top_sp605.vhd" line 99: Output port <address> of the instance <Inst_plasma> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\top_sp605.vhd" line 99: Output port <byte_we> of the instance <Inst_plasma> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\top_sp605.vhd" line 99: Output port <fifo_2_in_data> of the instance <Inst_plasma> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\top_sp605.vhd" line 99: Output port <gpio0_out> of the instance <Inst_plasma> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\top_sp605.vhd" line 99: Output port <no_ddr_start> of the instance <Inst_plasma> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\top_sp605.vhd" line 99: Output port <no_ddr_stop> of the instance <Inst_plasma> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\top_sp605.vhd" line 99: Output port <fifo_1_read_en> of the instance <Inst_plasma> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\top_sp605.vhd" line 99: Output port <fifo_1_write_en> of the instance <Inst_plasma> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\top_sp605.vhd" line 116: Output port <address> of the instance <Inst_plasma2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\top_sp605.vhd" line 116: Output port <byte_we> of the instance <Inst_plasma2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\top_sp605.vhd" line 116: Output port <fifo_2_in_data> of the instance <Inst_plasma2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\top_sp605.vhd" line 116: Output port <gpio0_out> of the instance <Inst_plasma2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\top_sp605.vhd" line 116: Output port <no_ddr_start> of the instance <Inst_plasma2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\top_sp605.vhd" line 116: Output port <no_ddr_stop> of the instance <Inst_plasma2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\top_sp605.vhd" line 116: Output port <fifo_1_read_en> of the instance <Inst_plasma2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\top_sp605.vhd" line 116: Output port <fifo_1_write_en> of the instance <Inst_plasma2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\top_sp605.vhd" line 154: Output port <address> of the instance <Inst_plasma1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\top_sp605.vhd" line 154: Output port <byte_we> of the instance <Inst_plasma1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\top_sp605.vhd" line 154: Output port <fifo_2_in_data> of the instance <Inst_plasma1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\top_sp605.vhd" line 154: Output port <gpio0_out> of the instance <Inst_plasma1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\top_sp605.vhd" line 154: Output port <no_ddr_start> of the instance <Inst_plasma1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\top_sp605.vhd" line 154: Output port <no_ddr_stop> of the instance <Inst_plasma1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\top_sp605.vhd" line 154: Output port <fifo_1_read_en> of the instance <Inst_plasma1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\top_sp605.vhd" line 154: Output port <fifo_1_write_en> of the instance <Inst_plasma1> is unconnected or connected to loadless signal.
     Found 1-bit register for signal <clk50>.
     Found 1-bit register for signal <led>.
     Summary:
 	inferred   2 D-type flip-flop(s).
 Unit <top_ml605_extphy> synthesized.
 
-Synthesizing Unit <plasma>.
+Synthesizing Unit <plasma_1>.
     Related source file is "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\plasma.vhd".
         memory_type = "XILINX_16X"
         log_file = "UNUSED"
         ethernet = '0'
         eUart = '1'
         use_cache = '0'
+        plasma_name = "P2"
+        plasma_code = "../code_bin2.txt"
 WARNING:Xst:653 - Signal <address> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <byte_we> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <gpio0_out<28:24>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
@@ -398,15 +415,15 @@ WARNING:Xst:653 - Signal <irq_eth_send> is used but never assigned. This sourcel
     Found 8-bit register for signal <irq_mask_reg>.
     Found 16x32-bit Read Only RAM for signal <cpu_address[7]_PWR_6_o_wide_mux_20_OUT>
     Found 16x32-bit Read Only RAM for signal <dma_address[7]_PWR_6_o_wide_mux_56_OUT>
-    Found 32-bit 8-to-1 multiplexer for signal <cpu_address[6]_PWR_6_o_wide_mux_19_OUT> created at line 340.
-    Found 32-bit 7-to-1 multiplexer for signal <cpu_data_r> created at line 323.
-    Found 32-bit 8-to-1 multiplexer for signal <dma_address[6]_PWR_6_o_wide_mux_55_OUT> created at line 566.
-    Found 32-bit 5-to-1 multiplexer for signal <dma_data_read> created at line 560.
+    Found 32-bit 8-to-1 multiplexer for signal <cpu_address[6]_PWR_6_o_wide_mux_19_OUT> created at line 345.
+    Found 32-bit 7-to-1 multiplexer for signal <cpu_data_r> created at line 328.
+    Found 32-bit 8-to-1 multiplexer for signal <dma_address[6]_PWR_6_o_wide_mux_55_OUT> created at line 572.
+    Found 32-bit 5-to-1 multiplexer for signal <dma_data_read> created at line 566.
     Summary:
 	inferred   2 RAM(s).
 	inferred  72 D-type flip-flop(s).
 	inferred  10 Multiplexer(s).
-Unit <plasma> synthesized.
+Unit <plasma_1> synthesized.
 
 Synthesizing Unit <memory_64k>.
     Related source file is "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\memory_64k.vhd".
@@ -800,9 +817,10 @@ Synthesizing Unit <pipeline>.
 	inferred   3 Multiplexer(s).
 Unit <pipeline> synthesized.
 
-Synthesizing Unit <RAM>.
+Synthesizing Unit <RAM_1>.
     Related source file is "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\ram_boot.vhd".
         memory_type = "XILINX_16X"
+        plasma_code = "../code_bin2.txt"
         block_count = 3
 WARNING:Xst:647 - Input <address<31:14>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 4096x8-bit single-port RAM <Mram_laRAM1> for signal <laRAM1>.
@@ -845,7 +863,7 @@ WARNING:Xst:647 - Input <address<31:14>> is never used. This port will be preser
 	inferred   4 RAM(s).
 	inferred  32 D-type flip-flop(s).
 	inferred  32 Multiplexer(s).
-Unit <RAM> synthesized.
+Unit <RAM_1> synthesized.
 
 Synthesizing Unit <uart>.
     Related source file is "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\uart.vhd".
@@ -899,10 +917,10 @@ INFO:Xst:1799 - State read_ptr_src_2 is never reached in FSM <dma_state>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 32-bit adder for signal <struc_ptr[31]_GND_53_o_add_18_OUT> created at line 170.
-    Found 32-bit adder for signal <ptr_src[31]_GND_53_o_add_22_OUT> created at line 202.
-    Found 32-bit adder for signal <ptr_dst[31]_GND_53_o_add_27_OUT> created at line 229.
-    Found 16-bit subtractor for signal <GND_53_o_GND_53_o_sub_29_OUT<15:0>> created at line 232.
+    Found 32-bit adder for signal <struc_ptr[31]_GND_53_o_add_18_OUT> created at line 171.
+    Found 32-bit adder for signal <ptr_src[31]_GND_53_o_add_22_OUT> created at line 203.
+    Found 32-bit adder for signal <ptr_dst[31]_GND_53_o_add_27_OUT> created at line 230.
+    Found 16-bit subtractor for signal <GND_53_o_GND_53_o_sub_29_OUT<15:0>> created at line 233.
     Summary:
 	inferred   4 Adder/Subtractor(s).
 	inferred 189 D-type flip-flop(s).
@@ -960,22 +978,114 @@ Synthesizing Unit <coproc_3>.
 	inferred  32 D-type flip-flop(s).
 Unit <coproc_3> synthesized.
 
-Synthesizing Unit <coproc_4>.
+Synthesizing Unit <coproc_4_1>.
     Related source file is "D:\Vincent\Mandelbrot\soc_plasma\vhdl\custom\ray_tracer_v3\coproc_4.vhd".
+        plasma_name = "P2"
 WARNING:Xst:647 - Input <INPUT_1<31:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <clock_vga> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 19-bit register for signal <counter>.
-    Found 19-bit adder for signal <counter[18]_GND_57_o_add_1_OUT> created at line 73.
-    Found 19-bit comparator lessequal for signal <counter[18]_PWR_63_o_LessThan_1_o> created at line 72
+    Found 19-bit adder for signal <counter[18]_GND_57_o_add_1_OUT> created at line 72.
+    Found 19-bit comparator greater for signal <counter[18]_PWR_63_o_LessThan_1_o> created at line 71
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  19 D-type flip-flop(s).
 	inferred   1 Comparator(s).
-Unit <coproc_4> synthesized.
+	inferred   1 Multiplexer(s).
+Unit <coproc_4_1> synthesized.
+
+Synthesizing Unit <plasma_2>.
+    Related source file is "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\plasma.vhd".
+        memory_type = "XILINX_16X"
+        log_file = "UNUSED"
+        ethernet = '0'
+        eUart = '1'
+        use_cache = '0'
+        plasma_name = "P1"
+        plasma_code = "../code_bin.txt"
+WARNING:Xst:653 - Signal <address> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <byte_we> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <gpio0_out<28:24>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <irq_eth_rec> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <irq_eth_send> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 32-bit register for signal <gpio0_reg>.
+    Found 32-bit register for signal <counter_reg>.
+    Found 8-bit register for signal <irq_mask_reg>.
+    Found 16x32-bit Read Only RAM for signal <cpu_address[7]_PWR_64_o_wide_mux_20_OUT>
+    Found 16x32-bit Read Only RAM for signal <dma_address[7]_PWR_64_o_wide_mux_56_OUT>
+    Found 32-bit 8-to-1 multiplexer for signal <cpu_address[6]_PWR_64_o_wide_mux_19_OUT> created at line 345.
+    Found 32-bit 7-to-1 multiplexer for signal <cpu_data_r> created at line 328.
+    Found 32-bit 8-to-1 multiplexer for signal <dma_address[6]_PWR_64_o_wide_mux_55_OUT> created at line 572.
+    Found 32-bit 5-to-1 multiplexer for signal <dma_data_read> created at line 566.
+    Summary:
+	inferred   2 RAM(s).
+	inferred  72 D-type flip-flop(s).
+	inferred  10 Multiplexer(s).
+Unit <plasma_2> synthesized.
+
+Synthesizing Unit <RAM_2>.
+    Related source file is "D:\Vincent\Mandelbrot\soc_plasma\vhdl\plasma_core\vhdl\ram_boot.vhd".
+        memory_type = "XILINX_16X"
+        plasma_code = "../code_bin.txt"
+        block_count = 3
+WARNING:Xst:647 - Input <address<31:14>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 4096x8-bit single-port RAM <Mram_laRAM1> for signal <laRAM1>.
+    Found 4096x8-bit single-port RAM <Mram_laRAM2> for signal <laRAM2>.
+    Found 4096x8-bit single-port RAM <Mram_laRAM3> for signal <laRAM3>.
+    Found 4096x8-bit single-port RAM <Mram_laRAM4> for signal <laRAM4>.
+    Found 1-bit register for signal <data_read<30>>.
+    Found 1-bit register for signal <data_read<29>>.
+    Found 1-bit register for signal <data_read<28>>.
+    Found 1-bit register for signal <data_read<27>>.
+    Found 1-bit register for signal <data_read<26>>.
+    Found 1-bit register for signal <data_read<25>>.
+    Found 1-bit register for signal <data_read<24>>.
+    Found 1-bit register for signal <data_read<23>>.
+    Found 1-bit register for signal <data_read<22>>.
+    Found 1-bit register for signal <data_read<21>>.
+    Found 1-bit register for signal <data_read<20>>.
+    Found 1-bit register for signal <data_read<19>>.
+    Found 1-bit register for signal <data_read<18>>.
+    Found 1-bit register for signal <data_read<17>>.
+    Found 1-bit register for signal <data_read<16>>.
+    Found 1-bit register for signal <data_read<15>>.
+    Found 1-bit register for signal <data_read<14>>.
+    Found 1-bit register for signal <data_read<13>>.
+    Found 1-bit register for signal <data_read<12>>.
+    Found 1-bit register for signal <data_read<11>>.
+    Found 1-bit register for signal <data_read<10>>.
+    Found 1-bit register for signal <data_read<9>>.
+    Found 1-bit register for signal <data_read<8>>.
+    Found 1-bit register for signal <data_read<7>>.
+    Found 1-bit register for signal <data_read<6>>.
+    Found 1-bit register for signal <data_read<5>>.
+    Found 1-bit register for signal <data_read<4>>.
+    Found 1-bit register for signal <data_read<3>>.
+    Found 1-bit register for signal <data_read<2>>.
+    Found 1-bit register for signal <data_read<1>>.
+    Found 1-bit register for signal <data_read<0>>.
+    Found 1-bit register for signal <data_read<31>>.
+    Summary:
+	inferred   4 RAM(s).
+	inferred  32 D-type flip-flop(s).
+	inferred  32 Multiplexer(s).
+Unit <RAM_2> synthesized.
+
+Synthesizing Unit <coproc_4_2>.
+    Related source file is "D:\Vincent\Mandelbrot\soc_plasma\vhdl\custom\ray_tracer_v3\coproc_4.vhd".
+        plasma_name = "P1"
+WARNING:Xst:647 - Input <INPUT_1<31:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <clock_vga> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 19-bit register for signal <counter>.
+    Found 19-bit adder for signal <counter[18]_GND_186_o_add_1_OUT> created at line 66.
+    Found 19-bit comparator lessequal for signal <counter[18]_GND_186_o_LessThan_1_o> created at line 65
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  19 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <coproc_4_2> synthesized.
 
 Synthesizing Unit <VGA_bitmap_640x480>.
     Related source file is "D:\Vincent\Mandelbrot\soc_plasma\vhdl\custom\mandelbrot\vga_bitmap_640x480.vhd".
-WARNING:Xst:3035 - Index value(s) does not match array range for signal <screen>, simulation mismatch.
-    Found 307200x4-bit dual-port RAM <Mram_screen> for signal <screen>.
     Found 19-bit register for signal <pix_read_addr>.
     Found 1-bit register for signal <VGA_vs>.
     Found 1-bit register for signal <TOP_display>.
@@ -985,9 +1095,11 @@ WARNING:Xst:3035 - Index value(s) does not match array range for signal <screen>
     Found 12-bit register for signal <h_counter>.
     Found 10-bit register for signal <v_counter>.
     Found 4-bit register for signal <next_pixel>.
-    Found 19-bit adder for signal <pix_read_addr[18]_GND_58_o_add_4_OUT> created at line 125.
-    Found 10-bit adder for signal <v_counter[9]_GND_58_o_add_32_OUT> created at line 214.
-    Found 12-bit adder for signal <h_counter[11]_GND_58_o_add_34_OUT> created at line 217.
+    Found 19-bit adder for signal <pix_read_addr[18]_GND_313_o_add_5_OUT> created at line 127.
+    Found 10-bit adder for signal <v_counter[9]_GND_313_o_add_33_OUT> created at line 216.
+    Found 12-bit adder for signal <h_counter[11]_GND_313_o_add_35_OUT> created at line 219.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <screen>, simulation mismatch.
+    Found 307200x4-bit quad-port RAM <Mram_screen> for signal <screen>.
     Summary:
 	inferred   1 RAM(s).
 	inferred   3 Adder/Subtractor(s).
@@ -1005,89 +1117,91 @@ Unit <Colorgen> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 15
+# RAMs                                                 : 28
  16x12-bit single-port Read Only RAM                   : 1
- 16x32-bit single-port Read Only RAM                   : 2
- 256x8-bit single-port RAM                             : 4
- 307200x4-bit dual-port RAM                            : 1
- 32x32-bit dual-port RAM                               : 2
- 4096x8-bit single-port RAM                            : 4
- 64x20-bit single-port Read Only RAM                   : 1
-# Multipliers                                          : 13
- 16x8-bit multiplier                                   : 4
- 32x31-bit multiplier                                  : 1
- 32x32-bit multiplier                                  : 8
-# Adders/Subtractors                                   : 50
+ 16x32-bit single-port Read Only RAM                   : 4
+ 256x8-bit single-port RAM                             : 8
+ 307200x4-bit quad-port RAM                            : 1
+ 32x32-bit dual-port RAM                               : 4
+ 4096x8-bit single-port RAM                            : 8
+ 64x20-bit single-port Read Only RAM                   : 2
+# Multipliers                                          : 26
+ 16x8-bit multiplier                                   : 8
+ 32x31-bit multiplier                                  : 2
+ 32x32-bit multiplier                                  : 16
+# Adders/Subtractors                                   : 97
  10-bit adder                                          : 1
- 11-bit adder                                          : 1
- 11-bit subtractor                                     : 1
+ 11-bit adder                                          : 2
+ 11-bit subtractor                                     : 2
  12-bit adder                                          : 1
- 16-bit subtractor                                     : 1
- 19-bit adder                                          : 2
- 3-bit adder                                           : 1
- 32-bit adder                                          : 23
- 33-bit adder                                          : 1
- 33-bit addsub                                         : 1
- 34-bit adder                                          : 1
- 4-bit adder                                           : 1
- 4-bit subtractor                                      : 2
- 6-bit subtractor                                      : 1
- 64-bit adder                                          : 1
- 65-bit subtractor                                     : 1
- 7-bit addsub                                          : 1
- 8-bit subtractor                                      : 5
- 9-bit adder                                           : 4
-# Registers                                            : 80
- 1-bit register                                        : 17
+ 16-bit subtractor                                     : 2
+ 19-bit adder                                          : 3
+ 3-bit adder                                           : 2
+ 32-bit adder                                          : 46
+ 33-bit adder                                          : 2
+ 33-bit addsub                                         : 2
+ 34-bit adder                                          : 2
+ 4-bit adder                                           : 2
+ 4-bit subtractor                                      : 4
+ 6-bit subtractor                                      : 2
+ 64-bit adder                                          : 2
+ 65-bit subtractor                                     : 2
+ 7-bit addsub                                          : 2
+ 8-bit subtractor                                      : 10
+ 9-bit adder                                           : 8
+# Registers                                            : 149
+ 1-bit register                                        : 28
  10-bit register                                       : 1
- 11-bit register                                       : 2
+ 11-bit register                                       : 4
  12-bit register                                       : 1
- 16-bit register                                       : 1
- 18-bit register                                       : 1
- 19-bit register                                       : 2
- 2-bit register                                        : 1
- 3-bit register                                        : 2
- 30-bit register                                       : 2
- 32-bit register                                       : 32
- 4-bit register                                        : 9
- 6-bit register                                        : 4
- 7-bit register                                        : 1
- 8-bit register                                        : 3
- 9-bit register                                        : 1
-# Comparators                                          : 14
+ 16-bit register                                       : 2
+ 18-bit register                                       : 2
+ 19-bit register                                       : 3
+ 2-bit register                                        : 2
+ 3-bit register                                        : 4
+ 30-bit register                                       : 4
+ 32-bit register                                       : 64
+ 4-bit register                                        : 16
+ 6-bit register                                        : 8
+ 7-bit register                                        : 2
+ 8-bit register                                        : 6
+ 9-bit register                                        : 2
+# Comparators                                          : 28
+ 19-bit comparator greater                             : 1
  19-bit comparator lessequal                           : 1
- 32-bit comparator equal                               : 1
- 6-bit comparator not equal                            : 2
- 8-bit comparator lessequal                            : 4
- 9-bit comparator greater                              : 6
-# Multiplexers                                         : 300
- 1-bit 2-to-1 multiplexer                              : 68
- 1-bit 3-to-1 multiplexer                              : 1
- 1-bit 8-to-1 multiplexer                              : 1
- 11-bit 2-to-1 multiplexer                             : 3
- 16-bit 2-to-1 multiplexer                             : 1
- 18-bit 2-to-1 multiplexer                             : 2
- 2-bit 2-to-1 multiplexer                              : 10
- 3-bit 2-to-1 multiplexer                              : 16
- 30-bit 2-to-1 multiplexer                             : 8
- 30-bit 3-to-1 multiplexer                             : 1
- 32-bit 2-to-1 multiplexer                             : 121
- 32-bit 3-to-1 multiplexer                             : 2
- 32-bit 4-to-1 multiplexer                             : 2
- 32-bit 5-to-1 multiplexer                             : 1
- 32-bit 6-to-1 multiplexer                             : 1
- 32-bit 7-to-1 multiplexer                             : 1
- 32-bit 8-to-1 multiplexer                             : 2
- 4-bit 2-to-1 multiplexer                              : 24
- 5-bit 2-to-1 multiplexer                              : 2
- 6-bit 2-to-1 multiplexer                              : 23
- 8-bit 2-to-1 multiplexer                              : 9
- 9-bit 2-to-1 multiplexer                              : 1
-# FSMs                                                 : 2
-# Xors                                                 : 223
- 1-bit xor2                                            : 221
- 2-bit xor2                                            : 1
- 32-bit xor2                                           : 1
+ 32-bit comparator equal                               : 2
+ 6-bit comparator not equal                            : 4
+ 8-bit comparator lessequal                            : 8
+ 9-bit comparator greater                              : 12
+# Multiplexers                                         : 601
+ 1-bit 2-to-1 multiplexer                              : 136
+ 1-bit 3-to-1 multiplexer                              : 2
+ 1-bit 8-to-1 multiplexer                              : 2
+ 11-bit 2-to-1 multiplexer                             : 6
+ 16-bit 2-to-1 multiplexer                             : 2
+ 18-bit 2-to-1 multiplexer                             : 4
+ 19-bit 2-to-1 multiplexer                             : 1
+ 2-bit 2-to-1 multiplexer                              : 20
+ 3-bit 2-to-1 multiplexer                              : 32
+ 30-bit 2-to-1 multiplexer                             : 16
+ 30-bit 3-to-1 multiplexer                             : 2
+ 32-bit 2-to-1 multiplexer                             : 242
+ 32-bit 3-to-1 multiplexer                             : 4
+ 32-bit 4-to-1 multiplexer                             : 4
+ 32-bit 5-to-1 multiplexer                             : 2
+ 32-bit 6-to-1 multiplexer                             : 2
+ 32-bit 7-to-1 multiplexer                             : 2
+ 32-bit 8-to-1 multiplexer                             : 4
+ 4-bit 2-to-1 multiplexer                              : 48
+ 5-bit 2-to-1 multiplexer                              : 4
+ 6-bit 2-to-1 multiplexer                              : 46
+ 8-bit 2-to-1 multiplexer                              : 18
+ 9-bit 2-to-1 multiplexer                              : 2
+# FSMs                                                 : 4
+# Xors                                                 : 446
+ 1-bit xor2                                            : 442
+ 2-bit xor2                                            : 2
+ 32-bit xor2                                           : 2
 
 =========================================================================
 
@@ -1095,6 +1209,13 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+WARNING:Xst:2677 - Node <salu_1_funcD_1> of sequential type is unconnected in block <u9_pipeline>.
+WARNING:Xst:2677 - Node <salu_1_funcD_2> of sequential type is unconnected in block <u9_pipeline>.
+WARNING:Xst:2677 - Node <salu_1_funcD_3> of sequential type is unconnected in block <u9_pipeline>.
+WARNING:Xst:2677 - Node <salu_1_funcD_4> of sequential type is unconnected in block <u9_pipeline>.
+WARNING:Xst:2677 - Node <salu_1_funcD_5> of sequential type is unconnected in block <u9_pipeline>.
+WARNING:Xst:2677 - Node <address_0> of sequential type is unconnected in block <u4_dma>.
+WARNING:Xst:2677 - Node <address_1> of sequential type is unconnected in block <u4_dma>.
 WARNING:Xst:2677 - Node <salu_1_funcD_1> of sequential type is unconnected in block <u9_pipeline>.
 WARNING:Xst:2677 - Node <salu_1_funcD_2> of sequential type is unconnected in block <u9_pipeline>.
 WARNING:Xst:2677 - Node <salu_1_funcD_3> of sequential type is unconnected in block <u9_pipeline>.
@@ -1117,7 +1238,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_n0002> will be implemented on LUTs e
     -----------------------------------------------------------------------
 Unit <Colorgen> synthesized (advanced).
 
-Synthesizing (advanced) Unit <RAM>.
+Synthesizing (advanced) Unit <RAM_1>.
 INFO:Xst:3226 - The RAM <Mram_laRAM1> will be implemented as a BLOCK RAM, absorbing the following register(s): <data_read_01_sliced>
     -----------------------------------------------------------------------
     | ram_type           | Block                               |          |
@@ -1182,36 +1303,101 @@ INFO:Xst:3226 - The RAM <Mram_laRAM4> will be implemented as a BLOCK RAM, absorb
     -----------------------------------------------------------------------
     | optimization       | speed                               |          |
     -----------------------------------------------------------------------
-Unit <RAM> synthesized (advanced).
+Unit <RAM_1> synthesized (advanced).
+
+Synthesizing (advanced) Unit <RAM_2>.
+INFO:Xst:3226 - The RAM <Mram_laRAM1> will be implemented as a BLOCK RAM, absorbing the following register(s): <data_read_01_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4096-word x 8-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <enable>        | high     |
+    |     weA            | connected to signal <write_byte_enable<3>> | high     |
+    |     addrA          | connected to signal <address>       |          |
+    |     diA            | connected to signal <data_write<31:24>> |          |
+    |     doA            | connected to signal <data_read_01>  |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_laRAM2> will be implemented as a BLOCK RAM, absorbing the following register(s): <data_read_01>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4096-word x 8-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <enable>        | high     |
+    |     weA            | connected to signal <write_byte_enable<2>> | high     |
+    |     addrA          | connected to signal <address>       |          |
+    |     diA            | connected to signal <data_write<23:16>> |          |
+    |     doA            | connected to signal <data_read_01>  |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_laRAM3> will be implemented as a BLOCK RAM, absorbing the following register(s): <data_read_01_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4096-word x 8-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <enable>        | high     |
+    |     weA            | connected to signal <write_byte_enable<1>> | high     |
+    |     addrA          | connected to signal <address>       |          |
+    |     diA            | connected to signal <data_write<15:8>> |          |
+    |     doA            | connected to signal <data_read_01>  |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_laRAM4> will be implemented as a BLOCK RAM, absorbing the following register(s): <data_read_01_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4096-word x 8-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <enable>        | high     |
+    |     weA            | connected to signal <write_byte_enable<0>> | high     |
+    |     addrA          | connected to signal <address>       |          |
+    |     diA            | connected to signal <data_write<7:0>> |          |
+    |     doA            | connected to signal <data_read_01>  |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <RAM_2> synthesized (advanced).
 
 Synthesizing (advanced) Unit <VGA_bitmap_640x480>.
 The following registers are absorbed into counter <pix_read_addr>: 1 register on signal <pix_read_addr>.
 The following registers are absorbed into counter <h_counter>: 1 register on signal <h_counter>.
 The following registers are absorbed into counter <v_counter>: 1 register on signal <v_counter>.
-INFO:Xst:3226 - The RAM <Mram_screen> will be implemented as a BLOCK RAM, absorbing the following register(s): <next_pixel> <iter>
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_screen> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
-    | ram_type           | Block                               |          |
+    | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
     |     aspect ratio   | 307200-word x 4-bit                 |          |
-    |     mode           | write-first                         |          |
     |     clkA           | connected to signal <clk>           | rise     |
-    |     weA            | connected to signal <data_write>    | high     |
-    |     addrA          | connected to signal <ADDR>          |          |
-    |     diA            | connected to signal <data_in>       |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
+    |     weA            | connected to signal <data_write1>   | high     |
+    |     addrA          | connected to signal <ADDR1>         |          |
+    |     diA            | connected to signal <data_in1>      |          |
     -----------------------------------------------------------------------
     | Port B                                                              |
     |     aspect ratio   | 307200-word x 4-bit                 |          |
-    |     mode           | write-first                         |          |
-    |     clkB           | connected to signal <clk_vga>       | rise     |
-    |     addrB          | connected to signal <pix_read_addr> |          |
-    |     doB            | connected to signal <iter>          |          |
-    |     doregrstB      | connected to internal node          | high     |
-    | reset value        | 0000                                           |
+    |     clkB           | connected to signal <clk>           | rise     |
+    |     weB            | connected to signal <data_write2>   | high     |
+    |     addrB          | connected to signal <ADDR2>         |          |
+    |     diB            | connected to signal <data_in2>      |          |
     -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
+    | Port C                                                              |
+    |     aspect ratio   | 307200-word x 4-bit                 |          |
+    |     addrC          | connected to signal <pix_read_addr> |          |
+    |     doC            | connected to internal node          |          |
     -----------------------------------------------------------------------
 Unit <VGA_bitmap_640x480> synthesized (advanced).
 
@@ -1229,9 +1415,13 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0493> will be implemented on LUTs 
     -----------------------------------------------------------------------
 Unit <control> synthesized (advanced).
 
-Synthesizing (advanced) Unit <coproc_4>.
+Synthesizing (advanced) Unit <coproc_4_1>.
 The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
-Unit <coproc_4> synthesized (advanced).
+Unit <coproc_4_1> synthesized (advanced).
+
+Synthesizing (advanced) Unit <coproc_4_2>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <coproc_4_2> synthesized (advanced).
 
 Synthesizing (advanced) Unit <dma_engine>.
 The following registers are absorbed into counter <nWords>: 1 register on signal <nWords>.
@@ -1292,7 +1482,7 @@ Synthesizing (advanced) Unit <mlite_cpu>.
 The following registers are absorbed into counter <reset_reg>: 1 register on signal <reset_reg>.
 Unit <mlite_cpu> synthesized (advanced).
 
-Synthesizing (advanced) Unit <plasma>.
+Synthesizing (advanced) Unit <plasma_1>.
 INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_cpu_address[7]_PWR_6_o_wide_mux_20_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
@@ -1315,7 +1505,32 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_dma_address[7]_PWR_6_o_wide_mux_56_O
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-Unit <plasma> synthesized (advanced).
+Unit <plasma_1> synthesized (advanced).
+
+Synthesizing (advanced) Unit <plasma_2>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_cpu_address[7]_PWR_64_o_wide_mux_20_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 32-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <cpu_address<7:4>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_dma_address[7]_PWR_64_o_wide_mux_56_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 32-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <dma_address<7:4>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <plasma_2> synthesized (advanced).
 
 Synthesizing (advanced) Unit <reg_bank>.
 INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_tri_port_ram> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
@@ -1367,73 +1582,74 @@ Unit <uart> synthesized (advanced).
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 15
+# RAMs                                                 : 28
  16x12-bit single-port distributed Read Only RAM       : 1
- 16x32-bit single-port distributed Read Only RAM       : 2
- 256x8-bit single-port distributed RAM                 : 4
- 307200x4-bit dual-port block RAM                      : 1
- 32x32-bit dual-port distributed RAM                   : 2
- 4096x8-bit single-port block RAM                      : 4
- 64x20-bit single-port distributed Read Only RAM       : 1
-# Multipliers                                          : 13
- 16x8-bit multiplier                                   : 4
- 32x31-bit multiplier                                  : 1
- 32x32-bit multiplier                                  : 8
-# Adders/Subtractors                                   : 39
- 11-bit adder                                          : 1
- 32-bit adder                                          : 25
- 33-bit addsub                                         : 1
- 6-bit subtractor                                      : 1
- 60-bit adder                                          : 1
- 60-bit subtractor                                     : 1
- 8-bit adder                                           : 1
- 8-bit subtractor                                      : 5
- 9-bit adder                                           : 3
-# Counters                                             : 11
+ 16x32-bit single-port distributed Read Only RAM       : 4
+ 256x8-bit single-port distributed RAM                 : 8
+ 307200x4-bit quad-port distributed RAM                : 1
+ 32x32-bit dual-port distributed RAM                   : 4
+ 4096x8-bit single-port block RAM                      : 8
+ 64x20-bit single-port distributed Read Only RAM       : 2
+# Multipliers                                          : 26
+ 16x8-bit multiplier                                   : 8
+ 32x31-bit multiplier                                  : 2
+ 32x32-bit multiplier                                  : 16
+# Adders/Subtractors                                   : 78
+ 11-bit adder                                          : 2
+ 32-bit adder                                          : 50
+ 33-bit addsub                                         : 2
+ 6-bit subtractor                                      : 2
+ 60-bit adder                                          : 2
+ 60-bit subtractor                                     : 2
+ 8-bit adder                                           : 2
+ 8-bit subtractor                                      : 10
+ 9-bit adder                                           : 6
+# Counters                                             : 19
  10-bit up counter                                     : 1
- 11-bit down counter                                   : 1
+ 11-bit down counter                                   : 2
  12-bit up counter                                     : 1
- 16-bit down counter                                   : 1
- 19-bit up counter                                     : 2
- 3-bit up counter                                      : 1
- 4-bit down counter                                    : 2
- 4-bit up counter                                      : 1
- 7-bit updown counter                                  : 1
-# Registers                                            : 1176
- Flip-Flops                                            : 1176
-# Comparators                                          : 14
+ 16-bit down counter                                   : 2
+ 19-bit up counter                                     : 3
+ 3-bit up counter                                      : 2
+ 4-bit down counter                                    : 4
+ 4-bit up counter                                      : 2
+ 7-bit updown counter                                  : 2
+# Registers                                            : 2354
+ Flip-Flops                                            : 2354
+# Comparators                                          : 28
+ 19-bit comparator greater                             : 1
  19-bit comparator lessequal                           : 1
- 32-bit comparator equal                               : 1
- 6-bit comparator not equal                            : 2
- 8-bit comparator lessequal                            : 4
- 9-bit comparator greater                              : 6
-# Multiplexers                                         : 294
- 1-bit 2-to-1 multiplexer                              : 68
- 1-bit 3-to-1 multiplexer                              : 1
- 1-bit 8-to-1 multiplexer                              : 1
- 11-bit 2-to-1 multiplexer                             : 2
- 18-bit 2-to-1 multiplexer                             : 2
- 2-bit 2-to-1 multiplexer                              : 10
- 3-bit 2-to-1 multiplexer                              : 15
- 30-bit 2-to-1 multiplexer                             : 8
- 30-bit 3-to-1 multiplexer                             : 1
- 32-bit 2-to-1 multiplexer                             : 120
- 32-bit 3-to-1 multiplexer                             : 2
- 32-bit 4-to-1 multiplexer                             : 2
- 32-bit 5-to-1 multiplexer                             : 1
- 32-bit 6-to-1 multiplexer                             : 1
- 32-bit 7-to-1 multiplexer                             : 1
- 32-bit 8-to-1 multiplexer                             : 2
- 4-bit 2-to-1 multiplexer                              : 22
- 5-bit 2-to-1 multiplexer                              : 2
- 6-bit 2-to-1 multiplexer                              : 23
- 8-bit 2-to-1 multiplexer                              : 9
- 9-bit 2-to-1 multiplexer                              : 1
-# FSMs                                                 : 2
-# Xors                                                 : 223
- 1-bit xor2                                            : 221
- 2-bit xor2                                            : 1
- 32-bit xor2                                           : 1
+ 32-bit comparator equal                               : 2
+ 6-bit comparator not equal                            : 4
+ 8-bit comparator lessequal                            : 8
+ 9-bit comparator greater                              : 12
+# Multiplexers                                         : 588
+ 1-bit 2-to-1 multiplexer                              : 136
+ 1-bit 3-to-1 multiplexer                              : 2
+ 1-bit 8-to-1 multiplexer                              : 2
+ 11-bit 2-to-1 multiplexer                             : 4
+ 18-bit 2-to-1 multiplexer                             : 4
+ 2-bit 2-to-1 multiplexer                              : 20
+ 3-bit 2-to-1 multiplexer                              : 30
+ 30-bit 2-to-1 multiplexer                             : 16
+ 30-bit 3-to-1 multiplexer                             : 2
+ 32-bit 2-to-1 multiplexer                             : 240
+ 32-bit 3-to-1 multiplexer                             : 4
+ 32-bit 4-to-1 multiplexer                             : 4
+ 32-bit 5-to-1 multiplexer                             : 2
+ 32-bit 6-to-1 multiplexer                             : 2
+ 32-bit 7-to-1 multiplexer                             : 2
+ 32-bit 8-to-1 multiplexer                             : 4
+ 4-bit 2-to-1 multiplexer                              : 44
+ 5-bit 2-to-1 multiplexer                              : 4
+ 6-bit 2-to-1 multiplexer                              : 46
+ 8-bit 2-to-1 multiplexer                              : 18
+ 9-bit 2-to-1 multiplexer                              : 2
+# FSMs                                                 : 4
+# Xors                                                 : 446
+ 1-bit xor2                                            : 442
+ 2-bit xor2                                            : 2
+ 32-bit xor2                                           : 2
 
 =========================================================================
 
@@ -1441,7 +1657,8 @@ Macro Statistics
 *                         Low Level Synthesis                           *
 =========================================================================
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <Inst_plasma/u1_cpu/u62_alu/FSM_0> on signal <current_s[1:2]> with user encoding.
+Optimizing FSM <Inst_plasma2/u1_cpu/u62_alu/FSM_0> on signal <current_s[1:2]> with user encoding.
+Optimizing FSM <Inst_plasma1/u1_cpu/u62_alu/FSM_0> on signal <current_s[1:2]> with user encoding.
 ----------------------------
  State          | Encoding
 ----------------------------
@@ -1450,7 +1667,8 @@ Optimizing FSM <Inst_plasma/u1_cpu/u62_alu/FSM_0> on signal <current_s[1:2]> wit
  s_processing   | 10
 ----------------------------
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <Inst_plasma/u4_dma/FSM_1> on signal <dma_state[1:4]> with user encoding.
+Optimizing FSM <Inst_plasma2/u4_dma/FSM_1> on signal <dma_state[1:4]> with user encoding.
+Optimizing FSM <Inst_plasma1/u4_dma/FSM_1> on signal <dma_state[1:4]> with user encoding.
 -----------------------------
  State           | Encoding
 -----------------------------
@@ -1470,543 +1688,3 @@ Optimizing FSM <Inst_plasma/u4_dma/FSM_1> on signal <dma_state[1:4]> with user e
  init_write_data | 1101
  wait_one_cycle  | 1110
 -----------------------------
-INFO:Xst:2261 - The FF/Latch <byte_we_0> in Unit <dma_engine> is equivalent to the following 3 FFs/Latches, which will be removed : <byte_we_1> <byte_we_2> <byte_we_3> 
-
-Optimizing unit <function_1> ...
-
-Optimizing unit <function_2> ...
-
-Optimizing unit <function_3> ...
-
-Optimizing unit <function_4> ...
-
-Optimizing unit <function_5> ...
-
-Optimizing unit <function_6> ...
-
-Optimizing unit <function_7> ...
-
-Optimizing unit <function_8> ...
-
-Optimizing unit <function_9> ...
-
-Optimizing unit <function_10> ...
-
-Optimizing unit <function_11> ...
-
-Optimizing unit <function_12> ...
-
-Optimizing unit <function_13> ...
-
-Optimizing unit <function_14> ...
-
-Optimizing unit <function_16> ...
-
-Optimizing unit <RAM> ...
-
-Optimizing unit <coproc_1> ...
-
-Optimizing unit <coproc_3> ...
-
-Optimizing unit <top_ml605_extphy> ...
-
-Optimizing unit <plasma> ...
-
-Optimizing unit <memory_64k> ...
-
-Optimizing unit <mlite_cpu> ...
-
-Optimizing unit <mem_ctrl> ...
-
-Optimizing unit <pc_next> ...
-
-Optimizing unit <reg_bank> ...
-
-Optimizing unit <comb_alu_1> ...
-
-Optimizing unit <function_15> ...
-
-Optimizing unit <function_17> ...
-
-Optimizing unit <function_18> ...
-
-Optimizing unit <sequ_alu_1> ...
-
-Optimizing unit <mult> ...
-
-Optimizing unit <pipeline> ...
-
-Optimizing unit <control> ...
-
-Optimizing unit <bus_mux> ...
-
-Optimizing unit <alu> ...
-
-Optimizing unit <shifter> ...
-
-Optimizing unit <uart> ...
-
-Optimizing unit <dma_engine> ...
-
-Optimizing unit <coproc_2> ...
-
-Optimizing unit <coproc_4> ...
-
-Optimizing unit <VGA_bitmap_640x480> ...
-
-Optimizing unit <Colorgen> ...
-WARNING:Xst:2677 - Node <salu_1_funcD_1> of sequential type is unconnected in block <u9_pipeline>.
-WARNING:Xst:2677 - Node <salu_1_funcD_2> of sequential type is unconnected in block <u9_pipeline>.
-WARNING:Xst:2677 - Node <salu_1_funcD_3> of sequential type is unconnected in block <u9_pipeline>.
-WARNING:Xst:2677 - Node <salu_1_funcD_4> of sequential type is unconnected in block <u9_pipeline>.
-WARNING:Xst:2677 - Node <salu_1_funcD_5> of sequential type is unconnected in block <u9_pipeline>.
-WARNING:Xst:2677 - Node <ptr_dst_0> of sequential type is unconnected in block <u4_dma>.
-WARNING:Xst:2677 - Node <ptr_dst_1> of sequential type is unconnected in block <u4_dma>.
-WARNING:Xst:2677 - Node <ptr_src_0> of sequential type is unconnected in block <u4_dma>.
-WARNING:Xst:2677 - Node <ptr_src_1> of sequential type is unconnected in block <u4_dma>.
-WARNING:Xst:2677 - Node <struc_ptr_0> of sequential type is unconnected in block <u4_dma>.
-WARNING:Xst:2677 - Node <struc_ptr_1> of sequential type is unconnected in block <u4_dma>.
-WARNING:Xst:2677 - Node <address_0> of sequential type is unconnected in block <u4_dma>.
-WARNING:Xst:2677 - Node <address_1> of sequential type is unconnected in block <u4_dma>.
-WARNING:Xst:2677 - Node <address_14> of sequential type is unconnected in block <u4_dma>.
-WARNING:Xst:2677 - Node <address_15> of sequential type is unconnected in block <u4_dma>.
-WARNING:Xst:2677 - Node <address_16> of sequential type is unconnected in block <u4_dma>.
-WARNING:Xst:2677 - Node <address_17> of sequential type is unconnected in block <u4_dma>.
-WARNING:Xst:2677 - Node <address_18> of sequential type is unconnected in block <u4_dma>.
-WARNING:Xst:2677 - Node <address_19> of sequential type is unconnected in block <u4_dma>.
-WARNING:Xst:2677 - Node <address_20> of sequential type is unconnected in block <u4_dma>.
-WARNING:Xst:2677 - Node <address_21> of sequential type is unconnected in block <u4_dma>.
-WARNING:Xst:2677 - Node <address_22> of sequential type is unconnected in block <u4_dma>.
-WARNING:Xst:2677 - Node <address_23> of sequential type is unconnected in block <u4_dma>.
-WARNING:Xst:2677 - Node <address_24> of sequential type is unconnected in block <u4_dma>.
-WARNING:Xst:2677 - Node <address_25> of sequential type is unconnected in block <u4_dma>.
-WARNING:Xst:2677 - Node <address_26> of sequential type is unconnected in block <u4_dma>.
-WARNING:Xst:2677 - Node <address_27> of sequential type is unconnected in block <u4_dma>.
-WARNING:Xst:1293 - FF/Latch <counter_2> has a constant value of 0 in block <u62_alu>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <delay_write_reg_9> (without init value) has a constant value of 0 in block <uart_gen.u3_uart>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <delay_write_reg_10> (without init value) has a constant value of 0 in block <uart_gen.u3_uart>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <delay_read_reg_9> (without init value) has a constant value of 0 in block <uart_gen.u3_uart>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <delay_read_reg_10> (without init value) has a constant value of 0 in block <uart_gen.u3_uart>. This FF/Latch will be trimmed during the optimization process.
-
-Mapping all equations...
-Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block top_ml605_extphy, actual ratio is 1.
-
-Final Macro Processing ...
-
-Processing Unit <VGA> :
-	Found 2-bit shift register for signal <INST_LPM_FF1_2>.
-	Found 2-bit shift register for signal <INST_LPM_FF1_1>.
-	Found 2-bit shift register for signal <INST_LPM_FF1_0>.
-Unit <VGA> processed.
-
-=========================================================================
-Final Register Report
-
-Macro Statistics
-# Registers                                            : 1165
- Flip-Flops                                            : 1165
-# Shift Registers                                      : 3
- 2-bit shift register                                  : 3
-
-=========================================================================
-
-=========================================================================
-*                           Partition Report                            *
-=========================================================================
-
-Partition Implementation Status
--------------------------------
-
-  No Partitions were found in this design.
-
--------------------------------
-
-=========================================================================
-*                            Design Summary                             *
-=========================================================================
-
-Top Level Output File Name         : top_ml605_extphy.ngc
-
-Primitive and Black Box Usage:
-------------------------------
-# BELS                             : 5593
-#      GND                         : 25
-#      INV                         : 20
-#      LUT1                        : 230
-#      LUT2                        : 570
-#      LUT3                        : 681
-#      LUT4                        : 340
-#      LUT5                        : 882
-#      LUT6                        : 1230
-#      MUXCY                       : 789
-#      MUXF7                       : 57
-#      VCC                         : 14
-#      XORCY                       : 755
-# FlipFlops/Latches                : 1168
-#      FDC                         : 185
-#      FDCE                        : 552
-#      FDE                         : 65
-#      FDPE                        : 8
-#      FDR                         : 117
-#      FDRE                        : 240
-#      FDS                         : 1
-# RAMS                             : 140
-#      RAM256X1S                   : 32
-#      RAM32X1D                    : 64
-#      RAMB36E1                    : 44
-# Shift Registers                  : 3
-#      SRLC16E                     : 3
-# Clock Buffers                    : 2
-#      BUFG                        : 1
-#      BUFGP                       : 1
-# IO Buffers                       : 27
-#      IBUF                        : 11
-#      OBUF                        : 16
-# DSPs                             : 40
-#      DSP48E1                     : 40
-
-Device utilization summary:
----------------------------
-
-Selected Device : 7a100tcsg324-1 
-
-
-Slice Logic Utilization: 
- Number of Slice Registers:            1167  out of  126800     0%  
- Number of Slice LUTs:                 4212  out of  63400     6%  
-    Number used as Logic:              3953  out of  63400     6%  
-    Number used as Memory:              259  out of  19000     1%  
-       Number used as RAM:              256
-       Number used as SRL:                3
-
-Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   4649
-   Number with an unused Flip Flop:    3482  out of   4649    74%  
-   Number with an unused LUT:           437  out of   4649     9%  
-   Number of fully used LUT-FF pairs:   730  out of   4649    15%  
-   Number of unique control sets:        52
-
-IO Utilization: 
- Number of IOs:                          28
- Number of bonded IOBs:                  28  out of    210    13%  
-    IOB Flip Flops/Latches:               1
-
-Specific Feature Utilization:
- Number of Block RAM/FIFO:               44  out of    135    32%  
-    Number using Block RAM only:         44
- Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
- Number of DSP48E1s:                     40  out of    240    16%  
-
----------------------------
-Partition Resource Summary:
----------------------------
-
-  No Partitions were found in this design.
-
----------------------------
-
-
-=========================================================================
-Timing Report
-
-NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
-      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
-      GENERATED AFTER PLACE-and-ROUTE.
-
-Clock Information:
-------------------
------------------------------------+------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)  | Load  |
------------------------------------+------------------------+-------+
-CLK100                             | BUFGP                  | 92    |
-CLK50                              | BUFG                   | 1271  |
------------------------------------+------------------------+-------+
-
-Asynchronous Control Signals Information:
-----------------------------------------
---------------------------------------------------------------------------------------+-----------------------------------------------+-------+
-Control Signal                                                                        | Buffer(FF name)                               | Load  |
---------------------------------------------------------------------------------------+-----------------------------------------------+-------+
-INST_PLASMA/U5D_COPROC/VGA/N100(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN111:CASCADEOUTB)| NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN11)| 2     |
-INST_PLASMA/U5D_COPROC/VGA/N102(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN131:CASCADEOUTA)| NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN13)| 2     |
-INST_PLASMA/U5D_COPROC/VGA/N104(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN131:CASCADEOUTB)| NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN13)| 2     |
-INST_PLASMA/U5D_COPROC/VGA/N106(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN141:CASCADEOUTA)| NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN14)| 2     |
-INST_PLASMA/U5D_COPROC/VGA/N108(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN141:CASCADEOUTB)| NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN14)| 2     |
-INST_PLASMA/U5D_COPROC/VGA/N110(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN151:CASCADEOUTA)| NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN15)| 2     |
-INST_PLASMA/U5D_COPROC/VGA/N112(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN151:CASCADEOUTB)| NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN15)| 2     |
-INST_PLASMA/U5D_COPROC/VGA/N114(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN161:CASCADEOUTA)| NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN16)| 2     |
-INST_PLASMA/U5D_COPROC/VGA/N116(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN161:CASCADEOUTB)| NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN16)| 2     |
-INST_PLASMA/U5D_COPROC/VGA/N118(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN171:CASCADEOUTA)| NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN17)| 2     |
-INST_PLASMA/U5D_COPROC/VGA/N120(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN171:CASCADEOUTB)| NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN17)| 2     |
-INST_PLASMA/U5D_COPROC/VGA/N122(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN181:CASCADEOUTA)| NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN18)| 2     |
-INST_PLASMA/U5D_COPROC/VGA/N124(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN181:CASCADEOUTB)| NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN18)| 2     |
-INST_PLASMA/U5D_COPROC/VGA/N126(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN191:CASCADEOUTA)| NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN19)| 2     |
-INST_PLASMA/U5D_COPROC/VGA/N128(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN191:CASCADEOUTB)| NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN19)| 2     |
-INST_PLASMA/U5D_COPROC/VGA/N130(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN201:CASCADEOUTA)| NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN20)| 2     |
-INST_PLASMA/U5D_COPROC/VGA/N132(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN201:CASCADEOUTB)| NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN20)| 2     |
-INST_PLASMA/U5D_COPROC/VGA/N54(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN31:CASCADEOUTA)  | NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN3) | 2     |
-INST_PLASMA/U5D_COPROC/VGA/N56(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN31:CASCADEOUTB)  | NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN3) | 2     |
-INST_PLASMA/U5D_COPROC/VGA/N58(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN110:CASCADEOUTA) | NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN1) | 2     |
-INST_PLASMA/U5D_COPROC/VGA/N60(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN110:CASCADEOUTB) | NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN1) | 2     |
-INST_PLASMA/U5D_COPROC/VGA/N62(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN21:CASCADEOUTA)  | NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN2) | 2     |
-INST_PLASMA/U5D_COPROC/VGA/N64(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN21:CASCADEOUTB)  | NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN2) | 2     |
-INST_PLASMA/U5D_COPROC/VGA/N66(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN41:CASCADEOUTA)  | NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN4) | 2     |
-INST_PLASMA/U5D_COPROC/VGA/N68(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN41:CASCADEOUTB)  | NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN4) | 2     |
-INST_PLASMA/U5D_COPROC/VGA/N70(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN51:CASCADEOUTA)  | NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN5) | 2     |
-INST_PLASMA/U5D_COPROC/VGA/N72(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN51:CASCADEOUTB)  | NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN5) | 2     |
-INST_PLASMA/U5D_COPROC/VGA/N74(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN61:CASCADEOUTA)  | NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN6) | 2     |
-INST_PLASMA/U5D_COPROC/VGA/N76(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN61:CASCADEOUTB)  | NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN6) | 2     |
-INST_PLASMA/U5D_COPROC/VGA/N78(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN71:CASCADEOUTA)  | NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN7) | 2     |
-INST_PLASMA/U5D_COPROC/VGA/N80(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN71:CASCADEOUTB)  | NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN7) | 2     |
-INST_PLASMA/U5D_COPROC/VGA/N82(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN81:CASCADEOUTA)  | NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN8) | 2     |
-INST_PLASMA/U5D_COPROC/VGA/N84(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN81:CASCADEOUTB)  | NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN8) | 2     |
-INST_PLASMA/U5D_COPROC/VGA/N86(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN91:CASCADEOUTA)  | NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN9) | 2     |
-INST_PLASMA/U5D_COPROC/VGA/N88(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN91:CASCADEOUTB)  | NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN9) | 2     |
-INST_PLASMA/U5D_COPROC/VGA/N90(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN121:CASCADEOUTA) | NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN12)| 2     |
-INST_PLASMA/U5D_COPROC/VGA/N92(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN121:CASCADEOUTB) | NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN12)| 2     |
-INST_PLASMA/U5D_COPROC/VGA/N94(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN101:CASCADEOUTA) | NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN10)| 2     |
-INST_PLASMA/U5D_COPROC/VGA/N96(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN101:CASCADEOUTB) | NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN10)| 2     |
-INST_PLASMA/U5D_COPROC/VGA/N98(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN111:CASCADEOUTA) | NONE(INST_PLASMA/U5D_COPROC/VGA/MRAM_SCREEN11)| 2     |
---------------------------------------------------------------------------------------+-----------------------------------------------+-------+
-
-Timing Summary:
----------------
-Speed Grade: -1
-
-   Minimum period: 17.714ns (Maximum Frequency: 56.454MHz)
-   Minimum input arrival time before clock: 6.013ns
-   Maximum output required time after clock: 3.534ns
-   Maximum combinational path delay: No path found
-
-Timing Details:
----------------
-All values displayed in nanoseconds (ns)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'CLK100'
-  Clock period: 4.611ns (frequency: 216.886MHz)
-  Total number of paths / destination ports: 1389 / 122
--------------------------------------------------------------------------
-Delay:               4.611ns (Levels of Logic = 3)
-  Source:            INST_PLASMA/U5D_COPROC/VGA/PIX_READ_ADDR_6 (FF)
-  Destination:       INST_PLASMA/U5D_COPROC/VGA/PIX_READ_ADDR_0 (FF)
-  Source Clock:      CLK100 rising
-  Destination Clock: CLK100 rising
-
-  Data Path: INST_PLASMA/U5D_COPROC/VGA/PIX_READ_ADDR_6 to INST_PLASMA/U5D_COPROC/VGA/PIX_READ_ADDR_0
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDRE:C->Q            42   0.478   1.094  PIX_READ_ADDR_6 (PIX_READ_ADDR_6)
-     LUT6:I0->O            1   0.124   0.939  MCOUNT_PIX_READ_ADDR_VAL1 (MCOUNT_PIX_READ_ADDR_VAL1)
-     LUT6:I0->O            1   0.124   0.716  MCOUNT_PIX_READ_ADDR_VAL5 (MCOUNT_PIX_READ_ADDR_VAL5)
-     LUT3:I0->O           19   0.124   0.518  MCOUNT_PIX_READ_ADDR_VAL6 (MCOUNT_PIX_READ_ADDR_VAL)
-     FDRE:R                    0.494          PIX_READ_ADDR_0
-    ----------------------------------------
-    Total                      4.611ns (1.344ns logic, 3.267ns route)
-                                       (29.1% logic, 70.9% route)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'CLK50'
-  Clock period: 17.714ns (frequency: 56.454MHz)
-  Total number of paths / destination ports: 384636093663 / 4507
--------------------------------------------------------------------------
-Delay:               17.714ns (Levels of Logic = 41)
-  Source:            INST_PLASMA/U1_CPU/U9_PIPELINE/A_BUSD_2 (FF)
-  Destination:       INST_PLASMA/LOCAL_MEMORY/MRAM_MEMBANK11 (RAM)
-  Source Clock:      CLK50 rising
-  Destination Clock: CLK50 rising
-
-  Data Path: INST_PLASMA/U1_CPU/U9_PIPELINE/A_BUSD_2 to INST_PLASMA/LOCAL_MEMORY/MRAM_MEMBANK11
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDCE:C->Q           125   0.478   0.572  A_BUSD_2 (A_BUSD_2)
-     end scope: 'INST_PLASMA/U1_CPU/U9_PIPELINE:A_BUSD<2>'
-     begin scope: 'INST_PLASMA/U1_CPU/U61_ALU:A_IN<2>'
-     begin scope: 'INST_PLASMA/U1_CPU/U61_ALU/FX3:INPUT_1<2>'
-     DSP48E1:A2->PCOUT47    1   4.036   0.000  MMULT_COMPUTATION.RTEMP1 (MMULT_COMPUTATION.RTEMP1_PCOUT_TO_MMULT_COMPUTATION.RTEMP11_PCIN_47)
-     DSP48E1:PCIN47->PCOUT47    1   1.713   0.000  MMULT_COMPUTATION.RTEMP11 (MMULT_COMPUTATION.RTEMP11_PCOUT_TO_MMULT_COMPUTATION.RTEMP12_PCIN_47)
-     DSP48E1:PCIN47->PCOUT47    1   1.713   0.000  MMULT_COMPUTATION.RTEMP12 (MMULT_COMPUTATION.RTEMP12_PCOUT_TO_MMULT_COMPUTATION.RTEMP13_PCIN_47)
-     DSP48E1:PCIN47->P0    1   1.518   0.536  MMULT_COMPUTATION.RTEMP13 (COMPUTATION.RTEMP1<34>)
-     LUT2:I0->O            1   0.124   0.000  MADD_COMPUTATION.RTEMP3_MADD_LUT<34> (MADD_COMPUTATION.RTEMP3_MADD_LUT<34>)
-     MUXCY:S->O            1   0.472   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<34> (MADD_COMPUTATION.RTEMP3_MADD_CY<34>)
-     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<35> (MADD_COMPUTATION.RTEMP3_MADD_CY<35>)
-     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<36> (MADD_COMPUTATION.RTEMP3_MADD_CY<36>)
-     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<37> (MADD_COMPUTATION.RTEMP3_MADD_CY<37>)
-     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<38> (MADD_COMPUTATION.RTEMP3_MADD_CY<38>)
-     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<39> (MADD_COMPUTATION.RTEMP3_MADD_CY<39>)
-     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<40> (MADD_COMPUTATION.RTEMP3_MADD_CY<40>)
-     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<41> (MADD_COMPUTATION.RTEMP3_MADD_CY<41>)
-     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<42> (MADD_COMPUTATION.RTEMP3_MADD_CY<42>)
-     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<43> (MADD_COMPUTATION.RTEMP3_MADD_CY<43>)
-     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<44> (MADD_COMPUTATION.RTEMP3_MADD_CY<44>)
-     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<45> (MADD_COMPUTATION.RTEMP3_MADD_CY<45>)
-     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<46> (MADD_COMPUTATION.RTEMP3_MADD_CY<46>)
-     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<47> (MADD_COMPUTATION.RTEMP3_MADD_CY<47>)
-     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<48> (MADD_COMPUTATION.RTEMP3_MADD_CY<48>)
-     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<49> (MADD_COMPUTATION.RTEMP3_MADD_CY<49>)
-     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<50> (MADD_COMPUTATION.RTEMP3_MADD_CY<50>)
-     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<51> (MADD_COMPUTATION.RTEMP3_MADD_CY<51>)
-     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<52> (MADD_COMPUTATION.RTEMP3_MADD_CY<52>)
-     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<53> (MADD_COMPUTATION.RTEMP3_MADD_CY<53>)
-     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<54> (MADD_COMPUTATION.RTEMP3_MADD_CY<54>)
-     MUXCY:CI->O           1   0.029   0.000  MADD_COMPUTATION.RTEMP3_MADD_CY<55> (MADD_COMPUTATION.RTEMP3_MADD_CY<55>)
-     XORCY:CI->O           1   0.510   0.421  MADD_COMPUTATION.RTEMP3_MADD_XOR<56> (OUTPUT_1<28>)
-     end scope: 'INST_PLASMA/U1_CPU/U61_ALU/FX3:OUTPUT_1<28>'
-     LUT6:I5->O            1   0.124   0.536  MMUX_C_ALU1267 (MMUX_C_ALU1267)
-     LUT6:I4->O            1   0.124   0.421  MMUX_C_ALU12610 (C_ALU<28>)
-     end scope: 'INST_PLASMA/U1_CPU/U61_ALU:C_ALU<28>'
-     LUT5:I4->O            7   0.124   0.461  C_BUS<28>1 (C_BUS<28>)
-     begin scope: 'INST_PLASMA/U1_CPU/U1_PC_NEXT:PC_NEW<28>'
-     LUT6:I5->O            1   0.124   0.421  MMUX_PC_SELECT.PC_NEXT191 (PC_FUTURE<28>)
-     end scope: 'INST_PLASMA/U1_CPU/U1_PC_NEXT:PC_FUTURE<28>'
-     begin scope: 'INST_PLASMA/U1_CPU/U2_MEM_CTRL:ADDRESS_PC<28>'
-     LUT5:I4->O            3   0.124   0.790  MMUX_MEM_PROC.ADDRESS_VAR191 (ADDRESS_NEXT<28>)
-     end scope: 'INST_PLASMA/U1_CPU/U2_MEM_CTRL:ADDRESS_NEXT<28>'
-     end scope: 'INST_PLASMA/U1_CPU:ADDRESS_NEXT<28>'
-     LUT6:I2->O           36   0.124   0.574  MMUX_ENABLE_LOCAL_MEM12 (ENABLE_LOCAL_MEM)
-     begin scope: 'INST_PLASMA/LOCAL_MEMORY:ENABLE'
-     LUT2:I1->O            8   0.124   0.445  WE_SELECT<0>1 (WE_SELECT<0>_0)
-     RAM256X1S:WE              0.490          MRAM_MEMBANK11
-    ----------------------------------------
-    Total                     17.714ns (12.536ns logic, 5.177ns route)
-                                       (70.8% logic, 29.2% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK100'
-  Total number of paths / destination ports: 1 / 1
--------------------------------------------------------------------------
-Offset:              1.102ns (Levels of Logic = 1)
-  Source:            RST (PAD)
-  Destination:       CLK50 (FF)
-  Destination Clock: CLK100 rising
-
-  Data Path: RST to CLK50
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O           287   0.001   0.607  RST_IBUF (RST_IBUF)
-     FDC:CLR                   0.494          CLK50
-    ----------------------------------------
-    Total                      1.102ns (0.495ns logic, 0.607ns route)
-                                       (44.9% logic, 55.1% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK50'
-  Total number of paths / destination ports: 1603 / 1232
--------------------------------------------------------------------------
-Offset:              6.013ns (Levels of Logic = 14)
-  Source:            BUTTONS<7> (PAD)
-  Destination:       INST_PLASMA/U1_CPU/U9_PIPELINE/REG_DEST_REG_16 (FF)
-  Destination Clock: CLK50 rising
-
-  Data Path: BUTTONS<7> to INST_PLASMA/U1_CPU/U9_PIPELINE/REG_DEST_REG_16
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O             2   0.001   0.782  BUTTONS_7_IBUF (BUTTONS_7_IBUF)
-     begin scope: 'INST_PLASMA:GPIOA_IN<7>'
-     LUT5:I1->O            1   0.124   0.421  MMUX_CPU_DATA_R301 (MMUX_CPU_DATA_R30)
-     LUT6:I5->O            1   0.124   0.536  MMUX_CPU_DATA_R302 (MMUX_CPU_DATA_R301)
-     LUT6:I4->O            1   0.124   0.536  MMUX_CPU_DATA_R303 (MMUX_CPU_DATA_R302)
-     LUT3:I1->O            5   0.124   0.803  MMUX_CPU_DATA_R306 (CPU_DATA_R<7>)
-     begin scope: 'INST_PLASMA/U1_CPU:DATA_R<7>'
-     begin scope: 'INST_PLASMA/U1_CPU/U2_MEM_CTRL:DATA_R<7>'
-     LUT6:I2->O            2   0.124   0.427  MMUX_MEM_PROC.DATA_READ_VAR331 (MMUX_MEM_PROC.DATA_READ_VAR33)
-     LUT6:I5->O           16   0.124   0.519  MMUX_MEM_PROC.DATA_READ_VAR102 (MMUX_MEM_PROC.DATA_READ_VAR102)
-     LUT6:I5->O            1   0.124   0.421  MMUX_MEM_PROC.DATA_READ_VAR101 (DATA_READ<17>)
-     end scope: 'INST_PLASMA/U1_CPU/U2_MEM_CTRL:DATA_READ<17>'
-     begin scope: 'INST_PLASMA/U1_CPU/U5_BUS_MUX:C_MEMORY<17>'
-     LUT6:I5->O            1   0.124   0.421  MMUX_REG_DEST_OUT91 (MMUX_REG_DEST_OUT9)
-     LUT2:I1->O            1   0.124   0.000  MMUX_REG_DEST_OUT93 (REG_DEST_OUT<17>)
-     end scope: 'INST_PLASMA/U1_CPU/U5_BUS_MUX:REG_DEST_OUT<17>'
-     begin scope: 'INST_PLASMA/U1_CPU/U9_PIPELINE:REG_DEST<17>'
-     FDCE:D                    0.030          REG_DEST_REG_17
-    ----------------------------------------
-    Total                      6.013ns (1.147ns logic, 4.866ns route)
-                                       (19.1% logic, 80.9% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK100'
-  Total number of paths / destination ports: 38 / 5
--------------------------------------------------------------------------
-Offset:              3.534ns (Levels of Logic = 7)
-  Source:            INST_PLASMA/U5D_COPROC/VGA/INST_LPM_FF1_2 (FF)
-  Destination:       VGA_BLUE<2> (PAD)
-  Source Clock:      CLK100 rising
-
-  Data Path: INST_PLASMA/U5D_COPROC/VGA/INST_LPM_FF1_2 to VGA_BLUE<2>
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDE:C->Q              4   0.478   0.959  INST_LPM_FF1_2 (INST_LPM_FF1_2)
-     LUT6:I0->O            1   0.124   0.536  INST_LPM_MUX1111 (INST_LPM_MUX111)
-     LUT3:I1->O            3   0.124   0.790  INST_LPM_MUX1112 (ITER<1>)
-     end scope: 'INST_PLASMA/U5D_COPROC/VGA:ITER<1>'
-     end scope: 'INST_PLASMA/U5D_COPROC:ITER<1>'
-     end scope: 'INST_PLASMA:ITER<1>'
-     begin scope: 'INSTCOLORGEN:ITER<1>'
-     LUT4:I0->O            1   0.124   0.399  MRAM_N000211 (VGA_BLUE<0>)
-     end scope: 'INSTCOLORGEN:VGA_BLUE<0>'
-     OBUF:I->O                 0.000          VGA_BLUE_0_OBUF (VGA_BLUE<0>)
-    ----------------------------------------
-    Total                      3.534ns (0.850ns logic, 2.684ns route)
-                                       (24.1% logic, 75.9% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK50'
-  Total number of paths / destination ports: 2 / 2
--------------------------------------------------------------------------
-Offset:              0.877ns (Levels of Logic = 1)
-  Source:            LED (FF)
-  Destination:       LED (PAD)
-  Source Clock:      CLK50 rising
-
-  Data Path: LED to LED
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDC:C->Q              1   0.478   0.399  LED (LED_OBUF)
-     OBUF:I->O                 0.000          LED_OBUF (LED)
-    ----------------------------------------
-    Total                      0.877ns (0.478ns logic, 0.399ns route)
-                                       (54.5% logic, 45.5% route)
-
-=========================================================================
-
-Cross Clock Domains Report:
---------------------------
-
-Clock to Setup on destination clock CLK100
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-CLK100         |    4.611|         |         |         |
-CLK50          |    5.611|         |         |         |
----------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock CLK50
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-CLK50          |   17.714|         |         |         |
----------------+---------+---------+---------+---------+
-
-=========================================================================
-
-
-Total REAL time to Xst completion: 39.00 secs
-Total CPU time to Xst completion: 38.77 secs
- 
---> 
-
-Total memory usage is 589852 kilobytes
-
-Number of errors   :    0 (   0 filtered)
-Number of warnings :   90 (   0 filtered)
-Number of infos    :   25 (   0 filtered)
-

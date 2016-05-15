@@ -19,7 +19,8 @@ use ieee.numeric_std.all;
 use work.mlite_pack.all;
 use work.conversion.all;
 
-entity dma_engine is port(
+entity dma_engine is 
+port(
    clk         : in std_logic;                      --25 MHz
    reset       : in std_logic;
    start_dma   : in std_logic;                      --enable receive DMA

@@ -66,8 +66,8 @@ entity plasma is
            ethernet    : std_logic  := '0';
            eUart       : std_logic  := '0';
            use_cache   : std_logic  := '0';
-			  plasma_name : string := "P1";
-			  plasma_code : string := "../code_bin.txt"
+			  plasma_name : string;
+			  plasma_code : string
 );
    port(clk          : in std_logic;
 			clk_VGA			: in std_logic;
@@ -461,7 +461,8 @@ begin  --architecture
 	--
    --ram_boot_enable <= '1' WHEN (ram_enable = '1') AND eth_pause = '0' ELSE '0';
    u2_boot: ram 
-      generic map (memory_type => memory_type)
+      generic map (memory_type => memory_type, 
+						plasma_code => plasma_code)
       port map (
          clk               => clk,
          enable            => ram_boot_enable,
@@ -595,7 +596,8 @@ begin  --architecture
       end case;
 	end process;
 
-   u4_dma: entity WORK.dma_engine port map(
+   u4_dma: entity WORK.dma_engine
+	port map(
 		clk         => clk,
 		reset       => reset,
 		start_dma   => dma_start,

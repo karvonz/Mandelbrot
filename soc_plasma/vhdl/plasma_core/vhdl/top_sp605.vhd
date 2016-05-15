@@ -24,6 +24,7 @@ entity top_ml605_extphy is port(
 	led: out std_logic;
    i_uart : in std_logic;
    o_uart : out std_logic;
+   o_uart2 : out std_logic;
 
    buttons : in std_logic_vector( 7 downto 0 );
 
@@ -62,7 +63,7 @@ end component;
 
 		signal data_write1, data_write2, clk50, clk100_sig: std_logic;
 		signal iterS, data_out1,data_out2 : std_logic_vector(3 downto 0);
-		signal ADDR2, ADDR1 : std_logic_vector(18 downto 0);
+		signal  ADDR1, ADDR2 : std_logic_vector(18 downto 0);
 		
 		--component clk_wiz_0 is -- vivado
 --		component clkgen is --ise
@@ -111,45 +112,7 @@ begin
 			
 	--	leds(7 downto 0) <= ('0','0','0','0','0','0', locked, onehz);
 
-
-		Inst_plasma1: entity work.plasma
-		GENERIC MAP (
-			memory_type => "XILINX_16X",
-			log_file    => "UNUSED",
-			ethernet    => '0',
-			eUart       => '1',
-			use_cache   => '0',
-			plasma_name => "P1",
-			plasma_code => "../code_bin.txt"
-		)
-		PORT MAP(
-			clk           => clk50,
-			clk_VGA 		=> clk100,
-			reset         => rst,
-			uart_write    => o_uart,
-			uart_read     => i_uart,
-			fifo_1_out_data  => x"00000000",
-			fifo_1_read_en   => open,
-			fifo_1_empty     => '0',
-			fifo_2_in_data   => open,
-			fifo_1_write_en  => open,
-			fifo_2_full      => '0',
-
-			fifo_1_full      => '0',
-			fifo_1_valid     => '0',
-			fifo_2_empty     => '0',
-			fifo_2_valid     => '0',
-			fifo_1_compteur  => x"00000000",
-			fifo_2_compteur  => x"00000000",
-
-			data_write => data_write1,
-			ADDR => ADDR1,
-			data_out => data_out1,
-			
-			gpio0_out       => open,
-			gpioA_in        => x"000000" & buttons --open
-		);
-		
+	
 	Inst_plasma2: entity work.plasma
 		GENERIC MAP (
 			memory_type => "XILINX_16X",
@@ -188,6 +151,45 @@ begin
 			gpioA_in        => x"000000" & buttons --open
 		);
 		
+		Inst_plasma1: entity work.plasma
+		GENERIC MAP (
+			memory_type => "XILINX_16X",
+			log_file    => "UNUSED",
+			ethernet    => '0',
+			eUart       => '1',
+			use_cache   => '0',
+			plasma_name => "P1",
+			plasma_code => "../code_bin.txt"
+		)
+		PORT MAP(
+			clk           => clk50,
+			clk_VGA 		=> clk100,
+			reset         => rst,
+			uart_write    => o_uart2,
+			uart_read     => i_uart,
+			fifo_1_out_data  => x"00000000",
+			fifo_1_read_en   => open,
+			fifo_1_empty     => '0',
+			fifo_2_in_data   => open,
+			fifo_1_write_en  => open,
+			fifo_2_full      => '0',
+
+			fifo_1_full      => '0',
+			fifo_1_valid     => '0',
+			fifo_2_empty     => '0',
+			fifo_2_valid     => '0',
+			fifo_1_compteur  => x"00000000",
+			fifo_2_compteur  => x"00000000",
+
+			data_write => data_write1,
+			ADDR => ADDR1,
+			data_out => data_out1,
+			
+			gpio0_out       => open,
+			gpioA_in        => x"000000" & buttons --open
+		);
+	
+		
 		
 		InstVGA: VGA_bitmap_640x480
 		port map(clk50,
@@ -201,7 +203,8 @@ begin
 					data_write1,
 					ADDR2,
 					data_out2,
-					data_write2);
+					data_write2
+);
 		
 		InstColorgen: Colorgen
 		port map(iterS,VGA_red,VGA_green,VGA_blue);

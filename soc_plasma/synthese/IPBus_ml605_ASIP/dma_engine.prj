@@ -1,0 +1,3 @@
+vhdl work "../../vhdl/plasma_core/vhdl/mlite_pack.vhd"
+vhdl work "../../vhdl/plasma_core/vhdl/ims/conversion.vhd"
+vhdl work "../../vhdl/plasma_core/vhdl/dma_engine.vhd"

@@ -15,7 +15,7 @@ use ieee.numeric_std.all;
 use work.mlite_pack.all;
 
 entity coproc_4 is
-generic(plasma_name : string := "P1");
+generic(plasma_name : string);
    port(
 		clock          : in  std_logic;
 		clock_vga      : in  std_logic;
@@ -56,7 +56,7 @@ begin
 			IF reset = '1' THEN
 				if (plasma_name="P1") then
 					counter <= 0;
-				else
+				elsif (plasma_name="P2") then
 					counter <=153600;
 				end if;
 			ELSE
@@ -64,14 +64,14 @@ begin
 					if (plasma_name = "P1") then
 						IF counter < 153599 THEN
 							counter <= counter + 1;
-						ELSE
+						ELSe
 							counter <= 0;
 						END IF;
-					else
+					elsif (plasma_name="P2") then
 						IF counter < 307199 THEN
 							counter <= counter + 1;
 						ELSE
-							counter <= 0;
+							counter <= 153600;
 						END IF;
 					end if;
 				END IF;
