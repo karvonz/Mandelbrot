@@ -18,7 +18,7 @@ entity coproc_4 is
 generic(plasma_name : string);
    port(
 		clock          : in  std_logic;
-		clock_vga      : in  std_logic;
+		--clock_vga      : in  std_logic;
 		reset          : in  std_logic;
 		INPUT_1        : in  std_logic_vector(31 downto 0);
 		INPUT_1_valid  : in  std_logic;

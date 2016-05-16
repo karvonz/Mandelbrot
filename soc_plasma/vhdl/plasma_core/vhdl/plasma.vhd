@@ -70,7 +70,7 @@ entity plasma is
 			  plasma_code : string
 );
    port(clk          : in std_logic;
-			clk_VGA			: in std_logic;
+			--clk_VGA			: in std_logic;
 				reset        : in std_logic;
 
 				uart_write   : out std_logic;
@@ -323,7 +323,7 @@ begin  --architecture
       cache_checking,
       gpioA_in, counter_reg, cpu_data_w, ram_data_lm,
 		fifo_1_empty, fifo_2_empty, fifo_1_full, fifo_2_full,
-		fifo_1_valid, fifo_2_valid, fifo_1_compteur, fifo_2_compteur, fifo_1_out_data)
+		fifo_1_valid, fifo_2_valid, fifo_1_compteur, fifo_2_compteur, fifo_1_out_data, cop_1_output)
    begin
       case cpu_address(30 downto 28) is
 		
@@ -554,64 +554,64 @@ begin  --architecture
 	--
 	--
 	------------------------------------------------------------------------------------------------------
-
-   dma_input_mux_proc: process(clk, reset, dma_address, enable_misc,
-      ram_data_r, data_read_uart, cpu_pause,
-      irq_mask_reg, irq_status, gpio0_reg, write_enable,
-      cache_checking,
-      gpioA_in, counter_reg, cpu_data_w, ram_data_lm,
-		fifo_1_empty, fifo_2_empty, fifo_1_full, fifo_2_full,
-		fifo_1_valid, fifo_2_valid, fifo_1_compteur, fifo_2_compteur, fifo_1_out_data)
-   begin
-      case dma_address(30 downto 28) is
-      	when "000" =>         --internal ROM
-         	dma_data_read <= ram_data_r;
-      	when "001" =>         --external (local) RAM
-				dma_data_read <= ram_data_lm;
-			when "010" =>         --misc
-         	case dma_address(6 downto 4) is
-         		when "000" =>  dma_data_read <= ZERO(31 downto 8) & data_read_uart;
-        		 	when "001" =>  dma_data_read <= ZERO(31 downto 8) & irq_mask_reg;
-         		when "010" =>  dma_data_read <= ZERO(31 downto 8) & irq_status;
-         		when "011" =>  dma_data_read <= gpio0_reg;
-         		when "101" =>  dma_data_read <= gpioA_in;
-         		when "110" =>  dma_data_read <= counter_reg;
-					when others =>	dma_data_read <= x"FFFFFFFF";
-				end case;
-			when "011" =>
-         	case dma_address(7 downto 4) is
-					when "0000"  => dma_data_read <= ZERO(31 downto 1) & fifo_1_empty;
-					when "0001"  => dma_data_read <= ZERO(31 downto 1) & fifo_2_empty;
-					when "0010"  => dma_data_read <= ZERO(31 downto 1) & fifo_1_full;
-					when "0011"  => dma_data_read <= ZERO(31 downto 1) & fifo_2_full;
-					when "0100"  => dma_data_read <= ZERO(31 downto 1) & fifo_1_valid;
-					when "0101"  => dma_data_read <= ZERO(31 downto 1) & fifo_2_valid;
-					when "0110"  => dma_data_read <= fifo_1_compteur;
-					when "0111"  => dma_data_read <= fifo_2_compteur;
-					when "1000"  => dma_data_read <= fifo_1_out_data;
-					when others  => dma_data_read <= x"FFFFFFFF";
-         	end case;
-      	when others =>
-      	   dma_data_read <= ZERO(31 downto 8) & x"FF";
-      end case;
-	end process;
-
-   u4_dma: entity WORK.dma_engine
-	port map(
-		clk         => clk,
-		reset       => reset,
-		start_dma   => dma_start,
-		--
-		address     => dma_address,	-- adr from ram
-		byte_we     => dma_byte_we,
-		data_write  => dma_data_write,
-		data_read   => dma_data_read,
-		--
-		mem_address => cpu_address,	-- adr from cpu
-		mem_byte_we => cpu_byte_we,
-		data_w      => cpu_data_w,
-		pause_out   => eth_pause
-	);
+--
+--   dma_input_mux_proc: process(clk, reset, dma_address, enable_misc,
+--      ram_data_r, data_read_uart, cpu_pause,
+--      irq_mask_reg, irq_status, gpio0_reg, write_enable,
+--      cache_checking,
+--      gpioA_in, counter_reg, cpu_data_w, ram_data_lm,
+--		fifo_1_empty, fifo_2_empty, fifo_1_full, fifo_2_full,
+--		fifo_1_valid, fifo_2_valid, fifo_1_compteur, fifo_2_compteur, fifo_1_out_data)
+--   begin
+--      case dma_address(30 downto 28) is
+--      	when "000" =>         --internal ROM
+--         	dma_data_read <= ram_data_r;
+--      	when "001" =>         --external (local) RAM
+--				dma_data_read <= ram_data_lm;
+--			when "010" =>         --misc
+--         	case dma_address(6 downto 4) is
+--         		when "000" =>  dma_data_read <= ZERO(31 downto 8) & data_read_uart;
+--        		 	when "001" =>  dma_data_read <= ZERO(31 downto 8) & irq_mask_reg;
+--         		when "010" =>  dma_data_read <= ZERO(31 downto 8) & irq_status;
+--         		when "011" =>  dma_data_read <= gpio0_reg;
+--         		when "101" =>  dma_data_read <= gpioA_in;
+--         		when "110" =>  dma_data_read <= counter_reg;
+--					when others =>	dma_data_read <= x"FFFFFFFF";
+--				end case;
+--			when "011" =>
+--         	case dma_address(7 downto 4) is
+--					when "0000"  => dma_data_read <= ZERO(31 downto 1) & fifo_1_empty;
+--					when "0001"  => dma_data_read <= ZERO(31 downto 1) & fifo_2_empty;
+--					when "0010"  => dma_data_read <= ZERO(31 downto 1) & fifo_1_full;
+--					when "0011"  => dma_data_read <= ZERO(31 downto 1) & fifo_2_full;
+--					when "0100"  => dma_data_read <= ZERO(31 downto 1) & fifo_1_valid;
+--					when "0101"  => dma_data_read <= ZERO(31 downto 1) & fifo_2_valid;
+--					when "0110"  => dma_data_read <= fifo_1_compteur;
+--					when "0111"  => dma_data_read <= fifo_2_compteur;
+--					when "1000"  => dma_data_read <= fifo_1_out_data;
+--					when others  => dma_data_read <= x"FFFFFFFF";
+--         	end case;
+--      	when others =>
+--      	   dma_data_read <= ZERO(31 downto 8) & x"FF";
+--      end case;
+--	end process;
+--
+--   u4_dma: entity WORK.dma_engine
+--	port map(
+--		clk         => clk,
+--		reset       => reset,
+--		start_dma   => dma_start,
+--		--
+--		address     => dma_address,	-- adr from ram
+--		byte_we     => dma_byte_we,
+--		data_write  => dma_data_write,
+--		data_read   => dma_data_read,
+--		--
+--		mem_address => cpu_address,	-- adr from cpu
+--		mem_byte_we => cpu_byte_we,
+--		data_w      => cpu_data_w,
+--		pause_out   => eth_pause
+--	);
 
 	
 	------------------------------------------------------------------------------------------------------
@@ -650,7 +650,7 @@ begin  --architecture
 	GENERIC MAP (plasma_name=>plasma_name)
 	port map(
 		clock          => clk,
-		clock_VGA      => clk_VGA,
+		--clock_VGA      => clk_VGA,
 		reset          => cop_4_reset,
 		INPUT_1        => cpu_data_w,
 		INPUT_1_valid  => cop_4_valid,

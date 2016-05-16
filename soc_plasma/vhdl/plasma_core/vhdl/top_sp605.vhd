@@ -125,7 +125,7 @@ begin
 		)
 		PORT MAP(
 			clk           => clk50,
-			clk_VGA 		=> clk100,
+--			clk_VGA 		=> clk100,
 			reset         => rst,
 			uart_write    => o_uart,
 			uart_read     => i_uart,
@@ -163,7 +163,7 @@ begin
 		)
 		PORT MAP(
 			clk           => clk50,
-			clk_VGA 		=> clk100,
+		--	clk_VGA 		=> clk100,
 			reset         => rst,
 			uart_write    => o_uart2,
 			uart_read     => i_uart,
