@@ -53,17 +53,17 @@ component VGA_bitmap_640x480
        VGA_hs       : out std_logic;   -- horisontal vga syncr.
        VGA_vs       : out std_logic;   -- vertical vga syncr.
        iter      : out std_logic_vector(3 downto 0);   -- iter output
-       ADDR1         : in  std_logic_vector(18 downto 0);
+       ADDR1         : in  std_logic_vector(17 downto 0);
        data_in1      : in  std_logic_vector(3 downto 0);
        data_write1   : in  std_logic;
-		 ADDR2         : in  std_logic_vector(18 downto 0);
+		 ADDR2         : in  std_logic_vector(17 downto 0);
        data_in2      : in  std_logic_vector(3 downto 0);
        data_write2   : in  std_logic);
 end component;
 
 		signal data_write1, data_write2, clk50, clk100_sig: std_logic;
 		signal iterS, data_out1,data_out2 : std_logic_vector(3 downto 0);
-		signal  ADDR1, ADDR2 : std_logic_vector(18 downto 0);
+		signal  ADDR1, ADDR2 : std_logic_vector(17 downto 0);
 		
 		--component clk_wiz_0 is -- vivado
 --		component clkgen is --ise
@@ -120,7 +120,6 @@ begin
 			ethernet    => '0',
 			eUart       => '1',
 			use_cache   => '0',
-			plasma_name => "P2",
 			plasma_code => "../code_bin2.txt"
 		)
 		PORT MAP(
@@ -143,7 +142,7 @@ begin
 			fifo_1_compteur  => x"00000000",
 			fifo_2_compteur  => x"00000000",
 
-			data_write => data_write2,
+			data_enable => data_write2,
 			ADDR => ADDR2,
 			data_out => data_out2,
 			
@@ -158,7 +157,6 @@ begin
 			ethernet    => '0',
 			eUart       => '1',
 			use_cache   => '0',
-			plasma_name => "P1",
 			plasma_code => "../code_bin.txt"
 		)
 		PORT MAP(
@@ -181,7 +179,7 @@ begin
 			fifo_1_compteur  => x"00000000",
 			fifo_2_compteur  => x"00000000",
 
-			data_write => data_write1,
+			data_enable => data_write1,
 			ADDR => ADDR1,
 			data_out => data_out1,
 			

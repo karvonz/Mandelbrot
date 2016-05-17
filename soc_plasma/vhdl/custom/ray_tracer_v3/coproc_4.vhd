@@ -15,7 +15,6 @@ use ieee.numeric_std.all;
 use work.mlite_pack.all;
 
 entity coproc_4 is
-generic(plasma_name : string);
    port(
 		clock          : in  std_logic;
 		--clock_vga      : in  std_logic;
@@ -27,7 +26,7 @@ generic(plasma_name : string);
      -- VGA_vs       	: out std_logic;   -- vertical vga syncr.
       --iter      	: out std_logic_vector(3 downto 0)   -- red output
 		data_write :out std_logic;
-		ADDR         : out  std_logic_vector(18 downto 0);
+		ADDR         : out  std_logic_vector(17 downto 0);
 		data_out      : out std_logic_vector(3 downto 0)
     --  VGA_green    	: out std_logic_vector(3 downto 0);   -- green output
     --  VGA_blue    	 : out std_logic_vector(3 downto 0)   -- blue output
@@ -37,10 +36,10 @@ end; --comb_alu_1
 architecture logic of coproc_4 is
 
 	SIGNAL mem : UNSIGNED(31 downto 0);
-	signal tmp_addr : std_logic_vector(18 downto 0);
+	signal tmp_addr : std_logic_vector(17 downto 0);
 	signal pixel : std_logic_vector(7 downto 0);
 	--signal tmp_out : std_logic_vector(10 downto 0);
-	signal counter : integer range 0 to 307199:= 0;
+	signal counter : integer range 0 to 153599:= 0;
 begin
 	
 	
@@ -54,26 +53,14 @@ begin
 	begin
 		IF clock'event AND clock = '1' THEN
 			IF reset = '1' THEN
-				if (plasma_name="P1") then
 					counter <= 0;
-				elsif (plasma_name="P2") then
-					counter <=153600;
-				end if;
 			ELSE
 				IF INPUT_1_valid = '1' THEN
-					if (plasma_name = "P1") then
 						IF counter < 153599 THEN
 							counter <= counter + 1;
-						ELSe
+						ELSE
 							counter <= 0;
 						END IF;
-					elsif (plasma_name="P2") then
-						IF counter < 307199 THEN
-							counter <= counter + 1;
-						ELSE
-							counter <= 153600;
-						END IF;
-					end if;
 				END IF;
 			END IF;
 		END IF;
@@ -100,14 +87,14 @@ begin
 --		END IF;
 --	end process;
 --	
-	tmp_addr <= std_logic_vector(to_signed(counter, 19));
+	tmp_addr <= std_logic_vector(to_signed(counter, 18));
 --	
 
 		data_write <=INPUT_1_valid;
 		data_out <=INPUT_1(3 downto 0);
 		ADDR <= tmp_addr;
 	
-		OUTPUT_1 <= "0000000000000"&tmp_addr;
+		OUTPUT_1 <= "00000000000000"&tmp_addr;
 
 	
 	

@@ -66,7 +66,6 @@ entity plasma is
            ethernet    : std_logic  := '0';
            eUart       : std_logic  := '0';
            use_cache   : std_logic  := '0';
-			  plasma_name : string;
 			  plasma_code : string
 );
    port(clk          : in std_logic;
@@ -102,8 +101,8 @@ entity plasma is
 				
 				--VGA_hs       : out std_logic;   -- horisontal vga syncr.
 			--	VGA_vs       : out std_logic;   -- vertical vga syncr.
-				data_write :out std_logic;
-		      ADDR         : out std_logic_vector(18 downto 0);
+				data_enable :out std_logic;
+		      ADDR         : out std_logic_vector(17 downto 0);
 				data_out      : out std_logic_vector(3 downto 0);   
 				--VGA_green    : out std_logic_vector(3 downto 0);   -- green output
 				--VGA_blue     : out std_logic_vector(3 downto 0);   -- blue output
@@ -647,7 +646,6 @@ begin  --architecture
 	);
 
    u5d_coproc: entity WORK.coproc_4 
-	GENERIC MAP (plasma_name=>plasma_name)
 	port map(
 		clock          => clk,
 		--clock_VGA      => clk_VGA,
@@ -656,7 +654,7 @@ begin  --architecture
 		INPUT_1_valid  => cop_4_valid,
 		OUTPUT_1       => cop_4_output,
 		data_out       => data_out,
-		data_write     => data_write,
+		data_write     => data_enable,
       ADDR           => ADDR
 
 	--	VGA_hs => VGA_hs,

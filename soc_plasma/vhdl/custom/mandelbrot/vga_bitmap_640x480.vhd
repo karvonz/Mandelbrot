@@ -36,10 +36,10 @@ entity VGA_bitmap_640x480 is
        VGA_hs       : out std_logic;   -- horisontal vga syncr.
        VGA_vs       : out std_logic;   -- vertical vga syncr.
        iter      : out std_logic_vector(3 downto 0);   -- iter output
-       ADDR1         : in  std_logic_vector(18 downto 0);
+       ADDR1         : in  std_logic_vector(17 downto 0);
        data_in1      : in  std_logic_vector(3 downto 0);
        data_write1   : in  std_logic;
-		 ADDR2         : in  std_logic_vector(18 downto 0);
+		 ADDR2         : in  std_logic_vector(17 downto 0);
        data_in2      : in  std_logic_vector(3 downto 0);
        data_write2   : in  std_logic);
 end VGA_bitmap_640x480;
@@ -47,22 +47,9 @@ end VGA_bitmap_640x480;
 architecture Behavioral of VGA_bitmap_640x480 is
 
 	-- Graphic RAM type. this object is the content of the displayed image
-	type GRAM is array (0 to 307199) of BIT_vector(3 downto 0); 
-
-    impure function ram_function_name (ram_file_name : in string) return GRAM is                                                   
-       FILE ram_file      : text is in ram_file_name;
-       variable line_name : line;
-       variable ram_name  : GRAM;
-	 begin                                                        
-       for I in GRAM'range loop                                  
-           readline (ram_file, line_name);                             
-           read (line_name, ram_name(I));                                  
-       end loop;                                                    
-       return ram_name;                                                  
-	end function;                                                
-
-	signal screen        : GRAM;-- := ram_function_name("../mandelbrot.bin"); -- the memory representation of the image
-
+	type GRAM is array (0 to 153599) of std_logic_vector(3 downto 0); --153599
+	signal  screen1, screen2        : GRAM;-- := ram_function_name("../mandelbrot.bin"); -- the memory representation of the image
+    
 	signal h_counter     : integer range 0 to 3199:=0;     -- counter for H sync. (size depends of frequ because of division)
 	signal v_counter     : integer range 0 to 520 :=0;     -- counter for V sync. (base on v_counter, so no frequ issue)
 
@@ -72,7 +59,7 @@ architecture Behavioral of VGA_bitmap_640x480 is
 	signal pix_read_addr : integer range 0 to 307199:=0;  -- the address at which displayed data is read
 
 	signal next_pixel    : std_logic_vector(3 downto 0);  -- the data coding the value of the pixel to be displayed
-
+ --   signal ram_number : std_logic;
 begin
 
 
@@ -94,43 +81,57 @@ begin
 process (clk)
 begin
    if (clk'event and clk = '1') then
---      if (<enableA> = '1') then
-         if (data_write1 = '1') then
-            screen(to_integer(unsigned(ADDR1))) <= TO_BitVector( data_in1 );
-         end if;
-			if (data_write2 = '1') then
-            screen(to_integer(unsigned(ADDR2))) <= TO_BitVector( data_in2 );
-         end if;
-        -- data_out <= To_StdLogicVector( screen(to_integer(unsigned(ADDR))) );
---      end if;
+				if (data_write1 = '1') then
+					screen1(to_integer(unsigned(ADDR1))) <=  data_in1 ;
+				end if;
+				if (data_write2 = '1') then
+					screen2(to_integer(unsigned(ADDR2))) <= data_in2 ;
+				end if;
+
+				if (pix_read_addr<153599)then
+					next_pixel <= screen1(pix_read_addr) ;
+				else
+					next_pixel <= screen2(pix_read_addr);
+				end if;
    end if;
 end process;
 
-process (clk_vga)
-begin
-   if (clk_vga'event and clk_vga = '1') then
---      if (<enableB> = '1') then
-      next_pixel <= To_StdLogicVector( screen(pix_read_addr)              );
---      end if;
-   end if;
-end process;
+--process (next_pixel)
+--begin
+--   if (clk_vga'event and clk_vga = '1') then
+--				next_pixel <= To_StdLogicVector( ram_out(pix_read_addr)              );
+--	end if;
+--end process;
+
+--ram_out <= screen1 when to_unsigned(pix_read_addr,18)(17) = '0' else screen2;
+
 
 --------------------------------------------------------------------------------
 
 
-pixel_read_addr : process(clk_vga)
+pixel_read_addr : process(clk_vga, clk)
 begin
    if clk_vga'event and clk_vga='1' then
       if reset = '1' or (not TOP_display) then
          pix_read_addr <= 0;
       elsif TOP_line and (h_counter mod 4)=0 then
          pix_read_addr <= pix_read_addr + 1;
-		elsif (pix_read_addr = 307199) then
-		   pix_read_addr <= 0;
+	  elsif (pix_read_addr = 307199) then
+		 pix_read_addr <= 0;
       end if;
    end if;
 end process;
 
+--process(pix_read_addr)
+--begin
+--    if pix_read_addr < 153599 then
+--        ram_number <= '0';
+--    elsif pix_read_addr <307199 then
+--        ram_number <= '1';
+--    else
+--        ram_number <= '0';
+--    end if;
+--end process;
 
 -- this process manages the horizontal synchro using the counters
 process(clk_vga)
@@ -225,3 +226,4 @@ end process;
 
 
 end Behavioral;
+
