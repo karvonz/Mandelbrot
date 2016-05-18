@@ -3,10 +3,10 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pn" timeStamp="Tue May 17 19:20:18 2016">
+<application name="pn" timeStamp="Wed May 18 18:52:02 2016">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="AF1890A0B6364B02823F2652C5700299" type="project"/>
-<property name="ProjectIteration" value="0" type="project"/>
+<property name="ProjectIteration" value="2" type="project"/>
 <property name="ProjectFile" value="D:/Vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/ml605_ipbus.xise" type="project"/>
 <property name="ProjectCreationTimestamp" value="2016-05-16T23:44:46" type="project"/>
 </section>
@@ -25,9 +25,10 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_UserConstraintEditorPreference" value="Text Editor" type="process"/>
 <property name="PROP_intProjectCreationTimestamp" value="2016-05-16T23:44:46" type="design"/>
 <property name="PROP_intWbtProjectID" value="AF1890A0B6364B02823F2652C5700299" type="design"/>
+<property name="PROP_intWbtProjectIteration" value="2" type="process"/>
 <property name="PROP_intWorkingDirLocWRTProjDir" value="Same" type="design"/>
 <property name="PROP_intWorkingDirUsed" value="No" type="design"/>
-<property name="PROP_AutoTop" value="true" type="design"/>
+<property name="PROP_AutoTop" value="false" type="design"/>
 <property name="PROP_DevFamily" value="Artix7" type="design"/>
 <property name="PROP_DevDevice" value="xc7a100t" type="design"/>
 <property name="PROP_DevFamilyPMName" value="artix7" type="design"/>

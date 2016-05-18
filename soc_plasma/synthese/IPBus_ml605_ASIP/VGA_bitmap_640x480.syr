@@ -1,0 +1,536 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: VGA_bitmap_640x480.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "VGA_bitmap_640x480.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "VGA_bitmap_640x480"
+Output Format                      : NGC
+Target Device                      : xc7a100t-1-csg324
+
+---- Source Options
+Top Module Name                    : VGA_bitmap_640x480
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "D:\Vincent\Mandelbrot\soc_plasma\vhdl\custom\mandelbrot\vga_bitmap_640x480.vhd" into library work
+Parsing entity <VGA_bitmap_640x480>.
+Parsing architecture <Behavioral> of entity <vga_bitmap_640x480>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <VGA_bitmap_640x480> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <VGA_bitmap_640x480>.
+    Related source file is "D:\Vincent\Mandelbrot\soc_plasma\vhdl\custom\mandelbrot\vga_bitmap_640x480.vhd".
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <screen1>, simulation mismatch.
+    Found 153600x4-bit dual-port RAM <Mram_screen1> for signal <screen1>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <screen2>, simulation mismatch.
+    Found 153600x4-bit dual-port RAM <Mram_screen2> for signal <screen2>.
+    Found 4-bit register for signal <next_pixel2>.
+    Found 4-bit register for signal <next_pixel>.
+    Found 19-bit register for signal <pix_read_addr>.
+    Found 1-bit register for signal <VGA_vs>.
+    Found 1-bit register for signal <TOP_display>.
+    Found 4-bit register for signal <iter>.
+    Found 1-bit register for signal <VGA_hs>.
+    Found 1-bit register for signal <TOP_line>.
+    Found 12-bit register for signal <h_counter>.
+    Found 10-bit register for signal <v_counter>.
+    Found 4-bit register for signal <next_pixel1>.
+    Found 20-bit subtractor for signal <GND_5_o_GND_5_o_sub_2_OUT> created at line 73.
+    Found 19-bit adder for signal <pix_read_addr[18]_GND_5_o_add_13_OUT> created at line 140.
+    Found 10-bit adder for signal <v_counter[9]_GND_5_o_add_48_OUT> created at line 265.
+    Found 12-bit adder for signal <h_counter[11]_GND_5_o_add_50_OUT> created at line 268.
+    Found 19-bit comparator greater for signal <pix_read_addr[18]_GND_5_o_LessThan_1_o> created at line 73
+    Summary:
+	inferred   2 RAM(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred  61 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <VGA_bitmap_640x480> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 153600x4-bit dual-port RAM                            : 2
+# Adders/Subtractors                                   : 4
+ 10-bit adder                                          : 1
+ 12-bit adder                                          : 1
+ 19-bit adder                                          : 1
+ 20-bit subtractor                                     : 1
+# Registers                                            : 11
+ 1-bit register                                        : 4
+ 10-bit register                                       : 1
+ 12-bit register                                       : 1
+ 19-bit register                                       : 1
+ 4-bit register                                        : 4
+# Comparators                                          : 1
+ 19-bit comparator greater                             : 1
+# Multiplexers                                         : 2
+ 20-bit 2-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <VGA_bitmap_640x480>.
+The following registers are absorbed into counter <h_counter>: 1 register on signal <h_counter>.
+The following registers are absorbed into counter <pix_read_addr>: 1 register on signal <pix_read_addr>.
+The following registers are absorbed into counter <v_counter>: 1 register on signal <v_counter>.
+INFO:Xst:3226 - The RAM <Mram_screen2> will be implemented as a BLOCK RAM, absorbing the following register(s): <next_pixel2>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 153600-word x 4-bit                 |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <data_write2>   | high     |
+    |     addrA          | connected to signal <ADDR2>         |          |
+    |     diA            | connected to signal <data_in2>      |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 153600-word x 4-bit                 |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk_vga>       | rise     |
+    |     addrB          | connected to signal <n0081>         |          |
+    |     doB            | connected to signal <next_pixel2>   |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_screen1> will be implemented as a BLOCK RAM, absorbing the following register(s): <next_pixel1>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 153600-word x 4-bit                 |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <data_write1>   | high     |
+    |     addrA          | connected to signal <ADDR1>         |          |
+    |     diA            | connected to signal <data_in1>      |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 153600-word x 4-bit                 |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk_vga>       | rise     |
+    |     addrB          | connected to signal <n0081>         |          |
+    |     doB            | connected to signal <next_pixel1>   |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <VGA_bitmap_640x480> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 153600x4-bit dual-port block RAM                      : 2
+# Adders/Subtractors                                   : 1
+ 20-bit subtractor                                     : 1
+# Counters                                             : 3
+ 10-bit up counter                                     : 1
+ 12-bit up counter                                     : 1
+ 19-bit up counter                                     : 1
+# Registers                                            : 12
+ Flip-Flops                                            : 12
+# Comparators                                          : 1
+ 19-bit comparator greater                             : 1
+# Multiplexers                                         : 2
+ 20-bit 2-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <inst_LPM_FF_1> in Unit <VGA_bitmap_640x480> is equivalent to the following FF/Latch, which will be removed : <inst_LPM_FF1_1> 
+INFO:Xst:2261 - The FF/Latch <inst_LPM_FF_0> in Unit <VGA_bitmap_640x480> is equivalent to the following FF/Latch, which will be removed : <inst_LPM_FF1_0> 
+
+Optimizing unit <VGA_bitmap_640x480> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block VGA_bitmap_640x480, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 55
+ Flip-Flops                                            : 55
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : VGA_bitmap_640x480.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 265
+#      GND                         : 1
+#      INV                         : 7
+#      LUT1                        : 52
+#      LUT2                        : 4
+#      LUT3                        : 28
+#      LUT4                        : 12
+#      LUT5                        : 15
+#      LUT6                        : 27
+#      MUXCY                       : 55
+#      MUXF7                       : 4
+#      VCC                         : 1
+#      XORCY                       : 59
+# FlipFlops/Latches                : 55
+#      FD                          : 25
+#      FDR                         : 20
+#      FDRE                        : 10
+# RAMS                             : 40
+#      RAMB36E1                    : 40
+# Clock Buffers                    : 2
+#      BUFGP                       : 2
+# IO Buffers                       : 53
+#      IBUF                        : 47
+#      OBUF                        : 6
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              55  out of  126800     0%  
+ Number of Slice LUTs:                  145  out of  63400     0%  
+    Number used as Logic:               145  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    149
+   Number with an unused Flip Flop:      94  out of    149    63%  
+   Number with an unused LUT:             4  out of    149     2%  
+   Number of fully used LUT-FF pairs:    51  out of    149    34%  
+   Number of unique control sets:         6
+
+IO Utilization: 
+ Number of IOs:                          55
+ Number of bonded IOBs:                  55  out of    210    26%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:               40  out of    135    29%  
+    Number using Block RAM only:         40
+ Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk_vga                            | BUFGP                  | 95    |
+clk                                | BUFGP                  | 40    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+N101(Mram_screen151:CASCADEOUTA)   | NONE(Mram_screen15)    | 2     |
+N103(Mram_screen151:CASCADEOUTB)   | NONE(Mram_screen15)    | 2     |
+N105(Mram_screen131:CASCADEOUTA)   | NONE(Mram_screen13)    | 2     |
+N107(Mram_screen131:CASCADEOUTB)   | NONE(Mram_screen13)    | 2     |
+N109(Mram_screen141:CASCADEOUTA)   | NONE(Mram_screen14)    | 2     |
+N111(Mram_screen141:CASCADEOUTB)   | NONE(Mram_screen14)    | 2     |
+N113(Mram_screen161:CASCADEOUTA)   | NONE(Mram_screen16)    | 2     |
+N115(Mram_screen161:CASCADEOUTB)   | NONE(Mram_screen16)    | 2     |
+N117(Mram_screen171:CASCADEOUTA)   | NONE(Mram_screen17)    | 2     |
+N119(Mram_screen171:CASCADEOUTB)   | NONE(Mram_screen17)    | 2     |
+N121(Mram_screen181:CASCADEOUTA)   | NONE(Mram_screen18)    | 2     |
+N123(Mram_screen181:CASCADEOUTB)   | NONE(Mram_screen18)    | 2     |
+N61(Mram_screen221:CASCADEOUTA)    | NONE(Mram_screen22)    | 2     |
+N63(Mram_screen221:CASCADEOUTB)    | NONE(Mram_screen22)    | 2     |
+N65(Mram_screen213:CASCADEOUTA)    | NONE(Mram_screen21)    | 2     |
+N67(Mram_screen213:CASCADEOUTB)    | NONE(Mram_screen21)    | 2     |
+N69(Mram_screen231:CASCADEOUTA)    | NONE(Mram_screen23)    | 2     |
+N71(Mram_screen231:CASCADEOUTB)    | NONE(Mram_screen23)    | 2     |
+N73(Mram_screen241:CASCADEOUTA)    | NONE(Mram_screen24)    | 2     |
+N75(Mram_screen241:CASCADEOUTB)    | NONE(Mram_screen24)    | 2     |
+N77(Mram_screen271:CASCADEOUTA)    | NONE(Mram_screen27)    | 2     |
+N79(Mram_screen271:CASCADEOUTB)    | NONE(Mram_screen27)    | 2     |
+N81(Mram_screen251:CASCADEOUTA)    | NONE(Mram_screen25)    | 2     |
+N83(Mram_screen251:CASCADEOUTB)    | NONE(Mram_screen25)    | 2     |
+N85(Mram_screen261:CASCADEOUTA)    | NONE(Mram_screen26)    | 2     |
+N87(Mram_screen261:CASCADEOUTB)    | NONE(Mram_screen26)    | 2     |
+N89(Mram_screen281:CASCADEOUTA)    | NONE(Mram_screen28)    | 2     |
+N91(Mram_screen281:CASCADEOUTB)    | NONE(Mram_screen28)    | 2     |
+N93(Mram_screen121:CASCADEOUTA)    | NONE(Mram_screen12)    | 2     |
+N95(Mram_screen121:CASCADEOUTB)    | NONE(Mram_screen12)    | 2     |
+N97(Mram_screen113:CASCADEOUTA)    | NONE(Mram_screen11)    | 2     |
+N99(Mram_screen113:CASCADEOUTB)    | NONE(Mram_screen11)    | 2     |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 3.660ns (Maximum Frequency: 273.224MHz)
+   Minimum input arrival time before clock: 2.316ns
+   Maximum output required time after clock: 0.883ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_vga'
+  Clock period: 3.660ns (frequency: 273.224MHz)
+  Total number of paths / destination ports: 1654 / 91
+-------------------------------------------------------------------------
+Delay:               3.660ns (Levels of Logic = 3)
+  Source:            pix_read_addr_11 (FF)
+  Destination:       pix_read_addr_1 (FF)
+  Source Clock:      clk_vga rising
+  Destination Clock: clk_vga rising
+
+  Data Path: pix_read_addr_11 to pix_read_addr_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             5   0.478   0.946  pix_read_addr_11 (pix_read_addr_11)
+     LUT5:I0->O            1   0.124   0.776  Mcount_pix_read_addr_val3 (Mcount_pix_read_addr_val3)
+     LUT6:I2->O           19   0.124   1.058  Mcount_pix_read_addr_val5 (Mcount_pix_read_addr_val)
+     LUT6:I0->O            1   0.124   0.000  pix_read_addr_1_rstpot (pix_read_addr_1_rstpot)
+     FD:D                      0.030          pix_read_addr_1
+    ----------------------------------------
+    Total                      3.660ns (0.880ns logic, 2.780ns route)
+                                       (24.0% logic, 76.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_vga'
+  Total number of paths / destination ports: 45 / 45
+-------------------------------------------------------------------------
+Offset:              2.316ns (Levels of Logic = 3)
+  Source:            reset (PAD)
+  Destination:       pix_read_addr_1 (FF)
+  Destination Clock: clk_vga rising
+
+  Data Path: reset to pix_read_addr_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             7   0.001   0.979  reset_IBUF (reset_IBUF)
+     LUT6:I0->O           19   0.124   1.058  Mcount_pix_read_addr_val5 (Mcount_pix_read_addr_val)
+     LUT6:I0->O            1   0.124   0.000  pix_read_addr_1_rstpot (pix_read_addr_1_rstpot)
+     FD:D                      0.030          pix_read_addr_1
+    ----------------------------------------
+    Total                      2.316ns (0.279ns logic, 2.037ns route)
+                                       (12.0% logic, 88.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 40 / 40
+-------------------------------------------------------------------------
+Offset:              1.164ns (Levels of Logic = 1)
+  Source:            data_in2<0> (PAD)
+  Destination:       Mram_screen22 (RAM)
+  Destination Clock: clk rising
+
+  Data Path: data_in2<0> to Mram_screen22
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             5   0.001   0.426  data_in2_0_IBUF (data_in2_0_IBUF)
+     RAMB36E1:DIADI0           0.737          Mram_screen22
+    ----------------------------------------
+    Total                      1.164ns (0.738ns logic, 0.426ns route)
+                                       (63.4% logic, 36.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_vga'
+  Total number of paths / destination ports: 6 / 6
+-------------------------------------------------------------------------
+Offset:              0.883ns (Levels of Logic = 1)
+  Source:            VGA_hs (FF)
+  Destination:       VGA_hs (PAD)
+  Source Clock:      clk_vga rising
+
+  Data Path: VGA_hs to VGA_hs
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.478   0.405  VGA_hs (VGA_hs_OBUF)
+     OBUF:I->O                 0.000          VGA_hs_OBUF (VGA_hs)
+    ----------------------------------------
+    Total                      0.883ns (0.478ns logic, 0.405ns route)
+                                       (54.1% logic, 45.9% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk_vga
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_vga        |    3.660|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 12.73 secs
+ 
+--> 
+
+Total memory usage is 445648 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
+

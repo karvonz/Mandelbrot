@@ -2,14 +2,14 @@
 Release 14.7 Trace  (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-D:\ISE\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -e 3 -s 1 -n 3
+D:\ISE\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 1 -n 3
 -fastpaths -xml top_ml605_extphy.twx top_ml605_extphy.ncd -o
 top_ml605_extphy.twr top_ml605_extphy.pcf
 
 Design file:              top_ml605_extphy.ncd
 Physical constraint file: top_ml605_extphy.pcf
 Device,package,speed:     xc7a100t,csg324,C,-1 (PRODUCTION 1.10 2013-10-13)
-Report level:             error report
+Report level:             verbose report
 
 Environment Variable      Effect 
 --------------------      ------ 
@@ -30,9 +30,508 @@ Timing constraint: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH
 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 2986 paths analyzed, 1539 endpoints analyzed, 0 failing endpoints
+ 20849 paths analyzed, 1601 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   5.872ns.
+ Minimum period is   7.897ns.
+--------------------------------------------------------------------------------
+
+Paths for end point InstVGA/Mram_screen113 (RAMB36_X3Y16.ADDRBWRADDRL5), 26 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     2.103ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               InstVGA/pix_read_addr_3 (FF)
+  Destination:          InstVGA/Mram_screen113 (RAM)
+  Requirement:          10.000ns
+  Data Path Delay:      7.881ns (Levels of Logic = 4)
+  Clock Path Skew:      0.019ns (1.635 - 1.616)
+  Source Clock:         clk100_BUFGP rising at 0.000ns
+  Destination Clock:    clk100_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: InstVGA/pix_read_addr_3 to InstVGA/Mram_screen113
+    Location                   Delay type         Delay(ns)  Physical Resource
+                                                             Logical Resource(s)
+    -------------------------------------------------------  -------------------
+    SLICE_X62Y101.DQ           Tcko                  0.518   InstVGA/pix_read_addr<3>
+                                                             InstVGA/pix_read_addr_3
+    SLICE_X63Y102.B1           net (fanout=5)        0.841   InstVGA/pix_read_addr<3>
+    SLICE_X63Y102.B            Tilo                  0.124   InstVGA/Mcount_pix_read_addr_val1
+                                                             InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o32
+    SLICE_X63Y102.A4           net (fanout=1)        0.433   InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o31
+    SLICE_X63Y102.A            Tilo                  0.124   InstVGA/Mcount_pix_read_addr_val1
+                                                             InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o33
+    SLICE_X63Y104.B3           net (fanout=1)        0.640   InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o32
+    SLICE_X63Y104.B            Tilo                  0.124   InstVGA/inst_LPM_FF1_1
+                                                             InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o34
+    SLICE_X65Y101.A1           net (fanout=13)       1.181   InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o
+    SLICE_X65Y101.AMUX         Tilo                  0.354   InstVGA/n0081<6>
+                                                             InstVGA/Mmux_n0081141
+    RAMB36_X3Y16.ADDRBWRADDRL5 net (fanout=40)       2.976   InstVGA/n0081<5>
+    RAMB36_X3Y16.CLKBWRCLKL    Trcck_ADDRB           0.566   InstVGA/Mram_screen113
+                                                             InstVGA/Mram_screen113
+    -------------------------------------------------------  ---------------------------
+    Total                                            7.881ns (1.810ns logic, 6.071ns route)
+                                                             (23.0% logic, 77.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.111ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               InstVGA/pix_read_addr_1 (FF)
+  Destination:          InstVGA/Mram_screen113 (RAM)
+  Requirement:          10.000ns
+  Data Path Delay:      7.873ns (Levels of Logic = 4)
+  Clock Path Skew:      0.019ns (1.635 - 1.616)
+  Source Clock:         clk100_BUFGP rising at 0.000ns
+  Destination Clock:    clk100_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: InstVGA/pix_read_addr_1 to InstVGA/Mram_screen113
+    Location                   Delay type         Delay(ns)  Physical Resource
+                                                             Logical Resource(s)
+    -------------------------------------------------------  -------------------
+    SLICE_X62Y101.BQ           Tcko                  0.518   InstVGA/pix_read_addr<3>
+                                                             InstVGA/pix_read_addr_1
+    SLICE_X63Y102.B2           net (fanout=5)        0.833   InstVGA/pix_read_addr<1>
+    SLICE_X63Y102.B            Tilo                  0.124   InstVGA/Mcount_pix_read_addr_val1
+                                                             InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o32
+    SLICE_X63Y102.A4           net (fanout=1)        0.433   InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o31
+    SLICE_X63Y102.A            Tilo                  0.124   InstVGA/Mcount_pix_read_addr_val1
+                                                             InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o33
+    SLICE_X63Y104.B3           net (fanout=1)        0.640   InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o32
+    SLICE_X63Y104.B            Tilo                  0.124   InstVGA/inst_LPM_FF1_1
+                                                             InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o34
+    SLICE_X65Y101.A1           net (fanout=13)       1.181   InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o
+    SLICE_X65Y101.AMUX         Tilo                  0.354   InstVGA/n0081<6>
+                                                             InstVGA/Mmux_n0081141
+    RAMB36_X3Y16.ADDRBWRADDRL5 net (fanout=40)       2.976   InstVGA/n0081<5>
+    RAMB36_X3Y16.CLKBWRCLKL    Trcck_ADDRB           0.566   InstVGA/Mram_screen113
+                                                             InstVGA/Mram_screen113
+    -------------------------------------------------------  ---------------------------
+    Total                                            7.873ns (1.810ns logic, 6.063ns route)
+                                                             (23.0% logic, 77.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.337ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               InstVGA/pix_read_addr_2 (FF)
+  Destination:          InstVGA/Mram_screen113 (RAM)
+  Requirement:          10.000ns
+  Data Path Delay:      7.647ns (Levels of Logic = 4)
+  Clock Path Skew:      0.019ns (1.635 - 1.616)
+  Source Clock:         clk100_BUFGP rising at 0.000ns
+  Destination Clock:    clk100_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: InstVGA/pix_read_addr_2 to InstVGA/Mram_screen113
+    Location                   Delay type         Delay(ns)  Physical Resource
+                                                             Logical Resource(s)
+    -------------------------------------------------------  -------------------
+    SLICE_X62Y101.CQ           Tcko                  0.518   InstVGA/pix_read_addr<3>
+                                                             InstVGA/pix_read_addr_2
+    SLICE_X63Y102.B4           net (fanout=5)        0.607   InstVGA/pix_read_addr<2>
+    SLICE_X63Y102.B            Tilo                  0.124   InstVGA/Mcount_pix_read_addr_val1
+                                                             InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o32
+    SLICE_X63Y102.A4           net (fanout=1)        0.433   InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o31
+    SLICE_X63Y102.A            Tilo                  0.124   InstVGA/Mcount_pix_read_addr_val1
+                                                             InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o33
+    SLICE_X63Y104.B3           net (fanout=1)        0.640   InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o32
+    SLICE_X63Y104.B            Tilo                  0.124   InstVGA/inst_LPM_FF1_1
+                                                             InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o34
+    SLICE_X65Y101.A1           net (fanout=13)       1.181   InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o
+    SLICE_X65Y101.AMUX         Tilo                  0.354   InstVGA/n0081<6>
+                                                             InstVGA/Mmux_n0081141
+    RAMB36_X3Y16.ADDRBWRADDRL5 net (fanout=40)       2.976   InstVGA/n0081<5>
+    RAMB36_X3Y16.CLKBWRCLKL    Trcck_ADDRB           0.566   InstVGA/Mram_screen113
+                                                             InstVGA/Mram_screen113
+    -------------------------------------------------------  ---------------------------
+    Total                                            7.647ns (1.810ns logic, 5.837ns route)
+                                                             (23.7% logic, 76.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point InstVGA/Mram_screen113 (RAMB36_X3Y16.ADDRBWRADDRU5), 26 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     2.103ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               InstVGA/pix_read_addr_3 (FF)
+  Destination:          InstVGA/Mram_screen113 (RAM)
+  Requirement:          10.000ns
+  Data Path Delay:      7.881ns (Levels of Logic = 4)
+  Clock Path Skew:      0.019ns (1.635 - 1.616)
+  Source Clock:         clk100_BUFGP rising at 0.000ns
+  Destination Clock:    clk100_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: InstVGA/pix_read_addr_3 to InstVGA/Mram_screen113
+    Location                   Delay type         Delay(ns)  Physical Resource
+                                                             Logical Resource(s)
+    -------------------------------------------------------  -------------------
+    SLICE_X62Y101.DQ           Tcko                  0.518   InstVGA/pix_read_addr<3>
+                                                             InstVGA/pix_read_addr_3
+    SLICE_X63Y102.B1           net (fanout=5)        0.841   InstVGA/pix_read_addr<3>
+    SLICE_X63Y102.B            Tilo                  0.124   InstVGA/Mcount_pix_read_addr_val1
+                                                             InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o32
+    SLICE_X63Y102.A4           net (fanout=1)        0.433   InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o31
+    SLICE_X63Y102.A            Tilo                  0.124   InstVGA/Mcount_pix_read_addr_val1
+                                                             InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o33
+    SLICE_X63Y104.B3           net (fanout=1)        0.640   InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o32
+    SLICE_X63Y104.B            Tilo                  0.124   InstVGA/inst_LPM_FF1_1
+                                                             InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o34
+    SLICE_X65Y101.A1           net (fanout=13)       1.181   InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o
+    SLICE_X65Y101.AMUX         Tilo                  0.354   InstVGA/n0081<6>
+                                                             InstVGA/Mmux_n0081141
+    RAMB36_X3Y16.ADDRBWRADDRU5 net (fanout=40)       2.976   InstVGA/n0081<5>
+    RAMB36_X3Y16.CLKBWRCLKU    Trcck_ADDRB           0.566   InstVGA/Mram_screen113
+                                                             InstVGA/Mram_screen113
+    -------------------------------------------------------  ---------------------------
+    Total                                            7.881ns (1.810ns logic, 6.071ns route)
+                                                             (23.0% logic, 77.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.111ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               InstVGA/pix_read_addr_1 (FF)
+  Destination:          InstVGA/Mram_screen113 (RAM)
+  Requirement:          10.000ns
+  Data Path Delay:      7.873ns (Levels of Logic = 4)
+  Clock Path Skew:      0.019ns (1.635 - 1.616)
+  Source Clock:         clk100_BUFGP rising at 0.000ns
+  Destination Clock:    clk100_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: InstVGA/pix_read_addr_1 to InstVGA/Mram_screen113
+    Location                   Delay type         Delay(ns)  Physical Resource
+                                                             Logical Resource(s)
+    -------------------------------------------------------  -------------------
+    SLICE_X62Y101.BQ           Tcko                  0.518   InstVGA/pix_read_addr<3>
+                                                             InstVGA/pix_read_addr_1
+    SLICE_X63Y102.B2           net (fanout=5)        0.833   InstVGA/pix_read_addr<1>
+    SLICE_X63Y102.B            Tilo                  0.124   InstVGA/Mcount_pix_read_addr_val1
+                                                             InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o32
+    SLICE_X63Y102.A4           net (fanout=1)        0.433   InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o31
+    SLICE_X63Y102.A            Tilo                  0.124   InstVGA/Mcount_pix_read_addr_val1
+                                                             InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o33
+    SLICE_X63Y104.B3           net (fanout=1)        0.640   InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o32
+    SLICE_X63Y104.B            Tilo                  0.124   InstVGA/inst_LPM_FF1_1
+                                                             InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o34
+    SLICE_X65Y101.A1           net (fanout=13)       1.181   InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o
+    SLICE_X65Y101.AMUX         Tilo                  0.354   InstVGA/n0081<6>
+                                                             InstVGA/Mmux_n0081141
+    RAMB36_X3Y16.ADDRBWRADDRU5 net (fanout=40)       2.976   InstVGA/n0081<5>
+    RAMB36_X3Y16.CLKBWRCLKU    Trcck_ADDRB           0.566   InstVGA/Mram_screen113
+                                                             InstVGA/Mram_screen113
+    -------------------------------------------------------  ---------------------------
+    Total                                            7.873ns (1.810ns logic, 6.063ns route)
+                                                             (23.0% logic, 77.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.337ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               InstVGA/pix_read_addr_2 (FF)
+  Destination:          InstVGA/Mram_screen113 (RAM)
+  Requirement:          10.000ns
+  Data Path Delay:      7.647ns (Levels of Logic = 4)
+  Clock Path Skew:      0.019ns (1.635 - 1.616)
+  Source Clock:         clk100_BUFGP rising at 0.000ns
+  Destination Clock:    clk100_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: InstVGA/pix_read_addr_2 to InstVGA/Mram_screen113
+    Location                   Delay type         Delay(ns)  Physical Resource
+                                                             Logical Resource(s)
+    -------------------------------------------------------  -------------------
+    SLICE_X62Y101.CQ           Tcko                  0.518   InstVGA/pix_read_addr<3>
+                                                             InstVGA/pix_read_addr_2
+    SLICE_X63Y102.B4           net (fanout=5)        0.607   InstVGA/pix_read_addr<2>
+    SLICE_X63Y102.B            Tilo                  0.124   InstVGA/Mcount_pix_read_addr_val1
+                                                             InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o32
+    SLICE_X63Y102.A4           net (fanout=1)        0.433   InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o31
+    SLICE_X63Y102.A            Tilo                  0.124   InstVGA/Mcount_pix_read_addr_val1
+                                                             InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o33
+    SLICE_X63Y104.B3           net (fanout=1)        0.640   InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o32
+    SLICE_X63Y104.B            Tilo                  0.124   InstVGA/inst_LPM_FF1_1
+                                                             InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o34
+    SLICE_X65Y101.A1           net (fanout=13)       1.181   InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o
+    SLICE_X65Y101.AMUX         Tilo                  0.354   InstVGA/n0081<6>
+                                                             InstVGA/Mmux_n0081141
+    RAMB36_X3Y16.ADDRBWRADDRU5 net (fanout=40)       2.976   InstVGA/n0081<5>
+    RAMB36_X3Y16.CLKBWRCLKU    Trcck_ADDRB           0.566   InstVGA/Mram_screen113
+                                                             InstVGA/Mram_screen113
+    -------------------------------------------------------  ---------------------------
+    Total                                            7.647ns (1.810ns logic, 5.837ns route)
+                                                             (23.7% logic, 76.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point InstVGA/Mram_screen113 (RAMB36_X3Y16.ADDRBWRADDRL11), 32 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     2.152ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               InstVGA/pix_read_addr_3 (FF)
+  Destination:          InstVGA/Mram_screen113 (RAM)
+  Requirement:          10.000ns
+  Data Path Delay:      7.832ns (Levels of Logic = 4)
+  Clock Path Skew:      0.019ns (1.635 - 1.616)
+  Source Clock:         clk100_BUFGP rising at 0.000ns
+  Destination Clock:    clk100_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: InstVGA/pix_read_addr_3 to InstVGA/Mram_screen113
+    Location                    Delay type         Delay(ns)  Physical Resource
+                                                              Logical Resource(s)
+    --------------------------------------------------------  -------------------
+    SLICE_X62Y101.DQ            Tcko                  0.518   InstVGA/pix_read_addr<3>
+                                                              InstVGA/pix_read_addr_3
+    SLICE_X63Y102.B1            net (fanout=5)        0.841   InstVGA/pix_read_addr<3>
+    SLICE_X63Y102.B             Tilo                  0.124   InstVGA/Mcount_pix_read_addr_val1
+                                                              InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o32
+    SLICE_X63Y102.A4            net (fanout=1)        0.433   InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o31
+    SLICE_X63Y102.A             Tilo                  0.124   InstVGA/Mcount_pix_read_addr_val1
+                                                              InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o33
+    SLICE_X63Y104.B3            net (fanout=1)        0.640   InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o32
+    SLICE_X63Y104.B             Tilo                  0.124   InstVGA/inst_LPM_FF1_1
+                                                              InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o34
+    SLICE_X65Y102.A2            net (fanout=13)       1.004   InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o
+    SLICE_X65Y102.AMUX          Tilo                  0.354   InstVGA/n0081<8>
+                                                              InstVGA/Mmux_n008131
+    RAMB36_X3Y16.ADDRBWRADDRL11 net (fanout=40)       3.104   InstVGA/n0081<11>
+    RAMB36_X3Y16.CLKBWRCLKL     Trcck_ADDRB           0.566   InstVGA/Mram_screen113
+                                                              InstVGA/Mram_screen113
+    --------------------------------------------------------  ---------------------------
+    Total                                             7.832ns (1.810ns logic, 6.022ns route)
+                                                              (23.1% logic, 76.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.160ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               InstVGA/pix_read_addr_1 (FF)
+  Destination:          InstVGA/Mram_screen113 (RAM)
+  Requirement:          10.000ns
+  Data Path Delay:      7.824ns (Levels of Logic = 4)
+  Clock Path Skew:      0.019ns (1.635 - 1.616)
+  Source Clock:         clk100_BUFGP rising at 0.000ns
+  Destination Clock:    clk100_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: InstVGA/pix_read_addr_1 to InstVGA/Mram_screen113
+    Location                    Delay type         Delay(ns)  Physical Resource
+                                                              Logical Resource(s)
+    --------------------------------------------------------  -------------------
+    SLICE_X62Y101.BQ            Tcko                  0.518   InstVGA/pix_read_addr<3>
+                                                              InstVGA/pix_read_addr_1
+    SLICE_X63Y102.B2            net (fanout=5)        0.833   InstVGA/pix_read_addr<1>
+    SLICE_X63Y102.B             Tilo                  0.124   InstVGA/Mcount_pix_read_addr_val1
+                                                              InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o32
+    SLICE_X63Y102.A4            net (fanout=1)        0.433   InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o31
+    SLICE_X63Y102.A             Tilo                  0.124   InstVGA/Mcount_pix_read_addr_val1
+                                                              InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o33
+    SLICE_X63Y104.B3            net (fanout=1)        0.640   InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o32
+    SLICE_X63Y104.B             Tilo                  0.124   InstVGA/inst_LPM_FF1_1
+                                                              InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o34
+    SLICE_X65Y102.A2            net (fanout=13)       1.004   InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o
+    SLICE_X65Y102.AMUX          Tilo                  0.354   InstVGA/n0081<8>
+                                                              InstVGA/Mmux_n008131
+    RAMB36_X3Y16.ADDRBWRADDRL11 net (fanout=40)       3.104   InstVGA/n0081<11>
+    RAMB36_X3Y16.CLKBWRCLKL     Trcck_ADDRB           0.566   InstVGA/Mram_screen113
+                                                              InstVGA/Mram_screen113
+    --------------------------------------------------------  ---------------------------
+    Total                                             7.824ns (1.810ns logic, 6.014ns route)
+                                                              (23.1% logic, 76.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.386ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               InstVGA/pix_read_addr_2 (FF)
+  Destination:          InstVGA/Mram_screen113 (RAM)
+  Requirement:          10.000ns
+  Data Path Delay:      7.598ns (Levels of Logic = 4)
+  Clock Path Skew:      0.019ns (1.635 - 1.616)
+  Source Clock:         clk100_BUFGP rising at 0.000ns
+  Destination Clock:    clk100_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: InstVGA/pix_read_addr_2 to InstVGA/Mram_screen113
+    Location                    Delay type         Delay(ns)  Physical Resource
+                                                              Logical Resource(s)
+    --------------------------------------------------------  -------------------
+    SLICE_X62Y101.CQ            Tcko                  0.518   InstVGA/pix_read_addr<3>
+                                                              InstVGA/pix_read_addr_2
+    SLICE_X63Y102.B4            net (fanout=5)        0.607   InstVGA/pix_read_addr<2>
+    SLICE_X63Y102.B             Tilo                  0.124   InstVGA/Mcount_pix_read_addr_val1
+                                                              InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o32
+    SLICE_X63Y102.A4            net (fanout=1)        0.433   InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o31
+    SLICE_X63Y102.A             Tilo                  0.124   InstVGA/Mcount_pix_read_addr_val1
+                                                              InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o33
+    SLICE_X63Y104.B3            net (fanout=1)        0.640   InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o32
+    SLICE_X63Y104.B             Tilo                  0.124   InstVGA/inst_LPM_FF1_1
+                                                              InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o34
+    SLICE_X65Y102.A2            net (fanout=13)       1.004   InstVGA/pix_read_addr[18]_GND_312_o_LessThan_12_o
+    SLICE_X65Y102.AMUX          Tilo                  0.354   InstVGA/n0081<8>
+                                                              InstVGA/Mmux_n008131
+    RAMB36_X3Y16.ADDRBWRADDRL11 net (fanout=40)       3.104   InstVGA/n0081<11>
+    RAMB36_X3Y16.CLKBWRCLKL     Trcck_ADDRB           0.566   InstVGA/Mram_screen113
+                                                              InstVGA/Mram_screen113
+    --------------------------------------------------------  ---------------------------
+    Total                                             7.598ns (1.810ns logic, 5.788ns route)
+                                                              (23.8% logic, 76.2% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point InstVGA/Mram_screen21 (RAMB36_X1Y31.ADDRBWRADDRL4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.168ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               InstVGA/pix_read_addr1_4 (FF)
+  Destination:          InstVGA/Mram_screen21 (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.477ns (Levels of Logic = 0)
+  Clock Path Skew:      0.309ns (0.820 - 0.511)
+  Source Clock:         clk100_BUFGP rising at 10.000ns
+  Destination Clock:    clk100_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: InstVGA/pix_read_addr1_4 to InstVGA/Mram_screen21
+    Location                   Delay type         Delay(ns)  Physical Resource
+                                                             Logical Resource(s)
+    -------------------------------------------------------  -------------------
+    SLICE_X40Y157.AQ           Tcko                  0.141   InstVGA/pix_read_addr1<7>
+                                                             InstVGA/pix_read_addr1_4
+    RAMB36_X1Y31.ADDRBWRADDRL4 net (fanout=42)       0.519   InstVGA/pix_read_addr1<4>
+    RAMB36_X1Y31.CLKBWRCLKL    Trckc_ADDRB (-Th)     0.183   InstVGA/Mram_screen21
+                                                             InstVGA/Mram_screen21
+    -------------------------------------------------------  ---------------------------
+    Total                                            0.477ns (-0.042ns logic, 0.519ns route)
+                                                             (-8.8% logic, 108.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point InstVGA/Mram_screen21 (RAMB36_X1Y31.ADDRBWRADDRU4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.168ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               InstVGA/pix_read_addr1_4 (FF)
+  Destination:          InstVGA/Mram_screen21 (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.477ns (Levels of Logic = 0)
+  Clock Path Skew:      0.309ns (0.820 - 0.511)
+  Source Clock:         clk100_BUFGP rising at 10.000ns
+  Destination Clock:    clk100_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: InstVGA/pix_read_addr1_4 to InstVGA/Mram_screen21
+    Location                   Delay type         Delay(ns)  Physical Resource
+                                                             Logical Resource(s)
+    -------------------------------------------------------  -------------------
+    SLICE_X40Y157.AQ           Tcko                  0.141   InstVGA/pix_read_addr1<7>
+                                                             InstVGA/pix_read_addr1_4
+    RAMB36_X1Y31.ADDRBWRADDRU4 net (fanout=42)       0.519   InstVGA/pix_read_addr1<4>
+    RAMB36_X1Y31.CLKBWRCLKU    Trckc_ADDRB (-Th)     0.183   InstVGA/Mram_screen21
+                                                             InstVGA/Mram_screen21
+    -------------------------------------------------------  ---------------------------
+    Total                                            0.477ns (-0.042ns logic, 0.519ns route)
+                                                             (-8.8% logic, 108.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point InstVGA/TOP_display (SLICE_X37Y130.A6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.171ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               InstVGA/v_counter_6 (FF)
+  Destination:          InstVGA/TOP_display (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.183ns (Levels of Logic = 1)
+  Clock Path Skew:      0.012ns (0.070 - 0.058)
+  Source Clock:         clk100_BUFGP rising at 10.000ns
+  Destination Clock:    clk100_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: InstVGA/v_counter_6 to InstVGA/TOP_display
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X36Y130.CQ     Tcko                  0.141   InstVGA/v_counter<7>
+                                                       InstVGA/v_counter_6
+    SLICE_X37Y130.A6     net (fanout=4)        0.088   InstVGA/v_counter<6>
+    SLICE_X37Y130.CLK    Tah         (-Th)     0.046   InstVGA/TOP_display
+                                                       InstVGA/GND_312_o_TOP_display_Select_34_o
+                                                       InstVGA/TOP_display
+    -------------------------------------------------  ---------------------------
+    Total                                      0.183ns (0.095ns logic, 0.088ns route)
+                                                       (51.9% logic, 48.1% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 7.108ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 2.892ns (345.781MHz) (Trper_CLKB)
+  Physical resource: InstVGA/Mram_screen113/CLKBWRCLKL
+  Logical resource: InstVGA/Mram_screen113/CLKBWRCLKL
+  Location pin: RAMB36_X3Y16.CLKBWRCLKL
+  Clock network: clk100_BUFGP
+--------------------------------------------------------------------------------
+Slack: 7.108ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 2.892ns (345.781MHz) (Trper_CLK_WF_NC(FMAX_CAS_WF_NC))
+  Physical resource: InstVGA/Mram_screen113/CLKBWRCLKU
+  Logical resource: InstVGA/Mram_screen113/CLKBWRCLKU
+  Location pin: RAMB36_X3Y16.CLKBWRCLKU
+  Clock network: clk100_BUFGP
+--------------------------------------------------------------------------------
+Slack: 7.108ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 2.892ns (345.781MHz) (Trper_CLKB)
+  Physical resource: InstVGA/Mram_screen121/CLKBWRCLKL
+  Logical resource: InstVGA/Mram_screen121/CLKBWRCLKL
+  Location pin: RAMB36_X3Y21.CLKBWRCLKL
+  Clock network: clk100_BUFGP
 --------------------------------------------------------------------------------
 
 
@@ -43,12 +542,12 @@ Data Sheet report:
 -----------------
 All values displayed in nanoseconds (ns)
 
-Clock to Setup on destination clock CLK100
+Clock to Setup on destination clock clk100
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK100         |    5.872|         |         |         |
+clk100         |    7.897|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -57,20 +556,23 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 2986 paths, 0 nets, and 1692 connections
+Constraints cover 20849 paths, 0 nets, and 1746 connections
 
 Design statistics:
-   Minimum period:   5.872ns   (Maximum frequency: 170.300MHz)
+   Minimum period:   7.897ns{1}   (Maximum frequency: 126.630MHz)
 
 
-Analysis completed Mon May 16 15:35:48 2016 
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Wed May 18 18:42:08 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 709 MB
+Peak Memory Usage: 744 MB
 
 
 

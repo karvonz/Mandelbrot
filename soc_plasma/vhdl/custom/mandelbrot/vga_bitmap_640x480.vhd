@@ -57,44 +57,64 @@ architecture Behavioral of VGA_bitmap_640x480 is
 	signal TOP_display   : boolean := false;               -- this signal is true when the current pixel line is visible on the screen
 
 	signal pix_read_addr : integer range 0 to 307199:=0;  -- the address at which displayed data is read
+	signal pix_read_addr1 : integer range 0 to 153599:=0;  -- the address at which displayed data is read
 
-	signal next_pixel    : std_logic_vector(3 downto 0);  -- the data coding the value of the pixel to be displayed
- --   signal ram_number : std_logic;
+	--signal next_pixel,next_pixel1,next_pixel2    : std_logic_vector(3 downto 0);  -- the data coding the value of the pixel to be displayed
+   signal pix_read_addrb : integer range 0 to 153599 := 0;  -- the address at which displayed data is read
+
+   signal next_pixel1   : std_logic_vector(3 downto 0);  -- the data coding the value of the pixel to be displayed
+   signal next_pixel2   : std_logic_vector(3 downto 0);  -- the data coding the value of the pixel to be displayed
+   signal next_pixel    : std_logic_vector(3 downto 0);  -- the data coding the value of the pixel to be displayed
+	signal proc : std_logic;
 begin
-
-
--- This process performs data access (read and write) to the memory
---memory_read : process(clk_vga)
---begin
---   if clk_vga'event and clk_vga='1' then
---      next_pixel <= To_StdLogicVector( screen(pix_read_addr)              );
---      data_out   <= To_StdLogicVector( screen(to_integer(unsigned(ADDR))) );
-----      if data_write = '1' then
-----         screen(to_integer(unsigned(ADDR))) <= TO_BitVector( data_in );
-----      end if;
---   end if;
---end process;
---
 
 --------------------------------------------------------------------------------
 
-process (clk)
-begin
-   if (clk'event and clk = '1') then
-				if (data_write1 = '1') then
-					screen1(to_integer(unsigned(ADDR1))) <=  data_in1 ;
-				end if;
-				if (data_write2 = '1') then
-					screen2(to_integer(unsigned(ADDR2))) <= data_in2 ;
-				end if;
+   pix_read_addrb <= pix_read_addr when pix_read_addr < 153599 else pix_read_addr - 153599;
 
-				if (pix_read_addr<153599)then
-					next_pixel <= screen1(pix_read_addr) ;
-				else
-					next_pixel <= screen2(pix_read_addr);
-				end if;
-   end if;
-end process;
+   process (clk)
+   begin
+      if (clk'event and clk = '1') then
+         if (data_write1 = '1') then
+            screen1(to_integer(unsigned(ADDR1))) <=  data_in1 ;
+         end if;
+      end if;
+   end process;
+
+   process (clk_vga)
+   begin
+      if (clk_vga'event and clk_vga = '1') then
+         next_pixel1 <= screen1(pix_read_addrb) ;
+      end if;
+   end process;
+
+   process (clk)
+   begin
+      if (clk'event and clk = '1') then
+         if (data_write2 = '1') then
+            screen2(to_integer(unsigned(ADDR2))) <= data_in2 ;
+         end if;
+      end if;
+   end process;
+
+   process (clk_vga)
+   begin
+      if (clk_vga'event and clk_vga = '1') then
+         next_pixel2 <= screen2(pix_read_addrb);
+      end if;
+   end process;
+
+   process (clk_vga)
+   begin
+      if (clk_vga'event and clk_vga = '1') then
+         IF proc='0' THEN
+            next_pixel <= next_pixel1;
+        ELSE
+            next_pixel <= next_pixel2;
+         END IF;
+      end if;
+   end process;
+
 
 --process (next_pixel)
 --begin
@@ -107,6 +127,8 @@ end process;
 
 
 --------------------------------------------------------------------------------
+
+proc<='0' when (pix_read_addr <153599) else '1';
 
 
 pixel_read_addr : process(clk_vga, clk)
@@ -121,6 +143,32 @@ begin
       end if;
    end if;
 end process;
+
+pixel_read_addr1 : process(clk_vga, clk)
+begin
+   if clk_vga'event and clk_vga='1' then
+      if reset = '1' or (not TOP_display) then
+         pix_read_addr1 <= 0;
+      elsif TOP_line and (h_counter mod 4)=0 then
+         pix_read_addr1 <= pix_read_addr1 + 1;
+	  elsif (pix_read_addr1 = 153599) then
+		 pix_read_addr1 <= 0;
+      end if;
+   end if;
+end process;
+
+--pixel_read_addrb : process(clk_vga, clk)
+--begin
+--   if clk_vga'event and clk_vga='1' then
+--      if reset = '1' or (not TOP_display) then
+--         pix_read_addrb <= 0;
+--      elsif TOP_line and (h_counter mod 4)=0 then
+--         pix_read_addrb <= pix_read_addrb + 1;
+--	  elsif (pix_read_addrb = 153599) then
+--		 pix_read_addrb <= 0;
+--      end if;
+--   end if;
+--end process;
 
 --process(pix_read_addr)
 --begin

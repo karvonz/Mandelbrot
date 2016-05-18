@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="par" timeStamp="Mon May 16 15:35:24 2016">
+  <application stringID="par" timeStamp="Wed May 18 18:41:29 2016">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -52,19 +52,19 @@
     <task stringID="PAR_OPTION_SUMMARY">
       <section stringID="PAR_OPTION_SUMMARY">
         <item DEFAULT="" label="-intstyle" stringID="PAR_INTSTYLE" value="ise"/>
-        <item DEFAULT="off" label="-mt" stringID="PAR_MULTI_THREADING" value="4"/>
-        <item DEFAULT="std" label="-ol" stringID="PAR_OVERALL_EFFORTLEVEL" value="std"/>
+        <item DEFAULT="off" label="-mt" stringID="PAR_MULTI_THREADING" value="off"/>
+        <item DEFAULT="std" label="-ol" stringID="PAR_OVERALL_EFFORTLEVEL" value="high"/>
         <item DEFAULT="false" label="-w" stringID="PAR_OVERWRITE_OUTPUT" value="true"/>
       </section>
     </task>
     <task stringID="PAR_PAR">
       <section stringID="PAR_DESIGN_SUMMARY">
-        <item stringID="PAR_REAL_TIME_COMPLETION_ROUTER" value="19 secs "/>
-        <item stringID="PAR_CPU_TIME_COMPLETION_ROUTER" value="24 secs "/>
+        <item stringID="PAR_REAL_TIME_COMPLETION_ROUTER" value="31 secs "/>
+        <item stringID="PAR_CPU_TIME_COMPLETION_ROUTER" value="31 secs "/>
         <item dataType="int" stringID="PAR_UNROUTES" value="0"/>
         <item dataType="float" stringID="PAR_TIMING_SCORE" value="0.000000"/>
-        <item stringID="PAR_REAL_TIME_COMPLETION_PAR" value="20 secs "/>
-        <item stringID="PAR_CPU_TIME_COMPLETION_PAR" value="25 secs "/>
+        <item stringID="PAR_REAL_TIME_COMPLETION_PAR" value="32 secs "/>
+        <item stringID="PAR_CPU_TIME_COMPLETION_PAR" value="32 secs "/>
       </section>
     </task>
     <task stringID="PAR_par">
@@ -79,21 +79,21 @@
           <column label="Net Skew(ns)" stringID="NET_SKEW"/>
           <column label="Max Delay(ns)" stringID="MAX_DELAY"/>
           <row stringID="row" value="1">
-            <item label="Clock Net" stringID="CLOCK_NET" value="CLK50_BUFG"/>
+            <item label="Clock Net" stringID="CLOCK_NET" value="clk50_BUFG"/>
             <item label="Routed" stringID="ROUTED" value="ROUTED"/>
             <item label="Resource" stringID="RESOURCE" value="BUFGCTRL_X0Y0"/>
             <item label="Locked" stringID="LOCKED" value="No"/>
-            <item dataType="float" label="Fanout" stringID="FANOUT" value="496.000000"/>
-            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.267000"/>
-            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="1.859000"/>
+            <item dataType="float" label="Fanout" stringID="FANOUT" value="883.000000"/>
+            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.348000"/>
+            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="1.941000"/>
           </row>
           <row stringID="row" value="2">
-            <item label="Clock Net" stringID="CLOCK_NET" value="CLK100_BUFGP"/>
+            <item label="Clock Net" stringID="CLOCK_NET" value="clk100_BUFGP"/>
             <item label="Routed" stringID="ROUTED" value="ROUTED"/>
             <item label="Resource" stringID="RESOURCE" value="BUFGCTRL_X0Y31"/>
             <item label="Locked" stringID="LOCKED" value="No"/>
-            <item dataType="float" label="Fanout" stringID="FANOUT" value="176.000000"/>
-            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.252000"/>
+            <item dataType="float" label="Fanout" stringID="FANOUT" value="107.000000"/>
+            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.255000"/>
             <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="1.858000"/>
           </row>
         </table>
@@ -128,7 +128,7 @@
           </row>
           <row stringID="row" value="3">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="A3"/>
-            <item label="Signal&#xA;Name" stringID="Signal_Name" value="VGA_RED&lt;0>"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="VGA_red&lt;0>"/>
             <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB33"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L8N_T1_AD14N_35"/>
             <item stringID="Direction" value="OUTPUT"/>
@@ -142,7 +142,7 @@
           </row>
           <row stringID="row" value="4">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="A4"/>
-            <item label="Signal&#xA;Name" stringID="Signal_Name" value="VGA_RED&lt;3>"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="VGA_red&lt;3>"/>
             <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB33"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L8P_T1_AD14P_35"/>
             <item stringID="Direction" value="OUTPUT"/>
@@ -156,7 +156,7 @@
           </row>
           <row stringID="row" value="5">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="A5"/>
-            <item label="Signal&#xA;Name" stringID="Signal_Name" value="VGA_GREEN&lt;1>"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="VGA_green&lt;1>"/>
             <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB33"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L3N_T0_DQS_AD5N_35"/>
             <item stringID="Direction" value="OUTPUT"/>
@@ -170,7 +170,7 @@
           </row>
           <row stringID="row" value="6">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="A6"/>
-            <item label="Signal&#xA;Name" stringID="Signal_Name" value="VGA_GREEN&lt;3>"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="VGA_green&lt;3>"/>
             <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB33"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L3P_T0_DQS_AD5P_35"/>
             <item stringID="Direction" value="OUTPUT"/>
@@ -284,7 +284,7 @@
           </row>
           <row stringID="row" value="22">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="B4"/>
-            <item label="Signal&#xA;Name" stringID="Signal_Name" value="VGA_RED&lt;1>"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="VGA_red&lt;1>"/>
             <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB33"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L7N_T1_AD6N_35"/>
             <item stringID="Direction" value="OUTPUT"/>
@@ -302,7 +302,7 @@
           </row>
           <row stringID="row" value="24">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="B6"/>
-            <item label="Signal&#xA;Name" stringID="Signal_Name" value="VGA_GREEN&lt;2>"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="VGA_green&lt;2>"/>
             <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB33"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L2N_T0_AD12N_35"/>
             <item stringID="Direction" value="OUTPUT"/>
@@ -316,7 +316,7 @@
           </row>
           <row stringID="row" value="25">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="B7"/>
-            <item label="Signal&#xA;Name" stringID="Signal_Name" value="VGA_BLUE&lt;0>"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="VGA_blue&lt;0>"/>
             <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB33"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L2P_T0_AD12P_35"/>
             <item stringID="Direction" value="OUTPUT"/>
@@ -350,7 +350,7 @@
           </row>
           <row stringID="row" value="29">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="B11"/>
-            <item label="Signal&#xA;Name" stringID="Signal_Name" value="VGA_HS"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="VGA_hs"/>
             <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB33"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L4P_T0_15"/>
             <item stringID="Direction" value="OUTPUT"/>
@@ -364,7 +364,7 @@
           </row>
           <row stringID="row" value="30">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="B12"/>
-            <item label="Signal&#xA;Name" stringID="Signal_Name" value="VGA_VS"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="VGA_vs"/>
             <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB33"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L3N_T0_DQS_AD1N_15"/>
             <item stringID="Direction" value="OUTPUT"/>
@@ -437,7 +437,7 @@
           </row>
           <row stringID="row" value="40">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="C4"/>
-            <item label="Signal&#xA;Name" stringID="Signal_Name" value="I_UART"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="i_uart"/>
             <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB33"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L7P_T1_AD6P_35"/>
             <item stringID="Direction" value="INPUT"/>
@@ -450,7 +450,7 @@
           </row>
           <row stringID="row" value="41">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="C5"/>
-            <item label="Signal&#xA;Name" stringID="Signal_Name" value="VGA_RED&lt;2>"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="VGA_red&lt;2>"/>
             <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB33"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L1N_T0_AD4N_35"/>
             <item stringID="Direction" value="OUTPUT"/>
@@ -464,7 +464,7 @@
           </row>
           <row stringID="row" value="42">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="C6"/>
-            <item label="Signal&#xA;Name" stringID="Signal_Name" value="VGA_GREEN&lt;0>"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="VGA_green&lt;0>"/>
             <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB33"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L1P_T0_AD4P_35"/>
             <item stringID="Direction" value="OUTPUT"/>
@@ -478,7 +478,7 @@
           </row>
           <row stringID="row" value="43">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="C7"/>
-            <item label="Signal&#xA;Name" stringID="Signal_Name" value="VGA_BLUE&lt;1>"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="VGA_blue&lt;1>"/>
             <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB33"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L4N_T0_35"/>
             <item stringID="Direction" value="OUTPUT"/>
@@ -580,7 +580,7 @@
           </row>
           <row stringID="row" value="58">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="D4"/>
-            <item label="Signal&#xA;Name" stringID="Signal_Name" value="O_UART"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="o_uart"/>
             <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB33"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L11N_T1_SRCC_35"/>
             <item stringID="Direction" value="OUTPUT"/>
@@ -589,7 +589,7 @@
             <item label="Drive&#xA;(mA)" stringID="Drive" value="12"/>
             <item label="Slew&#xA;Rate" stringID="Slew_Rate" value="SLOW"/>
             <item label="Constraint" stringID="Constraint" value="LOCATED"/>
-            <item label="IO&#xA;Register" stringID="IO_Register" value="YES"/>
+            <item label="IO&#xA;Register" stringID="IO_Register" value="NO"/>
             <item label="Signal&#xA;Integrity" stringID="Signal_Integrity" value="NONE"/>
           </row>
           <row stringID="row" value="59">
@@ -607,7 +607,7 @@
           </row>
           <row stringID="row" value="61">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="D7"/>
-            <item label="Signal&#xA;Name" stringID="Signal_Name" value="VGA_BLUE&lt;2>"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="VGA_blue&lt;2>"/>
             <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB33"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L6N_T0_VREF_35"/>
             <item stringID="Direction" value="OUTPUT"/>
@@ -621,7 +621,7 @@
           </row>
           <row stringID="row" value="62">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="D8"/>
-            <item label="Signal&#xA;Name" stringID="Signal_Name" value="VGA_BLUE&lt;3>"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="VGA_blue&lt;3>"/>
             <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB33"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L4P_T0_35"/>
             <item stringID="Direction" value="OUTPUT"/>
@@ -715,7 +715,7 @@
           </row>
           <row stringID="row" value="75">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="E3"/>
-            <item label="Signal&#xA;Name" stringID="Signal_Name" value="CLK100"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="clk100"/>
             <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB33"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L12P_T1_MRCC_35"/>
             <item stringID="Direction" value="INPUT"/>
@@ -788,7 +788,7 @@
           </row>
           <row stringID="row" value="88">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="E16"/>
-            <item label="Signal&#xA;Name" stringID="Signal_Name" value="BUTTONS&lt;0>"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="buttons&lt;0>"/>
             <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB33"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L11N_T1_SRCC_15"/>
             <item stringID="Direction" value="INPUT"/>
@@ -896,7 +896,7 @@
           </row>
           <row stringID="row" value="105">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="F15"/>
-            <item label="Signal&#xA;Name" stringID="Signal_Name" value="BUTTONS&lt;1>"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="buttons&lt;1>"/>
             <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB33"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L14P_T2_SRCC_15"/>
             <item stringID="Direction" value="INPUT"/>
@@ -1797,7 +1797,7 @@
           </row>
           <row stringID="row" value="257">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="R5"/>
-            <item label="Signal&#xA;Name" stringID="Signal_Name" value="BUTTONS&lt;7>"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="buttons&lt;7>"/>
             <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB33"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L19N_T3_VREF_34"/>
             <item stringID="Direction" value="INPUT"/>
@@ -1810,7 +1810,7 @@
           </row>
           <row stringID="row" value="258">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="R6"/>
-            <item label="Signal&#xA;Name" stringID="Signal_Name" value="BUTTONS&lt;6>"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="buttons&lt;6>"/>
             <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB33"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L19P_T3_34"/>
             <item stringID="Direction" value="INPUT"/>
@@ -1823,7 +1823,7 @@
           </row>
           <row stringID="row" value="259">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="R7"/>
-            <item label="Signal&#xA;Name" stringID="Signal_Name" value="BUTTONS&lt;5>"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="buttons&lt;5>"/>
             <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB33"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L23P_T3_34"/>
             <item stringID="Direction" value="INPUT"/>
@@ -1849,7 +1849,7 @@
           </row>
           <row stringID="row" value="262">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="R10"/>
-            <item label="Signal&#xA;Name" stringID="Signal_Name" value="BUTTONS&lt;3>"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="buttons&lt;3>"/>
             <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB33"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_25_14"/>
             <item stringID="Direction" value="INPUT"/>
@@ -1960,7 +1960,7 @@
           </row>
           <row stringID="row" value="278">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="T8"/>
-            <item label="Signal&#xA;Name" stringID="Signal_Name" value="LED"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="led"/>
             <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB33"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L24N_T3_34"/>
             <item stringID="Direction" value="OUTPUT"/>
@@ -2022,7 +2022,7 @@
           </row>
           <row stringID="row" value="286">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="T16"/>
-            <item label="Signal&#xA;Name" stringID="Signal_Name" value="BUTTONS&lt;2>"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="buttons&lt;2>"/>
             <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB33"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L15N_T2_DQS_DOUT_CSO_B_14"/>
             <item stringID="Direction" value="INPUT"/>
@@ -2094,7 +2094,7 @@
           </row>
           <row stringID="row" value="296">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="U8"/>
-            <item label="Signal&#xA;Name" stringID="Signal_Name" value="RST"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="rst"/>
             <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB33"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_25_34"/>
             <item stringID="Direction" value="INPUT"/>
@@ -2107,7 +2107,7 @@
           </row>
           <row stringID="row" value="297">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="U9"/>
-            <item label="Signal&#xA;Name" stringID="Signal_Name" value="SW"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="sw"/>
             <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB33"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L21P_T3_DQS_34"/>
             <item stringID="Direction" value="INPUT"/>
@@ -2231,14 +2231,21 @@
           </row>
           <row stringID="row" value="315">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="V9"/>
-            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB33S"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="o_uart2"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB33"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L21N_T3_DQS_34"/>
-            <item stringID="Direction" value="UNUSED"/>
+            <item stringID="Direction" value="OUTPUT"/>
+            <item label="IO&#xA;Standard" sort="smart" stringID="IO_Standard" value="LVCMOS33"/>
             <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="34"/>
+            <item label="Drive&#xA;(mA)" stringID="Drive" value="12"/>
+            <item label="Slew&#xA;Rate" stringID="Slew_Rate" value="SLOW"/>
+            <item label="Constraint" stringID="Constraint" value="LOCATED"/>
+            <item label="IO&#xA;Register" stringID="IO_Register" value="NO"/>
+            <item label="Signal&#xA;Integrity" stringID="Signal_Integrity" value="NONE"/>
           </row>
           <row stringID="row" value="316">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="V10"/>
-            <item label="Signal&#xA;Name" stringID="Signal_Name" value="BUTTONS&lt;4>"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="buttons&lt;4>"/>
             <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB33"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L21P_T3_DQS_14"/>
             <item stringID="Direction" value="INPUT"/>
@@ -2311,12 +2318,12 @@
       <section stringID="PAR_UNROUTES_REPORT">
         <item dataType="int" stringID="PAR_UNROUTED_NETS" value="0"/>
         <item dataType="int" stringID="PAR_TOTAL_SOURCELESS_NETS" value="0"/>
-        <item dataType="int" stringID="PAR_TOTAL_LOADLESS_NETS" value="0"/>
+        <item dataType="int" stringID="PAR_TOTAL_LOADLESS_NETS" value="20"/>
       </section>
     </task>
   </application>
 
-  <application stringID="Par" timeStamp="Mon May 16 15:35:24 2016">
+  <application stringID="Par" timeStamp="Wed May 18 18:41:30 2016">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -2362,49 +2369,49 @@
     </section>
     <task label="Device Utilization Summary" stringID="PAR_DEVICE_UTLIZATION">
       <section stringID="PAR_SLICE_REPORTING">
-        <item AVAILABLE="126800" dataType="int" label="Number of Slice Registers" stringID="PAR_SLICE_REGISTERS" value="1401">
-          <item dataType="int" stringID="PAR_NUM_SLICE_FF" value="1166"/>
+        <item AVAILABLE="126800" dataType="int" label="Number of Slice Registers" stringID="PAR_SLICE_REGISTERS" value="2850">
+          <item dataType="int" stringID="PAR_NUM_SLICE_FF" value="2386"/>
           <item dataType="int" stringID="PAR_NUM_SLICE_LATCH" value="0"/>
           <item dataType="int" stringID="PAR_NUM_SLICE_LATCHTHRU" value="0"/>
-          <item dataType="int" stringID="PAR_NUM_SLICE_LATCHLOGIC" value="235"/>
+          <item dataType="int" stringID="PAR_NUM_SLICE_LATCHLOGIC" value="464"/>
         </item>
-        <item AVAILABLE="63400" dataType="int" label="Number of Slice LUTS" stringID="PAR_SLICE_LUTS" value="3490">
-          <item dataType="int" stringID="PAR_NUM_LOGIC_O5ONLY" value="504"/>
-          <item dataType="int" stringID="PAR_NUM_LOGIC_O6ONLY" value="1953"/>
-          <item dataType="int" stringID="PAR_NUM_LOGIC_O5ANDO6" value="759"/>
+        <item AVAILABLE="63400" dataType="int" label="Number of Slice LUTS" stringID="PAR_SLICE_LUTS" value="6688">
+          <item dataType="int" stringID="PAR_NUM_LOGIC_O5ONLY" value="383"/>
+          <item dataType="int" stringID="PAR_NUM_LOGIC_O6ONLY" value="4814"/>
+          <item dataType="int" stringID="PAR_NUM_LOGIC_O5ANDO6" value="1235"/>
           <item dataType="int" stringID="PAR_NUM_ROM_O5ONLY" value="0"/>
           <item dataType="int" stringID="PAR_NUM_ROM_O6ONLY" value="0"/>
           <item dataType="int" stringID="PAR_NUM_ROM_O5ANDO6" value="0"/>
-          <item dataType="int" stringID="PAR_NUM_DPRAM_O5ONLY" value="2"/>
-          <item dataType="int" stringID="PAR_NUM_DPRAM_O6ONLY" value="2"/>
-          <item dataType="int" stringID="PAR_NUM_DPRAM_O5ANDO6" value="62"/>
+          <item dataType="int" stringID="PAR_NUM_DPRAM_O5ONLY" value="0"/>
+          <item dataType="int" stringID="PAR_NUM_DPRAM_O6ONLY" value="0"/>
+          <item dataType="int" stringID="PAR_NUM_DPRAM_O5ANDO6" value="88"/>
           <item dataType="int" stringID="PAR_NUM_SPRAM_O5ONLY" value="0"/>
-          <item dataType="int" stringID="PAR_NUM_SPRAM_O6ONLY" value="128"/>
-          <item dataType="int" stringID="PAR_NUM_SPRAM_O5ANDO6" value="0"/>
+          <item dataType="int" stringID="PAR_NUM_SPRAM_O6ONLY" value="0"/>
+          <item dataType="int" stringID="PAR_NUM_SPRAM_O5ANDO6" value="32"/>
           <item dataType="int" stringID="PAR_NUM_SRL_O5ONLY" value="0"/>
-          <item dataType="int" stringID="PAR_NUM_SRL_O6ONLY" value="1"/>
-          <item dataType="int" stringID="PAR_NUM_SRL_O5ANDO6" value="1"/>
-          <item dataType="int" stringID="PAR_NUM_LUT_RT_EXO6" value="8"/>
-          <item dataType="int" stringID="PAR_NUM_LUT_RT_EXO5" value="69"/>
-          <item dataType="int" stringID="PAR_NUM_LUT_RT_O5ANDO6" value="1"/>
-          <item dataType="int" stringID="PAR_NUM_LUT_RT_DRIVES_FLOP" value="69"/>
-          <item dataType="int" stringID="PAR_NUM_LUT_RT_DRIVES_CARRY4" value="9"/>
+          <item dataType="int" stringID="PAR_NUM_SRL_O6ONLY" value="0"/>
+          <item dataType="int" stringID="PAR_NUM_SRL_O5ANDO6" value="0"/>
+          <item dataType="int" stringID="PAR_NUM_LUT_RT_EXO6" value="17"/>
+          <item dataType="int" stringID="PAR_NUM_LUT_RT_EXO5" value="117"/>
+          <item dataType="int" stringID="PAR_NUM_LUT_RT_O5ANDO6" value="2"/>
+          <item dataType="int" stringID="PAR_NUM_LUT_RT_DRIVES_FLOP" value="117"/>
+          <item dataType="int" stringID="PAR_NUM_LUT_RT_DRIVES_CARRY4" value="19"/>
           <item dataType="int" stringID="PAR_NUM_LUT_RT_DRIVES_OTHERS" value="0"/>
         </item>
-        <item AVAILABLE="15850" dataType="int" stringID="PAR_OCCUPIED_SLICES" value="1008">
-          <item AVAILABLE="11100" dataType="int" stringID="PAR_NUM_SLICEL" value="958"/>
-          <item AVAILABLE="4750" dataType="int" stringID="PAR_NUM_SLICEM" value="50"/>
+        <item AVAILABLE="15850" dataType="int" stringID="PAR_OCCUPIED_SLICES" value="2291">
+          <item AVAILABLE="11100" dataType="int" stringID="PAR_NUM_SLICEL" value="2261"/>
+          <item AVAILABLE="4750" dataType="int" stringID="PAR_NUM_SLICEM" value="30"/>
         </item>
-        <item dataType="int" stringID="PAR_OCCUPIED_LUT_AND_FF" value="3584">
-          <item dataType="int" stringID="PAR_OCCUPIED_LUT_ONLY" value="2313"/>
-          <item dataType="int" stringID="PAR_OCCUPIED_FF_ONLY" value="94"/>
-          <item dataType="int" stringID="PAR_OCCUPIED_FF_AND_LUT" value="1177"/>
+        <item dataType="int" stringID="PAR_OCCUPIED_LUT_AND_FF" value="7010">
+          <item dataType="int" stringID="PAR_OCCUPIED_LUT_ONLY" value="4386"/>
+          <item dataType="int" stringID="PAR_OCCUPIED_FF_ONLY" value="322"/>
+          <item dataType="int" stringID="PAR_OCCUPIED_FF_AND_LUT" value="2302"/>
         </item>
       </section>
       <section stringID="PAR_IOB_REPORTING">
-        <item AVAILABLE="210" dataType="int" stringID="PAR_AGG_BONDED_IO" value="28"/>
+        <item AVAILABLE="210" dataType="int" stringID="PAR_AGG_BONDED_IO" value="29"/>
         <item AVAILABLE="90" dataType="int" stringID="PAR_AGG_UNBONDED_IO" value="0"/>
-        <item AVAILABLE="0" dataType="int" stringID="PAR_NUM_IOB_FF" value="2"/>
+        <item AVAILABLE="0" dataType="int" stringID="PAR_NUM_IOB_FF" value="1"/>
         <item AVAILABLE="0" dataType="int" stringID="PAR_NUM_IOB_LATCH" value="0"/>
         <item AVAILABLE="0" dataType="int" stringID="PAR_NUM_IOBM" value="0"/>
         <item AVAILABLE="0" dataType="int" stringID="PAR_NUM_BONDED_IOBM" value="0"/>
@@ -2417,7 +2424,7 @@
       </section>
       <section stringID="PAR_HARD_IP_REPORTING"/>
       <section stringID="PAR_RAM_FIFO_DATA">
-        <item dataType="int" stringID="PAR_NUM_RAMB36E1" value="44"/>
+        <item dataType="int" stringID="PAR_NUM_RAMB36E1" value="48"/>
         <item dataType="int" stringID="PAR_NUM_FIFO36E1" value="0"/>
         <item dataType="int" stringID="PAR_AVAILABLE" value="270"/>
         <item dataType="int" stringID="PAR_NUM_RAMB18E1" value="0"/>
@@ -2431,7 +2438,7 @@
         <item AVAILABLE="0" dataType="int" stringID="PAR_NUM_BUFIODQS" value="0"/>
         <item AVAILABLE="24" dataType="int" stringID="PAR_NUM_BUFR" value="0"/>
         <item AVAILABLE="1" dataType="int" stringID="PAR_NUM_CAPTURE" value="0"/>
-        <item AVAILABLE="240" dataType="int" stringID="PAR_NUM_DSP48E1" value="40"/>
+        <item AVAILABLE="240" dataType="int" stringID="PAR_NUM_DSP48E1" value="80"/>
         <item AVAILABLE="1" dataType="int" stringID="PAR_NUM_EFUSE_USR" value="0"/>
         <item AVAILABLE="0" dataType="int" stringID="PAR_NUM_GTHE1_QUAD" value="0"/>
         <item AVAILABLE="0" dataType="int" stringID="PAR_NUM_IBUFDS_GTHE1" value="0"/>

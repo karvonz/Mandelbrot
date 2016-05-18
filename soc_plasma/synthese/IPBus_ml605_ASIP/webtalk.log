@@ -3,14 +3,14 @@ Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 
 Project Information
 --------------------
-ProjectID=7846255D6224B08CCAC4C025AF454D80
-ProjectIteration=165
+ProjectID=b04b351103ef4f6ebfb23e493a584787
+ProjectIteration=1
 
 WebTalk Summary
 ----------------
-INFO:WebTalk:1 - WebTalk is enabled because you are using a WebPACK license.
+INFO:WebTalk:2 - WebTalk is enabled.
 
 INFO:WebTalk:8 - WebTalk Install setting is ON.
 INFO:WebTalk:6 - WebTalk User setting is ON.
 
-INFO:WebTalk:4 - D:/Vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/usage_statistics_webtalk.html WebTalk report has been successfully sent to Xilinx on 2016-05-16T15:36:45.  For additional details about this file, please refer to the WebTalk help file at D:/ISE/14.7/ISE_DS/ISE/data/reports/webtalk_introduction.html
+INFO:WebTalk:4 - D:/Vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/usage_statistics_webtalk.html WebTalk report has been successfully sent to Xilinx on 2016-05-18T18:45:12.  For additional details about this file, please refer to the WebTalk help file at D:/ISE/14.7/ISE_DS/ISE/data/reports/webtalk_introduction.html
