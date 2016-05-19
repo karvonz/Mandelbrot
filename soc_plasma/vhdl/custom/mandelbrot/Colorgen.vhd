@@ -7,7 +7,7 @@ use WORK.CONSTANTS.ALL;
 use WORK.FUNCTIONS.ALL;
 
 entity Colorgen is
-    Port ( iter : in STD_LOGIC_VECTOR (3 downto 0);
+    Port ( iter : in STD_LOGIC_VECTOR (7 downto 0);
 	 VGA_red      : out std_logic_vector(3 downto 0);   -- red output
        VGA_green    : out std_logic_vector(3 downto 0);   -- green output
        VGA_blue     : out std_logic_vector(3 downto 0));   -- blue output

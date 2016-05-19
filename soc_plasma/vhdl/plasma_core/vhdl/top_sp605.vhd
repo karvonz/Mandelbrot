@@ -26,7 +26,13 @@ entity top_ml605_extphy is port(
    o_uart : out std_logic;
    o_uart2 : out std_logic;
 
-   buttons : in std_logic_vector( 7 downto 0 );
+   buttons : in std_logic_vector( 2 downto 0 );
+	BTNU : in std_logic;
+	BTNC : in std_logic;
+	BTND : in std_logic;
+	BTNL : in std_logic;
+	BTNR : in std_logic;
+					
 
 	VGA_hs       : out std_logic;   -- horisontal vga syncr.
    VGA_vs       : out std_logic;   -- vertical vga syncr.
@@ -39,31 +45,46 @@ end top_ml605_extphy;
 
 architecture rtl of top_ml605_extphy is
 
+component pulse_filter 
+  Generic ( DEBNC_CLOCKS : INTEGER range 2 to (INTEGER'high) := 2**16);
+  Port (
+    SIGNAL_I : in  STD_LOGIC;
+    CLK_I    : in  STD_LOGIC;
+    SIGNAL_O : out STD_LOGIC
+  );
+end component;
+
 component Colorgen 
-    Port ( iter : in STD_LOGIC_VECTOR (3 downto 0);
+    Port ( iter : in STD_LOGIC_VECTOR (7 downto 0);
 	 VGA_red      : out std_logic_vector(3 downto 0);   -- red output
        VGA_green    : out std_logic_vector(3 downto 0);   -- green output
        VGA_blue     : out std_logic_vector(3 downto 0));   -- blue output
 end component;
 
-component VGA_bitmap_640x480 
+component VGA_bitmap_640x480 is
   port(clk          : in  std_logic;
 		 clk_vga      : in  std_logic;
        reset        : in  std_logic;
        VGA_hs       : out std_logic;   -- horisontal vga syncr.
        VGA_vs       : out std_logic;   -- vertical vga syncr.
-       iter      : out std_logic_vector(3 downto 0);   -- iter output
+       iter      : out std_logic_vector(7 downto 0);   -- iter output
        ADDR1         : in  std_logic_vector(17 downto 0);
-       data_in1      : in  std_logic_vector(3 downto 0);
+       data_in1      : in  std_logic_vector(7 downto 0);
        data_write1   : in  std_logic;
 		 ADDR2         : in  std_logic_vector(17 downto 0);
-       data_in2      : in  std_logic_vector(3 downto 0);
-       data_write2   : in  std_logic);
+       data_in2      : in  std_logic_vector(7 downto 0);
+       data_write2   : in  std_logic;
+		 ADDR3         : in  std_logic_vector(17 downto 0);
+       data_in3      : in  std_logic_vector(7 downto 0);
+       data_write3   : in  std_logic;
+		 ADDR4         : in  std_logic_vector(17 downto 0);
+       data_in4      : in  std_logic_vector(7 downto 0);
+       data_write4   : in  std_logic);
 end component;
 
-		signal data_write1, data_write2, clk50, clk100_sig: std_logic;
-		signal iterS, data_out1,data_out2 : std_logic_vector(3 downto 0);
-		signal  ADDR1, ADDR2 : std_logic_vector(17 downto 0);
+		signal BTNUB, BTNCB, BTNDB, BTNRB, BTNLB, data_write1, data_write2,data_write3, data_write4, clk50, clk100_sig: std_logic;
+		signal iterS, data_out1,data_out2, data_out3 ,data_out4 : std_logic_vector(7 downto 0);
+		signal  ADDR1, ADDR2, ADDR3, ADDR4 : std_logic_vector(17 downto 0);
 		
 		--component clk_wiz_0 is -- vivado
 --		component clkgen is --ise
@@ -113,7 +134,81 @@ begin
 	--	leds(7 downto 0) <= ('0','0','0','0','0','0', locked, onehz);
 
 	
-	Inst_plasma2: entity work.plasma
+	Inst_plasma4: entity work.plasma
+		GENERIC MAP (
+			memory_type => "XILINX_16X",
+			log_file    => "UNUSED",
+			ethernet    => '0',
+			eUart       => '1',
+			use_cache   => '0',
+			plasma_code => "../code_bin4.txt"
+		)
+		PORT MAP(
+			clk           => clk50,
+--			clk_VGA 		=> clk100,
+			reset         => rst,
+			uart_write    => open,
+			uart_read     => i_uart,
+			fifo_1_out_data  => x"00000000",
+			fifo_1_read_en   => open,
+			fifo_1_empty     => '0',
+			fifo_2_in_data   => open,
+			fifo_1_write_en  => open,
+			fifo_2_full      => '0',
+
+			fifo_1_full      => '0',
+			fifo_1_valid     => '0',
+			fifo_2_empty     => '0',
+			fifo_2_valid     => '0',
+			fifo_1_compteur  => x"00000000",
+			fifo_2_compteur  => x"00000000",
+
+			data_enable => data_write4,
+			ADDR => ADDR4,
+			data_out => data_out4,
+			
+			gpio0_out       => open,
+			gpioA_in        => x"000000" & buttons & BTNDB & BTNRB & BTNLB & BTNUB & BTNCB
+		);
+		
+Inst_plasma3: entity work.plasma
+		GENERIC MAP (
+			memory_type => "XILINX_16X",
+			log_file    => "UNUSED",
+			ethernet    => '0',
+			eUart       => '1',
+			use_cache   => '0',
+			plasma_code => "../code_bin3.txt"
+		)
+		PORT MAP(
+			clk           => clk50,
+--			clk_VGA 		=> clk100,
+			reset         => rst,
+			uart_write    => open,
+			uart_read     => i_uart,
+			fifo_1_out_data  => x"00000000",
+			fifo_1_read_en   => open,
+			fifo_1_empty     => '0',
+			fifo_2_in_data   => open,
+			fifo_1_write_en  => open,
+			fifo_2_full      => '0',
+
+			fifo_1_full      => '0',
+			fifo_1_valid     => '0',
+			fifo_2_empty     => '0',
+			fifo_2_valid     => '0',
+			fifo_1_compteur  => x"00000000",
+			fifo_2_compteur  => x"00000000",
+
+			data_enable => data_write3,
+			ADDR => ADDR3,
+			data_out => data_out3,
+			
+			gpio0_out       => open,
+			gpioA_in        => x"000000" & buttons & BTNDB & BTNRB & BTNLB & BTNUB & BTNCB --open
+		);
+		
+		Inst_plasma2: entity work.plasma
 		GENERIC MAP (
 			memory_type => "XILINX_16X",
 			log_file    => "UNUSED",
@@ -147,8 +242,9 @@ begin
 			data_out => data_out2,
 			
 			gpio0_out       => open,
-			gpioA_in        => x"000000" & buttons --open
+			gpioA_in        => x"000000" & buttons & BTNDB & BTNRB & BTNLB & BTNUB & BTNCB --open
 		);
+		
 		
 		Inst_plasma1: entity work.plasma
 		GENERIC MAP (
@@ -157,7 +253,7 @@ begin
 			ethernet    => '0',
 			eUart       => '1',
 			use_cache   => '0',
-			plasma_code => "../code_bin.txt"
+			plasma_code => "../code_bin1.txt"
 		)
 		PORT MAP(
 			clk           => clk50,
@@ -184,7 +280,7 @@ begin
 			data_out => data_out1,
 			
 			gpio0_out       => open,
-			gpioA_in        => x"000000" & buttons --open
+			gpioA_in        => x"000000" & buttons & BTNDB & BTNRB & BTNLB & BTNUB & BTNCB--open
 		);
 	
 		
@@ -201,11 +297,45 @@ begin
 					data_write1,
 					ADDR2,
 					data_out2,
-					data_write2
-);
+					data_write2,
+					ADDR3,
+					data_out3,
+					data_write3,
+					ADDR4,
+					data_out4,
+					data_write4
+					);
 		
 		InstColorgen: Colorgen
 		port map(iterS,VGA_red,VGA_green,VGA_blue);
+		
+InstancepulsBTNU: pulse_filter
+	port map(BTNU,
+				clk50,
+				BTNUB);
+				
+	
+InstancepulsBTND: pulse_filter
+	port map(BTND,
+				clk50,
+				BTNDB);
+
+
+InstancepulsBTNL: pulse_filter
+	port map(BTNL,
+				clk50,
+				BTNLB);
+				
+InstancepulsBTNR: pulse_filter
+	port map(BTNR,
+				clk50,
+				BTNRB);
+
+InstancepulsBTNC: pulse_filter
+	port map(BTNC,
+				clk50,
+				BTNCB);
+
 
 end rtl;
 

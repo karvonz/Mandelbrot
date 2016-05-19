@@ -27,7 +27,7 @@ entity coproc_4 is
       --iter      	: out std_logic_vector(3 downto 0)   -- red output
 		data_write :out std_logic;
 		ADDR         : out  std_logic_vector(17 downto 0);
-		data_out      : out std_logic_vector(3 downto 0)
+		data_out      : out std_logic_vector(7 downto 0)
     --  VGA_green    	: out std_logic_vector(3 downto 0);   -- green output
     --  VGA_blue    	 : out std_logic_vector(3 downto 0)   -- blue output
 	);
@@ -56,7 +56,7 @@ begin
 					counter <= 0;
 			ELSE
 				IF INPUT_1_valid = '1' THEN
-						IF counter < 153599 THEN
+						IF counter < 76799 THEN
 							counter <= counter + 1;
 						ELSE
 							counter <= 0;
@@ -91,7 +91,7 @@ begin
 --	
 
 		data_write <=INPUT_1_valid;
-		data_out <=INPUT_1(3 downto 0);
+		data_out <=INPUT_1(7 downto 0);
 		ADDR <= tmp_addr;
 	
 		OUTPUT_1 <= "00000000000000"&tmp_addr;

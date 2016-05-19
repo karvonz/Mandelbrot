@@ -5,13 +5,46 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="797" delta="unknown" >"D:/Vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/../../vhdl/plasma_core/vhdl/cam/cam_pkg.vhd" Line 16: Subprogram &lt;<arg fmt="%s" index="1">divide</arg>&gt; does not conform with its declaration.
+<msg type="error" file="HDLCompiler" num="806" delta="unknown" >"D:/Vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/RAM_single_port.vhd" Line 35: Syntax error near &quot;<arg fmt="%s" index="1">;</arg>&quot;.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="946" delta="unknown" >"D:/Vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/../../vhdl/plasma_core/vhdl/top_sp605.vhd" Line 150: Actual for formal port <arg fmt="%s" index="1">gpioa_in</arg> is neither a static name nor a globally static expression
+<msg type="error" file="HDLCompiler" num="854" delta="unknown" >"D:/Vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/RAM_single_port.vhd" Line 32: Unit &lt;<arg fmt="%s" index="1">ram_single_port</arg>&gt; ignored due to previous errors.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="946" delta="unknown" >"D:/Vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/../../vhdl/plasma_core/vhdl/top_sp605.vhd" Line 188: Actual for formal port <arg fmt="%s" index="1">gpioa_in</arg> is neither a static name nor a globally static expression
+<msg type="error" file="HDLCompiler" num="374" delta="unknown" >"D:/Vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/RAM_single_port.vhd" Line 40: Entity &lt;<arg fmt="%s" index="1">ram_single_port</arg>&gt; is not yet compiled.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"D:/Vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/RAM_single_port.vhd" Line 41: &lt;<arg fmt="%s" index="1">integer</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"D:/Vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/RAM_single_port.vhd" Line 42: &lt;<arg fmt="%s" index="1">integer</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"D:/Vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/RAM_single_port.vhd" Line 44: &lt;<arg fmt="%s" index="1">addr_width</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="541" delta="unknown" >"D:/Vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/RAM_single_port.vhd" Line 52: Type <arg fmt="%s" index="1">gram</arg> is not an array type and cannot be indexed.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"D:/Vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/RAM_single_port.vhd" Line 53: &lt;<arg fmt="%s" index="1">data_out</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"D:/Vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/RAM_single_port.vhd" Line 55: &lt;<arg fmt="%s" index="1">data_out</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"D:/Vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/RAM_single_port.vhd" Line 51: &lt;<arg fmt="%s" index="1">data_write</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"D:/Vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/RAM_single_port.vhd" Line 50: &lt;<arg fmt="%s" index="1">clk</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="989" delta="unknown" >"D:/Vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/RAM_single_port.vhd" Line 50: Attribute <arg fmt="%s" index="1">event</arg> requires a static signal prefix
+</msg>
+
+<msg type="error" file="HDLCompiler" num="69" delta="unknown" >"D:/Vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/RAM_single_port.vhd" Line 48: &lt;<arg fmt="%s" index="1">clk</arg>&gt; is not declared.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="925" delta="unknown" >"D:/Vincent/Mandelbrot/soc_plasma/synthese/IPBus_ml605_ASIP/RAM_single_port.vhd" Line 44: Missing full type definition for <arg fmt="%s" index="1">gram</arg>
 </msg>
 
 </messages>

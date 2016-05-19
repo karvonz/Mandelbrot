@@ -30,10 +30,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 323628 kilobytes
+Total memory usage is 376076 kilobytes
 
 Writing NGD file "top_ml605_extphy.ngd" ...
-Total REAL time to NGDBUILD completion:  21 sec
-Total CPU time to NGDBUILD completion:   21 sec
+Total REAL time to NGDBUILD completion:  38 sec
+Total CPU time to NGDBUILD completion:   38 sec
 
 Writing NGDBUILD log file "top_ml605_extphy.bld"...
