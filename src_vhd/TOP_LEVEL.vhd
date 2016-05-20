@@ -30,6 +30,7 @@ use work.CONSTANTS.all;
 --use UNISIM.VComponents.all;
 
 entity TOP_LEVEL is
+	 generic( ystart : std_logic_vector(31 downto 0) := x"00000000");
     Port ( clock : in  STD_LOGIC;
            reset : in  STD_LOGIC;
 			  inib : in std_logic;
@@ -38,12 +39,9 @@ entity TOP_LEVEL is
            bup : in STD_LOGIC;
            bdwn : in STD_LOGIC;
            bctr : in STD_LOGIC;
-			  VGA_hs       : out std_logic;   -- horisontal vga syncr.
-			  VGA_vs       : out std_logic;   -- vertical vga syncr.
-			  VGA_red      : out std_logic_vector(3 downto 0);   -- red output
-           VGA_green    : out std_logic_vector(3 downto 0);   -- green output
-           VGA_blue     : out std_logic_vector(3 downto 0);       
-			  data_out     : out std_logic_vector(bit_per_pixel - 1 downto 0));
+			  ADDR : out std_logic_vector( ADDR_BIT-1 downto 0);
+			  data_write : out STD_LOGIC;
+			  data_out     : out std_logic_vector(ITER_RANGE - 1 downto 0));
 end TOP_LEVEL;
 
 architecture Behavioral of TOP_LEVEL is
@@ -95,25 +93,8 @@ component increment
 			  stop : out std_logic);
 end component;
 
-component VGA_bitmap_640x480
-  generic(grayscale     : boolean := false);           -- should data be displayed in grayscale
-  port(clk          : in  std_logic;
-       reset        : in  std_logic;
-       VGA_hs       : out std_logic;   -- horisontal vga syncr.
-       VGA_vs       : out std_logic;   -- vertical vga syncr.
-       VGA_red      : out std_logic_vector(3 downto 0);   -- red output
-       VGA_green    : out std_logic_vector(3 downto 0);   -- green output
-       VGA_blue     : out std_logic_vector(3 downto 0);   -- blue output
-
-       -- ADDR         : in  std_logic_vector(13 downto 0);     
-		 endcalcul : in std_logic;
-
-       data_in      : in  std_logic_vector(bit_per_pixel - 1 downto 0);
-       data_write   : in  std_logic;
-       data_out     : out std_logic_vector(bit_per_pixel - 1 downto 0));
-end component;
-
 component Zoom
+generic( ystartini : STD_LOGIC_VECTOR(31 downto 0));
 	port ( bleft : in STD_LOGIC;
            bright : in STD_LOGIC;
            bup : in STD_LOGIC;
@@ -133,27 +114,28 @@ component ClockManager
            ce_param : out std_logic);
 end component;
 
+component ADDR_calculator     Port ( clk : in  STD_LOGIC;
+           reset : in  STD_LOGIC;
+           data_write : in  STD_LOGIC;
+           endcalcul : in  STD_LOGIC;
+           ADDRout : out  STD_LOGIC_VECTOR (ADDR_BIT-1 downto 0));
+end component;
+
 Signal doneS, startS,stopS, xincS, yincS, s_param : std_logic;
 Signal xS, yS : std_logic_vector(XY_RANGE - 1 downto 0);
 Signal s_xstart, s_ystart, s_step : std_logic_vector(XY_RANGE - 1 downto 0);
 Signal colorS : STD_LOGIC_VECTOR (bit_per_pixel-1 downto 0);
 Signal itersS, itermaxS : STD_LOGIC_VECTOR (ITER_RANGE-1 downto 0);
 begin
-InstColorgen : Colorgen
-port map (itersS,itermaxS,colorS);
 
-InstVGA: VGA_bitmap_640x480
-Port map (clock,
+
+InstADDR: ADDR_calculator
+port map( clock,
 				reset,
-				VGA_hs,
-				VGA_vs,
-				VGA_red,
-				VGA_green,
-				VGA_blue,
+				startS,
 				stopS,
-				colorS,
-				startS, 
-				open); 
+				ADDR);
+
 				
 Instincrment: increment
 Port map (clock,
@@ -191,9 +173,13 @@ inst_cpt_iter: cpt_iter
 					itermaxS);
 
 inst_zoom : Zoom
+   generic map(ystart)
 	port map (bleft, bright, bup, bdwn, bctr, clock, reset, s_param, s_xstart, s_ystart, s_step);
 
 inst_clock_manager : ClockManager
 	port map (clock, reset, s_param);
+	
+	data_write<=startS;
+	data_out<=itersS;
 
 end Behavioral;

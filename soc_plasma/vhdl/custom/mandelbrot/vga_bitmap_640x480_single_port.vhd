@@ -36,18 +36,30 @@ entity VGA_bitmap_640x480 is
        VGA_hs       : out std_logic;   -- horisontal vga syncr.
        VGA_vs       : out std_logic;   -- vertical vga syncr.
        iter      : out std_logic_vector(7 downto 0);   -- iter output
-       ADDR1         : in  std_logic_vector(17 downto 0);
+       ADDR1         : in  std_logic_vector(15 downto 0);
        data_in1      : in  std_logic_vector(7 downto 0);
        data_write1   : in  std_logic;
-		 ADDR2         : in  std_logic_vector(17 downto 0);
+		 ADDR2         : in  std_logic_vector(15 downto 0);
        data_in2      : in  std_logic_vector(7 downto 0);
        data_write2   : in  std_logic;
-		 ADDR3         : in  std_logic_vector(17 downto 0);
+		 ADDR3         : in  std_logic_vector(15 downto 0);
        data_in3      : in  std_logic_vector(7 downto 0);
        data_write3   : in  std_logic;
-		 ADDR4         : in  std_logic_vector(17 downto 0);
+		 ADDR4         : in  std_logic_vector(15 downto 0);
        data_in4      : in  std_logic_vector(7 downto 0);
-       data_write4   : in  std_logic);
+       data_write4   : in  std_logic;
+		 ADDR5         : in  std_logic_vector(15 downto 0);
+       data_in5      : in  std_logic_vector(7 downto 0);
+       data_write5   : in  std_logic;
+		 ADDR6         : in  std_logic_vector(15 downto 0);
+       data_in6      : in  std_logic_vector(7 downto 0);
+       data_write6   : in  std_logic;
+		 ADDR7         : in  std_logic_vector(15 downto 0);
+       data_in7      : in  std_logic_vector(7 downto 0);
+       data_write7   : in  std_logic;
+		 ADDR8         : in  std_logic_vector(15 downto 0);
+       data_in8     : in  std_logic_vector(7 downto 0);
+       data_write8   : in  std_logic);
 end VGA_bitmap_640x480;
 
 architecture Behavioral of VGA_bitmap_640x480 is
@@ -57,7 +69,7 @@ component RAM_single_port
     Port ( clk : in  STD_LOGIC;
            data_write : in  STD_LOGIC;
 			  data_in : in STD_LOGIC_VECTOR(7 downto 0);
-           ADDR : in  STD_LOGIC_VECTOR (17 downto 0);
+           ADDR : in  STD_LOGIC_VECTOR (15 downto 0);
            data_out : out  STD_LOGIC_VECTOR (7 downto 0));
 end component;
 
@@ -69,17 +81,17 @@ end component;
 	signal TOP_display   : boolean := false;               -- this signal is true when the current pixel line is visible on the screen
 
 	signal pix_read_addr : integer range 0 to 307199:=0;  -- the address at which displayed data is read
-	signal pix_read_addr1, pix_read1 : integer range 0 to 76799:=0;  -- the address at which displayed data is read
+	signal pix_read_addr1, pix_read1 : integer range 0 to 38399:=0;  -- the address at which displayed data is read
 
 	--signal next_pixel,next_pixel1,next_pixel2    : std_logic_vector(3 downto 0);  -- the data coding the value of the pixel to be displayed
-   signal pix_read_addrb : integer range 0 to 76799 := 0;  -- the address at which displayed data is read
+   signal pix_read_addrb : integer range 0 to 38399 := 0;  -- the address at which displayed data is read
 
-   signal next_pixel1, data_temp1, data_temp2 , data_outtemp1, data_outtemp2,data_temp3, data_temp4 , data_outtemp3, data_outtemp4  : std_logic_vector(7 downto 0);  -- the data coding the value of the pixel to be displayed
+   signal next_pixel1, data_temp1, data_temp2 , data_outtemp1, data_outtemp2,data_temp3, data_temp4 , data_outtemp3, data_outtemp4, data_temp5, data_temp6 , data_outtemp5, data_outtemp6,data_temp7, data_temp8 , data_outtemp7, data_outtemp8  : std_logic_vector(7 downto 0);  -- the data coding the value of the pixel to be displayed
    signal next_pixel2   : std_logic_vector(7 downto 0);  -- the data coding the value of the pixel to be displayed
    signal next_pixel    : std_logic_vector(7 downto 0);  -- the data coding the value of the pixel to be displayed
 	--signal data_writetemp1, data_writetemp2 : std_logic;
 	
-   signal ADDRtemp1, ADDRtemp2, ADDRtemp3, ADDRtemp4    : std_logic_vector(17 downto 0);  -- the data coding the value of the pixel to be displayed
+   signal ADDRtemp1, ADDRtemp2, ADDRtemp3, ADDRtemp4, ADDRtemp5, ADDRtemp6, ADDRtemp7, ADDRtemp8    : std_logic_vector(15 downto 0);  -- the data coding the value of the pixel to be displayed
 
 	
 begin
@@ -114,14 +126,44 @@ port map (clk,
 				ADDRtemp4,
 				data_outtemp4);
 				
+RAM5: RAM_single_port
+port map (clk,
+				data_write5,
+				data_in5,
+				ADDRtemp5,
+				data_outtemp5);
 				
+RAM6: RAM_single_port
+port map (clk,
+				data_write6,
+				data_in6,
+				ADDRtemp6,
+				data_outtemp6);
+
+RAM7: RAM_single_port
+port map (clk,
+				data_write7,
+				data_in7,
+				ADDRtemp7,
+				data_outtemp7);
+				
+RAM8: RAM_single_port
+port map (clk,
+				data_write8,
+				data_in8,
+				ADDRtemp8,
+				data_outtemp8);				
 
   -- pix_read_addrb <= pix_read_addr when pix_read_addr < 153599 else pix_read_addr - 153599;
 	
-	ADDRtemp1<= ADDR1 when (data_write1 = '1') else std_logic_vector(to_unsigned(pix_read1, 18)) ;
-	ADDRtemp2<= ADDR2 when (data_write2 = '1') else std_logic_vector(to_unsigned(pix_read1, 18)) ;
-	ADDRtemp3<= ADDR3 when (data_write3 = '1') else std_logic_vector(to_unsigned(pix_read1, 18)) ;
-	ADDRtemp4<= ADDR4 when (data_write4 = '1') else std_logic_vector(to_unsigned(pix_read1, 18)) ;
+	ADDRtemp1<= ADDR1 when (data_write1 = '1') else std_logic_vector(to_unsigned(pix_read1, 16)) ;
+	ADDRtemp2<= ADDR2 when (data_write2 = '1') else std_logic_vector(to_unsigned(pix_read1, 16)) ;
+	ADDRtemp3<= ADDR3 when (data_write3 = '1') else std_logic_vector(to_unsigned(pix_read1, 16)) ;
+	ADDRtemp4<= ADDR4 when (data_write4 = '1') else std_logic_vector(to_unsigned(pix_read1, 16)) ;
+	ADDRtemp5<= ADDR5 when (data_write5 = '1') else std_logic_vector(to_unsigned(pix_read1, 16)) ;
+	ADDRtemp6<= ADDR6 when (data_write6 = '1') else std_logic_vector(to_unsigned(pix_read1, 16)) ;
+	ADDRtemp7<= ADDR7 when (data_write7 = '1') else std_logic_vector(to_unsigned(pix_read1, 16)) ;
+	ADDRtemp8<= ADDR8 when (data_write8 = '1') else std_logic_vector(to_unsigned(pix_read1, 16)) ;
 	--data_writetemp1 <= clk_VGA when (data_write1 = '0') else '1' ;
 	--data_writetemp2 <= clk_VGA when (data_write2 = '0') else '1' ;
 	
@@ -165,14 +207,22 @@ port map (clk,
    process (clk_vga)
    begin
       if (clk_vga'event and clk_vga = '1') then
-         IF pix_read_addr < 76799 THEN
+         IF pix_read_addr < 38399 THEN
             next_pixel <= data_outtemp1;
-        ELSif pix_read_addr < 153599 THEN
+		  ELSif pix_read_addr < 76799 THEN
             next_pixel <= data_outtemp2;
-	   ELSif pix_read_addr < 230399 THEN
+		  ELSif pix_read_addr < 115199 THEN
             next_pixel <= data_outtemp3;
-		else
-		      next_pixel <= data_outtemp4;
+        ELSif pix_read_addr < 153599 THEN
+            next_pixel <= data_outtemp4;
+        ELSif pix_read_addr < 191999 THEN
+            next_pixel <= data_outtemp5;
+        ELSif pix_read_addr < 153599 THEN
+            next_pixel <= data_outtemp6;
+	     ELSif pix_read_addr < 230399 THEN
+            next_pixel <= data_outtemp7;
+	  	  else
+	 	      next_pixel <= data_outtemp8;
 
          END IF;
       end if;
@@ -209,7 +259,7 @@ port map (clk,
 --	end if;
 --end process;
 
---ram_out <= screen1 when to_unsigned(pix_read_addr,18)(17) = '0' else screen2;
+--ram_out <= screen1 when to_unsigned(pix_read_addr,16)(15) = '0' else screen2;
 
 
 --------------------------------------------------------------------------------
@@ -237,7 +287,7 @@ begin
          pix_read1 <= 0;
       elsif TOP_line and (h_counter mod 4)=0 then
          pix_read1 <= pix_read1 + 1;
-	  elsif (pix_read1 = 76799) then
+	  elsif (pix_read1 = 38399) then
 		 pix_read1 <= 0;
       end if;
    end if;

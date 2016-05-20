@@ -72,7 +72,7 @@ begin
         when init=> start<='0';
         when calcul=> start<='0';
         when inc=> start<='1';
-		 when finish=>start<='0';
+		  when finish=>start<='0';
 
     end case;
 end process;

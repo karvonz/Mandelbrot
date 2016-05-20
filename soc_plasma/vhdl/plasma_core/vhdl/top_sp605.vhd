@@ -61,30 +61,42 @@ component Colorgen
        VGA_blue     : out std_logic_vector(3 downto 0));   -- blue output
 end component;
 
-component VGA_bitmap_640x480 is
+component VGA_bitmap_640x480 
   port(clk          : in  std_logic;
 		 clk_vga      : in  std_logic;
        reset        : in  std_logic;
        VGA_hs       : out std_logic;   -- horisontal vga syncr.
        VGA_vs       : out std_logic;   -- vertical vga syncr.
        iter      : out std_logic_vector(7 downto 0);   -- iter output
-       ADDR1         : in  std_logic_vector(17 downto 0);
+       ADDR1         : in  std_logic_vector(15 downto 0);
        data_in1      : in  std_logic_vector(7 downto 0);
        data_write1   : in  std_logic;
-		 ADDR2         : in  std_logic_vector(17 downto 0);
+		 ADDR2         : in  std_logic_vector(15 downto 0);
        data_in2      : in  std_logic_vector(7 downto 0);
        data_write2   : in  std_logic;
-		 ADDR3         : in  std_logic_vector(17 downto 0);
+		 ADDR3         : in  std_logic_vector(15 downto 0);
        data_in3      : in  std_logic_vector(7 downto 0);
        data_write3   : in  std_logic;
-		 ADDR4         : in  std_logic_vector(17 downto 0);
+		 ADDR4         : in  std_logic_vector(15 downto 0);
        data_in4      : in  std_logic_vector(7 downto 0);
-       data_write4   : in  std_logic);
+       data_write4   : in  std_logic;
+		 ADDR5         : in  std_logic_vector(15 downto 0);
+       data_in5      : in  std_logic_vector(7 downto 0);
+       data_write5   : in  std_logic;
+		 ADDR6         : in  std_logic_vector(15 downto 0);
+       data_in6      : in  std_logic_vector(7 downto 0);
+       data_write6   : in  std_logic;
+		 ADDR7         : in  std_logic_vector(15 downto 0);
+       data_in7      : in  std_logic_vector(7 downto 0);
+       data_write7   : in  std_logic;
+		 ADDR8         : in  std_logic_vector(15 downto 0);
+       data_in8     : in  std_logic_vector(7 downto 0);
+       data_write8   : in  std_logic);
 end component;
 
-		signal BTNUB, BTNCB, BTNDB, BTNRB, BTNLB, data_write1, data_write2,data_write3, data_write4, clk50, clk100_sig: std_logic;
-		signal iterS, data_out1,data_out2, data_out3 ,data_out4 : std_logic_vector(7 downto 0);
-		signal  ADDR1, ADDR2, ADDR3, ADDR4 : std_logic_vector(17 downto 0);
+		signal BTNUB, BTNCB, BTNDB, BTNRB, BTNLB, data_write1, data_write2,data_write3, data_write4,data_write5, data_write6,data_write7, data_write8, clk50, clk100_sig: std_logic;
+		signal iterS, data_out1,data_out2, data_out3 ,data_out4, data_out5,data_out6, data_out7 ,data_out8 : std_logic_vector(7 downto 0);
+		signal  ADDR1, ADDR2, ADDR3, ADDR4, ADDR5, ADDR6, ADDR7, ADDR8 : std_logic_vector(15 downto 0);
 		
 		--component clk_wiz_0 is -- vivado
 --		component clkgen is --ise
@@ -110,15 +122,6 @@ begin
 		end if;
 	end process;
 
-	--	DCM clock generation for internal bus, ethernet
-	--clock_gen : clk_wiz_0 -- vivado
-	--clock_gen : clkgen -- ise
-	--  port map
-	--   (-- Clock in ports
-	--    CLK_IN1 => clk100,
-	--    -- Clock out ports
-	--    CLK_OUT1 => clk50,
-	--	 CLK_OUT2 => clk100_sig);
 
 			
 	clk_div : process(clk100, rst)
@@ -132,7 +135,119 @@ begin
 			
 			
 	--	leds(7 downto 0) <= ('0','0','0','0','0','0', locked, onehz);
+	
+--	Inst_plasma8: entity work.plasma
+--		GENERIC MAP (
+--			memory_type => "XILINX_16X",
+--			log_file    => "UNUSED",
+--			ethernet    => '0',
+--			eUart       => '1',
+--			use_cache   => '0',
+--			plasma_code => "../code_bin8.txt"
+--		)
+--		PORT MAP(
+--			clk           => clk50,
+----			clk_VGA 		=> clk100,
+--			reset         => rst,
+--			uart_write    => open,
+--			uart_read     => i_uart,
+--			fifo_1_out_data  => x"00000000",
+--			fifo_1_read_en   => open,
+--			fifo_1_empty     => '0',
+--			fifo_2_in_data   => open,
+--			fifo_1_write_en  => open,
+--			fifo_2_full      => '0',
+--
+--			fifo_1_full      => '0',
+--			fifo_1_valid     => '0',
+--			fifo_2_empty     => '0',
+--			fifo_2_valid     => '0',
+--			fifo_1_compteur  => x"00000000",
+--			fifo_2_compteur  => x"00000000",
+--
+--			data_enable => data_write8,
+--			ADDR => ADDR8,
+--			data_out => data_out8,
+--			
+--			gpio0_out       => open,
+--			gpioA_in        => x"000000" & buttons & BTNDB & BTNRB & BTNLB & BTNUB & BTNCB
+--		);
+		
+--Inst_plasma7: entity work.plasma
+--		GENERIC MAP (
+--			memory_type => "XILINX_16X",
+--			log_file    => "UNUSED",
+--			ethernet    => '0',
+--			eUart       => '1',
+--			use_cache   => '0',
+--			plasma_code => "../code_bin7.txt"
+--		)
+--		PORT MAP(
+--			clk           => clk50,
+----			clk_VGA 		=> clk100,
+--			reset         => rst,
+--			uart_write    => open,
+--			uart_read     => i_uart,
+--			fifo_1_out_data  => x"00000000",
+--			fifo_1_read_en   => open,
+--			fifo_1_empty     => '0',
+--			fifo_2_in_data   => open,
+--			fifo_1_write_en  => open,
+--			fifo_2_full      => '0',
+--
+--			fifo_1_full      => '0',
+--			fifo_1_valid     => '0',
+--			fifo_2_empty     => '0',
+--			fifo_2_valid     => '0',
+--			fifo_1_compteur  => x"00000000",
+--			fifo_2_compteur  => x"00000000",
+--
+--			data_enable => data_write7,
+--			ADDR => ADDR7,
+--			data_out => data_out7,
+--			
+--			gpio0_out       => open,
+--			gpioA_in        => x"000000" & buttons & BTNDB & BTNRB & BTNLB & BTNUB & BTNCB --open
+--		);
+--		
+		
+		
+		Inst_plasma5: entity work.plasma
+		GENERIC MAP (
+			memory_type => "XILINX_16X",
+			log_file    => "UNUSED",
+			ethernet    => '0',
+			eUart       => '1',
+			use_cache   => '0',
+			plasma_code => "../code_bin5.txt"
+		)
+		PORT MAP(
+			clk           => clk50,
+		--	clk_VGA 		=> clk100,
+			reset         => rst,
+			uart_write    => open,
+			uart_read     => i_uart,
+			fifo_1_out_data  => x"00000000",
+			fifo_1_read_en   => open,
+			fifo_1_empty     => '0',
+			fifo_2_in_data   => open,
+			fifo_1_write_en  => open,
+			fifo_2_full      => '0',
 
+			fifo_1_full      => '0',
+			fifo_1_valid     => '0',
+			fifo_2_empty     => '0',
+			fifo_2_valid     => '0',
+			fifo_1_compteur  => x"00000000",
+			fifo_2_compteur  => x"00000000",
+
+			data_enable => data_write5,
+			ADDR => ADDR5,
+			data_out => data_out5,
+			
+			gpio0_out       => open,
+			gpioA_in        => x"000000" & buttons & BTNDB & BTNRB & BTNLB & BTNUB & BTNCB--open
+		);
 	
 	Inst_plasma4: entity work.plasma
 		GENERIC MAP (
@@ -170,7 +285,7 @@ begin
 			gpio0_out       => open,
 			gpioA_in        => x"000000" & buttons & BTNDB & BTNRB & BTNLB & BTNUB & BTNCB
 		);
-		
+--		
 Inst_plasma3: entity work.plasma
 		GENERIC MAP (
 			memory_type => "XILINX_16X",
@@ -207,6 +322,44 @@ Inst_plasma3: entity work.plasma
 			gpio0_out       => open,
 			gpioA_in        => x"000000" & buttons & BTNDB & BTNRB & BTNLB & BTNUB & BTNCB --open
 		);
+		
+				Inst_plasma6: entity work.plasma
+		GENERIC MAP (
+			memory_type => "XILINX_16X",
+			log_file    => "UNUSED",
+			ethernet    => '0',
+			eUart       => '1',
+			use_cache   => '0',
+			plasma_code => "../code_bin6.txt"
+		)
+		PORT MAP(
+			clk           => clk50,
+--			clk_VGA 		=> clk100,
+			reset         => rst,
+			uart_write    => open,
+			uart_read     => i_uart,
+			fifo_1_out_data  => x"00000000",
+			fifo_1_read_en   => open,
+			fifo_1_empty     => '0',
+			fifo_2_in_data   => open,
+			fifo_1_write_en  => open,
+			fifo_2_full      => '0',
+
+			fifo_1_full      => '0',
+			fifo_1_valid     => '0',
+			fifo_2_empty     => '0',
+			fifo_2_valid     => '0',
+			fifo_1_compteur  => x"00000000",
+			fifo_2_compteur  => x"00000000",
+
+			data_enable => data_write6,
+			ADDR => ADDR6,
+			data_out => data_out6,
+			
+			gpio0_out       => open,
+			gpioA_in        => x"000000" & buttons & BTNDB & BTNRB & BTNLB & BTNUB & BTNCB --open
+		);
+
 		
 		Inst_plasma2: entity work.plasma
 		GENERIC MAP (
@@ -303,7 +456,19 @@ Inst_plasma3: entity work.plasma
 					data_write3,
 					ADDR4,
 					data_out4,
-					data_write4
+					data_write4,
+					ADDR5,
+					data_out5,
+					data_write5,
+					ADDR6,
+					data_out6,
+					data_write6,
+					ADDR7,
+					data_out7,
+					data_write7,
+					ADDR8,
+					data_out8,
+					data_write8
 					);
 		
 		InstColorgen: Colorgen

@@ -102,7 +102,7 @@ entity plasma is
 				--VGA_hs       : out std_logic;   -- horisontal vga syncr.
 			--	VGA_vs       : out std_logic;   -- vertical vga syncr.
 				data_enable :out std_logic;
-		      ADDR         : out std_logic_vector(17 downto 0);
+		      ADDR         : out std_logic_vector(15 downto 0);
 				data_out      : out std_logic_vector(7 downto 0);   
 				--VGA_green    : out std_logic_vector(3 downto 0);   -- green output
 				--VGA_blue     : out std_logic_vector(3 downto 0);   -- blue output

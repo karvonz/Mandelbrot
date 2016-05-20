@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> Reading design: VGA_bitmap_640x480.prj
 
@@ -105,10 +105,7 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "D:\Vincent\Mandelbrot\soc_plasma\synthese\IPBus_ml605_ASIP\RAM_single_port.vhd" into library work
-Parsing entity <RAM_single_port>.
-Parsing architecture <Behavioral> of entity <ram_single_port>.
-Parsing VHDL file "D:\Vincent\Mandelbrot\soc_plasma\vhdl\custom\mandelbrot\vga_bitmap_640x480_single_port.vhd" into library work
+Parsing VHDL file "D:\Vincent\Mandelbrot\soc_plasma\vhdl\custom\mandelbrot\vga_bitmap_640x480_dualport.vhd" into library work
 Parsing entity <VGA_bitmap_640x480>.
 Parsing architecture <Behavioral> of entity <vga_bitmap_640x480>.
 
@@ -118,17 +115,38 @@ Parsing architecture <Behavioral> of entity <vga_bitmap_640x480>.
 
 Elaborating entity <VGA_bitmap_640x480> (architecture <Behavioral>) from library <work>.
 
-Elaborating entity <RAM_single_port> (architecture <Behavioral>) from library <work>.
-WARNING:HDLCompiler:1127 - "D:\Vincent\Mandelbrot\soc_plasma\vhdl\custom\mandelbrot\vga_bitmap_640x480_single_port.vhd" Line 103: Assignment to data_writetemp2 ignored, since the identifier is never used
-
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <VGA_bitmap_640x480>.
-    Related source file is "D:\Vincent\Mandelbrot\soc_plasma\vhdl\custom\mandelbrot\vga_bitmap_640x480_single_port.vhd".
+    Related source file is "D:\Vincent\Mandelbrot\soc_plasma\vhdl\custom\mandelbrot\vga_bitmap_640x480_dualport.vhd".
+WARNING:Xst:647 - Input <ADDR8> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <data_in8> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <data_write8> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <screen1>, simulation mismatch.
+    Found 38400x8-bit dual-port RAM <Mram_screen1> for signal <screen1>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <screen2>, simulation mismatch.
+    Found 38400x8-bit dual-port RAM <Mram_screen2> for signal <screen2>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <screen3>, simulation mismatch.
+    Found 38400x8-bit dual-port RAM <Mram_screen3> for signal <screen3>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <screen4>, simulation mismatch.
+    Found 38400x8-bit dual-port RAM <Mram_screen4> for signal <screen4>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <screen5>, simulation mismatch.
+    Found 38400x8-bit dual-port RAM <Mram_screen5> for signal <screen5>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <screen6>, simulation mismatch.
+    Found 38400x8-bit dual-port RAM <Mram_screen6> for signal <screen6>.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <screen7>, simulation mismatch.
+    Found 38400x8-bit dual-port RAM <Mram_screen7> for signal <screen7>.
+    Found 8-bit register for signal <next_pixel2>.
+    Found 8-bit register for signal <next_pixel3>.
+    Found 8-bit register for signal <next_pixel4>.
+    Found 8-bit register for signal <next_pixel5>.
+    Found 8-bit register for signal <next_pixel6>.
+    Found 8-bit register for signal <next_pixel7>.
+    Found 8-bit register for signal <next_pixel>.
     Found 19-bit register for signal <pix_read_addr>.
-    Found 18-bit register for signal <pix_read1>.
+    Found 16-bit register for signal <pix_read_addr1>.
     Found 1-bit register for signal <VGA_vs>.
     Found 1-bit register for signal <TOP_display>.
     Found 8-bit register for signal <iter>.
@@ -136,54 +154,53 @@ Synthesizing Unit <VGA_bitmap_640x480>.
     Found 1-bit register for signal <TOP_line>.
     Found 12-bit register for signal <h_counter>.
     Found 10-bit register for signal <v_counter>.
-    Found 8-bit register for signal <next_pixel>.
-    Found 19-bit adder for signal <pix_read_addr[18]_GND_5_o_add_6_OUT> created at line 198.
-    Found 18-bit adder for signal <pix_read1[17]_GND_5_o_add_13_OUT> created at line 211.
-    Found 10-bit adder for signal <v_counter[9]_GND_5_o_add_41_OUT> created at line 323.
-    Found 12-bit adder for signal <h_counter[11]_GND_5_o_add_43_OUT> created at line 326.
-    Found 19-bit comparator greater for signal <pix_read_addr[18]_GND_5_o_LessThan_3_o> created at line 145
+    Found 8-bit register for signal <next_pixel1>.
+    Found 19-bit adder for signal <pix_read_addr[18]_GND_5_o_add_51_OUT> created at line 286.
+    Found 16-bit adder for signal <pix_read_addr1[15]_GND_5_o_add_58_OUT> created at line 299.
+    Found 10-bit adder for signal <v_counter[9]_GND_5_o_add_86_OUT> created at line 411.
+    Found 12-bit adder for signal <h_counter[11]_GND_5_o_add_88_OUT> created at line 414.
+    Found 8-bit 8-to-1 multiplexer for signal <GND_5_o_next_pixel1[7]_mux_34_OUT> created at line 223.
+    Found 19-bit comparator greater for signal <pix_read_addr[18]_GND_5_o_LessThan_37_o> created at line 257
+    Found 19-bit comparator greater for signal <pix_read_addr[18]_GND_5_o_LessThan_38_o> created at line 259
+    Found 19-bit comparator greater for signal <pix_read_addr[18]_GND_5_o_LessThan_39_o> created at line 261
+    Found 19-bit comparator greater for signal <pix_read_addr[18]_GND_5_o_LessThan_41_o> created at line 265
+    Found 19-bit comparator greater for signal <pix_read_addr[18]_GND_5_o_LessThan_42_o> created at line 267
+    Found 19-bit comparator greater for signal <pix_read_addr[18]_GND_5_o_LessThan_43_o> created at line 269
     Summary:
+	inferred   7 RAM(s).
 	inferred   4 Adder/Subtractor(s).
-	inferred  79 D-type flip-flop(s).
-	inferred   1 Comparator(s).
-	inferred   4 Multiplexer(s).
+	inferred 133 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+	inferred  11 Multiplexer(s).
 Unit <VGA_bitmap_640x480> synthesized.
-
-Synthesizing Unit <RAM_single_port>.
-    Related source file is "D:\Vincent\Mandelbrot\soc_plasma\synthese\IPBus_ml605_ASIP\RAM_single_port.vhd".
-WARNING:Xst:3035 - Index value(s) does not match array range for signal <screen>, simulation mismatch.
-    Found 153600x8-bit single-port RAM <Mram_screen> for signal <screen>.
-    Found 8-bit register for signal <data_out>.
-    Summary:
-	inferred   1 RAM(s).
-	inferred   8 D-type flip-flop(s).
-	inferred   1 Multiplexer(s).
-Unit <RAM_single_port> synthesized.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 2
- 153600x8-bit single-port RAM                          : 2
+# RAMs                                                 : 7
+ 38400x8-bit dual-port RAM                             : 7
 # Adders/Subtractors                                   : 4
  10-bit adder                                          : 1
  12-bit adder                                          : 1
- 18-bit adder                                          : 1
+ 16-bit adder                                          : 1
  19-bit adder                                          : 1
-# Registers                                            : 12
+# Registers                                            : 17
  1-bit register                                        : 4
  10-bit register                                       : 1
  12-bit register                                       : 1
- 18-bit register                                       : 1
+ 16-bit register                                       : 1
  19-bit register                                       : 1
- 8-bit register                                        : 4
-# Comparators                                          : 1
- 19-bit comparator greater                             : 1
-# Multiplexers                                         : 6
- 1-bit 2-to-1 multiplexer                              : 1
- 18-bit 2-to-1 multiplexer                             : 2
- 8-bit 2-to-1 multiplexer                              : 3
+ 8-bit register                                        : 9
+# Comparators                                          : 6
+ 19-bit comparator greater                             : 6
+# Multiplexers                                         : 11
+ 10-bit 2-to-1 multiplexer                             : 1
+ 12-bit 2-to-1 multiplexer                             : 1
+ 16-bit 2-to-1 multiplexer                             : 1
+ 19-bit 2-to-1 multiplexer                             : 1
+ 3-bit 2-to-1 multiplexer                              : 6
+ 8-bit 8-to-1 multiplexer                              : 1
 
 =========================================================================
 
@@ -192,50 +209,192 @@ Macro Statistics
 =========================================================================
 
 
-Synthesizing (advanced) Unit <RAM_single_port>.
-INFO:Xst:3226 - The RAM <Mram_screen> will be implemented as a BLOCK RAM, absorbing the following register(s): <data_out>
+Synthesizing (advanced) Unit <VGA_bitmap_640x480>.
+The following registers are absorbed into counter <h_counter>: 1 register on signal <h_counter>.
+The following registers are absorbed into counter <pix_read_addr>: 1 register on signal <pix_read_addr>.
+The following registers are absorbed into counter <pix_read_addr1>: 1 register on signal <pix_read_addr1>.
+The following registers are absorbed into counter <v_counter>: 1 register on signal <v_counter>.
+INFO:Xst:3226 - The RAM <Mram_screen2> will be implemented as a BLOCK RAM, absorbing the following register(s): <next_pixel2>
     -----------------------------------------------------------------------
     | ram_type           | Block                               |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
-    |     aspect ratio   | 153600-word x 8-bit                 |          |
+    |     aspect ratio   | 38400-word x 8-bit                  |          |
     |     mode           | write-first                         |          |
     |     clkA           | connected to signal <clk>           | rise     |
-    |     weA            | connected to signal <data_write>    | high     |
-    |     addrA          | connected to signal <ADDR>          |          |
-    |     diA            | connected to signal <data_in>       |          |
-    |     doA            | connected to signal <data_out>      |          |
+    |     weA            | connected to signal <data_write2>   | high     |
+    |     addrA          | connected to signal <ADDR2>         |          |
+    |     diA            | connected to signal <data_in2>      |          |
     -----------------------------------------------------------------------
     | optimization       | speed                               |          |
     -----------------------------------------------------------------------
-Unit <RAM_single_port> synthesized (advanced).
-
-Synthesizing (advanced) Unit <VGA_bitmap_640x480>.
-The following registers are absorbed into counter <pix_read_addr>: 1 register on signal <pix_read_addr>.
-The following registers are absorbed into counter <h_counter>: 1 register on signal <h_counter>.
-The following registers are absorbed into counter <pix_read1>: 1 register on signal <pix_read1>.
-The following registers are absorbed into counter <v_counter>: 1 register on signal <v_counter>.
+    | Port B                                                              |
+    |     aspect ratio   | 38400-word x 8-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk_vga>       | rise     |
+    |     addrB          | connected to signal <pix_read_addr1> |          |
+    |     doB            | connected to signal <next_pixel2>   |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_screen1> will be implemented as a BLOCK RAM, absorbing the following register(s): <next_pixel1>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 38400-word x 8-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <data_write1>   | high     |
+    |     addrA          | connected to signal <ADDR1>         |          |
+    |     diA            | connected to signal <data_in1>      |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 38400-word x 8-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk_vga>       | rise     |
+    |     addrB          | connected to signal <pix_read_addr1> |          |
+    |     doB            | connected to signal <next_pixel1>   |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_screen3> will be implemented as a BLOCK RAM, absorbing the following register(s): <next_pixel3>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 38400-word x 8-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <data_write3>   | high     |
+    |     addrA          | connected to signal <ADDR3>         |          |
+    |     diA            | connected to signal <data_in3>      |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 38400-word x 8-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk_vga>       | rise     |
+    |     addrB          | connected to signal <pix_read_addr1> |          |
+    |     doB            | connected to signal <next_pixel3>   |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_screen4> will be implemented as a BLOCK RAM, absorbing the following register(s): <next_pixel4>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 38400-word x 8-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <data_write4>   | high     |
+    |     addrA          | connected to signal <ADDR4>         |          |
+    |     diA            | connected to signal <data_in4>      |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 38400-word x 8-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk_vga>       | rise     |
+    |     addrB          | connected to signal <pix_read_addr1> |          |
+    |     doB            | connected to signal <next_pixel4>   |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_screen5> will be implemented as a BLOCK RAM, absorbing the following register(s): <next_pixel5>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 38400-word x 8-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <data_write5>   | high     |
+    |     addrA          | connected to signal <ADDR5>         |          |
+    |     diA            | connected to signal <data_in5>      |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 38400-word x 8-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk_vga>       | rise     |
+    |     addrB          | connected to signal <pix_read_addr1> |          |
+    |     doB            | connected to signal <next_pixel5>   |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_screen7> will be implemented as a BLOCK RAM, absorbing the following register(s): <next_pixel7>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 38400-word x 8-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <data_write7>   | high     |
+    |     addrA          | connected to signal <ADDR7>         |          |
+    |     diA            | connected to signal <data_in7>      |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 38400-word x 8-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk_vga>       | rise     |
+    |     addrB          | connected to signal <pix_read_addr1> |          |
+    |     doB            | connected to signal <next_pixel7>   |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_screen6> will be implemented as a BLOCK RAM, absorbing the following register(s): <next_pixel6>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 38400-word x 8-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <data_write6>   | high     |
+    |     addrA          | connected to signal <ADDR6>         |          |
+    |     diA            | connected to signal <data_in6>      |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 38400-word x 8-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk_vga>       | rise     |
+    |     addrB          | connected to signal <pix_read_addr1> |          |
+    |     doB            | connected to signal <next_pixel6>   |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
 Unit <VGA_bitmap_640x480> synthesized (advanced).
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 2
- 153600x8-bit single-port block RAM                    : 2
+# RAMs                                                 : 7
+ 38400x8-bit dual-port block RAM                       : 7
 # Counters                                             : 4
  10-bit up counter                                     : 1
  12-bit up counter                                     : 1
- 18-bit up counter                                     : 1
+ 16-bit up counter                                     : 1
  19-bit up counter                                     : 1
 # Registers                                            : 20
  Flip-Flops                                            : 20
-# Comparators                                          : 1
- 19-bit comparator greater                             : 1
-# Multiplexers                                         : 4
- 1-bit 2-to-1 multiplexer                              : 1
- 18-bit 2-to-1 multiplexer                             : 2
- 8-bit 2-to-1 multiplexer                              : 1
+# Comparators                                          : 6
+ 19-bit comparator greater                             : 6
+# Multiplexers                                         : 7
+ 3-bit 2-to-1 multiplexer                              : 6
+ 8-bit 8-to-1 multiplexer                              : 1
 
 =========================================================================
 
@@ -255,8 +414,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 83
- Flip-Flops                                            : 83
+# Registers                                            : 77
+ Flip-Flops                                            : 77
 
 =========================================================================
 
@@ -279,30 +438,29 @@ Top Level Output File Name         : VGA_bitmap_640x480.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 317
+# BELS                             : 267
 #      GND                         : 1
-#      INV                         : 4
-#      LUT1                        : 55
-#      LUT2                        : 15
-#      LUT3                        : 43
-#      LUT4                        : 20
-#      LUT5                        : 23
-#      LUT6                        : 33
-#      MUXCY                       : 55
-#      MUXF7                       : 8
+#      INV                         : 1
+#      LUT1                        : 14
+#      LUT2                        : 7
+#      LUT3                        : 3
+#      LUT4                        : 53
+#      LUT5                        : 22
+#      LUT6                        : 51
+#      MUXCY                       : 53
+#      MUXF7                       : 4
 #      VCC                         : 1
-#      XORCY                       : 59
-# FlipFlops/Latches                : 83
-#      FD                          : 50
-#      FDR                         : 13
-#      FDRE                        : 20
-# RAMS                             : 80
-#      RAMB36E1                    : 80
+#      XORCY                       : 57
+# FlipFlops/Latches                : 77
+#      FD                          : 8
+#      FDR                         : 24
+#      FDRE                        : 45
+# RAMS                             : 96
+#      RAMB36E1                    : 96
 # Clock Buffers                    : 2
-#      BUFG                        : 1
-#      BUFGP                       : 1
-# IO Buffers                       : 66
-#      IBUF                        : 56
+#      BUFGP                       : 2
+# IO Buffers                       : 161
+#      IBUF                        : 151
 #      OBUF                        : 10
 
 Device utilization summary:
@@ -312,24 +470,24 @@ Selected Device : 7a100tcsg324-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              83  out of  126800     0%  
- Number of Slice LUTs:                  193  out of  63400     0%  
-    Number used as Logic:               193  out of  63400     0%  
+ Number of Slice Registers:              77  out of  126800     0%  
+ Number of Slice LUTs:                  151  out of  63400     0%  
+    Number used as Logic:               151  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    201
-   Number with an unused Flip Flop:     118  out of    201    58%  
-   Number with an unused LUT:             8  out of    201     3%  
-   Number of fully used LUT-FF pairs:    75  out of    201    37%  
+ Number of LUT Flip Flop pairs used:    159
+   Number with an unused Flip Flop:      82  out of    159    51%  
+   Number with an unused LUT:             8  out of    159     5%  
+   Number of fully used LUT-FF pairs:    69  out of    159    43%  
    Number of unique control sets:         7
 
 IO Utilization: 
- Number of IOs:                          67
- Number of bonded IOBs:                  67  out of    210    31%  
+ Number of IOs:                         213
+ Number of bonded IOBs:                 163  out of    210    77%  
 
 Specific Feature Utilization:
- Number of Block RAM/FIFO:               80  out of    135    59%  
-    Number using Block RAM only:         80
+ Number of Block RAM/FIFO:               96  out of    135    71%  
+    Number using Block RAM only:         96
  Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
 
 ---------------------------
@@ -353,55 +511,119 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk_vga                            | IBUF+BUFG              | 79    |
-clk                                | BUFGP                  | 84    |
+clk_vga                            | BUFGP                  | 173   |
+clk                                | BUFGP                  | 96    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
--------------------------------------+-------------------------+-------+
-Control Signal                       | Buffer(FF name)         | Load  |
--------------------------------------+-------------------------+-------+
-N109(RAM2/Mram_screen25:CASCADEOUTA) | NONE(RAM2/Mram_screen2) | 1     |
-N111(RAM2/Mram_screen110:CASCADEOUTA)| NONE(RAM2/Mram_screen1) | 1     |
-N113(RAM2/Mram_screen31:CASCADEOUTA) | NONE(RAM2/Mram_screen3) | 1     |
-N115(RAM2/Mram_screen41:CASCADEOUTA) | NONE(RAM2/Mram_screen4) | 1     |
-N117(RAM2/Mram_screen51:CASCADEOUTA) | NONE(RAM2/Mram_screen5) | 1     |
-N119(RAM2/Mram_screen61:CASCADEOUTA) | NONE(RAM2/Mram_screen6) | 1     |
-N121(RAM2/Mram_screen71:CASCADEOUTA) | NONE(RAM2/Mram_screen7) | 1     |
-N123(RAM2/Mram_screen81:CASCADEOUTA) | NONE(RAM2/Mram_screen8) | 1     |
-N125(RAM2/Mram_screen91:CASCADEOUTA) | NONE(RAM2/Mram_screen9) | 1     |
-N127(RAM2/Mram_screen101:CASCADEOUTA)| NONE(RAM2/Mram_screen10)| 1     |
-N129(RAM2/Mram_screen111:CASCADEOUTA)| NONE(RAM2/Mram_screen11)| 1     |
-N131(RAM2/Mram_screen121:CASCADEOUTA)| NONE(RAM2/Mram_screen12)| 1     |
-N133(RAM2/Mram_screen131:CASCADEOUTA)| NONE(RAM2/Mram_screen13)| 1     |
-N135(RAM2/Mram_screen141:CASCADEOUTA)| NONE(RAM2/Mram_screen14)| 1     |
-N137(RAM2/Mram_screen151:CASCADEOUTA)| NONE(RAM2/Mram_screen15)| 1     |
-N139(RAM2/Mram_screen161:CASCADEOUTA)| NONE(RAM2/Mram_screen16)| 1     |
-N141(RAM1/Mram_screen25:CASCADEOUTA) | NONE(RAM1/Mram_screen2) | 1     |
-N143(RAM1/Mram_screen110:CASCADEOUTA)| NONE(RAM1/Mram_screen1) | 1     |
-N145(RAM1/Mram_screen31:CASCADEOUTA) | NONE(RAM1/Mram_screen3) | 1     |
-N147(RAM1/Mram_screen41:CASCADEOUTA) | NONE(RAM1/Mram_screen4) | 1     |
-N149(RAM1/Mram_screen51:CASCADEOUTA) | NONE(RAM1/Mram_screen5) | 1     |
-N151(RAM1/Mram_screen61:CASCADEOUTA) | NONE(RAM1/Mram_screen6) | 1     |
-N153(RAM1/Mram_screen71:CASCADEOUTA) | NONE(RAM1/Mram_screen7) | 1     |
-N155(RAM1/Mram_screen81:CASCADEOUTA) | NONE(RAM1/Mram_screen8) | 1     |
-N157(RAM1/Mram_screen91:CASCADEOUTA) | NONE(RAM1/Mram_screen9) | 1     |
-N159(RAM1/Mram_screen101:CASCADEOUTA)| NONE(RAM1/Mram_screen10)| 1     |
-N161(RAM1/Mram_screen111:CASCADEOUTA)| NONE(RAM1/Mram_screen11)| 1     |
-N163(RAM1/Mram_screen121:CASCADEOUTA)| NONE(RAM1/Mram_screen12)| 1     |
-N165(RAM1/Mram_screen131:CASCADEOUTA)| NONE(RAM1/Mram_screen13)| 1     |
-N167(RAM1/Mram_screen141:CASCADEOUTA)| NONE(RAM1/Mram_screen14)| 1     |
-N169(RAM1/Mram_screen151:CASCADEOUTA)| NONE(RAM1/Mram_screen15)| 1     |
-N171(RAM1/Mram_screen161:CASCADEOUTA)| NONE(RAM1/Mram_screen16)| 1     |
--------------------------------------+-------------------------+-------+
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+N101(Mram_screen331:CASCADEOUTB)   | NONE(Mram_screen33)    | 2     |
+N103(Mram_screen311:CASCADEOUTA)   | NONE(Mram_screen31)    | 2     |
+N105(Mram_screen311:CASCADEOUTB)   | NONE(Mram_screen31)    | 2     |
+N107(Mram_screen321:CASCADEOUTA)   | NONE(Mram_screen32)    | 2     |
+N109(Mram_screen321:CASCADEOUTB)   | NONE(Mram_screen32)    | 2     |
+N11(Mram_screen221:CASCADEOUTA)    | NONE(Mram_screen22)    | 2     |
+N111(Mram_screen341:CASCADEOUTA)   | NONE(Mram_screen34)    | 2     |
+N113(Mram_screen341:CASCADEOUTB)   | NONE(Mram_screen34)    | 2     |
+N115(Mram_screen351:CASCADEOUTA)   | NONE(Mram_screen35)    | 2     |
+N117(Mram_screen351:CASCADEOUTB)   | NONE(Mram_screen35)    | 2     |
+N119(Mram_screen381:CASCADEOUTA)   | NONE(Mram_screen38)    | 2     |
+N121(Mram_screen381:CASCADEOUTB)   | NONE(Mram_screen38)    | 2     |
+N123(Mram_screen361:CASCADEOUTA)   | NONE(Mram_screen36)    | 2     |
+N125(Mram_screen361:CASCADEOUTB)   | NONE(Mram_screen36)    | 2     |
+N127(Mram_screen371:CASCADEOUTA)   | NONE(Mram_screen37)    | 2     |
+N129(Mram_screen371:CASCADEOUTB)   | NONE(Mram_screen37)    | 2     |
+N13(Mram_screen221:CASCADEOUTB)    | NONE(Mram_screen22)    | 2     |
+N15(Mram_screen231:CASCADEOUTA)    | NONE(Mram_screen23)    | 2     |
+N155(Mram_screen511:CASCADEOUTA)   | NONE(Mram_screen51)    | 2     |
+N157(Mram_screen511:CASCADEOUTB)   | NONE(Mram_screen51)    | 2     |
+N167(Mram_screen521:CASCADEOUTA)   | NONE(Mram_screen52)    | 2     |
+N169(Mram_screen521:CASCADEOUTB)   | NONE(Mram_screen52)    | 2     |
+N17(Mram_screen231:CASCADEOUTB)    | NONE(Mram_screen23)    | 2     |
+N171(Mram_screen531:CASCADEOUTA)   | NONE(Mram_screen53)    | 2     |
+N173(Mram_screen531:CASCADEOUTB)   | NONE(Mram_screen53)    | 2     |
+N175(Mram_screen541:CASCADEOUTA)   | NONE(Mram_screen54)    | 2     |
+N177(Mram_screen541:CASCADEOUTB)   | NONE(Mram_screen54)    | 2     |
+N179(Mram_screen551:CASCADEOUTA)   | NONE(Mram_screen55)    | 2     |
+N181(Mram_screen551:CASCADEOUTB)   | NONE(Mram_screen55)    | 2     |
+N183(Mram_screen561:CASCADEOUTA)   | NONE(Mram_screen56)    | 2     |
+N185(Mram_screen561:CASCADEOUTB)   | NONE(Mram_screen56)    | 2     |
+N187(Mram_screen571:CASCADEOUTA)   | NONE(Mram_screen57)    | 2     |
+N189(Mram_screen571:CASCADEOUTB)   | NONE(Mram_screen57)    | 2     |
+N19(Mram_screen251:CASCADEOUTA)    | NONE(Mram_screen25)    | 2     |
+N191(Mram_screen721:CASCADEOUTA)   | NONE(Mram_screen72)    | 2     |
+N193(Mram_screen721:CASCADEOUTB)   | NONE(Mram_screen72)    | 2     |
+N195(Mram_screen581:CASCADEOUTA)   | NONE(Mram_screen58)    | 2     |
+N197(Mram_screen581:CASCADEOUTB)   | NONE(Mram_screen58)    | 2     |
+N199(Mram_screen711:CASCADEOUTA)   | NONE(Mram_screen71)    | 2     |
+N201(Mram_screen711:CASCADEOUTB)   | NONE(Mram_screen71)    | 2     |
+N203(Mram_screen731:CASCADEOUTA)   | NONE(Mram_screen73)    | 2     |
+N205(Mram_screen731:CASCADEOUTB)   | NONE(Mram_screen73)    | 2     |
+N207(Mram_screen741:CASCADEOUTA)   | NONE(Mram_screen74)    | 2     |
+N209(Mram_screen741:CASCADEOUTB)   | NONE(Mram_screen74)    | 2     |
+N21(Mram_screen251:CASCADEOUTB)    | NONE(Mram_screen25)    | 2     |
+N211(Mram_screen751:CASCADEOUTA)   | NONE(Mram_screen75)    | 2     |
+N213(Mram_screen751:CASCADEOUTB)   | NONE(Mram_screen75)    | 2     |
+N215(Mram_screen761:CASCADEOUTA)   | NONE(Mram_screen76)    | 2     |
+N217(Mram_screen761:CASCADEOUTB)   | NONE(Mram_screen76)    | 2     |
+N219(Mram_screen771:CASCADEOUTA)   | NONE(Mram_screen77)    | 2     |
+N221(Mram_screen771:CASCADEOUTB)   | NONE(Mram_screen77)    | 2     |
+N223(Mram_screen781:CASCADEOUTA)   | NONE(Mram_screen78)    | 2     |
+N225(Mram_screen781:CASCADEOUTB)   | NONE(Mram_screen78)    | 2     |
+N23(Mram_screen261:CASCADEOUTA)    | NONE(Mram_screen26)    | 2     |
+N25(Mram_screen261:CASCADEOUTB)    | NONE(Mram_screen26)    | 2     |
+N27(Mram_screen271:CASCADEOUTA)    | NONE(Mram_screen27)    | 2     |
+N29(Mram_screen271:CASCADEOUTB)    | NONE(Mram_screen27)    | 2     |
+N3(Mram_screen211:CASCADEOUTA)     | NONE(Mram_screen21)    | 2     |
+N31(Mram_screen281:CASCADEOUTA)    | NONE(Mram_screen28)    | 2     |
+N33(Mram_screen281:CASCADEOUTB)    | NONE(Mram_screen28)    | 2     |
+N35(Mram_screen411:CASCADEOUTA)    | NONE(Mram_screen41)    | 2     |
+N37(Mram_screen411:CASCADEOUTB)    | NONE(Mram_screen41)    | 2     |
+N39(Mram_screen421:CASCADEOUTA)    | NONE(Mram_screen42)    | 2     |
+N41(Mram_screen421:CASCADEOUTB)    | NONE(Mram_screen42)    | 2     |
+N43(Mram_screen451:CASCADEOUTA)    | NONE(Mram_screen45)    | 2     |
+N45(Mram_screen451:CASCADEOUTB)    | NONE(Mram_screen45)    | 2     |
+N47(Mram_screen431:CASCADEOUTA)    | NONE(Mram_screen43)    | 2     |
+N49(Mram_screen431:CASCADEOUTB)    | NONE(Mram_screen43)    | 2     |
+N5(Mram_screen211:CASCADEOUTB)     | NONE(Mram_screen21)    | 2     |
+N51(Mram_screen441:CASCADEOUTA)    | NONE(Mram_screen44)    | 2     |
+N53(Mram_screen441:CASCADEOUTB)    | NONE(Mram_screen44)    | 2     |
+N55(Mram_screen461:CASCADEOUTA)    | NONE(Mram_screen46)    | 2     |
+N57(Mram_screen461:CASCADEOUTB)    | NONE(Mram_screen46)    | 2     |
+N59(Mram_screen471:CASCADEOUTA)    | NONE(Mram_screen47)    | 2     |
+N61(Mram_screen471:CASCADEOUTB)    | NONE(Mram_screen47)    | 2     |
+N63(Mram_screen481:CASCADEOUTA)    | NONE(Mram_screen48)    | 2     |
+N65(Mram_screen481:CASCADEOUTB)    | NONE(Mram_screen48)    | 2     |
+N67(Mram_screen111:CASCADEOUTA)    | NONE(Mram_screen11)    | 2     |
+N69(Mram_screen111:CASCADEOUTB)    | NONE(Mram_screen11)    | 2     |
+N7(Mram_screen241:CASCADEOUTA)     | NONE(Mram_screen24)    | 2     |
+N71(Mram_screen121:CASCADEOUTA)    | NONE(Mram_screen12)    | 2     |
+N73(Mram_screen121:CASCADEOUTB)    | NONE(Mram_screen12)    | 2     |
+N75(Mram_screen131:CASCADEOUTA)    | NONE(Mram_screen13)    | 2     |
+N77(Mram_screen131:CASCADEOUTB)    | NONE(Mram_screen13)    | 2     |
+N79(Mram_screen161:CASCADEOUTA)    | NONE(Mram_screen16)    | 2     |
+N81(Mram_screen161:CASCADEOUTB)    | NONE(Mram_screen16)    | 2     |
+N83(Mram_screen141:CASCADEOUTA)    | NONE(Mram_screen14)    | 2     |
+N85(Mram_screen141:CASCADEOUTB)    | NONE(Mram_screen14)    | 2     |
+N87(Mram_screen151:CASCADEOUTA)    | NONE(Mram_screen15)    | 2     |
+N89(Mram_screen151:CASCADEOUTB)    | NONE(Mram_screen15)    | 2     |
+N9(Mram_screen241:CASCADEOUTB)     | NONE(Mram_screen24)    | 2     |
+N91(Mram_screen171:CASCADEOUTA)    | NONE(Mram_screen17)    | 2     |
+N93(Mram_screen171:CASCADEOUTB)    | NONE(Mram_screen17)    | 2     |
+N95(Mram_screen181:CASCADEOUTA)    | NONE(Mram_screen18)    | 2     |
+N97(Mram_screen181:CASCADEOUTB)    | NONE(Mram_screen18)    | 2     |
+N99(Mram_screen331:CASCADEOUTA)    | NONE(Mram_screen33)    | 2     |
+-----------------------------------+------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -1
 
-   Minimum period: 3.647ns (Maximum Frequency: 274.198MHz)
-   Minimum input arrival time before clock: 2.322ns
+   Minimum period: 4.306ns (Maximum Frequency: 232.234MHz)
+   Minimum input arrival time before clock: 2.107ns
    Maximum output required time after clock: 0.883ns
    Maximum combinational path delay: No path found
 
@@ -411,67 +633,68 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk_vga'
-  Clock period: 3.647ns (frequency: 274.198MHz)
-  Total number of paths / destination ports: 2290 / 128
+  Clock period: 4.306ns (frequency: 232.234MHz)
+  Total number of paths / destination ports: 5727 / 177
 -------------------------------------------------------------------------
-Delay:               3.647ns (Levels of Logic = 3)
-  Source:            pix_read_addr_11 (FF)
-  Destination:       pix_read_addr_1 (FF)
+Delay:               4.306ns (Levels of Logic = 5)
+  Source:            pix_read_addr_3 (FF)
+  Destination:       next_pixel_0 (FF)
   Source Clock:      clk_vga rising
   Destination Clock: clk_vga rising
 
-  Data Path: pix_read_addr_11 to pix_read_addr_1
+  Data Path: pix_read_addr_3 to next_pixel_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             3   0.478   0.933  pix_read_addr_11 (pix_read_addr_11)
-     LUT5:I0->O            1   0.124   0.776  Mcount_pix_read_addr_val3 (Mcount_pix_read_addr_val3)
-     LUT6:I2->O           19   0.124   1.058  Mcount_pix_read_addr_val5 (Mcount_pix_read_addr_val)
-     LUT6:I0->O            1   0.124   0.000  pix_read_addr_1_rstpot (pix_read_addr_1_rstpot)
-     FD:D                      0.030          pix_read_addr_1
+     FDRE:C->Q             3   0.478   0.790  pix_read_addr_3 (pix_read_addr_3)
+     LUT4:I0->O            5   0.124   0.448  pix_read_addr[18]_GND_5_o_LessThan_37_o31_SW0 (N2)
+     LUT6:I5->O            2   0.124   0.542  pix_read_addr[18]_GND_5_o_LessThan_37_o31 (pix_read_addr[18]_GND_5_o_LessThan_37_o31)
+     LUT6:I4->O           24   0.124   0.682  pix_read_addr[18]_GND_5_o_LessThan_38_o32 (pix_read_addr[18]_GND_5_o_LessThan_38_o)
+     LUT6:I4->O            1   0.124   0.716  Mmux_GND_5_o_next_pixel1[7]_mux_34_OUT13_SW0_SW0 (N72)
+     LUT6:I3->O            1   0.124   0.000  Mmux_GND_5_o_next_pixel1[7]_mux_34_OUT13 (GND_5_o_next_pixel1[7]_mux_34_OUT<0>)
+     FD:D                      0.030          next_pixel_0
     ----------------------------------------
-    Total                      3.647ns (0.880ns logic, 2.767ns route)
-                                       (24.1% logic, 75.9% route)
+    Total                      4.306ns (1.128ns logic, 3.178ns route)
+                                       (26.2% logic, 73.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_vga'
-  Total number of paths / destination ports: 63 / 63
+  Total number of paths / destination ports: 61 / 61
 -------------------------------------------------------------------------
-Offset:              2.322ns (Levels of Logic = 3)
+Offset:              2.107ns (Levels of Logic = 2)
   Source:            reset (PAD)
-  Destination:       pix_read_addr_1 (FF)
+  Destination:       h_counter_0 (FF)
   Destination Clock: clk_vga rising
 
-  Data Path: reset to pix_read_addr_1
+  Data Path: reset to h_counter_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             8   0.001   0.985  reset_IBUF (reset_IBUF)
-     LUT6:I0->O           19   0.124   1.058  Mcount_pix_read_addr_val5 (Mcount_pix_read_addr_val)
-     LUT6:I0->O            1   0.124   0.000  pix_read_addr_1_rstpot (pix_read_addr_1_rstpot)
-     FD:D                      0.030          pix_read_addr_1
+     IBUF:I->O            16   0.001   1.017  reset_IBUF (reset_IBUF)
+     LUT5:I0->O           12   0.124   0.471  PWR_5_o_h_counter[11]_equal_85_o_021 (PWR_5_o_h_counter[11]_equal_85_o_0)
+     FDR:R                     0.494          h_counter_0
     ----------------------------------------
-    Total                      2.322ns (0.279ns logic, 2.043ns route)
-                                       (12.0% logic, 88.0% route)
+    Total                      2.107ns (0.619ns logic, 1.488ns route)
+                                       (29.4% logic, 70.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 88 / 84
+  Total number of paths / destination ports: 96 / 96
 -------------------------------------------------------------------------
-Offset:              1.164ns (Levels of Logic = 1)
+Offset:              1.143ns (Levels of Logic = 1)
   Source:            data_in2<0> (PAD)
-  Destination:       RAM2/Mram_screen2 (RAM)
+  Destination:       Mram_screen21 (RAM)
   Destination Clock: clk rising
 
-  Data Path: data_in2<0> to RAM2/Mram_screen2
+  Data Path: data_in2<0> to Mram_screen21
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             5   0.001   0.426  data_in2_0_IBUF (data_in2_0_IBUF)
-     RAMB36E1:DIADI0           0.737          RAM2/Mram_screen2
+     IBUF:I->O             2   0.001   0.405  data_in2_0_IBUF (data_in2_0_IBUF)
+     RAMB36E1:DIADI0           0.737          Mram_screen21
     ----------------------------------------
-    Total                      1.164ns (0.738ns logic, 0.426ns route)
-                                       (63.4% logic, 36.6% route)
+    Total                      1.143ns (0.738ns logic, 0.405ns route)
+                                       (64.6% logic, 35.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_vga'
@@ -497,34 +720,25 @@ Offset:              0.883ns (Levels of Logic = 1)
 Cross Clock Domains Report:
 --------------------------
 
-Clock to Setup on destination clock clk
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-clk_vga        |    1.208|         |         |         |
----------------+---------+---------+---------+---------+
-
 Clock to Setup on destination clock clk_vga
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    1.965|         |         |         |
-clk_vga        |    3.647|         |         |         |
+clk_vga        |    4.306|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 18.00 secs
-Total CPU time to Xst completion: 17.20 secs
+Total REAL time to Xst completion: 20.00 secs
+Total CPU time to Xst completion: 20.03 secs
  
 --> 
 
-Total memory usage is 498256 kilobytes
+Total memory usage is 513148 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    2 (   0 filtered)
-Number of infos    :    1 (   0 filtered)
+Number of warnings :   10 (   0 filtered)
+Number of infos    :    7 (   0 filtered)
 

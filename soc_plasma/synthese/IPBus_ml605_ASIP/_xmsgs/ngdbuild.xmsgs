@@ -5,5 +5,8 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="NgdBuild" num="478" delta="old" >clock net <arg fmt="%s" index="1">Inst_plasma1/u1_cpu/reset_BUFG</arg> with clock driver <arg fmt="%s" index="2">Inst_plasma1/u1_cpu/reset_BUFG</arg> drives no clock pins
+</msg>
+
 </messages>
 
