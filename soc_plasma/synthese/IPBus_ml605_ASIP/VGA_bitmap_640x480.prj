@@ -1,2 +1,0 @@
-vhdl work "RAM_single_port.vhd"
-vhdl work "../../vhdl/custom/mandelbrot/vga4coeurs.vhd"

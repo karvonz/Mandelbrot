@@ -1,3 +1,0 @@
-vhdl work "../../src_vhd/Shared.vhd"
-vhdl work "../../src_vhd/config_mandelbrot.vhd"
-vhdl work "../../src_vhd/FSM.vhd"

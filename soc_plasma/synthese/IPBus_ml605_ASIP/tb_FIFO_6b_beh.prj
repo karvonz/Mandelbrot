@@ -1,6 +1,0 @@
-vhdl work "ipcore_dir/dpbr8.vhd"
-vhdl work "../ise_virtex6_rom_based/custom_RAM.vhd"
-vhdl work "../ise_virtex6_rom_based/custom_FIFO.vhd"
-vhdl work "../ise_virtex6_rom_based/n_k_FIFO.vhd"
-vhdl work "ipcore_dir/fifo_16384_words.vhd"
-vhdl work "../ise_virtex6_rom_based/tb_FIFO_6b.vhd"

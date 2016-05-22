@@ -1,3 +1,0 @@
-vhdl isim_temp "../../vhdl/plasma_core/vhdl/mlite_pack.vhd"
-vhdl isim_temp "../../vhdl/custom/mandelbrot/Shared.vhd"
-vhdl isim_temp "../../vhdl/custom/mandelbrot/function_1.vhd"

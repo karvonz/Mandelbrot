@@ -1,2 +1,0 @@
-vhdl isim_temp "../../vhdl/custom/mandelbrot/Shared.vhd"
-vhdl isim_temp "../../vhdl/custom/mandelbrot/Colorgen.vhd"

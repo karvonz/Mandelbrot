@@ -1,8 +1,0 @@
-INTSTYLE=impact
-INFILE=D:\Vincent\Mandelbrot\soc_plasma\synthese\IPBus_ml605_ASIP\impact.xsl
-OUTFILE=D:\Vincent\Mandelbrot\soc_plasma\synthese\IPBus_ml605_ASIP\impact.xsl
-FAMILY=None
-PART=None
-WORKINGDIR=D:\Vincent\Mandelbrot\soc_plasma\synthese\IPBus_ml605_ASIP
-LICENSE=iMPACT
-USER_INFO=iMPACT

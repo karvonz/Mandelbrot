@@ -1,2 +1,0 @@
-vhdl work "../RAM_single_port.vhd"
-vhdl work "../vga_bitmap_640x480_single_port.vhd"
