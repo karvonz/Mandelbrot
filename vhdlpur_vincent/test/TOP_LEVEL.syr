@@ -292,8 +292,8 @@ Synthesizing Unit <Iterator>.
     Found 8-bit register for signal <cptiters>.
     Found 32-bit adder for signal <xi[31]_yi[31]_add_3_OUT> created at line 57.
     Found 8-bit adder for signal <cptiters[7]_GND_11_o_add_5_OUT> created at line 1241.
-    Found 32x32-bit multiplier for signal <n0031> created at line 41.
-    Found 32x32-bit multiplier for signal <n0032> created at line 41.
+    Found 32x32-bit multiplier for signal <n0031> created at line 42.
+    Found 32x32-bit multiplier for signal <n0032> created at line 42.
     Found 8-bit comparator greater for signal <cptiters[7]_itermax[7]_LessThan_1_o> created at line 57
     Found 32-bit comparator greater for signal <GND_11_o_xi[31]_LessThan_5_o> created at line 57
     Summary:
@@ -309,9 +309,9 @@ Synthesizing Unit <Calc>.
     Found 32-bit adder for signal <yi1> created at line 24.
     Found 32-bit adder for signal <xi1> created at line 25.
     Found 32-bit subtractor for signal <n0022> created at line 0.
-    Found 32x32-bit multiplier for signal <n0012> created at line 41.
-    Found 32x32-bit multiplier for signal <n0013> created at line 41.
-    Found 32x32-bit multiplier for signal <n0014> created at line 41.
+    Found 32x32-bit multiplier for signal <n0012> created at line 42.
+    Found 32x32-bit multiplier for signal <n0013> created at line 42.
+    Found 32x32-bit multiplier for signal <n0014> created at line 42.
     Summary:
 	inferred   3 Multiplier(s).
 	inferred   3 Adder/Subtractor(s).
@@ -341,8 +341,8 @@ Synthesizing Unit <Zoom>.
     Found 32-bit adder for signal <s_xstart[31]_s_step[24]_add_12_OUT> created at line 59.
     Found 32-bit subtractor for signal <s_ystart[31]_s_step[24]_sub_6_OUT<31:0>> created at line 50.
     Found 32-bit subtractor for signal <s_xstart[31]_s_step[24]_sub_12_OUT<31:0>> created at line 56.
-    Found 31x31-bit multiplier for signal <n0030> created at line 41.
-    Found 31x30-bit multiplier for signal <n0032> created at line 41.
+    Found 31x31-bit multiplier for signal <n0030> created at line 42.
+    Found 31x30-bit multiplier for signal <n0032> created at line 42.
     Summary:
 	inferred   2 Multiplier(s).
 	inferred   2 Adder/Subtractor(s).
@@ -648,11 +648,11 @@ Primitive and Black Box Usage:
 #      GND                         : 1
 #      INV                         : 3
 #      LUT1                        : 44
-#      LUT2                        : 163
-#      LUT3                        : 161
+#      LUT2                        : 164
+#      LUT3                        : 164
 #      LUT4                        : 109
-#      LUT5                        : 55
-#      LUT6                        : 137
+#      LUT5                        : 54
+#      LUT6                        : 134
 #      MUXCY                       : 292
 #      VCC                         : 1
 #      XORCY                       : 256
@@ -795,7 +795,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clock'
   Clock period: 13.639ns (frequency: 73.320MHz)
-  Total number of paths / destination ports: 52582468707 / 545
+  Total number of paths / destination ports: 52582468697 / 545
 -------------------------------------------------------------------------
 Delay:               13.639ns (Levels of Logic = 32)
   Source:            instIterator/yi_16 (FF)
@@ -2376,11 +2376,11 @@ clock                                   |   13.639|         |         |         
 
 
 Total REAL time to Xst completion: 12.00 secs
-Total CPU time to Xst completion: 12.03 secs
+Total CPU time to Xst completion: 12.32 secs
  
 --> 
 
-Total memory usage is 419920 kilobytes
+Total memory usage is 420016 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   43 (   0 filtered)

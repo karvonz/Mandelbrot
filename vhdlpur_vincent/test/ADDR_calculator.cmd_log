@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "D:/Vincent/Mandelbrot/vhdlpur_vincent/test/ADDR_calculator.xst" -ofn "D:/Vincent/Mandelbrot/vhdlpur_vincent/test/ADDR_calculator.syr" 
+xst -intstyle ise -ifn "D:/Vincent/Mandelbrot/vhdlpur_vincent/test/ADDR_calculator.xst" -ofn "D:/Vincent/Mandelbrot/vhdlpur_vincent/test/ADDR_calculator.syr" 

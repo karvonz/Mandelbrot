@@ -140,19 +140,19 @@ port map (clk,
 				ADDRtemp6,
 				data_outtemp6);
 
-RAM7: RAM_single_port
-port map (clk,
-				data_write7,
-				data_in7,
-				ADDRtemp7,
-				data_outtemp7);
-				
-RAM8: RAM_single_port
-port map (clk,
-				data_write8,
-				data_in8,
-				ADDRtemp8,
-				data_outtemp8);				
+--RAM7: RAM_single_port
+--port map (clk,
+--				data_write7,
+--				data_in7,
+--				ADDRtemp7,
+--				data_outtemp7);
+--				
+--RAM8: RAM_single_port
+--port map (clk,
+--				data_write8,
+--				data_in8,
+--				ADDRtemp8,
+--				data_outtemp8);				
 
   -- pix_read_addrb <= pix_read_addr when pix_read_addr < 153599 else pix_read_addr - 153599;
 	
@@ -217,12 +217,12 @@ port map (clk,
             next_pixel <= data_outtemp4;
         ELSif pix_read_addr < 191999 THEN
             next_pixel <= data_outtemp5;
-        ELSif pix_read_addr < 153599 THEN
+        ELSif pix_read_addr < 230399 THEN
             next_pixel <= data_outtemp6;
-	     ELSif pix_read_addr < 230399 THEN
-            next_pixel <= data_outtemp7;
+	    -- ELSif pix_read_addr < 230399 THEN
+      --      next_pixel <= data_outtemp7;
 	  	  else
-	 	      next_pixel <= data_outtemp8;
+	 	      next_pixel <= (others=>'0');
 
          END IF;
       end if;

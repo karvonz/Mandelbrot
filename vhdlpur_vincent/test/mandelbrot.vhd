@@ -48,6 +48,24 @@ end mandelbrot;
 
 architecture Behavioral of mandelbrot is
 
+component muxperso 
+    Port ( ADDR1 : in  STD_LOGIC_vector(ADDR_BIT_MUX-1 downto 0);
+           data_write1 : in  STD_LOGIC;
+           data_in1 : in  STD_LOGIC_VECTOR(ITER_RANGE-1 downto 0);
+			  ADDR2 : in  STD_LOGIC_vector(ADDR_BIT_MUX-1 downto 0);
+           data_write2 : in  STD_LOGIC;
+           data_in2 : in  STD_LOGIC_VECTOR(ITER_RANGE-1 downto 0);
+--			  ADDR3 : in  STD_LOGIC_vector(ADDR_BIT_MUX-1 downto 0);
+--           data_write3 : in  STD_LOGIC;
+--           data_in3 : in  STD_LOGIC_VECTOR(ITER_RANGE-1 downto 0);
+--			  ADDR4 : in  STD_LOGIC_vector(ADDR_BIT_MUX-1 downto 0);
+--           data_write4 : in  STD_LOGIC;
+--           data_in4 : in  STD_LOGIC_VECTOR(ITER_RANGE-1 downto 0);
+			  ADDR : out  STD_LOGIC_vector(ADDR_BIT-1 downto 0);
+			  data_write : out STD_LOGIC;
+			  data_out : out STD_LOGIC_VECTOR(ITER_RANGE-1 downto 0)); 
+end component ;
+
 component TOP_LEVEL is
 	 generic( ystart : std_logic_vector(31 downto 0) := x"00000000");
     Port ( clock : in  STD_LOGIC;
@@ -58,7 +76,7 @@ component TOP_LEVEL is
            bup : in STD_LOGIC;
            bdwn : in STD_LOGIC;
            bctr : in STD_LOGIC;
-			  ADDR : out std_logic_vector( ADDR_BIT-1 downto 0);
+			  ADDR : out std_logic_vector( ADDR_BIT_MUX-1 downto 0);
 			  data_write : out STD_LOGIC;
 			  data_out     : out std_logic_vector(ITER_RANGE - 1 downto 0));
 end component;
@@ -70,30 +88,18 @@ component VGA_bitmap_640x480
        VGA_hs       : out std_logic;   -- horisontal vga syncr.
        VGA_vs       : out std_logic;   -- vertical vga syncr.
        iter      : out std_logic_vector(7 downto 0);   -- iter output
-       ADDR1         : in  std_logic_vector(15 downto 0);
+       ADDR1         : in  std_logic_vector(17 downto 0);
        data_in1      : in  std_logic_vector(7 downto 0);
        data_write1   : in  std_logic;
-		 ADDR2         : in  std_logic_vector(15 downto 0);
+		 ADDR2         : in  std_logic_vector(17 downto 0);
        data_in2      : in  std_logic_vector(7 downto 0);
        data_write2   : in  std_logic;
-		 ADDR3         : in  std_logic_vector(15 downto 0);
+		 ADDR3         : in  std_logic_vector(17 downto 0);
        data_in3      : in  std_logic_vector(7 downto 0);
        data_write3   : in  std_logic;
-		 ADDR4         : in  std_logic_vector(15 downto 0);
+		 ADDR4         : in  std_logic_vector(17 downto 0);
        data_in4      : in  std_logic_vector(7 downto 0);
-       data_write4   : in  std_logic;
-		 ADDR5         : in  std_logic_vector(15 downto 0);
-       data_in5      : in  std_logic_vector(7 downto 0);
-       data_write5   : in  std_logic;
-		 ADDR6         : in  std_logic_vector(15 downto 0);
-       data_in6      : in  std_logic_vector(7 downto 0);
-       data_write6   : in  std_logic;
-		 ADDR7         : in  std_logic_vector(15 downto 0);
-       data_in7      : in  std_logic_vector(7 downto 0);
-       data_write7   : in  std_logic;
-		 ADDR8         : in  std_logic_vector(15 downto 0);
-       data_in8     : in  std_logic_vector(7 downto 0);
-       data_write8   : in  std_logic);
+       data_write4   : in  std_logic);
 end component;
 
 component Colorgen 
@@ -113,11 +119,55 @@ component pulse_filter
 end component;
 
 signal BTNUB, BTNCB, BTNDB, BTNRB, BTNLB, data_write1, data_write2,data_write3, data_write4,data_write5, data_write6,data_write7, data_write8, clk50, clk100_sig: std_logic;
+		signal data_writeVGA1,data_writeVGA2,data_writeVGA3,data_writeVGA4 : std_logic;
 		signal iterS, data_out1,data_out2, data_out3 ,data_out4, data_out5,data_out6, data_out7 ,data_out8 : std_logic_vector(7 downto 0);
-		signal  ADDR1, ADDR2, ADDR3, ADDR4, ADDR5, ADDR6, ADDR7, ADDR8 : std_logic_vector(15 downto 0);
+		signal  ADDR1, ADDR2, ADDR3, ADDR4, ADDR5, ADDR6, ADDR7, ADDR8 : std_logic_vector(ADDR_BIT_MUX-1 downto 0);
+		signal  ADDRVGA1, ADDRVGA2, ADDRVGA3, ADDRVGA4 : std_logic_vector(ADDR_BIT-1 downto 0);
+		signal data_outVGA1,data_outVGA2, data_outVGA3 ,data_outVGA4 : std_logic_vector(7 downto 0);
+
 
 begin
 
+m1:muxperso
+	port map(ADDR1,
+				data_write1,
+				data_out1,
+				ADDR2,
+				data_write2,
+				data_out2,
+				ADDRVGA1,
+				data_writeVGA1,
+				data_outVGA1);
+m2:muxperso
+	port map(ADDR3,
+				data_write3,
+				data_out3,
+				ADDR4,
+				data_write4,
+				data_out4,
+				ADDRVGA2,
+				data_writeVGA2,
+				data_outVGA2);
+m3:muxperso
+	port map(ADDR5,
+				data_write5,
+				data_out5,
+				ADDR6,
+				data_write6,
+				data_out6,
+				ADDRVGA3,
+				data_writeVGA3,
+				data_outVGA3);
+	m4:muxperso
+	port map(ADDR7,
+				data_write7,
+				data_out7,
+				ADDR8,
+				data_write8,
+				data_out8,
+				ADDRVGA4,
+				data_writeVGA4,
+				data_outVGA4);
 
 I1: TOP_LEVEL
 	generic map(x"F0000000")
@@ -250,31 +300,18 @@ InstVGA: VGA_bitmap_640x480
 					VGA_hs,
 					VGA_vs,
 					iterS,
-					ADDR1,
-					data_out1,
-					data_write1,
-					ADDR2,
-					data_out2,
-					data_write2,
-					ADDR3,
-					data_out3,
-					data_write3,
-					ADDR4,
-					data_out4,
-					data_write4,
-					ADDR5,
-					data_out5,
-					data_write5,
-					ADDR6,
-					data_out6,
-					data_write6,
-					ADDR7,
-					data_out7,
-					data_write7,
-					ADDR8,
-					data_out8,
-					data_write8
-					);
+					ADDRVGA1,
+					data_outVGA1,
+					data_writeVGA1,
+					ADDRVGA2,
+					data_outVGA2,
+					data_writeVGA2,
+					ADDRVGA3,
+					data_outVGA3,
+					data_writeVGA3,
+					ADDRVGA4,
+					data_outVGA4,
+					data_writeVGA4);
 					
 InstancepulsBTNU: pulse_filter
 	port map(BTNU,

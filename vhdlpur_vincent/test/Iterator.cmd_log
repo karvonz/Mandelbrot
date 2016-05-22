@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "D:/Vincent/Mandelbrot/vhdlpur_vincent/test/Iterator.xst" -ofn "D:/Vincent/Mandelbrot/vhdlpur_vincent/test/Iterator.syr" 

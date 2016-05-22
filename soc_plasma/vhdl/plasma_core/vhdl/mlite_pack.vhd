@@ -684,8 +684,8 @@ PACKAGE mlite_pack IS
             fifo_1_compteur : IN  std_logic_vector (31 DOWNTO 0);
             fifo_2_compteur : IN  std_logic_vector (31 DOWNTO 0);
 				data_enable :out std_logic;
-		      ADDR         : out std_logic_vector(15 downto 0);
-				data_out      : out std_logic_vector(7 downto 0);  
+		      ADDR         : out std_logic_vector(16 downto 0);
+				data_out      : out std_logic_vector(11 downto 0);  
             gpio0_out       : OUT std_logic_vector(31 DOWNTO 0);
             gpioA_in        : IN  std_logic_vector(31 DOWNTO 0)
             );

@@ -26,8 +26,8 @@ entity coproc_4 is
      -- VGA_vs       	: out std_logic;   -- vertical vga syncr.
       --iter      	: out std_logic_vector(3 downto 0)   -- red output
 		data_write :out std_logic;
-		ADDR         : out  std_logic_vector(15 downto 0);
-		data_out      : out std_logic_vector(7 downto 0)
+		ADDR         : out  std_logic_vector(16 downto 0);
+		data_out      : out std_logic_vector(11 downto 0)
     --  VGA_green    	: out std_logic_vector(3 downto 0);   -- green output
     --  VGA_blue    	 : out std_logic_vector(3 downto 0)   -- blue output
 	);
@@ -36,10 +36,10 @@ end; --comb_alu_1
 architecture logic of coproc_4 is
 
 	SIGNAL mem : UNSIGNED(31 downto 0);
-	signal tmp_addr : std_logic_vector(15 downto 0);
-	signal pixel : std_logic_vector(7 downto 0);
+	signal tmp_addr : std_logic_vector(16 downto 0);
+	signal pixel : std_logic_vector(11 downto 0);
 	--signal tmp_out : std_logic_vector(10 downto 0);
-	signal counter : integer range 0 to 38399:= 0;
+	signal counter : integer range 0 to 76799:= 0;
 begin
 	
 	
@@ -56,7 +56,7 @@ begin
 					counter <= 0;
 			ELSE
 				IF INPUT_1_valid = '1' THEN
-						IF counter < 38399 THEN
+						IF counter < 76799 THEN
 							counter <= counter + 1;
 						ELSE
 							counter <= 0;
@@ -87,14 +87,14 @@ begin
 --		END IF;
 --	end process;
 --	
-	tmp_addr <= std_logic_vector(to_signed(counter, 16));
+	tmp_addr <= std_logic_vector(to_signed(counter, 17));
 --	
 
 		data_write <=INPUT_1_valid;
-		data_out <=INPUT_1(7 downto 0);
+		data_out <=INPUT_1(11 downto 0);
 		ADDR <= tmp_addr;
 	
-		OUTPUT_1 <= "0000000000000000"&tmp_addr;
+		OUTPUT_1 <= "000000000000000"&tmp_addr;
 
 	
 	

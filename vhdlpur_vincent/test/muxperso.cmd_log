@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "D:/Vincent/Mandelbrot/vhdlpur_vincent/test/muxperso.xst" -ofn "D:/Vincent/Mandelbrot/vhdlpur_vincent/test/muxperso.syr" 
+xst -intstyle ise -ifn "D:/Vincent/Mandelbrot/vhdlpur_vincent/test/muxperso.xst" -ofn "D:/Vincent/Mandelbrot/vhdlpur_vincent/test/muxperso.syr" 

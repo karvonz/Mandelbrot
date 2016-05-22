@@ -30,68 +30,19 @@ Timing constraint: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH
 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 3195 paths analyzed, 336 endpoints analyzed, 0 failing endpoints
+ 3640 paths analyzed, 380 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   7.812ns.
+ Minimum period is   8.617ns.
 --------------------------------------------------------------------------------
 
-Paths for end point InstVGA/next_pixel_6 (SLICE_X53Y118.A4), 114 paths
+Paths for end point InstVGA/next_pixel_10 (SLICE_X60Y121.B2), 57 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     2.188ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               InstVGA/pix_read_addr_3 (FF)
-  Destination:          InstVGA/next_pixel_6 (FF)
-  Requirement:          10.000ns
-  Data Path Delay:      7.645ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.132ns (1.340 - 1.472)
-  Source Clock:         clk100_BUFGP rising at 0.000ns
-  Destination Clock:    clk100_BUFGP rising at 10.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: InstVGA/pix_read_addr_3 to InstVGA/next_pixel_6
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X48Y105.DQ     Tcko                  0.456   InstVGA/pix_read_addr<3>
-                                                       InstVGA/pix_read_addr_3
-    SLICE_X49Y106.B1     net (fanout=3)        0.831   InstVGA/pix_read_addr<3>
-    SLICE_X49Y106.B      Tilo                  0.124   InstVGA/Mcount_pix_read_addr_val2
-                                                       InstVGA/pix_read_addr[18]_GND_824_o_LessThan_11_o11_SW0
-    SLICE_X49Y106.A4     net (fanout=1)        0.433   N195
-    SLICE_X49Y106.A      Tilo                  0.124   InstVGA/Mcount_pix_read_addr_val2
-                                                       InstVGA/pix_read_addr[18]_GND_824_o_LessThan_11_o11
-    SLICE_X50Y105.D2     net (fanout=4)        0.836   InstVGA/pix_read_addr[18]_GND_824_o_LessThan_11_o11
-    SLICE_X50Y105.DMUX   Tilo                  0.388   InstVGA/pix_read_addr[18]_GND_824_o_LessThan_9_o31
-                                                       InstVGA/pix_read_addr[18]_GND_824_o_LessThan_13_o321
-    SLICE_X50Y105.A4     net (fanout=1)        0.455   InstVGA/pix_read_addr[18]_GND_824_o_LessThan_13_o321
-    SLICE_X50Y105.A      Tilo                  0.124   InstVGA/pix_read_addr[18]_GND_824_o_LessThan_9_o31
-                                                       InstVGA/pix_read_addr[18]_GND_824_o_LessThan_13_o322
-    SLICE_X52Y85.C1      net (fanout=9)        1.684   InstVGA/pix_read_addr[18]_GND_824_o_LessThan_13_o32
-    SLICE_X52Y85.C       Tilo                  0.124   InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT10
-                                                       InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT141
-    SLICE_X53Y118.B6     net (fanout=1)        1.414   InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT14
-    SLICE_X53Y118.B      Tilo                  0.124   InstVGA/next_pixel<7>
-                                                       InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT142
-    SLICE_X53Y118.A4     net (fanout=1)        0.433   InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT141
-    SLICE_X53Y118.CLK    Tas                   0.095   InstVGA/next_pixel<7>
-                                                       InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT143
-                                                       InstVGA/next_pixel_6
-    -------------------------------------------------  ---------------------------
-    Total                                      7.645ns (1.559ns logic, 6.086ns route)
-                                                       (20.4% logic, 79.6% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     2.196ns (requirement - (data path - clock path skew + uncertainty))
+Slack (setup path):     1.383ns (requirement - (data path - clock path skew + uncertainty))
   Source:               InstVGA/pix_read_addr_8 (FF)
-  Destination:          InstVGA/next_pixel_6 (FF)
+  Destination:          InstVGA/next_pixel_10 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      7.638ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.131ns (1.340 - 1.471)
+  Data Path Delay:      8.431ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.151ns (1.480 - 1.631)
   Source Clock:         clk100_BUFGP rising at 0.000ns
   Destination Clock:    clk100_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -102,45 +53,42 @@ Slack (setup path):     2.196ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: InstVGA/pix_read_addr_8 to InstVGA/next_pixel_6
+  Maximum Data Path at Slow Process Corner: InstVGA/pix_read_addr_8 to InstVGA/next_pixel_10
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X48Y107.AQ     Tcko                  0.456   InstVGA/pix_read_addr<11>
+    SLICE_X50Y96.AQ      Tcko                  0.518   InstVGA/pix_read_addr<11>
                                                        InstVGA/pix_read_addr_8
-    SLICE_X49Y106.B2     net (fanout=3)        0.824   InstVGA/pix_read_addr<8>
-    SLICE_X49Y106.B      Tilo                  0.124   InstVGA/Mcount_pix_read_addr_val2
-                                                       InstVGA/pix_read_addr[18]_GND_824_o_LessThan_11_o11_SW0
-    SLICE_X49Y106.A4     net (fanout=1)        0.433   N195
-    SLICE_X49Y106.A      Tilo                  0.124   InstVGA/Mcount_pix_read_addr_val2
-                                                       InstVGA/pix_read_addr[18]_GND_824_o_LessThan_11_o11
-    SLICE_X50Y105.D2     net (fanout=4)        0.836   InstVGA/pix_read_addr[18]_GND_824_o_LessThan_11_o11
-    SLICE_X50Y105.DMUX   Tilo                  0.388   InstVGA/pix_read_addr[18]_GND_824_o_LessThan_9_o31
-                                                       InstVGA/pix_read_addr[18]_GND_824_o_LessThan_13_o321
-    SLICE_X50Y105.A4     net (fanout=1)        0.455   InstVGA/pix_read_addr[18]_GND_824_o_LessThan_13_o321
-    SLICE_X50Y105.A      Tilo                  0.124   InstVGA/pix_read_addr[18]_GND_824_o_LessThan_9_o31
-                                                       InstVGA/pix_read_addr[18]_GND_824_o_LessThan_13_o322
-    SLICE_X52Y85.C1      net (fanout=9)        1.684   InstVGA/pix_read_addr[18]_GND_824_o_LessThan_13_o32
-    SLICE_X52Y85.C       Tilo                  0.124   InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT10
-                                                       InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT141
-    SLICE_X53Y118.B6     net (fanout=1)        1.414   InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT14
-    SLICE_X53Y118.B      Tilo                  0.124   InstVGA/next_pixel<7>
-                                                       InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT142
-    SLICE_X53Y118.A4     net (fanout=1)        0.433   InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT141
-    SLICE_X53Y118.CLK    Tas                   0.095   InstVGA/next_pixel<7>
-                                                       InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT143
-                                                       InstVGA/next_pixel_6
+    SLICE_X51Y94.D1      net (fanout=3)        0.841   InstVGA/pix_read_addr<8>
+    SLICE_X51Y94.D       Tilo                  0.124   N359
+                                                       InstVGA/pix_read_addr[18]_GND_568_o_LessThan_7_o11_SW0
+    SLICE_X51Y94.C5      net (fanout=1)        0.263   N359
+    SLICE_X51Y94.C       Tilo                  0.124   N359
+                                                       InstVGA/pix_read_addr[18]_GND_568_o_LessThan_7_o11
+    SLICE_X51Y95.B4      net (fanout=2)        0.584   InstVGA/pix_read_addr[18]_GND_568_o_LessThan_7_o11
+    SLICE_X51Y95.BMUX    Tilo                  0.358   InstVGA/Mcount_pix_read_addr_val2
+                                                       InstVGA/pix_read_addr[18]_GND_568_o_LessThan_6_o3_SW0
+    SLICE_X51Y95.A1      net (fanout=1)        0.669   N389
+    SLICE_X51Y95.A       Tilo                  0.124   InstVGA/Mcount_pix_read_addr_val2
+                                                       InstVGA/pix_read_addr[18]_GND_568_o_LessThan_6_o3
+    SLICE_X61Y71.C2      net (fanout=13)       2.246   InstVGA/pix_read_addr[18]_GND_568_o_LessThan_6_o
+    SLICE_X61Y71.C       Tilo                  0.124   InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT41
+                                                       InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT43
+    SLICE_X60Y121.B2     net (fanout=1)        2.413   InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT42
+    SLICE_X60Y121.CLK    Tas                   0.043   InstVGA/next_pixel<11>
+                                                       InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT44
+                                                       InstVGA/next_pixel_10
     -------------------------------------------------  ---------------------------
-    Total                                      7.638ns (1.559ns logic, 6.079ns route)
-                                                       (20.4% logic, 79.6% route)
+    Total                                      8.431ns (1.415ns logic, 7.016ns route)
+                                                       (16.8% logic, 83.2% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     2.560ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               InstVGA/pix_read_addr_5 (FF)
-  Destination:          InstVGA/next_pixel_6 (FF)
+Slack (setup path):     1.402ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               InstVGA/pix_read_addr_4 (FF)
+  Destination:          InstVGA/next_pixel_10 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      7.273ns (Levels of Logic = 6)
-  Clock Path Skew:      -0.132ns (1.340 - 1.472)
+  Data Path Delay:      8.412ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.151ns (1.480 - 1.631)
   Source Clock:         clk100_BUFGP rising at 0.000ns
   Destination Clock:    clk100_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -151,45 +99,42 @@ Slack (setup path):     2.560ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: InstVGA/pix_read_addr_5 to InstVGA/next_pixel_6
+  Maximum Data Path at Slow Process Corner: InstVGA/pix_read_addr_4 to InstVGA/next_pixel_10
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X48Y106.BQ     Tcko                  0.456   InstVGA/pix_read_addr<7>
-                                                       InstVGA/pix_read_addr_5
-    SLICE_X49Y106.A1     net (fanout=3)        1.016   InstVGA/pix_read_addr<5>
-    SLICE_X49Y106.A      Tilo                  0.124   InstVGA/Mcount_pix_read_addr_val2
-                                                       InstVGA/pix_read_addr[18]_GND_824_o_LessThan_11_o11
-    SLICE_X50Y105.D2     net (fanout=4)        0.836   InstVGA/pix_read_addr[18]_GND_824_o_LessThan_11_o11
-    SLICE_X50Y105.DMUX   Tilo                  0.388   InstVGA/pix_read_addr[18]_GND_824_o_LessThan_9_o31
-                                                       InstVGA/pix_read_addr[18]_GND_824_o_LessThan_13_o321
-    SLICE_X50Y105.A4     net (fanout=1)        0.455   InstVGA/pix_read_addr[18]_GND_824_o_LessThan_13_o321
-    SLICE_X50Y105.A      Tilo                  0.124   InstVGA/pix_read_addr[18]_GND_824_o_LessThan_9_o31
-                                                       InstVGA/pix_read_addr[18]_GND_824_o_LessThan_13_o322
-    SLICE_X52Y85.C1      net (fanout=9)        1.684   InstVGA/pix_read_addr[18]_GND_824_o_LessThan_13_o32
-    SLICE_X52Y85.C       Tilo                  0.124   InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT10
-                                                       InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT141
-    SLICE_X53Y118.B6     net (fanout=1)        1.414   InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT14
-    SLICE_X53Y118.B      Tilo                  0.124   InstVGA/next_pixel<7>
-                                                       InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT142
-    SLICE_X53Y118.A4     net (fanout=1)        0.433   InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT141
-    SLICE_X53Y118.CLK    Tas                   0.095   InstVGA/next_pixel<7>
-                                                       InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT143
-                                                       InstVGA/next_pixel_6
+    SLICE_X50Y95.AQ      Tcko                  0.518   InstVGA/pix_read_addr<7>
+                                                       InstVGA/pix_read_addr_4
+    SLICE_X51Y94.D2      net (fanout=3)        0.822   InstVGA/pix_read_addr<4>
+    SLICE_X51Y94.D       Tilo                  0.124   N359
+                                                       InstVGA/pix_read_addr[18]_GND_568_o_LessThan_7_o11_SW0
+    SLICE_X51Y94.C5      net (fanout=1)        0.263   N359
+    SLICE_X51Y94.C       Tilo                  0.124   N359
+                                                       InstVGA/pix_read_addr[18]_GND_568_o_LessThan_7_o11
+    SLICE_X51Y95.B4      net (fanout=2)        0.584   InstVGA/pix_read_addr[18]_GND_568_o_LessThan_7_o11
+    SLICE_X51Y95.BMUX    Tilo                  0.358   InstVGA/Mcount_pix_read_addr_val2
+                                                       InstVGA/pix_read_addr[18]_GND_568_o_LessThan_6_o3_SW0
+    SLICE_X51Y95.A1      net (fanout=1)        0.669   N389
+    SLICE_X51Y95.A       Tilo                  0.124   InstVGA/Mcount_pix_read_addr_val2
+                                                       InstVGA/pix_read_addr[18]_GND_568_o_LessThan_6_o3
+    SLICE_X61Y71.C2      net (fanout=13)       2.246   InstVGA/pix_read_addr[18]_GND_568_o_LessThan_6_o
+    SLICE_X61Y71.C       Tilo                  0.124   InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT41
+                                                       InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT43
+    SLICE_X60Y121.B2     net (fanout=1)        2.413   InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT42
+    SLICE_X60Y121.CLK    Tas                   0.043   InstVGA/next_pixel<11>
+                                                       InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT44
+                                                       InstVGA/next_pixel_10
     -------------------------------------------------  ---------------------------
-    Total                                      7.273ns (1.435ns logic, 5.838ns route)
-                                                       (19.7% logic, 80.3% route)
+    Total                                      8.412ns (1.415ns logic, 6.997ns route)
+                                                       (16.8% logic, 83.2% route)
 
 --------------------------------------------------------------------------------
-
-Paths for end point InstVGA/next_pixel_1 (SLICE_X60Y118.C5), 114 paths
---------------------------------------------------------------------------------
-Slack (setup path):     2.238ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               InstVGA/pix_read_addr_3 (FF)
-  Destination:          InstVGA/next_pixel_1 (FF)
+Slack (setup path):     1.566ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               InstVGA/pix_read_addr_7 (FF)
+  Destination:          InstVGA/next_pixel_10 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      7.600ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.127ns (1.345 - 1.472)
+  Data Path Delay:      8.248ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.151ns (1.480 - 1.631)
   Source Clock:         clk100_BUFGP rising at 0.000ns
   Destination Clock:    clk100_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -200,45 +145,195 @@ Slack (setup path):     2.238ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: InstVGA/pix_read_addr_3 to InstVGA/next_pixel_1
+  Maximum Data Path at Slow Process Corner: InstVGA/pix_read_addr_7 to InstVGA/next_pixel_10
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X48Y105.DQ     Tcko                  0.456   InstVGA/pix_read_addr<3>
-                                                       InstVGA/pix_read_addr_3
-    SLICE_X49Y106.B1     net (fanout=3)        0.831   InstVGA/pix_read_addr<3>
-    SLICE_X49Y106.B      Tilo                  0.124   InstVGA/Mcount_pix_read_addr_val2
-                                                       InstVGA/pix_read_addr[18]_GND_824_o_LessThan_11_o11_SW0
-    SLICE_X49Y106.A4     net (fanout=1)        0.433   N195
-    SLICE_X49Y106.A      Tilo                  0.124   InstVGA/Mcount_pix_read_addr_val2
-                                                       InstVGA/pix_read_addr[18]_GND_824_o_LessThan_11_o11
-    SLICE_X50Y105.D2     net (fanout=4)        0.836   InstVGA/pix_read_addr[18]_GND_824_o_LessThan_11_o11
-    SLICE_X50Y105.DMUX   Tilo                  0.388   InstVGA/pix_read_addr[18]_GND_824_o_LessThan_9_o31
-                                                       InstVGA/pix_read_addr[18]_GND_824_o_LessThan_13_o321
-    SLICE_X50Y105.A4     net (fanout=1)        0.455   InstVGA/pix_read_addr[18]_GND_824_o_LessThan_13_o321
-    SLICE_X50Y105.A      Tilo                  0.124   InstVGA/pix_read_addr[18]_GND_824_o_LessThan_9_o31
-                                                       InstVGA/pix_read_addr[18]_GND_824_o_LessThan_13_o322
-    SLICE_X63Y90.A5      net (fanout=9)        1.554   InstVGA/pix_read_addr[18]_GND_824_o_LessThan_13_o32
-    SLICE_X63Y90.A       Tilo                  0.124   InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT4
-                                                       InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT41
-    SLICE_X60Y118.D1     net (fanout=1)        1.700   InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT4
-    SLICE_X60Y118.D      Tilo                  0.124   InstVGA/next_pixel<1>
-                                                       InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT42
-    SLICE_X60Y118.C5     net (fanout=1)        0.282   InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT41
-    SLICE_X60Y118.CLK    Tas                   0.045   InstVGA/next_pixel<1>
-                                                       InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT43
-                                                       InstVGA/next_pixel_1
+    SLICE_X50Y95.DQ      Tcko                  0.518   InstVGA/pix_read_addr<7>
+                                                       InstVGA/pix_read_addr_7
+    SLICE_X51Y94.D3      net (fanout=3)        0.658   InstVGA/pix_read_addr<7>
+    SLICE_X51Y94.D       Tilo                  0.124   N359
+                                                       InstVGA/pix_read_addr[18]_GND_568_o_LessThan_7_o11_SW0
+    SLICE_X51Y94.C5      net (fanout=1)        0.263   N359
+    SLICE_X51Y94.C       Tilo                  0.124   N359
+                                                       InstVGA/pix_read_addr[18]_GND_568_o_LessThan_7_o11
+    SLICE_X51Y95.B4      net (fanout=2)        0.584   InstVGA/pix_read_addr[18]_GND_568_o_LessThan_7_o11
+    SLICE_X51Y95.BMUX    Tilo                  0.358   InstVGA/Mcount_pix_read_addr_val2
+                                                       InstVGA/pix_read_addr[18]_GND_568_o_LessThan_6_o3_SW0
+    SLICE_X51Y95.A1      net (fanout=1)        0.669   N389
+    SLICE_X51Y95.A       Tilo                  0.124   InstVGA/Mcount_pix_read_addr_val2
+                                                       InstVGA/pix_read_addr[18]_GND_568_o_LessThan_6_o3
+    SLICE_X61Y71.C2      net (fanout=13)       2.246   InstVGA/pix_read_addr[18]_GND_568_o_LessThan_6_o
+    SLICE_X61Y71.C       Tilo                  0.124   InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT41
+                                                       InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT43
+    SLICE_X60Y121.B2     net (fanout=1)        2.413   InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT42
+    SLICE_X60Y121.CLK    Tas                   0.043   InstVGA/next_pixel<11>
+                                                       InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT44
+                                                       InstVGA/next_pixel_10
     -------------------------------------------------  ---------------------------
-    Total                                      7.600ns (1.509ns logic, 6.091ns route)
-                                                       (19.9% logic, 80.1% route)
+    Total                                      8.248ns (1.415ns logic, 6.833ns route)
+                                                       (17.2% logic, 82.8% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     2.246ns (requirement - (data path - clock path skew + uncertainty))
+
+Paths for end point InstVGA/next_pixel_8 (SLICE_X60Y122.D2), 57 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     1.385ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               InstVGA/pix_read_addr_8 (FF)
+  Destination:          InstVGA/next_pixel_8 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      8.427ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.153ns (1.478 - 1.631)
+  Source Clock:         clk100_BUFGP rising at 0.000ns
+  Destination Clock:    clk100_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: InstVGA/pix_read_addr_8 to InstVGA/next_pixel_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X50Y96.AQ      Tcko                  0.518   InstVGA/pix_read_addr<11>
+                                                       InstVGA/pix_read_addr_8
+    SLICE_X51Y94.D1      net (fanout=3)        0.841   InstVGA/pix_read_addr<8>
+    SLICE_X51Y94.D       Tilo                  0.124   N359
+                                                       InstVGA/pix_read_addr[18]_GND_568_o_LessThan_7_o11_SW0
+    SLICE_X51Y94.C5      net (fanout=1)        0.263   N359
+    SLICE_X51Y94.C       Tilo                  0.124   N359
+                                                       InstVGA/pix_read_addr[18]_GND_568_o_LessThan_7_o11
+    SLICE_X50Y93.B1      net (fanout=2)        0.833   InstVGA/pix_read_addr[18]_GND_568_o_LessThan_7_o11
+    SLICE_X50Y93.B       Tilo                  0.124   N385
+                                                       InstVGA/pix_read_addr[18]_GND_568_o_LessThan_7_o3_SW0
+    SLICE_X50Y93.A4      net (fanout=1)        0.452   N385
+    SLICE_X50Y93.A       Tilo                  0.124   N385
+                                                       InstVGA/pix_read_addr[18]_GND_568_o_LessThan_7_o3
+    SLICE_X61Y74.B2      net (fanout=12)       2.015   InstVGA/pix_read_addr[18]_GND_568_o_LessThan_7_o
+    SLICE_X61Y74.B       Tilo                  0.124   InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT222
+                                                       InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT222
+    SLICE_X61Y74.A4      net (fanout=1)        0.433   InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT222
+    SLICE_X61Y74.A       Tilo                  0.124   InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT222
+                                                       InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT223
+    SLICE_X60Y122.D2     net (fanout=1)        2.283   InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT223
+    SLICE_X60Y122.CLK    Tas                   0.045   InstVGA/next_pixel<8>
+                                                       InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT224
+                                                       InstVGA/next_pixel_8
+    -------------------------------------------------  ---------------------------
+    Total                                      8.427ns (1.307ns logic, 7.120ns route)
+                                                       (15.5% logic, 84.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     1.404ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               InstVGA/pix_read_addr_4 (FF)
+  Destination:          InstVGA/next_pixel_8 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      8.408ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.153ns (1.478 - 1.631)
+  Source Clock:         clk100_BUFGP rising at 0.000ns
+  Destination Clock:    clk100_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: InstVGA/pix_read_addr_4 to InstVGA/next_pixel_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X50Y95.AQ      Tcko                  0.518   InstVGA/pix_read_addr<7>
+                                                       InstVGA/pix_read_addr_4
+    SLICE_X51Y94.D2      net (fanout=3)        0.822   InstVGA/pix_read_addr<4>
+    SLICE_X51Y94.D       Tilo                  0.124   N359
+                                                       InstVGA/pix_read_addr[18]_GND_568_o_LessThan_7_o11_SW0
+    SLICE_X51Y94.C5      net (fanout=1)        0.263   N359
+    SLICE_X51Y94.C       Tilo                  0.124   N359
+                                                       InstVGA/pix_read_addr[18]_GND_568_o_LessThan_7_o11
+    SLICE_X50Y93.B1      net (fanout=2)        0.833   InstVGA/pix_read_addr[18]_GND_568_o_LessThan_7_o11
+    SLICE_X50Y93.B       Tilo                  0.124   N385
+                                                       InstVGA/pix_read_addr[18]_GND_568_o_LessThan_7_o3_SW0
+    SLICE_X50Y93.A4      net (fanout=1)        0.452   N385
+    SLICE_X50Y93.A       Tilo                  0.124   N385
+                                                       InstVGA/pix_read_addr[18]_GND_568_o_LessThan_7_o3
+    SLICE_X61Y74.B2      net (fanout=12)       2.015   InstVGA/pix_read_addr[18]_GND_568_o_LessThan_7_o
+    SLICE_X61Y74.B       Tilo                  0.124   InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT222
+                                                       InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT222
+    SLICE_X61Y74.A4      net (fanout=1)        0.433   InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT222
+    SLICE_X61Y74.A       Tilo                  0.124   InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT222
+                                                       InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT223
+    SLICE_X60Y122.D2     net (fanout=1)        2.283   InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT223
+    SLICE_X60Y122.CLK    Tas                   0.045   InstVGA/next_pixel<8>
+                                                       InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT224
+                                                       InstVGA/next_pixel_8
+    -------------------------------------------------  ---------------------------
+    Total                                      8.408ns (1.307ns logic, 7.101ns route)
+                                                       (15.5% logic, 84.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     1.568ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               InstVGA/pix_read_addr_7 (FF)
+  Destination:          InstVGA/next_pixel_8 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      8.244ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.153ns (1.478 - 1.631)
+  Source Clock:         clk100_BUFGP rising at 0.000ns
+  Destination Clock:    clk100_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: InstVGA/pix_read_addr_7 to InstVGA/next_pixel_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X50Y95.DQ      Tcko                  0.518   InstVGA/pix_read_addr<7>
+                                                       InstVGA/pix_read_addr_7
+    SLICE_X51Y94.D3      net (fanout=3)        0.658   InstVGA/pix_read_addr<7>
+    SLICE_X51Y94.D       Tilo                  0.124   N359
+                                                       InstVGA/pix_read_addr[18]_GND_568_o_LessThan_7_o11_SW0
+    SLICE_X51Y94.C5      net (fanout=1)        0.263   N359
+    SLICE_X51Y94.C       Tilo                  0.124   N359
+                                                       InstVGA/pix_read_addr[18]_GND_568_o_LessThan_7_o11
+    SLICE_X50Y93.B1      net (fanout=2)        0.833   InstVGA/pix_read_addr[18]_GND_568_o_LessThan_7_o11
+    SLICE_X50Y93.B       Tilo                  0.124   N385
+                                                       InstVGA/pix_read_addr[18]_GND_568_o_LessThan_7_o3_SW0
+    SLICE_X50Y93.A4      net (fanout=1)        0.452   N385
+    SLICE_X50Y93.A       Tilo                  0.124   N385
+                                                       InstVGA/pix_read_addr[18]_GND_568_o_LessThan_7_o3
+    SLICE_X61Y74.B2      net (fanout=12)       2.015   InstVGA/pix_read_addr[18]_GND_568_o_LessThan_7_o
+    SLICE_X61Y74.B       Tilo                  0.124   InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT222
+                                                       InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT222
+    SLICE_X61Y74.A4      net (fanout=1)        0.433   InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT222
+    SLICE_X61Y74.A       Tilo                  0.124   InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT222
+                                                       InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT223
+    SLICE_X60Y122.D2     net (fanout=1)        2.283   InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT223
+    SLICE_X60Y122.CLK    Tas                   0.045   InstVGA/next_pixel<8>
+                                                       InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT224
+                                                       InstVGA/next_pixel_8
+    -------------------------------------------------  ---------------------------
+    Total                                      8.244ns (1.307ns logic, 6.937ns route)
+                                                       (15.9% logic, 84.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point InstVGA/next_pixel_1 (SLICE_X64Y130.B2), 57 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     1.736ns (requirement - (data path - clock path skew + uncertainty))
   Source:               InstVGA/pix_read_addr_8 (FF)
   Destination:          InstVGA/next_pixel_1 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      7.593ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.126ns (1.345 - 1.471)
+  Data Path Delay:      8.082ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.147ns (1.484 - 1.631)
   Source Clock:         clk100_BUFGP rising at 0.000ns
   Destination Clock:    clk100_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -253,41 +348,41 @@ Slack (setup path):     2.246ns (requirement - (data path - clock path skew + un
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X48Y107.AQ     Tcko                  0.456   InstVGA/pix_read_addr<11>
+    SLICE_X50Y96.AQ      Tcko                  0.518   InstVGA/pix_read_addr<11>
                                                        InstVGA/pix_read_addr_8
-    SLICE_X49Y106.B2     net (fanout=3)        0.824   InstVGA/pix_read_addr<8>
-    SLICE_X49Y106.B      Tilo                  0.124   InstVGA/Mcount_pix_read_addr_val2
-                                                       InstVGA/pix_read_addr[18]_GND_824_o_LessThan_11_o11_SW0
-    SLICE_X49Y106.A4     net (fanout=1)        0.433   N195
-    SLICE_X49Y106.A      Tilo                  0.124   InstVGA/Mcount_pix_read_addr_val2
-                                                       InstVGA/pix_read_addr[18]_GND_824_o_LessThan_11_o11
-    SLICE_X50Y105.D2     net (fanout=4)        0.836   InstVGA/pix_read_addr[18]_GND_824_o_LessThan_11_o11
-    SLICE_X50Y105.DMUX   Tilo                  0.388   InstVGA/pix_read_addr[18]_GND_824_o_LessThan_9_o31
-                                                       InstVGA/pix_read_addr[18]_GND_824_o_LessThan_13_o321
-    SLICE_X50Y105.A4     net (fanout=1)        0.455   InstVGA/pix_read_addr[18]_GND_824_o_LessThan_13_o321
-    SLICE_X50Y105.A      Tilo                  0.124   InstVGA/pix_read_addr[18]_GND_824_o_LessThan_9_o31
-                                                       InstVGA/pix_read_addr[18]_GND_824_o_LessThan_13_o322
-    SLICE_X63Y90.A5      net (fanout=9)        1.554   InstVGA/pix_read_addr[18]_GND_824_o_LessThan_13_o32
-    SLICE_X63Y90.A       Tilo                  0.124   InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT4
-                                                       InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT41
-    SLICE_X60Y118.D1     net (fanout=1)        1.700   InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT4
-    SLICE_X60Y118.D      Tilo                  0.124   InstVGA/next_pixel<1>
-                                                       InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT42
-    SLICE_X60Y118.C5     net (fanout=1)        0.282   InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT41
-    SLICE_X60Y118.CLK    Tas                   0.045   InstVGA/next_pixel<1>
-                                                       InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT43
+    SLICE_X51Y94.D1      net (fanout=3)        0.841   InstVGA/pix_read_addr<8>
+    SLICE_X51Y94.D       Tilo                  0.124   N359
+                                                       InstVGA/pix_read_addr[18]_GND_568_o_LessThan_7_o11_SW0
+    SLICE_X51Y94.C5      net (fanout=1)        0.263   N359
+    SLICE_X51Y94.C       Tilo                  0.124   N359
+                                                       InstVGA/pix_read_addr[18]_GND_568_o_LessThan_7_o11
+    SLICE_X50Y93.B1      net (fanout=2)        0.833   InstVGA/pix_read_addr[18]_GND_568_o_LessThan_7_o11
+    SLICE_X50Y93.B       Tilo                  0.124   N385
+                                                       InstVGA/pix_read_addr[18]_GND_568_o_LessThan_7_o3_SW0
+    SLICE_X50Y93.A4      net (fanout=1)        0.452   N385
+    SLICE_X50Y93.A       Tilo                  0.124   N385
+                                                       InstVGA/pix_read_addr[18]_GND_568_o_LessThan_7_o3
+    SLICE_X60Y82.B1      net (fanout=12)       1.464   InstVGA/pix_read_addr[18]_GND_568_o_LessThan_7_o
+    SLICE_X60Y82.B       Tilo                  0.124   InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT81
+                                                       InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT82
+    SLICE_X60Y82.A4      net (fanout=1)        0.452   InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT81
+    SLICE_X60Y82.A       Tilo                  0.124   InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT81
+                                                       InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT83
+    SLICE_X64Y130.B2     net (fanout=1)        2.422   InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT82
+    SLICE_X64Y130.CLK    Tas                   0.093   InstVGA/next_pixel<1>
+                                                       InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT84
                                                        InstVGA/next_pixel_1
     -------------------------------------------------  ---------------------------
-    Total                                      7.593ns (1.509ns logic, 6.084ns route)
-                                                       (19.9% logic, 80.1% route)
+    Total                                      8.082ns (1.355ns logic, 6.727ns route)
+                                                       (16.8% logic, 83.2% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     2.610ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               InstVGA/pix_read_addr_5 (FF)
+Slack (setup path):     1.755ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               InstVGA/pix_read_addr_4 (FF)
   Destination:          InstVGA/next_pixel_1 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      7.228ns (Levels of Logic = 6)
-  Clock Path Skew:      -0.127ns (1.345 - 1.472)
+  Data Path Delay:      8.063ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.147ns (1.484 - 1.631)
   Source Clock:         clk100_BUFGP rising at 0.000ns
   Destination Clock:    clk100_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -298,45 +393,45 @@ Slack (setup path):     2.610ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: InstVGA/pix_read_addr_5 to InstVGA/next_pixel_1
+  Maximum Data Path at Slow Process Corner: InstVGA/pix_read_addr_4 to InstVGA/next_pixel_1
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X48Y106.BQ     Tcko                  0.456   InstVGA/pix_read_addr<7>
-                                                       InstVGA/pix_read_addr_5
-    SLICE_X49Y106.A1     net (fanout=3)        1.016   InstVGA/pix_read_addr<5>
-    SLICE_X49Y106.A      Tilo                  0.124   InstVGA/Mcount_pix_read_addr_val2
-                                                       InstVGA/pix_read_addr[18]_GND_824_o_LessThan_11_o11
-    SLICE_X50Y105.D2     net (fanout=4)        0.836   InstVGA/pix_read_addr[18]_GND_824_o_LessThan_11_o11
-    SLICE_X50Y105.DMUX   Tilo                  0.388   InstVGA/pix_read_addr[18]_GND_824_o_LessThan_9_o31
-                                                       InstVGA/pix_read_addr[18]_GND_824_o_LessThan_13_o321
-    SLICE_X50Y105.A4     net (fanout=1)        0.455   InstVGA/pix_read_addr[18]_GND_824_o_LessThan_13_o321
-    SLICE_X50Y105.A      Tilo                  0.124   InstVGA/pix_read_addr[18]_GND_824_o_LessThan_9_o31
-                                                       InstVGA/pix_read_addr[18]_GND_824_o_LessThan_13_o322
-    SLICE_X63Y90.A5      net (fanout=9)        1.554   InstVGA/pix_read_addr[18]_GND_824_o_LessThan_13_o32
-    SLICE_X63Y90.A       Tilo                  0.124   InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT4
-                                                       InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT41
-    SLICE_X60Y118.D1     net (fanout=1)        1.700   InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT4
-    SLICE_X60Y118.D      Tilo                  0.124   InstVGA/next_pixel<1>
-                                                       InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT42
-    SLICE_X60Y118.C5     net (fanout=1)        0.282   InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT41
-    SLICE_X60Y118.CLK    Tas                   0.045   InstVGA/next_pixel<1>
-                                                       InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT43
+    SLICE_X50Y95.AQ      Tcko                  0.518   InstVGA/pix_read_addr<7>
+                                                       InstVGA/pix_read_addr_4
+    SLICE_X51Y94.D2      net (fanout=3)        0.822   InstVGA/pix_read_addr<4>
+    SLICE_X51Y94.D       Tilo                  0.124   N359
+                                                       InstVGA/pix_read_addr[18]_GND_568_o_LessThan_7_o11_SW0
+    SLICE_X51Y94.C5      net (fanout=1)        0.263   N359
+    SLICE_X51Y94.C       Tilo                  0.124   N359
+                                                       InstVGA/pix_read_addr[18]_GND_568_o_LessThan_7_o11
+    SLICE_X50Y93.B1      net (fanout=2)        0.833   InstVGA/pix_read_addr[18]_GND_568_o_LessThan_7_o11
+    SLICE_X50Y93.B       Tilo                  0.124   N385
+                                                       InstVGA/pix_read_addr[18]_GND_568_o_LessThan_7_o3_SW0
+    SLICE_X50Y93.A4      net (fanout=1)        0.452   N385
+    SLICE_X50Y93.A       Tilo                  0.124   N385
+                                                       InstVGA/pix_read_addr[18]_GND_568_o_LessThan_7_o3
+    SLICE_X60Y82.B1      net (fanout=12)       1.464   InstVGA/pix_read_addr[18]_GND_568_o_LessThan_7_o
+    SLICE_X60Y82.B       Tilo                  0.124   InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT81
+                                                       InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT82
+    SLICE_X60Y82.A4      net (fanout=1)        0.452   InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT81
+    SLICE_X60Y82.A       Tilo                  0.124   InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT81
+                                                       InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT83
+    SLICE_X64Y130.B2     net (fanout=1)        2.422   InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT82
+    SLICE_X64Y130.CLK    Tas                   0.093   InstVGA/next_pixel<1>
+                                                       InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT84
                                                        InstVGA/next_pixel_1
     -------------------------------------------------  ---------------------------
-    Total                                      7.228ns (1.385ns logic, 5.843ns route)
-                                                       (19.2% logic, 80.8% route)
+    Total                                      8.063ns (1.355ns logic, 6.708ns route)
+                                                       (16.8% logic, 83.2% route)
 
 --------------------------------------------------------------------------------
-
-Paths for end point InstVGA/next_pixel_2 (SLICE_X51Y119.A4), 114 paths
---------------------------------------------------------------------------------
-Slack (setup path):     2.295ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               InstVGA/pix_read_addr_3 (FF)
-  Destination:          InstVGA/next_pixel_2 (FF)
+Slack (setup path):     1.919ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               InstVGA/pix_read_addr_7 (FF)
+  Destination:          InstVGA/next_pixel_1 (FF)
   Requirement:          10.000ns
-  Data Path Delay:      7.615ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.055ns (0.776 - 0.831)
+  Data Path Delay:      7.899ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.147ns (1.484 - 1.631)
   Source Clock:         clk100_BUFGP rising at 0.000ns
   Destination Clock:    clk100_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.035ns
@@ -347,219 +442,319 @@ Slack (setup path):     2.295ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: InstVGA/pix_read_addr_3 to InstVGA/next_pixel_2
+  Maximum Data Path at Slow Process Corner: InstVGA/pix_read_addr_7 to InstVGA/next_pixel_1
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X48Y105.DQ     Tcko                  0.456   InstVGA/pix_read_addr<3>
-                                                       InstVGA/pix_read_addr_3
-    SLICE_X49Y106.B1     net (fanout=3)        0.831   InstVGA/pix_read_addr<3>
-    SLICE_X49Y106.B      Tilo                  0.124   InstVGA/Mcount_pix_read_addr_val2
-                                                       InstVGA/pix_read_addr[18]_GND_824_o_LessThan_11_o11_SW0
-    SLICE_X49Y106.A4     net (fanout=1)        0.433   N195
-    SLICE_X49Y106.A      Tilo                  0.124   InstVGA/Mcount_pix_read_addr_val2
-                                                       InstVGA/pix_read_addr[18]_GND_824_o_LessThan_11_o11
-    SLICE_X50Y105.D2     net (fanout=4)        0.836   InstVGA/pix_read_addr[18]_GND_824_o_LessThan_11_o11
-    SLICE_X50Y105.DMUX   Tilo                  0.388   InstVGA/pix_read_addr[18]_GND_824_o_LessThan_9_o31
-                                                       InstVGA/pix_read_addr[18]_GND_824_o_LessThan_13_o321
-    SLICE_X50Y105.A4     net (fanout=1)        0.455   InstVGA/pix_read_addr[18]_GND_824_o_LessThan_13_o321
-    SLICE_X50Y105.A      Tilo                  0.124   InstVGA/pix_read_addr[18]_GND_824_o_LessThan_9_o31
-                                                       InstVGA/pix_read_addr[18]_GND_824_o_LessThan_13_o322
-    SLICE_X54Y92.A1      net (fanout=9)        1.472   InstVGA/pix_read_addr[18]_GND_824_o_LessThan_13_o32
-    SLICE_X54Y92.A       Tilo                  0.124   InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT6
-                                                       InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT61
-    SLICE_X51Y119.B1     net (fanout=1)        1.596   InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT6
-    SLICE_X51Y119.B      Tilo                  0.124   InstVGA/next_pixel<3>
-                                                       InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT62
-    SLICE_X51Y119.A4     net (fanout=1)        0.433   InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT61
-    SLICE_X51Y119.CLK    Tas                   0.095   InstVGA/next_pixel<3>
-                                                       InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT63
-                                                       InstVGA/next_pixel_2
+    SLICE_X50Y95.DQ      Tcko                  0.518   InstVGA/pix_read_addr<7>
+                                                       InstVGA/pix_read_addr_7
+    SLICE_X51Y94.D3      net (fanout=3)        0.658   InstVGA/pix_read_addr<7>
+    SLICE_X51Y94.D       Tilo                  0.124   N359
+                                                       InstVGA/pix_read_addr[18]_GND_568_o_LessThan_7_o11_SW0
+    SLICE_X51Y94.C5      net (fanout=1)        0.263   N359
+    SLICE_X51Y94.C       Tilo                  0.124   N359
+                                                       InstVGA/pix_read_addr[18]_GND_568_o_LessThan_7_o11
+    SLICE_X50Y93.B1      net (fanout=2)        0.833   InstVGA/pix_read_addr[18]_GND_568_o_LessThan_7_o11
+    SLICE_X50Y93.B       Tilo                  0.124   N385
+                                                       InstVGA/pix_read_addr[18]_GND_568_o_LessThan_7_o3_SW0
+    SLICE_X50Y93.A4      net (fanout=1)        0.452   N385
+    SLICE_X50Y93.A       Tilo                  0.124   N385
+                                                       InstVGA/pix_read_addr[18]_GND_568_o_LessThan_7_o3
+    SLICE_X60Y82.B1      net (fanout=12)       1.464   InstVGA/pix_read_addr[18]_GND_568_o_LessThan_7_o
+    SLICE_X60Y82.B       Tilo                  0.124   InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT81
+                                                       InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT82
+    SLICE_X60Y82.A4      net (fanout=1)        0.452   InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT81
+    SLICE_X60Y82.A       Tilo                  0.124   InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT81
+                                                       InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT83
+    SLICE_X64Y130.B2     net (fanout=1)        2.422   InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT82
+    SLICE_X64Y130.CLK    Tas                   0.093   InstVGA/next_pixel<1>
+                                                       InstVGA/Mmux_data_outtemp4[11]_data_outtemp1[11]_mux_9_OUT84
+                                                       InstVGA/next_pixel_1
     -------------------------------------------------  ---------------------------
-    Total                                      7.615ns (1.559ns logic, 6.056ns route)
-                                                       (20.5% logic, 79.5% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     2.303ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               InstVGA/pix_read_addr_8 (FF)
-  Destination:          InstVGA/next_pixel_2 (FF)
-  Requirement:          10.000ns
-  Data Path Delay:      7.608ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.054ns (0.776 - 0.830)
-  Source Clock:         clk100_BUFGP rising at 0.000ns
-  Destination Clock:    clk100_BUFGP rising at 10.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: InstVGA/pix_read_addr_8 to InstVGA/next_pixel_2
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X48Y107.AQ     Tcko                  0.456   InstVGA/pix_read_addr<11>
-                                                       InstVGA/pix_read_addr_8
-    SLICE_X49Y106.B2     net (fanout=3)        0.824   InstVGA/pix_read_addr<8>
-    SLICE_X49Y106.B      Tilo                  0.124   InstVGA/Mcount_pix_read_addr_val2
-                                                       InstVGA/pix_read_addr[18]_GND_824_o_LessThan_11_o11_SW0
-    SLICE_X49Y106.A4     net (fanout=1)        0.433   N195
-    SLICE_X49Y106.A      Tilo                  0.124   InstVGA/Mcount_pix_read_addr_val2
-                                                       InstVGA/pix_read_addr[18]_GND_824_o_LessThan_11_o11
-    SLICE_X50Y105.D2     net (fanout=4)        0.836   InstVGA/pix_read_addr[18]_GND_824_o_LessThan_11_o11
-    SLICE_X50Y105.DMUX   Tilo                  0.388   InstVGA/pix_read_addr[18]_GND_824_o_LessThan_9_o31
-                                                       InstVGA/pix_read_addr[18]_GND_824_o_LessThan_13_o321
-    SLICE_X50Y105.A4     net (fanout=1)        0.455   InstVGA/pix_read_addr[18]_GND_824_o_LessThan_13_o321
-    SLICE_X50Y105.A      Tilo                  0.124   InstVGA/pix_read_addr[18]_GND_824_o_LessThan_9_o31
-                                                       InstVGA/pix_read_addr[18]_GND_824_o_LessThan_13_o322
-    SLICE_X54Y92.A1      net (fanout=9)        1.472   InstVGA/pix_read_addr[18]_GND_824_o_LessThan_13_o32
-    SLICE_X54Y92.A       Tilo                  0.124   InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT6
-                                                       InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT61
-    SLICE_X51Y119.B1     net (fanout=1)        1.596   InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT6
-    SLICE_X51Y119.B      Tilo                  0.124   InstVGA/next_pixel<3>
-                                                       InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT62
-    SLICE_X51Y119.A4     net (fanout=1)        0.433   InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT61
-    SLICE_X51Y119.CLK    Tas                   0.095   InstVGA/next_pixel<3>
-                                                       InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT63
-                                                       InstVGA/next_pixel_2
-    -------------------------------------------------  ---------------------------
-    Total                                      7.608ns (1.559ns logic, 6.049ns route)
-                                                       (20.5% logic, 79.5% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     2.667ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               InstVGA/pix_read_addr_5 (FF)
-  Destination:          InstVGA/next_pixel_2 (FF)
-  Requirement:          10.000ns
-  Data Path Delay:      7.243ns (Levels of Logic = 6)
-  Clock Path Skew:      -0.055ns (0.776 - 0.831)
-  Source Clock:         clk100_BUFGP rising at 0.000ns
-  Destination Clock:    clk100_BUFGP rising at 10.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: InstVGA/pix_read_addr_5 to InstVGA/next_pixel_2
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X48Y106.BQ     Tcko                  0.456   InstVGA/pix_read_addr<7>
-                                                       InstVGA/pix_read_addr_5
-    SLICE_X49Y106.A1     net (fanout=3)        1.016   InstVGA/pix_read_addr<5>
-    SLICE_X49Y106.A      Tilo                  0.124   InstVGA/Mcount_pix_read_addr_val2
-                                                       InstVGA/pix_read_addr[18]_GND_824_o_LessThan_11_o11
-    SLICE_X50Y105.D2     net (fanout=4)        0.836   InstVGA/pix_read_addr[18]_GND_824_o_LessThan_11_o11
-    SLICE_X50Y105.DMUX   Tilo                  0.388   InstVGA/pix_read_addr[18]_GND_824_o_LessThan_9_o31
-                                                       InstVGA/pix_read_addr[18]_GND_824_o_LessThan_13_o321
-    SLICE_X50Y105.A4     net (fanout=1)        0.455   InstVGA/pix_read_addr[18]_GND_824_o_LessThan_13_o321
-    SLICE_X50Y105.A      Tilo                  0.124   InstVGA/pix_read_addr[18]_GND_824_o_LessThan_9_o31
-                                                       InstVGA/pix_read_addr[18]_GND_824_o_LessThan_13_o322
-    SLICE_X54Y92.A1      net (fanout=9)        1.472   InstVGA/pix_read_addr[18]_GND_824_o_LessThan_13_o32
-    SLICE_X54Y92.A       Tilo                  0.124   InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT6
-                                                       InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT61
-    SLICE_X51Y119.B1     net (fanout=1)        1.596   InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT6
-    SLICE_X51Y119.B      Tilo                  0.124   InstVGA/next_pixel<3>
-                                                       InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT62
-    SLICE_X51Y119.A4     net (fanout=1)        0.433   InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT61
-    SLICE_X51Y119.CLK    Tas                   0.095   InstVGA/next_pixel<3>
-                                                       InstVGA/Mmux_data_outtemp8[7]_data_outtemp1[7]_mux_21_OUT63
-                                                       InstVGA/next_pixel_2
-    -------------------------------------------------  ---------------------------
-    Total                                      7.243ns (1.435ns logic, 5.808ns route)
-                                                       (19.8% logic, 80.2% route)
+    Total                                      7.899ns (1.355ns logic, 6.544ns route)
+                                                       (17.2% logic, 82.8% route)
 
 --------------------------------------------------------------------------------
 
 Hold Paths: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
 --------------------------------------------------------------------------------
 
-Paths for end point InstVGA/VGA_vs (SLICE_X30Y122.D3), 1 path
+Paths for end point InstVGA/pix_read1_12 (SLICE_X51Y100.CIN), 12 paths
 --------------------------------------------------------------------------------
-Slack (hold path):      0.239ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               InstVGA/VGA_vs (FF)
-  Destination:          InstVGA/VGA_vs (FF)
+Slack (hold path):      0.173ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               InstVGA/pix_read1_11 (FF)
+  Destination:          InstVGA/pix_read1_12 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.239ns (Levels of Logic = 1)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      0.437ns (Levels of Logic = 2)
+  Clock Path Skew:      0.264ns (0.829 - 0.565)
   Source Clock:         clk100_BUFGP rising at 10.000ns
   Destination Clock:    clk100_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: InstVGA/VGA_vs to InstVGA/VGA_vs
+  Minimum Data Path at Fast Process Corner: InstVGA/pix_read1_11 to InstVGA/pix_read1_12
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X30Y122.DQ     Tcko                  0.164   InstVGA/VGA_vs
-                                                       InstVGA/VGA_vs
-    SLICE_X30Y122.D3     net (fanout=2)        0.151   InstVGA/VGA_vs
-    SLICE_X30Y122.CLK    Tah         (-Th)     0.076   InstVGA/VGA_vs
-                                                       InstVGA/GND_824_o_GND_824_o_Select_43_o1
-                                                       InstVGA/VGA_vs
+    SLICE_X51Y99.DQ      Tcko                  0.141   InstVGA/pix_read1<11>
+                                                       InstVGA/pix_read1_11
+    SLICE_X51Y99.D3      net (fanout=6)        0.185   InstVGA/pix_read1<11>
+    SLICE_X51Y99.COUT    Topcyd                0.160   InstVGA/pix_read1<11>
+                                                       InstVGA/pix_read1<11>_rt
+                                                       InstVGA/Mcount_pix_read1_cy<11>
+    SLICE_X51Y100.CIN    net (fanout=1)        0.001   InstVGA/Mcount_pix_read1_cy<11>
+    SLICE_X51Y100.CLK    Tckcin      (-Th)     0.050   InstVGA/pix_read1<15>
+                                                       InstVGA/Mcount_pix_read1_cy<15>
+                                                       InstVGA/pix_read1_12
     -------------------------------------------------  ---------------------------
-    Total                                      0.239ns (0.088ns logic, 0.151ns route)
-                                                       (36.8% logic, 63.2% route)
+    Total                                      0.437ns (0.251ns logic, 0.186ns route)
+                                                       (57.4% logic, 42.6% route)
 
 --------------------------------------------------------------------------------
-
-Paths for end point InstVGA/VGA_vs (SLICE_X30Y122.D6), 1 path
---------------------------------------------------------------------------------
-Slack (hold path):      0.244ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               InstVGA/v_counter_1 (FF)
-  Destination:          InstVGA/VGA_vs (FF)
+Slack (hold path):      0.208ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               InstVGA/pix_read1_8 (FF)
+  Destination:          InstVGA/pix_read1_12 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.255ns (Levels of Logic = 1)
-  Clock Path Skew:      0.011ns (0.073 - 0.062)
+  Data Path Delay:      0.472ns (Levels of Logic = 2)
+  Clock Path Skew:      0.264ns (0.829 - 0.565)
   Source Clock:         clk100_BUFGP rising at 10.000ns
   Destination Clock:    clk100_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: InstVGA/v_counter_1 to InstVGA/VGA_vs
+  Minimum Data Path at Fast Process Corner: InstVGA/pix_read1_8 to InstVGA/pix_read1_12
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X33Y120.BQ     Tcko                  0.141   InstVGA/v_counter<3>
-                                                       InstVGA/v_counter_1
-    SLICE_X30Y122.D6     net (fanout=4)        0.190   InstVGA/v_counter<1>
-    SLICE_X30Y122.CLK    Tah         (-Th)     0.076   InstVGA/VGA_vs
-                                                       InstVGA/GND_824_o_GND_824_o_Select_43_o1
-                                                       InstVGA/VGA_vs
+    SLICE_X51Y99.AQ      Tcko                  0.141   InstVGA/pix_read1<11>
+                                                       InstVGA/pix_read1_8
+    SLICE_X51Y99.A3      net (fanout=6)        0.183   InstVGA/pix_read1<8>
+    SLICE_X51Y99.COUT    Topcya                0.197   InstVGA/pix_read1<11>
+                                                       InstVGA/pix_read1<8>_rt
+                                                       InstVGA/Mcount_pix_read1_cy<11>
+    SLICE_X51Y100.CIN    net (fanout=1)        0.001   InstVGA/Mcount_pix_read1_cy<11>
+    SLICE_X51Y100.CLK    Tckcin      (-Th)     0.050   InstVGA/pix_read1<15>
+                                                       InstVGA/Mcount_pix_read1_cy<15>
+                                                       InstVGA/pix_read1_12
     -------------------------------------------------  ---------------------------
-    Total                                      0.255ns (0.065ns logic, 0.190ns route)
-                                                       (25.5% logic, 74.5% route)
+    Total                                      0.472ns (0.288ns logic, 0.184ns route)
+                                                       (61.0% logic, 39.0% route)
 
 --------------------------------------------------------------------------------
-
-Paths for end point InstVGA/TOP_display (SLICE_X31Y122.A3), 1 path
---------------------------------------------------------------------------------
-Slack (hold path):      0.265ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               InstVGA/TOP_display (FF)
-  Destination:          InstVGA/TOP_display (FF)
+Slack (hold path):      0.226ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               InstVGA/pix_read1_7 (FF)
+  Destination:          InstVGA/pix_read1_12 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.265ns (Levels of Logic = 1)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      0.490ns (Levels of Logic = 3)
+  Clock Path Skew:      0.264ns (0.829 - 0.565)
   Source Clock:         clk100_BUFGP rising at 10.000ns
   Destination Clock:    clk100_BUFGP rising at 10.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: InstVGA/TOP_display to InstVGA/TOP_display
+  Minimum Data Path at Fast Process Corner: InstVGA/pix_read1_7 to InstVGA/pix_read1_12
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X31Y122.AQ     Tcko                  0.141   InstVGA/TOP_display
-                                                       InstVGA/TOP_display
-    SLICE_X31Y122.A3     net (fanout=7)        0.170   InstVGA/TOP_display
-    SLICE_X31Y122.CLK    Tah         (-Th)     0.046   InstVGA/TOP_display
-                                                       InstVGA/GND_824_o_TOP_display_Select_45_o1
-                                                       InstVGA/TOP_display
+    SLICE_X51Y98.DQ      Tcko                  0.141   InstVGA/pix_read1<7>
+                                                       InstVGA/pix_read1_7
+    SLICE_X51Y98.D3      net (fanout=6)        0.199   InstVGA/pix_read1<7>
+    SLICE_X51Y98.COUT    Topcyd                0.160   InstVGA/pix_read1<7>
+                                                       InstVGA/pix_read1<7>_rt
+                                                       InstVGA/Mcount_pix_read1_cy<7>
+    SLICE_X51Y99.CIN     net (fanout=1)        0.000   InstVGA/Mcount_pix_read1_cy<7>
+    SLICE_X51Y99.COUT    Tbyp                  0.039   InstVGA/pix_read1<11>
+                                                       InstVGA/Mcount_pix_read1_cy<11>
+    SLICE_X51Y100.CIN    net (fanout=1)        0.001   InstVGA/Mcount_pix_read1_cy<11>
+    SLICE_X51Y100.CLK    Tckcin      (-Th)     0.050   InstVGA/pix_read1<15>
+                                                       InstVGA/Mcount_pix_read1_cy<15>
+                                                       InstVGA/pix_read1_12
     -------------------------------------------------  ---------------------------
-    Total                                      0.265ns (0.095ns logic, 0.170ns route)
-                                                       (35.8% logic, 64.2% route)
+    Total                                      0.490ns (0.290ns logic, 0.200ns route)
+                                                       (59.2% logic, 40.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point InstVGA/pix_read1_14 (SLICE_X51Y100.CIN), 12 paths
+--------------------------------------------------------------------------------
+Slack (hold path):      0.183ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               InstVGA/pix_read1_11 (FF)
+  Destination:          InstVGA/pix_read1_14 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.447ns (Levels of Logic = 2)
+  Clock Path Skew:      0.264ns (0.829 - 0.565)
+  Source Clock:         clk100_BUFGP rising at 10.000ns
+  Destination Clock:    clk100_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: InstVGA/pix_read1_11 to InstVGA/pix_read1_14
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X51Y99.DQ      Tcko                  0.141   InstVGA/pix_read1<11>
+                                                       InstVGA/pix_read1_11
+    SLICE_X51Y99.D3      net (fanout=6)        0.185   InstVGA/pix_read1<11>
+    SLICE_X51Y99.COUT    Topcyd                0.160   InstVGA/pix_read1<11>
+                                                       InstVGA/pix_read1<11>_rt
+                                                       InstVGA/Mcount_pix_read1_cy<11>
+    SLICE_X51Y100.CIN    net (fanout=1)        0.001   InstVGA/Mcount_pix_read1_cy<11>
+    SLICE_X51Y100.CLK    Tckcin      (-Th)     0.040   InstVGA/pix_read1<15>
+                                                       InstVGA/Mcount_pix_read1_cy<15>
+                                                       InstVGA/pix_read1_14
+    -------------------------------------------------  ---------------------------
+    Total                                      0.447ns (0.261ns logic, 0.186ns route)
+                                                       (58.4% logic, 41.6% route)
+
+--------------------------------------------------------------------------------
+Slack (hold path):      0.218ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               InstVGA/pix_read1_8 (FF)
+  Destination:          InstVGA/pix_read1_14 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.482ns (Levels of Logic = 2)
+  Clock Path Skew:      0.264ns (0.829 - 0.565)
+  Source Clock:         clk100_BUFGP rising at 10.000ns
+  Destination Clock:    clk100_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: InstVGA/pix_read1_8 to InstVGA/pix_read1_14
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X51Y99.AQ      Tcko                  0.141   InstVGA/pix_read1<11>
+                                                       InstVGA/pix_read1_8
+    SLICE_X51Y99.A3      net (fanout=6)        0.183   InstVGA/pix_read1<8>
+    SLICE_X51Y99.COUT    Topcya                0.197   InstVGA/pix_read1<11>
+                                                       InstVGA/pix_read1<8>_rt
+                                                       InstVGA/Mcount_pix_read1_cy<11>
+    SLICE_X51Y100.CIN    net (fanout=1)        0.001   InstVGA/Mcount_pix_read1_cy<11>
+    SLICE_X51Y100.CLK    Tckcin      (-Th)     0.040   InstVGA/pix_read1<15>
+                                                       InstVGA/Mcount_pix_read1_cy<15>
+                                                       InstVGA/pix_read1_14
+    -------------------------------------------------  ---------------------------
+    Total                                      0.482ns (0.298ns logic, 0.184ns route)
+                                                       (61.8% logic, 38.2% route)
+
+--------------------------------------------------------------------------------
+Slack (hold path):      0.236ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               InstVGA/pix_read1_7 (FF)
+  Destination:          InstVGA/pix_read1_14 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.500ns (Levels of Logic = 3)
+  Clock Path Skew:      0.264ns (0.829 - 0.565)
+  Source Clock:         clk100_BUFGP rising at 10.000ns
+  Destination Clock:    clk100_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: InstVGA/pix_read1_7 to InstVGA/pix_read1_14
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X51Y98.DQ      Tcko                  0.141   InstVGA/pix_read1<7>
+                                                       InstVGA/pix_read1_7
+    SLICE_X51Y98.D3      net (fanout=6)        0.199   InstVGA/pix_read1<7>
+    SLICE_X51Y98.COUT    Topcyd                0.160   InstVGA/pix_read1<7>
+                                                       InstVGA/pix_read1<7>_rt
+                                                       InstVGA/Mcount_pix_read1_cy<7>
+    SLICE_X51Y99.CIN     net (fanout=1)        0.000   InstVGA/Mcount_pix_read1_cy<7>
+    SLICE_X51Y99.COUT    Tbyp                  0.039   InstVGA/pix_read1<11>
+                                                       InstVGA/Mcount_pix_read1_cy<11>
+    SLICE_X51Y100.CIN    net (fanout=1)        0.001   InstVGA/Mcount_pix_read1_cy<11>
+    SLICE_X51Y100.CLK    Tckcin      (-Th)     0.040   InstVGA/pix_read1<15>
+                                                       InstVGA/Mcount_pix_read1_cy<15>
+                                                       InstVGA/pix_read1_14
+    -------------------------------------------------  ---------------------------
+    Total                                      0.500ns (0.300ns logic, 0.200ns route)
+                                                       (60.0% logic, 40.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point InstVGA/pix_read1_13 (SLICE_X51Y100.CIN), 12 paths
+--------------------------------------------------------------------------------
+Slack (hold path):      0.208ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               InstVGA/pix_read1_11 (FF)
+  Destination:          InstVGA/pix_read1_13 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.472ns (Levels of Logic = 2)
+  Clock Path Skew:      0.264ns (0.829 - 0.565)
+  Source Clock:         clk100_BUFGP rising at 10.000ns
+  Destination Clock:    clk100_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: InstVGA/pix_read1_11 to InstVGA/pix_read1_13
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X51Y99.DQ      Tcko                  0.141   InstVGA/pix_read1<11>
+                                                       InstVGA/pix_read1_11
+    SLICE_X51Y99.D3      net (fanout=6)        0.185   InstVGA/pix_read1<11>
+    SLICE_X51Y99.COUT    Topcyd                0.160   InstVGA/pix_read1<11>
+                                                       InstVGA/pix_read1<11>_rt
+                                                       InstVGA/Mcount_pix_read1_cy<11>
+    SLICE_X51Y100.CIN    net (fanout=1)        0.001   InstVGA/Mcount_pix_read1_cy<11>
+    SLICE_X51Y100.CLK    Tckcin      (-Th)     0.015   InstVGA/pix_read1<15>
+                                                       InstVGA/Mcount_pix_read1_cy<15>
+                                                       InstVGA/pix_read1_13
+    -------------------------------------------------  ---------------------------
+    Total                                      0.472ns (0.286ns logic, 0.186ns route)
+                                                       (60.6% logic, 39.4% route)
+
+--------------------------------------------------------------------------------
+Slack (hold path):      0.243ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               InstVGA/pix_read1_8 (FF)
+  Destination:          InstVGA/pix_read1_13 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.507ns (Levels of Logic = 2)
+  Clock Path Skew:      0.264ns (0.829 - 0.565)
+  Source Clock:         clk100_BUFGP rising at 10.000ns
+  Destination Clock:    clk100_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: InstVGA/pix_read1_8 to InstVGA/pix_read1_13
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X51Y99.AQ      Tcko                  0.141   InstVGA/pix_read1<11>
+                                                       InstVGA/pix_read1_8
+    SLICE_X51Y99.A3      net (fanout=6)        0.183   InstVGA/pix_read1<8>
+    SLICE_X51Y99.COUT    Topcya                0.197   InstVGA/pix_read1<11>
+                                                       InstVGA/pix_read1<8>_rt
+                                                       InstVGA/Mcount_pix_read1_cy<11>
+    SLICE_X51Y100.CIN    net (fanout=1)        0.001   InstVGA/Mcount_pix_read1_cy<11>
+    SLICE_X51Y100.CLK    Tckcin      (-Th)     0.015   InstVGA/pix_read1<15>
+                                                       InstVGA/Mcount_pix_read1_cy<15>
+                                                       InstVGA/pix_read1_13
+    -------------------------------------------------  ---------------------------
+    Total                                      0.507ns (0.323ns logic, 0.184ns route)
+                                                       (63.7% logic, 36.3% route)
+
+--------------------------------------------------------------------------------
+Slack (hold path):      0.261ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               InstVGA/pix_read1_7 (FF)
+  Destination:          InstVGA/pix_read1_13 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.525ns (Levels of Logic = 3)
+  Clock Path Skew:      0.264ns (0.829 - 0.565)
+  Source Clock:         clk100_BUFGP rising at 10.000ns
+  Destination Clock:    clk100_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: InstVGA/pix_read1_7 to InstVGA/pix_read1_13
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X51Y98.DQ      Tcko                  0.141   InstVGA/pix_read1<7>
+                                                       InstVGA/pix_read1_7
+    SLICE_X51Y98.D3      net (fanout=6)        0.199   InstVGA/pix_read1<7>
+    SLICE_X51Y98.COUT    Topcyd                0.160   InstVGA/pix_read1<7>
+                                                       InstVGA/pix_read1<7>_rt
+                                                       InstVGA/Mcount_pix_read1_cy<7>
+    SLICE_X51Y99.CIN     net (fanout=1)        0.000   InstVGA/Mcount_pix_read1_cy<7>
+    SLICE_X51Y99.COUT    Tbyp                  0.039   InstVGA/pix_read1<11>
+                                                       InstVGA/Mcount_pix_read1_cy<11>
+    SLICE_X51Y100.CIN    net (fanout=1)        0.001   InstVGA/Mcount_pix_read1_cy<11>
+    SLICE_X51Y100.CLK    Tckcin      (-Th)     0.015   InstVGA/pix_read1<15>
+                                                       InstVGA/Mcount_pix_read1_cy<15>
+                                                       InstVGA/pix_read1_13
+    -------------------------------------------------  ---------------------------
+    Total                                      0.525ns (0.325ns logic, 0.200ns route)
+                                                       (61.9% logic, 38.1% route)
 
 --------------------------------------------------------------------------------
 
@@ -568,26 +763,25 @@ Component Switching Limit Checks: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 
 Slack: 7.424ns (period - min period limit)
   Period: 10.000ns
   Min period limit: 2.576ns (388.199MHz) (Trper_CLKA)
-  Physical resource: InstColorgen/Mram_n0002/CLKARDCLK
-  Logical resource: InstColorgen/Mram_n0002/CLKARDCLK
-  Location pin: RAMB18_X1Y51.CLKARDCLK
+  Physical resource: InstColorgen/Mram_n00021/CLKARDCLKL
+  Logical resource: InstColorgen/Mram_n00021/CLKARDCLKL
+  Location pin: RAMB36_X3Y29.CLKARDCLKL
   Clock network: clk100_BUFGP
 --------------------------------------------------------------------------------
-Slack: 7.845ns (period - min period limit)
+Slack: 7.424ns (period - min period limit)
   Period: 10.000ns
-  Min period limit: 2.155ns (464.037MHz) (Tbcper_I(Fmax))
-  Physical resource: clk100_BUFGP/BUFG/I0
-  Logical resource: clk100_BUFGP/BUFG/I0
-  Location pin: BUFGCTRL_X0Y31.I0
-  Clock network: clk100_BUFGP/IBUFG
+  Min period limit: 2.576ns (388.199MHz) (Trper_CLKA)
+  Physical resource: InstColorgen/Mram_n00021/CLKARDCLKU
+  Logical resource: InstColorgen/Mram_n00021/CLKARDCLKU
+  Location pin: RAMB36_X3Y29.CLKARDCLKU
+  Clock network: clk100_BUFGP
 --------------------------------------------------------------------------------
-Slack: 9.000ns (period - (min low pulse limit / (low pulse / period)))
+Slack: 7.424ns (period - min period limit)
   Period: 10.000ns
-  Low pulse: 5.000ns
-  Low pulse limit: 0.500ns (Tcl)
-  Physical resource: InstVGA/pix_read1<3>/CLK
-  Logical resource: InstVGA/pix_read1_0/CK
-  Location pin: SLICE_X43Y93.CLK
+  Min period limit: 2.576ns (388.199MHz) (Trper_CLKA)
+  Physical resource: InstColorgen/Mram_n00022/CLKARDCLK
+  Logical resource: InstColorgen/Mram_n00022/CLKARDCLK
+  Location pin: RAMB18_X2Y54.RDCLK
   Clock network: clk100_BUFGP
 --------------------------------------------------------------------------------
 
@@ -604,7 +798,7 @@ Clock to Setup on destination clock clk100
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk100         |    7.812|         |         |         |
+clk100         |    8.617|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -613,23 +807,23 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 3195 paths, 0 nets, and 423 connections
+Constraints cover 3640 paths, 0 nets, and 449 connections
 
 Design statistics:
-   Minimum period:   7.812ns{1}   (Maximum frequency: 128.008MHz)
+   Minimum period:   8.617ns{1}   (Maximum frequency: 116.050MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Fri May 20 18:47:01 2016 
+Analysis completed Sat May 21 19:31:01 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 841 MB
+Peak Memory Usage: 823 MB
 
 
 

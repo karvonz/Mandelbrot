@@ -66,7 +66,7 @@ architecture Behavioral of VGA_bitmap_640x480 is
 
 	-- Graphic RAM type. this object is the content of the displayed image
 	type GRAM is array (0 to 38399) of std_logic_vector(7 downto 0); --153599
-	signal  screen1, screen2,screen3, screen4,screen5, screen6,screen7        : GRAM;-- := ram_function_name("../mandelbrot.bin"); -- the memory representation of the image
+	signal  screen1, screen2,screen3, screen4,screen5, screen6,screen7,screen8        : GRAM;-- := ram_function_name("../mandelbrot.bin"); -- the memory representation of the image
     
 	signal h_counter     : integer range 0 to 3199:=0;     -- counter for H sync. (size depends of frequ because of division)
 	signal v_counter     : integer range 0 to 520 :=0;     -- counter for V sync. (base on v_counter, so no frequ issue)
@@ -80,7 +80,7 @@ architecture Behavioral of VGA_bitmap_640x480 is
 	--signal next_pixel,next_pixel1,next_pixel2    : std_logic_vector(3 downto 0);  -- the data coding the value of the pixel to be displayed
    signal pix_read_addrb : integer range 0 to 38399 := 0;  -- the address at which displayed data is read
 
-   signal next_pixel1 , next_pixel2, next_pixel3 , next_pixel4, next_pixel5 , next_pixel6, next_pixel7     : std_logic_vector(7 downto 0);  -- the data coding the value of the pixel to be displayed
+   signal next_pixel1 , next_pixel2, next_pixel3 , next_pixel4, next_pixel5 , next_pixel6, next_pixel7, next_pixel8     : std_logic_vector(7 downto 0);  -- the data coding the value of the pixel to be displayed
    signal next_pixel    : std_logic_vector(7 downto 0);  -- the data coding the value of the pixel to be displayed
 	signal proc : std_logic_vector(2 downto 0);
 begin
@@ -201,21 +201,21 @@ begin
       end if;
    end process;
 
---   process (clk)
---   begin
---      if (clk'event and clk = '1') then
---         if (data_write8 = '1') then
---            screen8(to_integer(unsigned(ADDR8))) <= data_in8 ;
---         end if;
---      end if;
---   end process;
---
---   process (clk_vga)
---   begin
---      if (clk_vga'event and clk_vga = '1') then
---         next_pixel8 <= screen8(pix_read_addr1);
---      end if;
---   end process;
+   process (clk)
+   begin
+      if (clk'event and clk = '1') then
+         if (data_write8 = '1') then
+            screen8(to_integer(unsigned(ADDR8))) <= data_in8 ;
+         end if;
+      end if;
+   end process;
+
+   process (clk_vga)
+   begin
+      if (clk_vga'event and clk_vga = '1') then
+         next_pixel8 <= screen8(pix_read_addr1);
+      end if;
+   end process;
 
    process (clk_vga)
    begin
@@ -235,7 +235,7 @@ begin
         ELSif proc ="110" then
             next_pixel <= next_pixel7;
 		else
-			next_pixel <= (others=>'0');
+			next_pixel <= next_pixel8;
          END IF;
       end if;
    end process;

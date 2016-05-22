@@ -32,16 +32,16 @@ use IEEE.numeric_std.ALL;
 entity RAM_single_port is
     Port ( clk : in  STD_LOGIC;
            data_write : in  STD_LOGIC;
-			  data_in : in STD_LOGIC_VECTOR(7 downto 0);
-           ADDR : in  STD_LOGIC_VECTOR (15 downto 0);
-           data_out : out  STD_LOGIC_VECTOR (7 downto 0));
+			  data_in : in STD_LOGIC_VECTOR(11 downto 0);
+           ADDR : in  STD_LOGIC_VECTOR (16 downto 0);
+           data_out : out  STD_LOGIC_VECTOR (11 downto 0));
 end RAM_single_port;
 
 architecture Behavioral of RAM_single_port is
 constant ADDR_WIDTH : integer := 16;
-constant DATA_WIDTH : integer := 8; 
+constant DATA_WIDTH : integer := 12; 
 	-- Graphic RAM type. this object is the content of the displayed image
-	type GRAM is array (0 to 38399) of std_logic_vector(DATA_WIDTH-1 downto 0);
+	type GRAM is array (0 to 76799) of std_logic_vector(DATA_WIDTH-1 downto 0);
 	signal  screen        : GRAM;-- := ram_function_name("../mandelbrot.bin"); -- the memory representation of the image
 begin
 

@@ -1,1 +1,2 @@
-vhdl work "../../vhdl/custom/mandelbrot/vga_bitmap_640x480_dualport.vhd"
+vhdl work "RAM_single_port.vhd"
+vhdl work "../../vhdl/custom/mandelbrot/vga4coeurs.vhd"

@@ -6,7 +6,7 @@ D:\ISE\14.7\ISE_DS\ISE\.
 -1
 Opened constraints file mandelbrot.pcf.
 
-Fri May 20 18:55:21 2016
+Sat May 21 19:49:23 2016
 
 D:\ISE\14.7\ISE_DS\ISE\bin\nt64\unwrapped\bitgen.exe -intstyle ise -w -g DebugBitstream:No -g Binary:no -g CRC:Enable -g ConfigRate:3 -g CclkPin:PullUp -g M0Pin:PullUp -g M1Pin:PullUp -g M2Pin:PullUp -g ProgPin:PullUp -g InitPin:Pullup -g TckPin:PullUp -g TdiPin:PullUp -g TdoPin:PullUp -g TmsPin:PullUp -g Disable_JTAG:No -g UnusedPin:PullDown -g UserID:0xFFFFFFFF -g ExtMasterCclk_en:Disable -g ConfigFallback:Disable -g BPI_page_size:1 -g BPI_sync_mode:Disable -g SPI_32bit_addr:No -g SPI_buswidth:1 -g SPI_Fall_Edge:No -g OverTempPowerDown:Disable -g USR_ACCESS:None -g JTAG_XADC:Enable -g DCIUpdateMode:AsRequired -g StartUpClk:CClk -g DONE_cycle:4 -g GTS_cycle:5 -g GWE_cycle:6 -g Match_cycle:Auto -g Security:None -g ICAP_select:Auto -g DonePipe:Yes -g Encrypt:No mandelbrot.ncd 
 
@@ -157,6 +157,10 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_y_start[26]_AND_77_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I8/Instincrment/reset_y_start[19]_AND_91_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
@@ -182,6 +186,10 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I7/Instincrment/reset_x_start[26]_AND_13_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_x_start[16]_AND_33_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
@@ -213,9 +221,17 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_x_start[28]_AND_9_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I4/Instincrment/reset_y_start[31]_AND_67_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_y_start[14]_AND_101_o is sourced by a combinatorial
+   pin. This is not good design practice. Use the CE pin to control the loading
+   of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I7/Instincrment/reset_y_start[24]_AND_81_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
@@ -240,6 +256,10 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I4/Instincrment/reset_x_start[17]_AND_31_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_y_start[12]_AND_105_o is sourced by a combinatorial
+   pin. This is not good design practice. Use the CE pin to control the loading
+   of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I7/Instincrment/reset_y_start[22]_AND_85_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
@@ -325,6 +345,10 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_y_start[29]_AND_71_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I3/Instincrment/reset_y_start[28]_AND_73_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
@@ -373,7 +397,15 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_y_start[19]_AND_91_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I7/Instincrment/reset_y_start[29]_AND_71_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_x_start[30]_AND_5_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
@@ -398,6 +430,10 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I7/Instincrment/reset_x_start[24]_AND_17_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_x_start[14]_AND_37_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
@@ -469,6 +505,10 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    pin. This is not good design practice. Use the CE pin to control the loading
    of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_y_start[22]_AND_85_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I4/Instincrment/reset_y_start[12]_AND_105_o is sourced by a combinatorial
    pin. This is not good design practice. Use the CE pin to control the loading
    of data into the flip-flop.
@@ -509,6 +549,10 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_x_start[29]_AND_7_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I5/Instincrment/reset_x_start[31]_AND_3_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
@@ -533,11 +577,19 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_x_start[24]_AND_17_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I7/Instincrment/reset_y_start[10]_AND_109_o is sourced by a combinatorial
    pin. This is not good design practice. Use the CE pin to control the loading
    of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I8/Instincrment/reset_x_start[17]_AND_31_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_y_start[20]_AND_89_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
@@ -570,6 +622,14 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I7/Instincrment/reset_y_start[17]_AND_95_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_y_start[27]_AND_75_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_x_start[22]_AND_21_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
@@ -609,6 +669,10 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_x_start[10]_AND_45_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I4/Instincrment/reset_y_start[19]_AND_91_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
@@ -625,6 +689,10 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_x_start[9]_AND_47_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I3/Instincrment/reset_x_start[18]_AND_29_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
@@ -638,6 +706,10 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I2/Instincrment/reset_y_start[29]_AND_71_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_y_start[9]_AND_111_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
@@ -665,6 +737,10 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_y_start[15]_AND_99_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I7/Instincrment/reset_y_start[25]_AND_79_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
@@ -689,6 +765,10 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_x_start[27]_AND_11_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I4/Instincrment/reset_x_start[24]_AND_17_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
@@ -710,6 +790,10 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I8/Instincrment/reset_y_start[24]_AND_81_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_x_start[17]_AND_31_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
@@ -754,6 +838,10 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I7/Instincrment/reset_y_start[15]_AND_99_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_y_start[25]_AND_79_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
@@ -821,6 +909,10 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_x_start[20]_AND_25_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I3/Instincrment/reset_y_start[17]_AND_95_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
@@ -838,6 +930,10 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I8/Instincrment/reset_x_start[11]_AND_43_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_x_start[31]_AND_3_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
@@ -869,6 +965,10 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    pin. This is not good design practice. Use the CE pin to control the loading
    of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_y_start[31]_AND_67_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I3/Instincrment/reset_y_start[10]_AND_109_o is sourced by a combinatorial
    pin. This is not good design practice. Use the CE pin to control the loading
    of data into the flip-flop.
@@ -882,6 +982,10 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I7/Instincrment/reset_x_start[15]_AND_35_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_x_start[25]_AND_15_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
@@ -900,6 +1004,10 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I7/Instincrment/reset_y_start[13]_AND_103_o is sourced by a combinatorial
    pin. This is not good design practice. Use the CE pin to control the loading
    of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_y_start[23]_AND_83_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I8/Instincrment/reset_y_start[16]_AND_97_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
@@ -921,9 +1029,17 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_x_start[19]_AND_27_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I7/Instincrment/reset_y_start[11]_AND_107_o is sourced by a combinatorial
    pin. This is not good design practice. Use the CE pin to control the loading
    of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_y_start[21]_AND_87_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I2/Instincrment/reset_x_start[10]_AND_45_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
@@ -953,6 +1069,10 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    pin. This is not good design practice. Use the CE pin to control the loading
    of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_x_start[13]_AND_39_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I5/Instincrment/reset_y_start[14]_AND_101_o is sourced by a combinatorial
    pin. This is not good design practice. Use the CE pin to control the loading
    of data into the flip-flop.
@@ -962,6 +1082,10 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I7/Instincrment/reset_y_start[27]_AND_75_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_y_start[17]_AND_95_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
@@ -985,6 +1109,10 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_x_start[11]_AND_43_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I7/Instincrment/reset_x_start[21]_AND_23_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
@@ -997,6 +1125,10 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_x_start[12]_AND_41_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I2/Instincrment/reset_y_start[15]_AND_99_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
@@ -1006,6 +1138,10 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I7/Instincrment/reset_y_start[18]_AND_93_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_y_start[28]_AND_73_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
@@ -1041,6 +1177,10 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_x_start[23]_AND_19_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I8/Instincrment/reset_x_start[16]_AND_33_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
@@ -1057,7 +1197,15 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_y_start[10]_AND_109_o is sourced by a combinatorial
+   pin. This is not good design practice. Use the CE pin to control the loading
+   of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I4/Instincrment/reset_y_start[23]_AND_83_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_y_start[16]_AND_97_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
@@ -1096,6 +1244,10 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I8/Instincrment/reset_y_start[14]_AND_101_o is sourced by a combinatorial
    pin. This is not good design practice. Use the CE pin to control the loading
    of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_x_start[18]_AND_29_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I7/Instincrment/reset_x_start[28]_AND_9_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
@@ -1185,6 +1337,10 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    pin. This is not good design practice. Use the CE pin to control the loading
    of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_y_start[30]_AND_69_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I1/Instincrment/reset_x_start[19]_AND_27_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
@@ -1221,6 +1377,10 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_x_start[15]_AND_35_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I2/Instincrment/reset_y_start[21]_AND_87_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
@@ -1232,6 +1392,10 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I7/Instincrment/reset_y_start[14]_AND_101_o is sourced by a combinatorial
    pin. This is not good design practice. Use the CE pin to control the loading
    of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_y_start[24]_AND_81_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I8/Instincrment/reset_y_start[17]_AND_95_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
@@ -1262,6 +1426,14 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I7/Instincrment/reset_y_start[23]_AND_83_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_y_start[13]_AND_103_o is sourced by a combinatorial
+   pin. This is not good design practice. Use the CE pin to control the loading
+   of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_x_start[26]_AND_13_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
@@ -1401,6 +1573,10 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_x_start[21]_AND_23_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I2/Instincrment/reset_y_start[24]_AND_81_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
@@ -1461,6 +1637,10 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_y_start[11]_AND_107_o is sourced by a combinatorial
+   pin. This is not good design practice. Use the CE pin to control the loading
+   of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I7/Instincrment/reset_y_start[21]_AND_87_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
@@ -1497,6 +1677,10 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_y_start[18]_AND_93_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I3/Instincrment/reset_x_start[30]_AND_5_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
@@ -1504,7 +1688,15 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    I8/Instincrment/reset_x_start[23]_AND_19_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
-DRC detected 0 errors and 338 warnings.  Please see the previously displayed
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_x_start[8]_AND_49_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   I6/Instincrment/reset_y_start[8]_AND_113_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+DRC detected 0 errors and 386 warnings.  Please see the previously displayed
 individual error or warning messages for more details.
 Creating bit map...
 Saving bit stream in "mandelbrot.bit".

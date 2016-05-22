@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-05-20T18:44:24</DateModified>
+  <DateModified>2016-05-21T18:33:41</DateModified>
   <ModuleName>mandelbrot</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
+  <SummaryTimeStamp>2016-05-21T18:33:04</SummaryTimeStamp>
   <SavedFilePath>D:/Vincent/Mandelbrot/vhdlpur_vincent/test/iseconfig/mandelbrot.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>D:/Vincent/Mandelbrot/vhdlpur_vincent/test</ImplementationReportsDirectory>
-  <DateInitialized>2016-05-20T18:44:24</DateInitialized>
+  <ImplementationReportsDirectory>D:/Vincent/Mandelbrot/vhdlpur_vincent/test\</ImplementationReportsDirectory>
+  <DateInitialized>2016-05-21T18:33:40</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>

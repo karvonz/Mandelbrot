@@ -7,7 +7,7 @@ use WORK.CONSTANTS.ALL;
 use WORK.FUNCTIONS.ALL;
 
 entity Zoom is
-	 generic( ystartini : STD_LOGIC_VECTOR(31 downto 0));
+	 generic( ystartini : STD_LOGIC_VECTOR(31 downto 0) := x"F0000000");
     Port ( bleft : in STD_LOGIC;
            bright : in STD_LOGIC;
            bup : in STD_LOGIC;

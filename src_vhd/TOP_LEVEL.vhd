@@ -39,7 +39,7 @@ entity TOP_LEVEL is
            bup : in STD_LOGIC;
            bdwn : in STD_LOGIC;
            bctr : in STD_LOGIC;
-			  ADDR : out std_logic_vector( ADDR_BIT-1 downto 0);
+			  ADDR : out std_logic_vector( ADDR_BIT_MUX-1 downto 0);
 			  data_write : out STD_LOGIC;
 			  data_out     : out std_logic_vector(ITER_RANGE - 1 downto 0));
 end TOP_LEVEL;
@@ -118,7 +118,7 @@ component ADDR_calculator     Port ( clk : in  STD_LOGIC;
            reset : in  STD_LOGIC;
            data_write : in  STD_LOGIC;
            endcalcul : in  STD_LOGIC;
-           ADDRout : out  STD_LOGIC_VECTOR (ADDR_BIT-1 downto 0));
+           ADDRout : out  STD_LOGIC_VECTOR (ADDR_BIT_MUX-1 downto 0));
 end component;
 
 Signal doneS, startS,stopS, xincS, yincS, s_param : std_logic;
@@ -132,7 +132,7 @@ begin
 InstADDR: ADDR_calculator
 port map( clock,
 				reset,
-				startS,
+				doneS, --start
 				stopS,
 				ADDR);
 

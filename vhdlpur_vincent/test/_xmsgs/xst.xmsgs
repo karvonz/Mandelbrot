@@ -5,7 +5,10 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Xst" num="3035" delta="new" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">screen</arg>&gt;, simulation mismatch.
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">ADDR&lt;17:17&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">screen</arg>&gt;, simulation mismatch.
 </msg>
 
 <msg type="info" file="Xst" num="1767" delta="old" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
@@ -275,7 +278,7 @@
 <msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">s_step_21</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">inst_zoom</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">Mram_screen</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">Mram_screen</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
 
 <msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">InstColorgen/Mram_n0002</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
 
@@ -541,102 +544,6 @@
 </msg>
 
 <msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">s_step_21</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Zoom_8</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">I6/InstADDR/ADDR_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mandelbrot</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">I6/InstADDR/ADDR_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mandelbrot</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">I6/InstADDR/ADDR_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mandelbrot</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">I6/InstADDR/ADDR_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mandelbrot</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">I6/InstADDR/ADDR_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mandelbrot</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">I6/InstADDR/ADDR_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mandelbrot</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">I6/InstADDR/ADDR_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mandelbrot</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">I6/InstADDR/ADDR_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mandelbrot</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">I6/InstADDR/ADDR_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mandelbrot</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">I6/InstADDR/ADDR_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mandelbrot</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">I6/InstADDR/ADDR_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mandelbrot</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">I6/InstADDR/ADDR_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mandelbrot</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">I6/InstADDR/ADDR_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mandelbrot</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">I6/InstADDR/ADDR_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mandelbrot</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">I6/InstADDR/ADDR_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mandelbrot</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">I6/InstADDR/ADDR_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mandelbrot</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">InstVGA/RAM6/Mram_screen1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mandelbrot</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">InstVGA/RAM6/Mram_screen11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mandelbrot</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">InstVGA/RAM6/Mram_screen2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mandelbrot</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">InstVGA/RAM6/Mram_screen21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mandelbrot</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">InstVGA/RAM6/Mram_screen3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mandelbrot</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">InstVGA/RAM6/Mram_screen31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mandelbrot</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">InstVGA/RAM6/Mram_screen4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mandelbrot</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">InstVGA/RAM6/Mram_screen41</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mandelbrot</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">InstVGA/RAM6/Mram_screen5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mandelbrot</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">InstVGA/RAM6/Mram_screen51</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mandelbrot</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">InstVGA/RAM6/Mram_screen6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mandelbrot</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">InstVGA/RAM6/Mram_screen61</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mandelbrot</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">InstVGA/RAM6/Mram_screen7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mandelbrot</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">InstVGA/RAM6/Mram_screen71</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mandelbrot</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">InstVGA/RAM6/Mram_screen8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mandelbrot</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">InstVGA/RAM6/Mram_screen81</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mandelbrot</arg>&gt;.
 </msg>
 
 <msg type="warning" file="Xst" num="3001" delta="old" >This design contains one or more registers or latches with an active

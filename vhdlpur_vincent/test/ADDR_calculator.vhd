@@ -35,12 +35,12 @@ entity ADDR_calculator is
            reset : in  STD_LOGIC;
            data_write : in  STD_LOGIC;
            endcalcul : in  STD_LOGIC;
-           ADDRout : out  STD_LOGIC_VECTOR (ADDR_BIT-1 downto 0));
+           ADDRout : out  STD_LOGIC_VECTOR (ADDR_BIT_MUX-1 downto 0));
 end ADDR_calculator;
 
 architecture Behavioral of ADDR_calculator is
 
-Signal ADDR : unsigned(ADDR_BIT-1 downto 0);
+Signal ADDR : unsigned(ADDR_BIT_MUX-1 downto 0);
 
 begin
 ADDRmanagement : process(clk,reset, data_write, endcalcul)
@@ -52,10 +52,10 @@ begin
 			ADDR<=(others=>'0');
 		else
 			if data_write = '1' then
-				if ADDR < NBR_PIXEL then
-					ADDR<=ADDR+1;
+				if ADDR = NBR_PIXEL then
+						ADDR<=(others=>'0');
 				else
-					ADDR<=(others=>'0');
+				ADDR<=ADDR+1;
 				end if;
 			end if;
 		end if;
